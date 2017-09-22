@@ -27,6 +27,7 @@
     </NuGetPackageImportStamp>
     <TargetFrameworkProfile />
     <TypeScriptToolsVersion>2.2</TypeScriptToolsVersion>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup>
     <DeployOnBuild Condition=" '$(DeploySecurity)'!='' ">$(DeploySecurity)</DeployOnBuild>
@@ -349,10 +350,6 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Security.EntityFramework\Security.EntityFramework.csproj">
-      <Project>{f5028574-9bc6-454b-8c89-3b51b35808fe}</Project>
-      <Name>Security.EntityFramework</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Security.Interfaces\Security.Interfaces.csproj">
       <Project>{026352e5-2a65-4064-9848-fb60ab1046ac}</Project>
       <Name>Security.Interfaces</Name>
