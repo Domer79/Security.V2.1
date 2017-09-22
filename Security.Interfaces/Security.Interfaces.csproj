@@ -72,6 +72,7 @@
     <Compile Include="Collections\IRoleCollection.cs" />
     <Compile Include="Collections\ISecObjectCollection.cs" />
     <Compile Include="Collections\IUserCollection.cs" />
+    <Compile Include="DataLayer\ISecurityDataService.cs" />
     <Compile Include="ISecurityApplicationInfo.cs" />
     <Compile Include="ISecurityObject.cs" />
     <Compile Include="ISecurityObjects.cs" />
