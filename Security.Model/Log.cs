@@ -1,12 +1,11 @@
 ﻿using System;
-using Security.Interfaces.Model;
 
 namespace Security.Model
 {
     /// <summary>
     /// Запись в журнале
     /// </summary>
-    public class Log : ILog
+    public class Log
     {
         public Log()
         {

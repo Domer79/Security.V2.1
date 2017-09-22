@@ -80,20 +80,14 @@
     <Compile Include="ISecurity.cs" />
     <Compile Include="ISecurityFactory.cs" />
     <Compile Include="ISecurityTransaction.cs" />
-    <Compile Include="Model\IAccessType.cs" />
-    <Compile Include="Model\IApplication.cs" />
-    <Compile Include="Model\IGrant.cs" />
-    <Compile Include="Model\IGroup.cs" />
-    <Compile Include="Model\ILog.cs" />
-    <Compile Include="Model\IMember.cs" />
-    <Compile Include="Model\IRole.cs" />
-    <Compile Include="Model\ISecObject.cs" />
-    <Compile Include="Model\ISetting.cs" />
-    <Compile Include="Model\IUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\ISecurityWorkUnitTest.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Security.Model\Security.Model.csproj">
+      <Project>{69f6d882-5a1e-49a9-b10c-a81ad937d188}</Project>
+      <Name>Security.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

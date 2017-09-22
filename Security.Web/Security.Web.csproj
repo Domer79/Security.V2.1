@@ -126,6 +126,10 @@
       <Project>{026352E5-2A65-4064-9848-FB60AB1046AC}</Project>
       <Name>Security.Interfaces</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Security.Model\Security.Model.csproj">
+      <Project>{69f6d882-5a1e-49a9-b10c-a81ad937d188}</Project>
+      <Name>Security.Model</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Security\Security.csproj">
       <Project>{556713e5-2adb-4b4b-8d40-74df9393d33d}</Project>
       <Name>Security</Name>

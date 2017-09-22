@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Text;
 using System.Threading.Tasks;
-using Security.Exceptions;
 using Security.Interfaces;
 using Security.Interfaces.Collections;
 using Security.Configurations;
 using Security.Extensions;
-using Security.Interfaces.Model;
+using Security.Model;
 
 namespace Security
 {
@@ -208,7 +205,7 @@ namespace Security
         /// Возвращает коллекцию типов доступа для текущего приложения
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<IAccessType> GetAccessTypes()
+        public IEnumerable<AccessType> GetAccessTypes()
         {
             return _securityFactory.CreateAccessTypeCollection();
         }
@@ -235,7 +232,7 @@ namespace Security
         /// <summary>
         /// Текущее приложение
         /// </summary>
-        public IApplication CurrentApplication
+        public Application CurrentApplication
         {
             get
             {

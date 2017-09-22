@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
-using Security.Interfaces.Model;
 using System.Collections.Generic;
+using Security.Model;
 
 namespace Security.Interfaces
 {
@@ -101,20 +100,20 @@ namespace Security.Interfaces
         /// Запись сообщения в лог
         /// </summary>
         /// <param name="message">Строка сообщения</param>
-        ILog Log(string message);
+        Log Log(string message);
 
         /// <summary>
         /// Возвращает запись из журнала по идентификатору
         /// </summary>
         /// <param name="idLog"></param>
         /// <returns></returns>
-        ILog GetLogById(int idLog);
+        Log GetLogById(int idLog);
 
         /// <summary>
         /// Запись сообщения в лог
         /// </summary>
         /// <param name="message">Строка сообщения</param>
-        Task<ILog> LogAsync(string message);
+        Task<Log> LogAsync(string message);
 
         /// <summary>
         /// Возвращает разрешенные для пользователя объекты безопасности с указанием типа доступа

@@ -1,20 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Security.Interfaces.Model;
+﻿using System.Linq;
 using Security.Interfaces.Base;
+using Security.Model;
 
 namespace Security.Interfaces.Collections
 {
     /// <summary>
     /// Интерфейс, представляющий собой коллекцию участников безопасности
     /// </summary>
-    public interface IMemberCollection : ISecurityQueryable<IMember>
+    public interface IMemberCollection : ISecurityQueryable<Member>
     {
         /// <summary>
         /// Возвращает участников безопасности с информацией об их ролях
         /// </summary>
         /// <returns></returns>
-        IQueryable<IMember> WithRoles();
+        IQueryable<Member> WithRoles();
     }
 }

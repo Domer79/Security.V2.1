@@ -1,13 +1,10 @@
-﻿using System;
-using Security.Interfaces.Model;
-
-namespace Security.Model
+﻿namespace Security.Model
 {
     /// <summary>
     /// Объект настройки для системы доступа
     /// </summary>
 
-    public class Setting : ISetting
+    public class Setting
     {      
         /// <summary>
         /// Идентификатор в БД

@@ -8,9 +8,9 @@ using Ninject.Parameters;
 using Security.Exceptions;
 using Security.Extensions;
 using Security.Interfaces;
-using Security.Interfaces.Model;
 using Tools.Extensions;
 using Security.Interfaces.Collections;
+using Security.Model;
 
 namespace Security.Configurations
 {
@@ -159,17 +159,6 @@ namespace Security.Configurations
             DeleteExceptSecObjects(objects, security.SecObjectCollection, idAccessType);
         }
 
-        private class SecObject : ISecObject
-        {
-            public int IdSecObject { get; }
-            public string ObjectName { get; set; }
-            public int IdApplication { get; set; }
-            public int IdAccessType { get; set; }
-            public IList<IGrant> Grants { get; }
-            public IApplication Application { get; set; }
-            public IAccessType AccessType { get; set; }
-        }
-
         #endregion
 
         #region Application Register
@@ -230,7 +219,7 @@ namespace Security.Configurations
 
         #region Helpers
 
-        private static IAccessType GetAccessType(string a, ISecurityFactory securityFactory)
+        private static AccessType GetAccessType(string a, ISecurityFactory securityFactory)
         {
             var accessType = securityFactory.GetAccessType();
             accessType.Name = a;

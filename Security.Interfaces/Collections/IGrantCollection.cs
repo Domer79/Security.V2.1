@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Security.Interfaces.Base;
-using Security.Interfaces.Model;
+using Security.Model;
 
 namespace Security.Interfaces.Collections
 {
     /// <summary>
     /// Интерфейс, представляющий собой коллекцию разрешений
     /// </summary>    
-    public interface IGrantCollection : IQueryableCollection<IGrant>
+    public interface IGrantCollection : IQueryableCollection<Grant>
     {
         /// <summary>
         /// Добавляет новое разрешение в базу данных
@@ -18,16 +18,16 @@ namespace Security.Interfaces.Collections
         /// <param name="secObjectName">Наименование объекта безопасности</param>
         /// <param name="accessTypeName">Наименование типа доступа</param>
         /// <param name="applicationName"></param>
-        IGrant Add(string roleName, string secObjectName, string accessTypeName, string applicationName);
+        Grant Add(string roleName, string secObjectName, string accessTypeName, string applicationName);
 
         /// <summary>
         /// Добавляет новое разрешение в базу данных
         /// </summary>
         /// <param name="roleName">Имя роль</param>
-        /// <param name="secObjectName">Наименование объекта безопасности</param>
-        /// <param name="accessTypeName">Наименование типа доступа</param>
+        /// <param name="secObjects">Наименования объектов безопасности</param>
+        /// <param name="accessTypes">Наименования типов доступа</param>3
         /// <param name="applicationName"></param>
-        IEnumerable<IGrant> AddRange(string roleName, ISecObject[] secObjects, IAccessType[] accessTypes, string applicationName);
+        IEnumerable<Grant> AddRange(string roleName, SecObject[] secObjects, AccessType[] accessTypes, string applicationName);
 
         /// <summary>
         /// Удаляет разрешение из базы данных
@@ -57,7 +57,7 @@ namespace Security.Interfaces.Collections
         /// <param name="secObjectName">Наименование объекта безопасности</param>
         /// <param name="accessType">Тип доступа, представленный в виде <see cref="Enum"/></param>
         /// <param name="applicationName"></param>
-        IGrant Add(string roleName, string secObjectName, Enum accessType, string applicationName);
+        Grant Add(string roleName, string secObjectName, Enum accessType, string applicationName);
 
         /// <summary>
         /// Удаляет разрешение из базы данных
@@ -77,7 +77,7 @@ namespace Security.Interfaces.Collections
         /// <param name="accessTypes"></param>
         /// <param name="applicationName"></param>
         /// <returns></returns>
-        IEnumerable<IGrant> RemoveRange(string[] roleNames, string[] secObjects, string[] accessTypes, string applicationName);
+        IEnumerable<Grant> RemoveRange(string[] roleNames, string[] secObjects, string[] accessTypes, string applicationName);
 
         /// <summary>
         /// Возвращает объект разрешения по наименованию объекта безопасности, роли, типа доступа и приложения
@@ -87,7 +87,7 @@ namespace Security.Interfaces.Collections
         /// <param name="accessType">Тип доступа</param>
         /// <param name="appName">Имя приложения</param>
         /// <returns></returns>
-        IGrant Get(string secObject, string role, string accessType, string appName);
+        Grant Get(string secObject, string role, string accessType, string appName);
 
         /// <summary>
         /// Асинхронно Возвращает объект разрешения по наименованию объекта безопасности, роли, типа доступа и приложения
@@ -97,6 +97,6 @@ namespace Security.Interfaces.Collections
         /// <param name="accessType"></param>
         /// <param name="appName"></param>
         /// <returns></returns>
-        Task<IGrant> GetAsync(string secObject, string role, string accessType, string appName);
+        Task<Grant> GetAsync(string secObject, string role, string accessType, string appName);
     }
 }

@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using Security.Interfaces.Model;
+﻿using System.Collections.Generic;
 
 namespace Security.Model
 {
     /// <summary>
     /// Объект безопасности
     /// </summary>
-    public class SecObject : ISecObject
+    public class SecObject
     {
         /// <summary>
         /// Идентификатор объекта в базе данных
@@ -43,29 +41,6 @@ namespace Security.Model
         /// Тип доступа
         /// </summary>
         public AccessType AccessType { get; set; }
-
-        /// <summary>
-        /// Наименование приложения
-        /// </summary>
-        IApplication ISecObject.Application
-        {
-            get { return Application; }
-            set { Application = (Application) value; }
-        }
-
-        /// <summary>
-        /// Тип доступа
-        /// </summary>
-        IAccessType ISecObject.AccessType
-        {
-            get { return AccessType; }
-            set { AccessType = (AccessType)value; }
-        }
-
-        /// <summary>
-        /// Список разрешений, в котором задействован данный объект
-        /// </summary>
-        IList<IGrant> ISecObject.Grants => new List<IGrant>(Grants);
 
         /// <summary>
         /// Возвращает строку, которая представляет текущий объект.

@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using Security.Interfaces.Model;
+﻿using System.Collections.Generic;
 
 namespace Security.Model
 {
     /// <summary>
     /// Объект "Роль"
     /// </summary>
-    public class Role : IRole
+    public class Role
     {
         public Role()
         {
@@ -45,24 +43,5 @@ namespace Security.Model
         /// Наименование приложения
         /// </summary>
         public Application Application { get; set; }
-
-        /// <summary>
-        /// Список ее разрешений
-        /// </summary>
-        IList<IGrant> IRole.Grants => new List<IGrant>(Grants);
-
-        /// <summary>
-        /// Список участников, входящих в роль
-        /// </summary>
-        IList<IMember> IRole.Members => new List<IMember>(Members);
-
-        /// <summary>
-        /// Наименование приложения
-        /// </summary>
-        IApplication IRole.Application
-        {
-            get { return Application; }
-            set { Application = (Application) value; }
-        }
     }
 }

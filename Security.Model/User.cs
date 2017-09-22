@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Security.Interfaces.Model;
 using Tools.Extensions;
 
 namespace Security.Model
@@ -8,7 +7,7 @@ namespace Security.Model
     /// <summary>
     /// Объект "Пользователь"
     /// </summary>
-    public class User : IUser
+    public class User
     {
         /// <summary>
         /// Конструктор
@@ -77,15 +76,5 @@ namespace Security.Model
         /// Список групп пользователя
         /// </summary>
         public HashSet<Group> Groups { get; set; }
-
-        /// <summary>
-        /// Список групп пользователя
-        /// </summary>
-        IList<IGroup> IUser.Groups => new List<IGroup>(Groups);
-
-        public static byte[] HashPassword(string password)
-        {
-            return password.GetMD5HashBytes();
-        }
     }
 }

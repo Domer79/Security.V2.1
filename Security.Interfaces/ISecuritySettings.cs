@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Security.Interfaces.Model;
+using Security.Model;
 
 namespace Security.Interfaces
 {
@@ -33,6 +33,6 @@ namespace Security.Interfaces
         /// <summary>
         /// Возвращает коллекцю системных настроек
         /// </summary>        
-        IEnumerable<ISetting> GetSystemSettings();
+        IEnumerable<Setting> GetSystemSettings();
     }
 }

@@ -1,12 +1,11 @@
 ﻿using System.Collections.Generic;
-using Security.Interfaces.Model;
 
 namespace Security.Model
 {
     /// <summary>
     /// Тип доступа
     /// </summary>
-    public class AccessType : IAccessType
+    public class AccessType
     {
         /// <summary>
         /// Конструктор
@@ -42,25 +41,6 @@ namespace Security.Model
         /// Привязанные к типу доступа объекты безопасности
         /// </summary>
         public HashSet<SecObject> SecObjects { get; set; }
-
-        /// <summary>
-        /// Список разрешений
-        /// </summary>
-        IList<IGrant> IAccessType.Grants => new List<IGrant>(Grants);
-
-        /// <summary>
-        /// Привязанные к типу доступа объекты безопасности
-        /// </summary>
-        IList<ISecObject> IAccessType.SecObjects => new List<ISecObject>();
-
-        /// <summary>
-        /// Приложение
-        /// </summary>
-        IApplication IAccessType.Application
-        {
-            get { return Application; }
-            set { Application = (Application) value; }
-        }
 
         public override string ToString()
         {

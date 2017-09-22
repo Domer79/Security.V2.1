@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using Security.Interfaces.Model;
 
 namespace Security.Model
 {
     /// <summary>
     /// Объект "Участник безопасности"
     /// </summary>
-    public class Member : IMember
+    public class Member
     {
         protected Member()
         {
@@ -33,10 +32,5 @@ namespace Security.Model
         /// Список его ролей
         /// </summary>
         public HashSet<Role> Roles { get; set; }
-
-        /// <summary>
-        /// Список его ролей
-        /// </summary>
-        IList<IRole> IMember.Roles => new List<IRole>(Roles);
     }
 }

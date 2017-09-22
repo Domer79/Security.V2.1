@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Security.Principal;
 using System.Web.Security;
-using Security.Interfaces.Model;
+using Security.Model;
 
 namespace Security.Web
 {
@@ -19,9 +19,9 @@ namespace Security.Web
         /// <summary>
         /// Профиль пользователя
         /// </summary>
-        public IUser User { get; }
+        public User User { get; }
 
-        private static IUser GetUser(string login, string applicationName)
+        private static User GetUser(string login, string applicationName)
         {
             using (var security = new CoreSecurity(applicationName))
             {

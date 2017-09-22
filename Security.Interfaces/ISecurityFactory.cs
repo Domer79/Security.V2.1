@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Security.Interfaces.Collections;
-using Security.Interfaces.Model;
+using Security.Model;
 
 namespace Security.Interfaces
 {
@@ -75,8 +72,8 @@ namespace Security.Interfaces
         /// <summary>
         /// Создает тип доступа
         /// </summary>
-        /// <returns>Экземпляр <see cref="IAccessType"/></returns>
-        IAccessType GetAccessType();
+        /// <returns>Экземпляр <see cref="AccessType"/></returns>
+        AccessType GetAccessType();
 
         /// <summary>
         /// Производит сохранение всех сделанных изменений в базу данных
@@ -100,13 +97,21 @@ namespace Security.Interfaces
         /// <summary>
         /// Текущее приложение
         /// </summary>
-        IApplication CurrentApplication { get; }
+        Application CurrentApplication { get; }
+
+        void CreateAppIfNoExists();
+
+        /// <summary>
+        /// Создает приложение, если его нет
+        /// </summary>
+        /// <param name="securityApplicationInfo"></param>
+        void CreateAppIfNoExists(ISecurityApplicationInfo securityApplicationInfo);
 
         /// <summary>
         /// Создает приложение, если его нет
         /// </summary>
         /// <param name="applicationName"></param>
         /// <param name="description"></param>
-        void CreateAppIfNoExists(ISecurityApplicationInfo securityApplicationInfo);
+        void CreateAppIfNoExists(string applicationName, string description);
     }
 }

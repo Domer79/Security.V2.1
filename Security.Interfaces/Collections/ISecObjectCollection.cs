@@ -1,13 +1,13 @@
 ﻿using System.Collections.Generic;
 using Security.Interfaces.Base;
-using Security.Interfaces.Model;
+using Security.Model;
 
 namespace Security.Interfaces.Collections
 {
     /// <summary>
     /// Интерфейс, представляющий собой коллекцию объектов безопасности
     /// </summary>
-    public interface ISecObjectCollection : IQueryableCollection<ISecObject>
+    public interface ISecObjectCollection : IQueryableCollection<SecObject>
     {
         /// <summary>
         /// Добавляет список объектов безопасности в БД

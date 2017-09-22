@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using Security.Interfaces.Model;
 
 namespace Security.Model
 {
     /// <summary>
     /// Объект Группа пользователей
     /// </summary>
-    public class Group : IGroup
+    public class Group
     {
         /// <summary>
         /// Конструктор
@@ -41,16 +40,5 @@ namespace Security.Model
         /// Список пользователей
         /// </summary>
         public HashSet<User> Users { get; set; }
-
-        /// <summary>
-        /// Список пользователей
-        /// </summary>
-        IList<IUser> IGroup.Users
-        {
-            get
-            {
-                return new List<IUser>(Users);
-            }
-        }
     }
 }

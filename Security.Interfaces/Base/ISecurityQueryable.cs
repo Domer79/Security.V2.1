@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Security.Interfaces.Base
 {
-    public interface ISecurityQueryable<T> : IQueryable<T>
+    public interface ISecurityQueryable<out T> : IQueryable<T>
     {
     }
 }

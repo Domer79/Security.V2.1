@@ -1,19 +1,18 @@
-﻿using System.Collections.Generic;
-using Security.Interfaces.Base;
-using Security.Interfaces.Model;
+﻿using Security.Interfaces.Base;
 using System.Linq;
+using Security.Model;
 
 namespace Security.Interfaces.Collections
 {
     /// <summary>
     /// Интерфейс, представляющий собой коллекцию пользователй
     /// </summary>
-    public interface IUserCollection : IQueryableCollection<IUser>
+    public interface IUserCollection : IQueryableCollection<User>
     {
         /// <summary>
         /// Возвращает коллекцию пользователей, при этом не учитывая полученные данные
         /// </summary>
         /// <returns></returns>
-        IQueryable<IUser> AsNoTracking();
+        IQueryable<User> AsNoTracking();
     }
 }

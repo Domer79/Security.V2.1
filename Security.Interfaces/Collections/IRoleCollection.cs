@@ -1,13 +1,12 @@
-﻿using System.Collections.Generic;
-using Security.Interfaces.Base;
-using Security.Interfaces.Model;
+﻿using Security.Interfaces.Base;
+using Security.Model;
 
 namespace Security.Interfaces.Collections
 {
     /// <summary>
     /// Интерфейс, представляющий собой коллекцию ролей
     /// </summary>
-    public interface IRoleCollection : IQueryableCollection<IRole>
+    public interface IRoleCollection : IQueryableCollection<Role>
     {
         
     }

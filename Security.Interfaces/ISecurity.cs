@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Security.Interfaces.Collections;
-using Security.Interfaces.Model;
+using Security.Model;
 
 namespace Security.Interfaces
 {
@@ -122,7 +122,7 @@ namespace Security.Interfaces
         /// Возвращает коллекцию типов доступа
         /// </summary>
         /// <returns></returns>
-        IEnumerable<IAccessType> GetAccessTypes();
+        IEnumerable<AccessType> GetAccessTypes();
 
         /// <summary>
         /// Коллекция и инструментарий работы с настройками
@@ -144,6 +144,6 @@ namespace Security.Interfaces
         /// <summary>
         /// Текущее приложение
         /// </summary>
-        IApplication CurrentApplication { get; }
+        Application CurrentApplication { get; }
     }
 }
