@@ -22,6 +22,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configs", "Configs", "{3B31
 		Configs\App.config = Configs\App.config
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Security.Manager", "Security.Manager\Security.Manager.csproj", "{C090D941-2315-45B8-BAC6-277FCD7B2ABA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -86,6 +88,14 @@ Global
 		{556713E5-2ADB-4B4B-8D40-74DF9393D33D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{556713E5-2ADB-4B4B-8D40-74DF9393D33D}.ReleasePackage|Any CPU.ActiveCfg = ReleasePackage|Any CPU
 		{556713E5-2ADB-4B4B-8D40-74DF9393D33D}.ReleasePackage|Any CPU.Build.0 = ReleasePackage|Any CPU
+		{C090D941-2315-45B8-BAC6-277FCD7B2ABA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C090D941-2315-45B8-BAC6-277FCD7B2ABA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C090D941-2315-45B8-BAC6-277FCD7B2ABA}.DebugPackage|Any CPU.ActiveCfg = Debug|Any CPU
+		{C090D941-2315-45B8-BAC6-277FCD7B2ABA}.DebugPackage|Any CPU.Build.0 = Debug|Any CPU
+		{C090D941-2315-45B8-BAC6-277FCD7B2ABA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C090D941-2315-45B8-BAC6-277FCD7B2ABA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C090D941-2315-45B8-BAC6-277FCD7B2ABA}.ReleasePackage|Any CPU.ActiveCfg = ReleasePackage|Any CPU
+		{C090D941-2315-45B8-BAC6-277FCD7B2ABA}.ReleasePackage|Any CPU.Build.0 = ReleasePackage|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
