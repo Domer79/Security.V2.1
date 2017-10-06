@@ -11,62 +11,89 @@ namespace Security.BusinessLogic
 {
     public class SecurityFactory: ISecurityFactory
     {
-        public delegate SecurityFactory Factory();
+        private readonly IAccessTypeCollection _accessTypeCollection;
+        private readonly IGrantCollection _grantCollection;
+        private readonly IGroupCollection _groupCollection;
+        private readonly IMemberCollection _memberCollection;
+        private readonly IRoleCollection _roleCollection;
+        private readonly ISecObjectCollection _secObjectCollection;
+        private readonly IUserCollection _userCollection;
+        private readonly IApplicationCollection _applicationCollection;
+        private readonly ISecurityTools _securityTools;
+        private readonly ISecurityTransaction _securityTransaction;
 
-        public void Dispose()
+        public SecurityFactory(
+            IAccessTypeCollection accessTypeCollection,
+            IGrantCollection grantCollection,
+            IGroupCollection groupCollection,
+            IMemberCollection memberCollection,
+            IRoleCollection roleCollection,
+            ISecObjectCollection secObjectCollection,
+            IUserCollection userCollection,
+            IApplicationCollection applicationCollection,
+            ISecurityTools securityTools,
+            ISecurityTransaction securityTransaction,
+            ISecuritySettings securitySettings
+            )
         {
-            throw new NotImplementedException();
+            _accessTypeCollection = accessTypeCollection;
+            _grantCollection = grantCollection;
+            _groupCollection = groupCollection;
+            _memberCollection = memberCollection;
+            _roleCollection = roleCollection;
+            _secObjectCollection = secObjectCollection;
+            _userCollection = userCollection;
+            _applicationCollection = applicationCollection;
+            _securityTools = securityTools;
+            _securityTransaction = securityTransaction;
+            Settings = securitySettings;
         }
 
         public string ApplicationName { get; set; }
+
         public IAccessTypeCollection CreateAccessTypeCollection()
         {
-            throw new NotImplementedException();
+            return _accessTypeCollection;
         }
 
         public IGrantCollection CreateGrantCollection()
         {
-            throw new NotImplementedException();
+            return _grantCollection;
         }
 
         public IGroupCollection CreateGroupCollection()
         {
-            throw new NotImplementedException();
+            return _groupCollection;
         }
 
         public IMemberCollection CreateMemberCollection()
         {
-            throw new NotImplementedException();
+            return _memberCollection;
         }
 
         public IRoleCollection CreateRoleCollection()
         {
-            throw new NotImplementedException();
+            return _roleCollection;
         }
 
         public ISecObjectCollection CreateSecObjectCollection()
         {
-            throw new NotImplementedException();
+            return _secObjectCollection;
         }
 
         public IUserCollection CreateUserCollection()
         {
-            throw new NotImplementedException();
+            return _userCollection;
         }
 
         public IApplicationCollection CreateApplicationCollection()
         {
-            throw new NotImplementedException();
+            return _applicationCollection;
         }
 
         public ISecurityTools CreateSecurityTools()
         {
-            throw new NotImplementedException();
-        }
-
-        public AccessType GetAccessType()
-        {
-            throw new NotImplementedException();
+            return _securityTools;
         }
 
         public int SaveChanges()
@@ -85,11 +112,8 @@ namespace Security.BusinessLogic
         }
 
         public ISecuritySettings Settings { get; }
-        public Application CurrentApplication { get; }
-        public void CreateAppIfNoExists()
-        {
-            throw new NotImplementedException();
-        }
+
+        public Application CurrentApplication => GetCurrentApplication(ApplicationName);
 
         public void CreateAppIfNoExists(ISecurityApplicationInfo securityApplicationInfo)
         {
@@ -97,6 +121,16 @@ namespace Security.BusinessLogic
         }
 
         public void CreateAppIfNoExists(string applicationName, string description)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Dispose()
+        {
+            throw new NotImplementedException();
+        }
+
+        private Application GetCurrentApplication(string applicationName)
         {
             throw new NotImplementedException();
         }

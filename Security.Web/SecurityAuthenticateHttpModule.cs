@@ -8,6 +8,8 @@ using System.Web;
 using Security.Extensions;
 using Security.Interfaces;
 using Itis.Common;
+using Security.Interfaces.V2;
+using Security.Ioc;
 
 namespace Security.Web
 {
@@ -49,6 +51,7 @@ namespace Security.Web
                 return;
 
             httpContext.User = new UserPrincipal(user.Identity.Name, _applicationName);
+            var securityContext = Container.Resolve<ISecurityContext>();
         }
 
         public void Dispose()

@@ -70,12 +70,6 @@ namespace Security.Interfaces
         ISecurityTools CreateSecurityTools();
 
         /// <summary>
-        /// Создает тип доступа
-        /// </summary>
-        /// <returns>Экземпляр <see cref="AccessType"/></returns>
-        AccessType GetAccessType();
-
-        /// <summary>
         /// Производит сохранение всех сделанных изменений в базу данных
         /// </summary>
         /// <returns>Количество затронутых изменений</returns>
@@ -98,8 +92,6 @@ namespace Security.Interfaces
         /// Текущее приложение
         /// </summary>
         Application CurrentApplication { get; }
-
-        void CreateAppIfNoExists();
 
         /// <summary>
         /// Создает приложение, если его нет

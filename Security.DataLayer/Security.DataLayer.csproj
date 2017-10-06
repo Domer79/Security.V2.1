@@ -44,10 +44,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccessTypeDataService.cs" />
+    <Compile Include="DML\Dml.cs" />
+    <Compile Include="DML\DmlCommandCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Security.Interfaces\Security.Interfaces.csproj">
+      <Project>{026352e5-2a65-4064-9848-fb60ab1046ac}</Project>
+      <Name>Security.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Security.Model\Security.Model.csproj">
+      <Project>{69F6D882-5A1E-49A9-B10C-A81AD937D188}</Project>
+      <Name>Security.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

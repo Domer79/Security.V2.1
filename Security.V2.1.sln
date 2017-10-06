@@ -26,6 +26,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Security.Manager", "Securit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Security.BusinessLogic", "Security.BusinessLogic\Security.BusinessLogic.csproj", "{119C94AE-3162-46DB-9B41-2AA5E93B8F27}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Security.Ioc", "Security.Ioc\Security.Ioc.csproj", "{EA7FA327-EE34-4327-810B-AAC8EA483189}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -106,6 +108,14 @@ Global
 		{119C94AE-3162-46DB-9B41-2AA5E93B8F27}.Release|Any CPU.Build.0 = Release|Any CPU
 		{119C94AE-3162-46DB-9B41-2AA5E93B8F27}.ReleasePackage|Any CPU.ActiveCfg = Release|Any CPU
 		{119C94AE-3162-46DB-9B41-2AA5E93B8F27}.ReleasePackage|Any CPU.Build.0 = Release|Any CPU
+		{EA7FA327-EE34-4327-810B-AAC8EA483189}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA7FA327-EE34-4327-810B-AAC8EA483189}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA7FA327-EE34-4327-810B-AAC8EA483189}.DebugPackage|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA7FA327-EE34-4327-810B-AAC8EA483189}.DebugPackage|Any CPU.Build.0 = Debug|Any CPU
+		{EA7FA327-EE34-4327-810B-AAC8EA483189}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA7FA327-EE34-4327-810B-AAC8EA483189}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA7FA327-EE34-4327-810B-AAC8EA483189}.ReleasePackage|Any CPU.ActiveCfg = Release|Any CPU
+		{EA7FA327-EE34-4327-810B-AAC8EA483189}.ReleasePackage|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

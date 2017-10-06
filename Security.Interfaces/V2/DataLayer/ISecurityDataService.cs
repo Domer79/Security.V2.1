@@ -1,4 +1,4 @@
-﻿namespace Security.Interfaces.DataLayer
+﻿namespace Security.Interfaces.V2.DataLayer
 {
     public interface ISecurityDataService
     {

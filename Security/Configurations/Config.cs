@@ -221,7 +221,7 @@ namespace Security.Configurations
 
         private static AccessType GetAccessType(string a, ISecurityFactory securityFactory)
         {
-            var accessType = securityFactory.GetAccessType();
+            var accessType = new AccessType();
             accessType.Name = a;
             return accessType;
         }

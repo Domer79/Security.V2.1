@@ -240,6 +240,11 @@ namespace Security
             }
         }
 
+        public void RegisterAccessType(string accessType)
+        {
+            
+        }
+
         /// <summary>
         /// Уничтожает ресурсы занимаемые ядром системы
         /// </summary>
