@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using Ninject;
-using Ninject.Modules;
-using Ninject.Parameters;
 using Security.Exceptions;
 using Security.Extensions;
 using Security.Interfaces;
@@ -19,7 +16,6 @@ namespace Security.Configurations
     /// </summary>
     public class Config
     {
-        private static readonly StandardKernel Kernel = new StandardKernel();
         public const string Exec = "Exec";
 
         /// <summary>
@@ -59,18 +55,6 @@ namespace Security.Configurations
             }
         }
 
-        /// <summary>
-        /// Регистрация модуля Ninject
-        /// </summary>
-        /// <typeparam name="TModule"></typeparam>
-        public static void RegisterCommonModule<TModule>() where TModule : INinjectModule, new()
-        {
-            if (!Kernel.HasModule(typeof (TModule).FullName))
-            {
-                Kernel.Load<TModule>();
-            }
-        }
-
         private static void AddAccessType(string accessName, ISecurityFactory securityFactory)
         {
             var accessTypeCollection = securityFactory.CreateAccessTypeCollection();
@@ -100,11 +84,6 @@ namespace Security.Configurations
             {
                 return false;
             }
-        }
-
-        internal static T Get<T>(params IParameter[] parameters)
-        {
-            return Kernel.Get<T>(parameters);
         }
 
         #region Register Security Objects

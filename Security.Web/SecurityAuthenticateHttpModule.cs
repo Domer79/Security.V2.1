@@ -39,7 +39,10 @@ namespace Security.Web
         /// <param name="e"></param>
         private void Context_AuthenticateRequest(object sender, EventArgs e)
         {
-            var httpContext = ((HttpApplication) sender).Context;
+            var httpApplication = ((HttpApplication) sender);
+            
+            var httpContext = httpApplication.Context;
+
             var user = httpContext.User;
 
             if (user?.Identity == null)
