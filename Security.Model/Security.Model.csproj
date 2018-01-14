@@ -60,7 +60,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccessType.cs" />
     <Compile Include="Application.cs" />
     <Compile Include="Grant.cs" />
     <Compile Include="Group.cs" />

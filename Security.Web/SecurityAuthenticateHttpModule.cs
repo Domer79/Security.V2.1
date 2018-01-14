@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web;
-using Security.Extensions;
-using Security.Interfaces;
-using Itis.Common;
+using System.Web.Mvc;
+using Security.V2.Contracts;
 
 namespace Security.Web
 {
@@ -16,12 +10,7 @@ namespace Security.Web
     /// </summary>
     public class SecurityAuthenticateHttpModule : IHttpModule
     {
-        private readonly string _applicationName;
-
-        public SecurityAuthenticateHttpModule()
-        {
-            _applicationName = CommonUtils.GetAppSettings("MainApplicationName");
-        }
+        private IApplicationContext _applicationContext;
 
         /// <summary>
         /// Инициализация модуля
@@ -29,6 +18,7 @@ namespace Security.Web
         /// <param name="context">Элемент <see cref="T:System.Web.HttpApplication"/>, что обеспечивает доступ к методам, свойствам и событиям, общим для всех объектов приложений в ASP.NET приложение</param>
         public void Init(HttpApplication context)
         {
+            _applicationContext = DependencyResolver.Current.GetService<IApplicationContext>();
             context.AuthenticateRequest += Context_AuthenticateRequest;
         }
 
@@ -51,7 +41,7 @@ namespace Security.Web
             if (!user.Identity.IsAuthenticated)
                 return;
 
-            httpContext.User = new UserPrincipal(user.Identity.Name, _applicationName);
+            httpContext.User = new UserPrincipal(user.Identity.Name, _applicationContext.Application.AppName);
         }
 
         public void Dispose()

@@ -37,12 +37,6 @@ namespace Security.EntityDal.EntityConfigurations
             MapToStoredProcedures(UpdateConfiguration);
             MapToStoredProcedures(DeleteConfiguration);
 
-            HasMany(e => e.Groups).WithMany(e => e.Users).Map(cs =>
-            {
-                cs.MapLeftKey("idUser");
-                cs.MapRightKey("idGroup");
-                cs.ToTable("UserGroups");
-            });
         }
 
         private void DeleteConfiguration(ModificationStoredProceduresConfiguration<User> p)

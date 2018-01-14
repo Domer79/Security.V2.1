@@ -20,9 +20,6 @@ namespace Security.EntityDal.EntityConfigurations
                 .IsRequired()
                 .HasMaxLength(300)
                 .HasColumnAnnotation("Index", new IndexAnnotation(new IndexAttribute("UQ_Role_Name") {IsUnique = true}));
-
-            HasMany(e => e.Grants).WithRequired(e => e.Role);
-            HasMany(e => e.Members).WithMany(e => e.Roles);
         }
     }
 }

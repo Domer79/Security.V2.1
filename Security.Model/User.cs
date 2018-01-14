@@ -10,14 +10,6 @@ namespace Security.Model
     public class User
     {
         /// <summary>
-        /// Конструктор
-        /// </summary>
-        public User()
-        {
-            Groups = new HashSet<Group>();
-        }
-
-        /// <summary>
         /// Дополнительный идентификатор пользователя
         /// </summary>
         public Guid Id { get; set; }
@@ -27,10 +19,16 @@ namespace Security.Model
         /// </summary>
         public int IdMember { get; set; }
 
+        public string Name { get; set; }
+
         /// <summary>
         /// Логин
         /// </summary>
-        public string Login { get; set; }
+        public string Login
+        {
+            get => Name;
+            set => Name = value;
+        }
 
         /// <summary>
         /// Имя
@@ -71,10 +69,5 @@ namespace Security.Model
         /// Дата последней активности пользователя
         /// </summary>
         public DateTime? LastActivityDate { get; set; }
-
-        /// <summary>
-        /// Список групп пользователя
-        /// </summary>
-        public HashSet<Group> Groups { get; set; }
     }
 }

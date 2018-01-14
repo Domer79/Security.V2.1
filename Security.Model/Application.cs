@@ -18,20 +18,5 @@ namespace Security.Model
         /// Описание
         /// </summary>
         public string Description { get; set; }
-
-        /// <summary>
-        /// Список ролей приложения
-        /// </summary>
-        public HashSet<Role> Roles { get; set; }
-
-        /// <summary>
-        /// Список объектов безопасности приложения
-        /// </summary>
-        public HashSet<SecObject> SecObjects { get; set; }
-
-        /// <summary>
-        /// Список типов доступа приложения
-        /// </summary>
-        public HashSet<AccessType> AccessTypes { get; set; }
     }
 }

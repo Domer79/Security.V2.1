@@ -19,13 +19,6 @@ namespace Security.EntityDal.EntityConfigurations
                 .HasColumnAnnotation("Index",
                     new IndexAnnotation(new IndexAttribute("UQ_Member_Name") {IsUnique = true}))
                 .IsUnicode();
-
-            HasMany(e => e.Roles).WithMany(e => e.Members).Map(configuration =>
-            {
-                configuration.ToTable("MemberRoles");
-                configuration.MapLeftKey("idMember");
-                configuration.MapRightKey("idRole");
-            });
         }
     }
 }

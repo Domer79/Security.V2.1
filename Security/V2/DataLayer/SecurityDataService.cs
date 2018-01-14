@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Security.DataLayer;
+using CommonContracts;
 using Security.Model;
 using Security.V2.Contracts;
 
@@ -11,39 +11,28 @@ namespace Security.V2.DataLayer
 {
     public class SecurityDataService: ISecurityDataService
     {
-        private readonly CommonDbExecuter _commonDbExecuter;
-        private readonly ISecurityContext _securityContext;
+        private readonly ICommonDb _commonDb;
+        private readonly IApplicationContext _applicationContext;
 
-        public SecurityDataService(CommonDbExecuter commonDbExecuter, ISecurityContext securityContext)
+        public SecurityDataService(ICommonDb commonDb, IApplicationContext applicationContext)
         {
-            _commonDbExecuter = commonDbExecuter;
-            _securityContext = securityContext;
+            _commonDb = commonDb;
+            _applicationContext = applicationContext;
         }
 
-        public IEnumerable<AccessType> GetAccessTypes()
+        private void SetAccessTypes(string[] accessTypes)
         {
-            var query = "select idAccessType, name, idApplication from sec.AccessTypes where idApplication = (select idApplication from sec.Applications where appName = @appName)";
-            return _commonDbExecuter.Query<AccessType>(query, new QueryParameter("appName", _securityContext.ApplicationName));
+            if (accessTypes == null)
+                throw new ArgumentNullException(nameof(accessTypes));
+
+            if (accessTypes.Length == 0)
+                throw new ArgumentException("Value cannot be an empty collection.", nameof(accessTypes));
+
+            var query = "insert into sec.AccessType(idAccessType, name, idApplication) values(1, 'Exec', @idApplication)";
+
+            _commonDb.ExecuteNonQuery(query);
         }
 
-        public AccessType GetAccessTypeByName(string name)
-        {
-            throw new NotImplementedException();
-        }
 
-        public void AddAccessTypes(string[] accessTypes)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void RemoveAccessTypes(string[] accessTypes)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void AddIfNotExistAndRemoveIfNotExistInSource(string[] sourceAccessTypes)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

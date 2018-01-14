@@ -21,13 +21,13 @@ namespace Security.Interfaces.Collections
         Grant Add(string roleName, string secObjectName, string accessTypeName, string applicationName);
 
         /// <summary>
-        /// Добавляет новое разрешение в базу данных
+        /// Добавляет несколько новых разрешений в базу данных
         /// </summary>
         /// <param name="roleName">Имя роль</param>
         /// <param name="secObjects">Наименования объектов безопасности</param>
         /// <param name="accessTypes">Наименования типов доступа</param>3
         /// <param name="applicationName"></param>
-        IEnumerable<Grant> AddRange(string roleName, SecObject[] secObjects, AccessType[] accessTypes, string applicationName);
+        IEnumerable<Grant> AddRange(string roleName, SecObject[] secObjects, string applicationName);
 
         /// <summary>
         /// Удаляет разрешение из базы данных

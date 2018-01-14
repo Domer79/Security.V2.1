@@ -11,6 +11,7 @@ using Security.Model;
 using Group = Security.Model.Group;
 using System.Reflection;
 using Security.Manager.App_Start;
+using Security.Manager.Infrastructure;
 
 namespace Security.Manager.Controllers
 {
@@ -37,7 +38,7 @@ namespace Security.Manager.Controllers
         [SecurityAuthorize("Security. GetUserList")]
         public ActionResult GetUserList()
         {
-            var security = new CoreSecurity();
+            var security = new MySecurity();
             return Json(security.UserCollection /*.Select(e => new UserModel { Login = e.Login })*/,
                 JsonRequestBehavior.AllowGet);
         }
@@ -186,7 +187,7 @@ namespace Security.Manager.Controllers
         [SecurityAuthorize("Security. UpdateRole")]
         public ActionResult UpdateRole(Role role)
         {
-            using (var security = new CoreSecurity(ApplicationName))
+            using (var security = new MySecurity(ApplicationName))
             {
                 security.RoleCollection.Update(role);
                 security.SaveChanges();
@@ -212,24 +213,26 @@ namespace Security.Manager.Controllers
         [SecurityAuthorize("Security. GetGroupListByUser")]
         public ActionResult GetGroupListByUser(string id)
         {
-            var groups = CoreSecurity.UserCollection.Include("Groups")
-                .Where(u => u.Login == id)
-                .SelectMany(u => u.Groups);
-
-            return JsonByNewtonsoft(groups, JsonRequestBehavior.AllowGet);
+            //            var groups = CoreSecurity.UserCollection.Include("Groups")
+            //                .Where(u => u.Login == id)
+            //                .SelectMany(u => u.Groups);
+            //
+            //            return JsonByNewtonsoft(groups, JsonRequestBehavior.AllowGet);
+            throw new NotImplementedException();
         }
 
         [SecurityAuthorize("Security. GetNonUserGroups")]
         public ActionResult GetNonUserGroups(string id)
         {
-            var userGroups =
-                CoreSecurity.UserCollection.Include("Groups")
-                    .Where(u => u.Login == id)
-                    .SelectMany(e => e.Groups)
-                    .Select(e => e.IdMember);
-            var nonUserGroups = CoreSecurity.GroupCollection.Where(e => !userGroups.Contains(e.IdMember));
+            //            var userGroups =
+            //                CoreSecurity.UserCollection.Include("Groups")
+            //                    .Where(u => u.Login == id)
+            //                    .SelectMany(e => e.Groups)
+            //                    .Select(e => e.IdMember);
+            //            var nonUserGroups = CoreSecurity.GroupCollection.Where(e => !userGroups.Contains(e.IdMember));
 
-            return JsonByNewtonsoft(nonUserGroups, JsonRequestBehavior.AllowGet);
+            //            return JsonByNewtonsoft(nonUserGroups, JsonRequestBehavior.AllowGet);
+            throw new NotImplementedException();
         }
 
         [SecurityAuthorize("Security. AddGroupsToUser")]
@@ -253,24 +256,26 @@ namespace Security.Manager.Controllers
         [SecurityAuthorize("Security. GetUserListByGroup")]
         public ActionResult GetUserListByGroup(string id)
         {
-            var users = CoreSecurity.GroupCollection.Include("Users")
-                .Where(u => u.Name == id)
-                .SelectMany(u => u.Users);
+            //            var users = CoreSecurity.GroupCollection.Include("Users")
+            //                .Where(u => u.Name == id)
+            //                .SelectMany(u => u.Users);
 
-            return JsonByNewtonsoft(users, JsonRequestBehavior.AllowGet);
+            //            return JsonByNewtonsoft(users, JsonRequestBehavior.AllowGet);
+            throw new NotImplementedException();
         }
 
         [SecurityAuthorize("Security. GetNonGroupUsers")]
         public ActionResult GetNonGroupUsers(string id)
         {
-            var groupUsers =
-                CoreSecurity.GroupCollection.Include("Users")
-                    .Where(e => e.Name == id)
-                    .SelectMany(e => e.Users)
-                    .Select(e => e.IdMember);
-            var nonGroupUsers = CoreSecurity.UserCollection.Where(e => !groupUsers.Contains(e.IdMember));
-
-            return JsonByNewtonsoft(nonGroupUsers, JsonRequestBehavior.AllowGet);
+            //            var groupUsers =
+            //                CoreSecurity.GroupCollection.Include("Users")
+            //                    .Where(e => e.Name == id)
+            //                    .SelectMany(e => e.Users)
+            //                    .Select(e => e.IdMember);
+            //            var nonGroupUsers = CoreSecurity.UserCollection.Where(e => !groupUsers.Contains(e.IdMember));
+            //
+            //            return JsonByNewtonsoft(nonGroupUsers, JsonRequestBehavior.AllowGet);
+            throw new NotImplementedException();
         }
 
         [SecurityAuthorize("Security. AddUsersToGroup")]
@@ -294,29 +299,31 @@ namespace Security.Manager.Controllers
         [SecurityAuthorize("Security. GetRoleListByMember")]
         public ActionResult GetRoleListByMember(string id)
         {
-            var idApplication = CoreSecurity.CurrentApplication.IdApplication;
-            var roles = CoreSecurity.MemberCollection.Include("Roles")
-                .Where(u => u.Name == id)
-                .SelectMany(m => m.Roles)
-                .Where(r => r.IdApplication == idApplication);
+//            var idApplication = CoreSecurity.CurrentApplication.IdApplication;
+//            var roles = CoreSecurity.MemberCollection.Include("Roles")
+//                .Where(u => u.Name == id)
+//                .SelectMany(m => m.Roles)
+//                .Where(r => r.IdApplication == idApplication);
 
-            return JsonByNewtonsoft(roles, JsonRequestBehavior.AllowGet);
+//            return JsonByNewtonsoft(roles, JsonRequestBehavior.AllowGet);
+            throw new NotImplementedException();
         }
 
         [SecurityAuthorize("Security. GetNonMemberRoles")]
         public ActionResult GetNonMemberRoles(string id)
         {
-            var idApplication = CoreSecurity.CurrentApplication.IdApplication;
-            var roles =
-                CoreSecurity.MemberCollection.Include("Roles")
-                    .Where(u => u.Name == id)
-                    .SelectMany(m => m.Roles)
-                    .Where(r => r.IdApplication == idApplication)
-                    .Select(e => e.IdRole);
-
-            var nonMemberRoles = CoreSecurity.RoleCollection.Where(e => !roles.Contains(e.IdRole));
-
-            return JsonByNewtonsoft(nonMemberRoles, JsonRequestBehavior.AllowGet);
+            //            var idApplication = CoreSecurity.CurrentApplication.IdApplication;
+            //            var roles =
+            //                CoreSecurity.MemberCollection.Include("Roles")
+            //                    .Where(u => u.Name == id)
+            //                    .SelectMany(m => m.Roles)
+            //                    .Where(r => r.IdApplication == idApplication)
+            //                    .Select(e => e.IdRole);
+            //
+            //            var nonMemberRoles = CoreSecurity.RoleCollection.Where(e => !roles.Contains(e.IdRole));
+            //
+            //            return JsonByNewtonsoft(nonMemberRoles, JsonRequestBehavior.AllowGet);
+            throw new NotImplementedException();
         }
 
         [SecurityAuthorize("Security. AddRolesToMember")]
@@ -340,68 +347,72 @@ namespace Security.Manager.Controllers
         [SecurityAuthorize("Security. GetMembersByRole")]
         public ActionResult GetMembersByRole(string id)
         {
-            var roles =
-                CoreSecurity.RoleCollection.Include("Members")
-                    .Where(u => u.Name == id)
-                    .SelectMany(m => m.Members);
-
-            return JsonByNewtonsoft(roles, JsonRequestBehavior.AllowGet);
+            //            var roles =
+            //                CoreSecurity.RoleCollection.Include("Members")
+            //                    .Where(u => u.Name == id)
+            //                    .SelectMany(m => m.Members);
+            //
+            //            return JsonByNewtonsoft(roles, JsonRequestBehavior.AllowGet);
+            throw new NotImplementedException();
         }
 
         [SecurityAuthorize("Security. GetGrantsByRole")]
         public ActionResult GetGrantsByRole(string id)
         {
-            var idRole = CoreSecurity.RoleCollection.Where(e => e.Name == id).Select(e => e.IdRole).Single();
-            var idAccessType = CoreSecurity.GetAccessTypes().Where(e => e.Name == EAccessType.Exec.ToString()).Select(e => e.IdAccessType).Single();
-
-            var grants = CoreSecurity.GrantCollection.Include("SecObject")
-                .Include("Role")
-                .Include("AccessType")
-                .Where(e => e.Role.IdRole == idRole && e.AccessType.IdAccessType == idAccessType)
-                .OrderBy(e => e.SecObject.ObjectName)
-                .Select(
-                    e =>
-                        new GrantModel
-                        {
-                            Role = e.Role.Name,
-                            SecObject = e.SecObject.ObjectName,
-                            AccessType = e.AccessType.Name
-                        });
-
-            return JsonByNewtonsoft(grants, JsonRequestBehavior.AllowGet);
+            //            var idRole = CoreSecurity.RoleCollection.Where(e => e.Name == id).Select(e => e.IdRole).Single();
+            //            var idAccessType = CoreSecurity.GetAccessTypes().Where(e => e.Name == EAccessType.Exec.ToString()).Select(e => e.IdAccessType).Single();
+            //
+            //            var grants = CoreSecurity.GrantCollection.Include("SecObject")
+            //                .Include("Role")
+            //                .Include("AccessType")
+            //                .Where(e => e.Role.IdRole == idRole && e.AccessType.IdAccessType == idAccessType)
+            //                .OrderBy(e => e.SecObject.ObjectName)
+            //                .Select(
+            //                    e =>
+            //                        new GrantModel
+            //                        {
+            //                            Role = e.Role.Name,
+            //                            SecObject = e.SecObject.ObjectName,
+            //                            AccessType = e.AccessType.Name
+            //                        });
+            //
+            //            return JsonByNewtonsoft(grants, JsonRequestBehavior.AllowGet);
+            throw new NotImplementedException();
         }
 
         [SecurityAuthorize("Security. GetNonRoleGrants")]
         public ActionResult GetNonRoleGrants(string id)
         {
-            var idRole = CoreSecurity.RoleCollection.Where(e => e.Name == id).Select(e => e.IdRole).Single();
-            var idAccessType = CoreSecurity.GetAccessTypes().Where(e => e.Name == EAccessType.Exec.ToString()).Select(e => e.IdAccessType).Single();
-
-            if (id == null)
-                return Json(null, JsonRequestBehavior.AllowGet);
-
-            var nonSecObjects = CoreSecurity.GrantCollection
-                .Include("SecObject")
-                .Include("Role")
-                .Include("AccessType")
-                .Where(g => g.Role.IdRole == idRole)
-                .Select(e => e.SecObject.ObjectName);
-
-            var secObjects = CoreSecurity.SecObjectCollection.Where(e => e.IdAccessType == idAccessType).Where(e => !nonSecObjects.Contains(e.ObjectName));
-
-            return JsonByNewtonsoft(secObjects, JsonRequestBehavior.AllowGet);
+            //            var idRole = CoreSecurity.RoleCollection.Where(e => e.Name == id).Select(e => e.IdRole).Single();
+            //            var idAccessType = CoreSecurity.GetAccessTypes().Where(e => e.Name == EAccessType.Exec.ToString()).Select(e => e.IdAccessType).Single();
+            //
+            //            if (id == null)
+            //                return Json(null, JsonRequestBehavior.AllowGet);
+            //
+            //            var nonSecObjects = CoreSecurity.GrantCollection
+            //                .Include("SecObject")
+            //                .Include("Role")
+            //                .Include("AccessType")
+            //                .Where(g => g.Role.IdRole == idRole)
+            //                .Select(e => e.SecObject.ObjectName);
+            //
+            //            var secObjects = CoreSecurity.SecObjectCollection.Where(e => e.IdAccessType == idAccessType).Where(e => !nonSecObjects.Contains(e.ObjectName));
+            //
+            //            return JsonByNewtonsoft(secObjects, JsonRequestBehavior.AllowGet);
+            throw new NotImplementedException();
         }
 
         [SecurityAuthorize("Security. SetGrants")]
         public ActionResult SetGrants(string role, SecObject[] secObjects)
         {
-            var grantCollection = CoreSecurity.GrantCollection;
+            //            var grantCollection = CoreSecurity.GrantCollection;
 
-            var accessTypes = CoreSecurity.GetAccessTypes().Where(e => e.Name == EAccessType.Exec.ToString()).ToArray();
+            //            var accessTypes = CoreSecurity.GetAccessTypes().Where(e => e.Name == EAccessType.Exec.ToString()).ToArray();
 
-            grantCollection.AddRange(role, secObjects, accessTypes, ApplicationName);
-            CoreSecurity.SaveChanges();
-            return new HttpStatusCodeResult(HttpStatusCode.OK);
+            //            grantCollection.AddRange(role, secObjects, accessTypes, ApplicationName);
+            //            CoreSecurity.SaveChanges();
+            //            return new HttpStatusCodeResult(HttpStatusCode.OK);
+            throw new NotImplementedException();
         }
 
         [SecurityAuthorize("Security. RemoveGrants")]
@@ -422,8 +433,9 @@ namespace Security.Manager.Controllers
         [SecurityAuthorize("Security. GetSecurityObjects")]
         public ActionResult GetSecurityObjects()
         {
-            var securityObjects = CoreSecurity.SecObjectCollection.Include("AccessType").Select(so => new {so.AccessType, so.Application, so.IdAccessType, so.IdSecObject, so.ObjectName}).ToArray();
-            return JsonByNewtonsoft(securityObjects, JsonRequestBehavior.AllowGet);
+            //            var securityObjects = CoreSecurity.SecObjectCollection.Include("AccessType").Select(so => new {so.AccessType, so.Application, so.IdAccessType, so.IdSecObject, so.ObjectName}).ToArray();
+            //            return JsonByNewtonsoft(securityObjects, JsonRequestBehavior.AllowGet);
+            throw new NotImplementedException();
         }
 //
 //        [HttpPost]

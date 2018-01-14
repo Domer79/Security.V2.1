@@ -7,11 +7,6 @@ namespace Security.Model
     /// </summary>
     public class Role
     {
-        public Role()
-        {
-            Grants = new HashSet<Grant>();
-        }
-
         /// <summary>
         /// Идентификатор роли в БД
         /// </summary>
@@ -28,20 +23,5 @@ namespace Security.Model
         public string Description { get; set; }
 
         public int IdApplication { get; set; }
-
-        /// <summary>
-        /// Список ее разрешений
-        /// </summary>
-        public HashSet<Grant> Grants { get; set; }
-
-        /// <summary>
-        /// Список участников, входящих в роль
-        /// </summary>
-        public HashSet<Member> Members { get; set; }
-
-        /// <summary>
-        /// Наименование приложения
-        /// </summary>
-        public Application Application { get; set; }
     }
 }

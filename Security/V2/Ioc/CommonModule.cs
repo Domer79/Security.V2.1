@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Autofac;
-using Autofac.Core;
+﻿using Autofac;
+using Security.V2.Concrete;
+using Security.V2.Contracts;
+using Security.V2.DataLayer;
 
 namespace Security.V2.Ioc
 {
@@ -12,19 +9,20 @@ namespace Security.V2.Ioc
     {
         protected override void Load(ContainerBuilder builder)
         {
-            builder.RegisterType<>()
+            builder.RegisterType<ISecurityDataService>().As<SecurityDataService>();
+            builder.RegisterType<IConnectionFactory>().As<SqlConnectionFactory>();
         }
     }
 
     public class AutofacContainer
     {
-        private Container _container;
-
         public AutofacContainer()
         {
             var builder = new ContainerBuilder();
-            IContainer _container = builder.Build();
-            _container.
+            builder.RegisterModule(new CommonModule());
+            builder.Build();
         }
+
+
     }
 }

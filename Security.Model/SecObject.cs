@@ -23,26 +23,6 @@ namespace Security.Model
         public int IdApplication { get; set; }
 
         /// <summary>
-        /// Идентификатор типа доступа
-        /// </summary>
-        public int IdAccessType { get; set; }
-
-        /// <summary>
-        /// Список разрешений, в котором задействован данный объект
-        /// </summary>
-        public HashSet<Grant> Grants { get; set; }
-
-        /// <summary>
-        /// Приложения
-        /// </summary>
-        public Application Application { get; set; }
-
-        /// <summary>
-        /// Тип доступа
-        /// </summary>
-        public AccessType AccessType { get; set; }
-
-        /// <summary>
         /// Возвращает строку, которая представляет текущий объект.
         /// </summary>
         /// <returns>

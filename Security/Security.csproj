@@ -104,16 +104,33 @@
     <Compile Include="Extensions\SecurityInfoExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CoreSecurity.cs" />
+    <Compile Include="V2\Contracts\IConfig.cs" />
+    <Compile Include="V2\Contracts\IConnectionFactory.cs" />
     <Compile Include="V2\Contracts\ISecurityDataService.cs" />
-    <Compile Include="V2\Contracts\SecurityContext.cs" />
+    <Compile Include="V2\Contracts\IApplicationContext.cs" />
+    <Compile Include="V2\Contracts\Repository\Base\IApplicationBaseRepository.cs" />
+    <Compile Include="V2\Contracts\Repository\IApplicationInternalRepository.cs" />
+    <Compile Include="V2\Contracts\Repository\IApplicationRepository.cs" />
+    <Compile Include="V2\Contracts\Repository\IGrantRepository.cs" />
+    <Compile Include="V2\Contracts\Repository\IGroupRepository.cs" />
+    <Compile Include="V2\Contracts\Repository\IMemberRoleRepository.cs" />
+    <Compile Include="V2\Contracts\Repository\IRoleRepository.cs" />
+    <Compile Include="V2\Contracts\Repository\ISecObjectRepository.cs" />
+    <Compile Include="V2\Contracts\ISecurity.cs" />
+    <Compile Include="V2\Contracts\Repository\Base\ISecurityBaseRepository.cs" />
+    <Compile Include="V2\Contracts\ISecurityFactory.cs" />
+    <Compile Include="V2\Contracts\ISecuritySettings.cs" />
+    <Compile Include="V2\Contracts\Repository\IUserGroupRepository.cs" />
+    <Compile Include="V2\Contracts\Repository\IUserRepository.cs" />
     <Compile Include="V2\DataLayer\SecurityDataService.cs" />
+    <Compile Include="V2\DataLayer\SqlConnectionFactory.cs" />
     <Compile Include="V2\Ioc\CommonModule.cs" />
-    <Compile Include="V2\SecurityContext.cs" />
+    <Compile Include="V2\Concrete\ApplicationContext.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Security.DataLayer\Security.DataLayer.csproj">
-      <Project>{96166DF1-632A-42E6-8DB3-8CDE77EA3DDA}</Project>
-      <Name>Security.DataLayer</Name>
+    <ProjectReference Include="..\CommonContracts\CommonContracts.csproj">
+      <Project>{943A1733-1B21-4D95-A4E1-D51A3FAE20A4}</Project>
+      <Name>CommonContracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\Security.Interfaces\Security.Interfaces.csproj">
       <Project>{026352E5-2A65-4064-9848-FB60AB1046AC}</Project>

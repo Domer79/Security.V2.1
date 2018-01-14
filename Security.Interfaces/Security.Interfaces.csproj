@@ -64,7 +64,6 @@
     <Compile Include="Base\IQueryableCollection.cs" />
     <Compile Include="Base\ISavedCollection.cs" />
     <Compile Include="Base\ISecurityQueryable.cs" />
-    <Compile Include="Collections\IAccessTypeCollection.cs" />
     <Compile Include="Collections\IApplicationCollection.cs" />
     <Compile Include="Collections\IGrantCollection.cs" />
     <Compile Include="Collections\IGroupCollection.cs" />

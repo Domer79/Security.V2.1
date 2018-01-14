@@ -9,18 +9,5 @@ namespace Security.V2.Contracts
 {
     public interface ISecurityDataService
     {
-        #region AccessTypes
-
-        IEnumerable<AccessType> GetAccessTypes();
-
-        AccessType GetAccessTypeByName(string name);
-
-        void AddAccessTypes(string[] accessTypes);
-
-        void RemoveAccessTypes(string[] accessTypes);
-
-        void AddIfNotExistAndRemoveIfNotExistInSource(string[] sourceAccessTypes);
-
-        #endregion
     }
 }

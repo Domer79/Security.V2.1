@@ -119,12 +119,6 @@ namespace Security.Interfaces
         ISecurityTransaction BeginTransaction();
 
         /// <summary>
-        /// Возвращает коллекцию типов доступа
-        /// </summary>
-        /// <returns></returns>
-        IEnumerable<AccessType> GetAccessTypes();
-
-        /// <summary>
         /// Коллекция и инструментарий работы с настройками
         /// </summary>
         ISecuritySettings Settings { get; }

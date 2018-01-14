@@ -70,7 +70,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base\RepositoryDataContext.cs" />
-    <Compile Include="EntityConfigurations\AccessTypeConfiguration.cs" />
     <Compile Include="EntityConfigurations\ApplicationConfiguration.cs" />
     <Compile Include="EntityConfigurations\BaseConfiguration.cs" />
     <Compile Include="EntityConfigurations\GrantConfiguration.cs" />
@@ -194,6 +193,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="SqlScripts\Database.sql" />
+    <Content Include="SqlScripts\Migrations\18.sql" />
     <Content Include="SqlScripts\Migrations\Entity_Applications.sql" />
     <Content Include="SqlScripts\Migrations\Entity_Applications.Rollback.sql" />
     <Content Include="SqlScripts\Migrations\PasswordSalt.Rollback.sql" />

@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Reflection;
 using System.Threading.Tasks;
 using Security.Interfaces;
 using Security.Interfaces.Collections;
-using Security.Configurations;
-using Security.Extensions;
 using Security.Model;
+using Security.V2.Contracts;
+using ISecurity = Security.Interfaces.ISecurity;
+using ISecurityFactory = Security.Interfaces.ISecurityFactory;
+using ISecuritySettings = Security.Interfaces.ISecuritySettings;
 
 namespace Security
 {
@@ -15,6 +16,7 @@ namespace Security
     /// </summary>
     public class CoreSecurity : ISecurity, IDisposable
     {
+        private readonly IApplicationContext _applicationContext;
         private readonly ISecurityFactory _securityFactory;
         private IUserCollection _userCollection;
         private IGroupCollection _groupCollection;
@@ -24,22 +26,16 @@ namespace Security
         private IGrantCollection _grantCollection;
         private IApplicationCollection _applicationCollection;
 
-        public CoreSecurity()
-            : this(Assembly.GetCallingAssembly().GetSecurityInfoFromAssembly().ApplicationName)
+        public CoreSecurity(IApplicationContext applicationContext)
         {
+            _applicationContext = applicationContext;
+            _securityFactory.ApplicationName = applicationContext.Application.AppName;
+            Tools = _securityFactory.CreateSecurityTools();
         }
 
-        public CoreSecurity(ISecurityApplicationInfo securityInfo)
-            : this(securityInfo.ApplicationName)
+        public CoreSecurity(string applicationContext)
         {
             
-        }
-
-        public CoreSecurity(string appName)
-        {
-            _securityFactory = Config.Get<ISecurityFactory>();
-            _securityFactory.ApplicationName = appName;
-            Tools = _securityFactory.CreateSecurityTools();
         }
 
         /// <summary>
@@ -199,15 +195,6 @@ namespace Security
         public ISecurityTransaction BeginTransaction()
         {
             return _securityFactory.BeginTransaction();
-        }
-
-        /// <summary>
-        /// Возвращает коллекцию типов доступа для текущего приложения
-        /// </summary>
-        /// <returns></returns>
-        public IEnumerable<AccessType> GetAccessTypes()
-        {
-            return _securityFactory.CreateAccessTypeCollection();
         }
 
         /// <summary>

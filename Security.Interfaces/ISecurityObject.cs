@@ -9,10 +9,5 @@
         /// Наименование объекта
         /// </summary>
         string ObjectName { get; set; }
-
-        /// <summary>
-        /// Тип доступа
-        /// </summary>
-        string AccessType { get; set; }
     }
 }

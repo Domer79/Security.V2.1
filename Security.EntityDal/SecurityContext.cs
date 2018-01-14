@@ -37,7 +37,6 @@ namespace Security.EntityDal
         }
 
         public virtual DbSet<Role> Roles { get; set; }
-        public virtual DbSet<AccessType> AccessTypes { get; set; }
         public virtual DbSet<SecObject> SecObjects { get; set; }
         public virtual DbSet<Grant> Grants { get; set; }
         public virtual DbSet<Group> Groups { get; set; }
@@ -53,7 +52,6 @@ namespace Security.EntityDal
 
             modelBuilder.Configurations.Add(new SecObjectConfiguration());
             modelBuilder.Configurations.Add(new RoleConfiguration());
-            modelBuilder.Configurations.Add(new AccessTypeConfiguration());
             modelBuilder.Configurations.Add(new GrantConfiguration());
             modelBuilder.Configurations.Add(new GroupConfiguration());
             modelBuilder.Configurations.Add(new UserConfiguration());

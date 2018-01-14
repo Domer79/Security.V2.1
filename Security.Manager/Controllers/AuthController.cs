@@ -2,6 +2,7 @@
 using System.Web.Security;
 using Security.Manager.Models;
 using System.Reflection;
+using Security.Manager.Infrastructure;
 
 namespace Security.Manager.Controllers 
 { 
@@ -19,7 +20,7 @@ namespace Security.Manager.Controllers
         public ActionResult Login(string login, string password)
         {
             var model = new LoginModel{ IsSuccessfull = false, ErrorMessage = ENTER_ERROR_MRSSAGE, Url = string.Empty };
-            using (var security = new CoreSecurity())
+            using (var security = new MySecurity())
             {
                 if (security.LogIn(login, password))
                 {

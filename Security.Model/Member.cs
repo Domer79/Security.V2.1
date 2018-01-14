@@ -8,11 +8,6 @@ namespace Security.Model
     /// </summary>
     public class Member
     {
-        protected Member()
-        {
-            Roles = new HashSet<Role>();
-        }
-
         /// <summary>
         /// Дополнительный идентификатор пользователя
         /// </summary>
@@ -27,10 +22,5 @@ namespace Security.Model
         /// Имя участника
         /// </summary>
         public string Name { get; set; }
-
-        /// <summary>
-        /// Список его ролей
-        /// </summary>
-        public HashSet<Role> Roles { get; set; }
     }
 }

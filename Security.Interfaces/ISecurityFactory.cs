@@ -16,12 +16,6 @@ namespace Security.Interfaces
         string ApplicationName { get; set; }
 
         /// <summary>
-        /// Создает коллекцию типов доступа
-        /// </summary>
-        /// <returns>Коллекцию типов доступа</returns>
-        IAccessTypeCollection CreateAccessTypeCollection();
-
-        /// <summary>
         /// Создает коллекцию разрешений
         /// </summary>
         /// <returns>Коллекцию разрешений</returns>
@@ -68,12 +62,6 @@ namespace Security.Interfaces
         /// </summary>
         /// <returns>Объект <see cref="ISecurityTools"/></returns>
         ISecurityTools CreateSecurityTools();
-
-        /// <summary>
-        /// Создает тип доступа
-        /// </summary>
-        /// <returns>Экземпляр <see cref="AccessType"/></returns>
-        AccessType GetAccessType();
 
         /// <summary>
         /// Производит сохранение всех сделанных изменений в базу данных

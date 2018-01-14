@@ -19,10 +19,6 @@ namespace Security.BusinessLogic
         }
 
         public string ApplicationName { get; set; }
-        public IAccessTypeCollection CreateAccessTypeCollection()
-        {
-            throw new NotImplementedException();
-        }
 
         public IGrantCollection CreateGrantCollection()
         {
@@ -60,11 +56,6 @@ namespace Security.BusinessLogic
         }
 
         public ISecurityTools CreateSecurityTools()
-        {
-            throw new NotImplementedException();
-        }
-
-        public AccessType GetAccessType()
         {
             throw new NotImplementedException();
         }

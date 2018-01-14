@@ -23,9 +23,6 @@ namespace Security.EntityDal.EntityConfigurations
 
             Property(e => e.IdApplication).HasColumnAnnotation("Index", new IndexAnnotation(new IndexAttribute("UQ_SecObject_ObjectName") { IsUnique = true, Order = 2}));
 
-            Property(e => e.IdAccessType).HasColumnAnnotation("Index", new IndexAnnotation(new IndexAttribute("UQ_SecObject_ObjectName") { IsUnique = true, Order = 3}));
-
-            HasMany(e => e.Grants).WithRequired(e => e.SecObject);
         }
     }
 }

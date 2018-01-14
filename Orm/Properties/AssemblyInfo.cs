@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Security.DataLayer")]
+[assembly: AssemblyTitle("Orm")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Security.DataLayer")]
+[assembly: AssemblyProduct("Orm")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("96166df1-632a-42e6-8db3-8cde77ea3dda")]
+[assembly: Guid("8a08e1ee-96c4-4694-9a46-b5ce4b68d5ca")]
 
 // Version information for an assembly consists of the following four values:
 //

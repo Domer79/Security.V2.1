@@ -288,6 +288,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\MySecurity.cs" />
     <Compile Include="Infrastructure\NewtonsoftJsonResult.cs" />
     <Compile Include="Interfaces\IErrorResult.cs" />
     <Compile Include="Models\ErrorResult.cs" />

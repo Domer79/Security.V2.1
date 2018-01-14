@@ -26,10 +26,6 @@ namespace Security.EntityDal.EntityConfigurations
                 ;
             Property(e => e.Description).IsUnicode();
 
-            HasMany(e => e.Roles).WithRequired(e => e.Application);
-            HasMany(e => e.SecObjects).WithRequired(e => e.Application);
-            HasMany(e => e.AccessTypes).WithRequired(e => e.Application);
-
             MapToStoredProcedures(configuration => configuration.Insert(d => d.HasName("AddApp").Result(r => r.IdApplication, "idApplication")));
             MapToStoredProcedures(configuration => configuration.Update(d => d.HasName("UpdateApp")));
             MapToStoredProcedures(configuration => configuration.Delete(d => d.HasName("DeleteApp")));

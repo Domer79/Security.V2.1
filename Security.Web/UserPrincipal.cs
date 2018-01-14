@@ -28,9 +28,10 @@ namespace Security.Web
         {
             using (var security = new CoreSecurity(_applicationName))
             {
+                //todo: fix this to role
                 var roles = security.MemberCollection.WithRoles()
-                    .Where(u => u.Name == _login)
-                    .SelectMany(m => m.Roles);
+                    .Where(u => u.Name == _login);
+                    //.SelectMany(m => m.Roles);
 
                 return roles.Any(e => e.Name.Equals(role, StringComparison.OrdinalIgnoreCase));
             }

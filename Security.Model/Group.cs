@@ -9,14 +9,6 @@ namespace Security.Model
     public class Group
     {
         /// <summary>
-        /// Конструктор
-        /// </summary>
-        public Group()
-        {
-            Users = new HashSet<User>();
-        }
-
-        /// <summary>
         /// Дополнительный идентификатор пользователя
         /// </summary>
         public Guid Id { get; set; }
@@ -35,10 +27,5 @@ namespace Security.Model
         /// Описание группы
         /// </summary>
         public string Description { get; set; }
-
-        /// <summary>
-        /// Список пользователей
-        /// </summary>
-        public HashSet<User> Users { get; set; }
     }
 }
