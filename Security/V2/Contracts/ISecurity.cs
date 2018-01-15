@@ -24,5 +24,6 @@ namespace Security.V2.Contracts
         ISecObjectRepository SecObjectRepository { get; }
         IGrantRepository GrantRepository { get; }
         ISecuritySettings SecuritySettings { get; }
+        IConfig Config { get; }
     }
 }
