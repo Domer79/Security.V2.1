@@ -104,10 +104,13 @@
     <Compile Include="Extensions\SecurityInfoExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CoreSecurity.cs" />
+    <Compile Include="V2\Concrete\Ioc\RegisterTypeInfo.cs" />
+    <Compile Include="V2\Concrete\Ioc\ServiceLocator.cs" />
     <Compile Include="V2\Contracts\IConfig.cs" />
     <Compile Include="V2\Contracts\IConnectionFactory.cs" />
     <Compile Include="V2\Contracts\ISecurityDataService.cs" />
     <Compile Include="V2\Contracts\IApplicationContext.cs" />
+    <Compile Include="V2\Contracts\IServiceLocator.cs" />
     <Compile Include="V2\Contracts\Repository\Base\IApplicationBaseRepository.cs" />
     <Compile Include="V2\Contracts\Repository\IApplicationInternalRepository.cs" />
     <Compile Include="V2\Contracts\Repository\IApplicationRepository.cs" />
@@ -149,7 +152,9 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="V2\ServiceLocator\" />
+  </ItemGroup>
   <Import Project="..\DebugPackageConfiguration.targets" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\Configuration.targets" />
