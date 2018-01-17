@@ -16,6 +16,7 @@ namespace Security.V2.Concrete.Ioc
         {
             var info = new RegisterTypeInfo(serviceType);
             info.AsSingle(implementType);
+            info.RegisterTypes = _registerTypes;
             _registerTypes.Add(info);
             return info;
         }
@@ -27,12 +28,13 @@ namespace Security.V2.Concrete.Ioc
 
         public object Resolve(Type serviceType)
         {
-            
+            var info = _registerTypes.First(rt => rt.ServiceType == serviceType);
+            return info.Resolve();
         }
 
         public T Resolve<T>()
         {
-            throw new NotImplementedException();
+            return (T) Resolve(typeof(T));
         }
 
         private RegisterTypeInfo RegisterType(Type serviceType)

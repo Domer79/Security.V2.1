@@ -6,9 +6,9 @@ namespace Security.V2.Contracts
     internal interface IServiceLocator
     {
         RegisterTypeInfo RegisterType(Type serviceType, Type implementType);
-        object Resolve(Type serviceType);
-
         RegisterTypeInfo RegisterType<TService>();
+
         T Resolve<T>();
+        object Resolve(Type serviceType);
     }
 }
