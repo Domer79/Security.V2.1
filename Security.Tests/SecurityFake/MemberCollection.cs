@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Security.Model;
 
-namespace Security.Tests.SecurityFakeDatabase
+namespace Security.Tests.SecurityFake
 {
-    public class MemberCollection : IEnumerable<Member>
+    public class MemberCollection : BaseCollection<Member>
     {
-        private List<Member> _members = new List<Member>()
+        protected override List<Member> Collection => new List<Member>()
         {
             new Member(){Id = MemberGuids.Keys[1], IdMember = 1, Name = "John"},
             new Member(){Id = MemberGuids.Keys[2], IdMember = 2, Name = "Jake"},
@@ -17,14 +18,27 @@ namespace Security.Tests.SecurityFakeDatabase
             new Member(){Id = MemberGuids.Keys[7], IdMember = 7, Name = "Public"},
         };
 
-        public IEnumerator<Member> GetEnumerator()
+        public override void Add(Member item)
         {
-            return _members.GetEnumerator();
+            Collection.Add(item);
         }
 
-        IEnumerator IEnumerable.GetEnumerator()
+        public override void Remove(Member item)
         {
-            return GetEnumerator();
+            var member = Collection.FirstOrDefault(m => m.IdMember == item.IdMember);
+            if (member == null)
+                return;
+
+            Collection.Remove(member);
+        }
+
+        public override void Update(Member item)
+        {
+            var member = Collection.FirstOrDefault(m => m.IdMember == item.IdMember);
+            if (member == null)
+                return;
+
+            member.Name = item.Name;
         }
     }
 }

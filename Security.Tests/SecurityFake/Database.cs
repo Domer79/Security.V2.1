@@ -1,10 +1,10 @@
-﻿using System.Security.Cryptography;
-using Security.Model;
+﻿using Security.Model;
 
-namespace Security.Tests.SecurityFakeDatabase
+namespace Security.Tests.SecurityFake
 {
     public class Database
     {
+        public static ApplicationCollection ApplicationCollection = new ApplicationCollection();
         public static MemberCollection Members = new MemberCollection();
         public static UserCollection Users = new UserCollection();
         public static GroupCollection Groups = new GroupCollection();

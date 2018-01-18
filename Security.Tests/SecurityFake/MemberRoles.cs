@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Security.Model;
 
-namespace Security.Tests.SecurityFakeDatabase
+namespace Security.Tests.SecurityFake
 {
     public class MemberRoles
     {
@@ -33,6 +33,20 @@ namespace Security.Tests.SecurityFakeDatabase
         public IEnumerable<Role> GetRoleMembers(Role role)
         {
             return _memberRoles.Where(t => t.Item2.IdRole == role.IdRole).Select(t => t.Item2);
+        }
+
+        public void Add(Member member, Role role)
+        {
+            _memberRoles.Add(new Tuple<Member, Role>(member, role));
+        }
+
+        public void Remove(Member member, Role role)
+        {
+            var tuple = _memberRoles.FirstOrDefault(_ => _.Item1.IdMember == member.IdMember && _.Item2.IdRole == role.IdRole);
+            if (tuple == null)
+                return;
+
+            _memberRoles.Remove(tuple);
         }
     }
 }

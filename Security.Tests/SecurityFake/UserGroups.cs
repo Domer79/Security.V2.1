@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Security.Model;
 
-namespace Security.Tests.SecurityFakeDatabase
+namespace Security.Tests.SecurityFake
 {
     public class UserGroups
     {
@@ -36,6 +36,20 @@ namespace Security.Tests.SecurityFakeDatabase
         public IEnumerable<User> GetGroupUsers(Group group)
         {
             return _userGroups.Where(t => t.Item2.Id == group.Id).Select(t => t.Item1);
+        }
+
+        public void Add(User user, Group group)
+        {
+            _userGroups.Add(new Tuple<User, Group>(user, group));
+        }
+
+        public void Remove(User user, Group @group)
+        {
+            var tuple = _userGroups.FirstOrDefault(_ => _.Item1.IdMember == user.IdMember && _.Item2.IdMember == @group.IdMember);
+            if (tuple == null)
+                return;
+
+            _userGroups.Remove(tuple);
         }
     }
 }

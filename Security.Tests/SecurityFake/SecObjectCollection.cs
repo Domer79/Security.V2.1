@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Security.Model;
 
-namespace Security.Tests.SecurityFakeDatabase
+namespace Security.Tests.SecurityFake
 {
-    public class SecObjectCollection : IEnumerable<SecObject>
+    public class SecObjectCollection : BaseCollection<SecObject>
     {
         private List<SecObject> _secObjects = new List<SecObject>()
         {
@@ -13,14 +14,29 @@ namespace Security.Tests.SecurityFakeDatabase
             new SecObject(){IdApplication = Database.Application.IdApplication, IdSecObject = 3, ObjectName = "About"},
         };
 
-        public IEnumerator<SecObject> GetEnumerator()
+        protected override List<SecObject> Collection => _secObjects;
+
+        public override void Add(SecObject item)
         {
-            return _secObjects.GetEnumerator();
+            Collection.Add(item);
         }
 
-        IEnumerator IEnumerable.GetEnumerator()
+        public override void Remove(SecObject item)
         {
-            return GetEnumerator();
+            var secObject = Collection.FirstOrDefault(m => m.IdSecObject == item.IdSecObject);
+            if (secObject == null)
+                return;
+
+            Collection.Remove(secObject);
+        }
+
+        public override void Update(SecObject item)
+        {
+            var secObject = Collection.FirstOrDefault(m => m.IdSecObject == item.IdSecObject);
+            if (secObject == null)
+                return;
+
+            secObject.ObjectName = item.ObjectName;
         }
     }
 }

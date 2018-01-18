@@ -53,6 +53,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SecurityFake\ApplicationCollection.cs" />
+    <Compile Include="SecurityFake\BaseCollection.cs" />
     <Compile Include="SecurityFake\Database.cs" />
     <Compile Include="SecurityFake\GrantCollection.cs" />
     <Compile Include="SecurityFake\GroupCollection.cs" />
@@ -63,12 +65,18 @@
     <Compile Include="SecurityFake\SecObjectCollection.cs" />
     <Compile Include="SecurityFake\UserCollection.cs" />
     <Compile Include="SecurityFake\UserGroups.cs" />
+    <Compile Include="SecurityImplement\ApplicationContext.cs" />
+    <Compile Include="SecurityImplement\Repository\ApplicationRepository.cs" />
     <Compile Include="ServiceLocatorTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CommonContracts\CommonContracts.csproj">
+      <Project>{943A1733-1B21-4D95-A4E1-D51A3FAE20A4}</Project>
+      <Name>CommonContracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Security.Model\Security.Model.csproj">
       <Project>{69F6D882-5A1E-49A9-B10C-A81AD937D188}</Project>
       <Name>Security.Model</Name>
@@ -78,9 +86,7 @@
       <Name>Security</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="SecurityImplement\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

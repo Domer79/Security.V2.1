@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Security.Model;
 
-namespace Security.Tests.SecurityFakeDatabase
+namespace Security.Tests.SecurityFake
 {
-    public class RoleCollection : IEnumerable<Role>
+    public class RoleCollection : BaseCollection<Role>
     {
         private List<Role> _roles = new List<Role>()
         {
@@ -12,14 +13,30 @@ namespace Security.Tests.SecurityFakeDatabase
             new Role(){IdRole = 2, Name = "Operator", IdApplication = Database.Application.IdApplication},
         };
 
-        public IEnumerator<Role> GetEnumerator()
+        protected override List<Role> Collection => _roles;
+
+        public override void Add(Role item)
         {
-            return _roles.GetEnumerator();
+            Collection.Add(item);
         }
 
-        IEnumerator IEnumerable.GetEnumerator()
+        public override void Remove(Role item)
         {
-            return GetEnumerator();
+            var role = Collection.FirstOrDefault(m => m.IdRole == item.IdRole);
+            if (role == null)
+                return;
+
+            Collection.Remove(role);
+        }
+
+        public override void Update(Role item)
+        {
+            var role = Collection.FirstOrDefault(m => m.IdRole == item.IdRole);
+            if (role == null)
+                return;
+
+            role.Description = item.Description;
+            role.Name = item.Name;
         }
     }
 }

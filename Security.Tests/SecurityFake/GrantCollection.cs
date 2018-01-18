@@ -1,31 +1,32 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Security.Model;
 
-namespace Security.Tests.SecurityFakeDatabase
+namespace Security.Tests.SecurityFake
 {
-    public class GrantCollection : IEnumerable<Grant>
+    public class GrantCollection : BaseCollection<Grant>
     {
-        private List<Grant> _grants = new List<Grant>();
+        protected override List<Grant> Collection => new List<Grant>();
 
-        public IEnumerator<Grant> GetEnumerator()
+        public override void Add(Grant grant)
         {
-            return _grants.GetEnumerator();
+            Collection.Add(new Grant());
         }
 
-        IEnumerator IEnumerable.GetEnumerator()
+        public override void Remove(Grant item)
         {
-            return GetEnumerator();
+            var grant = Collection.FirstOrDefault(_ => _.IdRole == item.IdRole && _.IdSecObject == item.IdSecObject);
+            if (grant == null)
+                return;
+
+            Collection.Remove(grant);
         }
 
-        public void Add(Grant grant)
+        public override void Update(Grant item)
         {
-            _grants.Add(new Grant());
-        }
-
-        public void Remove(Grant grant)
-        {
-            _grants.Remove(grant);
+            throw new NotSupportedException();
         }
     }
 }

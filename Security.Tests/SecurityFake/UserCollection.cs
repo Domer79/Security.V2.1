@@ -1,11 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Security.Model;
 
-namespace Security.Tests.SecurityFakeDatabase
+namespace Security.Tests.SecurityFake
 {
-    public class UserCollection : IEnumerable<User>
+    public class UserCollection : BaseCollection<User>
     {
         private static List<Member> _members = Database.Members.ToList();
 
@@ -18,14 +17,33 @@ namespace Security.Tests.SecurityFakeDatabase
             new User(){IdMember = _members[4].IdMember, Id = _members[4].Id, Login = _members[4].Name, },
         };
 
-        public IEnumerator<User> GetEnumerator()
+        protected override List<User> Collection => _users;
+
+        public override void Add(User item)
         {
-            return _users.GetEnumerator();
+            Collection.Add(item);
         }
 
-        IEnumerator IEnumerable.GetEnumerator()
+        public override void Remove(User item)
         {
-            return GetEnumerator();
+            var user = Collection.FirstOrDefault(m => m.IdMember == item.IdMember);
+            if (user == null)
+                return;
+
+            Collection.Remove(user);
+        }
+
+        public override void Update(User item)
+        {
+            var user = Collection.FirstOrDefault(m => m.IdMember == item.IdMember);
+            if (user == null)
+                return;
+
+            user.Name = item.Name;
+            user.FirstName = item.FirstName;
+            user.LastName = item.LastName;
+            user.MiddleName = item.MiddleName;
+            user.Email = item.Email;
         }
     }
 }
