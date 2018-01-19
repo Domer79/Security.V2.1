@@ -66,7 +66,9 @@
     <Compile Include="SecurityFake\UserCollection.cs" />
     <Compile Include="SecurityFake\UserGroups.cs" />
     <Compile Include="SecurityImplement\ApplicationContext.cs" />
+    <Compile Include="SecurityImplement\Repository\ApplicationInternalRepository.cs" />
     <Compile Include="SecurityImplement\Repository\ApplicationRepository.cs" />
+    <Compile Include="SecurityImplement\Repository\GrantRepository.cs" />
     <Compile Include="ServiceLocatorTest.cs" />
   </ItemGroup>
   <ItemGroup>

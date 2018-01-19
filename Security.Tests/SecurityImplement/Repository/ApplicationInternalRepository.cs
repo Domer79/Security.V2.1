@@ -10,11 +10,12 @@ using Security.V2.Contracts.Repository;
 
 namespace Security.Tests.SecurityImplement.Repository
 {
-    public class ApplicationRepository : IApplicationRepository
+    public class ApplicationInternalRepository : IApplicationInternalRepository
     {
         public Application Create(Application entity)
         {
-            throw new NotSupportedException();
+            Database.Applications.Add(entity);
+            return entity;
         }
 
         public Application Get(object id)
@@ -39,12 +40,13 @@ namespace Security.Tests.SecurityImplement.Repository
 
         public void Remove(object id)
         {
-            throw new NotSupportedException();
+            var application = Get(id);
+            Database.Applications.Remove(application);
         }
 
         public void Update(Application entity)
         {
-            throw new NotSupportedException();
+            Database.Applications.Update(entity);
         }
     }
 }
