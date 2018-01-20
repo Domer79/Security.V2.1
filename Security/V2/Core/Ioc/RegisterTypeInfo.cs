@@ -1,10 +1,52 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
-using System.Reflection;
 
-namespace Security.V2.Concrete.Ioc
+namespace Security.V2.Core.Ioc
 {
+    public interface IDependency
+    {
+        Type ImplementType { get; }
+        Type ServiceType { get; }
+        Func<object> MethodImplement { get; }
+        object Instance { get; }
+    }
+
+    public interface IScope
+    {
+        IDependency Dependency { get; }
+        object GetObject();
+        bool IsDisposed { get; }
+    }
+
+    public abstract class BaseScope : IScope
+    {
+        private IDependency _dependency;
+
+        public BaseScope(IDependency dependency)
+        {
+            _dependency = dependency;
+        }
+
+        public IDependency Dependency => _dependency;
+
+        public bool IsDisposed => false;
+
+        public object GetObject()
+        {
+            return GetInstance()
+                .GetInistanceByMethodImplement()
+                .GetInstanceByImplementType();
+        }
+
+        protected abstract object GetInstanceByImplementType();
+
+        protected abstract BaseScope GetInistanceByMethodImplement();
+
+        protected abstract BaseScope GetInstance();
+    }
+
     internal class RegisterTypeInfo
     {
         private Type _implementType;
@@ -32,6 +74,11 @@ namespace Security.V2.Concrete.Ioc
         {
             _implementType = typeof(TImplement);
         }
+    }
+
+    public class RegisterFactoryInfo
+    {
+
     }
 
     internal static class RegisterTypeHelper

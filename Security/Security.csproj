@@ -104,8 +104,8 @@
     <Compile Include="Extensions\SecurityInfoExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CoreSecurity.cs" />
-    <Compile Include="V2\Concrete\Ioc\RegisterTypeInfo.cs" />
-    <Compile Include="V2\Concrete\Ioc\ServiceLocator.cs" />
+    <Compile Include="V2\Core\Ioc\RegisterTypeInfo.cs" />
+    <Compile Include="V2\Core\Ioc\ServiceLocator.cs" />
     <Compile Include="V2\Contracts\IConfig.cs" />
     <Compile Include="V2\Contracts\IConnectionFactory.cs" />
     <Compile Include="V2\Contracts\ISecurityDataService.cs" />
@@ -125,10 +125,11 @@
     <Compile Include="V2\Contracts\ISecuritySettings.cs" />
     <Compile Include="V2\Contracts\Repository\IUserGroupRepository.cs" />
     <Compile Include="V2\Contracts\Repository\IUserRepository.cs" />
+    <Compile Include="V2\Core\Security.cs" />
     <Compile Include="V2\DataLayer\SecurityDataService.cs" />
     <Compile Include="V2\DataLayer\SqlConnectionFactory.cs" />
     <Compile Include="V2\Ioc\CommonModule.cs" />
-    <Compile Include="V2\Concrete\ApplicationContext.cs" />
+    <Compile Include="V2\Core\ApplicationContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CommonContracts\CommonContracts.csproj">

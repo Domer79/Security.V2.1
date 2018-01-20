@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Security.V2.Contracts;
-using Tools.Extensions;
 
-namespace Security.V2.Concrete.Ioc
+namespace Security.V2.Core.Ioc
 {
     internal class ServiceLocator : IServiceLocator
     {
@@ -40,6 +37,11 @@ namespace Security.V2.Concrete.Ioc
         private RegisterTypeInfo RegisterType(Type serviceType)
         {
             return RegisterType(serviceType, null);
+        }
+
+        public void Dispose()
+        {
+            throw new NotImplementedException();
         }
     }
 }

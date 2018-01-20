@@ -1,6 +1,6 @@
 ﻿using System;
 using NUnit.Framework;
-using Security.V2.Concrete.Ioc;
+using Security.V2.Core.Ioc;
 
 namespace Security.Tests
 {

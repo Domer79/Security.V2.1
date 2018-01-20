@@ -2,7 +2,7 @@
 
 namespace Security.V2.Contracts
 {
-    public interface ISecurityFactory
+    internal interface ISecurityFactory
     {
         IUserRepository UserRepository { get; }
         IGroupRepository GroupRepository { get; }
@@ -13,5 +13,6 @@ namespace Security.V2.Contracts
         ISecObjectRepository SecObjectRepository { get; }
         IGrantRepository GrantRepository { get; }
         ISecuritySettings SecuritySettings { get; }
+        IConfig Config { get; }
     }
 }

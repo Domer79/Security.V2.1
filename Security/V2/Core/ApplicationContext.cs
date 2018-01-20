@@ -3,7 +3,7 @@ using CommonContracts;
 using Security.Model;
 using Security.V2.Contracts;
 
-namespace Security.V2.Concrete
+namespace Security.V2.Core
 {
     public class ApplicationContext : IApplicationContext
     {
