@@ -62,7 +62,8 @@ namespace Security.V2.Core
         private IServiceLocator GetServiceLocator()
         {
             var serviceLocator = new ServiceLocator();
-            serviceLocator.RegisterType<ISecurityFactory>().AsSingle<SecurityFactory>();
+            throw new NotImplementedException();
+//            serviceLocator.RegisterType<ISecurityFactory>().AsSingle<SecurityFactory>();
         }
     }
 
