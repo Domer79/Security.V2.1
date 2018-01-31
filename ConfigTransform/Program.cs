@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -43,7 +44,19 @@ namespace ConfigTransform
                 throw new Exception("Transformation Failed");
             }
 
-            var saveFileName = appName != null ? $"{appName}.config" : configFileName;
+            string saveFileName;
+            if (appName == null)
+            {
+                saveFileName = configFileName;
+            }
+            else
+            {
+                var filePath = Path.GetFullPath(appName);
+                var dirPath = Path.GetDirectoryName(filePath);
+                var fileName = Path.GetFileName(filePath);
+                saveFileName = Path.Combine(dirPath, $"{fileName}.config");
+            }
+
             document.Save(saveFileName);
         }
 

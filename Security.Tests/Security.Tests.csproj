@@ -69,6 +69,7 @@
     <Compile Include="SecurityImplement\Repository\ApplicationInternalRepository.cs" />
     <Compile Include="SecurityImplement\Repository\ApplicationRepository.cs" />
     <Compile Include="SecurityImplement\Repository\GrantRepository.cs" />
+    <Compile Include="SecurityImplement\Repository\GroupRepository.cs" />
     <Compile Include="ServiceLocatorTest.cs" />
   </ItemGroup>
   <ItemGroup>
