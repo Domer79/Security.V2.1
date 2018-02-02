@@ -68,8 +68,14 @@
     <Compile Include="SecurityImplement\ApplicationContext.cs" />
     <Compile Include="SecurityImplement\Repository\ApplicationInternalRepository.cs" />
     <Compile Include="SecurityImplement\Repository\ApplicationRepository.cs" />
+    <Compile Include="SecurityImplement\Repository\EntityCollectionInfo.cs" />
     <Compile Include="SecurityImplement\Repository\GrantRepository.cs" />
     <Compile Include="SecurityImplement\Repository\GroupRepository.cs" />
+    <Compile Include="SecurityImplement\Repository\ISecObjectRepositorty.cs" />
+    <Compile Include="SecurityImplement\Repository\MemberRoleRepository.cs" />
+    <Compile Include="SecurityImplement\Repository\RoleRepository.cs" />
+    <Compile Include="SecurityImplement\Repository\UserGroupRepository.cs" />
+    <Compile Include="SecurityImplement\Repository\UserRepository.cs" />
     <Compile Include="ServiceLocatorTest.cs" />
   </ItemGroup>
   <ItemGroup>

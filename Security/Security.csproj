@@ -104,7 +104,16 @@
     <Compile Include="Extensions\SecurityInfoExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CoreSecurity.cs" />
-    <Compile Include="V2\Core\Ioc\RegisterTypeInfo.cs" />
+    <Compile Include="V2\Core\Ioc\AddInstanceEventArgs.cs" />
+    <Compile Include="V2\Core\Ioc\AddInstanceHandler.cs" />
+    <Compile Include="V2\Core\Ioc\Scopes\BaseScope.cs" />
+    <Compile Include="V2\Core\Ioc\Dependencies\Dependency.cs" />
+    <Compile Include="V2\Core\Ioc\Dependencies\FactoryDependency.cs" />
+    <Compile Include="V2\Core\Ioc\Interfaces\IDependency.cs" />
+    <Compile Include="V2\Core\Ioc\Interfaces\IocService.cs" />
+    <Compile Include="V2\Core\Ioc\Interfaces\IRequest.cs" />
+    <Compile Include="V2\Core\Ioc\Interfaces\IScope.cs" />
+    <Compile Include="V2\Core\Ioc\Request.cs" />
     <Compile Include="V2\Core\Ioc\ServiceLocator.cs" />
     <Compile Include="V2\Contracts\IConfig.cs" />
     <Compile Include="V2\Contracts\IConnectionFactory.cs" />
@@ -125,6 +134,7 @@
     <Compile Include="V2\Contracts\ISecuritySettings.cs" />
     <Compile Include="V2\Contracts\Repository\IUserGroupRepository.cs" />
     <Compile Include="V2\Contracts\Repository\IUserRepository.cs" />
+    <Compile Include="V2\Core\Ioc\Scopes\TransientScope.cs" />
     <Compile Include="V2\Core\Security.cs" />
     <Compile Include="V2\DataLayer\SecurityDataService.cs" />
     <Compile Include="V2\DataLayer\SqlConnectionFactory.cs" />

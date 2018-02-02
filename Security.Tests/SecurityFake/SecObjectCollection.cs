@@ -18,6 +18,7 @@ namespace Security.Tests.SecurityFake
 
         public override void Add(SecObject item)
         {
+            item.IdSecObject = Database.SecObjects.Identity();
             Collection.Add(item);
         }
 

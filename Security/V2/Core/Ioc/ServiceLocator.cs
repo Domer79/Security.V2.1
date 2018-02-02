@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using Security.V2.Contracts;
+using Security.V2.Core.Ioc.Dependencies;
+using Security.V2.Core.Ioc.Interfaces;
 
 namespace Security.V2.Core.Ioc
 {
@@ -38,6 +40,17 @@ namespace Security.V2.Core.Ioc
         public IDependency RegisterType<TService, TImplement>()
         {
             return RegisterType(typeof(TService), typeof(TImplement));
+        }
+
+        public IDependency RegisterFactory(Type factoryService, Type factoryImplement)
+        {
+            IDependency dep = new FactoryDependency();
+            dep.ServiceType = factoryService;
+            dep.ImplementType = factoryImplement;
+            dep.Registry = this;
+            _registry[factoryService] = dep;
+
+            return dep;
         }
 
         public object Resolve(Type serviceType)
@@ -116,12 +129,5 @@ namespace Security.V2.Core.Ioc
             _instanceRegistry[serviceType] = service;
             OnAddInstanceEvent(serviceType);
         }
-    }
-
-    public delegate void AddInstanceHandler(object sender, AddInstanceEventArgs args);
-
-    public class AddInstanceEventArgs: EventArgs
-    {
-        public Type ServiceType { get; set; }
     }
 }

@@ -25,14 +25,14 @@ namespace Security.Tests.SecurityFake
             new Tuple<Member, Role>(_members[5], _roles[1]),
         };
 
-        public IEnumerable<Member> GetMemberRoles(Member member)
+        public IEnumerable<Role> GetMemberRoles(Member member)
         {
-            return _memberRoles.Where(t => t.Item1.Id == member.Id).Select(t => t.Item1);
+            return _memberRoles.Where(t => t.Item1.Id == member.Id).Select(t => t.Item2);
         }
 
-        public IEnumerable<Role> GetRoleMembers(Role role)
+        public IEnumerable<Member> GetRoleMembers(Role role)
         {
-            return _memberRoles.Where(t => t.Item2.IdRole == role.IdRole).Select(t => t.Item2);
+            return _memberRoles.Where(t => t.Item2.IdRole == role.IdRole).Select(t => t.Item1);
         }
 
         public void Add(Member member, Role role)

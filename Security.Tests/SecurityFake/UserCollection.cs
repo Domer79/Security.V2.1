@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Security.Model;
 
@@ -21,23 +22,38 @@ namespace Security.Tests.SecurityFake
 
         public override void Add(User item)
         {
+            var id = Database.Members.Identity();
+
+            item.IdMember = id;
+            Database.Members.Add(new Member() { Id = item.Id, IdMember = id, Name = item.Name });
             Collection.Add(item);
         }
 
         public override void Remove(User item)
         {
-            var user = Collection.FirstOrDefault(m => m.IdMember == item.IdMember);
-            if (user == null)
+            var user = Collection.First(m => m.IdMember == item.IdMember);
+            var member = Database.Members.First(m => m.IdMember == item.IdMember);
+
+            if (user == null && member == null)
                 return;
 
+            if (user == null || member == null)
+                throw new Exception("Группа или участник есть по отдельности");
+
+            Database.Members.Remove(member);
             Collection.Remove(user);
         }
 
         public override void Update(User item)
         {
             var user = Collection.FirstOrDefault(m => m.IdMember == item.IdMember);
-            if (user == null)
+            var member = Database.Members.First(m => m.IdMember == item.IdMember);
+
+            if (user == null && member == null)
                 return;
+
+            if (user == null || member == null)
+                throw new Exception("Группа или участник есть по отдельности");
 
             user.Name = item.Name;
             user.FirstName = item.FirstName;

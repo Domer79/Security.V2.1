@@ -17,6 +17,7 @@ namespace Security.Tests.SecurityFake
 
         public override void Add(Role item)
         {
+            item.IdRole = Database.Roles.Identity();
             Collection.Add(item);
         }
 

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,13 +9,6 @@ using Security.V2.Contracts.Repository;
 
 namespace Security.Tests.SecurityImplement.Repository
 {
-    public class EntityCollectionInfo<T> : IEntityCollectionInfo<T> where T : class
-    {
-        public IEnumerable<T> Entities { get; set; }
-        public int PageCount { get; set; }
-        public int Count { get; set; }
-    }
-
     public class GroupRepository : IGroupRepository
     {
         public Group Create(Group entity)
@@ -58,9 +50,7 @@ namespace Security.Tests.SecurityImplement.Repository
 
         public void Update(Group entity)
         {
-            var group = Database.Groups.First(_ => _.IdMember == entity.IdMember);
-            group.Name = entity.Name;
-            group.Description = entity.Description;
+            Database.Groups.Update(entity);
         }
     }
 }

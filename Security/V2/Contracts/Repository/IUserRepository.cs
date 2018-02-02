@@ -8,6 +8,6 @@ namespace Security.V2.Contracts.Repository
 {
     public interface IUserRepository: ISecurityBaseRepository<User>
     {
-        
+        User GetByEmail(string email);
     }
 }
