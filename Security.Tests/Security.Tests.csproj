@@ -76,7 +76,15 @@
     <Compile Include="SecurityImplement\Repository\RoleRepository.cs" />
     <Compile Include="SecurityImplement\Repository\UserGroupRepository.cs" />
     <Compile Include="SecurityImplement\Repository\UserRepository.cs" />
-    <Compile Include="ServiceLocatorTest.cs" />
+    <Compile Include="ServiceLocator\Concrete\IocService.cs" />
+    <Compile Include="ServiceLocator\Concrete\Sample1.cs" />
+    <Compile Include="ServiceLocator\Concrete\Sample2.cs" />
+    <Compile Include="ServiceLocator\Concrete\SampleManager.cs" />
+    <Compile Include="ServiceLocator\Concrete\TestRequestScope.cs" />
+    <Compile Include="ServiceLocator\Interfaces\ISample1.cs" />
+    <Compile Include="ServiceLocator\Interfaces\ISample2.cs" />
+    <Compile Include="ServiceLocator\Interfaces\ISampleManager.cs" />
+    <Compile Include="ServiceLocator\ServiceLocatorTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

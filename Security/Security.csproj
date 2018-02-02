@@ -106,6 +106,7 @@
     <Compile Include="CoreSecurity.cs" />
     <Compile Include="V2\Core\Ioc\AddInstanceEventArgs.cs" />
     <Compile Include="V2\Core\Ioc\AddInstanceHandler.cs" />
+    <Compile Include="V2\Core\Ioc\Exceptions\DependencyResolveException.cs" />
     <Compile Include="V2\Core\Ioc\Scopes\BaseScope.cs" />
     <Compile Include="V2\Core\Ioc\Dependencies\Dependency.cs" />
     <Compile Include="V2\Core\Ioc\Dependencies\FactoryDependency.cs" />

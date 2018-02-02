@@ -1,12 +1,13 @@
 ﻿using System;
-using System.Linq;
 using NUnit.Framework;
-using Security.V2.Contracts;
-using Security.V2.Core.Ioc;
-using Security.V2.Core.Ioc.Interfaces;
+using Security.Tests.ServiceLocator.Concrete;
+using Security.Tests.ServiceLocator.Interfaces;
 
-namespace Security.Tests
+namespace Security.Tests.ServiceLocator
 {
+    using Security.V2.Core.Ioc.Exceptions;
+    using V2.Core.Ioc;
+
     [TestFixture]
     public class ServiceLocatorTest
     {
@@ -96,6 +97,40 @@ namespace Security.Tests
             Assert.That(sampleManager1.Sample1.Name, Is.EqualTo(expectedName));
         }
 
+        [Test]
+        public void TestFactoryDependency_ReturnAlways_ExpectedValue()
+        {
+            var serviceLocator = new ServiceLocator();
+            serviceLocator.RegisterType<ISample1, Sample1>().InTestRequestScope(this);
+            serviceLocator.RegisterType<ISample2, Sample2>().InTestRequestScope(this);
+            serviceLocator.RegisterType<ISampleManager, SampleManager>().InTestRequestScope(this);
+            serviceLocator.RegisterFactory<ISampleFactory, SampleFactory>();
+
+            var sampleFactory = serviceLocator.Resolve<ISampleFactory>();
+
+            Assert.That(sampleFactory, Is.InstanceOf<ISampleFactory>());
+            Assert.That(sampleFactory.Sample1, Is.Not.Null);
+            Assert.That(sampleFactory.Sample2, Is.Not.Null);
+            Assert.That(sampleFactory.SampleManager, Is.Not.Null);
+            Assert.That(sampleFactory.SampleManager.Sample1, Is.Not.Null);
+            Assert.That(sampleFactory.SampleManager.Sample2, Is.Not.Null);
+        }
+
+        [Test]
+        public void TestFactoryDependency_Expected_DependencyResolveException()
+        {
+            var serviceLocator = new ServiceLocator();
+//            serviceLocator.RegisterType<ISample1, Sample1>().InTestRequestScope(this);
+            serviceLocator.RegisterType<ISample2, Sample2>().InTestRequestScope(this);
+            serviceLocator.RegisterType<ISampleManager, SampleManager>().InTestRequestScope(this);
+            serviceLocator.RegisterFactory<ISampleFactory, SampleFactory>();
+
+            Assert.Catch<DependencyResolveException>(() =>
+            {
+                serviceLocator.Resolve<ISampleFactory>();
+            });
+        }
+
         public event EventHandler BeginScope;
         public event EventHandler EndScope;
 
@@ -110,104 +145,17 @@ namespace Security.Tests
         }
     }
 
-    public static class IocService
+    public interface ISampleFactory
     {
-        public static void InTestRequestScope(this IDependency dependency, ServiceLocatorTest serviceLocatorTest)
-        {
-            dependency.Scope = new TestRequestScope(dependency.Registry, serviceLocatorTest);
-        }
+        ISample1 Sample1 { get; set; }
+        ISample2 Sample2 { get; set; }
+        ISampleManager SampleManager { get; set; }
     }
 
-    public class TestRequestScope : IScope
+    public class SampleFactory : ISampleFactory
     {
-        private readonly IRegistry _registry;
-        private readonly ServiceLocatorTest _serviceLocatorTest;
-
-        public TestRequestScope(IRegistry registry, ServiceLocatorTest serviceLocatorTest)
-        {
-            _registry = registry;
-            _serviceLocatorTest = serviceLocatorTest;
-            _serviceLocatorTest.BeginScope += ServiceLocatorTest_BeginScope            ; ;
-            _serviceLocatorTest.EndScope += ServiceLocatorTest_EndScope;
-        }
-
-        private void ServiceLocatorTest_EndScope(object sender, EventArgs e)
-        {
-            var dependencies = _registry.DependencyCollection.Where(_ => _.Scope is TestRequestScope);
-            foreach (var dependency in dependencies)
-            {
-                _registry.ServiceInstanceDismiss(dependency.ServiceType);
-            }
-        }
-
-        private void ServiceLocatorTest_BeginScope(object sender, EventArgs e)
-        {
-            
-        }
-
-        public object GetObject(IRequest request, Type serviceType)
-        {
-            var instance = request.GetService(serviceType);
-            if (instance != null)
-                return instance;
-
-            var dependency = _registry.GetFromRegistry(serviceType);
-            if (dependency == null)
-                throw new ObjectDisposedException($"Object {dependency.ServiceType} disposed");
-
-            if (dependency.MethodImplement != null)
-            {
-                instance = dependency.MethodImplement();
-                if (instance != null)
-                    return instance;
-            }
-
-            instance = dependency.ResolveByType(request);
-            request.SetService(serviceType, instance);
-            return instance;
-        }
-    }
-
-    public interface ISample1
-    {
-        string Name { get; set; }
-    }
-
-    public interface ISample2
-    {
-        ISample1 Sample1 { get; }
-    }
-
-    public interface ISampleManager
-    {
-        ISample1 Sample1 { get; }
-        ISample2 Sample2 { get; }
-    }
-
-    public class Sample1 : ISample1
-    {
-        public string Name { get; set; }
-    }
-
-    public class Sample2 : ISample2
-    {
-        public ISample1 Sample1 { get; }
-
-        public Sample2(ISample1 sample1)
-        {
-            Sample1 = sample1;
-        }
-    }
-
-    public class SampleManager : ISampleManager
-    {
-        public ISample1 Sample1 { get; }
-        public ISample2 Sample2 { get; }
-
-        public SampleManager(ISample1 sample1, ISample2 sample2)
-        {
-            Sample1 = sample1;
-            Sample2 = sample2;
-        }
+        public ISample1 Sample1 { get; set; }
+        public ISample2 Sample2 { get; set; }
+        public ISampleManager SampleManager { get; set; }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Security.V2.Contracts;
 using Security.V2.Core.Ioc.Dependencies;
+using Security.V2.Core.Ioc.Exceptions;
 using Security.V2.Core.Ioc.Interfaces;
 
 namespace Security.V2.Core.Ioc
@@ -53,6 +54,11 @@ namespace Security.V2.Core.Ioc
             return dep;
         }
 
+        public IDependency RegisterFactory<TService, TImplement>()
+        {
+            return RegisterFactory(typeof(TService), typeof(TImplement));
+        }
+
         public object Resolve(Type serviceType)
         {
             var dep = _registry[serviceType];
@@ -85,7 +91,15 @@ namespace Security.V2.Core.Ioc
 
         public IDependency GetFromRegistry(Type serviceType)
         {
-            return _registry[serviceType];
+            try
+            {
+                return _registry[serviceType];
+
+            }
+            catch (Exception e)
+            {
+                throw new DependencyResolveException($"Service type {serviceType} is not registered", e);
+            }
         }
 
         public IDependency GetFromRegistry<TService>()
