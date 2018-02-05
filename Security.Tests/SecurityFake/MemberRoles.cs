@@ -7,27 +7,11 @@ namespace Security.Tests.SecurityFake
 {
     public class MemberRoles
     {
-        private static List<Member> _members = Database.Members.ToList();
-        private static List<Role> _roles = Database.Roles.ToList();
+        private List<Tuple<Member, Role>> _memberRoles = new List<Tuple<Member, Role>>();
 
-        private List<Tuple<Member, Role>> _memberRoles = new List<Tuple<Member, Role>>()
+        public IEnumerable<Role> GetMemberRoles(Member member, Application app)
         {
-            new Tuple<Member, Role>(_members[0], _roles[0]),
-            new Tuple<Member, Role>(_members[1], _roles[0]),
-            new Tuple<Member, Role>(_members[2], _roles[0]),
-            new Tuple<Member, Role>(_members[3], _roles[0]),
-            new Tuple<Member, Role>(_members[4], _roles[0]),
-            new Tuple<Member, Role>(_members[5], _roles[0]),
-            new Tuple<Member, Role>(_members[6], _roles[0]),
-            new Tuple<Member, Role>(_members[0], _roles[1]),
-            new Tuple<Member, Role>(_members[2], _roles[1]),
-            new Tuple<Member, Role>(_members[3], _roles[1]),
-            new Tuple<Member, Role>(_members[5], _roles[1]),
-        };
-
-        public IEnumerable<Role> GetMemberRoles(Member member)
-        {
-            return _memberRoles.Where(t => t.Item1.Id == member.Id).Select(t => t.Item2);
+            return _memberRoles.Where(t => t.Item1.Id == member.Id && t.Item2.IdApplication == app.IdApplication).Select(t => t.Item2);
         }
 
         public IEnumerable<Member> GetRoleMembers(Role role)
@@ -47,6 +31,11 @@ namespace Security.Tests.SecurityFake
                 return;
 
             _memberRoles.Remove(tuple);
+        }
+
+        public void Drop()
+        {
+            _memberRoles.Clear();
         }
     }
 }

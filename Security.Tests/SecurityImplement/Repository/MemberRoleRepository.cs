@@ -60,16 +60,18 @@ namespace Security.Tests.SecurityImplement.Repository
             return Database.MemberRoles.GetRoleMembers(roleEntity);
         }
 
-        public IEnumerable<Role> GetRolesByIdMember(int idMember)
+        public IEnumerable<Role> GetRolesByIdMember(int idMember, string appName)
         {
             var member = Database.Members.First(_ => _.IdMember == idMember);
-            return Database.MemberRoles.GetMemberRoles(member);
+            var app = Database.Applications.Single(_ => _.AppName == appName);
+            return Database.MemberRoles.GetMemberRoles(member, app);
         }
 
-        public IEnumerable<Role> GetRolesByMemberName(string member)
+        public IEnumerable<Role> GetRolesByMemberName(string member, string appName)
         {
             var memberEntity = Database.Members.First(_ => _.Name == member);
-            return Database.MemberRoles.GetMemberRoles(memberEntity);
+            var app = Database.Applications.Single(_ => _.AppName == appName);
+            return Database.MemberRoles.GetMemberRoles(memberEntity, app);
         }
     }
 }

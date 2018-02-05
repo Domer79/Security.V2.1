@@ -6,87 +6,110 @@ using System.Threading.Tasks;
 using Security.V2.Contracts;
 using Security.V2.Contracts.Repository;
 using Security.V2.Core.Ioc;
+using Security.V2.Core.Ioc.Interfaces;
 
 namespace Security.V2.Core
 {
     public class Security : ISecurity
     {
         private readonly string _appName;
-        private IServiceLocator _serviceLocator;
-        private ISecurityFactory _securityFactory;
 
         public Security(string appName)
+            :this(appName, IocConfig.GetLocator())
+        {
+        }
+
+        internal Security(string appName, IServiceLocator locator)
         {
             _appName = appName;
-            _securityFactory = _serviceLocator.Resolve<ISecurityFactory>();
+            Locator = locator;
         }
 
-        public IApplicationContext ApplicationContext => throw new NotImplementedException();
+        public IApplicationContext ApplicationContext => Locator.Resolve<IApplicationContext>();
 
-        public IUserRepository UserRepository => throw new NotImplementedException();
+        public IUserRepository UserRepository => Factory.UserRepository;
 
-        public IGroupRepository GroupRepository => throw new NotImplementedException();
+        public IGroupRepository GroupRepository => Factory.GroupRepository;
 
-        public IApplicationRepository ApplicationRepository => throw new NotImplementedException();
+        public IApplicationRepository ApplicationRepository => Factory.ApplicationRepository;
 
-        public IUserGroupRepository UserGroupRepository => throw new NotImplementedException();
+        public IUserGroupRepository UserGroupRepository => Factory.UserGroupRepository;
 
-        public IMemberRoleRepository MemberRoleRepository => throw new NotImplementedException();
+        public IMemberRoleRepository MemberRoleRepository => Factory.MemberRoleRepository;
 
-        public IRoleRepository RoleRepository => throw new NotImplementedException();
+        public IRoleRepository RoleRepository => Factory.RoleRepository;
 
-        public ISecObjectRepository SecObjectRepository => throw new NotImplementedException();
+        public ISecObjectRepository SecObjectRepository => Factory.SecObjectRepository;
 
-        public IGrantRepository GrantRepository => throw new NotImplementedException();
+        public IGrantRepository GrantRepository => Factory.GrantRepository;
 
-        public ISecuritySettings SecuritySettings => throw new NotImplementedException();
+        public ISecuritySettings SecuritySettings => Factory.SecuritySettings;
 
-        public IConfig Config => throw new NotImplementedException();
+        public IConfig Config => Factory.Config;
 
-        public bool CheckAccess(string login, string secObject)
+        internal IServiceLocator Locator { get; set; }
+
+        internal IUserInternalRepository UserInternalRepository => Factory.UserInternalRepository;
+
+        private ISecurityFactory Factory => Locator.Resolve<ISecurityFactory>();
+
+        public bool CheckAccess(string loginOrEmail, string secObject)
         {
-            throw new NotImplementedException();
+            return UserInternalRepository.CheckAccess(loginOrEmail, secObject);
         }
 
-        public bool UserValidate(string login, string password)
+        public bool SetPassword(string loginOrEmail, string password)
         {
-            throw new NotImplementedException();
+            return UserInternalRepository.SetPassword(loginOrEmail, password);
         }
 
-        internal IServiceLocator ServiceLocator
+        public bool UserValidate(string loginOrEmail, string password)
         {
-            get => _serviceLocator ?? (_serviceLocator = GetServiceLocator());
-            set => _serviceLocator = value;
+            return UserInternalRepository.UserValidate(loginOrEmail, password);
         }
 
-        private IServiceLocator GetServiceLocator()
+        public void Dispose()
+        {
+            Locator.Dispose();
+        }
+    }
+
+
+    internal class IocConfig 
+    {
+        public static IServiceLocator GetLocator()
         {
             var serviceLocator = new ServiceLocator();
-            throw new NotImplementedException();
-//            serviceLocator.RegisterType<ISecurityFactory>().AsSingle<SecurityFactory>();
+//            serviceLocator.RegisterFactory<ISecurityFactory, SecurityFactory>();
+//            serviceLocator.RegisterType<IUserRepository>();
+            return serviceLocator;
         }
     }
 
     internal class SecurityFactory : ISecurityFactory
     {
-        public IUserRepository UserRepository { get; }
+        public IUserRepository UserRepository { get; set; }
 
-        public IGroupRepository GroupRepository { get; }
+        public IUserInternalRepository UserInternalRepository { get; set; }
 
-        public IApplicationRepository ApplicationRepository { get; }
+        public IGroupRepository GroupRepository { get; set; }
 
-        public IUserGroupRepository UserGroupRepository { get; }
+        public IApplicationRepository ApplicationRepository { get; set; }
 
-        public IMemberRoleRepository MemberRoleRepository { get; }
+        public IApplicationInternalRepository ApplicationInternalRepository { get; set; }
 
-        public IRoleRepository RoleRepository { get; }
+        public IUserGroupRepository UserGroupRepository { get; set; }
 
-        public ISecObjectRepository SecObjectRepository { get; }
+        public IMemberRoleRepository MemberRoleRepository { get; set; }
 
-        public IGrantRepository GrantRepository { get; }
+        public IRoleRepository RoleRepository { get; set; }
 
-        public ISecuritySettings SecuritySettings { get; }
+        public ISecObjectRepository SecObjectRepository { get; set; }
 
-        public IConfig Config { get; }
+        public IGrantRepository GrantRepository { get; set; }
+
+        public ISecuritySettings SecuritySettings { get; set; }
+
+        public IConfig Config { get; set; }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using CommonContracts;
 using Security.Model;
@@ -11,6 +12,7 @@ namespace Security.Tests.SecurityImplement.Repository
     {
         public User Create(User entity)
         {
+            entity.PasswordSalt = Guid.NewGuid().ToString("N");
             Database.Users.Add(entity);
             return entity;
         }
@@ -55,6 +57,11 @@ namespace Security.Tests.SecurityImplement.Repository
         public void Update(User entity)
         {
             Database.Users.Update(entity);
+        }
+
+        public User Get(string loginOrEmail)
+        {
+            return Database.Users.Single(_ => _.Login == loginOrEmail || _.Email == loginOrEmail);
         }
     }
 }

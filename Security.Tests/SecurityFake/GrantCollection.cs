@@ -8,7 +8,8 @@ namespace Security.Tests.SecurityFake
 {
     public class GrantCollection : BaseCollection<Grant>
     {
-        protected override List<Grant> Collection => new List<Grant>();
+        private List<Grant> _collection;
+        protected override List<Grant> Collection => _collection ?? (_collection = new List<Grant>());
 
         public override void Add(Grant grant)
         {

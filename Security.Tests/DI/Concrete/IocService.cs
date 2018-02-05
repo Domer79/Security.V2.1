@@ -1,6 +1,6 @@
 ﻿using Security.V2.Core.Ioc.Interfaces;
 
-namespace Security.Tests.ServiceLocator.Concrete
+namespace Security.Tests.DI.Concrete
 {
     public static class IocService
     {

@@ -9,7 +9,6 @@ namespace Security.V2.Core.Ioc.Dependencies
         public Type ImplementType { get; set; }
         public Type ServiceType { get; set; }
         public Func<object> MethodImplement { get; set; }
-        public object Instance { get; set; }
         public IScope Scope { get; set; }
         public IRegistry Registry { get; set; }
 

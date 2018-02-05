@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using CommonContracts;
 using Security.Model;
 using Security.Tests.SecurityFake;
+using Security.V2.Contracts;
 using Security.V2.Contracts.Repository;
 
 namespace Security.Tests.SecurityImplement.Repository

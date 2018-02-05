@@ -1,22 +1,25 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Security.V2.Contracts;
 using Security.V2.Core.Ioc.Interfaces;
 
 namespace Security.V2.Core.Ioc.Scopes
 {
-    internal class TransientScope: IScope
+    public class SingletonScope : IScope
     {
         private readonly IRegistry _registry;
 
-        public TransientScope(IRegistry registry)
+        public SingletonScope(IRegistry registry)
         {
             _registry = registry;
-            registry.AddInstanceEvent += Registry_AddInstanceEvent;
         }
 
-        private void Registry_AddInstanceEvent(object sender, AddInstanceEventArgs args)
+        public void Dispose()
         {
-            _registry.ServiceInstanceDismiss(args.ServiceType);
+            
         }
 
         public object GetObject(IRequest request, Type serviceType)
@@ -39,11 +42,6 @@ namespace Security.V2.Core.Ioc.Scopes
             instance = dependency.ResolveByType(request);
             request.SetService(serviceType, instance);
             return instance;
-        }
-
-        public void Dispose()
-        {
-            _registry.AddInstanceEvent -= Registry_AddInstanceEvent;
         }
     }
 }

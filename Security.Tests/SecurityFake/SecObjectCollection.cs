@@ -7,12 +7,7 @@ namespace Security.Tests.SecurityFake
 {
     public class SecObjectCollection : BaseCollection<SecObject>
     {
-        private List<SecObject> _secObjects = new List<SecObject>()
-        {
-            new SecObject(){IdApplication = Database.Application.IdApplication, IdSecObject = 1, ObjectName = "Home"},
-            new SecObject(){IdApplication = Database.Application.IdApplication, IdSecObject = 2, ObjectName = "Contacts"},
-            new SecObject(){IdApplication = Database.Application.IdApplication, IdSecObject = 3, ObjectName = "About"},
-        };
+        private List<SecObject> _secObjects = new List<SecObject>();
 
         protected override List<SecObject> Collection => _secObjects;
 

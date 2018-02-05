@@ -7,26 +7,7 @@ namespace Security.Tests.SecurityFake
 {
     public class UserGroups
     {
-        private static List<User> _users = Database.Users.ToList();
-        private static List<Group> _groups = Database.Groups.ToList();
-
-        private List<Tuple<User, Group>> _userGroups = new List<Tuple<User, Group>>()
-        {
-            new Tuple<User, Group>(_users[0], _groups[0]),
-            new Tuple<User, Group>(_users[1], _groups[0]),
-            new Tuple<User, Group>(_users[2], _groups[0]),
-            new Tuple<User, Group>(_users[3], _groups[0]),
-            new Tuple<User, Group>(_users[4], _groups[1]),
-            new Tuple<User, Group>(_users[5], _groups[1]),
-            new Tuple<User, Group>(_users[6], _groups[1]),
-            new Tuple<User, Group>(_users[0], _groups[1]),
-            new Tuple<User, Group>(_users[1], _groups[1]),
-            new Tuple<User, Group>(_users[2], _groups[1]),
-            new Tuple<User, Group>(_users[3], _groups[1]),
-            new Tuple<User, Group>(_users[4], _groups[0]),
-            new Tuple<User, Group>(_users[5], _groups[0]),
-            new Tuple<User, Group>(_users[6], _groups[0]),
-        };
+        private List<Tuple<User, Group>> _userGroups = new List<Tuple<User, Group>>();
 
         public IEnumerable<Group> GetUserGroups(User user)
         {
@@ -50,6 +31,11 @@ namespace Security.Tests.SecurityFake
                 return;
 
             _userGroups.Remove(tuple);
+        }
+
+        public void Drop()
+        {
+            _userGroups.Clear();
         }
     }
 }

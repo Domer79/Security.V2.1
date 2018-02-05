@@ -9,16 +9,14 @@ namespace Security.Tests.SecurityFake
     {
         private static List<Member> _members = Database.Members.ToList();
 
-        private List<User> _users = new List<User>()
-        {
-            new User(){IdMember = _members[0].IdMember, Id = _members[0].Id, Login = _members[0].Name, },
-            new User(){IdMember = _members[1].IdMember, Id = _members[1].Id, Login = _members[1].Name, },
-            new User(){IdMember = _members[2].IdMember, Id = _members[2].Id, Login = _members[2].Name, },
-            new User(){IdMember = _members[3].IdMember, Id = _members[3].Id, Login = _members[3].Name, },
-            new User(){IdMember = _members[4].IdMember, Id = _members[4].Id, Login = _members[4].Name, },
-        };
+        private List<User> _users = new List<User>();
 
         protected override List<User> Collection => _users;
+
+        public User Get(string loginOrEmail)
+        {
+            return Collection.Single(_ => _.Login == loginOrEmail || _.Email == loginOrEmail);
+        }
 
         public override void Add(User item)
         {

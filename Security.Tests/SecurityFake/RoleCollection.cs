@@ -7,13 +7,8 @@ namespace Security.Tests.SecurityFake
 {
     public class RoleCollection : BaseCollection<Role>
     {
-        private List<Role> _roles = new List<Role>()
-        {
-            new Role(){IdRole = 1, Name = "Administrator", IdApplication = Database.Application.IdApplication},
-            new Role(){IdRole = 2, Name = "Operator", IdApplication = Database.Application.IdApplication},
-        };
-
-        protected override List<Role> Collection => _roles;
+        private List<Role> _collection;
+        protected override List<Role> Collection => _collection ?? (_collection = new List<Role>());
 
         public override void Add(Role item)
         {

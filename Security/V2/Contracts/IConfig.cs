@@ -11,5 +11,6 @@ namespace Security.V2.Contracts
     {
         void RegisterApplication(string appName, string description);
         void RegisterSecurityObjects(params ISecurityObject[] securityObjects);
+        void RegisterSecurityObjects(params string[] securityObjects);
     }
 }

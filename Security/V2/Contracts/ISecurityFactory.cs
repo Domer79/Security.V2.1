@@ -4,15 +4,17 @@ namespace Security.V2.Contracts
 {
     internal interface ISecurityFactory
     {
-        IUserRepository UserRepository { get; }
-        IGroupRepository GroupRepository { get; }
-        IApplicationRepository ApplicationRepository { get; }
-        IUserGroupRepository UserGroupRepository { get; }
-        IMemberRoleRepository MemberRoleRepository { get; }
-        IRoleRepository RoleRepository { get; }
-        ISecObjectRepository SecObjectRepository { get; }
-        IGrantRepository GrantRepository { get; }
-        ISecuritySettings SecuritySettings { get; }
-        IConfig Config { get; }
+        IUserRepository UserRepository { get; set; }
+        IUserInternalRepository UserInternalRepository { get; set; }
+        IGroupRepository GroupRepository { get; set; }
+        IApplicationRepository ApplicationRepository { get; set; }
+        IApplicationInternalRepository ApplicationInternalRepository { get; set; }
+        IUserGroupRepository UserGroupRepository { get; set; }
+        IMemberRoleRepository MemberRoleRepository { get; set; }
+        IRoleRepository RoleRepository { get; set; }
+        ISecObjectRepository SecObjectRepository { get; set; }
+        IGrantRepository GrantRepository { get; set; }
+        ISecuritySettings SecuritySettings { get; set; }
+        IConfig Config { get; set; }
     }
 }

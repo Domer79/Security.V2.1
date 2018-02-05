@@ -9,12 +9,9 @@ namespace Security.Tests.SecurityFake
     public class GroupCollection : BaseCollection<Group>
     {
         private static List<Member> _members = Database.Members.ToList();
+        private List<Group> _collection;
 
-        protected override List<Group> Collection => new List<Group>()
-        {
-            new Group(){IdMember = _members[5].IdMember, Id = _members[5].Id, Name = _members[6].Name, },
-            new Group(){IdMember = _members[6].IdMember, Id = _members[5].Id, Name = _members[6].Name, },
-        };
+        protected override List<Group> Collection => _collection ?? (_collection = new List<Group>());
 
         public override void Add(Group item)
         {

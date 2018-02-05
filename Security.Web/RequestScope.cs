@@ -36,6 +36,12 @@ namespace Security.Web
         {
             throw new NotImplementedException();
         }
+
+        public void Dispose()
+        {
+            HttpContext.Current.ApplicationInstance.BeginRequest -= ApplicationInstance_BeginRequest;
+            HttpContext.Current.ApplicationInstance.EndRequest -= ApplicationInstance_EndRequest;
+        }
     }
 
 }

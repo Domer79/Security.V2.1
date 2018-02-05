@@ -59,32 +59,38 @@
     <Compile Include="SecurityFake\GrantCollection.cs" />
     <Compile Include="SecurityFake\GroupCollection.cs" />
     <Compile Include="SecurityFake\MemberCollection.cs" />
-    <Compile Include="SecurityFake\MemberGuids.cs" />
     <Compile Include="SecurityFake\MemberRoles.cs" />
     <Compile Include="SecurityFake\RoleCollection.cs" />
     <Compile Include="SecurityFake\SecObjectCollection.cs" />
     <Compile Include="SecurityFake\UserCollection.cs" />
     <Compile Include="SecurityFake\UserGroups.cs" />
+    <Compile Include="SecurityFake\UserPasswords.cs" />
     <Compile Include="SecurityImplement\ApplicationContext.cs" />
+    <Compile Include="SecurityImplement\Config.cs" />
+    <Compile Include="SecurityImplement\IocConfig.cs" />
     <Compile Include="SecurityImplement\Repository\ApplicationInternalRepository.cs" />
     <Compile Include="SecurityImplement\Repository\ApplicationRepository.cs" />
     <Compile Include="SecurityImplement\Repository\EntityCollectionInfo.cs" />
     <Compile Include="SecurityImplement\Repository\GrantRepository.cs" />
     <Compile Include="SecurityImplement\Repository\GroupRepository.cs" />
-    <Compile Include="SecurityImplement\Repository\ISecObjectRepositorty.cs" />
+    <Compile Include="SecurityImplement\Repository\SecObjectRepositorty.cs" />
     <Compile Include="SecurityImplement\Repository\MemberRoleRepository.cs" />
     <Compile Include="SecurityImplement\Repository\RoleRepository.cs" />
+    <Compile Include="SecurityImplement\Repository\UserInternalRepository.cs" />
+    <Compile Include="SecurityImplement\SecurityFactory.cs" />
     <Compile Include="SecurityImplement\Repository\UserGroupRepository.cs" />
     <Compile Include="SecurityImplement\Repository\UserRepository.cs" />
-    <Compile Include="ServiceLocator\Concrete\IocService.cs" />
-    <Compile Include="ServiceLocator\Concrete\Sample1.cs" />
-    <Compile Include="ServiceLocator\Concrete\Sample2.cs" />
-    <Compile Include="ServiceLocator\Concrete\SampleManager.cs" />
-    <Compile Include="ServiceLocator\Concrete\TestRequestScope.cs" />
-    <Compile Include="ServiceLocator\Interfaces\ISample1.cs" />
-    <Compile Include="ServiceLocator\Interfaces\ISample2.cs" />
-    <Compile Include="ServiceLocator\Interfaces\ISampleManager.cs" />
-    <Compile Include="ServiceLocator\ServiceLocatorTest.cs" />
+    <Compile Include="DI\Concrete\IocService.cs" />
+    <Compile Include="DI\Concrete\Sample1.cs" />
+    <Compile Include="DI\Concrete\Sample2.cs" />
+    <Compile Include="DI\Concrete\SampleManager.cs" />
+    <Compile Include="DI\Concrete\TestRequestScope.cs" />
+    <Compile Include="DI\Interfaces\ISample1.cs" />
+    <Compile Include="DI\Interfaces\ISample2.cs" />
+    <Compile Include="DI\Interfaces\ISampleManager.cs" />
+    <Compile Include="DI\ServiceLocatorTest.cs" />
+    <Compile Include="SecurityImplement\SecuritySettings.cs" />
+    <Compile Include="SecurityTests\SecurityConfigTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -101,6 +107,10 @@
     <ProjectReference Include="..\Security\Security.csproj">
       <Project>{556713E5-2ADB-4B4B-8D40-74DF9393D33D}</Project>
       <Name>Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tools\Tools.csproj">
+      <Project>{2F1F6E24-1FA5-412B-8949-0A7888B9BE71}</Project>
+      <Name>Tools</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

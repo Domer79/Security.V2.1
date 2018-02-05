@@ -42,14 +42,25 @@ namespace Tools.Extensions
         }
 
         /// <summary>
+        /// Возвращает хэш SHA1 массива байтов
+        /// </summary>
+        /// <param name="bytes"></param>
+        /// <returns></returns>
+        public static byte[] GetSHA1HashBytes(this byte[] bytes)
+        {
+            var sha1 = new SHA1CryptoServiceProvider();
+            return sha1.ComputeHash(bytes);
+        }
+
+        /// <summary>
         /// Возвращает хэш SHA1 введенной строки 
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
         public static byte[] GetSHA1HashBytes(this string value)
         {
-            var md5 = new SHA1CryptoServiceProvider();
-            return md5.ComputeHash(value.GetBytes());
+            var sha1 = new SHA1CryptoServiceProvider();
+            return sha1.ComputeHash(value.GetBytes());
         }
         
         /// <summary>

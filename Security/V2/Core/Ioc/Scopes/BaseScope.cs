@@ -38,5 +38,10 @@ namespace Security.V2.Core.Ioc.Scopes
         {
             _isDisposed = true;
         }
+
+        public void Dispose()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

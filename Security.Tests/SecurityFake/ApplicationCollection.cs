@@ -7,12 +7,14 @@ namespace Security.Tests.SecurityFake
 {
     public class ApplicationCollection : BaseCollection<Application>
     {
-        private List<Application> _applications = new List<Application>();
-
-        protected override List<Application> Collection => new List<Application>();
+        private List<Application> _collection;
+        protected override List<Application> Collection => _collection ?? (_collection =  new List<Application>());
 
         public override void Add(Application item)
         {
+            var id = Database.Applications.Identity();
+            item.IdApplication = id;
+
             Collection.Add(item);
         }
 

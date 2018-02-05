@@ -15,8 +15,6 @@ namespace Security.V2.Core.Ioc.Dependencies
 
         public Func<object> MethodImplement { get; set; }
 
-        public object Instance { get; set; }
-
         public IScope Scope
         {
             get { return _scope ?? (_scope = new TransientScope(Registry)); }

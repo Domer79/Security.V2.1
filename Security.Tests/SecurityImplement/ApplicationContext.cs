@@ -11,6 +11,13 @@ namespace Security.Tests.SecurityImplement
 {
     public class ApplicationContext : IApplicationContext
     {
-        public Application Application => Database.Application;
+        private readonly string _appName;
+
+        public ApplicationContext(string appName)
+        {
+            _appName = appName;
+        }
+
+        public Application Application => Database.Applications.Single(_ => _.AppName == _appName);
     }
 }

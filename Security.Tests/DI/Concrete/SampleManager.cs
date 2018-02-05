@@ -1,6 +1,6 @@
-﻿using Security.Tests.ServiceLocator.Interfaces;
+﻿using Security.Tests.DI.Interfaces;
 
-namespace Security.Tests.ServiceLocator.Concrete
+namespace Security.Tests.DI.Concrete
 {
     public class SampleManager : ISampleManager
     {

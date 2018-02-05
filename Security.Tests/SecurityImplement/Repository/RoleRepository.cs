@@ -11,15 +11,15 @@ namespace Security.Tests.SecurityImplement.Repository
     public class RoleRepository : IRoleRepository
     {
         private IApplicationContext _applicationContext;
-        private readonly int _idApplication;
 
         public RoleRepository(IApplicationContext applicationContext)
         {
             _applicationContext = applicationContext;
-            _idApplication = applicationContext.Application.IdApplication;
         }
 
         public IApplicationContext ApplicationContext => _applicationContext;
+
+        private int IdApplication => _applicationContext.Application.IdApplication;
 
         public Role Create(Role entity)
         {
@@ -34,12 +34,12 @@ namespace Security.Tests.SecurityImplement.Repository
 
         public IEnumerable<Role> Get()
         {
-            return Database.Roles.Where(_ => _.IdApplication == _idApplication);
+            return Database.Roles.Where(_ => _.IdApplication == IdApplication);
         }
 
         public Role GetByName(string name)
         {
-            return Database.Roles.SingleOrDefault(_ => _.Name == name && _.IdApplication == _idApplication);
+            return Database.Roles.SingleOrDefault(_ => _.Name == name && _.IdApplication == IdApplication);
         }
 
         public IEntityCollectionInfo<Role> GetEntityCollectionInfo(int pageNumber, int pageSize)

@@ -10,6 +10,7 @@ namespace Security.V2.Contracts
         IDependency RegisterType(Type serviceType, Type implementType);
         IDependency RegisterByMethod(Type serviceType, Func<object> methodImplement);
         IDependency RegisterType<TService, TImplement>();
+        IDependency RegisterFactory<TService, TImplement>();
 
         T Resolve<T>();
         object Resolve(Type serviceType);
@@ -22,7 +23,6 @@ namespace Security.V2.Contracts
         void SetService(Type serviceType, object service);
         void ServiceInstanceDismiss(Type serviceType);
         IDependency GetFromRegistry(Type serviceType);
-        IDependency GetFromRegistry<TService>();
         IEnumerable<IDependency> DependencyCollection { get; }
     }
 }

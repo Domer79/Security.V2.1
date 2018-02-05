@@ -3,7 +3,7 @@ using System.Linq;
 using Security.V2.Contracts;
 using Security.V2.Core.Ioc.Interfaces;
 
-namespace Security.Tests.ServiceLocator.Concrete
+namespace Security.Tests.DI.Concrete
 {
     public class TestRequestScope : IScope
     {
@@ -14,7 +14,7 @@ namespace Security.Tests.ServiceLocator.Concrete
         {
             _registry = registry;
             _serviceLocatorTest = serviceLocatorTest;
-            _serviceLocatorTest.BeginScope += ServiceLocatorTest_BeginScope            ; ;
+            _serviceLocatorTest.BeginScope += ServiceLocatorTest_BeginScope;
             _serviceLocatorTest.EndScope += ServiceLocatorTest_EndScope;
         }
 
@@ -52,6 +52,12 @@ namespace Security.Tests.ServiceLocator.Concrete
             instance = dependency.ResolveByType(request);
             request.SetService(serviceType, instance);
             return instance;
+        }
+
+        public void Dispose()
+        {
+            _serviceLocatorTest.BeginScope += ServiceLocatorTest_BeginScope;
+            _serviceLocatorTest.EndScope += ServiceLocatorTest_EndScope;
         }
     }
 }

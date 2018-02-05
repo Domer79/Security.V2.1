@@ -1,13 +1,12 @@
 ﻿using System;
 using NUnit.Framework;
-using Security.Tests.ServiceLocator.Concrete;
-using Security.Tests.ServiceLocator.Interfaces;
+using Security.Tests.DI.Concrete;
+using Security.Tests.DI.Interfaces;
+using Security.V2.Core.Ioc;
+using Security.V2.Core.Ioc.Exceptions;
 
-namespace Security.Tests.ServiceLocator
+namespace Security.Tests.DI
 {
-    using Security.V2.Core.Ioc.Exceptions;
-    using V2.Core.Ioc;
-
     [TestFixture]
     public class ServiceLocatorTest
     {
@@ -34,6 +33,7 @@ namespace Security.Tests.ServiceLocator
             var sample1 = serviceLocator.Resolve<ISample1>();
 
             Assert.That(sample1, Is.InstanceOf<ISample1>());
+            serviceLocator.Dispose();
         }
 
         [Test]
@@ -47,6 +47,7 @@ namespace Security.Tests.ServiceLocator
             var sample2 = serviceLocator.Resolve<ISample2>();
 
             Assert.That(sample2.Sample1, Is.InstanceOf<ISample1>());
+            serviceLocator.Dispose();
         }
 
         [Test]
@@ -61,6 +62,7 @@ namespace Security.Tests.ServiceLocator
 
             Assert.That(sampleManager.Sample1, Is.InstanceOf<ISample1>());
             Assert.That(sampleManager.Sample2, Is.InstanceOf<ISample2>());
+            serviceLocator.Dispose();
         }
 
         [Test]
@@ -77,6 +79,7 @@ namespace Security.Tests.ServiceLocator
             var sampleManager2 = serviceLocator.Resolve<ISampleManager>();
 
             Assert.That(sampleManager2.Sample1.Name, Is.EqualTo(sampleManager1.Sample1.Name));
+            serviceLocator.Dispose();
         }
 
         [TestCase("Damir Garipov")]
@@ -95,6 +98,7 @@ namespace Security.Tests.ServiceLocator
 
             Assert.That(sampleManager2.Sample1.Name, Is.Null);
             Assert.That(sampleManager1.Sample1.Name, Is.EqualTo(expectedName));
+            serviceLocator.Dispose();
         }
 
         [Test]
@@ -114,6 +118,7 @@ namespace Security.Tests.ServiceLocator
             Assert.That(sampleFactory.SampleManager, Is.Not.Null);
             Assert.That(sampleFactory.SampleManager.Sample1, Is.Not.Null);
             Assert.That(sampleFactory.SampleManager.Sample2, Is.Not.Null);
+            serviceLocator.Dispose();
         }
 
         [Test]
@@ -129,6 +134,69 @@ namespace Security.Tests.ServiceLocator
             {
                 serviceLocator.Resolve<ISampleFactory>();
             });
+            serviceLocator.Dispose();
+        }
+
+        [TestCase()]
+        public void TestSingletoneScope_ReturnAlways_ExpectedValue()
+        {
+            var serviceLocator = new ServiceLocator();
+            serviceLocator.RegisterType<ISample1, Sample1>().InSingletonScope();
+            serviceLocator.RegisterType<ISample2, Sample2>().InSingletonScope();
+            serviceLocator.RegisterType<ISampleManager, SampleManager>().InSingletonScope();
+
+            var sampleManager1 = serviceLocator.Resolve<ISampleManager>();
+            sampleManager1.Sample1.Name = "Damir Garipov";
+
+            var sampleManager2 = serviceLocator.Resolve<ISampleManager>();
+
+            Assert.That(sampleManager2.Sample1.Name, Is.EqualTo(sampleManager1.Sample1.Name));
+            serviceLocator.Dispose();
+        }
+
+        [TestCase()]
+        public void TestTransientScope_ReturnAlways_NullValue()
+        {
+            var serviceLocator = new ServiceLocator();
+            serviceLocator.RegisterType<ISample1, Sample1>();
+            serviceLocator.RegisterType<ISample2, Sample2>().InSingletonScope();
+            serviceLocator.RegisterType<ISampleManager, SampleManager>().InSingletonScope();
+
+            var sampleManager1 = serviceLocator.Resolve<ISampleManager>();
+            sampleManager1.Sample1.Name = "Damir Garipov";
+
+            var sampleManager2 = serviceLocator.Resolve<ISampleManager>();
+
+            Assert.That(sampleManager2.Sample1.Name, Is.Null);
+            serviceLocator.Dispose();
+        }
+
+        [Test]
+        public void TestRegisterByMethod_AndReturnAlways_ExpectedValue()
+        {
+            var serviceLocator = new ServiceLocator();
+            serviceLocator.RegisterByMethod(typeof(ISample1), () => new Sample1());
+
+            var sample1 = serviceLocator.Resolve<ISample1>();
+            sample1.Name = "Sample1";
+
+            Assert.That(sample1, Is.InstanceOf<Sample1>());
+            sample1 = serviceLocator.Resolve<ISample1>();
+            Assert.That(sample1.Name, Is.Null);
+        }
+
+        [Test]
+        public void TestRegisterByMethod_InSingletoneScope_AndReturnAlways_ExpectedValue()
+        {
+            var serviceLocator = new ServiceLocator();
+            serviceLocator.RegisterByMethod(typeof(ISample1), () => new Sample1()).InSingletonScope();
+
+            var sample1 = serviceLocator.Resolve<ISample1>();
+            sample1.Name = "Sample1";
+
+            Assert.That(sample1, Is.InstanceOf<Sample1>());
+            sample1 = serviceLocator.Resolve<ISample1>();
+            Assert.That(sample1.Name, Is.EqualTo("Sample1"));
         }
 
         public event EventHandler BeginScope;
@@ -145,7 +213,7 @@ namespace Security.Tests.ServiceLocator
         }
     }
 
-    public interface ISampleFactory
+    public interface ISampleFactory: IDisposable
     {
         ISample1 Sample1 { get; set; }
         ISample2 Sample2 { get; set; }
@@ -157,5 +225,10 @@ namespace Security.Tests.ServiceLocator
         public ISample1 Sample1 { get; set; }
         public ISample2 Sample2 { get; set; }
         public ISampleManager SampleManager { get; set; }
+
+        public void Dispose()
+        {
+            
+        }
     }
 }

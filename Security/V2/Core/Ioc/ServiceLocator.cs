@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Security.V2.Contracts;
 using Security.V2.Core.Ioc.Dependencies;
 using Security.V2.Core.Ioc.Exceptions;
@@ -61,7 +62,7 @@ namespace Security.V2.Core.Ioc
 
         public object Resolve(Type serviceType)
         {
-            var dep = _registry[serviceType];
+            var dep = GetFromRegistry(serviceType);
             if (dep.Scope == null)
                 dep.InTransientScope();
 
@@ -78,15 +79,23 @@ namespace Security.V2.Core.Ioc
 
         public void Dispose()
         {
-            foreach (var pair in _instanceRegistry)
+            var types = _instanceRegistry.Select(pair => pair.Key).ToArray();
+            foreach (var type in types)
             {
-                var instance = pair.Value as IDisposable;
-                if (instance != null)
-                    instance.Dispose();
-
-                _instanceRegistry[pair.Key] = null;
-                _instanceRegistry.Remove(pair.Key);
+                ServiceInstanceDismiss(type);
             }
+        }
+
+        public void ServiceInstanceDismiss(Type serviceType)
+        {
+            if (!_instanceRegistry.ContainsKey(serviceType))
+                return;
+
+            if (_instanceRegistry[serviceType] is IDisposable instance)
+                instance.Dispose();
+
+            _instanceRegistry[serviceType] = null;
+            _instanceRegistry.Remove(serviceType);
         }
 
         public IDependency GetFromRegistry(Type serviceType)
@@ -100,11 +109,6 @@ namespace Security.V2.Core.Ioc
             {
                 throw new DependencyResolveException($"Service type {serviceType} is not registered", e);
             }
-        }
-
-        public IDependency GetFromRegistry<TService>()
-        {
-            return GetFromRegistry(typeof(TService));
         }
 
         public object GetService(Type serviceType)
@@ -124,18 +128,6 @@ namespace Security.V2.Core.Ioc
         protected virtual void OnAddInstanceEvent(Type serviceType)
         {
             AddInstanceEvent?.Invoke(this, new AddInstanceEventArgs(){ServiceType = serviceType});
-        }
-
-        public void ServiceInstanceDismiss(Type serviceType)
-        {
-            if (!_instanceRegistry.ContainsKey(serviceType))
-                return;
-
-            if (_instanceRegistry[serviceType] is IDisposable instance)
-                instance.Dispose();
-
-            _instanceRegistry[serviceType] = null;
-            _instanceRegistry.Remove(serviceType);
         }
 
         public void SetService(Type serviceType, object service)

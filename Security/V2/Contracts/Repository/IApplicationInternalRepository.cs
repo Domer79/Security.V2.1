@@ -5,6 +5,5 @@ namespace Security.V2.Contracts.Repository
 {
     internal interface IApplicationInternalRepository : ISecurityBaseRepository<Application>
     {
-        
     }
 }

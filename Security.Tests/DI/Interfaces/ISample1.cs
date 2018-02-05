@@ -1,4 +1,4 @@
-﻿namespace Security.Tests.ServiceLocator.Interfaces
+﻿namespace Security.Tests.DI.Interfaces
 {
     public interface ISample1
     {

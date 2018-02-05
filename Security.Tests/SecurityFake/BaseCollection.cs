@@ -26,5 +26,10 @@ namespace Security.Tests.SecurityFake
         {
             return GetEnumerator();
         }
+
+        public void Drop()
+        {
+            Collection.Clear();
+        }
     }
 }

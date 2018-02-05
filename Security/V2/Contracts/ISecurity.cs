@@ -1,18 +1,21 @@
-﻿using Security.V2.Contracts.Repository;
+﻿using System;
+using Security.V2.Contracts.Repository;
 
 namespace Security.V2.Contracts
 {
-    public interface ISecurity
+    public interface ISecurity: IDisposable
     {
         /// <summary>
         /// Производит идентификацию пользователя
         /// </summary>
-        /// <param name="login">Логин пользователя</param>
+        /// <param name="loginOrEmail">Логин пользователя</param>
         /// <param name="password">Пароль</param>
         /// <returns>True или False</returns>
-        bool UserValidate(string login, string password);
+        bool UserValidate(string loginOrEmail, string password);
 
-        bool CheckAccess(string login, string secObject);
+        bool CheckAccess(string loginOrEmail, string secObject);
+
+        bool SetPassword(string loginOrEmail, string password);
 
         IApplicationContext ApplicationContext { get; }
         IUserRepository UserRepository { get; }

@@ -8,18 +8,21 @@ using Security.V2.Contracts.Repository;
 
 namespace Security.Tests.SecurityImplement.Repository
 {
-    public class ISecObjectRepositorty : ISecObjectRepository
+    public class SecObjectRepositorty : ISecObjectRepository
     {
         private readonly IApplicationContext _context;
-        private int _idApplication;
 
-        public ISecObjectRepositorty(IApplicationContext context)
+        public SecObjectRepositorty(IApplicationContext context)
         {
             _context = context;
-            _idApplication = context.Application.IdApplication;
         }
 
         public IApplicationContext ApplicationContext => _context;
+
+        private int IdApplication
+        {
+            get { return _context.Application.IdApplication; }
+        }
 
         public SecObject Create(SecObject entity)
         {
@@ -34,7 +37,7 @@ namespace Security.Tests.SecurityImplement.Repository
 
         public IEnumerable<SecObject> Get()
         {
-            return Database.SecObjects.Where(_ => _.IdApplication == _idApplication);
+            return Database.SecObjects.Where(_ => _.IdApplication == IdApplication);
         }
 
         public SecObject GetByName(string name)
