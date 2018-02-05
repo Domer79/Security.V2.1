@@ -10,7 +10,7 @@ namespace Security.V2.Contracts
     public interface IConfig
     {
         void RegisterApplication(string appName, string description);
-        void RegisterSecurityObjects(params ISecurityObject[] securityObjects);
-        void RegisterSecurityObjects(params string[] securityObjects);
+        void RegisterSecurityObjects(string appName, params ISecurityObject[] securityObjects);
+        void RegisterSecurityObjects(string appName, params string[] securityObjects);
     }
 }

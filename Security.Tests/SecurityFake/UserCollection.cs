@@ -23,6 +23,7 @@ namespace Security.Tests.SecurityFake
             var id = Database.Members.Identity();
 
             item.IdMember = id;
+            item.Id = Guid.NewGuid();
             Database.Members.Add(new Member() { Id = item.Id, IdMember = id, Name = item.Name });
             Collection.Add(item);
         }

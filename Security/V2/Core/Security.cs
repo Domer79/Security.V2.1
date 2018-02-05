@@ -14,15 +14,18 @@ namespace Security.V2.Core
     {
         private readonly string _appName;
 
-        public Security(string appName)
-            :this(appName, IocConfig.GetLocator())
+        public Security(string appName, string description = null)
+            :this(appName, description, IocConfig.GetLocator())
         {
         }
 
-        internal Security(string appName, IServiceLocator locator)
+        internal Security(string appName, string description, IServiceLocator locator)
         {
             _appName = appName;
             Locator = locator;
+
+            //Register application if not exists
+            Config.RegisterApplication(appName, description);
         }
 
         public IApplicationContext ApplicationContext => Locator.Resolve<IApplicationContext>();

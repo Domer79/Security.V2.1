@@ -26,6 +26,7 @@ namespace Security.Tests.SecurityImplement.Repository
 
         public SecObject Create(SecObject entity)
         {
+            entity.IdApplication = IdApplication;
             Database.SecObjects.Add(entity);
             return entity;
         }

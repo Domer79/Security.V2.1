@@ -90,7 +90,9 @@
     <Compile Include="DI\Interfaces\ISampleManager.cs" />
     <Compile Include="DI\ServiceLocatorTest.cs" />
     <Compile Include="SecurityImplement\SecuritySettings.cs" />
+    <Compile Include="SecurityTests\MySecurity.cs" />
     <Compile Include="SecurityTests\SecurityConfigTest.cs" />
+    <Compile Include="SecurityTests\SecuritySetupClass.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

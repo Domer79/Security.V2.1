@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Security.Model;
-using Security.Tests.SecurityFake;
 using Security.V2.Contracts;
 using Security.V2.Contracts.Repository;
 
@@ -24,17 +19,24 @@ namespace Security.Tests.SecurityImplement
 
         public void RegisterApplication(string appName, string description)
         {
-            var app = new Application{AppName = appName, Description = description};
+            var stackTrace = Environment.StackTrace;
+            var app = _applicationRepository.GetByName(appName);
+            if (app != null)
+                return;
+
+            app = new Application{AppName = appName, Description = description};
 
             _applicationRepository.Create(app);
         }
 
-        public void RegisterSecurityObjects(params ISecurityObject[] securityObjects)
+        public void RegisterSecurityObjects(string appName, params ISecurityObject[] securityObjects)
         {
+            var idApplication = _applicationRepository.GetByName(appName).IdApplication;
             foreach (var securityObject in securityObjects)
             {
                 var secObject = new SecObject()
                 {
+                    IdApplication = idApplication,
                     ObjectName = securityObject.ObjectName
                 };
 
@@ -42,9 +44,9 @@ namespace Security.Tests.SecurityImplement
             }
         }
 
-        public void RegisterSecurityObjects(params string[] securityObjects)
+        public void RegisterSecurityObjects(string appName, params string[] securityObjects)
         {
-            RegisterSecurityObjects(securityObjects.Select(_ => new SecurityObject(){ObjectName = _}).ToArray());
+            RegisterSecurityObjects(appName, securityObjects.Select(_ => new SecurityObject(){ObjectName = _}).ToArray());
         }
 
         class SecurityObject : ISecurityObject

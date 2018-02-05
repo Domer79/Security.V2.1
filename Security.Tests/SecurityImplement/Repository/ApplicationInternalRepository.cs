@@ -31,7 +31,7 @@ namespace Security.Tests.SecurityImplement.Repository
 
         public Application GetByName(string name)
         {
-            return Database.Applications.First(_ => _.AppName == name);
+            return Database.Applications.SingleOrDefault(_ => _.AppName == name);
         }
 
         public IEntityCollectionInfo<Application> GetEntityCollectionInfo(int pageNumber, int pageSize)

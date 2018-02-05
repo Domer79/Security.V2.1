@@ -23,6 +23,7 @@ namespace Security.Tests.SecurityImplement.Repository
 
         public Role Create(Role entity)
         {
+            entity.IdApplication = IdApplication;
             Database.Roles.Add(entity);
             return entity;
         }
