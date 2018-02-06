@@ -2,12 +2,20 @@
 using System.Linq;
 using Security.Model;
 using Security.Tests.SecurityFake;
+using Security.V2.Contracts;
 using Security.V2.Contracts.Repository;
 
 namespace Security.Tests.SecurityImplement.Repository
 {
     public class MemberRoleRepository : IMemberRoleRepository
     {
+        private readonly IApplicationContext _context;
+
+        public MemberRoleRepository(IApplicationContext context)
+        {
+            _context = context;
+        }
+
         public void AddMembersToRole(int[] idMembers, int idRole)
         {
             foreach (var idMember in idMembers)
@@ -60,18 +68,16 @@ namespace Security.Tests.SecurityImplement.Repository
             return Database.MemberRoles.GetRoleMembers(roleEntity);
         }
 
-        public IEnumerable<Role> GetRolesByIdMember(int idMember, string appName)
+        public IEnumerable<Role> GetRolesByIdMember(int idMember)
         {
             var member = Database.Members.First(_ => _.IdMember == idMember);
-            var app = Database.Applications.Single(_ => _.AppName == appName);
-            return Database.MemberRoles.GetMemberRoles(member, app);
+            return Database.MemberRoles.GetMemberRoles(member, _context.Application);
         }
 
-        public IEnumerable<Role> GetRolesByMemberName(string member, string appName)
+        public IEnumerable<Role> GetRolesByMemberName(string member)
         {
             var memberEntity = Database.Members.First(_ => _.Name == member);
-            var app = Database.Applications.Single(_ => _.AppName == appName);
-            return Database.MemberRoles.GetMemberRoles(memberEntity, app);
+            return Database.MemberRoles.GetMemberRoles(memberEntity, _context.Application);
         }
     }
 }

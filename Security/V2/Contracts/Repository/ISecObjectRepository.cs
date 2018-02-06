@@ -3,7 +3,7 @@ using Security.V2.Contracts.Repository.Base;
 
 namespace Security.V2.Contracts.Repository
 {
-    public interface ISecObjectRepository : IApplicationBaseRepository<SecObject>
+    public interface ISecObjectRepository : ISecurityBaseRepository<SecObject>
     {
         
     }

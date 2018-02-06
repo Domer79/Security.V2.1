@@ -23,6 +23,9 @@ namespace Security.Tests.SecurityImplement.Repository
         public bool CheckAccess(string loginOrEmail, string secObject)
         {
             var user = Database.Users.Get(loginOrEmail);
+            if (!user.Status)
+                return false;
+
             var userGroups = Database.UserGroups.GetUserGroups(user);
             var memberRoles = new List<Role>();
             memberRoles.AddRange(Database.MemberRoles.GetMemberRoles(user.AsMember(), _appContext.Application));

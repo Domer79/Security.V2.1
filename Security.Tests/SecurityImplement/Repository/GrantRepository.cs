@@ -19,8 +19,6 @@ namespace Security.Tests.SecurityImplement.Repository
             _applicationContext = applicationContext;
         }
 
-        public IApplicationContext ApplicationContext => _applicationContext;
-
         public IEnumerable<SecObject> GetRoleGrants(string role)
         {
             var entity = Database.Roles.First(_ => _.Name == role);

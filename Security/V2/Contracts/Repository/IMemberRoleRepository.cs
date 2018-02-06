@@ -6,10 +6,10 @@ namespace Security.V2.Contracts.Repository
     public interface IMemberRoleRepository
     {
         IEnumerable<Member> GetMembersByIdRole(int idRole);
-        IEnumerable<Role> GetRolesByIdMember(int idMember, string appName);
+        IEnumerable<Role> GetRolesByIdMember(int idMember);
 
         IEnumerable<Member> GetMembersByRoleName(string role);
-        IEnumerable<Role> GetRolesByMemberName(string member, string appName);
+        IEnumerable<Role> GetRolesByMemberName(string member);
 
         void AddMembersToRole(int[] idMembers, int idRole);
         void AddRolesToMember(int[] idRoles, int idMember);

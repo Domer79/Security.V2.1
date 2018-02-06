@@ -19,7 +19,6 @@ namespace Security.Tests.SecurityImplement
 
         public void RegisterApplication(string appName, string description)
         {
-            var stackTrace = Environment.StackTrace;
             var app = _applicationRepository.GetByName(appName);
             if (app != null)
                 return;

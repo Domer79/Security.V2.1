@@ -18,7 +18,6 @@ namespace Security.Tests.SecurityTests
         [SetUp]
         public void Setup()
         {
-            //var serviceLocator = IocConfig.GetServiceLocator("HelloWorldApp");
             _security = new MySecurity();
         }
 
@@ -28,25 +27,43 @@ namespace Security.Tests.SecurityTests
             _security.Dispose();
         }
 
-        [Test]
-        public void RegisterApplicationTest()
+        [TestCase("HelloWorldApp1", "Hello World Application 1!")]
+        public void RegisterApplicationTest(string name, string description)
         {
-            var application = _security.ApplicationRepository.GetByName("HelloWorldApp");
+            var application = _security.ApplicationRepository.GetByName(name);
 
-            Debug.WriteLine(application.IdApplication);
-            Console.WriteLine(application.IdApplication);
-
-            Assert.That(application, Has.Property("AppName").EqualTo("HelloWorldApp"));
-            Assert.That(application, Has.Property("Description").EqualTo("Hello World Application!"));
+            Assert.That(application, Has.Property("AppName").EqualTo(name));
+            Assert.That(application, Has.Property("Description").EqualTo(description));
         }
 
-        [TestCase("1")]
-        [TestCase("2")]
-        [TestCase("3")]
-        public void SecObjectExistenceTest(string objectName)
+        [TestCase("HelloWorldApp1", "1")]
+        [TestCase("HelloWorldApp1", "2")]
+        [TestCase("HelloWorldApp1", "3")]
+        [TestCase("HelloWorldApp2", "1")]
+        [TestCase("HelloWorldApp2", "4")]
+        [TestCase("HelloWorldApp2", "5")]
+        [TestCase("HelloWorldApp2", "6")]
+        public void SecObjectExistenceTest(string appName, string objectName)
         {
-            var secObject = _security.SecObjectRepository.GetByName(objectName);
-            Assert.That(secObject, Is.Not.Null);
+            using(var security = new V2.Core.Security(appName, "", IocConfig.GetServiceLocator(appName)))
+            {
+                var secObject = security.SecObjectRepository.GetByName(objectName);
+                Assert.That(secObject, Is.Not.Null);
+            }
+        }
+
+        [TestCase("HelloWorldApp1", "1 2 3")]
+        [TestCase("HelloWorldApp2", "1 4 5 6")]
+        public void SecObjectCollectionCompareTest(string appName, string secObjects)
+        {
+            using (var security = new V2.Core.Security(appName, "", IocConfig.GetServiceLocator(appName)))
+            {
+                var secObjectNames = security.SecObjectRepository.Get().Select(_ => _.ObjectName);
+                var secObjectIds = security.SecObjectRepository.Get().Select(_ => _.IdSecObject);
+
+                CollectionAssert.AreEqual(secObjects.Split(' '), secObjectNames);
+                CollectionAssert.AreEqual(secObjects.Split(' ').Select(_ => int.Parse(_)), secObjectNames.Select(_ => int.Parse(_)));
+            }
         }
 
         [Test]
@@ -118,6 +135,44 @@ namespace Security.Tests.SecurityTests
 
             Assert.That(user, Is.Not.Null);
             Assert.That(user.Login, Is.EqualTo("user1"));
+        }
+
+        [TestCase("user1 group1", "role1")]
+        [TestCase("user1 user3", "role2")]
+        public void Check_Existence_Members_in_Role(string member, string role)
+        {
+            var members = _security.MemberRoleRepository.GetMembersByRoleName(role).Select(m => m.Name);
+            CollectionAssert.AreEqual(member.Split(' '), members);
+        }
+
+        [TestCase("role1 role2", "user1")]
+        [TestCase("role1", "group1")]
+        public void CheckExistsence_Roles_in_User(string roleNames, string member)
+        {
+            var roles = _security.MemberRoleRepository.GetRolesByMemberName(member).Select(_ => _.Name);
+            CollectionAssert.AreEqual(roleNames.Split(' '), roles);
+        }
+
+        [TestCase("user1", "1")]
+        [TestCase("user1", "2")]
+        [TestCase("user1", "3")]
+        [TestCase("user1@mail.ru", "1")]
+        [TestCase("user1@mail.ru", "2")]
+        [TestCase("user1@mail.ru", "3")]
+        [TestCase("user2", "1")]
+        [TestCase("user2", "2")]
+        [TestCase("user3", "2")]
+        [TestCase("user3", "3")]
+        public void CheckAccessToMemberTest(string loginOrEmail, string objectName)
+        {
+            Assert.That(() => _security.CheckAccess(loginOrEmail, objectName), Is.True);
+        }
+
+        [TestCase("user2", "3")]
+        [TestCase("user3", "1")]
+        public void CheckNotAccessToMemberTest(string loginOrEmail, string objectName)
+        {
+            Assert.That(() => _security.CheckAccess(loginOrEmail, objectName), Is.False);
         }
 
         class SecurityObject : ISecurityObject

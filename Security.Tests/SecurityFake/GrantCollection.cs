@@ -13,7 +13,7 @@ namespace Security.Tests.SecurityFake
 
         public override void Add(Grant grant)
         {
-            Collection.Add(new Grant());
+            Collection.Add(grant);
         }
 
         public override void Remove(Grant item)

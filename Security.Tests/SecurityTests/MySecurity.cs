@@ -11,7 +11,7 @@ namespace Security.Tests.SecurityTests
     public class MySecurity: V2.Core.Security
     {
         internal MySecurity() 
-            : base("HelloWorldApp", "Hello World Application!", IocConfig.GetServiceLocator("HelloWorldApp"))
+            : base("HelloWorldApp1", "Hello World Application 1!", IocConfig.GetServiceLocator("HelloWorldApp1"))
         {
 
         }

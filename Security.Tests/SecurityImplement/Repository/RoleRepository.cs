@@ -17,8 +17,6 @@ namespace Security.Tests.SecurityImplement.Repository
             _applicationContext = applicationContext;
         }
 
-        public IApplicationContext ApplicationContext => _applicationContext;
-
         private int IdApplication => _applicationContext.Application.IdApplication;
 
         public Role Create(Role entity)
@@ -30,7 +28,7 @@ namespace Security.Tests.SecurityImplement.Repository
 
         public Role Get(object id)
         {
-            return Database.Roles.SingleOrDefault(_ => _.IdRole == (int)id);
+            return Get().SingleOrDefault(_ => _.IdRole == (int)id);
         }
 
         public IEnumerable<Role> Get()
@@ -40,13 +38,13 @@ namespace Security.Tests.SecurityImplement.Repository
 
         public Role GetByName(string name)
         {
-            return Database.Roles.SingleOrDefault(_ => _.Name == name && _.IdApplication == IdApplication);
+            return Get().SingleOrDefault(_ => _.Name == name);
         }
 
         public IEntityCollectionInfo<Role> GetEntityCollectionInfo(int pageNumber, int pageSize)
         {
             var collection = new EntityCollectionInfo<Role>();
-            var antities = Database.Roles.ToArray();
+            var antities = Get().ToArray();
             collection.Entities = antities.Skip(pageNumber * pageSize - pageSize).Take(pageSize);
             collection.PageCount = antities.Length / pageSize + (antities.Length % pageSize > 0 ? 1 : 0);
 
@@ -55,7 +53,7 @@ namespace Security.Tests.SecurityImplement.Repository
 
         public void Remove(object id)
         {
-            var role = Database.Roles.First(_ => _.IdRole == (int) id);
+            var role = Get().First(_ => _.IdRole == (int) id);
             Database.Roles.Remove(role);
         }
 

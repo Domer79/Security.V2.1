@@ -124,7 +124,6 @@
     <Compile Include="V2\Contracts\ISecurityDataService.cs" />
     <Compile Include="V2\Contracts\IApplicationContext.cs" />
     <Compile Include="V2\Contracts\IServiceLocator.cs" />
-    <Compile Include="V2\Contracts\Repository\Base\IApplicationBaseRepository.cs" />
     <Compile Include="V2\Contracts\Repository\IApplicationInternalRepository.cs" />
     <Compile Include="V2\Contracts\Repository\IApplicationRepository.cs" />
     <Compile Include="V2\Contracts\Repository\IGrantRepository.cs" />

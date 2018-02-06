@@ -17,8 +17,6 @@ namespace Security.Tests.SecurityImplement.Repository
             _context = context;
         }
 
-        public IApplicationContext ApplicationContext => _context;
-
         private int IdApplication
         {
             get { return _context.Application.IdApplication; }
@@ -33,7 +31,7 @@ namespace Security.Tests.SecurityImplement.Repository
 
         public SecObject Get(object id)
         {
-            return Database.SecObjects.SingleOrDefault(_ => _.IdSecObject == (int) id);
+            return Get().SingleOrDefault(_ => _.IdSecObject == (int) id);
         }
 
         public IEnumerable<SecObject> Get()
@@ -43,13 +41,13 @@ namespace Security.Tests.SecurityImplement.Repository
 
         public SecObject GetByName(string name)
         {
-            return Database.SecObjects.SingleOrDefault(_ => _.ObjectName == name);
+            return Get().SingleOrDefault(_ => _.ObjectName == name);
         }
 
         public IEntityCollectionInfo<SecObject> GetEntityCollectionInfo(int pageNumber, int pageSize)
         {
             var collection = new EntityCollectionInfo<SecObject>();
-            var antities = Database.SecObjects.ToArray();
+            var antities = Get().ToArray();
             collection.Entities = antities.Skip(pageNumber * pageSize - pageSize).Take(pageSize);
             collection.PageCount = antities.Length / pageSize + (antities.Length % pageSize > 0 ? 1 : 0);
 
@@ -58,7 +56,7 @@ namespace Security.Tests.SecurityImplement.Repository
 
         public void Remove(object id)
         {
-            var secObject = Database.SecObjects.First(_ => _.IdSecObject == (int)id);
+            var secObject = Get().First(_ => _.IdSecObject == (int)id);
             Database.SecObjects.Remove(secObject);
         }
 
