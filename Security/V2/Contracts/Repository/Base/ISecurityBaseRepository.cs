@@ -1,4 +1,4 @@
-﻿using CommonContracts;
+﻿using Security.V2.CommonContracts;
 
 namespace Security.V2.Contracts.Repository.Base
 {

@@ -1,7 +1,7 @@
 ﻿using System;
-using CommonContracts;
 using Security.Model;
 using Security.V2.Contracts;
+using ICommonDb = Security.V2.CommonContracts.ICommonDb;
 
 namespace Security.V2.Core
 {

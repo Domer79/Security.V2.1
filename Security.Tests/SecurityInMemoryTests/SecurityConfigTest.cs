@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using NUnit.Framework;
 using Security.Tests.SecurityFake;
 using Security.Tests.SecurityImplement;
 using Security.V2.Contracts;
-using Security.V2.Core.Ioc;
 
-namespace Security.Tests.SecurityTests
+namespace Security.Tests.SecurityInMemoryTests
 {
     [TestFixture]
     public class SecurityConfigTest

@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using CommonContracts;
+using Security.V2.CommonContracts;
 
 namespace Security.Tests.SecurityImplement.Repository
 {

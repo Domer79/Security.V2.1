@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using CommonContracts;
 using Security.Model;
 using Security.Tests.SecurityFake;
+using Security.V2.CommonContracts;
 using Security.V2.Contracts;
 using Security.V2.Contracts.Repository;
 

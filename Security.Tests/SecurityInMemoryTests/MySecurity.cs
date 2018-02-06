@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Security.Tests.SecurityImplement;
-using Security.V2.Contracts;
+﻿using Security.Tests.SecurityImplement;
 
-namespace Security.Tests.SecurityTests
+namespace Security.Tests.SecurityInMemoryTests
 {
     public class MySecurity: V2.Core.Security
     {

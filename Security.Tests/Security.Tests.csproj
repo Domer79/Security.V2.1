@@ -39,6 +39,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Scripting.11.0.2100.61\lib\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Scripting.11.0.2100.61\lib\Microsoft.SqlServer.Management.Sdk.Sfc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Smo, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Scripting.11.0.2100.61\lib\Microsoft.SqlServer.Smo.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\MSTest.TestFramework.1.2.0\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
     </Reference>
@@ -49,7 +61,9 @@
       <HintPath>..\packages\NUnit.3.9.0\lib\net45\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -90,18 +104,17 @@
     <Compile Include="DI\Interfaces\ISampleManager.cs" />
     <Compile Include="DI\ServiceLocatorTest.cs" />
     <Compile Include="SecurityImplement\SecuritySettings.cs" />
-    <Compile Include="SecurityTests\MySecurity.cs" />
-    <Compile Include="SecurityTests\SecurityConfigTest.cs" />
-    <Compile Include="SecurityTests\SecuritySetupClass.cs" />
+    <Compile Include="SecurityInDatabaseTest\Setup.cs" />
+    <Compile Include="SecurityInDatabaseTest\RepositoryTests\Test.cs" />
+    <Compile Include="SecurityInMemoryTests\MySecurity.cs" />
+    <Compile Include="SecurityInMemoryTests\SecurityConfigTest.cs" />
+    <Compile Include="SecurityInMemoryTests\SecuritySetupClass.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CommonContracts\CommonContracts.csproj">
-      <Project>{943A1733-1B21-4D95-A4E1-D51A3FAE20A4}</Project>
-      <Name>CommonContracts</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Security.Model\Security.Model.csproj">
       <Project>{69F6D882-5A1E-49A9-B10C-A81AD937D188}</Project>
       <Name>Security.Model</Name>

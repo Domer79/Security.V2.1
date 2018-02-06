@@ -4,7 +4,7 @@ using Security.Model;
 using Security.Tests.SecurityFake;
 using Security.Tests.SecurityImplement;
 
-namespace Security.Tests.SecurityTests
+namespace Security.Tests.SecurityInMemoryTests
 {
     [SetUpFixture]
     public class SecuritySetupClass
