@@ -1,20 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Dynamic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Security.Model;
 using Security.V2.CommonContracts;
 using Security.V2.Contracts.Repository;
 
-namespace Security.V2.DataLayer
+namespace Security.V2.DataLayer.Repositories
 {
-    public class ApplicationInternalRepository : IApplicationInternalRepository
+    public class ApplicationRepository : IApplicationRepository
     {
         private readonly ICommonDb _commonDb;
 
-        public ApplicationInternalRepository(ICommonDb commonDb)
+        public ApplicationRepository(ICommonDb commonDb)
         {
             _commonDb = commonDb;
         }
@@ -29,7 +26,7 @@ namespace Security.V2.DataLayer
 
         public Application Get(object id)
         {
-            return _commonDb.Query<Application>("select * from sec.Applications where idApplication = @id", new {id}).Single();
+            return _commonDb.Query<Application>("select * from sec.Applications where idApplication = @id", new { id }).Single();
         }
 
         public IEnumerable<Application> Get()
@@ -39,17 +36,17 @@ namespace Security.V2.DataLayer
 
         public Application GetByName(string name)
         {
-            return _commonDb.Query<Application>("select * from sec.Applications where appName = @appName", new { appName = name }).Single();
+            throw new NotImplementedException();
         }
 
         public void Remove(object id)
         {
-            _commonDb.ExecuteNonQuery("execute sec.DeleteApp @idApplication", new {idApplication = id});
+            throw new NotSupportedException();
         }
 
         public void Update(Application entity)
         {
-            _commonDb.ExecuteNonQuery("execute sec.UpdateApp @idApplication, @appName, @description", entity);
+            throw new NotSupportedException();
         }
     }
 }

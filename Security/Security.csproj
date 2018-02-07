@@ -148,6 +148,8 @@
     <Compile Include="V2\CommonContracts\IGlobalSettings.cs" />
     <Compile Include="V2\CommonContracts\IRepository.cs" />
     <Compile Include="V2\Contracts\ISecurityObject.cs" />
+    <Compile Include="V2\Contracts\Repository\IUserInternalRepository.cs" />
+    <Compile Include="V2\Core\IocConfig.cs" />
     <Compile Include="V2\Core\Ioc\AddInstanceEventArgs.cs" />
     <Compile Include="V2\Core\Ioc\AddInstanceHandler.cs" />
     <Compile Include="V2\Core\Ioc\Exceptions\DependencyResolveException.cs" />
@@ -164,7 +166,6 @@
     <Compile Include="V2\Core\Ioc\ServiceLocator.cs" />
     <Compile Include="V2\Contracts\IConfig.cs" />
     <Compile Include="V2\Contracts\IConnectionFactory.cs" />
-    <Compile Include="V2\Contracts\ISecurityDataService.cs" />
     <Compile Include="V2\Contracts\IApplicationContext.cs" />
     <Compile Include="V2\Contracts\IServiceLocator.cs" />
     <Compile Include="V2\Contracts\Repository\IApplicationInternalRepository.cs" />
@@ -182,8 +183,13 @@
     <Compile Include="V2\Contracts\Repository\IUserRepository.cs" />
     <Compile Include="V2\Core\Ioc\Scopes\TransientScope.cs" />
     <Compile Include="V2\Core\Security.cs" />
-    <Compile Include="V2\DataLayer\ApplicationInternalRepository.cs" />
+    <Compile Include="V2\Core\SecurityFactory.cs" />
+    <Compile Include="V2\DataLayer\Repositories\ApplicationInternalRepository.cs" />
+    <Compile Include="V2\DataLayer\Repositories\ApplicationRepository.cs" />
     <Compile Include="V2\DataLayer\CommonDb.cs" />
+    <Compile Include="V2\DataLayer\Repositories\GrantRepository.cs" />
+    <Compile Include="V2\DataLayer\Repositories\GroupRepository.cs" />
+    <Compile Include="V2\DataLayer\Repositories\MemberRoleRepository.cs" />
     <Compile Include="V2\DataLayer\SqlConnectionFactory.cs" />
     <Compile Include="V2\Core\ApplicationContext.cs" />
   </ItemGroup>

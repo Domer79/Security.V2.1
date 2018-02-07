@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using Security.Model;
 
 namespace Security.V2.Contracts.Repository
@@ -16,5 +17,21 @@ namespace Security.V2.Contracts.Repository
 
         void AddMembersToRole(string[] members, string role);
         void AddRolesToMember(string[] roles, string member);
+
+        #region Async
+
+        Task<IEnumerable<Member>> GetMembersByIdRoleAsync(int idRole);
+        Task<IEnumerable<Role>> GetRolesByIdMemberAsync(int idMember);
+
+        Task<IEnumerable<Member>> GetMembersByRoleNameAsync(string role);
+        Task<IEnumerable<Role>> GetRolesByMemberNameAsync(string member);
+
+        Task AddMembersToRoleAsync(int[] idMembers, int idRole);
+        Task AddRolesToMemberAsync(int[] idRoles, int idMember);
+
+        Task AddMembersToRoleAsync(string[] members, string role);
+        Task AddRolesToMemberAsync(string[] roles, string member);
+
+        #endregion
     }
 }

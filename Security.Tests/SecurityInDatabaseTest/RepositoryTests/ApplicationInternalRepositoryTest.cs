@@ -1,28 +1,10 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using NUnit.Framework;
 using Security.Model;
-using Security.V2.Contracts;
 using Security.V2.Contracts.Repository;
-using Security.V2.DataLayer;
 
 namespace Security.Tests.SecurityInDatabaseTest.RepositoryTests
 {
-    public class BaseTest: IDisposable
-    {
-        public BaseTest()
-        {
-            ServiceLocator = IocConfig.GetServiceLocator();
-        }
-
-        internal IServiceLocator ServiceLocator { get; }
-
-        public void Dispose()
-        {
-            ServiceLocator.Dispose();
-        }
-    }
-
     [TestFixture]
     public class ApplicationInternalRepositoryTest: BaseTest
     {
