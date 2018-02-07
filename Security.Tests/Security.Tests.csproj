@@ -104,8 +104,9 @@
     <Compile Include="DI\Interfaces\ISampleManager.cs" />
     <Compile Include="DI\ServiceLocatorTest.cs" />
     <Compile Include="SecurityImplement\SecuritySettings.cs" />
+    <Compile Include="SecurityInDatabaseTest\IocConfig.cs" />
     <Compile Include="SecurityInDatabaseTest\Setup.cs" />
-    <Compile Include="SecurityInDatabaseTest\RepositoryTests\Test.cs" />
+    <Compile Include="SecurityInDatabaseTest\RepositoryTests\ApplicationInternalRepositoryTest.cs" />
     <Compile Include="SecurityInMemoryTests\MySecurity.cs" />
     <Compile Include="SecurityInMemoryTests\SecurityConfigTest.cs" />
     <Compile Include="SecurityInMemoryTests\SecuritySetupClass.cs" />
