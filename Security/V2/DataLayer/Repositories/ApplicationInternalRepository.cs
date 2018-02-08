@@ -69,7 +69,7 @@ namespace Security.V2.DataLayer.Repositories
 
         public Task RemoveAsync(object id)
         {
-            throw new System.NotImplementedException();
+            return _commonDb.ExecuteNonQueryAsync("execute sec.DeleteApp @idApplication", new { idApplication = id });
         }
 
         public void Update(Application entity)
@@ -79,7 +79,7 @@ namespace Security.V2.DataLayer.Repositories
 
         public Task UpdateAsync(Application entity)
         {
-            throw new System.NotImplementedException();
+            return _commonDb.ExecuteNonQueryAsync("execute sec.UpdateApp @idApplication, @appName, @description", entity);
         }
     }
 }

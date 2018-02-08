@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Security.Model;
 using Security.V2.CommonContracts;
 using Security.V2.Contracts.Repository;
@@ -18,15 +19,23 @@ namespace Security.V2.DataLayer.Repositories
 
         public Application Create(Application entity)
         {
-            var id = _commonDb.Query<int>("EXECUTE [sec].[AddApp] @appName ,@description", entity).Single();
+            var id = _commonDb.ExecuteScalar<int>("EXECUTE [sec].[AddApp] @appName ,@description", entity);
             entity.IdApplication = id;
+
+            return entity;
+        }
+
+        public async Task<Application> CreateAsync(Application entity)
+        {
+            var id = _commonDb.ExecuteScalarAsync<int>("EXECUTE [sec].[AddApp] @appName ,@description", entity);
+            entity.IdApplication = await id;
 
             return entity;
         }
 
         public Application Get(object id)
         {
-            return _commonDb.Query<Application>("select * from sec.Applications where idApplication = @id", new { id }).Single();
+            return _commonDb.QuerySingle<Application>("select * from sec.Applications where idApplication = @id", new { id });
         }
 
         public IEnumerable<Application> Get()
@@ -34,7 +43,22 @@ namespace Security.V2.DataLayer.Repositories
             return _commonDb.Query<Application>("select * from sec.Applications");
         }
 
+        public Task<Application> GetAsync(object id)
+        {
+            return _commonDb.QuerySingleAsync<Application>("select * from sec.Applications where idApplication = @id", new { id });
+        }
+
+        public Task<IEnumerable<Application>> GetAsync()
+        {
+            return _commonDb.QueryAsync<Application>("select * from sec.Applications");
+        }
+
         public Application GetByName(string name)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Application> GetByNameAsync(string name)
         {
             throw new NotImplementedException();
         }
@@ -44,9 +68,19 @@ namespace Security.V2.DataLayer.Repositories
             throw new NotSupportedException();
         }
 
+        public Task RemoveAsync(object id)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Update(Application entity)
         {
             throw new NotSupportedException();
+        }
+
+        public Task UpdateAsync(Application entity)
+        {
+            throw new NotImplementedException();
         }
     }
 }

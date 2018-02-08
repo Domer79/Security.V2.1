@@ -24,7 +24,7 @@ namespace Security.V2.DataLayer.Repositories
         public void AddMembersToRole(int[] idMembers, int idRole)
         {
             _commonDb.ExecuteNonQuery(@"
-insert into sec.MemberRoles 
+insert into sec.MemberRoles(idMember, idRole)
 select idMember, @idRole idRole from (select idMember from sec.Members where idMember in @idMembers) s1
 ", new {idMembers, idRole});
         }
@@ -32,10 +32,12 @@ select idMember, @idRole idRole from (select idMember from sec.Members where idM
         public void AddMembersToRole(string[] members, string role)
         {
             _commonDb.ExecuteNonQuery(@"
-insert into sec.MemberRoles 
+declare @idRole int = (select idRole from sec.Roles where name = @roleName and idApplication = @idApplication)
+
+insert into sec.MemberRoles(idMember, idRole)
 select 
 	idMember,
-	idRole = (select idRole from sec.Roles where name = @roleName and idApplication = @idApplication)
+	@idRole idRole
 from 
 	(select idMember from sec.Members where name in @members) s1
 ", new {roleName = role, _context.Application.IdApplication, members});
@@ -44,7 +46,7 @@ from
         public Task AddMembersToRoleAsync(int[] idMembers, int idRole)
         {
             return _commonDb.ExecuteNonQueryAsync(@"
-insert into sec.MemberRoles 
+insert into sec.MemberRoles(idMember, idRole)
 select idMember, @idRole idRole from (select idMember from sec.Members where idMember in @idMembers) s1
 ", new { idMembers, idRole });
         }
@@ -52,10 +54,12 @@ select idMember, @idRole idRole from (select idMember from sec.Members where idM
         public Task AddMembersToRoleAsync(string[] members, string role)
         {
             return _commonDb.ExecuteNonQueryAsync(@"
-insert into sec.MemberRoles 
+declare @idRole int = (select idRole from sec.Roles where name = @roleName and idApplication = @idApplication)
+
+insert into sec.MemberRoles(idMember, idRole)
 select 
 	idMember,
-	idRole = (select idRole from sec.Roles where name = @roleName and idApplication = @idApplication)
+	@idRole idRole
 from 
 	(select idMember from sec.Members where name in @members) s1
 ", new { roleName = role, _context.Application.IdApplication, members });
@@ -64,18 +68,19 @@ from
         public void AddRolesToMember(int[] idRoles, int idMember)
         {
             _commonDb.ExecuteNonQuery(@"
-insert into sec.MemberRoles 
-select idRole, @idMember from (select idRole from sec.Roles where idRole in @idRoles) s1
+insert into sec.MemberRoles(idMember, idRole)
+select @idMember, idRole from (select idRole from sec.Roles where idRole in @idRoles) s1
 ", new { idMember, idRoles });
         }
 
         public void AddRolesToMember(string[] roles, string member)
         {
             _commonDb.ExecuteNonQuery(@"
-insert into sec.MemberRoles 
+declare @idMember int = (select idMember from sec.Members where name = @member)
+insert into sec.MemberRoles(idMember, idRole)
 select 
-	idRole,
-	idMember = (select idMEmber from sec.Members where name = @member)
+	@idMember,
+	idRole
 from 
 	(select idRole from sec.Roles where name in @roles and idApplication = @idApplication) s1
 ", new { roles, _context.Application.IdApplication, member });
@@ -84,18 +89,19 @@ from
         public Task AddRolesToMemberAsync(int[] idRoles, int idMember)
         {
             return _commonDb.ExecuteNonQueryAsync(@"
-insert into sec.MemberRoles 
-select idRole, @idMember from (select idRole from sec.Roles where idRole in @idRoles) s1
+insert into sec.MemberRoles(idMember, idRole)
+select @idMember, idRole from (select idRole from sec.Roles where idRole in @idRoles) s1
 ", new { idMember, idRoles });
         }
 
         public Task AddRolesToMemberAsync(string[] roles, string member)
         {
             return _commonDb.ExecuteNonQueryAsync(@"
-insert into sec.MemberRoles 
+declare @idMember int = (select idMember from sec.Members where name = @member)
+insert into sec.MemberRoles(idMember, idRole)
 select 
-	idRole,
-	idMember = (select idMEmber from sec.Members where name = @member)
+	@idMember,
+	idRole
 from 
 	(select idRole from sec.Roles where name in @roles and idApplication = @idApplication) s1
 ", new { roles, _context.Application.IdApplication, member });
