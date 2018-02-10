@@ -1,14 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Dapper;
 using Security.V2.CommonContracts;
 using Security.V2.Contracts;
 
-namespace Security.V2.DataLayer
+namespace Security.V2.Core.DataLayer
 {
     public class CommonDb : ICommonDb
     {

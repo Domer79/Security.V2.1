@@ -184,18 +184,18 @@
     <Compile Include="V2\Core\Ioc\Scopes\TransientScope.cs" />
     <Compile Include="V2\Core\Security.cs" />
     <Compile Include="V2\Core\SecurityFactory.cs" />
-    <Compile Include="V2\DataLayer\Repositories\ApplicationInternalRepository.cs" />
-    <Compile Include="V2\DataLayer\Repositories\ApplicationRepository.cs" />
-    <Compile Include="V2\DataLayer\CommonDb.cs" />
-    <Compile Include="V2\DataLayer\Repositories\GrantRepository.cs" />
-    <Compile Include="V2\DataLayer\Repositories\GroupRepository.cs" />
-    <Compile Include="V2\DataLayer\Repositories\MemberRoleRepository.cs" />
-    <Compile Include="V2\DataLayer\Repositories\RoleRepository.cs" />
-    <Compile Include="V2\DataLayer\Repositories\SecObjectRepository.cs" />
-    <Compile Include="V2\DataLayer\Repositories\UserGroupRepository.cs" />
-    <Compile Include="V2\DataLayer\Repositories\UserInternalRepository.cs" />
-    <Compile Include="V2\DataLayer\Repositories\UserRepository.cs" />
-    <Compile Include="V2\DataLayer\SqlConnectionFactory.cs" />
+    <Compile Include="V2\Core\DataLayer\Repositories\ApplicationInternalRepository.cs" />
+    <Compile Include="V2\Core\DataLayer\Repositories\ApplicationRepository.cs" />
+    <Compile Include="V2\Core\DataLayer\CommonDb.cs" />
+    <Compile Include="V2\Core\DataLayer\Repositories\GrantRepository.cs" />
+    <Compile Include="V2\Core\DataLayer\Repositories\GroupRepository.cs" />
+    <Compile Include="V2\Core\DataLayer\Repositories\MemberRoleRepository.cs" />
+    <Compile Include="V2\Core\DataLayer\Repositories\RoleRepository.cs" />
+    <Compile Include="V2\Core\DataLayer\Repositories\SecObjectRepository.cs" />
+    <Compile Include="V2\Core\DataLayer\Repositories\UserGroupRepository.cs" />
+    <Compile Include="V2\Core\DataLayer\Repositories\UserInternalRepository.cs" />
+    <Compile Include="V2\Core\DataLayer\Repositories\UserRepository.cs" />
+    <Compile Include="V2\Core\DataLayer\SqlConnectionFactory.cs" />
     <Compile Include="V2\Core\ApplicationContext.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -217,6 +217,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="V2\DataLayer\Repositories\" />
     <Folder Include="V2\ServiceLocator\" />
   </ItemGroup>
   <Import Project="..\DebugPackageConfiguration.targets" />

@@ -4,7 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using Security.V2.Contracts;
 
-namespace Security.V2.DataLayer
+namespace Security.V2.Core.DataLayer
 {
     public class SqlConnectionFactory: IConnectionFactory
     {

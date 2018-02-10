@@ -1,9 +1,9 @@
 ﻿using Security.V2.CommonContracts;
 using Security.V2.Contracts;
 using Security.V2.Contracts.Repository;
+using Security.V2.Core.DataLayer;
+using Security.V2.Core.DataLayer.Repositories;
 using Security.V2.Core.Ioc;
-using Security.V2.DataLayer;
-using Security.V2.DataLayer.Repositories;
 
 namespace Security.V2.Core
 {

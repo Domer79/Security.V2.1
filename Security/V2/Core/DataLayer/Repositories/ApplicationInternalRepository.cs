@@ -5,7 +5,7 @@ using Security.Model;
 using Security.V2.CommonContracts;
 using Security.V2.Contracts.Repository;
 
-namespace Security.V2.DataLayer.Repositories
+namespace Security.V2.Core.DataLayer.Repositories
 {
     public class ApplicationInternalRepository : IApplicationInternalRepository
     {
