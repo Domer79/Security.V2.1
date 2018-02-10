@@ -10,8 +10,8 @@ namespace Security.V2.Contracts.Repository
         IEnumerable<User> GetUsersByIdGroup(int idGroup);
         IEnumerable<Group> GetGroupsByIdUser(int idUser);
 
-        IEnumerable<User> GetUsersById(Guid id);
-        IEnumerable<Group> GetGroupsById(Guid id);
+        IEnumerable<User> GetUsersByGroupId(Guid id);
+        IEnumerable<Group> GetGroupsByUserId(Guid id);
 
         IEnumerable<User> GetUsersByGroupName(string name);
         IEnumerable<Group> GetGroupsByUserName(string name);
@@ -29,8 +29,8 @@ namespace Security.V2.Contracts.Repository
         Task<IEnumerable<User>> GetUsersByIdGroupAsync(int idGroup);
         Task<IEnumerable<Group>> GetGroupsByIdUserAsync(int idUser);
 
-        Task<IEnumerable<User>> GetUsersByIdAsync(Guid id);
-        Task<IEnumerable<Group>> GetGroupsByIdAsync(Guid id);
+        Task<IEnumerable<User>> GetUsersByGroupIdAsync(Guid id);
+        Task<IEnumerable<Group>> GetGroupsByUserIdAsync(Guid id);
         
         Task<IEnumerable<User>> GetUsersByGroupNameAsync(string name);
         Task<IEnumerable<Group>> GetGroupsByUserNameAsync(string name);

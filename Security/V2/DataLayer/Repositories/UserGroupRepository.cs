@@ -38,112 +38,246 @@ select @idUser idUser, idMember idGroup from sec.Members where id in @groupsId
 
         public void AddGroupsToUser(string[] groups, string user)
         {
-            throw new NotImplementedException();
+            _commonDb.ExecuteNonQuery(@"
+declare @idUser int = (select idMember from sec.Members where name = @user)
+
+--insert into sec.UserGroups(idUser, idGroup)
+select @idUser idUser, idMember idGroup from sec.Members where name in @groups
+", new {user, groups});
         }
 
         public Task AddGroupsToUserAsync(int[] idGroups, int idUser)
         {
-            throw new NotImplementedException();
+            return _commonDb.ExecuteNonQueryAsync(@"
+insert into sec.UserGroups(idUser, idGroup)
+select @idUser idUser, idMember from (select idMember from sec.Groups where idGroup in @idGroups) s1
+", new { idUser, idGroups });
         }
 
         public Task AddGroupsToUserAsync(Guid[] groupsId, Guid userId)
         {
-            throw new NotImplementedException();
+            return _commonDb.ExecuteNonQueryAsync(@"
+declare @idUser int = (select idMember from sec.Members where id = @userId)
+
+insert into sec.UserGroups(idUser, idGroup)
+select @idUser idUser, idMember idGroup from sec.Members where id in @groupsId
+", new { userId, groupsId });
         }
 
         public Task AddGroupsToUserAsync(string[] groups, string user)
         {
-            throw new NotImplementedException();
+            return _commonDb.ExecuteNonQueryAsync(@"
+declare @idUser int = (select idMember from sec.Members where name = @user)
+
+--insert into sec.UserGroups(idUser, idGroup)
+select @idUser idUser, idMember idGroup from sec.Members where name in @groups
+", new { user, groups });
         }
 
         public void AddUsersToGroup(int[] idUsers, int idGroup)
         {
-            throw new NotImplementedException();
+            _commonDb.ExecuteNonQuery(@"
+insert into sec.UserGroups(idUser, idGroup)
+select idMember idUser, @idGroup idGroup from (select idMember from sec.Members where idMember in @idUsers) s1
+", new {idUsers, idGroup});
         }
 
         public void AddUsersToGroup(Guid[] usersId, Guid groupId)
         {
-            throw new NotImplementedException();
+            _commonDb.ExecuteNonQuery(@"
+declare @idGroup int = (select idMember from sec.Members where id = @groupId)
+
+insert into sec.UserGroups(idUser, idGroup)
+select idMember idUser, @idGroup idGroup from sec.Members where id in @usersId
+", new {usersId, groupId});
         }
 
         public void AddUsersToGroup(string[] users, string group)
         {
-            throw new NotImplementedException();
+            _commonDb.ExecuteNonQuery(@"
+declare @idGroup int = (select idMember from sec.Members where name = @group)
+
+insert into sec.UserGroups(idUser, idGroup)
+select idMember idUser, @idGroup idGroup from sec.Members where name in @users
+", new {users, group});
         }
 
         public Task AddUsersToGroupAsync(int[] idUsers, int idGroup)
         {
-            throw new NotImplementedException();
+            return _commonDb.ExecuteNonQueryAsync(@"
+insert into sec.UserGroups(idUser, idGroup)
+select idMember idUser, @idGroup idGroup from (select idMember from sec.Members where idMember in @idUsers) s1
+", new { idUsers, idGroup });
         }
 
         public Task AddUsersToGroupAsync(Guid[] usersId, Guid groupId)
         {
-            throw new NotImplementedException();
+            return _commonDb.ExecuteNonQueryAsync(@"
+declare @idGroup int = (select idMember from sec.Members where id = @groupId)
+
+insert into sec.UserGroups(idUser, idGroup)
+select idMember idUser, @idGroup idGroup from sec.Members where id in @usersId
+", new { usersId, groupId });
         }
 
         public Task AddUsersToGroupAsync(string[] users, string group)
         {
-            throw new NotImplementedException();
+            return _commonDb.ExecuteNonQueryAsync(@"
+declare @idGroup int = (select idMember from sec.Members where name = @group)
+
+insert into sec.UserGroups(idUser, idGroup)
+select idMember idUser, @idGroup idGroup from sec.Members where name in @users
+", new { users, group });
+        }
+        
+        public IEnumerable<Group> GetGroupsByUserId(Guid id)
+        {
+            return _commonDb.Query<Group>(@"
+select
+	gv.*
+from
+	sec.GroupsView gv inner join sec.UserGroups ug on gv.idMember = ug.idGroup
+	inner join sec.Members m on ug.idUser = m.idMember
+where
+	m.id = @id
+", new {id});
         }
 
-        public IEnumerable<Group> GetGroupsById(Guid id)
+        public Task<IEnumerable<Group>> GetGroupsByUserIdAsync(Guid id)
         {
-            throw new NotImplementedException();
-        }
-
-        public Task<IEnumerable<Group>> GetGroupsByIdAsync(Guid id)
-        {
-            throw new NotImplementedException();
+            return _commonDb.QueryAsync<Group>(@"
+select
+	gv.*
+from
+	sec.GroupsView gv inner join sec.UserGroups ug on gv.idMember = ug.idGroup
+	inner join sec.Members m on ug.idUser = m.idMember
+where
+	m.id = @id
+", new { id });
         }
 
         public IEnumerable<Group> GetGroupsByIdUser(int idUser)
         {
-            throw new NotImplementedException();
+            return _commonDb.Query<Group>(@"
+select
+	gv.*
+from
+	sec.GroupsView gv inner join sec.UserGroups ug on gv.idMember = ug.idGroup
+	inner join sec.Members m on ug.idUser = m.idMember
+where
+	m.idMember = @idUser
+", new { idUser });
         }
 
         public Task<IEnumerable<Group>> GetGroupsByIdUserAsync(int idUser)
         {
-            throw new NotImplementedException();
+            return _commonDb.QueryAsync<Group>(@"
+select
+	gv.*
+from
+	sec.GroupsView gv inner join sec.UserGroups ug on gv.idMember = ug.idGroup
+	inner join sec.Members m on ug.idUser = m.idMember
+where
+	m.idMember = @idUser
+", new { idUser });
         }
 
         public IEnumerable<Group> GetGroupsByUserName(string name)
         {
-            throw new NotImplementedException();
+            return _commonDb.Query<Group>(@"
+select
+	gv.*
+from
+	sec.GroupsView gv inner join sec.UserGroups ug on gv.idMember = ug.idGroup
+	inner join sec.Members m on ug.idUser = m.idMember
+where
+	m.name = @name
+", new { name });
         }
 
         public Task<IEnumerable<Group>> GetGroupsByUserNameAsync(string name)
         {
-            throw new NotImplementedException();
+            return _commonDb.QueryAsync<Group>(@"
+select
+	gv.*
+from
+	sec.GroupsView gv inner join sec.UserGroups ug on gv.idMember = ug.idGroup
+	inner join sec.Members m on ug.idUser = m.idMember
+where
+	m.name = @name
+", new { name });
         }
 
         public IEnumerable<User> GetUsersByGroupName(string name)
         {
-            throw new NotImplementedException();
+            return _commonDb.Query<User>(@"
+select
+	uv.*
+from
+	sec.UsersView uv inner join sec.UserGroups ug on uv.idMember = ug.idUser
+	inner join sec.Members m on ug.idGroup = m.idMember
+where
+	m.name = @name", new {name});
         }
 
         public Task<IEnumerable<User>> GetUsersByGroupNameAsync(string name)
         {
-            throw new NotImplementedException();
+            return _commonDb.QueryAsync<User>(@"
+select
+	uv.*
+from
+	sec.UsersView uv inner join sec.UserGroups ug on uv.idMember = ug.idUser
+	inner join sec.Members m on ug.idGroup = m.idMember
+where
+	m.name = @name", new { name });
         }
 
-        public IEnumerable<User> GetUsersById(Guid id)
+        public IEnumerable<User> GetUsersByGroupId(Guid id)
         {
-            throw new NotImplementedException();
+            return _commonDb.Query<User>(@"
+select
+	uv.*
+from
+	sec.UsersView uv inner join sec.UserGroups ug on uv.idMember = ug.idUser
+	inner join sec.Members m on ug.idGroup = m.idMember
+where
+	m.id = @id", new { id });
         }
 
-        public Task<IEnumerable<User>> GetUsersByIdAsync(Guid id)
+        public Task<IEnumerable<User>> GetUsersByGroupIdAsync(Guid id)
         {
-            throw new NotImplementedException();
+            return _commonDb.QueryAsync<User>(@"
+select
+	uv.*
+from
+	sec.UsersView uv inner join sec.UserGroups ug on uv.idMember = ug.idUser
+	inner join sec.Members m on ug.idGroup = m.idMember
+where
+	m.id = @id", new { id });
         }
 
         public IEnumerable<User> GetUsersByIdGroup(int idGroup)
         {
-            throw new NotImplementedException();
+            return _commonDb.Query<User>(@"
+select
+	uv.*
+from
+	sec.UsersView uv inner join sec.UserGroups ug on uv.idMember = ug.idUser
+	inner join sec.Members m on ug.idGroup = m.idMember
+where
+	m.idMember = @idGroup", new { idGroup });
         }
 
         public Task<IEnumerable<User>> GetUsersByIdGroupAsync(int idGroup)
         {
-            throw new NotImplementedException();
+            return _commonDb.QueryAsync<User>(@"
+select
+	uv.*
+from
+	sec.UsersView uv inner join sec.UserGroups ug on uv.idMember = ug.idUser
+	inner join sec.Members m on ug.idGroup = m.idMember
+where
+	m.idMember = @idGroup", new { idGroup });
         }
     }
 }

@@ -83,7 +83,7 @@ namespace Security.Tests.SecurityImplement.Repository
             return Database.UserGroups.GetGroupUsers(group);
         }
 
-        public IEnumerable<User> GetUsersById(Guid id)
+        public IEnumerable<User> GetUsersByGroupId(Guid id)
         {
             var group = Database.Groups.Single(_ => _.Id == id);
             return Database.UserGroups.GetGroupUsers(group);
@@ -101,7 +101,7 @@ namespace Security.Tests.SecurityImplement.Repository
             return Database.UserGroups.GetUserGroups(user);
         }
 
-        public IEnumerable<Group> GetGroupsById(Guid id)
+        public IEnumerable<Group> GetGroupsByIdUser(Guid id)
         {
             var user = Database.Users.Single(_ => _.Id == id);
             return Database.UserGroups.GetUserGroups(user);

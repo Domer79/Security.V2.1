@@ -8,14 +8,9 @@ namespace Security.V2.Contracts.Repository
 {
     public interface IUserRepository: ISecurityBaseRepository<User>
     {
-        User Get(string loginOrEmail);
-        User GetByEmail(string email);
-
-        #region Async
-
-        Task<User> GetAsync(string loginOrEmail);
-        Task<User> GetByEmailAsync(string email);
-
-        #endregion
+        new User GetByName(string loginOrEmail);
+        new Task<User> GetByNameAsync(string loginOrEmail);
+        void SetStatus(string loginOrEmail, bool status);
+        Task SetStatusAsync(string loginOrEmail, bool status);
     }
 }

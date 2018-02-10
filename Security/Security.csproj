@@ -193,6 +193,8 @@
     <Compile Include="V2\DataLayer\Repositories\RoleRepository.cs" />
     <Compile Include="V2\DataLayer\Repositories\SecObjectRepository.cs" />
     <Compile Include="V2\DataLayer\Repositories\UserGroupRepository.cs" />
+    <Compile Include="V2\DataLayer\Repositories\UserInternalRepository.cs" />
+    <Compile Include="V2\DataLayer\Repositories\UserRepository.cs" />
     <Compile Include="V2\DataLayer\SqlConnectionFactory.cs" />
     <Compile Include="V2\Core\ApplicationContext.cs" />
   </ItemGroup>
