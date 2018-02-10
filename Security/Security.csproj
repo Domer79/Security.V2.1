@@ -139,6 +139,7 @@
     <Compile Include="Exceptions\AccessTypeMissingException.cs" />
     <Compile Include="Exceptions\AccessTypeValidException.cs" />
     <Compile Include="Exceptions\BaseException.cs" />
+    <Compile Include="Exceptions\ConvertTypeException.cs" />
     <Compile Include="Exceptions\SecurityNotSupportedException.cs" />
     <Compile Include="Extensions\SecurityInfoExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -149,6 +150,7 @@
     <Compile Include="V2\CommonContracts\IRepository.cs" />
     <Compile Include="V2\Contracts\ISecurityObject.cs" />
     <Compile Include="V2\Contracts\Repository\IUserInternalRepository.cs" />
+    <Compile Include="V2\Core\Config.cs" />
     <Compile Include="V2\Core\IocConfig.cs" />
     <Compile Include="V2\Core\Ioc\AddInstanceEventArgs.cs" />
     <Compile Include="V2\Core\Ioc\AddInstanceHandler.cs" />
@@ -197,6 +199,7 @@
     <Compile Include="V2\Core\DataLayer\Repositories\UserRepository.cs" />
     <Compile Include="V2\Core\DataLayer\SqlConnectionFactory.cs" />
     <Compile Include="V2\Core\ApplicationContext.cs" />
+    <Compile Include="V2\Core\SecuritySettings.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Security.Interfaces\Security.Interfaces.csproj">
@@ -216,10 +219,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="V2\DataLayer\Repositories\" />
-    <Folder Include="V2\ServiceLocator\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="..\DebugPackageConfiguration.targets" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\Configuration.targets" />

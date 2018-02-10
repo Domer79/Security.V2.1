@@ -42,7 +42,8 @@ namespace Security.V2.Contracts.Repository
         Task AddGroupsToUserAsync(int[] idGroups, int idUser);
         Task AddGroupsToUserAsync(Guid[] groupsId, Guid userId);
         Task AddGroupsToUserAsync(string[] groups, string user);
-        
 
-        #endregion    }
+
+        #endregion
+    }
 }

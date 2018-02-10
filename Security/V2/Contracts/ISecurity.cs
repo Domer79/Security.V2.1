@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Threading.Tasks;
+using Security.Model;
 using Security.V2.Contracts.Repository;
 
 namespace Security.V2.Contracts
@@ -17,7 +19,6 @@ namespace Security.V2.Contracts
 
         bool SetPassword(string loginOrEmail, string password);
 
-        IApplicationContext ApplicationContext { get; }
         IUserRepository UserRepository { get; }
         IGroupRepository GroupRepository { get; }
         IApplicationRepository ApplicationRepository { get; }

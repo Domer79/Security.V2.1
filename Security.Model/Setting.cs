@@ -1,4 +1,6 @@
-﻿namespace Security.Model
+﻿using System;
+
+namespace Security.Model
 {
     /// <summary>
     /// Объект настройки для системы доступа
@@ -25,5 +27,29 @@
         /// Описание
         /// </summary>
         public string Description { get; set; }
+
+        /// <summary>
+        /// Дата изменения значения
+        /// </summary>
+        public DateTime ChangedDate { get; set; }
+
+        /// <summary>
+        /// Время жизни (сохраняется в БД)
+        /// </summary>
+        public long? InDbLifetime { get; set; }
+
+        /// <summary>
+        /// Время жизни
+        /// </summary>
+        public TimeSpan Lifetime
+        {
+            get => TimeSpan.FromTicks(InDbLifetime.HasValue ? InDbLifetime.Value : long.MaxValue);
+            set => InDbLifetime = value.Ticks;
+        }
+
+        /// <summary>
+        /// Значение актуально/устарело
+        /// </summary>
+        public bool Deprecated => DateTime.Now > ChangedDate.Add(Lifetime);
     }
 }

@@ -14,7 +14,7 @@ namespace Security.V2.Core
         private readonly string _appName;
 
         public Security(string appName, string description = null)
-            :this(appName, description, IocConfig.GetLocator())
+            :this(appName, description, IocConfig.GetLocator(appName))
         {
         }
 
