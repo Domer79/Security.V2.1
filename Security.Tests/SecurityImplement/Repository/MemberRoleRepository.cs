@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Security.Model;
 using Security.Tests.SecurityFake;
 using Security.V2.Contracts;
@@ -36,6 +37,16 @@ namespace Security.Tests.SecurityImplement.Repository
             }
         }
 
+        public Task AddMembersToRoleAsync(int[] idMembers, int idRole)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Task AddMembersToRoleAsync(string[] members, string role)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public void AddRolesToMember(int[] idRoles, int idMember)
         {
             foreach (var idRole in idRoles)
@@ -56,10 +67,25 @@ namespace Security.Tests.SecurityImplement.Repository
             }
         }
 
+        public Task AddRolesToMemberAsync(int[] idRoles, int idMember)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Task AddRolesToMemberAsync(string[] roles, string member)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public IEnumerable<Member> GetMembersByIdRole(int idRole)
         {
             var role = Database.Roles.First(_ => _.IdRole == idRole);
             return Database.MemberRoles.GetRoleMembers(role);
+        }
+
+        public Task<IEnumerable<Member>> GetMembersByIdRoleAsync(int idRole)
+        {
+            throw new System.NotImplementedException();
         }
 
         public IEnumerable<Member> GetMembersByRoleName(string role)
@@ -68,16 +94,31 @@ namespace Security.Tests.SecurityImplement.Repository
             return Database.MemberRoles.GetRoleMembers(roleEntity);
         }
 
+        public Task<IEnumerable<Member>> GetMembersByRoleNameAsync(string role)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public IEnumerable<Role> GetRolesByIdMember(int idMember)
         {
             var member = Database.Members.First(_ => _.IdMember == idMember);
             return Database.MemberRoles.GetMemberRoles(member, _context.Application);
         }
 
+        public Task<IEnumerable<Role>> GetRolesByIdMemberAsync(int idMember)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public IEnumerable<Role> GetRolesByMemberName(string member)
         {
             var memberEntity = Database.Members.First(_ => _.Name == member);
             return Database.MemberRoles.GetMemberRoles(memberEntity, _context.Application);
+        }
+
+        public Task<IEnumerable<Role>> GetRolesByMemberNameAsync(string member)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

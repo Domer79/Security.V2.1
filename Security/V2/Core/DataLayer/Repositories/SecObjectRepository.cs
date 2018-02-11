@@ -22,9 +22,9 @@ namespace Security.V2.Core.DataLayer.Repositories
         {
             entity.IdApplication = _context.Application.IdApplication;
             var id = _commonDb.ExecuteScalar<int>(@"
-insert into sec.SecObjects(idSecObject, ObjectName, idApplication) values(@idSecObject, @objectName, @idApplication)
+insert into sec.SecObjects(ObjectName, idApplication) values(@objectName, @idApplication)
 select SCOPE_IDENTITY()
-");
+", entity);
             entity.IdSecObject = id;
             return entity;
         }
@@ -33,9 +33,9 @@ select SCOPE_IDENTITY()
         {
             entity.IdApplication = _context.Application.IdApplication;
             var id = _commonDb.ExecuteScalarAsync<int>(@"
-insert into sec.SecObjects(idSecObject, ObjectName, idApplication) values(@idSecObject, @objectName, @idApplication)
+insert into sec.SecObjects(ObjectName, idApplication) values(@objectName, @idApplication)
 select SCOPE_IDENTITY()
-");
+", entity);
             entity.IdSecObject = await id;
             return entity;
         }
@@ -62,12 +62,12 @@ select SCOPE_IDENTITY()
 
         public SecObject GetByName(string name)
         {
-            return _commonDb.QuerySingle<SecObject>("select * from sec.SecObject where objectName = @name and idApplication = @idApplication", new { name, _context.Application.IdApplication });
+            return _commonDb.QuerySingle<SecObject>("select * from sec.SecObjects where objectName = @name and idApplication = @idApplication", new { name, _context.Application.IdApplication });
         }
 
         public Task<SecObject> GetByNameAsync(string name)
         {
-            return _commonDb.QuerySingleAsync<SecObject>("select * from sec.SecObject where objectName = @name and idApplication = @idApplication", new { name, _context.Application.IdApplication });
+            return _commonDb.QuerySingleAsync<SecObject>("select * from sec.SecObjects where objectName = @name and idApplication = @idApplication", new { name, _context.Application.IdApplication });
         }
 
         public void Remove(object id)

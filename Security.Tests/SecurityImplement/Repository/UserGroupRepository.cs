@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Security.Model;
 using Security.Tests.SecurityFake;
 using Security.V2.Contracts.Repository;
@@ -105,6 +106,71 @@ namespace Security.Tests.SecurityImplement.Repository
         {
             var user = Database.Users.Single(_ => _.Id == id);
             return Database.UserGroups.GetUserGroups(user);
+        }
+
+        public IEnumerable<Group> GetGroupsByUserId(Guid id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IEnumerable<User>> GetUsersByIdGroupAsync(int idGroup)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IEnumerable<Group>> GetGroupsByIdUserAsync(int idUser)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IEnumerable<User>> GetUsersByGroupIdAsync(Guid id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IEnumerable<Group>> GetGroupsByUserIdAsync(Guid id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IEnumerable<User>> GetUsersByGroupNameAsync(string name)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IEnumerable<Group>> GetGroupsByUserNameAsync(string name)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task AddUsersToGroupAsync(int[] idUsers, int idGroup)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task AddUsersToGroupAsync(Guid[] usersId, Guid groupId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task AddUsersToGroupAsync(string[] users, string group)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task AddGroupsToUserAsync(int[] idGroups, int idUser)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task AddGroupsToUserAsync(Guid[] groupsId, Guid userId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task AddGroupsToUserAsync(string[] groups, string user)
+        {
+            throw new NotImplementedException();
         }
     }
 }

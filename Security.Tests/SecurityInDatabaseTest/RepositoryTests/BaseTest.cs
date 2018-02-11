@@ -8,7 +8,7 @@ namespace Security.Tests.SecurityInDatabaseTest.RepositoryTests
     {
         public BaseTest()
         {
-            ServiceLocator = IocConfig.GetLocator();
+            ServiceLocator = IocConfig.GetLocator("HelloWorldApp1");
         }
 
         internal IServiceLocator ServiceLocator { get; }

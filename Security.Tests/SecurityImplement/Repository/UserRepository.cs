@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Security.Model;
 using Security.Tests.SecurityFake;
 using Security.V2.CommonContracts;
@@ -62,6 +63,46 @@ namespace Security.Tests.SecurityImplement.Repository
         public User Get(string loginOrEmail)
         {
             return Database.Users.Single(_ => _.Login == loginOrEmail || _.Email == loginOrEmail);
+        }
+
+        public Task<User> GetByNameAsync(string loginOrEmail)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SetStatus(string loginOrEmail, bool status)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task SetStatusAsync(string loginOrEmail, bool status)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<User> GetAsync(object id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IEnumerable<User>> GetAsync()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<User> CreateAsync(User entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task UpdateAsync(User entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task RemoveAsync(object id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

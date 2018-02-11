@@ -81,8 +81,8 @@ and idSecObject in (select idSecObject from sec.SecObjects where ObjectName in @
             _commonDb.ExecuteNonQuery(@"
 insert into sec.Grants(idRole, idSecObject)
 select
-	(select idSecObject from sec.SecObjects where ObjectName = @objectName and idApplication = @idapplication) as idSecObject,
-	(select idRole from sec.Roles where name = @roleName and idApplication = @idApplication) as idRole
+	(select idRole from sec.Roles where name = @roleName and idApplication = @idApplication) as idRole,
+	(select idSecObject from sec.SecObjects where ObjectName = @objectName and idApplication = @idapplication) as idSecObject
 ", new {objectName = secObject, roleName = role, idApplication = _context.Application.IdApplication});
         }
 
@@ -91,8 +91,8 @@ select
             return _commonDb.ExecuteNonQueryAsync(@"
 insert into sec.Grants(idRole, idSecObject)
 select
-	(select idSecObject from sec.SecObjects where ObjectName = @objectName and idApplication = @idapplication) as idSecObject,
-	(select idRole from sec.Roles where name = @roleName and idApplication = @idApplication) as idRole
+	(select idRole from sec.Roles where name = @roleName and idApplication = @idApplication) as idRole,
+	(select idSecObject from sec.SecObjects where ObjectName = @objectName and idApplication = @idapplication) as idSecObject
 ", new { objectName = secObject, roleName = role, idApplication = _context.Application.IdApplication });
         }
 

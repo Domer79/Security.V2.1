@@ -5,6 +5,7 @@ using Security.Tests.SecurityFake;
 using Security.V2.Contracts;
 using Security.V2.CommonContracts;
 using Security.V2.Contracts.Repository;
+using System.Threading.Tasks;
 
 namespace Security.Tests.SecurityImplement.Repository
 {
@@ -29,6 +30,11 @@ namespace Security.Tests.SecurityImplement.Repository
             return entity;
         }
 
+        public Task<SecObject> CreateAsync(SecObject entity)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public SecObject Get(object id)
         {
             return Get().SingleOrDefault(_ => _.IdSecObject == (int) id);
@@ -39,9 +45,24 @@ namespace Security.Tests.SecurityImplement.Repository
             return Database.SecObjects.Where(_ => _.IdApplication == IdApplication);
         }
 
+        public Task<SecObject> GetAsync(object id)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Task<IEnumerable<SecObject>> GetAsync()
+        {
+            throw new System.NotImplementedException();
+        }
+
         public SecObject GetByName(string name)
         {
             return Get().SingleOrDefault(_ => _.ObjectName == name);
+        }
+
+        public Task<SecObject> GetByNameAsync(string name)
+        {
+            throw new System.NotImplementedException();
         }
 
         public IEntityCollectionInfo<SecObject> GetEntityCollectionInfo(int pageNumber, int pageSize)
@@ -60,9 +81,19 @@ namespace Security.Tests.SecurityImplement.Repository
             Database.SecObjects.Remove(secObject);
         }
 
+        public Task RemoveAsync(object id)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public void Update(SecObject entity)
         {
             Database.SecObjects.Update(entity);
+        }
+
+        public Task UpdateAsync(SecObject entity)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

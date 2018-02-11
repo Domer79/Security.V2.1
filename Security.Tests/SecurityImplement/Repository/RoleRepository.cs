@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Security.Model;
 using Security.Tests.SecurityFake;
 using Security.V2.CommonContracts;
@@ -26,6 +27,11 @@ namespace Security.Tests.SecurityImplement.Repository
             return entity;
         }
 
+        public Task<Role> CreateAsync(Role entity)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public Role Get(object id)
         {
             return Get().SingleOrDefault(_ => _.IdRole == (int)id);
@@ -36,9 +42,24 @@ namespace Security.Tests.SecurityImplement.Repository
             return Database.Roles.Where(_ => _.IdApplication == IdApplication);
         }
 
+        public Task<Role> GetAsync(object id)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Task<IEnumerable<Role>> GetAsync()
+        {
+            throw new System.NotImplementedException();
+        }
+
         public Role GetByName(string name)
         {
             return Get().SingleOrDefault(_ => _.Name == name);
+        }
+
+        public Task<Role> GetByNameAsync(string name)
+        {
+            throw new System.NotImplementedException();
         }
 
         public IEntityCollectionInfo<Role> GetEntityCollectionInfo(int pageNumber, int pageSize)
@@ -57,9 +78,19 @@ namespace Security.Tests.SecurityImplement.Repository
             Database.Roles.Remove(role);
         }
 
+        public Task RemoveAsync(object id)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public void Update(Role entity)
         {
             Database.Roles.Update(entity);
+        }
+
+        public Task UpdateAsync(Role entity)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

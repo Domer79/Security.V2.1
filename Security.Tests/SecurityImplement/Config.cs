@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Threading.Tasks;
 using Security.Model;
 using Security.V2.Contracts;
 using Security.V2.Contracts.Repository;
@@ -28,6 +29,11 @@ namespace Security.Tests.SecurityImplement
             _applicationRepository.Create(app);
         }
 
+        public Task RegisterApplicationAsync(string appName, string description)
+        {
+            throw new NotImplementedException();
+        }
+
         public void RegisterSecurityObjects(string appName, params ISecurityObject[] securityObjects)
         {
             var idApplication = _applicationRepository.GetByName(appName).IdApplication;
@@ -46,6 +52,16 @@ namespace Security.Tests.SecurityImplement
         public void RegisterSecurityObjects(string appName, params string[] securityObjects)
         {
             RegisterSecurityObjects(appName, securityObjects.Select(_ => new SecurityObject(){ObjectName = _}).ToArray());
+        }
+
+        public Task RegisterSecurityObjectsAsync(string appName, params ISecurityObject[] securityObjects)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task RegisterSecurityObjectsAsync(string appName, params string[] securityObjects)
+        {
+            throw new NotImplementedException();
         }
 
         class SecurityObject : ISecurityObject

@@ -54,12 +54,12 @@ namespace Security.V2.Core.DataLayer.Repositories
 
         public Application GetByName(string name)
         {
-            throw new NotImplementedException();
+            return _commonDb.QuerySingle<Application>("select * from sec.Applications where appName = @name", new {name});
         }
 
         public Task<Application> GetByNameAsync(string name)
         {
-            throw new NotImplementedException();
+            return _commonDb.QuerySingleAsync<Application>("select * from sec.Applications where appName = @name", new { name });
         }
 
         public void Remove(object id)

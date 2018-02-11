@@ -22,9 +22,9 @@ namespace Security.V2.Core.DataLayer.Repositories
         {
             entity.IdApplication = _context.Application.IdApplication;
             var id = _commonDb.ExecuteScalar<int>(@"
-insert into sec.Roles(idRole, name, description, idApplication) values(@idRole, @name, @description, @idApplication)
+insert into sec.Roles(name, description, idApplication) values(@name, @description, @idApplication)
 select SCOPE_IDENTITY()
-");
+", entity);
 
             entity.IdRole = id;
             return entity;
@@ -33,7 +33,7 @@ select SCOPE_IDENTITY()
         public async Task<Role> CreateAsync(Role entity)
         {
             entity.IdApplication = _context.Application.IdApplication;
-            var id = _commonDb.ExecuteScalarAsync<int>("insert into sec.Roles(idRole, name, description, idApplication) values(@idRole, @name, @description, @idApplication)", entity);
+            var id = _commonDb.ExecuteScalarAsync<int>("insert into sec.Roles(name, description, idApplication) values(@name, @description, @idApplication)", entity);
 
             entity.IdRole = await id;
             return entity;

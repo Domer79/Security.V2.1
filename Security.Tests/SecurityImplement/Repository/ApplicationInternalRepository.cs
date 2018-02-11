@@ -18,6 +18,11 @@ namespace Security.Tests.SecurityImplement.Repository
             return entity;
         }
 
+        public Task<Application> CreateAsync(Application entity)
+        {
+            throw new NotImplementedException();
+        }
+
         public Application Get(object id)
         {
             return Database.Applications.First(_ => _.IdApplication == (int)id);
@@ -28,9 +33,24 @@ namespace Security.Tests.SecurityImplement.Repository
             return Database.Applications;
         }
 
+        public Task<Application> GetAsync(object id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IEnumerable<Application>> GetAsync()
+        {
+            throw new NotImplementedException();
+        }
+
         public Application GetByName(string name)
         {
             return Database.Applications.SingleOrDefault(_ => _.AppName == name);
+        }
+
+        public Task<Application> GetByNameAsync(string name)
+        {
+            throw new NotImplementedException();
         }
 
         public IEntityCollectionInfo<Application> GetEntityCollectionInfo(int pageNumber, int pageSize)
@@ -44,9 +64,19 @@ namespace Security.Tests.SecurityImplement.Repository
             Database.Applications.Remove(application);
         }
 
+        public Task RemoveAsync(object id)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Update(Application entity)
         {
             Database.Applications.Update(entity);
+        }
+
+        public Task UpdateAsync(Application entity)
+        {
+            throw new NotImplementedException();
         }
     }
 }

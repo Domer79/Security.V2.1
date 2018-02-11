@@ -22,7 +22,32 @@ namespace Security.Tests.SecurityImplement
             throw new NotImplementedException();
         }
 
+        public Task<T> GetValueAsync<T>(string key)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool IsDeprecated(string key)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> IsDeprecatedAsync(string key)
+        {
+            throw new NotImplementedException();
+        }
+
         public void SetValue<T>(string key, T value)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SetValue<T>(string key, T value, TimeSpan? lifetime = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task SetValueAsync<T>(string key, T value, TimeSpan? lifetime = null)
         {
             throw new NotImplementedException();
         }

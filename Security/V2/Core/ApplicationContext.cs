@@ -9,12 +9,12 @@ namespace Security.V2.Core
     {
         private readonly ICommonDb _commonDb;
         private readonly string _appName;
+        private Application _application;
 
         public ApplicationContext(ICommonDb commonDb, string appName)
         {
             _commonDb = commonDb;
             _appName = appName;
-            Application = GetApplication();
         }
 
         private Application GetApplication()
@@ -22,6 +22,6 @@ namespace Security.V2.Core
             return _commonDb.QuerySingle<Application>("select * from sec.Applications where appName = @appName", new {appName = _appName});
         }
 
-        public Application Application { get; }
+        public Application Application => _application ?? (_application = GetApplication());
     }
 }

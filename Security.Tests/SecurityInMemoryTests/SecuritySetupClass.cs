@@ -12,8 +12,6 @@ namespace Security.Tests.SecurityInMemoryTests
         [OneTimeSetUp]
         public void Setup()
         {
-            var serviceLocator = IocConfig.GetServiceLocator("");
-//            using (var security = new V2.Core.Security("HelloWorldApp", serviceLocator))
             using (var security = new MySecurity())
             {
                 security.Config.RegisterSecurityObjects("HelloWorldApp1", "1", "2", "3");

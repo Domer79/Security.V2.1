@@ -40,15 +40,40 @@ namespace Security.Tests.SecurityImplement.Repository
                 .Any(_ => _.ObjectName == secObject);
         }
 
+        public Task<bool> CheckAccessAsync(string loginOrEmail, string secObject)
+        {
+            throw new NotImplementedException();
+        }
+
+        public byte[] GetPassword(string loginOrEmail)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<byte[]> GetPasswordAsync(string loginOrEmail)
+        {
+            throw new NotImplementedException();
+        }
+
         public bool SetPassword(string loginOrEmail, string password)
         {
             Database.UserPasswords.SetPassword(loginOrEmail, password);
             return true;
         }
 
+        public Task<bool> SetPasswordAsync(string loginOrEmail, string password)
+        {
+            throw new NotImplementedException();
+        }
+
         public bool UserValidate(string loginOrEmail, string password)
         {
             return Database.UserPasswords.UserValidate(loginOrEmail, password);
+        }
+
+        public Task<bool> UserValidateAsync(string loginOrEmail, string password)
+        {
+            throw new NotImplementedException();
         }
     }
 }

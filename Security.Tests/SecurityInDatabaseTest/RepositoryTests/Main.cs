@@ -1,22 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using NUnit.Framework;
-using Security.Tests.SecurityFake;
-using Security.Tests.SecurityImplement;
+using Security.Model;
+using Security.V2.CommonContracts;
 using Security.V2.Contracts;
 
-namespace Security.Tests.SecurityInMemoryTests
+namespace Security.Tests.SecurityInDatabaseTest.RepositoryTests
 {
+    using Security.V2.Core;
+
     [TestFixture]
-    public class SecurityConfigTest
+    public class Main: BaseTest
     {
         private ISecurity _security;
+        private ICommonDb _commonDb;
 
         [SetUp]
         public void Setup()
         {
             _security = new MySecurity();
+            _commonDb = ServiceLocator.Resolve<ICommonDb>();
         }
 
         [TearDown]
@@ -43,7 +49,7 @@ namespace Security.Tests.SecurityInMemoryTests
         [TestCase("HelloWorldApp2", "6")]
         public void SecObjectExistenceTest(string appName, string objectName)
         {
-            using(var security = new V2.Core.Security(appName, "", IocConfig.GetServiceLocator(appName)))
+            using (var security = new V2.Core.Security(appName, "", IocConfig.GetLocator(appName)))
             {
                 var secObject = security.SecObjectRepository.GetByName(objectName);
                 Assert.That(secObject, Is.Not.Null);
@@ -54,7 +60,7 @@ namespace Security.Tests.SecurityInMemoryTests
         [TestCase("HelloWorldApp2", "1 4 5 6")]
         public void SecObjectCollectionCompareTest(string appName, string secObjects)
         {
-            using (var security = new V2.Core.Security(appName, "", IocConfig.GetServiceLocator(appName)))
+            using (var security = new V2.Core.Security(appName, "", IocConfig.GetLocator(appName)))
             {
                 var secObjectNames = security.SecObjectRepository.Get().Select(_ => _.ObjectName);
                 var secObjectIds = security.SecObjectRepository.Get().Select(_ => _.IdSecObject);
@@ -105,7 +111,10 @@ namespace Security.Tests.SecurityInMemoryTests
             members.AddRange(_security.UserRepository.Get().Select(m => m.Name));
             members.AddRange(_security.GroupRepository.Get().Select(m => m.Name));
 
-            CollectionAssert.AreEqual(Database.Members.Select(m => m.Name), members);
+            var expectedMembers = _commonDb.Query<string>("select name from sec.Members");
+
+            CollectionAssert.IsNotEmpty(members);
+            CollectionAssert.AreEqual(expectedMembers, members);
         }
 
         [Test]

@@ -15,6 +15,7 @@ namespace Security.V2.Core
             locator.RegisterType<IConnectionFactory, SqlConnectionFactory>().InSingletonScope();
             locator.RegisterType<ICommonDb, CommonDb>().InSingletonScope();
             locator.RegisterType<IApplicationInternalRepository, ApplicationInternalRepository>().InSingletonScope();
+            locator.RegisterType<IApplicationRepository, ApplicationRepository>().InSingletonScope();
             locator.RegisterType<IGrantRepository, GrantRepository>().InSingletonScope();
             locator.RegisterType<IGroupRepository, GroupRepository>().InSingletonScope();
             locator.RegisterType<IMemberRoleRepository, MemberRoleRepository>().InSingletonScope();
@@ -25,7 +26,7 @@ namespace Security.V2.Core
             locator.RegisterType<IUserRepository, UserRepository>().InSingletonScope();
             locator.RegisterType<IConfig, Config>().InSingletonScope();
             locator.RegisterType<ISecuritySettings, SecuritySettings>().InSingletonScope();
-            locator.RegisterType<ISecurityFactory, SecurityFactory>().InSingletonScope();
+            locator.RegisterFactory(typeof(ISecurityFactory), typeof(SecurityFactory)).InSingletonScope();
             locator.RegisterByMethod(typeof(IApplicationContext), () => new ApplicationContext(locator.Resolve<ICommonDb>(), appName));
 
             return locator;

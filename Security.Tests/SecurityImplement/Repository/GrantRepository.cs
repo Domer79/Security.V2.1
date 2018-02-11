@@ -26,11 +26,41 @@ namespace Security.Tests.SecurityImplement.Repository
             return Database.SecObjects.Where(_ => grants.Contains(_.IdSecObject));
         }
 
+        public Task<IEnumerable<SecObject>> GetRoleGrantsAsync(string role)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RemoveGrant(string role, string secObject)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task RemoveGrantAsync(string role, string secObject)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RemoveGrants(string role, string[] secObjects)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task RemoveGrantsAsync(string role, string[] secObjects)
+        {
+            throw new NotImplementedException();
+        }
+
         public void SetGrant(string role, string secObject)
         {
             var roleEntity = Database.Roles.First(_ => _.Name == role);
             var secObjectEntity = Database.SecObjects.First(_ => _.ObjectName == secObject);
             Database.Grants.Add(new Grant(){IdRole = roleEntity.IdRole, IdSecObject = secObjectEntity.IdSecObject});
+        }
+
+        public Task SetGrantAsync(string role, string secObject)
+        {
+            throw new NotImplementedException();
         }
 
         public void SetGrants(string role, string[] secObjects)
@@ -42,6 +72,11 @@ namespace Security.Tests.SecurityImplement.Repository
             {
                 Database.Grants.Add(new Grant() { IdRole = roleEntity.IdRole, IdSecObject = secObject.IdSecObject });
             }
+        }
+
+        public Task SetGrantsAsync(string role, string[] secObjects)
+        {
+            throw new NotImplementedException();
         }
     }
 }

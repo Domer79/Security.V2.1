@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Security.Model;
 using Security.V2.CommonContracts;
@@ -17,6 +18,9 @@ namespace Security.V2.Core.DataLayer.Repositories
 
         public User Create(User entity)
         {
+            if (entity.PasswordSalt == null)
+                entity.PasswordSalt = Guid.NewGuid().ToString("N");
+
             var id = _commonDb.ExecuteScalar<int>("exec sec.AddUser @id, @login, @firstName, @lastName, @middleName, @email, @status, @passwordSalt, @dateCreated, @lastActivityDate", entity);
             entity.IdMember = id;
             return entity;

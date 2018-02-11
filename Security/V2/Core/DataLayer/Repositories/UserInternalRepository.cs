@@ -22,28 +22,28 @@ namespace Security.V2.Core.DataLayer.Repositories
 
         public bool CheckAccess(string loginOrEmail, string secObject)
         {
-            return _commonDb.ExecuteScalar<bool>("select sec.IsAllowByName(@secObject, @loginOrEmail, appName)", new { secObject, loginOrEmail, _context.Application.AppName });
+            return _commonDb.ExecuteScalar<bool>("select sec.IsAllowByName(@secObject, @loginOrEmail, @appName)", new { secObject, loginOrEmail, _context.Application.AppName });
         }
 
         public Task<bool> CheckAccessAsync(string loginOrEmail, string secObject)
         {
-            return _commonDb.ExecuteScalarAsync<bool>("select sec.IsAllowByName(@secObject, @loginOrEmail, appName)", new { secObject, loginOrEmail, _context.Application.AppName });
+            return _commonDb.ExecuteScalarAsync<bool>("select sec.IsAllowByName(@secObject, @loginOrEmail, @appName)", new { secObject, loginOrEmail, _context.Application.AppName });
         }
 
         public byte[] GetPassword(string loginOrEmail)
         {
-            return _commonDb.QueryFirstOrDefault<byte[]>("select password from sec.UsersView where login = @loginOrEmail or email = @loginOrEmail");
+            return _commonDb.QueryFirstOrDefault<byte[]>("select u.password from sec.Users u inner join sec.Members m on u.idMember = m.idMember where m.name = @loginOrEmail or u.email = @loginOrEmail", new {loginOrEmail});
         }
 
         public Task<byte[]> GetPasswordAsync(string loginOrEmail)
         {
-            return _commonDb.QueryFirstOrDefaultAsync<byte[]>("select password from sec.UsersView where login = @loginOrEmail or email = @loginOrEmail");
+            return _commonDb.QueryFirstOrDefaultAsync<byte[]>("select u.password from sec.Users u inner join sec.Members m on u.idMember = m.idMember where m.name = @loginOrEmail or u.email = @loginOrEmail", new { loginOrEmail });
         }
 
         public bool SetPassword(string loginOrEmail, string password)
         {
             var hashPassword = password.GetSHA1HashBytes();
-            var user = _userRepository.Get(loginOrEmail);
+            var user = _userRepository.GetByName(loginOrEmail);
             hashPassword = hashPassword.Concat(user.PasswordSalt.GetSHA1HashBytes()).ToArray().GetSHA1HashBytes();
             return _commonDb.ExecuteNonQuery("exec sec.SetPassword @login, @password", new {user.Login, password = hashPassword}) > 0;
         }
@@ -51,7 +51,7 @@ namespace Security.V2.Core.DataLayer.Repositories
         public async Task<bool> SetPasswordAsync(string loginOrEmail, string password)
         {
             var hashPassword = password.GetSHA1HashBytes();
-            var user = await _userRepository.GetAsync(loginOrEmail);
+            var user = await _userRepository.GetByNameAsync(loginOrEmail);
             hashPassword = hashPassword.Concat(user.PasswordSalt.GetSHA1HashBytes()).ToArray().GetSHA1HashBytes();
             return await _commonDb.ExecuteNonQueryAsync("exec sec.SetPassword @login, @password", new { user.Login, password = hashPassword }) > 0;
         }
@@ -59,7 +59,7 @@ namespace Security.V2.Core.DataLayer.Repositories
         public bool UserValidate(string loginOrEmail, string password)
         {
             var hashPassword = password.GetSHA1HashBytes();
-            var user = _userRepository.Get(loginOrEmail);
+            var user = _userRepository.GetByName(loginOrEmail);
             hashPassword = hashPassword.Concat(user.PasswordSalt.GetSHA1HashBytes()).ToArray().GetSHA1HashBytes();
 
             var hashPassword2 = GetPassword(loginOrEmail);
@@ -70,7 +70,7 @@ namespace Security.V2.Core.DataLayer.Repositories
         public async Task<bool> UserValidateAsync(string loginOrEmail, string password)
         {
             var hashPassword = password.GetSHA1HashBytes();
-            var user = await _userRepository.GetAsync(loginOrEmail);
+            var user = await _userRepository.GetByNameAsync(loginOrEmail);
             hashPassword = hashPassword.Concat(user.PasswordSalt.GetSHA1HashBytes()).ToArray().GetSHA1HashBytes();
 
             var hashPassword2 = await GetPasswordAsync(loginOrEmail);
