@@ -21,15 +21,18 @@ namespace Security.V2.Core.DataLayer.Repositories
             if (entity.PasswordSalt == null)
                 entity.PasswordSalt = Guid.NewGuid().ToString("N");
 
-            var id = _commonDb.ExecuteScalar<int>("exec sec.AddUser @id, @login, @firstName, @lastName, @middleName, @email, @status, @passwordSalt, @dateCreated, @lastActivityDate", entity);
+            var id = _commonDb.ExecuteScalar<int>("exec sec.AddUser @id, @login, @firstName, @lastName, @middleName, @email, @status, @passwordSalt, @dateCreated", entity);
             entity.IdMember = id;
             return entity;
         }
 
         public async Task<User> CreateAsync(User entity)
         {
-            var id = _commonDb.ExecuteScalarAsync<int>("exec sec.AddUser @id, @login, @firstName, @lastName, @middleName, @email, @status, @passwordSalt, @dateCreated, @lastActivityDate", entity);
-            entity.IdMember = await id;
+            if (entity.PasswordSalt == null)
+                entity.PasswordSalt = Guid.NewGuid().ToString("N");
+
+            var id = _commonDb.ExecuteScalarAsync<int>("exec sec.AddUser @id, @login, @firstName, @lastName, @middleName, @email, @status, @passwordSalt, @dateCreated", entity);
+            entity.IdMember = await id.ConfigureAwait(false);
             return entity;
         }
 

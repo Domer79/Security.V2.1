@@ -46,7 +46,8 @@ namespace Security.V2.Core.DataLayer
             collectionInfo.PageCount = collectionInfo.Count / pageSize + (collectionInfo.Count % pageSize > 0 ? 1 : 0);
         }
 
-        public IEnumerable<TReturn> Query<T1, T2, TReturn>(string query, Func<T1, T2, TReturn> p, object parameters = null)
+        public IEnumerable<TReturn> Query<T1, T2, TReturn>(string query, Func<T1, T2, TReturn> p,
+            object parameters = null)
         {
             using (var connection = _connectionFactory.CreateConnection())
             {
@@ -56,26 +57,17 @@ namespace Security.V2.Core.DataLayer
 
         public Task<IEnumerable<T>> QueryAsync<T>(string query, object parameters = null)
         {
-            using (var connection = _connectionFactory.CreateConnection())
-            {
-                return connection.QueryAsync<T>(query, parameters);
-            }
+            return _connectionFactory.CreateConnection().QueryAsync<T>(query, parameters);
         }
 
         public Task<T> ExecuteScalarAsync<T>(string query, object parameters = null)
         {
-            using (var connection = _connectionFactory.CreateConnection())
-            {
-                return connection.ExecuteScalarAsync<T>(query, parameters);
-            }
+            return _connectionFactory.CreateConnection().ExecuteScalarAsync<T>(query, parameters);
         }
 
         public Task<int> ExecuteNonQueryAsync(string query, object parameters = null)
         {
-            using (var connection = _connectionFactory.CreateConnection())
-            {
-                return connection.ExecuteAsync(query, parameters);
-            }
+            return _connectionFactory.CreateConnection().ExecuteAsync(query, parameters);
         }
 
         public async Task GetPageCountAsync(int pageSize, string query, IEntityCollectionInfo collectionInfo)
@@ -84,12 +76,10 @@ namespace Security.V2.Core.DataLayer
             collectionInfo.PageCount = collectionInfo.Count / pageSize + (collectionInfo.Count % pageSize > 0 ? 1 : 0);
         }
 
-        public Task<IEnumerable<TReturn>> QueryAsync<T1, T2, TReturn>(string query, Func<T1, T2, TReturn> p, object parameters = null)
+        public Task<IEnumerable<TReturn>> QueryAsync<T1, T2, TReturn>(string query, Func<T1, T2, TReturn> p,
+            object parameters = null)
         {
-            using (var connection = _connectionFactory.CreateConnection())
-            {
-                return connection.QueryAsync<T1, T2, TReturn>(query, p, parameters);
-            }
+            return _connectionFactory.CreateConnection().QueryAsync<T1, T2, TReturn>(query, p, parameters);
         }
 
         public T QueryFirst<T>(string query, object parameters = null)
@@ -126,34 +116,22 @@ namespace Security.V2.Core.DataLayer
 
         public Task<T> QueryFirstAsync<T>(string query, object parameters = null)
         {
-            using (var connection = _connectionFactory.CreateConnection())
-            {
-                return connection.QueryFirstAsync<T>(query, parameters);
-            }
+            return _connectionFactory.CreateConnection().QueryFirstAsync<T>(query, parameters);
         }
 
         public Task<T> QueryFirstOrDefaultAsync<T>(string query, object parameters = null)
         {
-            using (var connection = _connectionFactory.CreateConnection())
-            {
-                return connection.QueryFirstOrDefaultAsync<T>(query, parameters);
-            }
+            return _connectionFactory.CreateConnection().QueryFirstOrDefaultAsync<T>(query, parameters);
         }
 
         public Task<T> QuerySingleAsync<T>(string query, object parameters = null)
         {
-            using (var connection = _connectionFactory.CreateConnection())
-            {
-                return connection.QuerySingleAsync<T>(query, parameters);
-            }
+            return _connectionFactory.CreateConnection().QuerySingleAsync<T>(query, parameters);
         }
 
         public Task<T> QuerySingleOrDefaultAsync<T>(string query, object parameters = null)
         {
-            using (var connection = _connectionFactory.CreateConnection())
-            {
-                return connection.QuerySingleOrDefaultAsync<T>(query, parameters);
-            }
+            return _connectionFactory.CreateConnection().QuerySingleOrDefaultAsync<T>(query, parameters);
         }
     }
 }

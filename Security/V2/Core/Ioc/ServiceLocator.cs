@@ -103,7 +103,6 @@ namespace Security.V2.Core.Ioc
             try
             {
                 return _registry[serviceType];
-
             }
             catch (Exception e)
             {
@@ -113,14 +112,10 @@ namespace Security.V2.Core.Ioc
 
         public object GetService(Type serviceType)
         {
-            try
-            {
-                return _instanceRegistry[serviceType];
-            }
-            catch (KeyNotFoundException)
-            {
+            if (!_instanceRegistry.ContainsKey(serviceType))
                 return null;
-            }
+
+            return _instanceRegistry[serviceType];
         }
 
         public event AddInstanceHandler AddInstanceEvent;

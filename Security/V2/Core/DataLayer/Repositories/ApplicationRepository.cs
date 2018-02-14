@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Threading.Tasks;
 using Security.Model;
 using Security.V2.CommonContracts;
@@ -57,9 +58,9 @@ namespace Security.V2.Core.DataLayer.Repositories
             return _commonDb.QuerySingle<Application>("select * from sec.Applications where appName = @name", new {name});
         }
 
-        public Task<Application> GetByNameAsync(string name)
+        public async Task<Application> GetByNameAsync(string name)
         {
-            return _commonDb.QuerySingleAsync<Application>("select * from sec.Applications where appName = @name", new { name });
+            return await _commonDb.QuerySingleAsync<Application>("select * from sec.Applications where appName = @name", new { name });
         }
 
         public void Remove(object id)

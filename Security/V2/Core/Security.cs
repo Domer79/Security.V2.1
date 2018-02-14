@@ -74,5 +74,20 @@ namespace Security.V2.Core
         {
             Locator.Dispose();
         }
+
+        public Task<bool> UserValidateAsync(string loginOrEmail, string password)
+        {
+            return UserInternalRepository.UserValidateAsync(loginOrEmail, password);
+        }
+
+        public Task<bool> CheckAccessAsync(string loginOrEmail, string secObject)
+        {
+            return UserInternalRepository.CheckAccessAsync(loginOrEmail, secObject);
+        }
+
+        public Task<bool> SetPasswordAsync(string loginOrEmail, string password)
+        {
+            return UserInternalRepository.SetPasswordAsync(loginOrEmail, password);
+        }
     }
 }

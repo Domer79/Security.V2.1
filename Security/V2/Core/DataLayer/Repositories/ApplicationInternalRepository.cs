@@ -57,9 +57,9 @@ namespace Security.V2.Core.DataLayer.Repositories
             return _commonDb.QuerySingleOrDefault<Application>("select * from sec.Applications where appName = @appName", new { appName = name });
         }
 
-        public Task<Application> GetByNameAsync(string name)
+        public async Task<Application> GetByNameAsync(string name)
         {
-            return _commonDb.QuerySingleOrDefaultAsync<Application>("select * from sec.Applications where appName = @appName", new { appName = name });
+            return await _commonDb.QuerySingleOrDefaultAsync<Application>("select * from sec.Applications where appName = @appName", new { appName = name });
         }
 
         public void Remove(object id)

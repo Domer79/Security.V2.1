@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,7 +14,7 @@ namespace Security.Tests.SecurityInDatabaseTest.RepositoryTests
     using Security.V2.Core;
 
     [TestFixture]
-    public class Main: BaseTest
+    public class MainAsync : BaseTest
     {
         private ISecurity _security;
         private ICommonDb _commonDb;
@@ -32,9 +33,9 @@ namespace Security.Tests.SecurityInDatabaseTest.RepositoryTests
         }
 
         [TestCase("HelloWorldApp1", "Hello World Application 1!")]
-        public void RegisterApplicationTest(string name, string description)
+        public async Task RegisterApplicationTest(string name, string description)
         {
-            var application = _security.ApplicationRepository.GetByName(name);
+            var application = await _security.ApplicationRepository.GetByNameAsync(name);
 
             Assert.That(application, Has.Property("AppName").EqualTo(name));
             Assert.That(application, Has.Property("Description").EqualTo(description));
@@ -47,23 +48,23 @@ namespace Security.Tests.SecurityInDatabaseTest.RepositoryTests
         [TestCase("HelloWorldApp2", "4")]
         [TestCase("HelloWorldApp2", "5")]
         [TestCase("HelloWorldApp2", "6")]
-        public void SecObjectExistenceTest(string appName, string objectName)
+        public async Task SecObjectExistenceTest(string appName, string objectName)
         {
             using (var security = new V2.Core.Security(appName, "", IocConfig.GetLocator(appName)))
             {
-                var secObject = security.SecObjectRepository.GetByName(objectName);
+                var secObject = await security.SecObjectRepository.GetByNameAsync(objectName);
                 Assert.That(secObject, Is.Not.Null);
             }
         }
 
         [TestCase("HelloWorldApp1", "1 2 3")]
         [TestCase("HelloWorldApp2", "1 4 5 6")]
-        public void SecObjectCollectionCompareTest(string appName, string secObjects)
+        public async Task SecObjectCollectionCompareTest(string appName, string secObjects)
         {
             using (var security = new V2.Core.Security(appName, "", IocConfig.GetLocator(appName)))
             {
-                var secObjectNames = security.SecObjectRepository.Get().Select(_ => _.ObjectName);
-                var secObjectIds = security.SecObjectRepository.Get().Select(_ => _.IdSecObject);
+                var secObjectNames = (await security.SecObjectRepository.GetAsync()).Select(_ => _.ObjectName);
+                var secObjectIds = (await security.SecObjectRepository.GetAsync()).Select(_ => _.IdSecObject);
 
                 CollectionAssert.AreEqual(secObjects.Split(' '), secObjectNames);
                 CollectionAssert.AreEqual(secObjects.Split(' ').Select(_ => int.Parse(_)), secObjectNames.Select(_ => int.Parse(_)));
@@ -73,16 +74,16 @@ namespace Security.Tests.SecurityInDatabaseTest.RepositoryTests
         [Test]
         public void PasswordValidateTest()
         {
-            Assert.That(() => _security.SetPassword("user1", "123456"), Is.True);
-            Assert.That(() => _security.UserValidate("user1", "123456"));
+            Assert.That(async () => await _security.SetPasswordAsync("user1", "123456"), Is.True);
+            Assert.That(async () => await _security.UserValidateAsync("user1", "123456"), Is.True);
 
             Assert.That(() => _security.UserValidate("user1@mail.ru", "123456"));
         }
 
         [Test]
-        public void User_MemberFields_ValidationTest()
+        public async Task User_MemberFields_ValidationTest()
         {
-            var user = _security.UserRepository.GetByName("user1");
+            var user = await _security.UserRepository.GetByNameAsync("user1");
 
             Assert.That(user, Has.Property("Login").EqualTo("user1"));
             Assert.That(user, Has.Property("Name").EqualTo("user1"));
@@ -95,50 +96,50 @@ namespace Security.Tests.SecurityInDatabaseTest.RepositoryTests
         }
 
         [Test]
-        public void Group_MemberFields_ValidationTest()
+        public async Task Group_MemberFields_ValidationTest()
         {
-            var group = _security.GroupRepository.GetByName("group1");
+            var group = await _security.GroupRepository.GetByNameAsync("group1");
 
             Assert.That(group, Has.Property("Name").EqualTo("group1"));
             Assert.That(group, Has.Property("Description").EqualTo("Group1 Description"));
         }
 
         [Test]
-        public void Member_MemberFields_ValidationTest()
+        public async Task Member_MemberFields_ValidationTest()
         {
             var members = new List<string>();
 
-            members.AddRange(_security.UserRepository.Get().Select(m => m.Name));
-            members.AddRange(_security.GroupRepository.Get().Select(m => m.Name));
+            members.AddRange((await _security.UserRepository.GetAsync()).Select(m => m.Name));
+            members.AddRange((await _security.GroupRepository.GetAsync()).Select(m => m.Name));
 
-            var expectedMembers = _commonDb.Query<string>("select name from sec.Members");
+            var expectedMembers = await _commonDb.QueryAsync<string>("select name from sec.Members");
 
             CollectionAssert.IsNotEmpty(members);
             CollectionAssert.AreEqual(expectedMembers, members);
         }
 
         [Test]
-        public void Role_MemberFields_ValidationTest()
+        public async Task Role_MemberFields_ValidationTest()
         {
-            var role = _security.RoleRepository.GetByName("role1");
+            var role = await _security.RoleRepository.GetByNameAsync("role1");
 
             Assert.That(role, Has.Property("Name").EqualTo("role1"));
             Assert.That(role, Has.Property("Description").EqualTo("Role1 Description"));
         }
 
         [Test]
-        public void Check_Existence_Group_in_User()
+        public async Task Check_Existence_Group_in_User()
         {
-            var group = _security.UserGroupRepository.GetGroupsByUserName("user1").FirstOrDefault();
+            var group = (await _security.UserGroupRepository.GetGroupsByUserNameAsync("user1")).FirstOrDefault();
 
             Assert.That(group, Is.Not.Null);
             Assert.That(group.Name, Is.EqualTo("group1"));
         }
 
         [Test]
-        public void Check_Existence_User_in_Group()
+        public async Task Check_Existence_User_in_Group()
         {
-            var user = _security.UserGroupRepository.GetUsersByGroupName("group1").FirstOrDefault();
+            var user = (await _security.UserGroupRepository.GetUsersByGroupNameAsync("group1")).FirstOrDefault();
 
             Assert.That(user, Is.Not.Null);
             Assert.That(user.Login, Is.EqualTo("user1"));
@@ -146,17 +147,17 @@ namespace Security.Tests.SecurityInDatabaseTest.RepositoryTests
 
         [TestCase("user1 group1", "role1")]
         [TestCase("user1 user3", "role2")]
-        public void Check_Existence_Members_in_Role(string member, string role)
+        public async Task Check_Existence_Members_in_Role(string member, string role)
         {
-            var members = _security.MemberRoleRepository.GetMembersByRoleName(role).Select(m => m.Name);
+            var members = (await _security.MemberRoleRepository.GetMembersByRoleNameAsync(role)).Select(m => m.Name);
             CollectionAssert.AreEqual(member.Split(' '), members);
         }
 
         [TestCase("role1 role2", "user1")]
         [TestCase("role1", "group1")]
-        public void CheckExistsence_Roles_in_User(string roleNames, string member)
+        public async Task CheckExistsence_Roles_in_User(string roleNames, string member)
         {
-            var roles = _security.MemberRoleRepository.GetRolesByMemberName(member).Select(_ => _.Name);
+            var roles = (await _security.MemberRoleRepository.GetRolesByMemberNameAsync(member)).Select(_ => _.Name);
             CollectionAssert.AreEqual(roleNames.Split(' '), roles);
         }
 
@@ -172,17 +173,15 @@ namespace Security.Tests.SecurityInDatabaseTest.RepositoryTests
         [TestCase("user3", "3")]
         public void CheckAccessToMemberTest(string loginOrEmail, string objectName)
         {
-            Assert.That(() => _security.CheckAccess(loginOrEmail, objectName), Is.True);
+            Assert.That(async () => await _security.CheckAccessAsync(loginOrEmail, objectName), Is.True);
         }
 
         [TestCase("user2", "3")]
         [TestCase("user3", "1")]
         public void CheckNotAccessToMemberTest(string loginOrEmail, string objectName)
         {
-            Assert.That(() => _security.CheckAccess(loginOrEmail, objectName), Is.False);
+            Assert.That(async () => await _security.CheckAccessAsync(loginOrEmail, objectName), Is.False);
         }
-
-
 
         class SecurityObject : ISecurityObject
         {

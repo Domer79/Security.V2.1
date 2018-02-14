@@ -17,18 +17,14 @@ namespace Security.V2.Core.Ioc
 
         public object GetService(Type serviceType)
         {
-            try
-            {
-                var instance = _registry.GetService(serviceType);
-                if (instance != null)
-                    return instance;
+            var instance = _registry.GetService(serviceType);
+            if (instance != null)
+                return instance;
 
-                return _instanceRegistry[serviceType];
-            }
-            catch (KeyNotFoundException)
-            {
+            if (!_instanceRegistry.ContainsKey(serviceType))
                 return null;
-            }
+
+            return _instanceRegistry[serviceType];
         }
 
         public void SetService(Type serviceType, object service)
