@@ -18,16 +18,19 @@ namespace WpfApp_TestSecurity
                 #region POCO to ViewModel
 
                 cfg.CreateMap<User, UserViewModel>();
+                cfg.CreateMap<Role, RoleViewModel>();
 
                 #endregion
 
                 #region ViewModel to POCO
 
                 cfg.CreateMap<UserViewModel, User>();
+                cfg.CreateMap<RoleViewModel, Role>();
 
                 #endregion
 
                 cfg.CreateMap<UserViewModel, UserViewModel>();
+                cfg.CreateMap<RoleViewModel, RoleViewModel>();
             });
         }
     }

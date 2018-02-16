@@ -24,5 +24,20 @@ namespace WpfApp_TestSecurity.Pages.Left
         {
             InitializeComponent();
         }
+
+        private void AddMenuItem_OnClick(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void DeleteMenuItem_OnClick(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void _userList_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
+        }
     }
 }

@@ -28,7 +28,7 @@ namespace WpfApp_TestSecurity.Pages.Left
             _userManager = userManager;
             _accessSetupPage = accessSetupPage;
             _userEditPage = userEditPage;
-            UserList = userManager.Users;
+            UserList = userManager.Items;
             DataContext = this;
         }
 
@@ -58,7 +58,7 @@ namespace WpfApp_TestSecurity.Pages.Left
         private void DeleteMenuItem_OnClick(object sender, RoutedEventArgs e)
         {
             if (MessageBox.Show($"Подтвердите удаление пользователя {_selectedItem.Login}", "Внимание!", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
-                _userManager.Users.Remove(_selectedItem);
+                _userManager.Items.Remove(_selectedItem);
         }
     }
 }

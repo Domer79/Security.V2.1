@@ -72,12 +72,19 @@
     <Compile Include="Infrastructure\SecurityObservableCollection.cs" />
     <Compile Include="IocConfig.cs" />
     <Compile Include="MapperMappings.cs" />
+    <Compile Include="Pages\Right\RoleEditPage.xaml.cs">
+      <DependentUpon>RoleEditPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Right\UserEditPage.xaml.cs">
       <DependentUpon>UserEditPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="ViewModelManagers\ManagerBase.cs" />
+    <Compile Include="ViewModelManagers\RoleManager.cs" />
     <Compile Include="ViewModelManagers\UserManager.cs" />
+    <Compile Include="ViewModels\RoleViewModel.cs" />
     <Compile Include="ViewModels\UserViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelBase.cs" />
     <Page Include="Pages\AccessSetupPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -102,6 +109,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Left\UsersPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Right\RoleEditPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

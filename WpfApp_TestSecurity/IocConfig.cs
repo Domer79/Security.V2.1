@@ -17,6 +17,7 @@ namespace WpfApp_TestSecurity
             builder.RegisterType<UserManager>().AsSelf().SingleInstance();
             builder.RegisterType<AccessSetupPage>().AsSelf().SingleInstance();
             builder.RegisterType<UsersPage>().AsSelf().SingleInstance();
+            builder.RegisterType<RolesPage>().AsSelf().SingleInstance();
             builder.RegisterType<UserEditPage>().AsSelf();
 
             _container = builder.Build();

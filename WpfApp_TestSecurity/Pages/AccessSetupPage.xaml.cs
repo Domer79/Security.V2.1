@@ -33,5 +33,9 @@ namespace WpfApp_TestSecurity
             _leftFrame.NavigationService.Navigate(IocConfig.Resolve<UsersPage>());
         }
 
+        private void _roleMenuItem_OnClick(object sender, RoutedEventArgs e)
+        {
+            _leftFrame.NavigationService.Navigate(IocConfig.Resolve<RolesPage>());
+        }
     }
 }

@@ -1,13 +1,8 @@
 ﻿using System;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using AutoCompare;
-using AutoMapper;
-using WpfApp_TestSecurity.Annotations;
 
 namespace WpfApp_TestSecurity.ViewModels
 {
-    public class UserViewModel: INotifyPropertyChanged
+    public class UserViewModel: ViewModelBase<UserViewModel>
     {
         private string _firstName;
         private string _lastName;
@@ -119,28 +114,5 @@ namespace WpfApp_TestSecurity.ViewModels
         /// Дата последней активности пользователя
         /// </summary>
         public DateTime? LastActivityDate { get; set; }
-
-        private UserViewModel OldUserViewModel { get; set; }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        public bool IsChanged()
-        {
-            var comparer = Comparer.Get<UserViewModel>();
-            var diff = comparer(OldUserViewModel, this);
-            return diff.Count > 0;
-        }
-
-
-        public void Seal()
-        {
-            OldUserViewModel = Mapper.Map<UserViewModel>(this);
-        }
-
-        [NotifyPropertyChangedInvocator]
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
     }
 }

@@ -13,6 +13,7 @@ namespace WpfApp_TestSecurity
         public static void Config()
         {
             Configure<UserViewModel>().Compile.Now();
+            Configure<RoleViewModel>().Compile.Now();
         }
     }
 }

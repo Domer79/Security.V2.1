@@ -9,6 +9,30 @@
       Title="Roles">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="19"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0">
+            <MenuItem x:Name="AddMenuItem" Header="_Добавить" Click="AddMenuItem_OnClick"></MenuItem>
+            <MenuItem x:Name="DeleteMenuItem" Header="_Удалить" Click="DeleteMenuItem_OnClick"></MenuItem>
+        </Menu>
+        <ListBox x:Name="_userList" Grid.Row="1" SelectionChanged="_userList_OnSelectionChanged">
+            <ListBox.ItemsSource>
+                <Binding Path="UserList" IsAsync="True"></Binding>
+            </ListBox.ItemsSource>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock>
+                            <TextBlock.Text>
+                                <Binding Path="Name"></Binding>
+                            </TextBlock.Text>
+                        </TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
     </Grid>
 </Page>

@@ -23,7 +23,7 @@
         <Frame Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="_rightFrame" NavigationUIVisibility="Hidden"/>
         <Menu Grid.Column="0" Grid.Row="0">
             <MenuItem x:Name="_userMenuItem" Header="Пользователи" Click="_userMenuItem_OnClick"></MenuItem>
-            <MenuItem x:Name="_roleMenuItem" Header="Роли"></MenuItem>
+            <MenuItem x:Name="_roleMenuItem" Header="Роли" Click="_roleMenuItem_OnClick"></MenuItem>
         </Menu>
     </Grid>
 </Page>

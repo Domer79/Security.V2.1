@@ -112,14 +112,14 @@ namespace WpfApp_TestSecurity.Pages.Right
         private void SaveUser(object uvm)
         {
             var model = (UserViewModel) uvm;
-            var index = _userManager.Users.IndexOf(model);
+            var index = _userManager.Items.IndexOf(model);
             if (index == -1)
             {
-                _userManager.Users.Add(model);
+                _userManager.Items.Add(model);
                 return;
             }
 
-            _userManager.Users[index] = model;
+            _userManager.Items[index] = model;
 
             model.Seal();
         }
