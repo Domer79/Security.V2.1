@@ -19,7 +19,7 @@ namespace Security.V2.Core
 
         private Application GetApplication()
         {
-            return _commonDb.QuerySingle<Application>("select * from sec.Applications where appName = @appName", new {appName = _appName});
+            return _commonDb.QuerySingle<Application>("select * from Applications where appName = @appName", new {appName = _appName});
         }
 
         public Application Application => _application ?? (_application = GetApplication());

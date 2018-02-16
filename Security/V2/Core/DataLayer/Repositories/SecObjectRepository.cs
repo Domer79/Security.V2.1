@@ -22,7 +22,7 @@ namespace Security.V2.Core.DataLayer.Repositories
         {
             entity.IdApplication = _context.Application.IdApplication;
             var id = _commonDb.ExecuteScalar<int>(@"
-insert into sec.SecObjects(ObjectName, idApplication) values(@objectName, @idApplication)
+insert into SecObjects(ObjectName, idApplication) values(@objectName, @idApplication)
 select SCOPE_IDENTITY()
 ", entity);
             entity.IdSecObject = id;
@@ -33,7 +33,7 @@ select SCOPE_IDENTITY()
         {
             entity.IdApplication = _context.Application.IdApplication;
             var id = _commonDb.ExecuteScalarAsync<int>(@"
-insert into sec.SecObjects(ObjectName, idApplication) values(@objectName, @idApplication)
+insert into SecObjects(ObjectName, idApplication) values(@objectName, @idApplication)
 select SCOPE_IDENTITY()
 ", entity);
             entity.IdSecObject = await id;
@@ -42,52 +42,52 @@ select SCOPE_IDENTITY()
 
         public SecObject Get(object id)
         {
-            return _commonDb.QuerySingle<SecObject>("select * from sec.SecObjects where idSecObject = @id", new {id});
+            return _commonDb.QuerySingle<SecObject>("select * from SecObjects where idSecObject = @id", new {id});
         }
 
         public IEnumerable<SecObject> Get()
         {
-            return _commonDb.Query<SecObject>("select * from sec.SecObjects where idApplication = @idApplication", new {_context.Application.IdApplication});
+            return _commonDb.Query<SecObject>("select * from SecObjects where idApplication = @idApplication", new {_context.Application.IdApplication});
         }
 
         public Task<SecObject> GetAsync(object id)
         {
-            return _commonDb.QuerySingleAsync<SecObject>("select * from sec.SecObjects where idSecObject = @id", new { id });
+            return _commonDb.QuerySingleAsync<SecObject>("select * from SecObjects where idSecObject = @id", new { id });
         }
 
         public Task<IEnumerable<SecObject>> GetAsync()
         {
-            return _commonDb.QueryAsync<SecObject>("select * from sec.SecObjects where idApplication = @idApplication", new { _context.Application.IdApplication });
+            return _commonDb.QueryAsync<SecObject>("select * from SecObjects where idApplication = @idApplication", new { _context.Application.IdApplication });
         }
 
         public SecObject GetByName(string name)
         {
-            return _commonDb.QuerySingle<SecObject>("select * from sec.SecObjects where objectName = @name and idApplication = @idApplication", new { name, _context.Application.IdApplication });
+            return _commonDb.QuerySingle<SecObject>("select * from SecObjects where objectName = @name and idApplication = @idApplication", new { name, _context.Application.IdApplication });
         }
 
         public Task<SecObject> GetByNameAsync(string name)
         {
-            return _commonDb.QuerySingleAsync<SecObject>("select * from sec.SecObjects where objectName = @name and idApplication = @idApplication", new { name, _context.Application.IdApplication });
+            return _commonDb.QuerySingleAsync<SecObject>("select * from SecObjects where objectName = @name and idApplication = @idApplication", new { name, _context.Application.IdApplication });
         }
 
         public void Remove(object id)
         {
-            _commonDb.ExecuteNonQuery("delete from sec.SecObjects where idSecObject = @id", new { id });
+            _commonDb.ExecuteNonQuery("delete from SecObjects where idSecObject = @id", new { id });
         }
 
         public Task RemoveAsync(object id)
         {
-            return _commonDb.ExecuteNonQueryAsync("delete from sec.SecObjects where idSecObject = @id", new { id });
+            return _commonDb.ExecuteNonQueryAsync("delete from SecObjects where idSecObject = @id", new { id });
         }
 
         public void Update(SecObject entity)
         {
-            _commonDb.ExecuteNonQuery("update sec.SecObjects set objectName = @objectName where idSecObject = @idSecObject", new { entity });
+            _commonDb.ExecuteNonQuery("update SecObjects set objectName = @objectName where idSecObject = @idSecObject", new { entity });
         }
 
         public Task UpdateAsync(SecObject entity)
         {
-            return _commonDb.ExecuteNonQueryAsync("update sec.SecObjects set objectName = @objectName where idSecObject = @idSecObject", new { entity });
+            return _commonDb.ExecuteNonQueryAsync("update SecObjects set objectName = @objectName where idSecObject = @idSecObject", new { entity });
         }
     }
 }
