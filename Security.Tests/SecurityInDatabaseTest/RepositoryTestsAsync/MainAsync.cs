@@ -1,18 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
-using Security.Model;
+using Security.Tests.SecurityInDatabaseTest.RepositoryTests;
 using Security.V2.CommonContracts;
 using Security.V2.Contracts;
+using Security.V2.Core;
 
-namespace Security.Tests.SecurityInDatabaseTest.RepositoryTests
+namespace Security.Tests.SecurityInDatabaseTest.RepositoryTestsAsync
 {
-    using Security.V2.Core;
-
     [TestFixture]
     public class MainAsync : BaseTest
     {

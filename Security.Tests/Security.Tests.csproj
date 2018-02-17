@@ -105,11 +105,12 @@
     <Compile Include="DI\ServiceLocatorTest.cs" />
     <Compile Include="SecurityImplement\SecuritySettings.cs" />
     <Compile Include="SecurityInDatabaseTest\MySecurity.cs" />
+    <Compile Include="SecurityInDatabaseTest\RepositoryTestsAsync\SetupAsync.cs" />
     <Compile Include="SecurityInDatabaseTest\RepositoryTests\BaseTest.cs" />
     <Compile Include="SecurityInDatabaseTest\RepositoryTests\GrantRepositoryTest.cs" />
     <Compile Include="SecurityInDatabaseTest\RepositoryTests\Main.cs" />
-    <Compile Include="SecurityInDatabaseTest\RepositoryTests\MainAsync.cs" />
-    <Compile Include="SecurityInDatabaseTest\Setup.cs" />
+    <Compile Include="SecurityInDatabaseTest\RepositoryTestsAsync\MainAsync.cs" />
+    <Compile Include="SecurityInDatabaseTest\RepositoryTests\Setup.cs" />
     <Compile Include="SecurityInMemoryTests\MySecurity.cs" />
     <Compile Include="SecurityInMemoryTests\SecurityConfigTest.cs" />
     <Compile Include="SecurityInMemoryTests\SecuritySetupClass.cs" />

@@ -67,7 +67,7 @@ select @idUser idUser, idMember idGroup from sec.Members where id in @groupsId
             return _commonDb.ExecuteNonQueryAsync(@"
 declare @idUser int = (select idMember from sec.Members where name = @user)
 
---insert into sec.UserGroups(idUser, idGroup)
+insert into sec.UserGroups(idUser, idGroup)
 select @idUser idUser, idMember idGroup from sec.Members where name in @groups
 ", new { user, groups });
         }
