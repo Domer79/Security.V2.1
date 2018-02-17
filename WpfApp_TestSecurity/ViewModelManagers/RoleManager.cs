@@ -12,23 +12,23 @@ using WpfApp_TestSecurity.ViewModels;
 
 namespace WpfApp_TestSecurity.ViewModelManagers
 {
-    public class RoleManager: ManagerBase<RoleViewModel>
+    public class RoleManager: BaseManager<RoleViewModel>
     {
         public RoleManager(ISecurity security) : base(security)
         {
         }
 
-        protected override ObservableCollection<RoleViewModel> GetItems()
+        protected override IEnumerable<RoleViewModel> GetItems()
         {
-            var roleViewModels = new ObservableCollection<RoleViewModel>(Security.RoleRepository.Get().Select(r => Mapper.Map<RoleViewModel>(r)));
+            var roleViewModels = Security.RoleRepository.Get().Select(r => Mapper.Map<RoleViewModel>(r));
 
             return roleViewModels;
         }
 
-        protected override async Task<ObservableCollection<RoleViewModel>> GetItemsAsync()
+        protected override async Task<IEnumerable<RoleViewModel>> GetItemsAsync()
         {
             var roles = await Security.RoleRepository.GetAsync().ConfigureAwait(false);
-            var roleViewModels = new ObservableCollection<RoleViewModel>(roles.Select(r => Mapper.Map<RoleViewModel>(r)));
+            var roleViewModels = roles.Select(r => Mapper.Map<RoleViewModel>(r));
 
             return roleViewModels;
         }

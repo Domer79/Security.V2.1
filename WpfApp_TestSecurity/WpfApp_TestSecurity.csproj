@@ -72,6 +72,16 @@
     <Compile Include="Infrastructure\SecurityObservableCollection.cs" />
     <Compile Include="IocConfig.cs" />
     <Compile Include="MapperMappings.cs" />
+    <Compile Include="Infrastructure\RelayCommand.cs" />
+    <Compile Include="Pages\Right\Controls\UserControls\ProfileControl.xaml.cs">
+      <DependentUpon>ProfileControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Right\Controls\UserControls\UserRolesControl.xaml.cs">
+      <DependentUpon>UserRolesControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Right\Main.xaml.cs">
+      <DependentUpon>Main.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Right\RoleEditPage.xaml.cs">
       <DependentUpon>RoleEditPage.xaml</DependentUpon>
     </Compile>
@@ -79,12 +89,13 @@
       <DependentUpon>UserEditPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\Annotations.cs" />
-    <Compile Include="ViewModelManagers\ManagerBase.cs" />
+    <Compile Include="ViewModelManagers\BaseManager.cs" />
     <Compile Include="ViewModelManagers\RoleManager.cs" />
     <Compile Include="ViewModelManagers\UserManager.cs" />
+    <Compile Include="ViewModelManagers\UserRolesManager.cs" />
     <Compile Include="ViewModels\RoleViewModel.cs" />
     <Compile Include="ViewModels\UserViewModel.cs" />
-    <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="ViewModels\BaseViewModel.cs" />
     <Page Include="Pages\AccessSetupPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -109,6 +120,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Left\UsersPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Right\Controls\UserControls\ProfileControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Right\Controls\UserControls\UserRolesControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Right\Main.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -164,5 +187,6 @@
       <Name>Security</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

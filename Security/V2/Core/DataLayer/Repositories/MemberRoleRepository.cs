@@ -104,6 +104,26 @@ from
 ", new { roles, _context.Application.IdApplication, member });
         }
 
+        public void DeleteMembersFromRole(int[] idMembers, int idRole)
+        {
+            _commonDb.ExecuteNonQuery("delete from sec.MemberRoles where idRole = @idRole and idMember in @idMembers", new {idMembers, idRole});
+        }
+
+        public Task DeleteMembersFromRoleAsync(int[] idMembers, int idRole)
+        {
+            return _commonDb.ExecuteNonQueryAsync("delete from sec.MemberRoles where idRole = @idRole and idMember in @idMembers", new { idMembers, idRole });
+        }
+
+        public void DeleteRolesFromMember(int[] idRoles, int idMember)
+        {
+            _commonDb.ExecuteNonQuery("delete from sec.MemberRoles where idMember = @idMember and idRole in @idRoles", new { idMember, idRoles });
+        }
+
+        public Task DeleteRolesFromMemberAsync(int[] idRoles, int idMember)
+        {
+            return _commonDb.ExecuteNonQueryAsync("delete from sec.MemberRoles where idMember = @idMember and idRole in @idRoles", new { idMember, idRoles });
+        }
+
         public IEnumerable<Member> GetMembersByIdRole(int idRole)
         {
             return _commonDb.Query<Member>(

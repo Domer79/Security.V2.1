@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace WpfApp_TestSecurity.ViewModels
 {
-    public class UserViewModel: ViewModelBase<UserViewModel>
+    public class UserViewModel: BaseViewModel<UserViewModel>
     {
         private string _firstName;
         private string _lastName;

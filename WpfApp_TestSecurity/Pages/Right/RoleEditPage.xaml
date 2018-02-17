@@ -9,6 +9,30 @@
       Title="RoleEditPage">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="265*"/>
+            <RowDefinition Height="35"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="107*"/>
+            <ColumnDefinition Width="193*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.ColumnSpan="2" Grid.Row="0" Grid.Column="0" DataContext="{Binding Path=SelectedItem}"> 
+            <Grid.RowDefinitions>
+                <RowDefinition Height="28"/>
+                <RowDefinition Height="28"/>
+                <RowDefinition Height="35*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="107*"/>
+                <ColumnDefinition Width="193*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Имя" Grid.Row="0" Grid.Column="0" Margin="0"></Label>
+            <TextBox Grid.Row="0" Grid.Column="1" Margin="3" Text="{Binding Path=Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+
+            <Label Content="Описание" Grid.Row="1" Grid.Column="0" Margin="0"></Label>
+            <TextBox Grid.Row="1" Grid.Column="1" Margin="3" Text="{Binding Path=Description, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+        </Grid>
+        <Button x:Name="_saveRole" Grid.Row="1" Grid.Column="1" Margin="10, 5" Content="Сохранить" Command="{Binding Path=SaveCommand}" CommandParameter="{Binding Path=SelectedItem}"></Button>
     </Grid>
 </Page>

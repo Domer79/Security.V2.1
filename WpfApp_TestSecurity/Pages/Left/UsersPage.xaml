@@ -15,7 +15,7 @@
         </Grid.RowDefinitions>
         <Menu Grid.Row="0">
             <MenuItem Header="_Добавить" Click="AddMenuItem_OnClick"></MenuItem>
-            <MenuItem Header="_Удалить" Click="DeleteMenuItem_OnClick"></MenuItem>
+            <MenuItem Header="_Удалить" Command="{Binding Path=DeleteCommand}" CommandParameter="{Binding ElementName=_userList, Path=SelectedItem}"></MenuItem>
         </Menu>
         <ListBox x:Name="_userList" Grid.Row="1" SelectionChanged="_userList_OnSelectionChanged">
             <ListBox.ItemsSource>

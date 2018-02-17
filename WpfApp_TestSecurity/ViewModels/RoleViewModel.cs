@@ -9,7 +9,7 @@ using WpfApp_TestSecurity.Annotations;
 
 namespace WpfApp_TestSecurity.ViewModels
 {
-    public class RoleViewModel: ViewModelBase<RoleViewModel>
+    public class RoleViewModel: BaseViewModel<RoleViewModel>
     {
         private string _name;
         private string _description;

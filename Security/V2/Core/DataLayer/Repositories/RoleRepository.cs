@@ -81,12 +81,12 @@ select SCOPE_IDENTITY()
 
         public void Update(Role entity)
         {
-            _commonDb.ExecuteNonQuery("update sec.Roles set name = @name, description = @description where idRole = @idRole", new {entity});
+            _commonDb.ExecuteNonQuery("update sec.Roles set name = @name, description = @description where idRole = @idRole", entity);
         }
 
         public Task UpdateAsync(Role entity)
         {
-            return _commonDb.ExecuteNonQueryAsync("update sec.Roles set name = @name, description = @description where idRole = @idRole", new { entity });
+            return _commonDb.ExecuteNonQueryAsync("update sec.Roles set name = @name, description = @description where idRole = @idRole", entity);
         }
     }
 }

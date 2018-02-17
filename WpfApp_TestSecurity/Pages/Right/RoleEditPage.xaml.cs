@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows.Controls;
+using WpfApp_TestSecurity.ViewModelManagers;
 
 namespace WpfApp_TestSecurity.Pages.Right
 {
@@ -20,8 +8,14 @@ namespace WpfApp_TestSecurity.Pages.Right
     /// </summary>
     public partial class RoleEditPage : Page
     {
-        public RoleEditPage()
+        private readonly AccessSetupPage _accessSetupPage;
+        private readonly RoleManager _roleManager;
+
+        public RoleEditPage(AccessSetupPage accessSetupPage, RoleManager roleManager)
         {
+            _accessSetupPage = accessSetupPage;
+            _roleManager = roleManager;
+            DataContext = roleManager;
             InitializeComponent();
         }
     }

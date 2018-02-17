@@ -15,10 +15,12 @@ namespace WpfApp_TestSecurity
             var builder = new ContainerBuilder();
             builder.RegisterType<Security.V2.Core.Security>().As<ISecurity>().WithParameter("appName", "IPPS.LightingSystem");
             builder.RegisterType<UserManager>().AsSelf().SingleInstance();
+            builder.RegisterType<RoleManager>().AsSelf().SingleInstance();
             builder.RegisterType<AccessSetupPage>().AsSelf().SingleInstance();
             builder.RegisterType<UsersPage>().AsSelf().SingleInstance();
             builder.RegisterType<RolesPage>().AsSelf().SingleInstance();
             builder.RegisterType<UserEditPage>().AsSelf();
+            builder.RegisterType<RoleEditPage>().AsSelf();
 
             _container = builder.Build();
         }

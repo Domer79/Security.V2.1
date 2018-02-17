@@ -82,12 +82,12 @@ select SCOPE_IDENTITY()
 
         public void Update(SecObject entity)
         {
-            _commonDb.ExecuteNonQuery("update sec.SecObjects set objectName = @objectName where idSecObject = @idSecObject", new { entity });
+            _commonDb.ExecuteNonQuery("update sec.SecObjects set objectName = @objectName where idSecObject = @idSecObject", entity);
         }
 
         public Task UpdateAsync(SecObject entity)
         {
-            return _commonDb.ExecuteNonQueryAsync("update sec.SecObjects set objectName = @objectName where idSecObject = @idSecObject", new { entity });
+            return _commonDb.ExecuteNonQueryAsync("update sec.SecObjects set objectName = @objectName where idSecObject = @idSecObject", entity);
         }
     }
 }

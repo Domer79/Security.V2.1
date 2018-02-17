@@ -18,6 +18,9 @@ namespace Security.V2.Contracts.Repository
         void AddMembersToRole(string[] members, string role);
         void AddRolesToMember(string[] roles, string member);
 
+        void DeleteMembersFromRole(int[] idMembers, int idRole);
+        void DeleteRolesFromMember(int[] idRoles, int idMember);
+
         #region Async
 
         Task<IEnumerable<Member>> GetMembersByIdRoleAsync(int idRole);
@@ -31,6 +34,9 @@ namespace Security.V2.Contracts.Repository
 
         Task AddMembersToRoleAsync(string[] members, string role);
         Task AddRolesToMemberAsync(string[] roles, string member);
+
+        Task DeleteMembersFromRoleAsync(int[] idMembers, int idRole);
+        Task DeleteRolesFromMemberAsync(int[] idRoles, int idMember);
 
         #endregion
     }

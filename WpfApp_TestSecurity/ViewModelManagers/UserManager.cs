@@ -6,30 +6,63 @@ using System.Linq;
 using System.Security;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
+using System.Windows.Input;
 using AutoMapper;
 using Security.Model;
 using Security.V2.Contracts;
+using WpfApp_TestSecurity.Infrastructure;
 using WpfApp_TestSecurity.ViewModels;
 
 namespace WpfApp_TestSecurity.ViewModelManagers
 {
-    public class UserManager : ManagerBase<UserViewModel>
+    public class UserManager : BaseManager<UserViewModel>
     {
         public UserManager(ISecurity security) : base(security)
         {
+            SetPasswordCommand = new RelayCommand(SetPassword, CanSetPassword);
+            SetStatusCommand = new RelayCommand(SetStatus, CanSetStatus);
         }
 
-        protected override ObservableCollection<UserViewModel> GetItems()
+        public ICommand SetStatusCommand { get; set; }
+        public ICommand SetPasswordCommand { get; set; }
+
+        private void SetStatus(object obj)
         {
-            var userViewModels = new ObservableCollection<UserViewModel>(Security.UserRepository.Get().Select(u => Mapper.Map<UserViewModel>(u)));
+            var model = (UserViewModel)obj;
+            SetStatus(model, !model.Status);
+            model.Status = !model.Status;
+        }
+
+        private bool CanSetStatus(object arg)
+        {
+            return true;
+        }
+
+        private bool CanSetPassword(object arg)
+        {
+            var passwordBox = (PasswordBox)arg;
+            return passwordBox.Password != string.Empty;
+        }
+
+        private void SetPassword(object obj)
+        {
+            var passwordBox = (PasswordBox)obj;
+            SetPassword(SelectedItem, passwordBox.Password);
+            passwordBox.Password = string.Empty;
+        }
+
+        protected override IEnumerable<UserViewModel> GetItems()
+        {
+            var userViewModels = Security.UserRepository.Get().Select(u => Mapper.Map<UserViewModel>(u));
 
             return userViewModels;
         }
 
-        protected override async Task<ObservableCollection<UserViewModel>> GetItemsAsync()
+        protected override async Task<IEnumerable<UserViewModel>> GetItemsAsync()
         {
             var users = await Security.UserRepository.GetAsync().ConfigureAwait(false);
-            var userViewModels = new ObservableCollection<UserViewModel>(users.Select(u => Mapper.Map<UserViewModel>(u)));
+            var userViewModels = users.Select(u => Mapper.Map<UserViewModel>(u));
 
             return userViewModels;
         }

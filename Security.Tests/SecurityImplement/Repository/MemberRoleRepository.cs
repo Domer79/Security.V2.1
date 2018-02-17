@@ -77,6 +77,26 @@ namespace Security.Tests.SecurityImplement.Repository
             throw new System.NotImplementedException();
         }
 
+        public void DeleteMembersFromRole(int[] idMembers, int idRole)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Task DeleteMembersFromRoleAsync(int[] idMembers, int idRole)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void DeleteRolesFromMember(int[] idRoles, int idMember)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Task DeleteRolesFromMemberAsync(int[] idRoles, int idMember)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public IEnumerable<Member> GetMembersByIdRole(int idRole)
         {
             var role = Database.Roles.First(_ => _.IdRole == idRole);

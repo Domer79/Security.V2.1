@@ -9,70 +9,18 @@
     xmlns:local="clr-namespace:WpfApp_TestSecurity.Pages.Right"
     xmlns:local2="clr-namespace:WpfApp_TestSecurity.ViewModels"
     xmlns:system="clr-namespace:System;assembly=mscorlib"
+    xmlns:ctrls="clr-namespace:WpfApp_TestSecurity.Pages.Right.Controls.UserControls"
     mc:Ignorable="d"
     d:DesignHeight="300" d:DesignWidth="300"
     Title="UserEditPage">
+    
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="265*"/>
-            <RowDefinition Height="35"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="107*"/>
-            <ColumnDefinition Width="193*"/>
-        </Grid.ColumnDefinitions>
-        <Grid DataContext="{Binding Path=UserViewModel}" Grid.ColumnSpan="2">
-            <Grid.Resources>
-                <Style x:Key="statusButtonStyle" TargetType="Button">
-                    <Style.Triggers>
-                        <DataTrigger Binding="{Binding Path=Status}" Value="true">
-                            <Setter Property="Background" Value="Green"></Setter>
-                        </DataTrigger>
-                        <DataTrigger Binding="{Binding Path=Status}" Value="false">
-                            <Setter Property="Background" Value="#FFFF3A00"/>
-                        </DataTrigger>
-                    </Style.Triggers>
-                </Style>
-            </Grid.Resources>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="28"/>
-                <RowDefinition Height="28"/>
-                <RowDefinition Height="28"/>
-                <RowDefinition Height="28"/>
-                <RowDefinition Height="28"/>
-                <RowDefinition Height="28"/>
-                <RowDefinition Height="49*"/>
-                <RowDefinition Height="35"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="107*"/>
-                <ColumnDefinition Width="193*"/>
-            </Grid.ColumnDefinitions>
-
-            <Label Content="{Binding Path=Login, TargetNullValue={x:Static system:String.Empty}}" ContentStringFormat="Логин ({0})" Grid.Column="0" Grid.Row="0" Margin="0,0,0,0" Grid.RowSpan="2" ></Label>
-            <TextBox Grid.Column="1" Grid.Row="0" Margin="5,5,5,4" Text="{Binding Path=Login, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
-
-            <Label Content="{Binding Path=FirstName, TargetNullValue={x:Static system:String.Empty}}" ContentStringFormat="Имя ({0})"  Grid.Column="0" Grid.Row="1" Margin="0,1,0,0" Grid.RowSpan="2" ></Label>
-            <TextBox Grid.Column="1" Grid.Row="1" Margin="5,6,5,3" Text="{Binding Path=FirstName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
-
-            <Label Content="{Binding Path=LastName, TargetNullValue={x:Static system:String.Empty}}" ContentStringFormat="Фамилия ({0})" Grid.Column="0" Grid.Row="2" Margin="0,2,0,0" Grid.RowSpan="2" ></Label>
-            <TextBox Grid.Column="1" Grid.Row="2" Margin="5,7,5,2" Text="{Binding Path=LastName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
-
-            <Label Content="{Binding Path=MiddleName, TargetNullValue={x:Static system:String.Empty}}" ContentStringFormat="Отчество ({0})" Grid.Column="0" Grid.Row="3" Margin="0,4,0,0" Grid.RowSpan="2" ></Label>
-            <TextBox Grid.Column="1" Grid.Row="3" Margin="5,8,5,1" Text="{Binding Path=MiddleName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
-
-            <Label Content="{Binding Path=Email, TargetNullValue={x:Static system:String.Empty}}" ContentStringFormat="Email ({0})" Grid.Column="0" Grid.Row="4" Margin="0,4,0,0" Grid.RowSpan="2" ></Label>
-            <TextBox Grid.Column="1" Grid.Row="4" Margin="5,9,5,0" Text="{Binding Path=Email, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
-
-            <Label Content="Установить пароль" ContentStringFormat="Email ({0})" Grid.Column="0" Grid.Row="5" Margin="0,4,0,0" />
-            <PasswordBox x:Name="_passwordBox" Grid.Column="1" Grid.Row="5" Margin="5,9,50,0"></PasswordBox>
-            <Button Content="Set" Grid.Column="1" Grid.Row="5" HorizontalAlignment="Right" Width="40" Margin="0,9,5,0" Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:UserEditPage}}, Path=DataContext.SetPasswordCommand}" CommandParameter="{Binding ElementName=_passwordBox}" >
-            </Button>
-
-            <Label Grid.Row="6" Grid.Column="0" Content="Статус" Margin="10,18" ></Label>
-            <Button x:Name="_btnSetStatus" Grid.Row="6" Grid.Column="1" Content="" Margin="20" Style="{StaticResource statusButtonStyle}" Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:UserEditPage}}, Path=DataContext.SetStatusCommand}" CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:UserEditPage}}, Path=DataContext.UserViewModel}" VerticalAlignment="Top"></Button>
-        </Grid>
-        <Button x:Name="_saveBtn" Content="Сохранить" Grid.Column="1" Grid.Row="7" Margin="50,5" Command="{Binding Path=SaveCommand}" CommandParameter="{Binding Path=UserViewModel}"></Button>
-        <Button x:Name="_cancelBtn" Content="Отмена" Grid.Column="0" Grid.Row="7" Margin="10,5"></Button>
+        <TabControl>
+            <TabItem Header="Профиль" HorizontalAlignment="Left" Height="20" Margin="0" VerticalAlignment="Top" Width="64">
+                <Grid Background="#FFE5E5E5">
+                    <ctrls:ProfileControl x:Name="ProfileControl" ViewModel="{Binding Path=SelectedItem}"></ctrls:ProfileControl>
+                </Grid>
+            </TabItem>
+        </TabControl>
     </Grid>
 </PageFunction>

@@ -14,12 +14,12 @@
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
         <Menu Grid.Row="0">
-            <MenuItem x:Name="AddMenuItem" Header="_Добавить" Click="AddMenuItem_OnClick"></MenuItem>
-            <MenuItem x:Name="DeleteMenuItem" Header="_Удалить" Click="DeleteMenuItem_OnClick"></MenuItem>
+            <MenuItem x:Name="_addMenuItem" Header="_Добавить" Click="AddMenuItem_OnClick"></MenuItem>
+            <MenuItem x:Name="_deleteMenuItem" Header="_Удалить" Command="{Binding Path=DeleteCommand}" CommandParameter="{Binding ElementName=_roleList, Path=SelectedItem}"></MenuItem>
         </Menu>
-        <ListBox x:Name="_userList" Grid.Row="1" SelectionChanged="_userList_OnSelectionChanged">
+        <ListBox x:Name="_roleList" Grid.Row="1" SelectionChanged="_roleList_OnSelectionChanged">
             <ListBox.ItemsSource>
-                <Binding Path="UserList" IsAsync="True"></Binding>
+                <Binding Path="RoleList" IsAsync="True"></Binding>
             </ListBox.ItemsSource>
             <ListBox.ItemTemplate>
                 <DataTemplate>

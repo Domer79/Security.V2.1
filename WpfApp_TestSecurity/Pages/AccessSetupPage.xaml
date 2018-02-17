@@ -19,8 +19,8 @@
             </ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Frame Grid.Column="0" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="_leftFrame" NavigationUIVisibility="Hidden"/>
-        <GridSplitter Grid.Column="1" Grid.Row="1" Background="Red" Width="3" HorizontalAlignment="Left"/>
-        <Frame Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="_rightFrame" NavigationUIVisibility="Hidden"/>
+        <GridSplitter Grid.Column="1" Grid.Row="1" Width="3" HorizontalAlignment="Left"/>
+        <Frame Grid.Column="1" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="_rightFrame" NavigationUIVisibility="Hidden" Margin="3,0,0,0"/>
         <Menu Grid.Column="0" Grid.Row="0">
             <MenuItem x:Name="_userMenuItem" Header="Пользователи" Click="_userMenuItem_OnClick"></MenuItem>
             <MenuItem x:Name="_roleMenuItem" Header="Роли" Click="_roleMenuItem_OnClick"></MenuItem>

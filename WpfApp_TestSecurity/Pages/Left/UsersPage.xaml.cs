@@ -4,6 +4,8 @@ using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
+using WpfApp_TestSecurity.Infrastructure;
 using WpfApp_TestSecurity.Pages.Right;
 using WpfApp_TestSecurity.ViewModelManagers;
 using WpfApp_TestSecurity.ViewModels;
@@ -18,8 +20,7 @@ namespace WpfApp_TestSecurity.Pages.Left
         private readonly UserManager _userManager;
         private readonly AccessSetupPage _accessSetupPage;
         private readonly UserEditPage _userEditPage;
-        private UserViewModel _selectedItem;
-        private UserViewModel _prevSelectedItem;
+        private object _prevSelectedItem;
 
         public UsersPage(UserManager userManager, AccessSetupPage accessSetupPage, UserEditPage userEditPage)
         {
@@ -30,14 +31,25 @@ namespace WpfApp_TestSecurity.Pages.Left
             _userEditPage = userEditPage;
             UserList = userManager.Items;
             DataContext = this;
+            DeleteCommand = new RelayCommand(DeleteItem, CanDelete);
+        }
+
+        private void DeleteItem(object obj)
+        {
+            var userViewModel = (UserViewModel)obj;
+            if (MessageBox.Show($"Подтвердите удаление пользователя {userViewModel.Login}", "Внимание!", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                _userManager.Items.Remove(userViewModel);
+        }
+
+        private bool CanDelete(object arg)
+        {
+            return arg != null && _userList.SelectedItem != null;
         }
 
         public ObservableCollection<UserViewModel> UserList { get; }
 
         private void AddMenuItem_OnClick(object sender, RoutedEventArgs e)
         {
-            _accessSetupPage._rightFrame.NavigationService.LoadCompleted +=
-                _userEditPage.NavigationService_LoadCompleted;
             _accessSetupPage._rightFrame.NavigationService.Navigate(_userEditPage, new UserViewModel());
         }
 
@@ -48,17 +60,12 @@ namespace WpfApp_TestSecurity.Pages.Left
                 _userList.SelectedItem = _prevSelectedItem;
                 return;
             }
-            _selectedItem = (UserViewModel) e.AddedItems[0];
+
+            _userManager.SelectedItem = (UserViewModel)e.AddedItems[0];
             _prevSelectedItem = e.RemovedItems.Count == 0 ? null : (UserViewModel)e.RemovedItems[0];
-            _accessSetupPage._rightFrame.NavigationService.LoadCompleted +=
-                _userEditPage.NavigationService_LoadCompleted;
-            _accessSetupPage._rightFrame.NavigationService.Navigate(_userEditPage, _selectedItem);
+            _accessSetupPage._rightFrame.NavigationService.Navigate(_userEditPage, _userManager.SelectedItem);
         }
 
-        private void DeleteMenuItem_OnClick(object sender, RoutedEventArgs e)
-        {
-            if (MessageBox.Show($"Подтвердите удаление пользователя {_selectedItem.Login}", "Внимание!", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
-                _userManager.Items.Remove(_selectedItem);
-        }
+        public ICommand DeleteCommand { get; set; }
     }
 }
