@@ -19,7 +19,7 @@ namespace Security.V2.Core.DataLayer.Repositories
 
         public Application Create(Application entity)
         {
-            var id = _commonDb.ExecuteScalar<int>("EXECUTE [AddApp] @appName ,@description", entity);
+            var id = _commonDb.ExecuteScalar<int>("EXECUTE [sec].[AddApp] @appName ,@description", entity);
             entity.IdApplication = id;
 
             return entity;
@@ -27,7 +27,7 @@ namespace Security.V2.Core.DataLayer.Repositories
 
         public async Task<Application> CreateAsync(Application entity)
         {
-            var id = _commonDb.ExecuteScalarAsync<int>("EXECUTE [AddApp] @appName ,@description", entity);
+            var id = _commonDb.ExecuteScalarAsync<int>("EXECUTE [sec].[AddApp] @appName ,@description", entity);
             entity.IdApplication = await id;
 
             return entity;
@@ -35,32 +35,32 @@ namespace Security.V2.Core.DataLayer.Repositories
 
         public Application Get(object id)
         {
-            return _commonDb.QuerySingle<Application>("select * from Applications where idApplication = @id", new { id });
+            return _commonDb.QuerySingle<Application>("select * from sec.Applications where idApplication = @id", new { id });
         }
 
         public IEnumerable<Application> Get()
         {
-            return _commonDb.Query<Application>("select * from Applications");
+            return _commonDb.Query<Application>("select * from sec.Applications");
         }
 
         public Task<Application> GetAsync(object id)
         {
-            return _commonDb.QuerySingleAsync<Application>("select * from Applications where idApplication = @id", new { id });
+            return _commonDb.QuerySingleAsync<Application>("select * from sec.Applications where idApplication = @id", new { id });
         }
 
         public Task<IEnumerable<Application>> GetAsync()
         {
-            return _commonDb.QueryAsync<Application>("select * from Applications");
+            return _commonDb.QueryAsync<Application>("select * from sec.Applications");
         }
 
         public Application GetByName(string name)
         {
-            return _commonDb.QuerySingle<Application>("select * from Applications where appName = @name", new {name});
+            return _commonDb.QuerySingle<Application>("select * from sec.Applications where appName = @name", new {name});
         }
 
         public async Task<Application> GetByNameAsync(string name)
         {
-            return await _commonDb.QuerySingleAsync<Application>("select * from Applications where appName = @name", new { name });
+            return await _commonDb.QuerySingleAsync<Application>("select * from sec.Applications where appName = @name", new { name });
         }
 
         public void Remove(object id)

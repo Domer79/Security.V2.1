@@ -22,7 +22,7 @@ namespace Security.V2.Core.DataLayer.Repositories
         {
             entity.IdApplication = _context.Application.IdApplication;
             var id = _commonDb.ExecuteScalar<int>(@"
-insert into Roles(name, description, idApplication) values(@name, @description, @idApplication)
+insert into sec.Roles(name, description, idApplication) values(@name, @description, @idApplication)
 select SCOPE_IDENTITY()
 ", entity);
 
@@ -33,7 +33,7 @@ select SCOPE_IDENTITY()
         public async Task<Role> CreateAsync(Role entity)
         {
             entity.IdApplication = _context.Application.IdApplication;
-            var id = _commonDb.ExecuteScalarAsync<int>("insert into Roles(name, description, idApplication) values(@name, @description, @idApplication)", entity);
+            var id = _commonDb.ExecuteScalarAsync<int>("insert into sec.Roles(name, description, idApplication) values(@name, @description, @idApplication)", entity);
 
             entity.IdRole = await id;
             return entity;
@@ -41,52 +41,52 @@ select SCOPE_IDENTITY()
 
         public Role Get(object id)
         {
-            return _commonDb.QuerySingle<Role>("select * from Roles where idRole = @id", new {id});
+            return _commonDb.QuerySingle<Role>("select * from sec.Roles where idRole = @id", new {id});
         }
 
         public IEnumerable<Role> Get()
         {
-            return _commonDb.Query<Role>("select * from Roles where idApplication = @idApplication", new {_context.Application.IdApplication});
+            return _commonDb.Query<Role>("select * from sec.Roles where idApplication = @idApplication", new {_context.Application.IdApplication});
         }
 
         public Task<Role> GetAsync(object id)
         {
-            return _commonDb.QuerySingleAsync<Role>("select * from Roles where idRole = @id", new { id });
+            return _commonDb.QuerySingleAsync<Role>("select * from sec.Roles where idRole = @id", new { id });
         }
 
         public Task<IEnumerable<Role>> GetAsync()
         {
-            return _commonDb.QueryAsync<Role>("select * from Roles where idApplication = @idApplication", new { _context.Application.IdApplication });
+            return _commonDb.QueryAsync<Role>("select * from sec.Roles where idApplication = @idApplication", new { _context.Application.IdApplication });
         }
 
         public Role GetByName(string name)
         {
-            return _commonDb.QuerySingle<Role>("select * from Roles where name = @name and idApplication = @idApplication", new {name, _context.Application.IdApplication});
+            return _commonDb.QuerySingle<Role>("select * from sec.Roles where name = @name and idApplication = @idApplication", new {name, _context.Application.IdApplication});
         }
 
         public Task<Role> GetByNameAsync(string name)
         {
-            return _commonDb.QuerySingleAsync<Role>("select * from Roles where name = @name and idApplication = @idApplication", new { name, _context.Application.IdApplication });
+            return _commonDb.QuerySingleAsync<Role>("select * from sec.Roles where name = @name and idApplication = @idApplication", new { name, _context.Application.IdApplication });
         }
 
         public void Remove(object id)
         {
-            _commonDb.ExecuteNonQuery("delete from Roles where idRole = @id", new {id});
+            _commonDb.ExecuteNonQuery("delete from sec.Roles where idRole = @id", new {id});
         }
 
         public Task RemoveAsync(object id)
         {
-            return _commonDb.ExecuteNonQueryAsync("delete from Roles where idRole = @id", new { id });
+            return _commonDb.ExecuteNonQueryAsync("delete from sec.Roles where idRole = @id", new { id });
         }
 
         public void Update(Role entity)
         {
-            _commonDb.ExecuteNonQuery("update Roles set name = @name, description = @description where idRole = @idRole", new {entity});
+            _commonDb.ExecuteNonQuery("update sec.Roles set name = @name, description = @description where idRole = @idRole", new {entity});
         }
 
         public Task UpdateAsync(Role entity)
         {
-            return _commonDb.ExecuteNonQueryAsync("update Roles set name = @name, description = @description where idRole = @idRole", new { entity });
+            return _commonDb.ExecuteNonQueryAsync("update sec.Roles set name = @name, description = @description where idRole = @idRole", new { entity });
         }
     }
 }
