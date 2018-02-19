@@ -1,20 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
+using WpfApp_TestSecurity.Pages;
 using WpfApp_TestSecurity.Pages.Left;
-using WpfApp_TestSecurity.Pages.Right;
-using WpfApp_TestSecurity.ViewModels;
 
 namespace WpfApp_TestSecurity
 {
@@ -26,6 +14,13 @@ namespace WpfApp_TestSecurity
         public AccessSetupPage()
         {
             InitializeComponent();
+            Loaded += AccessSetupPage_Loaded;
+        }
+
+        private void AccessSetupPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (!Principal.Identity.IsAuthenticated)
+                NavigationService.Navigate(IocConfig.Resolve<LoginPage>());
         }
 
         private void _userMenuItem_OnClick(object sender, RoutedEventArgs e)

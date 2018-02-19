@@ -46,7 +46,11 @@ namespace Security.V2.Core
         {
             foreach (var securityObject in securityObjects)
             {
-                var secObject = new SecObject()
+                var secObject = _secObjectRepository.GetByName(securityObject.ObjectName);
+                if (secObject != null)
+                    continue;
+
+                secObject = new SecObject()
                 {
                     ObjectName = securityObject.ObjectName
                 };

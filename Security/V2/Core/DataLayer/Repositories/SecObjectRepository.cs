@@ -68,7 +68,7 @@ select SCOPE_IDENTITY()
 
         public SecObject Get(object id)
         {
-            return _commonDb.QuerySingle<SecObject>("select * from sec.SecObjects where idSecObject = @id", new {id});
+            return _commonDb.QuerySingleOrDefault<SecObject>("select * from sec.SecObjects where idSecObject = @id", new {id});
         }
 
         public IEnumerable<SecObject> Get()
@@ -78,7 +78,7 @@ select SCOPE_IDENTITY()
 
         public Task<SecObject> GetAsync(object id)
         {
-            return _commonDb.QuerySingleAsync<SecObject>("select * from sec.SecObjects where idSecObject = @id", new { id });
+            return _commonDb.QuerySingleOrDefaultAsync<SecObject>("select * from sec.SecObjects where idSecObject = @id", new { id });
         }
 
         public Task<IEnumerable<SecObject>> GetAsync()
@@ -88,12 +88,12 @@ select SCOPE_IDENTITY()
 
         public SecObject GetByName(string name)
         {
-            return _commonDb.QuerySingle<SecObject>("select * from sec.SecObjects where objectName = @name and idApplication = @idApplication", new { name, _context.Application.IdApplication });
+            return _commonDb.QuerySingleOrDefault<SecObject>("select * from sec.SecObjects where objectName = @name and idApplication = @idApplication", new { name, _context.Application.IdApplication });
         }
 
         public Task<SecObject> GetByNameAsync(string name)
         {
-            return _commonDb.QuerySingleAsync<SecObject>("select * from sec.SecObjects where objectName = @name and idApplication = @idApplication", new { name, _context.Application.IdApplication });
+            return _commonDb.QuerySingleOrDefaultAsync<SecObject>("select * from sec.SecObjects where objectName = @name and idApplication = @idApplication", new { name, _context.Application.IdApplication });
         }
 
         public void Remove(object id)

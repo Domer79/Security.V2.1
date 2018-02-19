@@ -8,7 +8,7 @@
         Title="MainWindow" Height="750" Width="725">
     <Grid>
         <Menu Height="25" VerticalAlignment="Top" HorizontalAlignment="Stretch" >
-            <MenuItem Header="_Показать абонентов">
+            <MenuItem x:Name="AbonentMenuItem" Header="_Показать абонентов" Click="AbonentMenuItem_OnClick">
             </MenuItem>
             <MenuItem Header="_Настройка доступа" Click="MenuItem_Click">
             </MenuItem>

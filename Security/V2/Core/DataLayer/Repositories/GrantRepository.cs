@@ -57,33 +57,33 @@ where
         public void RemoveGrant(string role, string secObject)
         {
             _commonDb.ExecuteNonQuery(@"
-delete from sec.Grants where idSecObject = (select idSecObject from sec.SecObjects where ObjectName = @objectName)
-and idRole = (select idRole from sec.Roles where name = @roleName)
-", new {objectName = secObject, roleName = role});
+delete from sec.Grants where idSecObject = (select idSecObject from sec.SecObjects where ObjectName = @objectName and idApplication = @idApplication)
+and idRole = (select idRole from sec.Roles where name = @roleName and idApplication = @idApplication)
+", new {objectName = secObject, roleName = role, _context.Application.IdApplication });
         }
 
         public Task RemoveGrantAsync(string role, string secObject)
         {
             return _commonDb.ExecuteNonQueryAsync(@"
-delete from sec.Grants where idSecObject = (select idSecObject from sec.SecObjects where ObjectName = @objectName)
-and idRole = (select idRole from sec.Roles where name = @roleName)
-", new { objectName = secObject, roleName = role });
+delete from sec.Grants where idSecObject = (select idSecObject from sec.SecObjects where ObjectName = @objectName and idApplication = @idApplication)
+and idRole = (select idRole from sec.Roles where name = @roleName and idApplication = @idApplication)
+", new { objectName = secObject, roleName = role, _context.Application.IdApplication });
         }
 
         public void RemoveGrants(string role, string[] secObjects)
         {
             _commonDb.ExecuteNonQuery(@"
-delete from sec.Grants where idRole = (select idRole from sec.Roles where name = @roleName)
-and idSecObject in (select idSecObject from sec.SecObjects where ObjectName in @objectNames)
-", new {roleName = role, objectNames = secObjects});
+delete from sec.Grants where idRole = (select idRole from sec.Roles where name = @roleName and idApplication = @idApplication)
+and idSecObject in (select idSecObject from sec.SecObjects where idApplication = @idApplication and ObjectName in @objectNames)
+", new {roleName = role, objectNames = secObjects, _context.Application.IdApplication});
         }
 
         public Task RemoveGrantsAsync(string role, string[] secObjects)
         {
             return _commonDb.ExecuteNonQueryAsync(@"
-delete from sec.Grants where idRole = (select idRole from sec.Roles where name = @roleName)
-and idSecObject in (select idSecObject from sec.SecObjects where ObjectName in @objectNames)
-", new { roleName = role, objectNames = secObjects });
+delete from sec.Grants where idRole = (select idRole from sec.Roles where name = @roleName and idApplication = @idApplication)
+and idSecObject in (select idSecObject from sec.SecObjects where idApplication = @idApplication and ObjectName in @objectNames)
+", new { roleName = role, objectNames = secObjects, _context.Application.IdApplication });
         }
 
         public void SetGrant(string role, string secObject)

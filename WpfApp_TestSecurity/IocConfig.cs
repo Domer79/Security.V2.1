@@ -1,5 +1,6 @@
 ﻿using Autofac;
 using Security.V2.Contracts;
+using WpfApp_TestSecurity.Pages;
 using WpfApp_TestSecurity.Pages.Left;
 using WpfApp_TestSecurity.Pages.Right;
 using WpfApp_TestSecurity.ViewModelManagers;
@@ -19,10 +20,13 @@ namespace WpfApp_TestSecurity
             builder.RegisterType<UserRoleManager>().AsSelf().SingleInstance();
             builder.RegisterType<PolicyManager>().AsSelf().SingleInstance();
             builder.RegisterType<AccessSetupPage>().AsSelf().SingleInstance();
-            builder.RegisterType<UsersPage>().AsSelf().SingleInstance();
-            builder.RegisterType<RolesPage>().AsSelf().SingleInstance();
+            builder.RegisterType<UsersPage>().AsSelf();//.SingleInstance();
+            builder.RegisterType<RolesPage>().AsSelf();//.SingleInstance();
             builder.RegisterType<UserEditPage>().AsSelf();
             builder.RegisterType<RoleEditPage>().AsSelf();
+            builder.RegisterType<LoginPage>().AsSelf();
+            builder.RegisterType<Abonents>().AsSelf();
+            builder.RegisterType<AccessDeniedPage>().AsSelf();
 
             _container = builder.Build();
         }

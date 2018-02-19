@@ -30,11 +30,17 @@ namespace WpfApp_TestSecurity.Pages.Left
 
             _userManager = userManager;
             _userManager.PropertyChanged += _userManager_PropertyChanged;
+            _userManager.ItemsLoadComplete += _userManager_ItemsLoadComplete            ;
             _accessSetupPage = accessSetupPage;
             _userEditPage = userEditPage;
             UserList = userManager.Items;
             DataContext = this;
             DeleteCommand = new RelayCommand(DeleteItem, CanDelete);
+        }
+
+        private void _userManager_ItemsLoadComplete(object sender, EventArgs args)
+        {
+            SelectedItem = UserList[0];
         }
 
         private void _userManager_PropertyChanged(object sender, PropertyChangedEventArgs e)

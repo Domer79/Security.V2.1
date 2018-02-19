@@ -65,6 +65,7 @@ namespace WpfApp_TestSecurity.ViewModelManagers
             }
 
             _items.CollectionChanged += ViewModels_CollectionChanged;
+            OnItemsLoadComplete();
         }
 
         public void CreateEmptyItem()
@@ -161,5 +162,14 @@ namespace WpfApp_TestSecurity.ViewModelManagers
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
+        public event ItemsLoadCompleteHandler ItemsLoadComplete;
+
+        protected virtual void OnItemsLoadComplete()
+        {
+            ItemsLoadComplete?.Invoke(this, EventArgs.Empty);
+        }
     }
+
+    public delegate void ItemsLoadCompleteHandler(object sender, EventArgs args);
 }

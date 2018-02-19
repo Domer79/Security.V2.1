@@ -25,12 +25,19 @@ namespace WpfApp_TestSecurity.Pages.Left
         {
             _roleManager = roleManager;
             _roleManager.PropertyChanged += _roleManager_PropertyChanged;
+            _roleManager.ItemsLoadComplete += _roleManager_ItemsLoadComplete;
             _accessSetupPage = accessSetupPage;
             _roleEditPage = roleEditPage;
             RoleList = _roleManager.Items;
             DataContext = this;
             DeleteCommand = new RelayCommand(DeleteItem, CanDelete);
             InitializeComponent();
+        }
+
+        private void _roleManager_ItemsLoadComplete(object sender, System.EventArgs args)
+        {
+            if (_roleManager.SelectedItem == null)
+                SelectedItem = RoleList[0];
         }
 
         private void _roleManager_PropertyChanged(object sender, PropertyChangedEventArgs e)
