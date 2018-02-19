@@ -32,6 +32,7 @@ namespace WpfApp_TestSecurity.ViewModelManagers
             var model = (UserViewModel)obj;
             SetStatus(model, !model.Status);
             model.Status = !model.Status;
+            model.Seal();
         }
 
         private bool CanSetStatus(object arg)
@@ -42,7 +43,7 @@ namespace WpfApp_TestSecurity.ViewModelManagers
         private bool CanSetPassword(object arg)
         {
             var passwordBox = (PasswordBox)arg;
-            return passwordBox.Password != string.Empty;
+            return passwordBox.Password != string.Empty && !SelectedItem.IsChanged();
         }
 
         private void SetPassword(object obj)
@@ -93,6 +94,11 @@ namespace WpfApp_TestSecurity.ViewModelManagers
         public void SetStatus(UserViewModel model, bool status)
         {
             Security.UserRepository.SetStatus(model.Login, status);
+        }
+
+        protected override UserViewModel GetNewEmptyItem()
+        {
+            return Mapper.Map<UserViewModel>(Security.UserRepository.CreateEmpty("Новый пользователь "));
         }
     }
 }

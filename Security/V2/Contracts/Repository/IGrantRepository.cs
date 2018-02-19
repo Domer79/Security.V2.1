@@ -11,6 +11,7 @@ namespace Security.V2.Contracts.Repository
         void RemoveGrant(string role, string secObject);
         void RemoveGrants(string role, string[] secObjects);
         IEnumerable<SecObject> GetRoleGrants(string role);
+        IEnumerable<SecObject> GetExceptRoleGrant(string role);
 
         #region Async
 
@@ -19,6 +20,7 @@ namespace Security.V2.Contracts.Repository
         Task RemoveGrantAsync(string role, string secObject);
         Task RemoveGrantsAsync(string role, string[] secObjects);
         Task<IEnumerable<SecObject>> GetRoleGrantsAsync(string role);
+        Task<IEnumerable<SecObject>> GetExceptRoleGrantAsync(string role);
 
         #endregion
     }

@@ -16,6 +16,8 @@ namespace WpfApp_TestSecurity
             builder.RegisterType<Security.V2.Core.Security>().As<ISecurity>().WithParameter("appName", "IPPS.LightingSystem");
             builder.RegisterType<UserManager>().AsSelf().SingleInstance();
             builder.RegisterType<RoleManager>().AsSelf().SingleInstance();
+            builder.RegisterType<UserRoleManager>().AsSelf().SingleInstance();
+            builder.RegisterType<PolicyManager>().AsSelf().SingleInstance();
             builder.RegisterType<AccessSetupPage>().AsSelf().SingleInstance();
             builder.RegisterType<UsersPage>().AsSelf().SingleInstance();
             builder.RegisterType<RolesPage>().AsSelf().SingleInstance();

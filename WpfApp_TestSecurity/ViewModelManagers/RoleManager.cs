@@ -33,6 +33,11 @@ namespace WpfApp_TestSecurity.ViewModelManagers
             return roleViewModels;
         }
 
+        protected override RoleViewModel GetNewEmptyItem()
+        {
+            return Mapper.Map<RoleViewModel>(Security.RoleRepository.CreateEmpty("Новая роль "));
+        }
+
         protected override void SaveAddingItem(RoleViewModel item)
         {
             var role = Security.RoleRepository.Create(Mapper.Map<Role>(item));

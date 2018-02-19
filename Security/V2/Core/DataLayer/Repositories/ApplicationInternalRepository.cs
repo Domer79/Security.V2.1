@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Security.Model;
@@ -80,6 +81,16 @@ namespace Security.V2.Core.DataLayer.Repositories
         public Task UpdateAsync(Application entity)
         {
             return _commonDb.ExecuteNonQueryAsync("execute sec.UpdateApp @idApplication, @appName, @description", entity);
+        }
+
+        public Application CreateEmpty(string prefixForRequired)
+        {
+            throw new NotSupportedException();
+        }
+
+        public Task<Application> CreateEmptyAsync(string prefixForRequired)
+        {
+            throw new NotSupportedException();
         }
     }
 }

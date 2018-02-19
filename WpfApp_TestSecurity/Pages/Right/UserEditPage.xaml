@@ -16,11 +16,17 @@
     
     <Grid>
         <TabControl>
-            <TabItem Header="Профиль" HorizontalAlignment="Left" Height="20" Margin="0" VerticalAlignment="Top" Width="64">
+            <TabItem Header="Профиль" HorizontalAlignment="Left" Height="20" Margin="0" VerticalAlignment="Top" Width="auto">
                 <Grid Background="#FFE5E5E5">
-                    <ctrls:ProfileControl x:Name="ProfileControl" ViewModel="{Binding Path=SelectedItem}"></ctrls:ProfileControl>
+                    <ctrls:ProfileControl x:Name="ProfileControl"></ctrls:ProfileControl>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Роли" HorizontalAlignment="Left" Height="20" Margin="0" VerticalAlignment="Top" Width="auto">
+                <Grid Background="#FFE5E5E5">
+                    <ctrls:UserRolesControl x:Name="RolesControl"></ctrls:UserRolesControl>
                 </Grid>
             </TabItem>
         </TabControl>
     </Grid>
 </PageFunction>
+

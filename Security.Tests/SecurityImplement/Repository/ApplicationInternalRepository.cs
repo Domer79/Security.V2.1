@@ -23,6 +23,16 @@ namespace Security.Tests.SecurityImplement.Repository
             throw new NotImplementedException();
         }
 
+        public Application CreateEmpty(string prefixForRequired)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Application> CreateEmptyAsync(string prefixForRequired)
+        {
+            throw new NotImplementedException();
+        }
+
         public Application Get(object id)
         {
             return Database.Applications.First(_ => _.IdApplication == (int)id);

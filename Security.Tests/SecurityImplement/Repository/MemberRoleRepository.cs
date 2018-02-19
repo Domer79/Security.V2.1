@@ -97,6 +97,26 @@ namespace Security.Tests.SecurityImplement.Repository
             throw new System.NotImplementedException();
         }
 
+        public IEnumerable<Role> GetExceptRolesByIdMember(int idMember)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Task<IEnumerable<Role>> GetExceptRolesByIdMemberAsync(int idMember)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public IEnumerable<Role> GetExceptRolesByMemberName(string member)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Task<IEnumerable<Role>> GetExceptRolesByMemberNameAsync(string member)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public IEnumerable<Member> GetMembersByIdRole(int idRole)
         {
             var role = Database.Roles.First(_ => _.IdRole == idRole);

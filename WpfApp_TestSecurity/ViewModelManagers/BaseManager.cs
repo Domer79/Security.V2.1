@@ -3,21 +3,25 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using System.Windows.Threading;
 using AutoMapper;
 using Security.Model;
 using Security.V2.Contracts;
 using WpfApp_TestSecurity.Annotations;
 using WpfApp_TestSecurity.Infrastructure;
 using WpfApp_TestSecurity.ViewModels;
+using Application = System.Windows.Application;
 
 namespace WpfApp_TestSecurity.ViewModelManagers
 {
     public abstract class BaseManager<T>: INotifyPropertyChanged where T: BaseViewModel<T>
     {
         private ObservableCollection<T> _items = new SecurityObservableCollection<T>();
+        private Action _setItemAction;
         private T _selectedItem;
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -32,12 +36,48 @@ namespace WpfApp_TestSecurity.ViewModelManagers
         {
             get
             {
-                if (_items.Count == 0)
-                    SetItems();
+                Debug.WriteLine("Call Get Items");
 
+                if (_setItemAction == null && _items.Count == 0)
+                {
+                    _setItemAction = () =>
+                    {
+                        SetItems();
+                        _setItemAction = null;
+                    };
+                    Application.Current.Dispatcher.BeginInvoke(DispatcherPriority.Background, _setItemAction);
+                }
                 return _items;
             }
         }
+
+        protected void SetItems()
+        {
+            _items.CollectionChanged -= ViewModels_CollectionChanged;
+
+            _items.Clear();
+            var items = GetItems();
+            foreach (var item in items)
+            {
+                //await Task.Delay(1);
+                _items.Add(item);
+                item.Seal();
+            }
+
+            _items.CollectionChanged += ViewModels_CollectionChanged;
+        }
+
+        public void CreateEmptyItem()
+        {
+            var item = GetNewEmptyItem();
+            _items.CollectionChanged -= ViewModels_CollectionChanged;
+            _items.Add(item);
+            var index = _items.IndexOf(item);
+            SelectedItem = _items[index];
+            _items.CollectionChanged += ViewModels_CollectionChanged;
+        }
+
+        protected abstract T GetNewEmptyItem();
 
         public ICommand SaveCommand { get; set; }
 
@@ -62,23 +102,9 @@ namespace WpfApp_TestSecurity.ViewModelManagers
             }
 
             Items[index] = model;
+            SelectedItem = model;
 
             model.Seal();
-        }
-
-        private async void SetItems()
-        {
-            _items.CollectionChanged -= ViewModels_CollectionChanged;
-
-            var itemsAsync = GetItemsAsync();
-            foreach (var item in (await itemsAsync))
-            {
-                await Task.Delay(1);
-                _items.Add(item);
-                item.Seal();
-            }
-
-            _items.CollectionChanged += ViewModels_CollectionChanged;
         }
 
         private void ViewModels_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)

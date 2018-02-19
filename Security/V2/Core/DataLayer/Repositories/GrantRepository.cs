@@ -18,6 +18,16 @@ namespace Security.V2.Core.DataLayer.Repositories
             _context = context;
         }
 
+        public IEnumerable<SecObject> GetExceptRoleGrant(string role)
+        {
+            return _commonDb.Query<SecObject>("select * from sec.SecObjects where idApplication = @idApplication and idSecObject not in (select g.idSecObject from sec.Grants g inner join sec.Roles r on g.idRole = r.idRole where r.name = @role)", new {role, _context.Application.IdApplication});
+        }
+
+        public Task<IEnumerable<SecObject>> GetExceptRoleGrantAsync(string role)
+        {
+            return _commonDb.QueryAsync<SecObject>("select * from sec.SecObjects where idApplication = @idApplication and idSecObject not in (select g.idSecObject from sec.Grants g inner join sec.Roles r on g.idRole = r.idRole where r.name = @role)", new { role, _context.Application.IdApplication });
+        }
+
         public IEnumerable<SecObject> GetRoleGrants(string role)
         {
             return _commonDb.Query<SecObject>(@"

@@ -35,6 +35,16 @@ namespace Security.Tests.SecurityImplement.Repository
             throw new System.NotImplementedException();
         }
 
+        public SecObject CreateEmpty(string prefixForRequired)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Task<SecObject> CreateEmptyAsync(string prefixForRequired)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public SecObject Get(object id)
         {
             return Get().SingleOrDefault(_ => _.IdSecObject == (int) id);

@@ -12,6 +12,9 @@ namespace Security.V2.Contracts.Repository
         IEnumerable<Member> GetMembersByRoleName(string role);
         IEnumerable<Role> GetRolesByMemberName(string member);
 
+        IEnumerable<Role> GetExceptRolesByIdMember(int idMember);
+        IEnumerable<Role> GetExceptRolesByMemberName(string member);
+
         void AddMembersToRole(int[] idMembers, int idRole);
         void AddRolesToMember(int[] idRoles, int idMember);
 
@@ -28,6 +31,9 @@ namespace Security.V2.Contracts.Repository
 
         Task<IEnumerable<Member>> GetMembersByRoleNameAsync(string role);
         Task<IEnumerable<Role>> GetRolesByMemberNameAsync(string member);
+
+        Task<IEnumerable<Role>> GetExceptRolesByIdMemberAsync(int idMember);
+        Task<IEnumerable<Role>> GetExceptRolesByMemberNameAsync(string member);
 
         Task AddMembersToRoleAsync(int[] idMembers, int idRole);
         Task AddRolesToMemberAsync(int[] idRoles, int idMember);

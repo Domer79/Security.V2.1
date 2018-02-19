@@ -32,6 +32,16 @@ namespace Security.Tests.SecurityImplement.Repository
             throw new System.NotImplementedException();
         }
 
+        public Role CreateEmpty(string prefixForRequired)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Task<Role> CreateEmptyAsync(string prefixForRequired)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public Role Get(object id)
         {
             return Get().SingleOrDefault(_ => _.IdRole == (int)id);

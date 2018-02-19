@@ -13,28 +13,22 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WpfApp_TestSecurity.ViewModelManagers;
-using WpfApp_TestSecurity.ViewModels;
 
-namespace WpfApp_TestSecurity.Pages.Right
+namespace WpfApp_TestSecurity.Pages.Right.Controls.RoleControls
 {
     /// <summary>
-    /// Interaction logic for Main.xaml
+    /// Interaction logic for PolicyControl.xaml
     /// </summary>
-    public partial class Main : Page
+    public partial class PolicyControl : UserControl
     {
-        private readonly UserManager _userManager;
+        private PolicyManager _policyManager;
 
-        public Main(UserManager userManager)
+        public PolicyControl()
         {
-            _userManager = userManager;
-            DataContext = this;
             InitializeComponent();
+            _policyManager = IocConfig.Resolve<PolicyManager>();
+            DataContext = _policyManager;
         }
 
-        public UserViewModel SelectedItem
-        {
-            get => _userManager.SelectedItem;
-            set => _userManager.SelectedItem = value;
-        }
     }
 }

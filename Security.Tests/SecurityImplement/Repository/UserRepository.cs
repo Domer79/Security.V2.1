@@ -104,5 +104,15 @@ namespace Security.Tests.SecurityImplement.Repository
         {
             throw new NotImplementedException();
         }
+
+        public User CreateEmpty(string prefixForRequired)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<User> CreateEmptyAsync(string prefixForRequired)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

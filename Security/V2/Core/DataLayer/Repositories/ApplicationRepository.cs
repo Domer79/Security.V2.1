@@ -33,6 +33,16 @@ namespace Security.V2.Core.DataLayer.Repositories
             return entity;
         }
 
+        public Application CreateEmpty(string prefixForRequired)
+        {
+            throw new NotSupportedException();
+        }
+
+        public Task<Application> CreateEmptyAsync(string prefixForRequired)
+        {
+            throw new NotSupportedException();
+        }
+
         public Application Get(object id)
         {
             return _commonDb.QuerySingle<Application>("select * from sec.Applications where idApplication = @id", new { id });
@@ -70,7 +80,7 @@ namespace Security.V2.Core.DataLayer.Repositories
 
         public Task RemoveAsync(object id)
         {
-            throw new NotImplementedException();
+            throw new NotSupportedException();
         }
 
         public void Update(Application entity)
@@ -80,7 +90,7 @@ namespace Security.V2.Core.DataLayer.Repositories
 
         public Task UpdateAsync(Application entity)
         {
-            throw new NotImplementedException();
+            throw new NotSupportedException();
         }
     }
 }

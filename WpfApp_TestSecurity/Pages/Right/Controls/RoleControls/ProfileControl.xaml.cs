@@ -1,12 +1,9 @@
 ﻿using System.ComponentModel;
-using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Navigation;
 using WpfApp_TestSecurity.ViewModelManagers;
-using WpfApp_TestSecurity.ViewModels;
 
-namespace WpfApp_TestSecurity.Pages.Right.Controls.UserControls
+namespace WpfApp_TestSecurity.Pages.Right.Controls.RoleControls
 {
     /// <summary>
     /// Interaction logic for ProfileControl.xaml
@@ -14,7 +11,7 @@ namespace WpfApp_TestSecurity.Pages.Right.Controls.UserControls
     public partial class ProfileControl : UserControl
     {
         private AccessSetupPage _accessSetupPage;
-        private UserManager _userManager;
+        private RoleManager _roleManager;
 
         public ProfileControl()
         {
@@ -27,9 +24,9 @@ namespace WpfApp_TestSecurity.Pages.Right.Controls.UserControls
             if (!DesignerProperties.GetIsInDesignMode(this))
             {
                 _accessSetupPage = IocConfig.Resolve<AccessSetupPage>();
-                _userManager = IocConfig.Resolve<UserManager>();
+                _roleManager = IocConfig.Resolve<RoleManager>();
             }
-            DataContext = _userManager;
+            DataContext = _roleManager;
         }
     }
 }

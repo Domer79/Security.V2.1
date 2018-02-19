@@ -17,7 +17,7 @@
             <MenuItem x:Name="_addMenuItem" Header="_Добавить" Click="AddMenuItem_OnClick"></MenuItem>
             <MenuItem x:Name="_deleteMenuItem" Header="_Удалить" Command="{Binding Path=DeleteCommand}" CommandParameter="{Binding ElementName=_roleList, Path=SelectedItem}"></MenuItem>
         </Menu>
-        <ListBox x:Name="_roleList" Grid.Row="1" SelectionChanged="_roleList_OnSelectionChanged">
+        <ListBox x:Name="_roleList" Grid.Row="1" SelectedItem="{Binding Path=SelectedItem}">
             <ListBox.ItemsSource>
                 <Binding Path="RoleList" IsAsync="True"></Binding>
             </ListBox.ItemsSource>

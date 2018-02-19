@@ -19,6 +19,16 @@ namespace Security.Tests.SecurityImplement.Repository
             _applicationContext = applicationContext;
         }
 
+        public IEnumerable<SecObject> GetExceptRoleGrant(string role)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IEnumerable<SecObject>> GetExceptRoleGrantAsync(string role)
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<SecObject> GetRoleGrants(string role)
         {
             var entity = Database.Roles.First(_ => _.Name == role);

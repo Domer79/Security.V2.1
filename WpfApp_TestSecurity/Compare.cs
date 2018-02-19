@@ -14,6 +14,7 @@ namespace WpfApp_TestSecurity
         {
             Configure<UserViewModel>().Compile.Now();
             Configure<RoleViewModel>().Compile.Now();
+            Configure<PolicyViewModel>().Compile.Now();
         }
     }
 }

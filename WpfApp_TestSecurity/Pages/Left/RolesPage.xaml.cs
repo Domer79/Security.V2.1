@@ -1,18 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using WpfApp_TestSecurity.Annotations;
 using WpfApp_TestSecurity.Infrastructure;
 using WpfApp_TestSecurity.Pages.Right;
 using WpfApp_TestSecurity.ViewModelManagers;
@@ -23,16 +15,16 @@ namespace WpfApp_TestSecurity.Pages.Left
     /// <summary>
     /// Interaction logic for Roles.xaml
     /// </summary>
-    public partial class RolesPage : Page
+    public partial class RolesPage : Page, INotifyPropertyChanged
     {
         private readonly RoleManager _roleManager;
         private readonly AccessSetupPage _accessSetupPage;
         private readonly RoleEditPage _roleEditPage;
-        private object _prevSelectedItem;
 
         public RolesPage(RoleManager roleManager, AccessSetupPage accessSetupPage, RoleEditPage roleEditPage)
         {
             _roleManager = roleManager;
+            _roleManager.PropertyChanged += _roleManager_PropertyChanged;
             _accessSetupPage = accessSetupPage;
             _roleEditPage = roleEditPage;
             RoleList = _roleManager.Items;
@@ -41,10 +33,16 @@ namespace WpfApp_TestSecurity.Pages.Left
             InitializeComponent();
         }
 
+        private void _roleManager_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName == "SelectedItem")
+                OnPropertyChanged("SelectedItem");
+        }
+
         private void DeleteItem(object obj)
         {
             var roleViewModel = (RoleViewModel)obj;
-            if (MessageBox.Show($"Подтвердите удаление пользователя {roleViewModel.Name}", "Внимание!", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            if (MessageBox.Show($"Подтвердите удаление роли {roleViewModel.Name}", "Внимание!", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                 _roleManager.Items.Remove(roleViewModel);
         }
 
@@ -55,24 +53,32 @@ namespace WpfApp_TestSecurity.Pages.Left
 
         private void AddMenuItem_OnClick(object sender, RoutedEventArgs e)
         {
-            _accessSetupPage._rightFrame.NavigationService.Navigate(_roleEditPage, new RoleViewModel());
-        }
-
-        private void _roleList_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (e.AddedItems.Count == 0)
-            {
-                _roleList.SelectedItem = _prevSelectedItem;
-                return;
-            }
-
-            _roleManager.SelectedItem = (RoleViewModel)e.AddedItems[0];
-            _prevSelectedItem = e.RemovedItems.Count == 0 ? null : (RoleViewModel)e.RemovedItems[0];
-            _accessSetupPage._rightFrame.NavigationService.Navigate(_roleEditPage, _roleManager.SelectedItem);
+            _roleManager.CreateEmptyItem();
+            _accessSetupPage._rightFrame.NavigationService.Navigate(_roleEditPage);
         }
 
         public ICommand DeleteCommand { get; set; }
 
         public ObservableCollection<RoleViewModel> RoleList { get; }
+
+        public RoleViewModel SelectedItem
+        {
+            get { return _roleManager.SelectedItem; }
+            set
+            {
+                if (Equals(value, _roleManager.SelectedItem)) return;
+                _roleManager.SelectedItem = value;
+                OnPropertyChanged();
+                _accessSetupPage._rightFrame.NavigationService.Navigate(_roleEditPage);
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        [NotifyPropertyChangedInvocator]
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
     }
 }

@@ -8,12 +8,10 @@ namespace WpfApp_TestSecurity.Pages.Right
     /// </summary>
     public partial class RoleEditPage : Page
     {
-        private readonly AccessSetupPage _accessSetupPage;
         private readonly RoleManager _roleManager;
 
-        public RoleEditPage(AccessSetupPage accessSetupPage, RoleManager roleManager)
+        public RoleEditPage(RoleManager roleManager)
         {
-            _accessSetupPage = accessSetupPage;
             _roleManager = roleManager;
             DataContext = roleManager;
             InitializeComponent();

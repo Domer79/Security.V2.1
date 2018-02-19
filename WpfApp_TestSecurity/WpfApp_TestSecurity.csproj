@@ -69,18 +69,25 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Compare.cs" />
+    <Compile Include="Dialogs\DialogHelper.cs" />
+    <Compile Include="Dialogs\SelectItemsDialog.xaml.cs">
+      <DependentUpon>SelectItemsDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Infrastructure\SecurityObservableCollection.cs" />
     <Compile Include="IocConfig.cs" />
     <Compile Include="MapperMappings.cs" />
     <Compile Include="Infrastructure\RelayCommand.cs" />
+    <Compile Include="Pages\Right\Controls\RoleControls\PolicyControl.xaml.cs">
+      <DependentUpon>PolicyControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Right\Controls\RoleControls\ProfileControl.xaml.cs">
+      <DependentUpon>ProfileControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Right\Controls\UserControls\ProfileControl.xaml.cs">
       <DependentUpon>ProfileControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Right\Controls\UserControls\UserRolesControl.xaml.cs">
       <DependentUpon>UserRolesControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\Right\Main.xaml.cs">
-      <DependentUpon>Main.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Right\RoleEditPage.xaml.cs">
       <DependentUpon>RoleEditPage.xaml</DependentUpon>
@@ -90,12 +97,18 @@
     </Compile>
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="ViewModelManagers\BaseManager.cs" />
+    <Compile Include="ViewModelManagers\PolicyManager.cs" />
     <Compile Include="ViewModelManagers\RoleManager.cs" />
     <Compile Include="ViewModelManagers\UserManager.cs" />
     <Compile Include="ViewModelManagers\UserRolesManager.cs" />
     <Compile Include="ViewModels\RoleViewModel.cs" />
+    <Compile Include="ViewModels\PolicyViewModel.cs" />
     <Compile Include="ViewModels\UserViewModel.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Page Include="Dialogs\SelectItemsDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\AccessSetupPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -123,15 +136,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\Right\Controls\RoleControls\PolicyControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Right\Controls\RoleControls\ProfileControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Right\Controls\UserControls\ProfileControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Right\Controls\UserControls\UserRolesControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\Right\Main.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

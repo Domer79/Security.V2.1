@@ -19,6 +19,7 @@ namespace WpfApp_TestSecurity
 
                 cfg.CreateMap<User, UserViewModel>();
                 cfg.CreateMap<Role, RoleViewModel>();
+                cfg.CreateMap<SecObject, PolicyViewModel>().ForMember(p => p.Name, e => e.MapFrom(s => s.ObjectName));
 
                 #endregion
 
@@ -26,11 +27,13 @@ namespace WpfApp_TestSecurity
 
                 cfg.CreateMap<UserViewModel, User>();
                 cfg.CreateMap<RoleViewModel, Role>();
+                cfg.CreateMap<PolicyViewModel, SecObject>().ForMember(s => s.ObjectName, e => e.MapFrom(s => s.Name));
 
                 #endregion
 
                 cfg.CreateMap<UserViewModel, UserViewModel>();
                 cfg.CreateMap<RoleViewModel, RoleViewModel>();
+                cfg.CreateMap<PolicyViewModel, PolicyViewModel>();
             });
         }
     }

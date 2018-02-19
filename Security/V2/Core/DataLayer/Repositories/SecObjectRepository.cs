@@ -40,6 +40,32 @@ select SCOPE_IDENTITY()
             return entity;
         }
 
+        public SecObject CreateEmpty(string prefixForRequired)
+        {
+            var idRole = _commonDb.ExecuteScalar<int>(@"
+declare @ident int = IDENT_CURRENT('sec.SecObject')
+declare @name nvarchar(200) = concat(@prefix, @ident)
+
+insert into sec.Roles(objectName, idApplication) values(@name, @idApplication)
+select SCOPE_IDENTITY()
+", new { prefix = prefixForRequired, idApplication = _context.Application.IdApplication });
+
+            return Get(idRole);
+        }
+
+        public async Task<SecObject> CreateEmptyAsync(string prefixForRequired)
+        {
+            var idRole = await _commonDb.ExecuteScalarAsync<int>(@"
+declare @ident int = IDENT_CURRENT('sec.SecObject')
+declare @name nvarchar(200) = concat(@prefix, @ident)
+
+insert into sec.Roles(objectName, idApplication) values(@name, @idApplication)
+select SCOPE_IDENTITY()
+", new { prefix = prefixForRequired, idApplication = _context.Application.IdApplication }).ConfigureAwait(false);
+
+            return await GetAsync(idRole);
+        }
+
         public SecObject Get(object id)
         {
             return _commonDb.QuerySingle<SecObject>("select * from sec.SecObjects where idSecObject = @id", new {id});

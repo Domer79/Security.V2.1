@@ -33,10 +33,39 @@ select SCOPE_IDENTITY()
         public async Task<Role> CreateAsync(Role entity)
         {
             entity.IdApplication = _context.Application.IdApplication;
-            var id = _commonDb.ExecuteScalarAsync<int>("insert into sec.Roles(name, description, idApplication) values(@name, @description, @idApplication)", entity);
+            var id = _commonDb.ExecuteScalarAsync<int>(@"
+insert into sec.Roles(name, description, idApplication) values(@name, @description, @idApplication)
+select SCOPE_IDENTITY()
+", entity);
 
             entity.IdRole = await id;
             return entity;
+        }
+
+        public Role CreateEmpty(string prefixForRequired)
+        {
+            var idRole = _commonDb.ExecuteScalar<int>(@"
+declare @ident int = IDENT_CURRENT('sec.Roles')
+declare @name nvarchar(200) = concat(@prefix, @ident)
+
+insert into sec.Roles(name, idApplication) values(@name, @idApplication)
+select SCOPE_IDENTITY()
+", new {prefix = prefixForRequired, idApplication = _context.Application.IdApplication});
+
+            return Get(idRole);
+        }
+
+        public async Task<Role> CreateEmptyAsync(string prefixForRequired)
+        {
+            var idRole = await _commonDb.ExecuteScalarAsync<int>(@"
+declare @ident int = IDENT_CURRENT('sec.Roles')
+declare @name nvarchar(200) = concat(@prefix, @ident)
+
+insert into sec.Roles(name, idApplication) values(@name, @idApplication)
+select SCOPE_IDENTITY()
+", new { prefix = prefixForRequired, idApplication = _context.Application.IdApplication }).ConfigureAwait(false);
+
+            return await GetAsync(idRole);
         }
 
         public Role Get(object id)

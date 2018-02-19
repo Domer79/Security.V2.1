@@ -36,6 +36,20 @@ namespace Security.V2.Core.DataLayer.Repositories
             return entity;
         }
 
+        public User CreateEmpty(string prefixForRequired)
+        {
+            var idMember = _commonDb.ExecuteScalar<int>("exec sec.AddEmptyUser @id, @prefix", new { id = Guid.NewGuid(), prefix = prefixForRequired });
+
+            return Get(idMember);
+        }
+
+        public async Task<User> CreateEmptyAsync(string prefixForRequired)
+        {
+            var idMember = await _commonDb.ExecuteScalarAsync<int>("exec sec.AddEmptyUser @id, @prefix", new { id = Guid.NewGuid(), prefix = prefixForRequired }).ConfigureAwait(false);
+
+            return await GetAsync(idMember);
+        }
+
         public User Get(object id)
         {
             return _commonDb.QuerySingle<User>("select * from sec.UsersView where idMember = @id", new {id});

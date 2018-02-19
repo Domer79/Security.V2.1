@@ -15,9 +15,9 @@
         </Grid.RowDefinitions>
         <Menu Grid.Row="0">
             <MenuItem Header="_Добавить" Click="AddMenuItem_OnClick"></MenuItem>
-            <MenuItem Header="_Удалить" Command="{Binding Path=DeleteCommand}" CommandParameter="{Binding ElementName=_userList, Path=SelectedItem}"></MenuItem>
+            <MenuItem Header="_Удалить" Command="{Binding Path=DeleteCommand}" CommandParameter="{Binding ElementName=_userList, Path=SelectedItem, Mode=TwoWay}"></MenuItem>
         </Menu>
-        <ListBox x:Name="_userList" Grid.Row="1" SelectionChanged="_userList_OnSelectionChanged">
+        <ListBox x:Name="_userList" Grid.Row="1" SelectedItem="{Binding Path=SelectedItem}">
             <ListBox.ItemsSource>
                 <Binding Path="UserList" IsAsync="True"></Binding>
             </ListBox.ItemsSource>

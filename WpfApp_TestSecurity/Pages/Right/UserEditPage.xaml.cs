@@ -10,13 +10,11 @@ namespace WpfApp_TestSecurity.Pages.Right
     /// </summary>
     public partial class UserEditPage : PageFunction<UserViewModel>
     {
-        private readonly AccessSetupPage _accessSetupPage;
         private readonly UserManager _userManager;
         
 
-        public UserEditPage(AccessSetupPage accessSetupPage, UserManager userManager)
+        public UserEditPage(UserManager userManager)
         {
-            _accessSetupPage = accessSetupPage;
             _userManager = userManager;
             DataContext = userManager;
             InitializeComponent();

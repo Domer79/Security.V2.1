@@ -22,6 +22,16 @@ namespace Security.Tests.SecurityImplement.Repository
             throw new System.NotImplementedException();
         }
 
+        public Group CreateEmpty(string prefixForRequired)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Task<Group> CreateEmptyAsync(string prefixForRequired)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public Group Get(object id)
         {
             return Database.Groups.SingleOrDefault(_ => _.IdMember == (int)id);

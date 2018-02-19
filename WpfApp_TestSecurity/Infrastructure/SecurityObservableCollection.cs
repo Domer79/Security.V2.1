@@ -15,5 +15,10 @@ namespace WpfApp_TestSecurity.Infrastructure
         {
             base.SetItem(index, item);
         }
+
+        protected override void ClearItems()
+        {
+            base.ClearItems();
+        }
     }
 }
