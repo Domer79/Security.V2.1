@@ -8,6 +8,8 @@ namespace WpfApp_TestSecurity.AbonentBL.Models
 {
     public class Abonent
     {
+        public int Id { get; set; }
+
         public string Inn { get; set; }
 
         public string ShortName { get; set; }
@@ -16,7 +18,7 @@ namespace WpfApp_TestSecurity.AbonentBL.Models
 
         public string Address { get; set; }
 
-        public string PhoneNumbers { get; set; }
+        public string Phones { get; set; }
 
         public string ManagerFullName { get; set; }
 

@@ -14,8 +14,10 @@ namespace WpfApp_TestSecurity.ViewModels
         private string _agentPhones;
         private string _agent;
         private string _managerFullName;
-        private string _phoneNumbers;
+        private string _phones;
         private string _address;
+
+        public int Id { get; set; }
 
         public string Inn
         {
@@ -61,13 +63,13 @@ namespace WpfApp_TestSecurity.ViewModels
             }
         }
 
-        public string PhoneNumbers
+        public string Phones
         {
-            get { return _phoneNumbers; }
+            get { return _phones; }
             set
             {
-                if (value == _phoneNumbers) return;
-                _phoneNumbers = value;
+                if (value == _phones) return;
+                _phones = value;
                 OnPropertyChanged();
             }
         }

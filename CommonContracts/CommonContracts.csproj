@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ICommonDb.cs" />
+    <Compile Include="IConnectionFactory.cs" />
     <Compile Include="IEntityCollectionInfo.cs" />
     <Compile Include="IGlobalSettings.cs" />
     <Compile Include="IRepository.cs" />

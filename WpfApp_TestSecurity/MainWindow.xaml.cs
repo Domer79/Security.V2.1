@@ -24,6 +24,7 @@ namespace WpfApp_TestSecurity
     {
         private ILogger _logger = LogManager.GetCurrentClassLogger();
         private static Frame _mainFrame;
+        private static MainWindow _self;
 
         public MainWindow()
         {
@@ -36,7 +37,8 @@ namespace WpfApp_TestSecurity
             try
             {
                 _mainFrame = _frame;
-                _frame.Navigate(new Abonents());
+                _self = this;
+                _frame.Navigate(IocConfig.Resolve<Abonents>());
             }
             catch (Exception ex)
             {
@@ -67,5 +69,7 @@ namespace WpfApp_TestSecurity
         {
             get { return _mainFrame; }
         }
+
+        public static MainWindow Self => _self;
     }
 }

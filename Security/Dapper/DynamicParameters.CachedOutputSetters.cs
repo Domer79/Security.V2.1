@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace Dapper
+namespace Security.Dapper
 {
     public partial class DynamicParameters
     {

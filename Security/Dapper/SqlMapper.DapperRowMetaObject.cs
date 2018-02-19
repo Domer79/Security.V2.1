@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Reflection;
-namespace Dapper
+
+namespace Security.Dapper
 {
     public static partial class SqlMapper
     {

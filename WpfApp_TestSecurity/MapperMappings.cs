@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
 using Security.Model;
+using WpfApp_TestSecurity.AbonentBL.Models;
 using WpfApp_TestSecurity.ViewModels;
 
 namespace WpfApp_TestSecurity
@@ -20,6 +21,7 @@ namespace WpfApp_TestSecurity
                 cfg.CreateMap<User, UserViewModel>();
                 cfg.CreateMap<Role, RoleViewModel>();
                 cfg.CreateMap<SecObject, PolicyViewModel>().ForMember(p => p.Name, e => e.MapFrom(s => s.ObjectName));
+                cfg.CreateMap<Abonent, AbonentViewModel>();
 
                 #endregion
 
@@ -28,6 +30,7 @@ namespace WpfApp_TestSecurity
                 cfg.CreateMap<UserViewModel, User>();
                 cfg.CreateMap<RoleViewModel, Role>();
                 cfg.CreateMap<PolicyViewModel, SecObject>().ForMember(s => s.ObjectName, e => e.MapFrom(s => s.Name));
+                cfg.CreateMap<AbonentViewModel, Abonent>();
 
                 #endregion
 

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp_TestSecurity.ViewModelManagers;
 
 namespace WpfApp_TestSecurity.Pages
 {
@@ -20,9 +21,13 @@ namespace WpfApp_TestSecurity.Pages
     /// </summary>
     public partial class Abonents : Page
     {
-        public Abonents()
+        private readonly AbonentManager _abonentManager;
+
+        public Abonents(AbonentManager abonentManager)
         {
+            _abonentManager = abonentManager;
             InitializeComponent();
+            DataContext = _abonentManager;
             Loaded += Abonents_Loaded;
         }
 
@@ -34,7 +39,7 @@ namespace WpfApp_TestSecurity.Pages
                 return;
             }
 
-            if (!Principal.CheckAccess(Policies.AbonentsPage))
+            if (!Principal.CheckAccess(Policy.AbonentsPage))
             {
                 NavigationService.Navigate(IocConfig.Resolve<AccessDeniedPage>());
                 return;

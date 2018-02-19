@@ -1,4 +1,4 @@
-﻿namespace Dapper
+﻿namespace Security.Dapper
 {
     public static partial class SqlMapper
     {

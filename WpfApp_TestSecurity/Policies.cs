@@ -9,12 +9,11 @@ namespace WpfApp_TestSecurity
 {
     public class Policies
     {
-        public const string AbonentsPage = "AbonentsPage";
 
         public static string[] GetAllPolicies()
         {
-            var members = typeof(Policies).GetFields().Where(fi => fi.IsLiteral && !fi.IsInitOnly);
-            return members.Select(fi => (string)fi.GetValue(null)).ToArray();
+            var members = typeof(Policy).GetFields().Where(fi => fi.FieldType == typeof(Policy));
+            return members.Select(fi => fi.Name).ToArray();
         }
     }
 }

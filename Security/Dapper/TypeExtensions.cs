@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Reflection;
-using System.Collections.Generic;
 
-namespace Dapper
+namespace Security.Dapper
 {
     internal static class TypeExtensions
     {

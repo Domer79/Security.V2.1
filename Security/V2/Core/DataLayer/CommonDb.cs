@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Dapper;
+using Security.Dapper;
 using Security.V2.CommonContracts;
 using Security.V2.Contracts;
 

@@ -22,10 +22,10 @@ namespace WpfApp_TestSecurity
             }
         }
 
-        public static bool CheckAccess(string policy)
+        public static bool CheckAccess(Policy policy)
         {
             var security = IocConfig.Resolve<ISecurity>();
-            return security.CheckAccess(Identity.Name, policy);
+            return security.CheckAccess(Identity.Name, policy.ToString());
         }
     }
 

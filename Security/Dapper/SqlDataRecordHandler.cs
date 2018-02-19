@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 
-namespace Dapper
+namespace Security.Dapper
 {
     internal sealed class SqlDataRecordHandler : SqlMapper.ITypeHandler
     {

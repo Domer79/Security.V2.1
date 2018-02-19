@@ -21,6 +21,9 @@ namespace WpfApp_TestSecurity
         {
             if (!Principal.Identity.IsAuthenticated)
                 NavigationService.Navigate(IocConfig.Resolve<LoginPage>());
+
+            if (!Principal.CheckAccess(Policy.SecurityAccess))
+                NavigationService.Navigate(IocConfig.Resolve<AccessDeniedPage>());
         }
 
         private void _userMenuItem_OnClick(object sender, RoutedEventArgs e)

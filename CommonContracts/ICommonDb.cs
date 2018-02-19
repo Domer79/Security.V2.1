@@ -6,8 +6,8 @@ namespace CommonContracts
 {
     public interface ICommonDb
     {
-        string GetConnectionString();
-        IDbConnection GetConnection();
+//        string GetConnectionString();
+//        IDbConnection GetConnection();
         IEnumerable<T> Query<T>(string query, object parameters = null);
         T ExecuteScalar<T>(string query, object parameters = null);
         int ExecuteNonQuery(string query, object parameters = null);

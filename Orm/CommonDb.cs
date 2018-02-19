@@ -10,26 +10,16 @@ namespace Orm
 {
     public class CommonDb: ICommonDb
     {
-        private readonly IGlobalSettings _settings;
+        private readonly IConnectionFactory _connectionFactory;
 
-        public CommonDb(IGlobalSettings settings)
+        public CommonDb(IConnectionFactory connectionFactory)
         {
-            _settings = settings;
-        }
-
-        public string GetConnectionString()
-        {
-            return _settings.DefaultConnectionString;
-        }
-
-        public IDbConnection GetConnection()
-        {
-            return new SqlConnection(GetConnectionString());
+            _connectionFactory = connectionFactory;
         }
 
         public IEnumerable<T> Query<T>(string query, object parameters = null)
         {
-            using (var connection = new SqlConnection(GetConnectionString()))
+            using (var connection = _connectionFactory.CreateConnection())
             {
                 return connection.Query<T>(query, parameters);
             }
@@ -37,7 +27,7 @@ namespace Orm
 
         public T ExecuteScalar<T>(string query, object parameters = null)
         {
-            using (var connection = new SqlConnection(GetConnectionString()))
+            using (var connection = _connectionFactory.CreateConnection())
             {
                 return connection.ExecuteScalar<T>(query, parameters);
             }
@@ -45,7 +35,7 @@ namespace Orm
 
         public int ExecuteNonQuery(string query, object parameters = null)
         {
-            using (var connection = new SqlConnection(GetConnectionString()))
+            using (var connection = _connectionFactory.CreateConnection())
             {
                 return connection.Execute(query, parameters);
             }
@@ -53,7 +43,8 @@ namespace Orm
 
         public void CreateDatabaseIfNotExists()
         {
-            var connectionString = GetConnectionString();
+            var dbConnection = _connectionFactory.CreateConnection();
+            var connectionString = dbConnection.ConnectionString;
             var dbName = GetDbName(connectionString);
 
             var builder = new SqlConnectionStringBuilder(connectionString);
@@ -76,7 +67,7 @@ namespace Orm
 
         public IEnumerable<TReturn> Query<T1, T2, TReturn>(string query, Func<T1, T2, TReturn> p, object parameters = null)
         {
-            using (var connection = new SqlConnection(query))
+            using (var connection = _connectionFactory.CreateConnection())
             {
                 return connection.Query<T1, T2, TReturn>(query, p, parameters);
             }
@@ -90,7 +81,7 @@ namespace Orm
 
         private bool DatabaseExists(string dbName, string connectionString)
         {
-            using (var connection = new SqlConnection(connectionString))
+            using (var connection = _connectionFactory.CreateConnection())
             {
                 try
                 {
