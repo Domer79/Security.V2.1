@@ -44,6 +44,9 @@
     <Reference Include="AutoMapper, Version=6.2.2.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
       <HintPath>..\packages\AutoMapper.6.2.2\lib\net45\AutoMapper.dll</HintPath>
     </Reference>
+    <Reference Include="Dapper, Version=1.50.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.4\lib\net451\Dapper.dll</HintPath>
+    </Reference>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
       <HintPath>..\packages\NLog.4.4.12\lib\net45\NLog.dll</HintPath>
     </Reference>
@@ -71,12 +74,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AbonentBL\Models\Abonent.cs" />
+    <Compile Include="AbonentBL\Repositories\AbonentRepository.cs" />
+    <Compile Include="AbonentBL\Repositories\CommonDb.cs" />
     <Compile Include="Compare.cs" />
+    <Compile Include="Dialogs\AbonentEditor.xaml.cs">
+      <DependentUpon>AbonentEditor.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Dialogs\DialogHelper.cs" />
     <Compile Include="Dialogs\SelectItemsDialog.xaml.cs">
       <DependentUpon>SelectItemsDialog.xaml</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\SecurityObservableCollection.cs" />
+    <Compile Include="Interfaces\IConnectionFactory.cs" />
     <Compile Include="IocConfig.cs" />
     <Compile Include="MapperMappings.cs" />
     <Compile Include="Infrastructure\RelayCommand.cs" />
@@ -111,6 +121,7 @@
     <Compile Include="Principal.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="ViewModelManagers\BaseManager.cs" />
+    <Compile Include="ViewModels\AbonentViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModelManagers\PolicyManager.cs" />
     <Compile Include="ViewModelManagers\RoleManager.cs" />
@@ -120,6 +131,10 @@
     <Compile Include="ViewModels\PolicyViewModel.cs" />
     <Compile Include="ViewModels\UserViewModel.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Page Include="Dialogs\AbonentEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Dialogs\SelectItemsDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -229,6 +244,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CommonContracts\CommonContracts.csproj">
+      <Project>{943A1733-1B21-4D95-A4E1-D51A3FAE20A4}</Project>
+      <Name>CommonContracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Security.Model\Security.Model.csproj">
       <Project>{69F6D882-5A1E-49A9-B10C-A81AD937D188}</Project>
       <Name>Security.Model</Name>
