@@ -4,5 +4,6 @@
     {
         string MigrationAssemblyName { get; }
         string DefaultConnectionString { get; }
+        string SecurityServerAddress { get; }
     }
 }

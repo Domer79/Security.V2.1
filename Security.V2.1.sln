@@ -34,6 +34,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigTransform", "ConfigTr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp_TestSecurity", "WpfApp_TestSecurity\WpfApp_TestSecurity.csproj", "{1DFECA47-1603-4B4F-9437-8EEB79096629}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Security.WebApi", "Security.WebApi\Security.WebApi.csproj", "{9DDA98B9-FC5C-4C1F-B922-3B1901E23934}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -146,6 +148,14 @@ Global
 		{1DFECA47-1603-4B4F-9437-8EEB79096629}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1DFECA47-1603-4B4F-9437-8EEB79096629}.ReleasePackage|Any CPU.ActiveCfg = Release|Any CPU
 		{1DFECA47-1603-4B4F-9437-8EEB79096629}.ReleasePackage|Any CPU.Build.0 = Release|Any CPU
+		{9DDA98B9-FC5C-4C1F-B922-3B1901E23934}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DDA98B9-FC5C-4C1F-B922-3B1901E23934}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DDA98B9-FC5C-4C1F-B922-3B1901E23934}.DebugPackage|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DDA98B9-FC5C-4C1F-B922-3B1901E23934}.DebugPackage|Any CPU.Build.0 = Debug|Any CPU
+		{9DDA98B9-FC5C-4C1F-B922-3B1901E23934}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DDA98B9-FC5C-4C1F-B922-3B1901E23934}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DDA98B9-FC5C-4C1F-B922-3B1901E23934}.ReleasePackage|Any CPU.ActiveCfg = Release|Any CPU
+		{9DDA98B9-FC5C-4C1F-B922-3B1901E23934}.ReleasePackage|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

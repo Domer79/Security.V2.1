@@ -151,6 +151,7 @@
     <Compile Include="V2\Contracts\ISecurityObject.cs" />
     <Compile Include="V2\Contracts\Repository\IUserInternalRepository.cs" />
     <Compile Include="V2\Core\Config.cs" />
+    <Compile Include="V2\Core\Http\UserRepository.cs" />
     <Compile Include="V2\Core\IocConfig.cs" />
     <Compile Include="V2\Core\Ioc\AddInstanceEventArgs.cs" />
     <Compile Include="V2\Core\Ioc\AddInstanceHandler.cs" />
@@ -200,6 +201,7 @@
     <Compile Include="V2\Core\DataLayer\SqlConnectionFactory.cs" />
     <Compile Include="V2\Core\ApplicationContext.cs" />
     <Compile Include="V2\Core\SecuritySettings.cs" />
+    <Compile Include="V2\Core\SecurityWebClient.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Security.Interfaces\Security.Interfaces.csproj">

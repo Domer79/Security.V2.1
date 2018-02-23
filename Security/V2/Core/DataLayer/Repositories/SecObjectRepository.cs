@@ -46,7 +46,7 @@ select SCOPE_IDENTITY()
 declare @ident int = IDENT_CURRENT('sec.SecObject')
 declare @name nvarchar(200) = concat(@prefix, @ident)
 
-insert into sec.Roles(objectName, idApplication) values(@name, @idApplication)
+insert into sec.SecObjects(objectName, idApplication) values(@name, @idApplication)
 select SCOPE_IDENTITY()
 ", new { prefix = prefixForRequired, idApplication = _context.Application.IdApplication });
 
@@ -56,10 +56,10 @@ select SCOPE_IDENTITY()
         public async Task<SecObject> CreateEmptyAsync(string prefixForRequired)
         {
             var idRole = await _commonDb.ExecuteScalarAsync<int>(@"
-declare @ident int = IDENT_CURRENT('sec.SecObject')
+declare @ident int = IDENT_CURRENT('sec.SecObjects')
 declare @name nvarchar(200) = concat(@prefix, @ident)
 
-insert into sec.Roles(objectName, idApplication) values(@name, @idApplication)
+insert into sec.SecObjects(objectName, idApplication) values(@name, @idApplication)
 select SCOPE_IDENTITY()
 ", new { prefix = prefixForRequired, idApplication = _context.Application.IdApplication }).ConfigureAwait(false);
 

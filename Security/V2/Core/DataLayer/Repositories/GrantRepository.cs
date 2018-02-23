@@ -111,8 +111,8 @@ select
             _commonDb.ExecuteNonQuery(@"
 insert into sec.Grants(idRole, idSecObject)
 select
-	s.idSecObject,
-	r.idRole
+	r.idRole,
+	s.idSecObject
 from
 	(select idSecObject, idApplication from sec.SecObjects where idApplication = @idApplication and ObjectName in @objectNames) s left join (select idRole, idApplication from sec.Roles where idApplication = @idApplication and name = @roleName)r on s.idApplication = r.idApplication
 ", new { objectNames = secObjects, roleName = role, idApplication = _context.Application.IdApplication });
@@ -123,8 +123,8 @@ from
             return _commonDb.ExecuteNonQueryAsync(@"
 insert into sec.Grants(idRole, idSecObject)
 select
-	s.idSecObject,
-	r.idRole
+	r.idRole,
+	s.idSecObject
 from
 	(select idSecObject, idApplication from sec.SecObjects where idApplication = @idApplication and ObjectName in @objectNames) s left join (select idRole, idApplication from sec.Roles where idApplication = @idApplication and name = @roleName)r on s.idApplication = r.idApplication
 ", new { objectNames = secObjects, roleName = role, idApplication = _context.Application.IdApplication });

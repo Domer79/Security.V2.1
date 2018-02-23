@@ -30,12 +30,12 @@ namespace Security.V2.Core.DataLayer.Repositories
             return _commonDb.ExecuteScalarAsync<bool>("select sec.IsAllowByName(@secObject, @loginOrEmail, @appName)", new { secObject, loginOrEmail, _context.Application.AppName });
         }
 
-        public byte[] GetPassword(string loginOrEmail)
+        private byte[] GetPassword(string loginOrEmail)
         {
             return _commonDb.QueryFirstOrDefault<byte[]>("select u.password from sec.Users u inner join sec.Members m on u.idMember = m.idMember where m.name = @loginOrEmail or u.email = @loginOrEmail", new {loginOrEmail});
         }
 
-        public Task<byte[]> GetPasswordAsync(string loginOrEmail)
+        private Task<byte[]> GetPasswordAsync(string loginOrEmail)
         {
             return _commonDb.QueryFirstOrDefaultAsync<byte[]>("select u.password from sec.Users u inner join sec.Members m on u.idMember = m.idMember where m.name = @loginOrEmail or u.email = @loginOrEmail", new { loginOrEmail });
         }
