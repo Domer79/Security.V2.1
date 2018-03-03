@@ -197,9 +197,11 @@
     <Compile Include="Infrastructure\DelegatingHandlers\ApplicationContextRequestHandler.cs" />
     <Compile Include="Infrastructure\Filters\ExceptionActionFilter.cs" />
     <Compile Include="Infrastructure\Filters\LoggingActionFilter.cs" />
-    <Compile Include="Models\GrantModel.cs" />
     <Compile Include="Models\GrantsModel.cs" />
+    <Compile Include="Models\GroupUsersModel.cs" />
+    <Compile Include="Models\MemberRolesIdsModel.cs" />
     <Compile Include="Models\MemberRolesModel.cs" />
+    <Compile Include="Models\UserGroupsModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -230,6 +232,7 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

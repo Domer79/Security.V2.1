@@ -1,16 +1,32 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Security.V2.Contracts;
 using Security.V2.Contracts.Repository;
 
-namespace Security.V2.Core
+namespace SecurityHttp
 {
     public class SecurityWebClient : ISecurity
     {
-        public IUserRepository UserRepository => throw new NotImplementedException();
+        private string _appName;
+
+        public SecurityWebClient(string appName, string description = null)
+            : this(appName, description, IocConfig.GetLocator(appName))
+        {
+        }
+
+        internal SecurityWebClient(string appName, string description, IServiceLocator locator)
+        {
+            _appName = appName;
+            Locator = locator;
+
+            //Register application if not exists
+            Config.RegisterApplication(appName, description);
+        }
+
+        public IServiceLocator Locator { get; set; }
+
+
+        public IUserRepository UserRepository => Locator.Resolve<IUserRepository>();
 
         public IGroupRepository GroupRepository => throw new NotImplementedException();
 

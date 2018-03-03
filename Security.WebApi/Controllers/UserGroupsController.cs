@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using Security.Model;
 using Security.V2.Contracts.Repository;
+using Security.WebApi.Models;
 
 namespace Security.WebApi.Controllers
 {
@@ -63,17 +64,5 @@ namespace Security.WebApi.Controllers
             await _repo.AddGroupsToUserAsync(model.Groups, model.User);
             return Ok();
         }
-    }
-
-    public class GroupUsersModel
-    {
-        public string Group { get; set; }
-        public string[] Users { get; set; }
-    }
-
-    public class UserGroupsModel
-    {
-        public string User { get; set; }
-        public string[] Groups { get; set; }
     }
 }

@@ -8,7 +8,7 @@ using Security.V2.Core.Ioc.Scopes;
 
 namespace Security.V2.Core.Ioc
 {
-    internal static class Service
+    public static class Service
     {
         public static void InSingletonScope(this IDependency dependency)
         {

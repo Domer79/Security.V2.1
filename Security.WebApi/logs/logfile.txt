@@ -1,4 +1,88 @@
-2018-02-22 01:51:41.7987 Security.WebApi [MemberRoles/GetExceptRolesByIdMemberAsync] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/memberroles?idmember=1', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+2018-02-25 19:03:19.9649 Security.WebApi [User/CreateEmpty] | Method: GET, RequestUri: 'http://localhost:14797/api/user?prefixForRequired=new_user', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Connection: Keep-Alive
+  Host: localhost:14797
+  Content-Length: 0
+}
+2018-02-25 19:03:20.6521 Security.WebApi [User/CreateEmpty] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.User, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-02-25 19:03:23.7472 Security.WebApi [User/Post] | Method: POST, RequestUri: 'http://localhost:14797/api/user', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Expect: 100-continue
+  Host: localhost:14797
+  Content-Length: 326
+  Content-Type: application/json
+}
+2018-02-25 19:03:23.7572 Security.WebApi [User/Post] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.User, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-02-25 19:03:44.1346 Security.WebApi [User/CreateEmpty] | Method: GET, RequestUri: 'http://localhost:14797/api/user?prefixForRequired=new_user', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Connection: Keep-Alive
+  Host: localhost:14797
+  Content-Length: 0
+}
+2018-02-25 19:03:47.9320 Security.WebApi [User/CreateEmpty] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.User, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-02-25 19:03:48.2065 Security.WebApi [User/Post] | Method: POST, RequestUri: 'http://localhost:14797/api/user', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Expect: 100-continue
+  Host: localhost:14797
+  Content-Length: 326
+  Content-Type: application/json
+}
+2018-02-25 19:03:48.2065 Security.WebApi [User/Post] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.User, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-02-25 19:03:59.3800 Security.WebApi [User/CreateEmpty] | Method: GET, RequestUri: 'http://localhost:14797/api/user?prefixForRequired=new_user', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Connection: Keep-Alive
+  Host: localhost:14797
+  Content-Length: 0
+}
+2018-02-25 19:03:59.4345 Security.WebApi [User/CreateEmpty] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.User, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-02-25 19:03:59.6871 Security.WebApi [User/Post] | Method: POST, RequestUri: 'http://localhost:14797/api/user', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Expect: 100-continue
+  Host: localhost:14797
+  Content-Length: 326
+  Content-Type: application/json
+}
+2018-02-25 19:03:59.6871 Security.WebApi [User/Post] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.User, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-02-25 19:04:11.5368 Security.WebApi [User/CreateEmpty] | Method: GET, RequestUri: 'http://localhost:14797/api/user?prefixForRequired=new_user', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Connection: Keep-Alive
+  Host: localhost:14797
+  Content-Length: 0
+}
+2018-02-25 19:04:11.5513 Security.WebApi [User/CreateEmpty] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.User, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-02-25 19:04:11.7882 Security.WebApi [User/Post] | Method: POST, RequestUri: 'http://localhost:14797/api/user', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Expect: 100-continue
+  Host: localhost:14797
+  Content-Length: 326
+  Content-Type: application/json
+}
+2018-02-25 19:04:11.7952 Security.WebApi [User/Post] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.User, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-03-03 17:20:53.5179 Security.WebApi [Grants/SetGrants] | Method: PUT, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/grants/setmany', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
 {
   Cache-Control: no-cache
   Connection: keep-alive
@@ -7,20 +91,33 @@
   Accept-Encoding: deflate
   Host: localhost:14797
   User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 7448b2b5-84d3-4061-b70f-b082beb92c12
-  Content-Length: 0
+  Postman-Token: 76d2cd5b-6cac-445a-9860-f4f3416a591e
+  Content-Length: 77
+  Content-Type: application/json
 }
-2018-02-22 01:52:38.8230 Security.WebApi [MemberRoles/GetExceptRolesByIdMemberAsync] | 
-2018-02-22 01:52:38.8340 Security.WebApi System.InvalidOperationException: Последовательность не содержит элементов
-   в System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
-   в Security.Dapper.SqlMapper.ThrowZeroRows(Row row) в C:\Projects\Security.V2.1\Security\Dapper\SqlMapper.cs:строка 1159
-   в Security.Dapper.SqlMapper.QueryRowImpl[T](IDbConnection cnn, Row row, CommandDefinition& command, Type effectiveType) в C:\Projects\Security.V2.1\Security\Dapper\SqlMapper.cs:строка 1214
-   в Security.Dapper.SqlMapper.QuerySingle[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) в C:\Projects\Security.V2.1\Security\Dapper\SqlMapper.cs:строка 783
-   в Security.V2.Core.DataLayer.CommonDb.QuerySingle[T](String query, Object parameters) в C:\Projects\Security.V2.1\Security\V2\Core\DataLayer\CommonDb.cs:строка 105
-   в Security.V2.Core.ApplicationContext.GetApplication() в C:\Projects\Security.V2.1\Security\V2\Core\ApplicationContext.cs:строка 22
-   в Security.V2.Core.ApplicationContext.get_Application() в C:\Projects\Security.V2.1\Security\V2\Core\ApplicationContext.cs:строка 25
-   в Security.V2.Core.DataLayer.Repositories.MemberRoleRepository.GetExceptRolesByIdMemberAsync(Int32 idMember) в C:\Projects\Security.V2.1\Security\V2\Core\DataLayer\Repositories\MemberRoleRepository.cs:строка 134
-   в Security.WebApi.Controllers.MemberRolesController.<GetExceptRolesByIdMemberAsync>d__6.MoveNext() в C:\Projects\Security.V2.1\Security.WebApi\Controllers\MemberRolesController.cs:строка 54
+2018-03-03 17:22:28.2094 Security.WebApi [Grants/SetGrants] | 
+2018-03-03 17:22:38.9840 Security.WebApi System.Data.SqlClient.SqlException (0x80131904): Violation of PRIMARY KEY constraint 'PK_sec_Grants'. Cannot insert duplicate key in object 'sec.Grants'. The duplicate key value is (3842, 1003).
+The statement has been terminated.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   в System.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader(Boolean isInternal, Boolean forDescribeParameterEncryption)
+   в System.Data.SqlClient.SqlCommand.InternalEndExecuteNonQuery(IAsyncResult asyncResult, String endMethod, Boolean isInternal)
+   в System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   в System.Data.SqlClient.SqlCommand.EndExecuteNonQueryAsync(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
+   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   в System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   в Security.Dapper.SqlMapper.<ExecuteImplAsync>d__37.MoveNext() в C:\Projects\Security.V2.1\Security\Dapper\SqlMapper.Async.cs:строка 646
+--- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
+   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   в System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   в Security.WebApi.Controllers.GrantsController.<SetGrants>d__5.MoveNext() в C:\Projects\Security.V2.1\Security.WebApi\Controllers\GrantsController.cs:строка 51
 --- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
    в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
    в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
@@ -47,7 +144,9 @@
    в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
    в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
    в System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__6.MoveNext()
-2018-02-22 01:52:45.2067 Security.WebApi [MemberRoles/GetExceptRolesByIdMemberAsync] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/memberroles?idmember=1', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+ClientConnectionId:91e84ba7-c72f-48ce-b914-a4eab839703a
+Error Number: 2627, State: 1, Class: 14
+2018-03-03 17:25:10.6407 Security.WebApi [Grants/SetGrants] | Method: PUT, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/grants/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
 {
   Cache-Control: no-cache
   Connection: keep-alive
@@ -56,20 +155,33 @@
   Accept-Encoding: deflate
   Host: localhost:14797
   User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 422c4eee-c458-4ddc-b4ff-235efcfe06a9
-  Content-Length: 0
+  Postman-Token: c3392f2d-3cd4-4f56-8eba-517526694ffa
+  Content-Length: 77
+  Content-Type: application/json
 }
-2018-02-22 01:52:46.6611 Security.WebApi [MemberRoles/GetExceptRolesByIdMemberAsync] | 
-2018-02-22 01:52:46.6611 Security.WebApi System.InvalidOperationException: Последовательность не содержит элементов
-   в System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
-   в Security.Dapper.SqlMapper.ThrowZeroRows(Row row) в C:\Projects\Security.V2.1\Security\Dapper\SqlMapper.cs:строка 1159
-   в Security.Dapper.SqlMapper.QueryRowImpl[T](IDbConnection cnn, Row row, CommandDefinition& command, Type effectiveType) в C:\Projects\Security.V2.1\Security\Dapper\SqlMapper.cs:строка 1214
-   в Security.Dapper.SqlMapper.QuerySingle[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) в C:\Projects\Security.V2.1\Security\Dapper\SqlMapper.cs:строка 783
-   в Security.V2.Core.DataLayer.CommonDb.QuerySingle[T](String query, Object parameters) в C:\Projects\Security.V2.1\Security\V2\Core\DataLayer\CommonDb.cs:строка 105
-   в Security.V2.Core.ApplicationContext.GetApplication() в C:\Projects\Security.V2.1\Security\V2\Core\ApplicationContext.cs:строка 22
-   в Security.V2.Core.ApplicationContext.get_Application() в C:\Projects\Security.V2.1\Security\V2\Core\ApplicationContext.cs:строка 25
-   в Security.V2.Core.DataLayer.Repositories.MemberRoleRepository.GetExceptRolesByIdMemberAsync(Int32 idMember) в C:\Projects\Security.V2.1\Security\V2\Core\DataLayer\Repositories\MemberRoleRepository.cs:строка 134
-   в Security.WebApi.Controllers.MemberRolesController.<GetExceptRolesByIdMemberAsync>d__6.MoveNext() в C:\Projects\Security.V2.1\Security.WebApi\Controllers\MemberRolesController.cs:строка 54
+2018-03-03 17:25:15.1760 Security.WebApi [Grants/SetGrants] | 
+2018-03-03 17:25:15.1760 Security.WebApi System.Data.SqlClient.SqlException (0x80131904): Violation of PRIMARY KEY constraint 'PK_sec_Grants'. Cannot insert duplicate key in object 'sec.Grants'. The duplicate key value is (3842, 1003).
+The statement has been terminated.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   в System.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader(Boolean isInternal, Boolean forDescribeParameterEncryption)
+   в System.Data.SqlClient.SqlCommand.InternalEndExecuteNonQuery(IAsyncResult asyncResult, String endMethod, Boolean isInternal)
+   в System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   в System.Data.SqlClient.SqlCommand.EndExecuteNonQueryAsync(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
+   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   в System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   в Security.Dapper.SqlMapper.<ExecuteImplAsync>d__37.MoveNext() в C:\Projects\Security.V2.1\Security\Dapper\SqlMapper.Async.cs:строка 646
+--- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
+   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   в System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   в Security.WebApi.Controllers.GrantsController.<SetGrants>d__5.MoveNext() в C:\Projects\Security.V2.1\Security.WebApi\Controllers\GrantsController.cs:строка 50
 --- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
    в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
    в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
@@ -96,7 +208,9 @@
    в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
    в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
    в System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__6.MoveNext()
-2018-02-22 01:55:19.0952 Security.WebApi [MemberRoles/GetExceptRolesByIdMemberAsync] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/memberroles?idmember=1', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+ClientConnectionId:fc984812-43bb-4651-b192-0604b9af316a
+Error Number: 2627, State: 1, Class: 14
+2018-03-03 20:41:48.8120 Security.WebApi [MemberRoles/GetExceptRolesByMemberName] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/memberroles/except?member=garipovd', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
 {
   Cache-Control: no-cache
   Connection: keep-alive
@@ -105,14 +219,14 @@
   Accept-Encoding: deflate
   Host: localhost:14797
   User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 72ddf11f-19c2-49bf-ba04-a014eac7ccf7
+  Postman-Token: 6d728011-b8f3-4195-bed8-d14857443ffd
   Content-Length: 0
 }
-2018-02-22 01:55:23.6126 Security.WebApi [MemberRoles/GetExceptRolesByIdMemberAsync] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Role, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+2018-03-03 20:41:52.5796 Security.WebApi [MemberRoles/GetExceptRolesByMemberName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Role, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
 {
   Content-Type: application/json; charset=utf-8
 }
-2018-02-22 01:58:06.3489 Security.WebApi [MemberRoles/GetRolesByIdMemberAsync] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/memberroles?idmember=1', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+2018-03-03 20:42:41.5164 Security.WebApi [MemberRoles/GetExceptRolesByMemberName] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/memberroles/except?member=1', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
 {
   Cache-Control: no-cache
   Connection: keep-alive
@@ -121,14 +235,14 @@
   Accept-Encoding: deflate
   Host: localhost:14797
   User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: f2b587d0-e127-4679-9a24-cd7d1677c5de
+  Postman-Token: 2588f4e2-e53d-4a68-87d3-fca9f59af58e
   Content-Length: 0
 }
-2018-02-22 01:58:12.0106 Security.WebApi [MemberRoles/GetRolesByIdMemberAsync] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Role, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+2018-03-03 20:42:44.5702 Security.WebApi [MemberRoles/GetExceptRolesByMemberName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Role, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
 {
   Content-Type: application/json; charset=utf-8
 }
-2018-02-22 01:58:30.4514 Security.WebApi [MemberRoles/GetMembersByIdRoleAsync] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/memberroles?idrole=1003', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+2018-03-03 20:42:58.1709 Security.WebApi [MemberRoles/GetExceptRolesByMemberName] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/memberroles/except?member=1', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
 {
   Cache-Control: no-cache
   Connection: keep-alive
@@ -137,14 +251,14 @@
   Accept-Encoding: deflate
   Host: localhost:14797
   User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: f8bed724-0934-4124-8c83-1597c4643793
+  Postman-Token: 61516232-09f4-45e0-bfc5-cb90c92798b4
   Content-Length: 0
 }
-2018-02-22 01:58:36.6388 Security.WebApi [MemberRoles/GetMembersByIdRoleAsync] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Member, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+2018-03-03 20:43:07.2240 Security.WebApi [MemberRoles/GetExceptRolesByMemberName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Role, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
 {
   Content-Type: application/json; charset=utf-8
 }
-2018-02-22 01:58:56.7548 Security.WebApi [MemberRoles/GetRolesByIdMemberAsync] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/memberroles?idmember=1', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+2018-03-03 20:43:34.7379 Security.WebApi [MemberRoles/GetExceptRolesByMemberName] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/memberroles/except?member=1123', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
 {
   Cache-Control: no-cache
   Connection: keep-alive
@@ -153,14 +267,14 @@
   Accept-Encoding: deflate
   Host: localhost:14797
   User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: c7681a15-effb-4057-87c5-a257dee4e079
+  Postman-Token: 7f2f31a5-37a4-4f11-ab21-6effcb4bef18
   Content-Length: 0
 }
-2018-02-22 01:58:59.3022 Security.WebApi [MemberRoles/GetRolesByIdMemberAsync] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Role, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+2018-03-03 20:43:39.6985 Security.WebApi [MemberRoles/GetExceptRolesByMemberName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Role, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
 {
   Content-Type: application/json; charset=utf-8
 }
-2018-02-22 01:59:31.9700 Security.WebApi [MemberRoles/GetMembersByIdRoleAsync] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/memberroles?idrole=1', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+2018-03-03 20:43:45.5028 Security.WebApi [MemberRoles/GetExceptRolesByMemberName] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/memberroles/except?member=1123', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
 {
   Cache-Control: no-cache
   Connection: keep-alive
@@ -169,14 +283,14 @@
   Accept-Encoding: deflate
   Host: localhost:14797
   User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 74608e76-fa9a-40f1-bf49-bc5b21f0f05b
+  Postman-Token: c0934ff9-9220-4cd7-b250-90161fae20e3
   Content-Length: 0
 }
-2018-02-22 01:59:42.5603 Security.WebApi [MemberRoles/GetMembersByIdRoleAsync] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Member, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+2018-03-03 20:43:54.7826 Security.WebApi [MemberRoles/GetExceptRolesByMemberName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Role, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
 {
   Content-Type: application/json; charset=utf-8
 }
-2018-02-22 01:59:48.5117 Security.WebApi [MemberRoles/GetMembersByIdRoleAsync] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/memberroles?idrole=1', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+2018-03-03 20:43:58.4822 Security.WebApi [MemberRoles/GetExceptRolesByMemberName] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/memberroles/except?member=1123', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
 {
   Cache-Control: no-cache
   Connection: keep-alive
@@ -185,1361 +299,10 @@
   Accept-Encoding: deflate
   Host: localhost:14797
   User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 090da0cb-4dc1-452c-a812-63938b694148
+  Postman-Token: a3e42543-fda1-4fc6-8f5d-df630124be09
   Content-Length: 0
 }
-2018-02-22 01:59:55.3762 Security.WebApi [MemberRoles/GetMembersByIdRoleAsync] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Member, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+2018-03-03 20:45:18.4235 Security.WebApi [MemberRoles/GetExceptRolesByMemberName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Role, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
 {
   Content-Type: application/json; charset=utf-8
-}
-2018-02-22 02:00:01.3535 Security.WebApi [MemberRoles/GetMembersByIdRoleAsync] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/memberroles?idrole=1', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 6b403cdf-76b2-492f-87e6-0986234538a6
-  Content-Length: 0
-}
-2018-02-22 02:00:02.5222 Security.WebApi [MemberRoles/GetMembersByIdRoleAsync] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Member, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
-{
-  Content-Type: application/json; charset=utf-8
-}
-2018-02-22 02:00:50.9111 Security.WebApi [MemberRoles/GetMembersByIdRoleAsync] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/memberroles?idrole=1003', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: abb7daf2-346b-4864-9569-10c3f85fc6d3
-  Content-Length: 0
-}
-2018-02-22 02:00:51.7537 Security.WebApi [MemberRoles/GetMembersByIdRoleAsync] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Member, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
-{
-  Content-Type: application/json; charset=utf-8
-}
-2018-02-22 02:01:30.6912 Security.WebApi [MemberRoles/GetMembersByRoleNameAsync] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/memberroles?role=admin', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: d70cabf2-1187-4787-aa76-32a523ab4c7e
-  Content-Length: 0
-}
-2018-02-22 02:01:31.6950 Security.WebApi [MemberRoles/GetMembersByRoleNameAsync] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Member, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
-{
-  Content-Type: application/json; charset=utf-8
-}
-2018-02-22 02:03:26.2934 Security.WebApi [MemberRoles/GetRolesByMemberNameAsync] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/memberroles?member=garipovd', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: bd95e4bd-9596-4cc4-a44a-2ddcf36459fc
-  Content-Length: 0
-}
-2018-02-22 02:03:32.2315 Security.WebApi [MemberRoles/GetRolesByMemberNameAsync] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Role, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
-{
-  Content-Type: application/json; charset=utf-8
-}
-2018-02-22 02:14:49.8690 Security.WebApi [MemberRoles/GetExceptRolesByMemberNameAsync] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/memberroles/except/garipovd', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 7ef47da7-b1a5-4bbd-9d2d-7722af2cc4d4
-  Content-Length: 0
-}
-2018-02-22 02:14:52.3964 Security.WebApi [MemberRoles/GetExceptRolesByMemberNameAsync] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Role, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
-{
-  Content-Type: application/json; charset=utf-8
-}
-2018-02-22 02:23:59.0664 Security.WebApi [MemberRoles/AddRolesToMemberAsync] | Method: POST, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/memberroles/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 9545809e-ce22-434e-a6f2-31a003d3fe45
-  Content-Length: 43
-  Content-Type: application/json
-}
-2018-02-22 02:24:14.8812 Security.WebApi [MemberRoles/AddRolesToMemberAsync] | 
-2018-02-22 02:24:30.2796 Security.WebApi System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта.
-   в Security.WebApi.Controllers.MemberRolesController.<AddRolesToMemberAsync>d__4.MoveNext() в C:\Projects\Security.V2.1\Security.WebApi\Controllers\MemberRolesController.cs:строка 42
---- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
-   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   в System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__0.MoveNext()
---- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
-   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   в System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__1.MoveNext()
---- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
-   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   в System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()
---- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
-   в System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()
---- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
-   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   в System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__5.MoveNext()
---- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
-   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   в System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__5.MoveNext()
---- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
-   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   в System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__6.MoveNext()
-2018-02-22 02:25:16.6664 Security.WebApi [MemberRoles/AddRolesToMemberAsync] | Method: POST, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/memberroles/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 807a9d6a-808f-440f-9e09-bf48aa59aeb7
-  Content-Length: 43
-  Content-Type: application/json
-}
-2018-02-22 02:26:21.7974 Security.WebApi [MemberRoles/AddRolesToMemberAsync] | Method: POST, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/memberroles/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 5fef2855-ff0a-4f86-a273-77a0df05d540
-  Content-Length: 43
-  Content-Type: application/json
-}
-2018-02-22 02:26:32.1073 Security.WebApi [MemberRoles/AddRolesToMemberAsync] | 
-2018-02-22 02:26:39.0727 Security.WebApi System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта.
-   в Security.WebApi.Controllers.MemberRolesController.<AddRolesToMemberAsync>d__4.MoveNext() в C:\Projects\Security.V2.1\Security.WebApi\Controllers\MemberRolesController.cs:строка 42
---- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
-   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   в System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__0.MoveNext()
---- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
-   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   в System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__1.MoveNext()
---- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
-   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   в System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()
---- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
-   в System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()
---- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
-   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   в System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__5.MoveNext()
---- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
-   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   в System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__5.MoveNext()
---- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
-   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   в System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__6.MoveNext()
-2018-02-22 02:27:22.7825 Security.WebApi [MemberRoles/AddRolesToMemberAsync] | Method: POST, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/memberroles/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 490cac3d-6577-4bbb-8333-d8aed69c9a0e
-  Content-Length: 53
-  Content-Type: application/json
-}
-2018-02-22 02:27:37.7580 Security.WebApi [MemberRoles/AddRolesToMemberAsync] | StatusCode: 204, ReasonPhrase: 'No Content', Version: 1.1, Content: <null>, Headers:
-{
-}
-2018-02-22 02:32:03.5208 Security.WebApi [MemberRoles/DeleteRolesFromMemberAsync] | Method: DELETE, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/memberroles/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 27d8f76d-ce94-446e-a9e1-070aaaed0c2f
-  Content-Length: 41
-  Content-Type: application/json
-}
-2018-02-22 02:32:56.4562 Security.WebApi [MemberRoles/DeleteRolesFromMemberAsync] | 
-2018-02-22 02:32:56.4562 Security.WebApi System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта.
-   в Security.WebApi.Controllers.MemberRolesController.<DeleteRolesFromMemberAsync>d__5.MoveNext() в C:\Projects\Security.V2.1\Security.WebApi\Controllers\MemberRolesController.cs:строка 48
---- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
-   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   в System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__0.MoveNext()
---- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
-   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   в System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__1.MoveNext()
---- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
-   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   в System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()
---- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
-   в System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()
---- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
-   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   в System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__5.MoveNext()
---- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
-   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   в System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__5.MoveNext()
---- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
-   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   в System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__6.MoveNext()
-2018-02-22 02:33:07.5023 Security.WebApi [MemberRoles/DeleteRolesFromMemberAsync] | Method: DELETE, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/memberroles/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 48c35bf3-a849-4a1f-adb3-0359e3b28f38
-  Content-Length: 37
-  Content-Type: application/json
-}
-2018-02-22 02:40:58.4341 Security.WebApi [MemberRoles/DeleteRolesFromMemberAsync] | 
-2018-02-22 02:40:58.4401 Security.WebApi System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта.
-   в Security.WebApi.Controllers.MemberRolesController.<DeleteRolesFromMemberAsync>d__5.MoveNext() в C:\Projects\Security.V2.1\Security.WebApi\Controllers\MemberRolesController.cs:строка 48
---- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
-   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   в System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__0.MoveNext()
---- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
-   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   в System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__1.MoveNext()
---- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
-   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   в System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()
---- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
-   в System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()
---- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
-   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   в System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__5.MoveNext()
---- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
-   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   в System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__5.MoveNext()
---- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
-   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   в System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__6.MoveNext()
-2018-02-22 02:41:03.3318 Security.WebApi System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details.
-   в System.Web.Http.ModelBinding.FormatterParameterBinding.ReadContentAsync(HttpRequestMessage request, Type type, IEnumerable`1 formatters, IFormatterLogger formatterLogger, CancellationToken cancellationToken)
-   в System.Web.Http.ModelBinding.FormatterParameterBinding.ReadContentAsync(HttpRequestMessage request, Type type, IEnumerable`1 formatters, IFormatterLogger formatterLogger)
-   в System.Web.Http.ModelBinding.FormatterParameterBinding.<ExecuteBindingAsyncCore>d__18.MoveNext()
---- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
-   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   в System.Web.Http.Controllers.HttpActionBinding.<ExecuteBindingAsyncCore>d__12.MoveNext()
---- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
-   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   в System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__5.MoveNext()
---- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
-   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   в System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__6.MoveNext()
-2018-02-22 02:43:05.9972 Security.WebApi [MemberRoles/DeleteRolesFromMemberAsync] | Method: DELETE, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/memberroles/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 6fae0aa3-c080-4bf0-954c-8ea0c5e3b7dd
-  Content-Length: 34
-  Content-Type: application/x-www-form-urlencoded
-}
-2018-02-22 02:43:16.9576 Security.WebApi [MemberRoles/DeleteRolesFromMemberAsync] | StatusCode: 204, ReasonPhrase: 'No Content', Version: 1.1, Content: <null>, Headers:
-{
-}
-2018-02-22 02:46:28.6753 Security.WebApi [MemberRoles/DeleteRolesFromMemberAsync] | Method: DELETE, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/memberroles?idMember=1&idroles=2028,2020', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: adee66c0-63fd-4cd7-95c1-b8c56986578a
-  Content-Length: 34
-  Content-Type: application/x-www-form-urlencoded
-}
-2018-02-22 02:46:56.2207 Security.WebApi [MemberRoles/DeleteRolesFromMemberAsync] | StatusCode: 204, ReasonPhrase: 'No Content', Version: 1.1, Content: <null>, Headers:
-{
-}
-2018-02-22 02:50:02.8274 Security.WebApi [MemberRoles/AddRolesToMemberAsync] | Method: POST, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/memberroles/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 706a6bb1-8796-45be-a7cf-981c036a5828
-  Content-Length: 53
-  Content-Type: application/json
-}
-2018-02-22 02:50:04.6805 Security.WebApi [MemberRoles/AddRolesToMemberAsync] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
-{
-}
-2018-02-22 02:50:21.3003 Security.WebApi [MemberRoles/DeleteRolesFromMemberAsync] | Method: DELETE, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/memberroles?idMember=1&idroles=2028', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 57ecfcd0-de24-4004-94d6-764a10eba23a
-  Content-Length: 34
-  Content-Type: application/x-www-form-urlencoded
-}
-2018-02-22 02:50:22.3358 Security.WebApi [MemberRoles/DeleteRolesFromMemberAsync] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
-{
-}
-2018-02-22 16:15:36.2784 Security.WebApi [Roles/Get] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/roles', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: c86e3d09-0f8a-4a4b-8ffc-e291dded349f
-  Content-Length: 0
-}
-2018-02-22 16:15:36.8228 Security.WebApi [Roles/Get] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Role, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
-{
-  Content-Type: application/json; charset=utf-8
-}
-2018-02-22 16:30:25.8471 Security.WebApi [Policy/Get] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/get', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: bd46a260-070d-4367-8f3d-68baad01bab0
-  Content-Length: 0
-}
-2018-02-22 16:30:28.4119 Security.WebApi [Policy/Get] | 
-2018-02-22 16:30:28.4219 Security.WebApi System.InvalidOperationException: Последовательность не содержит элементов
-   в System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
-   в Security.Dapper.SqlMapper.ThrowZeroRows(Row row) в C:\Projects\Security.V2.1\Security\Dapper\SqlMapper.cs:строка 1159
-   в Security.Dapper.SqlMapper.QueryRowImpl[T](IDbConnection cnn, Row row, CommandDefinition& command, Type effectiveType) в C:\Projects\Security.V2.1\Security\Dapper\SqlMapper.cs:строка 1214
-   в Security.Dapper.SqlMapper.QuerySingle[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) в C:\Projects\Security.V2.1\Security\Dapper\SqlMapper.cs:строка 783
-   в Security.V2.Core.DataLayer.CommonDb.QuerySingle[T](String query, Object parameters) в C:\Projects\Security.V2.1\Security\V2\Core\DataLayer\CommonDb.cs:строка 105
-   в Security.V2.Core.ApplicationContext.GetApplication() в C:\Projects\Security.V2.1\Security\V2\Core\ApplicationContext.cs:строка 22
-   в Security.V2.Core.ApplicationContext.get_Application() в C:\Projects\Security.V2.1\Security\V2\Core\ApplicationContext.cs:строка 25
-   в Security.V2.Core.DataLayer.Repositories.SecObjectRepository.GetAsync() в C:\Projects\Security.V2.1\Security\V2\Core\DataLayer\Repositories\SecObjectRepository.cs:строка 86
-   в Security.WebApi.Controllers.PolicyController.<Get>d__4.MoveNext() в C:\Projects\Security.V2.1\Security.WebApi\Controllers\PolicyController.cs:строка 26
---- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
-   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   в System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__1`1.MoveNext()
---- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
-   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   в System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__1.MoveNext()
---- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
-   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   в System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()
---- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
-   в System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()
---- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
-   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   в System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__5.MoveNext()
---- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
-   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   в System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__5.MoveNext()
---- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
-   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   в System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__6.MoveNext()
-2018-02-22 16:30:38.7598 Security.WebApi [Policy/Get] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/get', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 5d4cb990-009d-4b67-85da-d5ae1290bcbd
-  Content-Length: 0
-}
-2018-02-22 16:31:07.3967 Security.WebApi [Policy/Get] | 
-2018-02-22 16:31:07.3967 Security.WebApi System.InvalidOperationException: Последовательность не содержит элементов
-   в System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
-   в Security.Dapper.SqlMapper.ThrowZeroRows(Row row) в C:\Projects\Security.V2.1\Security\Dapper\SqlMapper.cs:строка 1159
-   в Security.Dapper.SqlMapper.QueryRowImpl[T](IDbConnection cnn, Row row, CommandDefinition& command, Type effectiveType) в C:\Projects\Security.V2.1\Security\Dapper\SqlMapper.cs:строка 1214
-   в Security.Dapper.SqlMapper.QuerySingle[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) в C:\Projects\Security.V2.1\Security\Dapper\SqlMapper.cs:строка 783
-   в Security.V2.Core.DataLayer.CommonDb.QuerySingle[T](String query, Object parameters) в C:\Projects\Security.V2.1\Security\V2\Core\DataLayer\CommonDb.cs:строка 105
-   в Security.V2.Core.ApplicationContext.GetApplication() в C:\Projects\Security.V2.1\Security\V2\Core\ApplicationContext.cs:строка 22
-   в Security.V2.Core.ApplicationContext.get_Application() в C:\Projects\Security.V2.1\Security\V2\Core\ApplicationContext.cs:строка 25
-   в Security.V2.Core.DataLayer.Repositories.SecObjectRepository.GetAsync() в C:\Projects\Security.V2.1\Security\V2\Core\DataLayer\Repositories\SecObjectRepository.cs:строка 86
-   в Security.WebApi.Controllers.PolicyController.<Get>d__4.MoveNext() в C:\Projects\Security.V2.1\Security.WebApi\Controllers\PolicyController.cs:строка 26
---- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
-   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   в System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__1`1.MoveNext()
---- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
-   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   в System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__1.MoveNext()
---- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
-   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   в System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()
---- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
-   в System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()
---- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
-   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   в System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__5.MoveNext()
---- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
-   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   в System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__5.MoveNext()
---- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
-   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   в System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__6.MoveNext()
-2018-02-22 16:33:20.8385 Security.WebApi [Policy/Get] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/get', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 1b2930c9-a395-48a1-8adf-6e4550354f52
-  Content-Length: 0
-}
-2018-02-22 16:33:22.7899 Security.WebApi [Policy/Get] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.SecObject, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
-{
-  Content-Type: application/json; charset=utf-8
-}
-2018-02-22 17:02:54.7349 Security.WebApi [Policy/Get] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/get', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 06510067-d165-4427-b7ae-b270bdf128f6
-  Content-Length: 0
-}
-2018-02-22 17:02:56.0781 Security.WebApi [Policy/Get] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.SecObject, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
-{
-  Content-Type: application/json; charset=utf-8
-}
-2018-02-22 17:03:09.1386 Security.WebApi [Roles/Get] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/roles/get', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: ce2f77fc-d0fa-4a6f-8899-6f2ada675c4d
-  Content-Length: 0
-}
-2018-02-22 17:03:09.1536 Security.WebApi [Roles/Get] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Role, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
-{
-  Content-Type: application/json; charset=utf-8
-}
-2018-02-22 17:07:43.5679 Security.WebApi [Roles/Get] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/roles/get', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 2fe42175-728f-4780-9c56-24d634bba531
-  Content-Length: 0
-}
-2018-02-22 17:07:43.9619 Security.WebApi [Roles/Get] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Role, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
-{
-  Content-Type: application/json; charset=utf-8
-}
-2018-02-22 17:08:58.8408 Security.WebApi [Policy/Get] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/get', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 2b2365d8-8991-41c7-adfe-e9dc7c5e4bf4
-  Content-Length: 0
-}
-2018-02-22 17:09:00.4005 Security.WebApi [Policy/Get] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.SecObject, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
-{
-  Content-Type: application/json; charset=utf-8
-}
-2018-02-22 17:09:41.0584 Security.WebApi [Policy/Get] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/get', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 1074ac21-f0d2-4627-bc7e-a224f160933b
-  Content-Length: 0
-}
-2018-02-22 17:09:42.6539 Security.WebApi [Policy/Get] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.SecObject, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
-{
-  Content-Type: application/json; charset=utf-8
-}
-2018-02-22 17:11:03.8717 Security.WebApi [Policy/Get] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/get/1', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 7340c410-c85c-4ba3-b3f7-92be3bdbe24a
-  Content-Length: 0
-}
-2018-02-22 17:11:05.6033 Security.WebApi [Policy/Get] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.SecObject, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
-{
-  Content-Type: application/json; charset=utf-8
-}
-2018-02-22 17:11:55.6655 Security.WebApi [Policy/Get] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/get/1517', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 82d11c18-221d-4efd-9572-c230b4c05cb6
-  Content-Length: 0
-}
-2018-02-22 17:11:56.7238 Security.WebApi [Policy/Get] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.SecObject, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
-{
-  Content-Type: application/json; charset=utf-8
-}
-2018-02-22 17:12:12.7596 Security.WebApi [Policy/Get] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/get/1517', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 3088512f-8260-41e5-aa94-a78f02eca55f
-  Content-Length: 0
-}
-2018-02-22 17:12:24.3047 Security.WebApi [Policy/Get] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.SecObject, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
-{
-  Content-Type: application/json; charset=utf-8
-}
-2018-02-22 17:12:43.8303 Security.WebApi [Policy/Get] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/get/1517', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 7b896b32-30e9-4ffb-b45e-f02217dbebb4
-  Content-Length: 0
-}
-2018-02-22 17:12:46.2789 Security.WebApi [Policy/Get] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.SecObject, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
-{
-  Content-Type: application/json; charset=utf-8
-}
-2018-02-22 17:13:26.9833 Security.WebApi [Policy/Get] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/get/1517', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 2ca96291-a9dd-4171-9ca9-6e01bf48d495
-  Content-Length: 0
-}
-2018-02-22 17:13:32.1651 Security.WebApi [Policy/Get] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.SecObject, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
-{
-  Content-Type: application/json; charset=utf-8
-}
-2018-02-22 17:21:06.1043 Security.WebApi [Policy/Put] | Method: PUT, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 1e2a43f2-4837-4046-9b06-b9a9c46688d5
-  Content-Length: 139
-  Content-Type: application/json
-}
-2018-02-22 17:21:17.8020 Security.WebApi [Policy/Put] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
-{
-}
-2018-02-22 17:21:37.0694 Security.WebApi [Policy/Put] | Method: PUT, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 03968c7d-6e23-409a-a1fb-3c029c30d4e8
-  Content-Length: 130
-  Content-Type: application/json
-}
-2018-02-22 17:21:37.0874 Security.WebApi [Policy/Put] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
-{
-}
-2018-02-22 17:21:39.2537 Security.WebApi [Policy/Put] | Method: PUT, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: ed23ee90-bdd4-4304-aa31-15473bb18a9a
-  Content-Length: 130
-  Content-Type: application/json
-}
-2018-02-22 17:21:39.2537 Security.WebApi [Policy/Put] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
-{
-}
-2018-02-22 17:21:40.2420 Security.WebApi [Policy/Put] | Method: PUT, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 5389ca14-8d37-4d07-9933-eb69773bc567
-  Content-Length: 130
-  Content-Type: application/json
-}
-2018-02-22 17:21:40.2490 Security.WebApi [Policy/Put] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
-{
-}
-2018-02-22 17:21:43.3167 Security.WebApi [Policy/Put] | Method: PUT, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 8852c0d3-fec5-4dcf-916f-62f6ae083f61
-  Content-Length: 130
-  Content-Type: application/json
-}
-2018-02-22 17:21:43.3167 Security.WebApi [Policy/Put] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
-{
-}
-2018-02-22 17:21:45.5752 Security.WebApi [Policy/Put] | Method: PUT, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: a4852cfe-1e17-40ee-ac03-f82a480f551a
-  Content-Length: 130
-  Content-Type: application/json
-}
-2018-02-22 17:21:45.5832 Security.WebApi [Policy/Put] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
-{
-}
-2018-02-22 17:21:51.7407 Security.WebApi [Policy/Put] | Method: PUT, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 1a508396-8a74-4f76-81ef-f6695979d51c
-  Content-Length: 130
-  Content-Type: application/json
-}
-2018-02-22 17:21:51.7407 Security.WebApi [Policy/Put] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
-{
-}
-2018-02-22 17:21:52.6502 Security.WebApi [Policy/Put] | Method: PUT, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 435ae92d-c395-4bcb-ba89-d7697324dc7c
-  Content-Length: 130
-  Content-Type: application/json
-}
-2018-02-22 17:21:52.6572 Security.WebApi [Policy/Put] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
-{
-}
-2018-02-22 17:22:06.7625 Security.WebApi [Policy/Put] | Method: PUT, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 590d85a2-1009-4783-b786-0259a06a1b1c
-  Content-Length: 130
-  Content-Type: application/json
-}
-2018-02-22 17:22:06.7695 Security.WebApi [Policy/Put] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
-{
-}
-2018-02-22 17:22:07.5996 Security.WebApi [Policy/Put] | Method: PUT, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: f5b51497-8e59-45c4-9f43-81aca43a224d
-  Content-Length: 130
-  Content-Type: application/json
-}
-2018-02-22 17:22:07.6086 Security.WebApi [Policy/Put] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
-{
-}
-2018-02-22 17:22:08.4799 Security.WebApi [Policy/Put] | Method: PUT, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 55a378ce-6d5c-4e58-9c7f-3564a01cc71d
-  Content-Length: 130
-  Content-Type: application/json
-}
-2018-02-22 17:22:08.4879 Security.WebApi [Policy/Put] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
-{
-}
-2018-02-22 17:22:09.1207 Security.WebApi [Policy/Put] | Method: PUT, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 9bea2f2a-618d-4c58-b93f-6db0d144a481
-  Content-Length: 130
-  Content-Type: application/json
-}
-2018-02-22 17:22:09.1292 Security.WebApi [Policy/Put] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
-{
-}
-2018-02-22 17:22:09.9100 Security.WebApi [Policy/Put] | Method: PUT, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: d26b05b5-ac36-41d3-973b-d4aea3cdeda9
-  Content-Length: 130
-  Content-Type: application/json
-}
-2018-02-22 17:22:09.9100 Security.WebApi [Policy/Put] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
-{
-}
-2018-02-22 17:22:13.3179 Security.WebApi [Policy/Put] | Method: PUT, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 691fa304-a9fa-427c-b164-aee8179dc9c9
-  Content-Length: 130
-  Content-Type: application/json
-}
-2018-02-22 17:22:13.3179 Security.WebApi [Policy/Put] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
-{
-}
-2018-02-22 17:22:14.0134 Security.WebApi [Policy/Put] | Method: PUT, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 13bdd30f-126d-4700-949c-25398cd4e776
-  Content-Length: 130
-  Content-Type: application/json
-}
-2018-02-22 17:22:14.0204 Security.WebApi [Policy/Put] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
-{
-}
-2018-02-22 17:22:14.6788 Security.WebApi [Policy/Put] | Method: PUT, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 96a06885-9474-4486-8743-247fe2dd7683
-  Content-Length: 130
-  Content-Type: application/json
-}
-2018-02-22 17:22:14.6858 Security.WebApi [Policy/Put] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
-{
-}
-2018-02-22 17:22:15.2340 Security.WebApi [Policy/Put] | Method: PUT, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 39bcbca7-1b5d-4e44-92ab-5f039d59c762
-  Content-Length: 130
-  Content-Type: application/json
-}
-2018-02-22 17:22:15.2340 Security.WebApi [Policy/Put] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
-{
-}
-2018-02-22 17:24:19.5693 Security.WebApi [Policy/Put] | Method: PUT, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: d07d43a2-406c-4549-8006-d4e6697f89f7
-  Content-Length: 130
-  Content-Type: application/json
-}
-2018-02-22 17:24:19.9079 Security.WebApi [Policy/Put] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
-{
-}
-2018-02-22 17:24:23.2195 Security.WebApi [Policy/Put] | Method: PUT, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 983ca7d6-2fdf-4ec8-bbdb-f1bafe29184d
-  Content-Length: 130
-  Content-Type: application/json
-}
-2018-02-22 17:24:23.2325 Security.WebApi [Policy/Put] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
-{
-}
-2018-02-22 17:24:25.0322 Security.WebApi [Policy/Put] | Method: PUT, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 1d383aa1-ddcc-49bc-897d-058b375b4735
-  Content-Length: 130
-  Content-Type: application/json
-}
-2018-02-22 17:24:25.0592 Security.WebApi [Policy/Put] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
-{
-}
-2018-02-22 17:24:25.8363 Security.WebApi [Policy/Put] | Method: PUT, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: cb2b9a06-2ec2-4769-a458-e4f5b5b82520
-  Content-Length: 130
-  Content-Type: application/json
-}
-2018-02-22 17:24:25.8453 Security.WebApi [Policy/Put] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
-{
-}
-2018-02-22 17:24:26.4855 Security.WebApi [Policy/Put] | Method: PUT, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 244cd96e-2d66-4678-a65f-48f1664862d8
-  Content-Length: 130
-  Content-Type: application/json
-}
-2018-02-22 17:24:26.4855 Security.WebApi [Policy/Put] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
-{
-}
-2018-02-22 17:24:27.1417 Security.WebApi [Policy/Put] | Method: PUT, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: a7b98e2f-657d-4e02-9d80-39407d65764a
-  Content-Length: 130
-  Content-Type: application/json
-}
-2018-02-22 17:24:27.1417 Security.WebApi [Policy/Put] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
-{
-}
-2018-02-22 17:24:27.7436 Security.WebApi [Policy/Put] | Method: PUT, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: f83d0c1f-bb7b-4343-814f-1ea5457ee8d4
-  Content-Length: 130
-  Content-Type: application/json
-}
-2018-02-22 17:24:27.7516 Security.WebApi [Policy/Put] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
-{
-}
-2018-02-22 17:24:28.3496 Security.WebApi [Policy/Put] | Method: PUT, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 327e02cf-8e33-4adc-8a3e-d54a47213257
-  Content-Length: 130
-  Content-Type: application/json
-}
-2018-02-22 17:24:28.3576 Security.WebApi [Policy/Put] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
-{
-}
-2018-02-22 17:24:28.9119 Security.WebApi [Policy/Put] | Method: PUT, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: c8c143b1-a883-4905-b43e-eac25ee51946
-  Content-Length: 130
-  Content-Type: application/json
-}
-2018-02-22 17:24:28.9119 Security.WebApi [Policy/Put] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
-{
-}
-2018-02-22 17:24:29.5234 Security.WebApi [Policy/Put] | Method: PUT, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 83099c41-1e69-49d6-8a5c-aa7d82ec4f8d
-  Content-Length: 130
-  Content-Type: application/json
-}
-2018-02-22 17:24:29.5295 Security.WebApi [Policy/Put] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
-{
-}
-2018-02-22 17:24:30.1061 Security.WebApi [Policy/Put] | Method: PUT, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: fc89cb17-7621-441c-b9b9-09abbd2e1b1b
-  Content-Length: 130
-  Content-Type: application/json
-}
-2018-02-22 17:24:30.1131 Security.WebApi [Policy/Put] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
-{
-}
-2018-02-22 17:24:30.6737 Security.WebApi [Policy/Put] | Method: PUT, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 7f7e7717-8218-47ac-95e3-2d3a571a0c1a
-  Content-Length: 130
-  Content-Type: application/json
-}
-2018-02-22 17:24:30.6737 Security.WebApi [Policy/Put] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
-{
-}
-2018-02-22 17:24:52.1045 Security.WebApi [Policy/Put] | Method: PUT, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: d1dbfbef-f057-46ed-8ba4-8b12cc3080dd
-  Content-Length: 130
-  Content-Type: application/json
-}
-2018-02-22 17:24:52.1155 Security.WebApi [Policy/Put] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
-{
-}
-2018-02-22 17:25:31.7968 Security.WebApi [Policy/Put] | Method: PUT, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 70c94c23-41ac-4995-80f6-c8958496f6cc
-  Content-Length: 130
-  Content-Type: application/json
-}
-2018-02-22 17:25:31.7968 Security.WebApi [Policy/Put] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
-{
-}
-2018-02-22 17:25:32.8773 Security.WebApi [Policy/Put] | Method: PUT, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 7c71c7df-f850-4f42-b9b8-8abe96f5a20b
-  Content-Length: 130
-  Content-Type: application/json
-}
-2018-02-22 17:25:32.8773 Security.WebApi [Policy/Put] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
-{
-}
-2018-02-22 17:25:33.5703 Security.WebApi [Policy/Put] | Method: PUT, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: dcda49df-2117-4be4-be80-ff6290b51079
-  Content-Length: 130
-  Content-Type: application/json
-}
-2018-02-22 17:25:33.5768 Security.WebApi [Policy/Put] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
-{
-}
-2018-02-22 17:25:34.1799 Security.WebApi [Policy/Put] | Method: PUT, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: e9a5a1cd-7d4b-4b6e-b92d-4772e5c7cdd1
-  Content-Length: 130
-  Content-Type: application/json
-}
-2018-02-22 17:25:34.1889 Security.WebApi [Policy/Put] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
-{
-}
-2018-02-22 17:25:34.7540 Security.WebApi [Policy/Put] | Method: PUT, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: bbaada75-ce52-45fb-b001-7361ff32b1db
-  Content-Length: 130
-  Content-Type: application/json
-}
-2018-02-22 17:25:34.7540 Security.WebApi [Policy/Put] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
-{
-}
-2018-02-22 17:25:35.2827 Security.WebApi [Policy/Put] | Method: PUT, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: f86aea9e-9fae-4c67-b359-f811b284461a
-  Content-Length: 130
-  Content-Type: application/json
-}
-2018-02-22 17:25:35.2997 Security.WebApi [Policy/Put] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
-{
-}
-2018-02-22 17:25:35.8228 Security.WebApi [Policy/Put] | Method: PUT, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 737a3adb-2c49-4b80-aa82-348b959f127a
-  Content-Length: 130
-  Content-Type: application/json
-}
-2018-02-22 17:25:35.8308 Security.WebApi [Policy/Put] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
-{
-}
-2018-02-22 17:25:36.2762 Security.WebApi [Policy/Put] | Method: PUT, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: fc024f58-5ba5-43d5-8f9d-689052eae945
-  Content-Length: 130
-  Content-Type: application/json
-}
-2018-02-22 17:25:36.2832 Security.WebApi [Policy/Put] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
-{
-}
-2018-02-22 17:25:36.7789 Security.WebApi [Policy/Put] | Method: PUT, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: ab65c53a-9250-4cf7-b3fa-622b46f2b23e
-  Content-Length: 130
-  Content-Type: application/json
-}
-2018-02-22 17:25:36.7894 Security.WebApi [Policy/Put] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
-{
-}
-2018-02-22 17:25:37.4666 Security.WebApi [Policy/Put] | Method: PUT, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 4154082b-66ac-4931-8392-187eb287a0e5
-  Content-Length: 130
-  Content-Type: application/json
-}
-2018-02-22 17:25:37.4756 Security.WebApi [Policy/Put] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
-{
-}
-2018-02-22 17:25:38.0702 Security.WebApi [Policy/Put] | Method: PUT, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 637195e8-6e9d-4484-9235-5c9c197c0a2e
-  Content-Length: 130
-  Content-Type: application/json
-}
-2018-02-22 17:25:38.1167 Security.WebApi [Policy/Put] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
-{
-}
-2018-02-22 17:25:38.5218 Security.WebApi [Policy/Put] | Method: PUT, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: bacf9797-0647-458f-aa5f-ca4a6867609f
-  Content-Length: 130
-  Content-Type: application/json
-}
-2018-02-22 17:25:38.5298 Security.WebApi [Policy/Put] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
-{
-}
-2018-02-22 17:25:39.0796 Security.WebApi [Policy/Put] | Method: PUT, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: bae72bf1-fd14-4c5d-b676-3a2137adb61d
-  Content-Length: 130
-  Content-Type: application/json
-}
-2018-02-22 17:25:39.0796 Security.WebApi [Policy/Put] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
-{
-}
-2018-02-22 17:25:39.5594 Security.WebApi [Policy/Put] | Method: PUT, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: c197886a-79a9-4c4f-8d06-7e5435564eb8
-  Content-Length: 130
-  Content-Type: application/json
-}
-2018-02-22 17:25:39.5674 Security.WebApi [Policy/Put] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
-{
 }

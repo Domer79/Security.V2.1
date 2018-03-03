@@ -20,7 +20,7 @@ namespace Security.WebApi.Controllers
 
         [Route("api/{app}/common/checkaccess")]
         [HttpGet]
-        public async Task<IHttpActionResult> CheckAccessAsync(string loginOrEmail, string policy)
+        public async Task<IHttpActionResult> CheckAccess(string loginOrEmail, string policy)
         {
             var result = await _repo.CheckAccessAsync(loginOrEmail, policy);
             return Ok(result);
@@ -28,7 +28,7 @@ namespace Security.WebApi.Controllers
 
         [Route("api/common/setpassword")]
         [HttpGet]
-        public async Task<IHttpActionResult> SetPasswordAsync(string loginOrEmail, string password)
+        public async Task<IHttpActionResult> SetPassword(string loginOrEmail, string password)
         {
             var result = await _repo.SetPasswordAsync(loginOrEmail, password);
             return Ok(result);
@@ -36,7 +36,7 @@ namespace Security.WebApi.Controllers
 
         [Route("api/common/validate")]
         [HttpGet]
-        public async Task<IHttpActionResult> UserValidateAsync(string loginOrEmail, string password)
+        public async Task<IHttpActionResult> UserValidate(string loginOrEmail, string password)
         {
             var result = await _repo.UserValidateAsync(loginOrEmail, password);
             return Ok(result);

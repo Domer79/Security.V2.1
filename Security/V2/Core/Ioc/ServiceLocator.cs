@@ -8,7 +8,7 @@ using Security.V2.Core.Ioc.Interfaces;
 
 namespace Security.V2.Core.Ioc
 {
-    internal class ServiceLocator : IServiceLocator
+    public class ServiceLocator : IServiceLocator
     {
         private Dictionary<Type, IDependency> _registry = new Dictionary<Type, IDependency>();
         private Dictionary<Type, object> _instanceRegistry = new Dictionary<Type, object>();

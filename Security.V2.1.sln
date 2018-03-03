@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2026
+VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tools", "Tools\Tools.csproj", "{2F1F6E24-1FA5-412B-8949-0A7888B9BE71}"
 EndProject
@@ -35,6 +35,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp_TestSecurity", "WpfApp_TestSecurity\WpfApp_TestSecurity.csproj", "{1DFECA47-1603-4B4F-9437-8EEB79096629}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Security.WebApi", "Security.WebApi\Security.WebApi.csproj", "{9DDA98B9-FC5C-4C1F-B922-3B1901E23934}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecurityHttp", "SecurityHttp\SecurityHttp.csproj", "{6FC531DB-5225-4771-8406-60D03278EF7D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -156,6 +158,14 @@ Global
 		{9DDA98B9-FC5C-4C1F-B922-3B1901E23934}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9DDA98B9-FC5C-4C1F-B922-3B1901E23934}.ReleasePackage|Any CPU.ActiveCfg = Release|Any CPU
 		{9DDA98B9-FC5C-4C1F-B922-3B1901E23934}.ReleasePackage|Any CPU.Build.0 = Release|Any CPU
+		{6FC531DB-5225-4771-8406-60D03278EF7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FC531DB-5225-4771-8406-60D03278EF7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FC531DB-5225-4771-8406-60D03278EF7D}.DebugPackage|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FC531DB-5225-4771-8406-60D03278EF7D}.DebugPackage|Any CPU.Build.0 = Debug|Any CPU
+		{6FC531DB-5225-4771-8406-60D03278EF7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FC531DB-5225-4771-8406-60D03278EF7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FC531DB-5225-4771-8406-60D03278EF7D}.ReleasePackage|Any CPU.ActiveCfg = Release|Any CPU
+		{6FC531DB-5225-4771-8406-60D03278EF7D}.ReleasePackage|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

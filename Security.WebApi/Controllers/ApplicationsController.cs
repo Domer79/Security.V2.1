@@ -34,15 +34,15 @@ namespace Security.WebApi.Controllers
         [HttpGet]
         public async Task<IHttpActionResult> CreateEmpty(string prefix)
         {
-                var application = await _repository.CreateEmptyAsync(prefix);
-                return Ok(application);
+            var application = await _repository.CreateEmptyAsync(prefix);
+            return Ok(application);
         }
 
         [HttpDelete]
         public async Task<IHttpActionResult> Delete(int id)
         {
-                await _repository.RemoveAsync(id);
-                return Ok();
+            await _repository.RemoveAsync(id);
+            return Ok();
         }
 
         /// <summary>
@@ -52,36 +52,36 @@ namespace Security.WebApi.Controllers
         [HttpGet]
         public async Task<IHttpActionResult> Get()
         {
-                var applications = await _repository.GetAsync();
-                return Ok(applications);
+            var applications = await _repository.GetAsync();
+            return Ok(applications);
         }
 
         [HttpGet]
         public async Task<IHttpActionResult> Get(int id)
         {
-                var app = await _repository.GetAsync(id);
-                return Ok();
+            var app = await _repository.GetAsync(id);
+            return Ok();
         }
 
         [HttpGet]
         public async Task<IHttpActionResult> GetByName(string name)
         {
-                var app = _repository.GetByNameAsync(name);
-                return Ok(app);
+            var app = await _repository.GetByNameAsync(name);
+            return Ok(app);
         }
 
         [HttpPost]
         public async Task<IHttpActionResult> Post([FromBody] Application entity)
         {
-                var app = _repository.CreateAsync(entity);
-                return Ok(entity);
+            var app = await _repository.CreateAsync(entity);
+            return Ok(app);
         }
 
         [HttpPut]
         public async Task<IHttpActionResult> Put([FromBody] Application entity)
         {
-                _repository.Update(entity);
-                return Ok();
+            await _repository.UpdateAsync(entity);
+            return Ok();
         }
     }
 }

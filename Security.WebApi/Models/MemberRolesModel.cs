@@ -10,10 +10,4 @@ namespace Security.WebApi.Models
         public string Member { get; set; }
         public string[] Roles { get; set; }
     }
-
-    public class MemberRolesIdsModel
-    {
-        public int IdMember { get; set; }
-        public int[] IdRoles { get; set; }
-    }
 }

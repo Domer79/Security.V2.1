@@ -126,22 +126,22 @@ from
 
         public IEnumerable<Role> GetExceptRolesByIdMember(int idMember)
         {
-            return _commonDb.Query<Role>("select * from sec.Roles where idRole not in (select idRole from sec.MemberRoles where idMember = @idMember) and idApplication = @idApplication", new {idMember, _context.Application.IdApplication});
+            return _commonDb.Query<Role>("select * from sec.Roles where idRole not in (select idRole from sec.MemberRoles where idMember = @idMember) and idApplication = @idApplication and 1 = (select 1 from sec.Members where idMember = @idMember)", new {idMember, _context.Application.IdApplication});
         }
 
         public Task<IEnumerable<Role>> GetExceptRolesByIdMemberAsync(int idMember)
         {
-            return _commonDb.QueryAsync<Role>("select * from sec.Roles where idRole not in (select idRole from sec.MemberRoles where idMember = @idMember) and idApplication = @idApplication", new { idMember, _context.Application.IdApplication });
+            return _commonDb.QueryAsync<Role>("select * from sec.Roles where idRole not in (select idRole from sec.MemberRoles where idMember = @idMember) and idApplication = @idApplication and 1 = (select 1 from sec.Members where idMember = @idMember)", new { idMember, _context.Application.IdApplication });
         }
 
         public IEnumerable<Role> GetExceptRolesByMemberName(string member)
         {
-            return _commonDb.Query<Role>("select * from sec.Roles where idRole not in (select idRole from sec.MemberRoles where idMember = (select idMember from sec.Members where name = @member)) and idApplication = @idApplication", new {member, _context.Application.IdApplication});
+            return _commonDb.Query<Role>("select * from sec.Roles where idRole not in (select idRole from sec.MemberRoles where idMember = (select idMember from sec.Members where name = @member)) and idApplication = @idApplication and 1 = (select 1 from sec.Members where name = @member)", new {member, _context.Application.IdApplication});
         }
 
         public Task<IEnumerable<Role>> GetExceptRolesByMemberNameAsync(string member)
         {
-            return _commonDb.QueryAsync<Role>("select * from sec.Roles where idRole not in (select idRole from sec.MemberRoles where idMember = (select idMember from sec.Members where name = @member)) and idApplication = @idApplication", new { member, _context.Application.IdApplication });
+            return _commonDb.QueryAsync<Role>("select * from sec.Roles where idRole not in (select idRole from sec.MemberRoles where idMember = (select idMember from sec.Members where name = @member)) and idApplication = @idApplication and 1 = (select 1 from sec.Members where name = @member)", new { member, _context.Application.IdApplication });
         }
 
         public IEnumerable<Member> GetMembersByIdRole(int idRole)

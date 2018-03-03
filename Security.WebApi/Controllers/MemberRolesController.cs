@@ -36,17 +36,34 @@ namespace Security.WebApi.Controllers
         }
 
         [HttpGet]
-        [Route("except/{member}")]
+        [Route("except")]
         public async Task<IHttpActionResult> GetExceptRolesByMemberName(string member)
         {
             var roles = await _repo.GetExceptRolesByMemberNameAsync(member);
             return Ok(roles);
         }
 
-        [HttpPost]
-        public async Task<IHttpActionResult> AddRolesToMember([FromBody]MemberRolesModel model)
+        [HttpGet]
+        [Route("except")]
+        public async Task<IHttpActionResult> GetExceptRolesByIdMember(int idMember)
         {
-            await _repo.AddRolesToMemberAsync(model.Roles, model.Member);
+            var roles = await _repo.GetExceptRolesByIdMemberAsync(idMember);
+            return Ok(roles);
+        }
+
+        [HttpPut]
+        [Route("rolestomember")]
+        public async Task<IHttpActionResult> AddRolesToMember(string member, [FromBody]string[] roles)
+        {
+            await _repo.AddRolesToMemberAsync(roles, member);
+            return Ok();
+        }
+
+        [HttpPut]
+        [Route("rolestomember")]
+        public async Task<IHttpActionResult> AddRolesToMemberByIds(int idMember, [FromBody] int[] idRoles)
+        {
+            await _repo.AddRolesToMemberAsync(idRoles, idMember);
             return Ok();
         }
 

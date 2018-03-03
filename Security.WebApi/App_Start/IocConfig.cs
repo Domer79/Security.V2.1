@@ -34,8 +34,8 @@ namespace Security.WebApi.App_Start
         private static void Configure(ContainerBuilder builder)
         {
             builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
-//            builder.RegisterType<LoggingActionFilter>().AsWebApiActionFilterFor<ApiController>().InstancePerRequest();
-//            builder.RegisterType<ExceptionActionFilter>().AsWebApiExceptionFilterFor<ApiController>().InstancePerRequest();
+            builder.RegisterType<LoggingActionFilter>().AsWebApiActionFilterFor<ApiController>().InstancePerRequest();
+            builder.RegisterType<ExceptionActionFilter>().AsWebApiExceptionFilterFor<ApiController>().InstancePerRequest();
 
             builder.RegisterType<ApplicationInternalRepository>().As<IApplicationInternalRepository>().InstancePerRequest();
             builder.RegisterType<CommonDb>().As<ICommonDb>().SingleInstance();

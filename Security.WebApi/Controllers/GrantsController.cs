@@ -23,7 +23,7 @@ namespace Security.WebApi.Controllers
 
         [HttpGet]
         [Route("except/{role}")]
-        public async Task<IHttpActionResult> GetExceptRoleGrantAsync(string role)
+        public async Task<IHttpActionResult> GetExceptRoleGrant(string role)
         {
             var secObjects = await _repo.GetExceptRoleGrantAsync(role);
             return Ok(secObjects);
@@ -31,30 +31,23 @@ namespace Security.WebApi.Controllers
 
         [HttpGet]
         [Route("{role}")]
-        public async Task<IHttpActionResult> GetRoleGrantsAsync(string role)
+        public async Task<IHttpActionResult> GetRoleGrants(string role)
         {
             var secObject = await _repo.GetExceptRoleGrantAsync(role);
             return Ok(secObject);
         }
 
         [HttpDelete]
-        public async Task<IHttpActionResult> RemoveGrantsAsync(GrantsModel model)
+        public async Task<IHttpActionResult> RemoveGrants(GrantsModel model)
         {
             await _repo.RemoveGrantsAsync(model.Role, model.SecObjects);
             return Ok();
         }
 
         [HttpPut]
-        public async Task<IHttpActionResult> SetGrantsAsync(GrantsModel model)
+        public async Task<IHttpActionResult> SetGrants([FromBody]GrantsModel model)
         {
             await _repo.SetGrantsAsync(model.Role, model.SecObjects);
-            return Ok();
-        }
-
-        [HttpPut]
-        public async Task<IHttpActionResult> SetGrantAsync(GrantModel model)
-        {
-            await _repo.SetGrantAsync(model.Role, model.Policy);
             return Ok();
         }
     }

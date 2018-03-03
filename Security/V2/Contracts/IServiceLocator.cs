@@ -5,7 +5,7 @@ using Security.V2.Core.Ioc.Interfaces;
 
 namespace Security.V2.Contracts
 {
-    internal interface IServiceLocator: IDisposable, IRegistry
+    public interface IServiceLocator: IDisposable, IRegistry
     {
         IDependency RegisterType(Type serviceType, Type implementType);
         IDependency RegisterByMethod(Type serviceType, Func<object> methodImplement);
