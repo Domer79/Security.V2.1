@@ -48,7 +48,7 @@ select @idUser idUser, idMember idGroup from sec.Members where name in @groups
         {
             return _commonDb.ExecuteNonQueryAsync(@"
 insert into sec.UserGroups(idUser, idGroup)
-select @idUser idUser, idMember from (select idMember from sec.Groups where idGroup in @idGroups) s1
+select @idUser idUser, idMember from (select idMember from sec.Groups where idMember in @idGroups) s1
 ", new { idUser, idGroups });
         }
 
@@ -276,6 +276,126 @@ from
 	inner join sec.Members m on ug.idGroup = m.idMember
 where
 	m.idMember = @idGroup", new { idGroup });
+        }
+
+        public void RemoveUsersFromGroup(int[] idUsers, int idGroup)
+        {
+            _commonDb.ExecuteNonQuery("delete from sec.UserGroups where idGroup = @idGroup and idUser in @idUsers", new {idGroup, idUsers});
+        }
+
+        public void RemoveUsersFromGroup(Guid[] usersId, Guid groupId)
+        {
+            _commonDb.ExecuteNonQuery("delete from sec.UserGroups where idGroup = (select idMember from sec.GroupsView where id = @groupId) and idUser in (select idMember from sec.Members where id in @usersId)", new {groupId, usersId});
+        }
+
+        public void RemoveUsersFromGroup(string[] users, string group)
+        {
+            _commonDb.ExecuteNonQuery("delete from sec.UserGroups where idGroup = (select idMember from sec.GroupsView where name = @group) and idUser in (select idMember from sec.Members where name in @users)", users);
+        }
+
+        public void RemoveGroupsFromUser(int[] idGroups, int idUser)
+        {
+            _commonDb.ExecuteNonQuery("delete from sec.UserGroups where idUser = @idUser and idGroup in @idGroups", new {idUser, idGroups});
+        }
+
+        public void RemoveGroupsFromUser(Guid[] groupsId, Guid userId)
+        {
+            _commonDb.ExecuteNonQuery("delete from sec.UserGroups where idUser = (select idMember from sec.UsersView where id = @userId) and idGroup in (select idMember from sec.Members where id in @groupsId)");
+        }
+
+        public void RemoveGroupsFromUser(string[] groups, string user)
+        {
+            _commonDb.ExecuteNonQuery("delete from sec.UserGroups where idUser = (select idMember from sec.UsersView where login = @user) and idGroup in (select idMember from sec.Members where name in @groups)", new {user, groups});
+        }
+
+        public Task RemoveUsersFromGroupAsync(int[] idUsers, int idGroup)
+        {
+            return _commonDb.ExecuteNonQueryAsync("delete from sec.UserGroups where idGroup = @idGroup and idUser in @idUsers", new { idGroup, idUsers });
+        }
+
+        public Task RemoveUsersFromGroupAsync(Guid[] usersId, Guid groupId)
+        {
+            return _commonDb.ExecuteNonQueryAsync("delete from sec.UserGroups where idGroup = (select idMember from sec.GroupsView where id = @groupId) and idUser in (select idMember from sec.Members where id in @usersId)", new { groupId, usersId });
+        }
+
+        public Task RemoveUsersFromGroupAsync(string[] users, string group)
+        {
+            return _commonDb.ExecuteNonQueryAsync("delete from sec.UserGroups where idGroup = (select idMember from sec.GroupsView where name = @group) and idUser in (select idMember from sec.Members where name in @users)", users);
+        }
+
+        public Task RemoveGroupsFromUserAsync(int[] idGroups, int idUser)
+        {
+            return _commonDb.ExecuteNonQueryAsync("delete from sec.UserGroups where idUser = @idUser and idGroup in @idGroups", new { idUser, idGroups });
+        }
+
+        public Task RemoveGroupsFromUserAsync(Guid[] groupsId, Guid userId)
+        {
+            return _commonDb.ExecuteNonQueryAsync("delete from sec.UserGroups where idUser = (select idMember from sec.UsersView where id = @userId) and idGroup in (select idMember from sec.Members where id in @groupsId)", new{groupsId, userId});
+        }
+
+        public Task RemoveGroupsFromUserAsync(string[] groups, string user)
+        {
+            return _commonDb.ExecuteNonQueryAsync("delete from sec.UserGroups where idUser = (select idMember from sec.UsersView where login = @user) and idGroup in (select idMember from sec.Members where name in @groups)", new { user, groups });
+        }
+
+        public IEnumerable<User> GetNonIncludedUsers(string group)
+        {
+            return _commonDb.Query<User>("select * from sec.UsersView where idMember not in (select idUser from sec.UserGroups where idGroup = (select idMember from sec.Members where name = @group)) and 1 = (select 1 from sec.Members where name = @group)", new{group});
+        }
+
+        public IEnumerable<User> GetNonIncludedUsers(Guid groupId)
+        {
+            return _commonDb.Query<User>("select * from sec.UsersView where idMember not in (select idUser from sec.UserGroups where idGroup = (select idMember from sec.Members where id = @groupId)) and 1 = (select 1 from sec.Members where id = @groupdId)", new{groupId});
+        }
+
+        public IEnumerable<User> GetNonIncludedUsers(int idGroup)
+        {
+            return _commonDb.Query<User>("select * from sec.UsersView where idMember not in (select idUser from sec.UserGroups where idGroup = @idGroup) and 1 = (select 1 from sec.Members where idMember = @idGroup)", new {idGroup});
+        }
+
+        public IEnumerable<Group> GetNonIncludedGroups(string user)
+        {
+            return _commonDb.Query<Group>("select * from sec.GroupsView where idMember not in (select idGroup from sec.UserGroups where idUser = (select idMember from sec.Members where name = @user)) and 1 = (select 1 from sec.Members where name = @user)", new {user});
+        }
+
+        public IEnumerable<Group> GetNonIncludedGroups(Guid userId)
+        {
+            return _commonDb.Query<Group>("select * from sec.GroupsView where idMember not in (select idGroup from sec.UserGroups where idUser = (select idMember from sec.Members where id = @userId)) and 1 = (select 1 from sec.Members where id = @userId)", new {userId});
+        }
+
+        public IEnumerable<Group> GetNonIncludedGroups(int idUser)
+        {
+            return _commonDb.Query<Group>("select * from sec.GroupsView where idMember not in (select idGroup from sec.UserGroups where idUser = @idUser) and 1 = (select 1 from sec.Members where idMember = @idUser)", new {idUser});
+        }
+
+        public Task<IEnumerable<User>> GetNonIncludedUsersAsync(string group)
+        {
+            return _commonDb.QueryAsync<User>("select * from sec.UsersView where idMember not in (select idUser from sec.UserGroups where idGroup = (select idMember from sec.Members where name = @group)) and 1 = (select 1 from sec.Members where name = @group)", new { group });
+        }
+
+        public Task<IEnumerable<User>> GetNonIncludedUsersAsync(Guid groupId)
+        {
+            return _commonDb.QueryAsync<User>("select * from sec.UsersView where idMember not in (select idUser from sec.UserGroups where idGroup = (select idMember from sec.Members where id = @groupId)) and 1 = (select 1 from sec.Members where id = @groupdId)", new { groupId });
+        }
+
+        public Task<IEnumerable<User>> GetNonIncludedUsersAsync(int idGroup)
+        {
+            return _commonDb.QueryAsync<User>("select * from sec.UsersView where idMember not in (select idUser from sec.UserGroups where idGroup = @idGroup) and 1 = (select 1 from sec.Members where idMember = @idGroup)", new { idGroup });
+        }
+
+        public Task<IEnumerable<Group>> GetNonIncludedGroupsAsync(string user)
+        {
+            return _commonDb.QueryAsync<Group>("select * from sec.GroupsView where idMember not in (select idGroup from sec.UserGroups where idUser = (select idMember from sec.Members where name = @user)) and 1 = (select 1 from sec.Members where name = @user)", new { user });
+        }
+
+        public Task<IEnumerable<Group>> GetNonIncludedGroupsAsync(Guid userId)
+        {
+            return _commonDb.QueryAsync<Group>("select * from sec.GroupsView where idMember not in (select idGroup from sec.UserGroups where idUser = (select idMember from sec.Members where id = @userId)) and 1 = (select 1 from sec.Members where id = @userId)", new { userId });
+        }
+
+        public Task<IEnumerable<Group>> GetNonIncludedGroupsAsync(int idUser)
+        {
+            return _commonDb.QueryAsync<Group>("select * from sec.GroupsView where idMember not in (select idGroup from sec.UserGroups where idUser = @idUser) and 1 = (select 1 from sec.Members where idMember = @idUser)", new { idUser });
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Web.Http;
 using Security.Model;
@@ -21,47 +22,177 @@ namespace Security.WebApi.Controllers
             _repo = repo;
         }
         
-        [Route("get/users/{groupName}")]
         [HttpGet]
-        public async Task<IHttpActionResult> GetUsersByGroupNameAsync(string groupName)
+        public async Task<IHttpActionResult> GetUsersByGroupName(string groupName)
         {
             var users = await _repo.GetUsersByGroupNameAsync(groupName);
             return Ok(users);
         }
 
-        [Route("get/groups/{userName}")]
         [HttpGet]
-        public async Task<IHttpActionResult> GetGroupsByUserNameAsync(string userName)
+        public async Task<IHttpActionResult> GetUsersByGroupId(Guid groupId)
+        {
+            var users = await _repo.GetUsersByGroupIdAsync(groupId);
+            return Ok(users);
+        }
+
+        [HttpGet]
+        public async Task<IHttpActionResult> GetUsersByIdGroup(int idGroup)
+        {
+            var users = await _repo.GetUsersByIdGroupAsync(idGroup);
+            return Ok(users);
+        }
+
+        [HttpGet]
+        public async Task<IHttpActionResult> GetGroupsByUserName(string userName)
         {
             var groups = await _repo.GetGroupsByUserNameAsync(userName);
             return Ok(groups);
         }
 
-        [Route("set/users")]
-        [HttpPost]
-        public async Task<IHttpActionResult> AddUsersToGroupAsync(GroupUsersModel model)
+        [HttpGet]
+        public async Task<IHttpActionResult> GetGroupsByUserId(Guid userId)
         {
-            if (model.Group == null)
-                throw new ArgumentNullException(nameof(model.Group));
+            var groups = await _repo.GetGroupsByUserIdAsync(userId);
+            return Ok(groups);
+        }
 
-            if (model.Users == null)
-                throw new ArgumentNullException(nameof(model.Users));
+        [HttpGet]
+        public async Task<IHttpActionResult> GetGroupsByIdUser(int idUser)
+        {
+            var groups = await _repo.GetGroupsByIdUserAsync(idUser);
+            return Ok(groups);
+        }
 
-            await _repo.AddUsersToGroupAsync(model.Users, model.Group);
+        [HttpGet]
+        [Route("exceptfor")]
+        public async Task<IHttpActionResult> GetNotIncludedUsers(string group)
+        {
+            var users = await _repo.GetNonIncludedUsersAsync(group);
+            return Ok(users);
+        }
+
+        [HttpGet]
+        [Route("exceptfor")]
+        public async Task<IHttpActionResult> GetNotIncludedUsers(Guid groupId)
+        {
+            var users = await _repo.GetNonIncludedUsersAsync(groupId);
+            return Ok(users);
+        }
+
+        [HttpGet]
+        [Route("exceptfor")]
+        public async Task<IHttpActionResult> GetNotIncludedUsers(int idGroup)
+        {
+            var users = await _repo.GetNonIncludedUsersAsync(idGroup);
+            return Ok(users);
+        }
+
+        [HttpGet]
+        [Route("exceptfor")]
+        public async Task<IHttpActionResult> GetNotIncludedGroups(string user)
+        {
+            var groups = await _repo.GetNonIncludedGroupsAsync(user);
+            return Ok(groups);
+        }
+
+        [HttpGet]
+        [Route("exceptfor")]
+        public async Task<IHttpActionResult> GetNotIncludedGroups(Guid userId)
+        {
+            var groups = await _repo.GetNonIncludedGroupsAsync(userId);
+            return Ok(groups);
+        }
+
+        [HttpGet]
+        [Route("exceptfor")]
+        public async Task<IHttpActionResult> GetNotIncludedGroups(int idUser)
+        {
+            var groups = await _repo.GetNonIncludedGroupsAsync(idUser);
+            return Ok(groups);
+        }
+
+        [HttpPut]
+        public async Task<IHttpActionResult> AddUsersToGroup(string group, [FromBody] string[] users)
+        {
+            await _repo.AddUsersToGroupAsync(users, group);
             return Ok();
         }
 
-        [Route("set/groups")]
-        [HttpPost]
-        public async Task<IHttpActionResult> AddGroupsToUserAsync(UserGroupsModel model)
+        [HttpPut]
+        public async Task<IHttpActionResult> AddUsersToGroup(Guid groupId, [FromBody] Guid[] users)
         {
-            if (model.User == null)
-                throw new ArgumentNullException(nameof(model.User));
+            await _repo.AddUsersToGroupAsync(users, groupId);
+            return Ok();
+        }
 
-            if (model.Groups == null)
-                throw new ArgumentNullException(nameof(model.Groups));
+        [HttpPut]
+        public async Task<IHttpActionResult> AddUsersToGroup(int idGroup, [FromBody] int[] users)
+        {
+            await _repo.AddUsersToGroupAsync(users, idGroup);
+            return Ok();
+        }
 
-            await _repo.AddGroupsToUserAsync(model.Groups, model.User);
+        [HttpPut]
+        public async Task<IHttpActionResult> AddGroupsToUser(string user, [FromBody] string[] groups)
+        {
+            await _repo.AddGroupsToUserAsync(groups, user);
+            return Ok();
+        }
+
+        [HttpPut]
+        public async Task<IHttpActionResult> AddGroupsToUser(Guid userId, [FromBody] Guid[] groups)
+        {
+            await _repo.AddGroupsToUserAsync(groups, userId);
+            return Ok();
+        }
+
+        [HttpPut]
+        public async Task<IHttpActionResult> AddGroupsToUser(int idUser, [FromBody] int[] groups)
+        {
+            await _repo.AddGroupsToUserAsync(groups, idUser);
+            return Ok();
+        }
+
+        [HttpDelete]
+        public async Task<IHttpActionResult> RemoveUsersFromGroup(int idGroup, [FromBody]int[] idUsers)
+        {
+            await _repo.RemoveUsersFromGroupAsync(idUsers, idGroup);
+            return Ok();
+        }
+
+        [HttpDelete]
+        public async Task<IHttpActionResult> RemoveUsersFromGroup(Guid groupId, [FromBody]Guid[] usersId)
+        {
+            await _repo.RemoveUsersFromGroupAsync(usersId, groupId);
+            return Ok();
+        }
+
+        [HttpDelete]
+        public async Task<IHttpActionResult> RemoveUsersFromGroup(string group, [FromBody]string[] users)
+        {
+            await _repo.RemoveUsersFromGroupAsync(users, group);
+            return Ok();
+        }
+
+        [HttpDelete]
+        public async Task<IHttpActionResult> RemoveGroupsFromUser(int idUser, [FromBody]int[] idGroups)
+        {
+            await _repo.RemoveGroupsFromUserAsync(idGroups, idUser);
+            return Ok();
+        }
+
+        [HttpDelete]
+        public async Task<IHttpActionResult> RemoveGroupsFromUser(Guid userId, [FromBody]Guid[] groupsId)
+        {
+            await _repo.RemoveGroupsFromUserAsync(groupsId, userId);
+            return Ok();
+        }
+
+        [HttpDelete]
+        public async Task<IHttpActionResult> RemoveGroupsFromUser(string user, [FromBody]string[] groups)
+        {
+            await _repo.RemoveGroupsFromUserAsync(groups, user);
             return Ok();
         }
     }

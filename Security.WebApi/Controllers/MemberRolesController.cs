@@ -29,9 +29,23 @@ namespace Security.WebApi.Controllers
         }
 
         [HttpGet]
+        public async Task<IHttpActionResult> GetRolesByIdMember(int idMember)
+        {
+            var roles = await _repo.GetRolesByIdMemberAsync(idMember);
+            return Ok(roles);
+        }
+
+        [HttpGet]
         public async Task<IHttpActionResult> GetMembersByRoleName(string role)
         {
             var members = await _repo.GetMembersByRoleNameAsync(role);
+            return Ok(members);
+        }
+
+        [HttpGet]
+        public async Task<IHttpActionResult> GetMembersByIdRole(int idRole)
+        {
+            var members = await _repo.GetMembersByIdRoleAsync(idRole);
             return Ok(members);
         }
 
@@ -67,10 +81,35 @@ namespace Security.WebApi.Controllers
             return Ok();
         }
 
-        [HttpDelete]
-        public async Task<IHttpActionResult> DeleteRolesFromMember(int idMember, string idRoles)
+        [HttpPut]
+        [Route("memberstorole")]
+        public async Task<IHttpActionResult> AddMembersToRole(string role, [FromBody] string[] members)
         {
-            await _repo.DeleteRolesFromMemberAsync(idRoles.Split(',').Select(_ => Convert.ToInt32(_)).ToArray(), idMember);
+            await _repo.AddMembersToRoleAsync(members, role);
+            return Ok();
+        }
+
+        [HttpPut]
+        [Route("memberstorole")]
+        public async Task<IHttpActionResult> AddMembersToRoleByIds(int idRole, [FromBody] int[] idMembers)
+        {
+            await _repo.AddMembersToRoleAsync(idMembers, idRole);
+            return Ok();
+        }
+
+        [HttpDelete]
+        [Route("RolesFromMember")]
+        public async Task<IHttpActionResult> DeleteRolesFromMember(int idMember, [FromBody]int[] idRoles)
+        {
+            await _repo.DeleteRolesFromMemberAsync(idRoles, idMember);
+            return Ok();
+        }
+
+        [HttpDelete]
+        [Route("MembersFromRole")]
+        public async Task<IHttpActionResult> DeleteMembersFromRole(int idRole, [FromBody]int[] idMembers)
+        {
+            await _repo.DeleteMembersFromRoleAsync(idMembers, idRole);
             return Ok();
         }
     }

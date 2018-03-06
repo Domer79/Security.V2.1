@@ -14,131 +14,133 @@ namespace SecurityHttp.Repositories
     {
         private readonly ICommonWeb _commonWeb;
         private readonly IApplicationContext _context;
+        private readonly string _url;
 
         public MemberRoleRepository(ICommonWeb commonWeb, IApplicationContext context)
         {
             _commonWeb = commonWeb;
             _context = context;
+            _url = $"api/{context.Application.AppName}/memberroles";
         }
 
         public void AddMembersToRole(int[] idMembers, int idRole)
         {
-            throw new NotImplementedException();
+            _commonWeb.Put($"{_url}/memberstorole", idMembers, new {idRole});
         }
 
         public void AddMembersToRole(string[] members, string role)
         {
-            throw new NotImplementedException();
+            _commonWeb.Put($"{_url}/memberstorole", members, new { role });
         }
 
         public Task AddMembersToRoleAsync(int[] idMembers, int idRole)
         {
-            throw new NotImplementedException();
+            return _commonWeb.PutAsync($"{_url}/memberstorole", idMembers, new { idRole });
         }
 
         public Task AddMembersToRoleAsync(string[] members, string role)
         {
-            throw new NotImplementedException();
+            return _commonWeb.PutAsync($"{_url}/memberstorole", members, new { role });
         }
 
         public void AddRolesToMember(int[] idRoles, int idMember)
         {
-            throw new NotImplementedException();
+            _commonWeb.Put($"{_url}/rolestomember", idRoles, idMember);
         }
 
         public void AddRolesToMember(string[] roles, string member)
         {
-            throw new NotImplementedException();
+            _commonWeb.Put($"{_url}/rolestomember", roles, member);
         }
 
         public Task AddRolesToMemberAsync(int[] idRoles, int idMember)
         {
-            throw new NotImplementedException();
+            return _commonWeb.PutAsync($"{_url}/rolestomember", idRoles, idMember);
         }
 
         public Task AddRolesToMemberAsync(string[] roles, string member)
         {
-            throw new NotImplementedException();
+            return _commonWeb.PutAsync($"{_url}/rolestomember", roles, member);
         }
 
         public void DeleteMembersFromRole(int[] idMembers, int idRole)
         {
-            throw new NotImplementedException();
+            _commonWeb.Delete($"{_url}/membersfromrole", idMembers, new {idRole});
         }
 
         public Task DeleteMembersFromRoleAsync(int[] idMembers, int idRole)
         {
-            throw new NotImplementedException();
+            return _commonWeb.DeleteAsync($"{_url}/membersfromrole", idMembers, new { idRole });
         }
 
         public void DeleteRolesFromMember(int[] idRoles, int idMember)
         {
-            throw new NotImplementedException();
+            _commonWeb.Delete($"{_url}/rolesfrommember", idRoles, new { idMember });
         }
 
         public Task DeleteRolesFromMemberAsync(int[] idRoles, int idMember)
         {
-            throw new NotImplementedException();
+            return _commonWeb.DeleteAsync($"{_url}/rolesfrommember", idRoles, new { idMember });
         }
 
         public IEnumerable<Role> GetExceptRolesByIdMember(int idMember)
         {
-            throw new NotImplementedException();
+            return _commonWeb.GetCollection<Role>($"{_url}/except", new {idMember});
         }
 
         public Task<IEnumerable<Role>> GetExceptRolesByIdMemberAsync(int idMember)
         {
-            throw new NotImplementedException();
+            return _commonWeb.GetCollectionAsync<Role>($"{_url}/except", new { idMember });
         }
 
         public IEnumerable<Role> GetExceptRolesByMemberName(string member)
         {
-            throw new NotImplementedException();
+            return _commonWeb.GetCollection<Role>($"{_url}/except", new { member });
         }
 
         public Task<IEnumerable<Role>> GetExceptRolesByMemberNameAsync(string member)
         {
-            throw new NotImplementedException();
+            return _commonWeb.GetCollectionAsync<Role>($"{_url}/except", new { member });
         }
 
         public IEnumerable<Member> GetMembersByIdRole(int idRole)
         {
-            throw new NotImplementedException();
+            return _commonWeb.GetCollection<Member>($"{_url}", new {idRole});
         }
 
         public Task<IEnumerable<Member>> GetMembersByIdRoleAsync(int idRole)
         {
-            throw new NotImplementedException();
+            return _commonWeb.GetCollectionAsync<Member>($"{_url}", new { idRole });
         }
 
         public IEnumerable<Member> GetMembersByRoleName(string role)
         {
-            throw new NotImplementedException();
+            return _commonWeb.GetCollection<Member>($"{_url}", new {role});
         }
 
         public Task<IEnumerable<Member>> GetMembersByRoleNameAsync(string role)
         {
-            throw new NotImplementedException();
+            return _commonWeb.GetCollectionAsync<Member>($"{_url}", new { role });
         }
 
         public IEnumerable<Role> GetRolesByIdMember(int idMember)
         {
-            throw new NotImplementedException();
+            return _commonWeb.GetCollection<Role>($"{_url}", new { idMember });
         }
 
         public Task<IEnumerable<Role>> GetRolesByIdMemberAsync(int idMember)
         {
-            throw new NotImplementedException();
+            return _commonWeb.GetCollectionAsync<Role>($"{_url}", new { idMember });
         }
 
         public IEnumerable<Role> GetRolesByMemberName(string member)
         {
-            throw new NotImplementedException();
+            return _commonWeb.GetCollection<Role>($"{_url}", new { member });
         }
 
         public Task<IEnumerable<Role>> GetRolesByMemberNameAsync(string member)
         {
-            throw new NotImplementedException();
+            return _commonWeb.GetCollectionAsync<Role>($"{_url}", new { member });
         }
     }
 }

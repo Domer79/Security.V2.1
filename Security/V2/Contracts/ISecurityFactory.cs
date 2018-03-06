@@ -2,7 +2,7 @@
 
 namespace Security.V2.Contracts
 {
-    internal interface ISecurityFactory
+    public interface ISecurityFactory
     {
         IUserRepository UserRepository { get; set; }
         IUserInternalRepository UserInternalRepository { get; set; }

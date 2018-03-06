@@ -20,14 +20,14 @@ namespace Security.WebApi.Controllers
             _repo = repo;
         }
 
-        [Route("get")]
+        [HttpGet]
         public async Task<IHttpActionResult> Get()
         {
             var secObjects = await _repo.GetAsync();
             return Ok(secObjects);
         }
 
-        [Route("get/{id}")]
+        [HttpGet]
         public async Task<IHttpActionResult> Get(int id)
         {
             var secObject = await _repo.GetAsync(id);

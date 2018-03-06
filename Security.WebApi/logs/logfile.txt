@@ -1,88 +1,4 @@
-2018-02-25 19:03:19.9649 Security.WebApi [User/CreateEmpty] | Method: GET, RequestUri: 'http://localhost:14797/api/user?prefixForRequired=new_user', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Connection: Keep-Alive
-  Host: localhost:14797
-  Content-Length: 0
-}
-2018-02-25 19:03:20.6521 Security.WebApi [User/CreateEmpty] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.User, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
-{
-  Content-Type: application/json; charset=utf-8
-}
-2018-02-25 19:03:23.7472 Security.WebApi [User/Post] | Method: POST, RequestUri: 'http://localhost:14797/api/user', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Expect: 100-continue
-  Host: localhost:14797
-  Content-Length: 326
-  Content-Type: application/json
-}
-2018-02-25 19:03:23.7572 Security.WebApi [User/Post] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.User, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
-{
-  Content-Type: application/json; charset=utf-8
-}
-2018-02-25 19:03:44.1346 Security.WebApi [User/CreateEmpty] | Method: GET, RequestUri: 'http://localhost:14797/api/user?prefixForRequired=new_user', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Connection: Keep-Alive
-  Host: localhost:14797
-  Content-Length: 0
-}
-2018-02-25 19:03:47.9320 Security.WebApi [User/CreateEmpty] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.User, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
-{
-  Content-Type: application/json; charset=utf-8
-}
-2018-02-25 19:03:48.2065 Security.WebApi [User/Post] | Method: POST, RequestUri: 'http://localhost:14797/api/user', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Expect: 100-continue
-  Host: localhost:14797
-  Content-Length: 326
-  Content-Type: application/json
-}
-2018-02-25 19:03:48.2065 Security.WebApi [User/Post] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.User, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
-{
-  Content-Type: application/json; charset=utf-8
-}
-2018-02-25 19:03:59.3800 Security.WebApi [User/CreateEmpty] | Method: GET, RequestUri: 'http://localhost:14797/api/user?prefixForRequired=new_user', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Connection: Keep-Alive
-  Host: localhost:14797
-  Content-Length: 0
-}
-2018-02-25 19:03:59.4345 Security.WebApi [User/CreateEmpty] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.User, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
-{
-  Content-Type: application/json; charset=utf-8
-}
-2018-02-25 19:03:59.6871 Security.WebApi [User/Post] | Method: POST, RequestUri: 'http://localhost:14797/api/user', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Expect: 100-continue
-  Host: localhost:14797
-  Content-Length: 326
-  Content-Type: application/json
-}
-2018-02-25 19:03:59.6871 Security.WebApi [User/Post] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.User, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
-{
-  Content-Type: application/json; charset=utf-8
-}
-2018-02-25 19:04:11.5368 Security.WebApi [User/CreateEmpty] | Method: GET, RequestUri: 'http://localhost:14797/api/user?prefixForRequired=new_user', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Connection: Keep-Alive
-  Host: localhost:14797
-  Content-Length: 0
-}
-2018-02-25 19:04:11.5513 Security.WebApi [User/CreateEmpty] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.User, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
-{
-  Content-Type: application/json; charset=utf-8
-}
-2018-02-25 19:04:11.7882 Security.WebApi [User/Post] | Method: POST, RequestUri: 'http://localhost:14797/api/user', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Expect: 100-continue
-  Host: localhost:14797
-  Content-Length: 326
-  Content-Type: application/json
-}
-2018-02-25 19:04:11.7952 Security.WebApi [User/Post] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.User, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
-{
-  Content-Type: application/json; charset=utf-8
-}
-2018-03-03 17:20:53.5179 Security.WebApi [Grants/SetGrants] | Method: PUT, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/grants/setmany', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+2018-03-04 13:40:17.4844 ##Trace [Security.WebApi.Request] [MemberRoles/DeleteRolesFromMember] | Method: DELETE, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/memberroles/rolesfrommember?idMember=1', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
 {
   Cache-Control: no-cache
   Connection: keep-alive
@@ -91,13 +7,428 @@
   Accept-Encoding: deflate
   Host: localhost:14797
   User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 76d2cd5b-6cac-445a-9860-f4f3416a591e
-  Content-Length: 77
+  Postman-Token: abb058c6-b800-4c9b-b94c-4f66c6fa891a
+  Content-Length: 6
   Content-Type: application/json
 }
-2018-03-03 17:22:28.2094 Security.WebApi [Grants/SetGrants] | 
-2018-03-03 17:22:38.9840 Security.WebApi System.Data.SqlClient.SqlException (0x80131904): Violation of PRIMARY KEY constraint 'PK_sec_Grants'. Cannot insert duplicate key in object 'sec.Grants'. The duplicate key value is (3842, 1003).
-The statement has been terminated.
+2018-03-04 13:40:49.3188 ##Trace [Security.WebApi.Response] [MemberRoles/DeleteRolesFromMember] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
+{
+}
+2018-03-04 13:57:33.3517 ##Trace [Security.WebApi.Request] [MemberRoles/GetMembersByRoleName] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/memberroles?role=admin', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Host: localhost:14797
+  User-Agent: PostmanRuntime/7.1.1
+  Postman-Token: a84fe806-4525-4014-bb89-7e9dd9ddc21a
+  Content-Length: 0
+}
+2018-03-04 13:57:46.4906 ##Trace [Security.WebApi.Response] [MemberRoles/GetMembersByRoleName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Member, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-03-04 13:58:02.5483 ##Trace [Security.WebApi.Request] [MemberRoles/GetRolesByMemberName] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/memberroles?member=garipovd', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Host: localhost:14797
+  User-Agent: PostmanRuntime/7.1.1
+  Postman-Token: 93b8b7b4-0887-494a-8135-4f3de92a682c
+  Content-Length: 0
+}
+2018-03-04 13:58:04.8778 ##Trace [Security.WebApi.Response] [MemberRoles/GetRolesByMemberName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Role, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-03-04 14:00:40.2155 ##Trace [Security.WebApi.Request] [MemberRoles/GetRolesByIdMember] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/memberroles?idmember=1', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Host: localhost:14797
+  User-Agent: PostmanRuntime/7.1.1
+  Postman-Token: 66d44b7d-04aa-46ca-9398-b1814d4de4a9
+  Content-Length: 0
+}
+2018-03-04 14:00:46.0653 ##Trace [Security.WebApi.Response] [MemberRoles/GetRolesByIdMember] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Role, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-03-04 14:01:36.9443 ##Trace [Security.WebApi.Request] [MemberRoles/GetMembersByIdRole] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/memberroles?idrole=1003', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Host: localhost:14797
+  User-Agent: PostmanRuntime/7.1.1
+  Postman-Token: aee14ba4-90ae-4586-a993-eb77daa61b8d
+  Content-Length: 0
+}
+2018-03-04 14:01:38.3977 ##Trace [Security.WebApi.Response] [MemberRoles/GetMembersByIdRole] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Member, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-03-05 11:53:10.0259 ##Trace [Security.WebApi.Request] [Roles/Get] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/roles/get', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Host: localhost:14797
+  User-Agent: PostmanRuntime/7.1.1
+  Postman-Token: 5b9a8e93-e9d0-4720-ac65-bc5d8499efda
+  Content-Length: 0
+}
+2018-03-05 11:53:10.5063 ##Trace [Security.WebApi.Response] [Roles/Get] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Role, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-03-05 11:53:50.2793 ##Trace [Security.WebApi.Request] [Roles/Get] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/roles/get', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Host: localhost:14797
+  User-Agent: PostmanRuntime/7.1.1
+  Postman-Token: 01177e3e-c95a-447d-bf90-b9c38093e681
+  Content-Length: 0
+}
+2018-03-05 11:53:50.3323 ##Trace [Security.WebApi.Response] [Roles/Get] | StatusCode: 400, ReasonPhrase: 'Bad Request', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Web.Http.HttpError, System.Web.Http, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-03-05 11:54:01.6126 ##Trace [Security.WebApi.Request] [Roles/Get] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/roles/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Host: localhost:14797
+  User-Agent: PostmanRuntime/7.1.1
+  Postman-Token: e2bb36bd-c8bf-4d5e-923a-e96fac4b4ae6
+  Content-Length: 0
+}
+2018-03-05 11:54:01.9347 ##Trace [Security.WebApi.Response] [Roles/Get] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Role, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-03-05 11:54:08.6124 ##Trace [Security.WebApi.Request] [Roles/Get] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/roles/1003', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Host: localhost:14797
+  User-Agent: PostmanRuntime/7.1.1
+  Postman-Token: dd337df8-e6ac-42cb-b9aa-212dfe72c5ae
+  Content-Length: 0
+}
+2018-03-05 11:54:08.6274 ##Trace [Security.WebApi.Response] [Roles/Get] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Role, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-03-05 11:54:26.3708 ##Trace [Security.WebApi.Request] [Roles/CreateEmpty] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/roles?prefix=new_role', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Host: localhost:14797
+  User-Agent: PostmanRuntime/7.1.1
+  Postman-Token: 3887d1c1-4087-4faf-9c29-48ee812aa6ae
+  Content-Length: 0
+}
+2018-03-05 11:54:29.3818 ##Trace [Security.WebApi.Response] [Roles/CreateEmpty] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Role, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-03-05 22:40:13.3713 ##Trace [Security.WebApi.Request] [Policy/Get] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Host: localhost:14797
+  User-Agent: PostmanRuntime/7.1.1
+  Postman-Token: ea2be249-2800-4441-8a68-ff6bbe95207b
+  Content-Length: 0
+}
+2018-03-05 22:40:13.8894 ##Trace [Security.WebApi.Response] [Policy/Get] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.SecObject, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-03-05 22:40:24.2076 ##Trace [Security.WebApi.Request] [Policy/Get] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/1519', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Host: localhost:14797
+  User-Agent: PostmanRuntime/7.1.1
+  Postman-Token: e497d224-7d81-4e18-b680-a9d8e3ffc217
+  Content-Length: 0
+}
+2018-03-05 22:40:24.2076 ##Trace [Security.WebApi.Response] [Policy/Get] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.SecObject, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-03-05 22:40:55.5102 ##Trace [Security.WebApi.Request] [Policy/Get] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Host: localhost:14797
+  User-Agent: PostmanRuntime/7.1.1
+  Postman-Token: e0f65b5d-7a52-4d54-ba37-c681c5e92ece
+  Content-Length: 0
+}
+2018-03-05 22:40:55.5212 ##Trace [Security.WebApi.Response] [Policy/Get] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.SecObject, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-03-05 22:40:58.7706 ##Trace [Security.WebApi.Request] [Policy/Get] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Host: localhost:14797
+  User-Agent: PostmanRuntime/7.1.1
+  Postman-Token: 03aec712-e450-45e5-b4ec-7263e05fe599
+  Content-Length: 0
+}
+2018-03-05 22:40:58.7706 ##Trace [Security.WebApi.Response] [Policy/Get] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.SecObject, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-03-05 22:40:59.5785 ##Trace [Security.WebApi.Request] [Policy/Get] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Host: localhost:14797
+  User-Agent: PostmanRuntime/7.1.1
+  Postman-Token: c409fce3-0d25-48eb-ae40-a5b2991003bb
+  Content-Length: 0
+}
+2018-03-05 22:40:59.5845 ##Trace [Security.WebApi.Response] [Policy/Get] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.SecObject, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-03-05 22:41:00.2326 ##Trace [Security.WebApi.Request] [Policy/Get] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Host: localhost:14797
+  User-Agent: PostmanRuntime/7.1.1
+  Postman-Token: 00b487b0-9b9f-4573-8074-646a87a1ac6b
+  Content-Length: 0
+}
+2018-03-05 22:41:00.2396 ##Trace [Security.WebApi.Response] [Policy/Get] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.SecObject, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-03-05 22:41:00.8685 ##Trace [Security.WebApi.Request] [Policy/Get] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Host: localhost:14797
+  User-Agent: PostmanRuntime/7.1.1
+  Postman-Token: 7186b3d0-c237-4277-92c0-81d5ad660852
+  Content-Length: 0
+}
+2018-03-05 22:41:00.8685 ##Trace [Security.WebApi.Response] [Policy/Get] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.SecObject, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-03-05 22:41:01.5313 ##Trace [Security.WebApi.Request] [Policy/Get] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Host: localhost:14797
+  User-Agent: PostmanRuntime/7.1.1
+  Postman-Token: 7083f417-40f3-4d52-a68b-43539da6fbfc
+  Content-Length: 0
+}
+2018-03-05 22:41:01.5373 ##Trace [Security.WebApi.Response] [Policy/Get] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.SecObject, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-03-05 22:41:02.3265 ##Trace [Security.WebApi.Request] [Policy/Get] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/policy/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Host: localhost:14797
+  User-Agent: PostmanRuntime/7.1.1
+  Postman-Token: 1a9c75ce-db3b-4a57-ae2a-349cdd54c6aa
+  Content-Length: 0
+}
+2018-03-05 22:41:02.3335 ##Trace [Security.WebApi.Response] [Policy/Get] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.SecObject, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-03-06 16:21:18.3515 ##Trace [Security.WebApi.Request] [UserGroups/GetNotIncludedUsers] | Method: GET, RequestUri: 'http://localhost:14797/api/usergroups/except/for?group=Group1', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Host: localhost:14797
+  User-Agent: PostmanRuntime/7.1.1
+  Postman-Token: 5130f130-85db-4d6f-b37e-022505a91003
+  Content-Length: 0
+}
+2018-03-06 16:21:26.4335 ##Trace [Security.WebApi.Response] [UserGroups/GetNotIncludedUsers] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.User, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-03-06 16:31:22.0781 ##Trace [Security.WebApi.Request] [UserGroups/GetNotIncludedGroups] | Method: GET, RequestUri: 'http://localhost:14797/api/usergroups/except/for?user=garipovd', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Host: localhost:14797
+  User-Agent: PostmanRuntime/7.1.1
+  Postman-Token: 93ff82f9-cf43-4f98-ad1e-44fd2bc97798
+  Content-Length: 0
+}
+2018-03-06 16:31:22.1071 ##Trace [Security.WebApi.Response] [UserGroups/GetNotIncludedGroups] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Group, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-03-06 16:32:13.7360 ##Trace [Security.WebApi.Request] [UserGroups/GetNotIncludedGroups] | Method: GET, RequestUri: 'http://localhost:14797/api/usergroups/except/for?idUser=1', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Host: localhost:14797
+  User-Agent: PostmanRuntime/7.1.1
+  Postman-Token: be122675-394e-4974-96cb-7fd1c6cbe93c
+  Content-Length: 0
+}
+2018-03-06 16:32:13.7590 ##Trace [Security.WebApi.Response] [UserGroups/GetNotIncludedGroups] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Group, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-03-06 16:33:51.6964 ##Trace [Security.WebApi.Request] [UserGroups/GetNotIncludedGroups] | Method: GET, RequestUri: 'http://localhost:14797/api/usergroups/exceptfor?idUser=1', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Host: localhost:14797
+  User-Agent: PostmanRuntime/7.1.1
+  Postman-Token: 515dfa9c-0eec-4864-b4b2-e4ec568f07dc
+  Content-Length: 0
+}
+2018-03-06 16:33:53.7584 ##Trace [Security.WebApi.Response] [UserGroups/GetNotIncludedGroups] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Group, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-03-06 16:34:14.5725 ##Trace [Security.WebApi.Request] [UserGroups/GetNotIncludedGroups] | Method: GET, RequestUri: 'http://localhost:14797/api/usergroups/exceptfor?userId=EACFCF21-F944-E711-9C3A-FCAA1407BFFB', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Host: localhost:14797
+  User-Agent: PostmanRuntime/7.1.1
+  Postman-Token: 6e3182e9-1a03-4619-acbd-a75cb6b252d2
+  Content-Length: 0
+}
+2018-03-06 16:34:18.9755 ##Trace [Security.WebApi.Response] [UserGroups/GetNotIncludedGroups] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Group, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-03-06 16:39:54.6829 ##Trace [Security.WebApi.Request] [UserGroups/AddGroupsToUser] | Method: PUT, RequestUri: 'http://localhost:14797/api/usergroups?user=garipovd', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Host: localhost:14797
+  User-Agent: PostmanRuntime/7.1.1
+  Postman-Token: 8602c1f1-eb5e-47fa-a2ac-ffeac8029578
+  Content-Length: 22
+  Content-Type: application/json
+}
+2018-03-06 16:40:25.0350 ##Trace [Security.WebApi.Response] [UserGroups/AddGroupsToUser] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
+{
+}
+2018-03-06 16:41:09.8452 ##Trace [Security.WebApi.Request] [UserGroups/GetNotIncludedGroups] | Method: GET, RequestUri: 'http://localhost:14797/api/usergroups/exceptfor?userId=EACFCF21-F944-E711-9C3A-FCAA1407BFFB', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Host: localhost:14797
+  User-Agent: PostmanRuntime/7.1.1
+  Postman-Token: c4784f6a-7dc0-4e8e-ab91-7769b228e657
+  Content-Length: 0
+}
+2018-03-06 16:41:11.3922 ##Trace [Security.WebApi.Response] [UserGroups/GetNotIncludedGroups] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Group, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-03-06 16:43:21.7042 ##Trace [Security.WebApi.Request] [UserGroups/AddGroupsToUser] | Method: PUT, RequestUri: 'http://localhost:14797/api/usergroups?idUser=1', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Host: localhost:14797
+  User-Agent: PostmanRuntime/7.1.1
+  Postman-Token: a4fcf181-170a-46eb-a5fe-27c524dbc2d8
+  Content-Length: 6
+  Content-Type: application/json
+}
+2018-03-06 16:43:47.1993 ##Trace [Security.WebApi.Response] [UserGroups/AddGroupsToUser] | 
+2018-03-06 16:43:55.5774 ##Error [Security.WebApi] System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'idGroup'.
    в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
    в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
    в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
@@ -117,7 +448,7 @@ The statement has been terminated.
    в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
    в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
    в System.Runtime.CompilerServices.TaskAwaiter.GetResult()
-   в Security.WebApi.Controllers.GrantsController.<SetGrants>d__5.MoveNext() в C:\Projects\Security.V2.1\Security.WebApi\Controllers\GrantsController.cs:строка 51
+   в Security.WebApi.Controllers.UserGroupsController.<AddGroupsToUser>d__19.MoveNext() в C:\Projects\Security.V2.1\Security.WebApi\Controllers\UserGroupsController.cs:строка 153
 --- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
    в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
    в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
@@ -144,9 +475,9 @@ The statement has been terminated.
    в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
    в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
    в System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__6.MoveNext()
-ClientConnectionId:91e84ba7-c72f-48ce-b914-a4eab839703a
-Error Number: 2627, State: 1, Class: 14
-2018-03-03 17:25:10.6407 Security.WebApi [Grants/SetGrants] | Method: PUT, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/grants/', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+ClientConnectionId:5c7345cf-b22b-4dd9-80e4-a4b5425abe74
+Error Number: 207, State: 1, Class: 16
+2018-03-06 16:44:20.0805 ##Trace [Security.WebApi.Request] [UserGroups/AddGroupsToUser] | Method: PUT, RequestUri: 'http://localhost:14797/api/usergroups?idUser=1', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
 {
   Cache-Control: no-cache
   Connection: keep-alive
@@ -155,19 +486,209 @@ Error Number: 2627, State: 1, Class: 14
   Accept-Encoding: deflate
   Host: localhost:14797
   User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: c3392f2d-3cd4-4f56-8eba-517526694ffa
-  Content-Length: 77
+  Postman-Token: e0f307c6-c4bb-43f0-8252-2943b9ba0136
+  Content-Length: 6
   Content-Type: application/json
 }
-2018-03-03 17:25:15.1760 Security.WebApi [Grants/SetGrants] | 
-2018-03-03 17:25:15.1760 Security.WebApi System.Data.SqlClient.SqlException (0x80131904): Violation of PRIMARY KEY constraint 'PK_sec_Grants'. Cannot insert duplicate key in object 'sec.Grants'. The duplicate key value is (3842, 1003).
-The statement has been terminated.
+2018-03-06 16:45:14.6695 ##Trace [Security.WebApi.Response] [UserGroups/AddGroupsToUser] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
+{
+}
+2018-03-06 16:45:44.9058 ##Trace [Security.WebApi.Request] [UserGroups/GetNotIncludedGroups] | Method: GET, RequestUri: 'http://localhost:14797/api/usergroups/exceptfor?userId=EACFCF21-F944-E711-9C3A-FCAA1407BFFB', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Host: localhost:14797
+  User-Agent: PostmanRuntime/7.1.1
+  Postman-Token: c90393f1-d133-4534-84b3-b959df725205
+  Content-Length: 0
+}
+2018-03-06 16:45:46.7218 ##Trace [Security.WebApi.Response] [UserGroups/GetNotIncludedGroups] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Group, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-03-06 16:46:56.9222 ##Trace [Security.WebApi.Request] [UserGroups/AddGroupsToUser] | Method: PUT, RequestUri: 'http://localhost:14797/api/usergroups?userId=EACFCF21-F944-E711-9C3A-FCAA1407BFFB', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Host: localhost:14797
+  User-Agent: PostmanRuntime/7.1.1
+  Postman-Token: c7ad2932-afd9-40d9-8801-0d1a83e80b08
+  Content-Length: 6
+  Content-Type: application/json
+}
+2018-03-06 16:47:20.7692 ##Trace [Security.WebApi.Response] [UserGroups/AddGroupsToUser] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
+{
+}
+2018-03-06 16:47:33.6353 ##Trace [Security.WebApi.Request] [UserGroups/AddGroupsToUser] | Method: PUT, RequestUri: 'http://localhost:14797/api/usergroups?userId=EACFCF21-F944-E711-9C3A-FCAA1407BFFB', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Host: localhost:14797
+  User-Agent: PostmanRuntime/7.1.1
+  Postman-Token: 9c737f5d-c21f-45b4-8237-60dce43855b9
+  Content-Length: 6
+  Content-Type: application/json
+}
+2018-03-06 16:47:38.7724 ##Trace [Security.WebApi.Response] [UserGroups/AddGroupsToUser] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
+{
+}
+2018-03-06 16:47:44.7574 ##Trace [Security.WebApi.Request] [UserGroups/AddGroupsToUser] | Method: PUT, RequestUri: 'http://localhost:14797/api/usergroups?userId=EACFCF21-F944-E711-9C3A-FCAA1407BFFB', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Host: localhost:14797
+  User-Agent: PostmanRuntime/7.1.1
+  Postman-Token: 69f5194f-08d2-4013-bcb9-633a839e4ab3
+  Content-Length: 6
+  Content-Type: application/json
+}
+2018-03-06 16:47:57.1857 ##Trace [Security.WebApi.Response] [UserGroups/AddGroupsToUser] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
+{
+}
+2018-03-06 16:48:47.2989 ##Trace [Security.WebApi.Request] [UserGroups/AddGroupsToUser] | Method: PUT, RequestUri: 'http://localhost:14797/api/usergroups?userId=EACFCF21-F944-E711-9C3A-FCAA1407BFFB', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Host: localhost:14797
+  User-Agent: PostmanRuntime/7.1.1
+  Postman-Token: 72ca2fd6-4a57-48f3-81cc-2e5e53e64192
+  Content-Length: 40
+  Content-Type: application/json
+}
+2018-03-06 16:49:16.5189 ##Trace [Security.WebApi.Response] [UserGroups/AddGroupsToUser] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
+{
+}
+2018-03-06 16:49:22.1149 ##Trace [Security.WebApi.Request] [UserGroups/GetNotIncludedGroups] | Method: GET, RequestUri: 'http://localhost:14797/api/usergroups/exceptfor?userId=EACFCF21-F944-E711-9C3A-FCAA1407BFFB', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Host: localhost:14797
+  User-Agent: PostmanRuntime/7.1.1
+  Postman-Token: c2791cdc-1c34-450c-9c5d-008bc197dca6
+  Content-Length: 0
+}
+2018-03-06 16:49:23.3679 ##Trace [Security.WebApi.Response] [UserGroups/GetNotIncludedGroups] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Group, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-03-06 16:59:40.3774 ##Trace [Security.WebApi.Request] [UserGroups/GetGroupsByUserName] | Method: GET, RequestUri: 'http://localhost:14797/api/usergroups?username=garipovd', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Host: localhost:14797
+  User-Agent: PostmanRuntime/7.1.1
+  Postman-Token: 691b5c12-9091-446a-b864-5e5533e3d5ee
+  Content-Length: 0
+}
+2018-03-06 16:59:40.4034 ##Trace [Security.WebApi.Response] [UserGroups/GetGroupsByUserName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Group, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-03-06 17:01:18.7485 ##Trace [Security.WebApi.Request] [UserGroups/RemoveGroupsFromUser] | Method: DELETE, RequestUri: 'http://localhost:14797/api/usergroups?idUser=1', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Host: localhost:14797
+  User-Agent: PostmanRuntime/7.1.1
+  Postman-Token: 5369cb2e-ed9b-46fa-9bd3-75bcfe6c5fcf
+  Content-Length: 6
+  Content-Type: application/json
+}
+2018-03-06 17:01:31.2865 ##Trace [Security.WebApi.Response] [UserGroups/RemoveGroupsFromUser] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
+{
+}
+2018-03-06 17:01:39.3896 ##Trace [Security.WebApi.Request] [UserGroups/GetNotIncludedGroups] | Method: GET, RequestUri: 'http://localhost:14797/api/usergroups/exceptfor?userId=EACFCF21-F944-E711-9C3A-FCAA1407BFFB', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Host: localhost:14797
+  User-Agent: PostmanRuntime/7.1.1
+  Postman-Token: cd7cb7f5-6a41-4760-8952-653419724a0b
+  Content-Length: 0
+}
+2018-03-06 17:01:40.8886 ##Trace [Security.WebApi.Response] [UserGroups/GetNotIncludedGroups] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Group, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-03-06 17:06:24.6706 ##Trace [Security.WebApi.Request] [UserGroups/RemoveGroupsFromUser] | Method: DELETE, RequestUri: 'http://localhost:14797/api/usergroups?idUser=1', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Host: localhost:14797
+  User-Agent: PostmanRuntime/7.1.1
+  Postman-Token: 0fa3d381-54fd-4be4-95b6-a8362700a1f0
+  Content-Length: 6
+  Content-Type: application/json
+}
+2018-03-06 17:06:26.5176 ##Trace [Security.WebApi.Response] [UserGroups/RemoveGroupsFromUser] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
+{
+}
+2018-03-06 17:08:24.2505 ##Trace [Security.WebApi.Request] [UserGroups/GetGroupsByUserName] | Method: GET, RequestUri: 'http://localhost:14797/api/usergroups?username=garipovd', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Host: localhost:14797
+  User-Agent: PostmanRuntime/7.1.1
+  Postman-Token: 35aae330-cb60-45b4-8cc7-b25021d53c36
+  Content-Length: 0
+}
+2018-03-06 17:08:24.2605 ##Trace [Security.WebApi.Response] [UserGroups/GetGroupsByUserName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Group, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-03-06 17:09:14.2086 ##Trace [Security.WebApi.Request] [UserGroups/RemoveGroupsFromUser] | Method: DELETE, RequestUri: 'http://localhost:14797/api/usergroups?userId=EACFCF21-F944-E711-9C3A-FCAA1407BFFB', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Host: localhost:14797
+  User-Agent: PostmanRuntime/7.1.1
+  Postman-Token: c15dd590-151c-432c-bb6e-14c7c1051d6c
+  Content-Length: 40
+  Content-Type: application/json
+}
+2018-03-06 17:09:23.4427 ##Trace [Security.WebApi.Response] [UserGroups/RemoveGroupsFromUser] | 
+2018-03-06 17:09:23.4427 ##Error [Security.WebApi] System.Data.SqlClient.SqlException (0x80131904): Must declare the scalar variable "@userId".
+Incorrect syntax near '@groupsId'.
    в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
    в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
    в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
    в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
-   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
-   в System.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader(Boolean isInternal, Boolean forDescribeParameterEncryption)
    в System.Data.SqlClient.SqlCommand.InternalEndExecuteNonQuery(IAsyncResult asyncResult, String endMethod, Boolean isInternal)
    в System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
    в System.Data.SqlClient.SqlCommand.EndExecuteNonQueryAsync(IAsyncResult asyncResult)
@@ -176,12 +697,12 @@ The statement has been terminated.
    в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
    в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
    в System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
-   в Security.Dapper.SqlMapper.<ExecuteImplAsync>d__37.MoveNext() в C:\Projects\Security.V2.1\Security\Dapper\SqlMapper.Async.cs:строка 646
+   в Security.Dapper.SqlMapper.<ExecuteImplAsync>d__37.MoveNext()
 --- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
    в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
    в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
    в System.Runtime.CompilerServices.TaskAwaiter.GetResult()
-   в Security.WebApi.Controllers.GrantsController.<SetGrants>d__5.MoveNext() в C:\Projects\Security.V2.1\Security.WebApi\Controllers\GrantsController.cs:строка 50
+   в Security.WebApi.Controllers.UserGroupsController.<RemoveGroupsFromUser>d__24.MoveNext() в C:\Projects\Security.V2.1\Security.WebApi\Controllers\UserGroupsController.cs:строка 188
 --- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
    в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
    в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
@@ -208,9 +729,9 @@ The statement has been terminated.
    в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
    в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
    в System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__6.MoveNext()
-ClientConnectionId:fc984812-43bb-4651-b192-0604b9af316a
-Error Number: 2627, State: 1, Class: 14
-2018-03-03 20:41:48.8120 Security.WebApi [MemberRoles/GetExceptRolesByMemberName] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/memberroles/except?member=garipovd', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+ClientConnectionId:2ef87500-7c1d-4b09-b977-33675e231319
+Error Number: 137, State: 2, Class: 15
+2018-03-06 17:09:33.8737 ##Trace [Security.WebApi.Request] [UserGroups/RemoveGroupsFromUser] | Method: DELETE, RequestUri: 'http://localhost:14797/api/usergroups?userId=EACFCF21-F944-E711-9C3A-FCAA1407BFFB', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
 {
   Cache-Control: no-cache
   Connection: keep-alive
@@ -219,14 +740,30 @@ Error Number: 2627, State: 1, Class: 14
   Accept-Encoding: deflate
   Host: localhost:14797
   User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 6d728011-b8f3-4195-bed8-d14857443ffd
+  Postman-Token: 97e5a607-172c-4278-ae3e-5d2cf134731b
+  Content-Length: 40
+  Content-Type: application/json
+}
+2018-03-06 17:10:09.2337 ##Trace [Security.WebApi.Response] [UserGroups/RemoveGroupsFromUser] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
+{
+}
+2018-03-06 17:11:13.3659 ##Trace [Security.WebApi.Request] [UserGroups/GetGroupsByUserName] | Method: GET, RequestUri: 'http://localhost:14797/api/usergroups?username=garipovd', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Host: localhost:14797
+  User-Agent: PostmanRuntime/7.1.1
+  Postman-Token: 6ed9ee7d-ac5c-45f6-b702-dac1cc5b0991
   Content-Length: 0
 }
-2018-03-03 20:41:52.5796 Security.WebApi [MemberRoles/GetExceptRolesByMemberName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Role, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+2018-03-06 17:11:13.3659 ##Trace [Security.WebApi.Response] [UserGroups/GetGroupsByUserName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Group, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
 {
   Content-Type: application/json; charset=utf-8
 }
-2018-03-03 20:42:41.5164 Security.WebApi [MemberRoles/GetExceptRolesByMemberName] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/memberroles/except?member=1', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+2018-03-06 17:11:17.3359 ##Trace [Security.WebApi.Request] [UserGroups/GetNotIncludedGroups] | Method: GET, RequestUri: 'http://localhost:14797/api/usergroups/exceptfor?userId=EACFCF21-F944-E711-9C3A-FCAA1407BFFB', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
 {
   Cache-Control: no-cache
   Connection: keep-alive
@@ -235,14 +772,14 @@ Error Number: 2627, State: 1, Class: 14
   Accept-Encoding: deflate
   Host: localhost:14797
   User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 2588f4e2-e53d-4a68-87d3-fca9f59af58e
+  Postman-Token: 47c9a292-8e39-4284-9709-d3b177d19f63
   Content-Length: 0
 }
-2018-03-03 20:42:44.5702 Security.WebApi [MemberRoles/GetExceptRolesByMemberName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Role, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+2018-03-06 17:11:20.7509 ##Trace [Security.WebApi.Response] [UserGroups/GetNotIncludedGroups] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Group, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
 {
   Content-Type: application/json; charset=utf-8
 }
-2018-03-03 20:42:58.1709 Security.WebApi [MemberRoles/GetExceptRolesByMemberName] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/memberroles/except?member=1', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+2018-03-06 17:11:28.1869 ##Trace [Security.WebApi.Request] [UserGroups/RemoveGroupsFromUser] | Method: DELETE, RequestUri: 'http://localhost:14797/api/usergroups?userId=EACFCF21-F944-E711-9C3A-FCAA1407BFFB', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
 {
   Cache-Control: no-cache
   Connection: keep-alive
@@ -251,14 +788,46 @@ Error Number: 2627, State: 1, Class: 14
   Accept-Encoding: deflate
   Host: localhost:14797
   User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 61516232-09f4-45e0-bfc5-cb90c92798b4
+  Postman-Token: c5c4fe61-c547-4e7d-8ceb-f3166ab5683c
+  Content-Length: 40
+  Content-Type: application/json
+}
+2018-03-06 17:11:30.8790 ##Trace [Security.WebApi.Response] [UserGroups/RemoveGroupsFromUser] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
+{
+}
+2018-03-06 17:14:44.0760 ##Trace [Security.WebApi.Request] [UserGroups/RemoveGroupsFromUser] | Method: DELETE, RequestUri: 'http://localhost:14797/api/usergroups?user=garipovd', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Host: localhost:14797
+  User-Agent: PostmanRuntime/7.1.1
+  Postman-Token: 1e31dc5a-ed14-4b6b-97de-b120b112a8b6
+  Content-Length: 22
+  Content-Type: application/json
+}
+2018-03-06 17:14:59.6220 ##Trace [Security.WebApi.Response] [UserGroups/RemoveGroupsFromUser] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
+{
+}
+2018-03-06 17:15:05.3670 ##Trace [Security.WebApi.Request] [UserGroups/GetGroupsByUserName] | Method: GET, RequestUri: 'http://localhost:14797/api/usergroups?username=garipovd', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Host: localhost:14797
+  User-Agent: PostmanRuntime/7.1.1
+  Postman-Token: 0f28175a-4a11-4ff6-b995-6059553452d5
   Content-Length: 0
 }
-2018-03-03 20:43:07.2240 Security.WebApi [MemberRoles/GetExceptRolesByMemberName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Role, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+2018-03-06 17:15:05.3670 ##Trace [Security.WebApi.Response] [UserGroups/GetGroupsByUserName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Group, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
 {
   Content-Type: application/json; charset=utf-8
 }
-2018-03-03 20:43:34.7379 Security.WebApi [MemberRoles/GetExceptRolesByMemberName] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/memberroles/except?member=1123', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+2018-03-06 17:15:10.5880 ##Trace [Security.WebApi.Request] [UserGroups/GetNotIncludedGroups] | Method: GET, RequestUri: 'http://localhost:14797/api/usergroups/exceptfor?userId=EACFCF21-F944-E711-9C3A-FCAA1407BFFB', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
 {
   Cache-Control: no-cache
   Connection: keep-alive
@@ -267,42 +836,10 @@ Error Number: 2627, State: 1, Class: 14
   Accept-Encoding: deflate
   Host: localhost:14797
   User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: 7f2f31a5-37a4-4f11-ab21-6effcb4bef18
+  Postman-Token: 4403f69d-c31b-4369-9ce8-c4239a6ebd35
   Content-Length: 0
 }
-2018-03-03 20:43:39.6985 Security.WebApi [MemberRoles/GetExceptRolesByMemberName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Role, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
-{
-  Content-Type: application/json; charset=utf-8
-}
-2018-03-03 20:43:45.5028 Security.WebApi [MemberRoles/GetExceptRolesByMemberName] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/memberroles/except?member=1123', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: c0934ff9-9220-4cd7-b250-90161fae20e3
-  Content-Length: 0
-}
-2018-03-03 20:43:54.7826 Security.WebApi [MemberRoles/GetExceptRolesByMemberName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Role, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
-{
-  Content-Type: application/json; charset=utf-8
-}
-2018-03-03 20:43:58.4822 Security.WebApi [MemberRoles/GetExceptRolesByMemberName] | Method: GET, RequestUri: 'http://localhost:14797/api/IPPS.LightingSystem/memberroles/except?member=1123', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
-{
-  Cache-Control: no-cache
-  Connection: keep-alive
-  Accept: */*
-  Accept-Encoding: gzip
-  Accept-Encoding: deflate
-  Host: localhost:14797
-  User-Agent: PostmanRuntime/7.1.1
-  Postman-Token: a3e42543-fda1-4fc6-8f5d-df630124be09
-  Content-Length: 0
-}
-2018-03-03 20:45:18.4235 Security.WebApi [MemberRoles/GetExceptRolesByMemberName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Role, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+2018-03-06 17:15:12.2050 ##Trace [Security.WebApi.Response] [UserGroups/GetNotIncludedGroups] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Group, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
 {
   Content-Type: application/json; charset=utf-8
 }

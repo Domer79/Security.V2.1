@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Reflection;
 using System.Web;
@@ -34,7 +35,12 @@ namespace Security.WebApi.App_Start
         private static void Configure(ContainerBuilder builder)
         {
             builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
-            builder.RegisterType<LoggingActionFilter>().AsWebApiActionFilterFor<ApiController>().InstancePerRequest();
+
+            if (bool.TryParse(ConfigurationManager.AppSettings["FullLog"], out var fullLog))
+            {
+                if (fullLog)
+                    builder.RegisterType<LoggingActionFilter>().AsWebApiActionFilterFor<ApiController>().SingleInstance();
+            }
             builder.RegisterType<ExceptionActionFilter>().AsWebApiExceptionFilterFor<ApiController>().InstancePerRequest();
 
             builder.RegisterType<ApplicationInternalRepository>().As<IApplicationInternalRepository>().InstancePerRequest();

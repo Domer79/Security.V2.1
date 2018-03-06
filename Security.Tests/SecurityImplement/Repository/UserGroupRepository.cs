@@ -172,5 +172,155 @@ namespace Security.Tests.SecurityImplement.Repository
         {
             throw new NotImplementedException();
         }
+
+        public void RemoveUsersFromGroup(int[] idUsers, int idGroup)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RemoveUsersFromGroup(Guid[] usersId, Guid groupId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RemoveUsersFromGroup(string[] users, string group)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RemoveGroupsFromUser(int[] idGroups, int idUser)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RemoveGroupsFromUser(Guid[] groupsId, Guid userId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RemoveGroupsFromUser(string[] groups, string user)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RemoveUsersFromGroupAsync(int[] idUsers, int idGroup)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RemoveUsersFromGroupAsync(Guid[] usersId, Guid groupId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RemoveUsersFromGroupAsync(string[] users, string group)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RemoveGroupsFromUserAsync(int[] idGroups, int idUser)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RemoveGroupsFromUserAsync(Guid[] groupsId, Guid userId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RemoveGroupsFromUserAsync(string[] groups, string user)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<User> GetNonIncludedUsers(string group)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<User> GetNonIncludedUsers(Guid groupId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<User> GetNonIncludedUsers(int idGroup)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<User> GetNotIncludedGroups(string user)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<User> GetNotIncludedGroups(Guid userId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<User> GetNotIncludedGroups(int idUser)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IEnumerable<User>> GetNonIncludedUsersAsync(string group)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IEnumerable<User>> GetNonIncludedUsersAsync(Guid groupId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IEnumerable<User>> GetNonIncludedUsersAsync(int idGroup)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IEnumerable<User>> GetNotIncludedGroupsAsync(string user)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IEnumerable<User>> GetNotIncludedGroupsAsync(Guid userId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IEnumerable<User>> GetNotIncludedGroupsAsync(int idUser)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task IUserGroupRepository.RemoveUsersFromGroupAsync(int[] idUsers, int idGroup)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task IUserGroupRepository.RemoveUsersFromGroupAsync(Guid[] usersId, Guid groupId)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task IUserGroupRepository.RemoveUsersFromGroupAsync(string[] users, string group)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task IUserGroupRepository.RemoveGroupsFromUserAsync(int[] idGroups, int idUser)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task IUserGroupRepository.RemoveGroupsFromUserAsync(Guid[] groupsId, Guid userId)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task IUserGroupRepository.RemoveGroupsFromUserAsync(string[] groups, string user)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

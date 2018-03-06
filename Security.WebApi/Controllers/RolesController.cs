@@ -29,7 +29,6 @@ namespace Security.WebApi.Controllers
         /// Возвращает список всех ролей приложения
         /// </summary>
         /// <returns></returns>
-        [Route("get")]
         public async Task<IHttpActionResult> Get()
         {
             var roles = await _repository.GetAsync();
@@ -41,7 +40,6 @@ namespace Security.WebApi.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        [Route("get/{id}")]
         public async Task<IHttpActionResult> Get(int id)
         {
             var role = await _repository.GetAsync(id);
