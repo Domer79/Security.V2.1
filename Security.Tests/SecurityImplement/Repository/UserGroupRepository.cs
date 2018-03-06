@@ -322,5 +322,35 @@ namespace Security.Tests.SecurityImplement.Repository
         {
             throw new NotImplementedException();
         }
+
+        public IEnumerable<Group> GetNonIncludedGroups(string user)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Group> GetNonIncludedGroups(Guid userId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Group> GetNonIncludedGroups(int idUser)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IEnumerable<Group>> GetNonIncludedGroupsAsync(string user)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IEnumerable<Group>> GetNonIncludedGroupsAsync(Guid userId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IEnumerable<Group>> GetNonIncludedGroupsAsync(int idUser)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

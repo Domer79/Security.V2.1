@@ -23,11 +23,16 @@ namespace Security.V2.Core
 
         public T GetValue<T>(string key)
         {
-            var value = _commonDb.ExecuteScalar<string>("select value from sec.Settings where name = @key", new {key});
+            return (T) GetValue(key, typeof(T));
+        }
+
+        public object GetValue(string key, Type type)
+        {
+            var value = _commonDb.ExecuteScalar<string>("select value from sec.Settings where name = @key", new { key });
 
             try
             {
-                return (T)Convert.ChangeType(value, typeof(T));
+                return Convert.ChangeType(value, type);
             }
             catch (Exception e)
             {
@@ -37,11 +42,16 @@ namespace Security.V2.Core
 
         public async Task<T> GetValueAsync<T>(string key)
         {
+            return (T) await GetValueAsync(key, typeof(T));
+        }
+
+        public async Task<object> GetValueAsync(string key, Type type)
+        {
             var value = await _commonDb.ExecuteScalarAsync<string>("select value from sec.Settings where name = @key", new { key = GetKey(key) });
 
             try
             {
-                return (T)Convert.ChangeType(value, typeof(T));
+                return Convert.ChangeType(value, type);
             }
             catch (Exception e)
             {
@@ -67,6 +77,11 @@ namespace Security.V2.Core
 
         public void SetValue<T>(string key, T value, TimeSpan? lifetime = null)
         {
+            SetValue(key, value, lifetime);
+        }
+
+        public void SetValue(string key, object value, TimeSpan? lifetime = null)
+        {
             var exists = _commonDb.ExecuteScalar<bool>(@"
 select
 	top 1
@@ -75,20 +90,25 @@ from
 (
 	select 1 as isAny from sec.Settings where name = @key union all select 0
 )s
-", new {key = GetKey(key)});
+", new { key = GetKey(key) });
 
             if (exists)
             {
                 _commonDb.ExecuteNonQuery("update sec.Settings set value = @value where name = @key",
-                    new {key = GetKey(key), value = value.ToString()});
+                    new { key = GetKey(key), value = value.ToString() });
                 return;
             }
 
             long? lt = lifetime.HasValue ? lifetime.Value.Ticks : (long?)null;
-            _commonDb.ExecuteNonQuery("insert into sec.Settings(name, value, inDbLifetime, changedDate) values(@key, @value, @lifetime, @changedDate)", new {key = GetKey(key), value = value.ToString(), lifetime = lt, changedDate = DateTime.Now});
+            _commonDb.ExecuteNonQuery("insert into sec.Settings(name, value, inDbLifetime, changedDate) values(@key, @value, @lifetime, @changedDate)", new { key = GetKey(key), value = value.ToString(), lifetime = lt, changedDate = DateTime.Now });
         }
 
         public async Task SetValueAsync<T>(string key, T value, TimeSpan? lifetime = null)
+        {
+            await SetValueAsync(key, (object)value, lifetime);
+        }
+
+        public async Task SetValueAsync(string key, object value, TimeSpan? lifetime = null)
         {
             var exists = _commonDb.ExecuteScalarAsync<bool>(@"
 select

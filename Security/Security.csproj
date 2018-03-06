@@ -219,9 +219,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="V2\Core\Http\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="..\DebugPackageConfiguration.targets" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\Configuration.targets" />

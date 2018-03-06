@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
+using Security.V2.Contracts;
 using Security.V2.Contracts.Repository;
 
 namespace Security.WebApi.Controllers
@@ -12,10 +13,12 @@ namespace Security.WebApi.Controllers
     public class CommonController : ApiController
     {
         private readonly IUserInternalRepository _repo;
+        private readonly IConfig _config;
 
-        public CommonController(IUserInternalRepository repo)
+        public CommonController(IUserInternalRepository repo, IConfig config)
         {
             _repo = repo;
+            _config = config;
         }
 
         [Route("api/{app}/common/checkaccess")]
@@ -40,6 +43,22 @@ namespace Security.WebApi.Controllers
         {
             var result = await _repo.UserValidateAsync(loginOrEmail, password);
             return Ok(result);
+        }
+
+        [Route("api/common/registerapp")]
+        [HttpPut]
+        public async Task<IHttpActionResult> RegisterApplication(string appName, string description)
+        {
+            await _config.RegisterApplicationAsync(appName, description);
+            return Ok();
+        }
+
+        [Route("api/common/registerpolicy")]
+        [HttpPut]
+        public async Task<IHttpActionResult> RegisterSecurityObjects(string appName, [FromBody] string[] securityObjects)
+        {
+            await _config.RegisterSecurityObjectsAsync(appName, securityObjects);
+            return Ok();
         }
     }
 }

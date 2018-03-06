@@ -189,6 +189,7 @@
     <Compile Include="Controllers\MemberRolesController.cs" />
     <Compile Include="Controllers\PolicyController.cs" />
     <Compile Include="Controllers\RolesController.cs" />
+    <Compile Include="Controllers\SettingsController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\UserGroupsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -247,7 +248,7 @@
       <Name>Security.Model</Name>
     </ProjectReference>
     <ProjectReference Include="..\Security\Security.csproj">
-      <Project>{556713E5-2ADB-4B4B-8D40-74DF9393D33D}</Project>
+      <Project>{556713e5-2adb-4b4b-8d40-74df9393d33d}</Project>
       <Name>Security</Name>
     </ProjectReference>
     <ProjectReference Include="..\Tools\Tools.csproj">

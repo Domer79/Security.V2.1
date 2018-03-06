@@ -19,12 +19,29 @@ namespace Security.V2.Contracts
         T GetValue<T>(string key);
 
         /// <summary>
+        /// Возвращает значение переданного ключа <see cref="key"/>
+        /// </summary>
+        /// <typeparam name="T">Тип значения</typeparam>
+        /// <param name="key">Ключ</param>
+        /// <param name="type"></param>
+        /// <returns>Значение типа <see cref="T"/></returns>
+        object GetValue(string key, Type type);
+
+        /// <summary>
         /// Устанавливает значения для ключа <see cref="key"/>
         /// </summary>
         /// <typeparam name="T">Тип значения</typeparam>
         /// <param name="key">Ключ</param>
         /// <param name="value">Значение</param>
         void SetValue<T>(string key, T value, TimeSpan? lifetime = null);
+
+        /// <summary>
+        /// Устанавливает значения для ключа <see cref="key"/>
+        /// </summary>
+        /// <typeparam name="T">Тип значения</typeparam>
+        /// <param name="key">Ключ</param>
+        /// <param name="value">Значение</param>
+        void SetValue(string key, object value, TimeSpan? lifetime = null);
 
         /// <summary>
         /// Проверяет устарело ли значение в кеше
@@ -42,12 +59,29 @@ namespace Security.V2.Contracts
         Task<T> GetValueAsync<T>(string key);
 
         /// <summary>
+        /// Возвращает значение переданного ключа <see cref="key"/>
+        /// </summary>
+        /// <typeparam name="T">Тип значения</typeparam>
+        /// <param name="key">Ключ</param>
+        /// <param name="type"></param>
+        /// <returns>Значение типа <see cref="T"/></returns>
+        Task<object> GetValueAsync(string key, Type type);
+
+        /// <summary>
         /// Устанавливает значения для ключа <see cref="key"/>. Если значение <see cref="lifetime"/> null, то считаем, что время жизни данного значения неограниченно
         /// </summary>
         /// <typeparam name="T">Тип значения</typeparam>
         /// <param name="key">Ключ</param>
         /// <param name="value">Значение</param>
         Task SetValueAsync<T>(string key, T value, TimeSpan? lifetime = null);
+
+        /// <summary>
+        /// Устанавливает значения для ключа <see cref="key"/>
+        /// </summary>
+        /// <typeparam name="T">Тип значения</typeparam>
+        /// <param name="key">Ключ</param>
+        /// <param name="value">Значение</param>
+        Task SetValueAsync(string key, object value, TimeSpan? lifetime = null);
 
         /// <summary>
         /// Проверяет устарело ли значение в кеше
