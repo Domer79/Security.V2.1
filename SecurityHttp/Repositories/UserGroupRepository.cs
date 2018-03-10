@@ -80,7 +80,7 @@ namespace SecurityHttp.Repositories
             return _commonWeb.PutAsync($"{_url}", users, new { group });
         }
 
-        public IEnumerable<Group> GetGroupsByIdUser(int idUser)
+        public IEnumerable<Group> GetGroups(int idUser)
         {
             return _commonWeb.GetCollection<Group>($"{_url}", new {idUser});
         }
@@ -90,7 +90,7 @@ namespace SecurityHttp.Repositories
             return _commonWeb.GetCollectionAsync<Group>($"{_url}", new { idUser });
         }
 
-        public IEnumerable<Group> GetGroupsByUserId(Guid id)
+        public IEnumerable<Group> GetGroups(Guid id)
         {
             return _commonWeb.GetCollection<Group>($"{_url}", new { userId = id });
         }
@@ -100,7 +100,7 @@ namespace SecurityHttp.Repositories
             return _commonWeb.GetCollectionAsync<Group>($"{_url}", new { userId = id });
         }
 
-        public IEnumerable<Group> GetGroupsByUserName(string name)
+        public IEnumerable<Group> GetGroups(string name)
         {
             return _commonWeb.GetCollection<Group>($"{_url}", new { userName = name });
         }
@@ -170,7 +170,7 @@ namespace SecurityHttp.Repositories
             return _commonWeb.GetCollectionAsync<User>($"{_url}/exceptfor", new { idGroup });
         }
 
-        public IEnumerable<User> GetUsersByGroupId(Guid id)
+        public IEnumerable<User> GetUsers(Guid id)
         {
             return _commonWeb.GetCollection<User>($"{_url}", new {groupId = id});
         }
@@ -180,7 +180,7 @@ namespace SecurityHttp.Repositories
             return _commonWeb.GetCollectionAsync<User>($"{_url}", new { groupId = id });
         }
 
-        public IEnumerable<User> GetUsersByGroupName(string name)
+        public IEnumerable<User> GetUsers(string name)
         {
             return _commonWeb.GetCollection<User>($"{_url}", new { groupName = name });
         }
@@ -190,7 +190,7 @@ namespace SecurityHttp.Repositories
             return _commonWeb.GetCollectionAsync<User>($"{_url}", new { groupName = name });
         }
 
-        public IEnumerable<User> GetUsersByIdGroup(int idGroup)
+        public IEnumerable<User> GetUsers(int idGroup)
         {
             return _commonWeb.GetCollection<User>($"{_url}", new { idGroup });
         }

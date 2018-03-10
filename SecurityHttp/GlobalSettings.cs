@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Security.V2.CommonContracts;
 
-namespace Security.Tests.SecurityHttpTest.Simple
+namespace SecurityHttp
 {
     class GlobalSettings : IGlobalSettings
     {
@@ -13,7 +14,6 @@ namespace Security.Tests.SecurityHttpTest.Simple
 
         public string DefaultConnectionString => throw new NotImplementedException();
 
-//        public string SecurityServerAddress => "http://localhost:8080/";
-        public string SecurityServerAddress => "http://localhost:14797/";
+        public string SecurityServerAddress => ConfigurationManager.AppSettings["SecurityServerAddress"];
     }
 }

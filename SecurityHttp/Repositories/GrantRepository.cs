@@ -14,73 +14,77 @@ namespace SecurityHttp.Repositories
     {
         private readonly ICommonWeb _commonWeb;
         private readonly IApplicationContext _context;
-        private readonly string _url;
+        private string _url;
 
         public GrantRepository(ICommonWeb commonWeb, IApplicationContext context)
         {
             _commonWeb = commonWeb;
             _context = context;
-            _url = $"api/{_context.Application.AppName}/grants";
+        }
+
+        private string Url
+        {
+            get { return _url ?? (_url = $"api/{_context.Application.AppName}/grants"); }
         }
 
         public IEnumerable<SecObject> GetExceptRoleGrant(string role)
         {
-            return _commonWeb.GetCollection<SecObject>($"{_url}/except/{role}");
+            return _commonWeb.GetCollection<SecObject>($"{Url}/except/{role}");
         }
 
         public Task<IEnumerable<SecObject>> GetExceptRoleGrantAsync(string role)
         {
-            return _commonWeb.GetCollectionAsync<SecObject>($"{_url}/except/{role}");
+            return _commonWeb.GetCollectionAsync<SecObject>($"{Url}/except/{role}");
         }
 
         public IEnumerable<SecObject> GetRoleGrants(string role)
         {
-            return _commonWeb.GetCollection<SecObject>($"{_url}/{role}");
+            return _commonWeb.GetCollection<SecObject>($"{Url}/{role}");
         }
 
         public Task<IEnumerable<SecObject>> GetRoleGrantsAsync(string role)
         {
-            return _commonWeb.GetCollectionAsync<SecObject>($"{_url}/{role}");
+            return _commonWeb.GetCollectionAsync<SecObject>($"{Url}/{role}");
         }
 
         public void RemoveGrant(string role, string secObject)
         {
-            _commonWeb.Delete(_url, new {Role = role, SecObjects = new string[] {secObject}});
+            _commonWeb.Delete(Url, new {Role = role, SecObjects = new string[] {secObject}});
         }
 
         public Task RemoveGrantAsync(string role, string secObject)
         {
-            return _commonWeb.DeleteAsync(_url, new { Role = role, SecObjects = new string[] { secObject } });
+            return _commonWeb.DeleteAsync(Url, new { Role = role, SecObjects = new string[] { secObject } });
         }
 
         public void RemoveGrants(string role, string[] secObjects)
         {
-            _commonWeb.Delete(_url, new { Role = role, SecObjects = secObjects });
+            _commonWeb.Delete(Url, new { Role = role, SecObjects = secObjects });
         }
 
         public Task RemoveGrantsAsync(string role, string[] secObjects)
         {
-            return _commonWeb.DeleteAsync(_url, new { Role = role, SecObjects = secObjects });
+            return _commonWeb.DeleteAsync(Url, new { Role = role, SecObjects = secObjects });
         }
 
         public void SetGrant(string role, string secObject)
         {
-            _commonWeb.Put(_url, new {Role = role, SecObjects = new string[] {secObject}});
+            _commonWeb.Put(Url, new {Role = role, SecObjects = new string[] {secObject}});
         }
 
         public Task SetGrantAsync(string role, string secObject)
         {
-            return _commonWeb.PutAsync(_url, new { Role = role, SecObjects = new string[] { secObject } });
+            return _commonWeb.PutAsync(Url, new { Role = role, SecObjects = new string[] { secObject } });
         }
 
         public void SetGrants(string role, string[] secObjects)
         {
-            _commonWeb.Put(_url, new { Role = role, secObjects});
+            _commonWeb.Put(Url, new { Role = role, secObjects});
         }
 
         public Task SetGrantsAsync(string role, string[] secObjects)
         {
-            return _commonWeb.PutAsync(_url, new { Role = role, secObjects });
+            return _commonWeb.PutAsync(Url, new { Role = role, secObjects });
         }
     }
 }

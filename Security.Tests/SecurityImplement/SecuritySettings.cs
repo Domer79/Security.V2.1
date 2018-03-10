@@ -22,7 +22,17 @@ namespace Security.Tests.SecurityImplement
             throw new NotImplementedException();
         }
 
+        public object GetValue(string key, Type type)
+        {
+            throw new NotImplementedException();
+        }
+
         public Task<T> GetValueAsync<T>(string key)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<object> GetValueAsync(string key, Type type)
         {
             throw new NotImplementedException();
         }
@@ -47,7 +57,17 @@ namespace Security.Tests.SecurityImplement
             throw new NotImplementedException();
         }
 
+        public void SetValue(string key, object value, TimeSpan? lifetime = null)
+        {
+            throw new NotImplementedException();
+        }
+
         public Task SetValueAsync<T>(string key, T value, TimeSpan? lifetime = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task SetValueAsync(string key, object value, TimeSpan? lifetime = null)
         {
             throw new NotImplementedException();
         }

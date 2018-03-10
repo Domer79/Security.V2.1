@@ -128,7 +128,7 @@ select idMember idUser, @idGroup idGroup from sec.Members where name in @users
 ", new { users, group });
         }
         
-        public IEnumerable<Group> GetGroupsByUserId(Guid id)
+        public IEnumerable<Group> GetGroups(Guid id)
         {
             return _commonDb.Query<Group>(@"
 select
@@ -154,7 +154,7 @@ where
 ", new { id });
         }
 
-        public IEnumerable<Group> GetGroupsByIdUser(int idUser)
+        public IEnumerable<Group> GetGroups(int idUser)
         {
             return _commonDb.Query<Group>(@"
 select
@@ -180,7 +180,7 @@ where
 ", new { idUser });
         }
 
-        public IEnumerable<Group> GetGroupsByUserName(string name)
+        public IEnumerable<Group> GetGroups(string name)
         {
             return _commonDb.Query<Group>(@"
 select
@@ -206,7 +206,7 @@ where
 ", new { name });
         }
 
-        public IEnumerable<User> GetUsersByGroupName(string name)
+        public IEnumerable<User> GetUsers(string name)
         {
             return _commonDb.Query<User>(@"
 select
@@ -230,7 +230,7 @@ where
 	m.name = @name", new { name });
         }
 
-        public IEnumerable<User> GetUsersByGroupId(Guid id)
+        public IEnumerable<User> GetUsers(Guid id)
         {
             return _commonDb.Query<User>(@"
 select
@@ -254,7 +254,7 @@ where
 	m.id = @id", new { id });
         }
 
-        public IEnumerable<User> GetUsersByIdGroup(int idGroup)
+        public IEnumerable<User> GetUsers(int idGroup)
         {
             return _commonDb.Query<User>(@"
 select
@@ -290,7 +290,7 @@ where
 
         public void RemoveUsersFromGroup(string[] users, string group)
         {
-            _commonDb.ExecuteNonQuery("delete from sec.UserGroups where idGroup = (select idMember from sec.GroupsView where name = @group) and idUser in (select idMember from sec.Members where name in @users)", users);
+            _commonDb.ExecuteNonQuery("delete from sec.UserGroups where idGroup = (select idMember from sec.GroupsView where name = @group) and idUser in (select idMember from sec.Members where name in @users)", new {users, group});
         }
 
         public void RemoveGroupsFromUser(int[] idGroups, int idUser)
@@ -320,7 +320,7 @@ where
 
         public Task RemoveUsersFromGroupAsync(string[] users, string group)
         {
-            return _commonDb.ExecuteNonQueryAsync("delete from sec.UserGroups where idGroup = (select idMember from sec.GroupsView where name = @group) and idUser in (select idMember from sec.Members where name in @users)", users);
+            return _commonDb.ExecuteNonQueryAsync("delete from sec.UserGroups where idGroup = (select idMember from sec.GroupsView where name = @group) and idUser in (select idMember from sec.Members where name in @users)", new {users, group});
         }
 
         public Task RemoveGroupsFromUserAsync(int[] idGroups, int idUser)
@@ -375,7 +375,7 @@ where
 
         public Task<IEnumerable<User>> GetNonIncludedUsersAsync(Guid groupId)
         {
-            return _commonDb.QueryAsync<User>("select * from sec.UsersView where idMember not in (select idUser from sec.UserGroups where idGroup = (select idMember from sec.Members where id = @groupId)) and 1 = (select 1 from sec.Members where id = @groupdId)", new { groupId });
+            return _commonDb.QueryAsync<User>("select * from sec.UsersView where idMember not in (select idUser from sec.UserGroups where idGroup = (select idMember from sec.Members where id = @groupId)) and 1 = (select 1 from sec.Members where id = @groupId)", new { groupId });
         }
 
         public Task<IEnumerable<User>> GetNonIncludedUsersAsync(int idGroup)

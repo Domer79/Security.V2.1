@@ -45,37 +45,37 @@ namespace SecurityHttp.Repositories
 
         public User Get(object id)
         {
-            var user = _commonWeb.Get<User>($"api/user/get/{id}");
+            var user = _commonWeb.Get<User>($"api/user/{id}");
             return user;
         }
 
         public async Task<User> GetAsync(object id)
         {
-            var user = await _commonWeb.GetAsync<User>($"api/user/get/{id}");
+            var user = await _commonWeb.GetAsync<User>($"api/user/{id}");
             return user;
         }
 
         public IEnumerable<User> Get()
         {
-            var users = _commonWeb.Get<IEnumerable<User>>("api/user/get");
+            var users = _commonWeb.Get<IEnumerable<User>>("api/user");
             return users;
         }
 
         public Task<IEnumerable<User>> GetAsync()
         {
-            var users = _commonWeb.GetAsync<IEnumerable<User>>("api/user/get");
+            var users = _commonWeb.GetAsync<IEnumerable<User>>("api/user");
             return users;
         }
 
         public User GetByName(string loginOrEmail)
         {
-            var user = _commonWeb.Get<User>($"api/user/getbyname/{loginOrEmail}");
+            var user = _commonWeb.Get<User>($"api/user", new {loginOrEmail});
             return user;
         }
 
         public Task<User> GetByNameAsync(string loginOrEmail)
         {
-            var user = _commonWeb.GetAsync<User>($"api/user/getbyname/{loginOrEmail}");
+            var user = _commonWeb.GetAsync<User>($"api/user", new { loginOrEmail });
             return user;
         }
 

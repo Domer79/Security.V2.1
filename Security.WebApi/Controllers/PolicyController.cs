@@ -63,7 +63,6 @@ namespace Security.WebApi.Controllers
         }
 
         [HttpGet]
-        [Route("getbyname/{name}")]
         public async Task<IHttpActionResult> GetByName(string name)
         {
             var secObject = await _repo.GetByNameAsync(name);

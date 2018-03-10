@@ -52,7 +52,6 @@ namespace Security.WebApi.Controllers
         }
 
         [HttpGet]
-        [Route("getbyname/{name}")]
         public async Task<IHttpActionResult> GetByName(string name)
         {
             var group = await _repo.GetByNameAsync(name);

@@ -21,7 +21,6 @@ namespace Security.WebApi.Controllers
         }
 
         [HttpGet]
-        [Route("getbyname/{loginOrEmail}")]
         public async Task<IHttpActionResult> GetByName(string loginOrEmail)
         {
             var user = await _repo.GetByNameAsync(loginOrEmail);
@@ -43,14 +42,12 @@ namespace Security.WebApi.Controllers
             return Ok(user);
         }
 
-        [Route("get/{id}")]
         public async Task<IHttpActionResult> Get(int id)
         {
             var user = await _repo.GetAsync(id);
             return Ok(user);
         }
 
-        [Route("get")]
         public async Task<IHttpActionResult> Get()
         {
             var users = await _repo.GetAsync();

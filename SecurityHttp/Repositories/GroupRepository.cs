@@ -60,12 +60,12 @@ namespace SecurityHttp.Repositories
 
         public Group GetByName(string name)
         {
-            return _commonWeb.Get<Group>($"api/groups/getbyname/{name}");
+            return _commonWeb.Get<Group>($"api/groups", new { name });
         }
 
         public Task<Group> GetByNameAsync(string name)
         {
-            return _commonWeb.GetAsync<Group>($"api/groups/getbyname/{name}");
+            return _commonWeb.GetAsync<Group>($"api/groups", new { name });
         }
 
         public void Remove(object id)

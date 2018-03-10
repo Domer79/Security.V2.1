@@ -22,8 +22,8 @@ namespace Security.V2.Core.DataLayer.Repositories
                 entity.PasswordSalt = Guid.NewGuid().ToString("N");
 
             var id = _commonDb.ExecuteScalar<int>("exec sec.AddUser @id, @login, @firstName, @lastName, @middleName, @email, @status, @passwordSalt, @dateCreated", entity);
-            entity.IdMember = id;
-            return entity;
+
+            return Get(id);
         }
 
         public async Task<User> CreateAsync(User entity)
@@ -32,8 +32,8 @@ namespace Security.V2.Core.DataLayer.Repositories
                 entity.PasswordSalt = Guid.NewGuid().ToString("N");
 
             var id = _commonDb.ExecuteScalarAsync<int>("exec sec.AddUser @id, @login, @firstName, @lastName, @middleName, @email, @status, @passwordSalt, @dateCreated", entity);
-            entity.IdMember = await id.ConfigureAwait(false);
-            return entity;
+            
+            return await GetAsync(await id).ConfigureAwait(false);
         }
 
         public User CreateEmpty(string prefixForRequired)

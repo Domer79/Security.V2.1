@@ -34,6 +34,7 @@
       <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,6 +47,7 @@
     <Compile Include="ApplicationContext.cs" />
     <Compile Include="CommonWeb.cs" />
     <Compile Include="Config.cs" />
+    <Compile Include="GlobalSettings.cs" />
     <Compile Include="Helpers\ThrowsHelper.cs" />
     <Compile Include="Interfaces\ICommonWeb.cs" />
     <Compile Include="IocConfig.cs" />

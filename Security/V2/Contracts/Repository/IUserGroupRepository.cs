@@ -7,14 +7,13 @@ namespace Security.V2.Contracts.Repository
 {
     public interface IUserGroupRepository
     {
-        IEnumerable<User> GetUsersByIdGroup(int idGroup);
-        IEnumerable<Group> GetGroupsByIdUser(int idUser);
+        IEnumerable<User> GetUsers(int idGroup);
+        IEnumerable<User> GetUsers(Guid id);
+        IEnumerable<User> GetUsers(string name);
 
-        IEnumerable<User> GetUsersByGroupId(Guid id);
-        IEnumerable<Group> GetGroupsByUserId(Guid id);
-
-        IEnumerable<User> GetUsersByGroupName(string name);
-        IEnumerable<Group> GetGroupsByUserName(string name);
+        IEnumerable<Group> GetGroups(int idUser);
+        IEnumerable<Group> GetGroups(Guid id);
+        IEnumerable<Group> GetGroups(string name);
 
         IEnumerable<User> GetNonIncludedUsers(string group);
         IEnumerable<User> GetNonIncludedUsers(Guid groupId);

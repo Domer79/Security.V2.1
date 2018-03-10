@@ -72,31 +72,31 @@ namespace Security.Tests.SecurityImplement.Repository
             }
         }
 
-        public IEnumerable<User> GetUsersByIdGroup(int idGroup)
+        public IEnumerable<User> GetUsers(int idGroup)
         {
             var group = Database.Groups.Single(_ => _.IdMember == idGroup);
             return Database.UserGroups.GetGroupUsers(group);
         }
 
-        public IEnumerable<User> GetUsersByGroupName(string name)
+        public IEnumerable<User> GetUsers(string name)
         {
             var group = Database.Groups.Single(_ => _.Name == name);
             return Database.UserGroups.GetGroupUsers(group);
         }
 
-        public IEnumerable<User> GetUsersByGroupId(Guid id)
+        public IEnumerable<User> GetUsers(Guid id)
         {
             var group = Database.Groups.Single(_ => _.Id == id);
             return Database.UserGroups.GetGroupUsers(group);
         }
 
-        public IEnumerable<Group> GetGroupsByIdUser(int idUser)
+        public IEnumerable<Group> GetGroups(int idUser)
         {
             var user = Database.Users.Single(_ => _.IdMember == idUser);
             return Database.UserGroups.GetUserGroups(user);
         }
 
-        public IEnumerable<Group> GetGroupsByUserName(string name)
+        public IEnumerable<Group> GetGroups(string name)
         {
             var user = Database.Users.Single(_ => _.Name == name);
             return Database.UserGroups.GetUserGroups(user);
@@ -108,7 +108,7 @@ namespace Security.Tests.SecurityImplement.Repository
             return Database.UserGroups.GetUserGroups(user);
         }
 
-        public IEnumerable<Group> GetGroupsByUserId(Guid id)
+        public IEnumerable<Group> GetGroups(Guid id)
         {
             throw new NotImplementedException();
         }

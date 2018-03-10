@@ -59,7 +59,8 @@ namespace SecurityHttp
                 {
                     using (var sr = new StreamReader(response.GetResponseStream()))
                     {
-                        return (T) JsonConvert.DeserializeObject(sr.ReadToEnd(), typeof(T));
+                        var rawValue = sr.ReadToEnd();
+                        return (T) JsonConvert.DeserializeObject(rawValue, typeof(T));
                     }
                 }
 

@@ -14,83 +14,87 @@ namespace SecurityHttp.Repositories
     {
         private readonly ICommonWeb _commonWeb;
         private readonly IApplicationContext _context;
-        private readonly string _url;
+        private string _url;
 
         public RoleRepository(ICommonWeb commonWeb, IApplicationContext context)
         {
             _commonWeb = commonWeb;
             _context = context;
-            _url = $"api/{context.Application.AppName}/roles";
+        }
+
+        private string Url
+        {
+            get { return _url ?? (_url = $"api/{_context.Application.AppName}/roles"); }
         }
 
         public Role Create(Role entity)
         {
-            return _commonWeb.PostAndGet<Role>($"{_url}", entity);
+            return _commonWeb.PostAndGet<Role>($"{Url}", entity);
         }
 
         public Task<Role> CreateAsync(Role entity)
         {
-            return _commonWeb.PostAndGetAsync<Role>($"{_url}", entity);
+            return _commonWeb.PostAndGetAsync<Role>($"{Url}", entity);
         }
 
         public Role CreateEmpty(string prefixForRequired)
         {
-            return _commonWeb.Get<Role>($"{_url}", new {prefix = prefixForRequired});
+            return _commonWeb.Get<Role>($"{Url}", new {prefix = prefixForRequired});
         }
 
         public Task<Role> CreateEmptyAsync(string prefixForRequired)
         {
-            return _commonWeb.GetAsync<Role>($"{_url}", new { prefix = prefixForRequired });
+            return _commonWeb.GetAsync<Role>($"{Url}", new { prefix = prefixForRequired });
         }
 
         public Role Get(object id)
         {
-            return _commonWeb.Get<Role>($"{_url}", new {id});
+            return _commonWeb.Get<Role>($"{Url}", new {id});
         }
 
         public IEnumerable<Role> Get()
         {
-            return _commonWeb.GetCollection<Role>($"{_url}");
+            return _commonWeb.GetCollection<Role>($"{Url}");
         }
 
         public Task<Role> GetAsync(object id)
         {
-            return _commonWeb.GetAsync<Role>($"{_url}", new { id });
+            return _commonWeb.GetAsync<Role>($"{Url}", new { id });
         }
 
         public Task<IEnumerable<Role>> GetAsync()
         {
-            return _commonWeb.GetCollectionAsync<Role>($"{_url}");
+            return _commonWeb.GetCollectionAsync<Role>($"{Url}");
         }
 
         public Role GetByName(string name)
         {
-            return _commonWeb.Get<Role>($"{_url}", new {name});
+            return _commonWeb.Get<Role>($"{Url}", new {name});
         }
 
         public Task<Role> GetByNameAsync(string name)
         {
-            return _commonWeb.GetAsync<Role>($"{_url}", new { name });
+            return _commonWeb.GetAsync<Role>($"{Url}", new { name });
         }
 
         public void Remove(object id)
         {
-            _commonWeb.Delete($"{_url}", new {id});
+            _commonWeb.Delete($"{Url}", new {id});
         }
 
         public Task RemoveAsync(object id)
         {
-            return _commonWeb.DeleteAsync($"{_url}", new { id });
+            return _commonWeb.DeleteAsync($"{Url}", new { id });
         }
 
         public void Update(Role entity)
         {
-            _commonWeb.Put($"{_url}", entity);
+            _commonWeb.Put($"{Url}", entity);
         }
 
         public Task UpdateAsync(Role entity)
         {
-            return _commonWeb.PutAsync($"{_url}", entity);
+            return _commonWeb.PutAsync($"{Url}", entity);
         }
     }
 }

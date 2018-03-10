@@ -2,12 +2,15 @@
 using System.Configuration;
 using System.Data.SqlClient;
 using System.IO;
+using System.Linq;
 using System.Text.RegularExpressions;
 using Microsoft.SqlServer.Management.Common;
 using Microsoft.SqlServer.Management.Smo;
 using NUnit.Framework;
 using Security.Dapper;
 using Security.Model;
+using Security.Tests.SecurityImplement.Repository;
+using Security.V2.Contracts;
 using Security.V2.Core;
 using Group = Security.Model.Group;
 using User = Security.Model.User;
@@ -20,8 +23,6 @@ namespace Security.Tests.SecurityHttpTest.Simple
         [OneTimeSetUp]
         public void OneTimeSetup()
         {
-            var currentDirectory = Environment.CurrentDirectory;
-
             CreateDatabase();
             ExecuteDatabaseScript(ConfigurationManager.AppSettings["scriptPath"]);
             FillDatabase();
@@ -35,7 +36,7 @@ namespace Security.Tests.SecurityHttpTest.Simple
 
         private void FillDatabase()
         {
-            using (var security = new SecurityInDatabaseTest.MySecurity())
+            using (var security = new MySecurity())
             {
                 security.Config.RegisterSecurityObjects("HelloWorldApp1", "1", "2", "3");
 
@@ -47,55 +48,9 @@ namespace Security.Tests.SecurityHttpTest.Simple
                     security2.Config.RegisterSecurityObjects("HelloWorldApp2", "1", "4", "5", "6");
                 }
 
-                security.UserRepository.Create(new Model.User()
-                {
-                    Login = "user1",
-                    Email = "user1@mail.ru",
-                    FirstName = "Ivan",
-                    LastName = "Petrov",
-                    MiddleName = "Ivanovich",
-                    Status = true,
-                    DateCreated = DateTime.Now
-                });
-
-                security.UserRepository.Create(new Model.User()
-                {
-                    Login = "user2",
-                    Email = "user2@mail.ru",
-                    FirstName = "Petr",
-                    LastName = "Ivanov",
-                    MiddleName = "Petrovich",
-                    Status = true,
-                    DateCreated = DateTime.Now
-                });
-
-                security.UserRepository.Create(new User()
-                {
-                    Login = "user3",
-                    Email = "user3@mail.ru",
-                    FirstName = "Petr",
-                    LastName = "Ivanov",
-                    MiddleName = "Petrovich",
-                    Status = true,
-                    DateCreated = DateTime.Now
-                });
-
-                security.GroupRepository.Create(new Group()
-                {
-                    Name = "group1",
-                    Description = "Group1 Description"
-                });
-
-                security.GroupRepository.Create(new Group()
-                {
-                    Name = "group2",
-                    Description = "Group2 Description"
-                });
-
-                security.UserGroupRepository.AddGroupsToUser(new[] { "group1" }, "user1");
-                security.UserGroupRepository.AddGroupsToUser(new[] { "group1" }, "user2");
-
-                security.UserGroupRepository.AddUsersToGroup(new []{"user2, user3"}, "group2");
+                CreateUsers(security);
+                CreateGroups(security);
+                CreateUserGroups(security);
 
                 security.RoleRepository.Create(new Role()
                 {
@@ -118,6 +73,49 @@ namespace Security.Tests.SecurityHttpTest.Simple
                 security.GrantRepository.SetGrant("role2", "2");
                 security.GrantRepository.SetGrant("role2", "3");
             }
+        }
+
+        private void CreateUsers(ISecurity security)
+        {
+            for (int i = 0; i < 20; i++)
+            {
+                security.UserRepository.Create(new User()
+                {
+                    Login = $"user{i}",
+                    Email = $"user{i}@mail.ru",
+                    FirstName = $"User{i}First",
+                    LastName = $"User{i}Last",
+                    MiddleName = $"User{i}Middle",
+                    Status = true,
+                    DateCreated = DateTime.Now
+                });
+            }
+        }
+
+        private void CreateGroups(ISecurity security)
+        {
+            for (int i = 0; i < 20; i++)
+            {
+                security.GroupRepository.Create(new Group()
+                {
+                    Name = $"group{i}",
+                    Description = $"Group{i} Description"
+                });
+            }
+        }
+
+        private void CreateUserGroups(ISecurity security)
+        {
+            var users = security.UserRepository.Get().ToList();
+            var groups = security.GroupRepository.Get().ToList();
+
+            security.UserGroupRepository.AddUsersToGroup(new []{users[0].Id, users[1].Id}, groups[0].Id);
+            security.UserGroupRepository.AddUsersToGroup(new[] {users[0].IdMember, users[1].IdMember, users[2].IdMember}, groups[1].IdMember);
+            security.UserGroupRepository.AddUsersToGroup(new[] {users[4].Login, users[6].Login, users[7].Login, users[12].Login}, groups[4].Name);
+
+            security.UserGroupRepository.AddGroupsToUser(new []{groups[10].Id, groups[11].Id, groups[12].Id, groups[13].Id, }, users[1].Id);
+            security.UserGroupRepository.AddGroupsToUser(new []{groups[12].IdMember, groups[15].IdMember, groups[18].IdMember, groups[4].IdMember, }, users[2].IdMember);
+            security.UserGroupRepository.AddGroupsToUser(new []{groups[1].Name, groups[18].Name, groups[2].Name, groups[8].Name, }, users[7].Name);
         }
 
         private void DropDatabase()

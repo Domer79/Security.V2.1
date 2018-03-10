@@ -54,6 +54,9 @@ namespace Security.WebApi.App_Start
             builder.RegisterType<UserGroupRepository>().As<IUserGroupRepository>().InstancePerRequest();
             builder.RegisterType<UserInternalRepository>().As<IUserInternalRepository>().InstancePerRequest();
             builder.RegisterType<UserRepository>().As<IUserRepository>().InstancePerRequest();
+            builder.RegisterType<GroupRepository>().As<IGroupRepository>().InstancePerRequest();
+            builder.RegisterType<SecuritySettings>().As<ISecuritySettings>().InstancePerRequest();
+            builder.RegisterType<Config>().As<IConfig>().InstancePerRequest();
         }
     }
 }

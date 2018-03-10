@@ -66,7 +66,6 @@ namespace Security.WebApi.Controllers
         }
 
         [HttpPut]
-        [Route("rolestomember")]
         public async Task<IHttpActionResult> AddRolesToMember(string member, [FromBody]string[] roles)
         {
             await _repo.AddRolesToMemberAsync(roles, member);
@@ -74,7 +73,6 @@ namespace Security.WebApi.Controllers
         }
 
         [HttpPut]
-        [Route("rolestomember")]
         public async Task<IHttpActionResult> AddRolesToMemberByIds(int idMember, [FromBody] int[] idRoles)
         {
             await _repo.AddRolesToMemberAsync(idRoles, idMember);
@@ -82,7 +80,6 @@ namespace Security.WebApi.Controllers
         }
 
         [HttpPut]
-        [Route("memberstorole")]
         public async Task<IHttpActionResult> AddMembersToRole(string role, [FromBody] string[] members)
         {
             await _repo.AddMembersToRoleAsync(members, role);
@@ -90,7 +87,6 @@ namespace Security.WebApi.Controllers
         }
 
         [HttpPut]
-        [Route("memberstorole")]
         public async Task<IHttpActionResult> AddMembersToRoleByIds(int idRole, [FromBody] int[] idMembers)
         {
             await _repo.AddMembersToRoleAsync(idMembers, idRole);
@@ -98,7 +94,6 @@ namespace Security.WebApi.Controllers
         }
 
         [HttpDelete]
-        [Route("RolesFromMember")]
         public async Task<IHttpActionResult> DeleteRolesFromMember(int idMember, [FromBody]int[] idRoles)
         {
             await _repo.DeleteRolesFromMemberAsync(idRoles, idMember);
@@ -106,7 +101,6 @@ namespace Security.WebApi.Controllers
         }
 
         [HttpDelete]
-        [Route("MembersFromRole")]
         public async Task<IHttpActionResult> DeleteMembersFromRole(int idRole, [FromBody]int[] idMembers)
         {
             await _repo.DeleteMembersFromRoleAsync(idMembers, idRole);

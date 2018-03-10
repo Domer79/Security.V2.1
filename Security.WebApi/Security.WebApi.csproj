@@ -146,7 +146,9 @@
     <Content Include="App_Data\XmlDocument.xml" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Global.asax" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\DelegatingHandler.cs" />
@@ -195,9 +197,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\LogHelper.cs" />
     <Compile Include="Infrastructure\DelegatingHandlers\ApplicationContextRequestHandler.cs" />
+    <Compile Include="Infrastructure\DelegatingHandlers\ExceptionHandler.cs" />
+    <Compile Include="Infrastructure\DelegatingHandlers\ExceptionLogger.cs" />
     <Compile Include="Infrastructure\Filters\ExceptionActionFilter.cs" />
     <Compile Include="Infrastructure\Filters\LoggingActionFilter.cs" />
+    <Compile Include="Infrastructure\InternalServerErrorResult.cs" />
     <Compile Include="Models\GrantsModel.cs" />
     <Compile Include="Models\GroupUsersModel.cs" />
     <Compile Include="Models\MemberRolesIdsModel.cs" />

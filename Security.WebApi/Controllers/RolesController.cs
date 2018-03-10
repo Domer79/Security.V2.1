@@ -99,7 +99,6 @@ namespace Security.WebApi.Controllers
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
-        [Route("getbyname/{name}")]
         [HttpGet]
         public async Task<IHttpActionResult> GetByName(string name)
         {

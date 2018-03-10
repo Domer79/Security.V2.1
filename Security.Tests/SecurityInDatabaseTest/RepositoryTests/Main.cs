@@ -129,7 +129,7 @@ namespace Security.Tests.SecurityInDatabaseTest.RepositoryTests
         [Test]
         public void Check_Existence_Group_in_User()
         {
-            var group = _security.UserGroupRepository.GetGroupsByUserName("user1").FirstOrDefault();
+            var group = _security.UserGroupRepository.GetGroups("user1").FirstOrDefault();
 
             Assert.That(group, Is.Not.Null);
             Assert.That(group.Name, Is.EqualTo("group1"));
@@ -138,7 +138,7 @@ namespace Security.Tests.SecurityInDatabaseTest.RepositoryTests
         [Test]
         public void Check_Existence_User_in_Group()
         {
-            var user = _security.UserGroupRepository.GetUsersByGroupName("group1").FirstOrDefault();
+            var user = _security.UserGroupRepository.GetUsers("group1").FirstOrDefault();
 
             Assert.That(user, Is.Not.Null);
             Assert.That(user.Login, Is.EqualTo("user1"));

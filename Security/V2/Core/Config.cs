@@ -9,7 +9,7 @@ using Security.V2.Contracts.Repository;
 
 namespace Security.V2.Core
 {
-    internal class Config : IConfig
+    public class Config : IConfig
     {
         private readonly IApplicationInternalRepository _applicationRepository;
         private readonly ISecObjectRepository _secObjectRepository;

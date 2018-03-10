@@ -23,62 +23,67 @@ namespace SecurityHttp
             Config.RegisterApplication(appName, description);
         }
 
-        public IServiceLocator Locator { get; set; }
+        public IApplicationContext ApplicationContext => Locator.Resolve<IApplicationContext>();
 
+        public IUserRepository UserRepository => Factory.UserRepository;
 
-        public IUserRepository UserRepository => Locator.Resolve<IUserRepository>();
+        public IGroupRepository GroupRepository => Factory.GroupRepository;
 
-        public IGroupRepository GroupRepository => throw new NotImplementedException();
+        public IApplicationRepository ApplicationRepository => Factory.ApplicationRepository;
 
-        public IApplicationRepository ApplicationRepository => throw new NotImplementedException();
+        public IUserGroupRepository UserGroupRepository => Factory.UserGroupRepository;
 
-        public IUserGroupRepository UserGroupRepository => throw new NotImplementedException();
+        public IMemberRoleRepository MemberRoleRepository => Factory.MemberRoleRepository;
 
-        public IMemberRoleRepository MemberRoleRepository => throw new NotImplementedException();
+        public IRoleRepository RoleRepository => Factory.RoleRepository;
 
-        public IRoleRepository RoleRepository => throw new NotImplementedException();
+        public ISecObjectRepository SecObjectRepository => Factory.SecObjectRepository;
 
-        public ISecObjectRepository SecObjectRepository => throw new NotImplementedException();
+        public IGrantRepository GrantRepository => Factory.GrantRepository;
 
-        public IGrantRepository GrantRepository => throw new NotImplementedException();
+        public ISecuritySettings SecuritySettings => Factory.SecuritySettings;
 
-        public ISecuritySettings SecuritySettings => throw new NotImplementedException();
+        public IConfig Config => Factory.Config;
 
-        public IConfig Config => throw new NotImplementedException();
+        internal IServiceLocator Locator { get; set; }
+
+        internal IUserInternalRepository UserInternalRepository => Factory.UserInternalRepository;
+
+        private ISecurityFactory Factory => Locator.Resolve<ISecurityFactory>();
 
         public bool CheckAccess(string loginOrEmail, string secObject)
         {
-            throw new NotImplementedException();
-        }
-
-        public Task<bool> CheckAccessAsync(string loginOrEmail, string secObject)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Dispose()
-        {
-            throw new NotImplementedException();
+            return UserInternalRepository.CheckAccess(loginOrEmail, secObject);
         }
 
         public bool SetPassword(string loginOrEmail, string password)
         {
-            throw new NotImplementedException();
-        }
-
-        public Task<bool> SetPasswordAsync(string loginOrEmail, string password)
-        {
-            throw new NotImplementedException();
+            return UserInternalRepository.SetPassword(loginOrEmail, password);
         }
 
         public bool UserValidate(string loginOrEmail, string password)
         {
-            throw new NotImplementedException();
+            return UserInternalRepository.UserValidate(loginOrEmail, password);
+        }
+
+        public void Dispose()
+        {
+            Locator.Dispose();
         }
 
         public Task<bool> UserValidateAsync(string loginOrEmail, string password)
         {
-            throw new NotImplementedException();
+            return UserInternalRepository.UserValidateAsync(loginOrEmail, password);
+        }
+
+        public Task<bool> CheckAccessAsync(string loginOrEmail, string secObject)
+        {
+            return UserInternalRepository.CheckAccessAsync(loginOrEmail, secObject);
+        }
+
+        public Task<bool> SetPasswordAsync(string loginOrEmail, string password)
+        {
+            return UserInternalRepository.SetPasswordAsync(loginOrEmail, password);
         }
     }
 }

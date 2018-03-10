@@ -10,7 +10,7 @@ using Security.V2.Contracts;
 
 namespace Security.V2.Core
 {
-    internal class SecuritySettings : ISecuritySettings
+    public class SecuritySettings : ISecuritySettings
     {
         private readonly ICommonDb _commonDb;
         private readonly IApplicationContext _context;

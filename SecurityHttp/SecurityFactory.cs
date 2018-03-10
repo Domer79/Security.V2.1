@@ -11,13 +11,6 @@ namespace SecurityHttp
 {
     public class SecurityFactory : ISecurityFactory
     {
-        private readonly IServiceLocator _locator;
-
-        public SecurityFactory(IServiceLocator locator)
-        {
-            _locator = locator;
-        }
-
         public IUserRepository UserRepository { get; set; }
 
         public IUserInternalRepository UserInternalRepository { get; set; }
