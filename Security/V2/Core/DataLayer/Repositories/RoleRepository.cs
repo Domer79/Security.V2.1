@@ -70,7 +70,7 @@ select SCOPE_IDENTITY()
 
         public Role Get(object id)
         {
-            return _commonDb.QuerySingle<Role>("select * from sec.Roles where idRole = @id", new {id});
+            return _commonDb.QuerySingleOrDefault<Role>("select * from sec.Roles where idRole = @id and idApplication = @idApplication", new {id, _context.Application.IdApplication});
         }
 
         public IEnumerable<Role> Get()
@@ -80,7 +80,7 @@ select SCOPE_IDENTITY()
 
         public Task<Role> GetAsync(object id)
         {
-            return _commonDb.QuerySingleAsync<Role>("select * from sec.Roles where idRole = @id", new { id });
+            return _commonDb.QuerySingleOrDefaultAsync<Role>("select * from sec.Roles where idRole = @id and idApplication = @idApplication", new { id, _context.Application.IdApplication });
         }
 
         public Task<IEnumerable<Role>> GetAsync()
@@ -100,12 +100,12 @@ select SCOPE_IDENTITY()
 
         public void Remove(object id)
         {
-            _commonDb.ExecuteNonQuery("delete from sec.Roles where idRole = @id", new {id});
+            _commonDb.ExecuteNonQuery("delete from sec.Roles where idRole = @id and idApplication = @idApplication", new {id, _context.Application.IdApplication});
         }
 
         public Task RemoveAsync(object id)
         {
-            return _commonDb.ExecuteNonQueryAsync("delete from sec.Roles where idRole = @id", new { id });
+            return _commonDb.ExecuteNonQueryAsync("delete from sec.Roles where idRole = @id and idApplication = @idApplication", new { id, _context.Application.IdApplication });
         }
 
         public void Update(Role entity)

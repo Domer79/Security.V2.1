@@ -68,7 +68,7 @@ select SCOPE_IDENTITY()
 
         public SecObject Get(object id)
         {
-            return _commonDb.QuerySingleOrDefault<SecObject>("select * from sec.SecObjects where idSecObject = @id", new {id});
+            return _commonDb.QuerySingleOrDefault<SecObject>("select * from sec.SecObjects where idApplication = @idApplication and idSecObject = @id", new {id, _context.Application.IdApplication});
         }
 
         public IEnumerable<SecObject> Get()
@@ -78,7 +78,7 @@ select SCOPE_IDENTITY()
 
         public Task<SecObject> GetAsync(object id)
         {
-            return _commonDb.QuerySingleOrDefaultAsync<SecObject>("select * from sec.SecObjects where idSecObject = @id", new { id });
+            return _commonDb.QuerySingleOrDefaultAsync<SecObject>("select * from sec.SecObjects where idApplication = @idApplication and idSecObject = @id", new { id, _context.Application.IdApplication });
         }
 
         public Task<IEnumerable<SecObject>> GetAsync()
@@ -98,12 +98,12 @@ select SCOPE_IDENTITY()
 
         public void Remove(object id)
         {
-            _commonDb.ExecuteNonQuery("delete from sec.SecObjects where idSecObject = @id", new { id });
+            _commonDb.ExecuteNonQuery("delete from sec.SecObjects where idApplication = @idApplication and idSecObject = @id", new { id, _context.Application.IdApplication });
         }
 
         public Task RemoveAsync(object id)
         {
-            return _commonDb.ExecuteNonQueryAsync("delete from sec.SecObjects where idSecObject = @id", new { id });
+            return _commonDb.ExecuteNonQueryAsync("delete from sec.SecObjects where idApplication = @idApplication and idSecObject = @id", new { id, _context.Application.IdApplication });
         }
 
         public void Update(SecObject entity)

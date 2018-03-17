@@ -9,7 +9,7 @@ namespace SecurityHttp.Helpers
 {
     public class ThrowsHelper
     {
-        public static Exception WebExceptionThrow(string message, HttpWebResponse response = null)
+        public static Exception WebException(string message, HttpWebResponse response = null)
         {
             var webException = new WebException(message, WebExceptionStatus.UnknownError);
             if (response != null)

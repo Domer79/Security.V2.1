@@ -49,42 +49,42 @@ namespace SecurityHttp.Repositories
 
         public void RemoveGrant(string role, string secObject)
         {
-            _commonWeb.Delete(Url, new {Role = role, SecObjects = new string[] {secObject}});
+            _commonWeb.Delete(Url, new string[] {secObject}, new {role});
         }
 
         public Task RemoveGrantAsync(string role, string secObject)
         {
-            return _commonWeb.DeleteAsync(Url, new { Role = role, SecObjects = new string[] { secObject } });
+            return _commonWeb.DeleteAsync(Url, new string[] { secObject }, new { role });
         }
 
         public void RemoveGrants(string role, string[] secObjects)
         {
-            _commonWeb.Delete(Url, new { Role = role, SecObjects = secObjects });
+            _commonWeb.Delete(Url, secObjects, new {role});
         }
 
         public Task RemoveGrantsAsync(string role, string[] secObjects)
         {
-            return _commonWeb.DeleteAsync(Url, new { Role = role, SecObjects = secObjects });
+            return _commonWeb.DeleteAsync(Url, secObjects, new { role });
         }
 
         public void SetGrant(string role, string secObject)
         {
-            _commonWeb.Put(Url, new {Role = role, SecObjects = new string[] {secObject}});
+            _commonWeb.Put(Url, new string[] { secObject }, new { role });
         }
 
         public Task SetGrantAsync(string role, string secObject)
         {
-            return _commonWeb.PutAsync(Url, new { Role = role, SecObjects = new string[] { secObject } });
+            return _commonWeb.PutAsync(Url, new string[] { secObject }, new { role });
         }
 
         public void SetGrants(string role, string[] secObjects)
         {
-            _commonWeb.Put(Url, new { Role = role, secObjects});
+            _commonWeb.Put(Url, secObjects, new { role });
         }
 
         public Task SetGrantsAsync(string role, string[] secObjects)
         {
-            return _commonWeb.PutAsync(Url, new { Role = role, secObjects });
+            return _commonWeb.PutAsync(Url, secObjects, new { role });
         }
     }
 }

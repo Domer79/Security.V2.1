@@ -82,6 +82,16 @@ namespace Security.V2.Core
             return RegisterSecurityObjectsAsync(appName, securityObjects.Select(_ => new SecurityObject() { ObjectName = _ }).ToArray());
         }
 
+        public void RemoveApplication(string appName)
+        {
+            _applicationRepository.Remove(appName);
+        }
+
+        public Task RemoveApplicationAsync(string appName)
+        {
+            return _applicationRepository.RemoveAsync(appName);
+        }
+
         class SecurityObject : ISecurityObject
         {
             public string ObjectName { get; set; }

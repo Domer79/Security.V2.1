@@ -88,5 +88,15 @@ namespace Security.Tests.SecurityImplement.Repository
         {
             throw new NotImplementedException();
         }
+
+        public void Remove(string appName)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task RemoveAsync(string appName)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

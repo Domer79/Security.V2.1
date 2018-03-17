@@ -42,12 +42,14 @@ namespace Security.WebApi.Controllers
             return Ok(user);
         }
 
+        [HttpGet]
         public async Task<IHttpActionResult> Get(int id)
         {
             var user = await _repo.GetAsync(id);
             return Ok(user);
         }
 
+        [HttpGet]
         public async Task<IHttpActionResult> Get()
         {
             var users = await _repo.GetAsync();

@@ -45,6 +45,13 @@ namespace Security.WebApi.Controllers
             return Ok();
         }
 
+        [HttpDelete]
+        public async Task<IHttpActionResult> Delete(string appName)
+        {
+            await _repository.RemoveAsync(appName);
+            return Ok();
+        }
+
         /// <summary>
         /// Выдает список зарегистрированных приложений
         /// </summary>
@@ -60,7 +67,7 @@ namespace Security.WebApi.Controllers
         public async Task<IHttpActionResult> Get(int id)
         {
             var app = await _repository.GetAsync(id);
-            return Ok();
+            return Ok(app);
         }
 
         [HttpGet]

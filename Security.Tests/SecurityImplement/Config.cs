@@ -64,6 +64,16 @@ namespace Security.Tests.SecurityImplement
             throw new NotImplementedException();
         }
 
+        public void RemoveApplication(string appName)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task RemoveApplicationAsync(string appName)
+        {
+            throw new NotImplementedException();
+        }
+
         class SecurityObject : ISecurityObject
         {
             public string ObjectName { get; set; }

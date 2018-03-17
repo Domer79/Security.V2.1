@@ -33,21 +33,21 @@ namespace Security.WebApi.Controllers
         [Route("{role}")]
         public async Task<IHttpActionResult> GetRoleGrants(string role)
         {
-            var secObject = await _repo.GetExceptRoleGrantAsync(role);
+            var secObject = await _repo.GetRoleGrantsAsync(role);
             return Ok(secObject);
         }
 
         [HttpDelete]
-        public async Task<IHttpActionResult> RemoveGrants(GrantsModel model)
+        public async Task<IHttpActionResult> RemoveGrants(string role, [FromBody] string[] secObjects)
         {
-            await _repo.RemoveGrantsAsync(model.Role, model.SecObjects);
+            await _repo.RemoveGrantsAsync(role, secObjects);
             return Ok();
         }
 
         [HttpPut]
-        public async Task<IHttpActionResult> SetGrants([FromBody]GrantsModel model)
+        public async Task<IHttpActionResult> SetGrants(string role, [FromBody] string[] secObjects)
         {
-            await _repo.SetGrantsAsync(model.Role, model.SecObjects);
+            await _repo.SetGrantsAsync(role, secObjects);
             return Ok();
         }
     }

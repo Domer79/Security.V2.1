@@ -29,6 +29,7 @@ namespace ConfigTransform
             catch (Exception e)
             {
                 PrintError(e.Message);
+                Console.Error.WriteLine(e.Message);
             }
         }
 

@@ -45,13 +45,13 @@ namespace SecurityHttp.Repositories
 
         public User Get(object id)
         {
-            var user = _commonWeb.Get<User>($"api/user/{id}");
+            var user = _commonWeb.Get<User>($"api/user", new {id});
             return user;
         }
 
         public async Task<User> GetAsync(object id)
         {
-            var user = await _commonWeb.GetAsync<User>($"api/user/{id}");
+            var user = await _commonWeb.GetAsync<User>($"api/user", new { id });
             return user;
         }
 
@@ -91,7 +91,7 @@ namespace SecurityHttp.Repositories
 
         public void SetStatus(string loginOrEmail, bool status)
         {
-            _commonWeb.Post("api/user/setstatus", new {loginOrEmail, status});
+            _commonWeb.Post("api/user/setstatus", null, new {loginOrEmail, status});
         }
 
         public Task SetStatusAsync(string loginOrEmail, bool status)

@@ -24,26 +24,6 @@ namespace SecurityHttp
             _host = settings.SecurityServerAddress;
         }
 
-        public bool Delete(string path, object queryData = null)
-        {
-            var builder = new UriBuilder(_host);
-            var queryBuilder = new QueryBuilder(queryData);
-            builder.Path = path;
-            builder.Query = queryBuilder.ToString();
-
-            var request = WebRequest.Create(builder.Uri);
-            request.Method = "DELETE";
-            using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
-            {
-                return response.StatusCode == HttpStatusCode.OK;
-            }
-        }
-
-        public async Task<bool> DeleteAsync(string path, object queryData = null)
-        {
-            throw new NotImplementedException();
-        }
-
         public T Get<T>(string path, object queryData = null)
         {
             var builder = new UriBuilder(_host);
@@ -55,16 +35,14 @@ namespace SecurityHttp
             request.Method = WebRequestMethods.Http.Get;
             using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
             {
-                if (response.StatusCode == HttpStatusCode.OK)
-                {
-                    using (var sr = new StreamReader(response.GetResponseStream()))
-                    {
-                        var rawValue = sr.ReadToEnd();
-                        return (T) JsonConvert.DeserializeObject(rawValue, typeof(T));
-                    }
-                }
+                if (response.StatusCode != HttpStatusCode.OK)
+                    throw ThrowsHelper.WebException("Произошла ошибка при выполнении запроса", response);
 
-                throw ThrowsHelper.WebExceptionThrow("Произошла ошибка при выполнении запроса", response);
+                using (var sr = new StreamReader(response.GetResponseStream()))
+                {
+                    var rawValue = sr.ReadToEnd();
+                    return (T)JsonConvert.DeserializeObject(rawValue, typeof(T));
+                }
             }
         }
 
@@ -93,7 +71,7 @@ namespace SecurityHttp
             using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
             {
                 if (response.StatusCode != HttpStatusCode.OK)
-                    throw ThrowsHelper.WebExceptionThrow("Произошла ошибка при выполнении запроса", response);
+                    throw ThrowsHelper.WebException("Произошла ошибка при выполнении запроса", response);
 
                 return true;
             }
@@ -118,16 +96,14 @@ namespace SecurityHttp
 
             using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
             {
-                if (response.StatusCode == HttpStatusCode.OK)
-                {
-                    using (var sr = new StreamReader(response.GetResponseStream()))
-                    {
-                        var value = sr.ReadToEnd();
-                        return (T)JsonConvert.DeserializeObject(value, typeof(T));
-                    }
-                }
+                if (response.StatusCode != HttpStatusCode.OK)
+                    throw ThrowsHelper.WebException("Произошла ошибка при выполнении запроса", response);
 
-                throw ThrowsHelper.WebExceptionThrow("Произошла ошибка при выполнении запроса", response);
+                using (var sr = new StreamReader(response.GetResponseStream()))
+                {
+                    var value = sr.ReadToEnd();
+                    return (T)JsonConvert.DeserializeObject(value, typeof(T));
+                }
             }
         }
 
@@ -160,12 +136,10 @@ namespace SecurityHttp
 
             using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
             {
-                if (response.StatusCode == HttpStatusCode.OK)
-                {
-                    return response.StatusCode == HttpStatusCode.OK;
-                }
+                if (response.StatusCode != HttpStatusCode.OK)
+                    throw ThrowsHelper.WebException("Произошла ошибка при выполнении запроса", response);
 
-                throw ThrowsHelper.WebExceptionThrow("Произошла ошибка при выполнении запроса", response);
+                return true;
             }
         }
 
@@ -198,16 +172,14 @@ namespace SecurityHttp
 
             using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
             {
-                if (response.StatusCode == HttpStatusCode.OK)
-                {
-                    using (var sr = new StreamReader(response.GetResponseStream()))
-                    {
-                        var value = sr.ReadToEnd();
-                        return (T)JsonConvert.DeserializeObject(value, typeof(T));
-                    }
-                }
+                if (response.StatusCode != HttpStatusCode.OK)
+                    throw ThrowsHelper.WebException("Произошла ошибка при выполнении запроса", response);
 
-                throw ThrowsHelper.WebExceptionThrow("Произошла ошибка при выполнении запроса", response);
+                using (var sr = new StreamReader(response.GetResponseStream()))
+                {
+                    var value = sr.ReadToEnd();
+                    return (T)JsonConvert.DeserializeObject(value, typeof(T));
+                }
             }
         }
 
@@ -227,15 +199,13 @@ namespace SecurityHttp
             request.Method = WebRequestMethods.Http.Get;
             using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
             {
-                if (response.StatusCode == HttpStatusCode.OK)
-                {
-                    using (var sr = new StreamReader(response.GetResponseStream()))
-                    {
-                        return (IEnumerable<T>)JsonConvert.DeserializeObject(sr.ReadToEnd(), typeof(IEnumerable<T>));
-                    }
-                }
+                if (response.StatusCode != HttpStatusCode.OK)
+                    throw ThrowsHelper.WebException("Произошла ошибка при выполнении запроса", response);
 
-                throw ThrowsHelper.WebExceptionThrow("Произошла ошибка при выполнении запроса", response);
+                using (var sr = new StreamReader(response.GetResponseStream()))
+                {
+                    return (IEnumerable<T>)JsonConvert.DeserializeObject(sr.ReadToEnd(), typeof(IEnumerable<T>));
+                }
             }
         }
 
@@ -264,7 +234,7 @@ namespace SecurityHttp
             using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
             {
                 if (response.StatusCode != HttpStatusCode.OK)
-                    throw ThrowsHelper.WebExceptionThrow("Произошла ошибка при выполнении запроса", response);
+                    throw ThrowsHelper.WebException("Произошла ошибка при выполнении запроса", response);
 
                 return true;
             }
@@ -290,16 +260,40 @@ namespace SecurityHttp
             using (HttpWebResponse response = await request.GetResponseAsync().ConfigureAwait(false) as HttpWebResponse)
             {
                 if (response.StatusCode != HttpStatusCode.OK)
-                    throw ThrowsHelper.WebExceptionThrow("Произошла ошибка при выполнении запроса", response);
+                    throw ThrowsHelper.WebException("Произошла ошибка при выполнении запроса", response);
 
                 return true;
             }
+        }
+
+        public bool Delete(string path, object queryData = null)
+        {
+            var builder = new UriBuilder(_host);
+            var queryBuilder = new QueryBuilder(queryData);
+            builder.Path = path;
+            builder.Query = queryBuilder.ToString();
+
+            var request = WebRequest.Create(builder.Uri);
+            request.Method = "DELETE";
+            using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
+            {
+                if (response.StatusCode != HttpStatusCode.OK)
+                    throw ThrowsHelper.WebException("Response status invalid", response);
+
+                return true;
+            }
+        }
+
+        public async Task<bool> DeleteAsync(string path, object queryData = null)
+        {
+            throw new NotImplementedException();
         }
     }
 
     public class QueryBuilder
     {
         private Dictionary<string, object> _params = new Dictionary<string, object>();
+
         public QueryBuilder(object data)
         {
             if (data != null)

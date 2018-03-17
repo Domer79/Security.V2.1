@@ -48,7 +48,7 @@ namespace Security.V2.Core.DataLayer.Repositories
 
         public Group Get(object id)
         {
-            return _commonDb.QuerySingle<Group>("select * from sec.GroupsView where idMember = @id", new {id});
+            return _commonDb.QuerySingleOrDefault<Group>("select * from sec.GroupsView where idMember = @id", new {id});
         }
 
         public IEnumerable<Group> Get()
@@ -58,7 +58,7 @@ namespace Security.V2.Core.DataLayer.Repositories
 
         public Task<Group> GetAsync(object id)
         {
-            return _commonDb.QuerySingleAsync<Group>("select * from sec.GroupsView where idMember = @id", new { id });
+            return _commonDb.QuerySingleOrDefaultAsync<Group>("select * from sec.GroupsView where idMember = @id", new { id });
         }
 
         public Task<IEnumerable<Group>> GetAsync()

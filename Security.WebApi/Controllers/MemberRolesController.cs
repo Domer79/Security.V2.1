@@ -65,6 +65,22 @@ namespace Security.WebApi.Controllers
             return Ok(roles);
         }
 
+        [HttpGet]
+        [Route("except")]
+        public async Task<IHttpActionResult> GetExceptMembersByRole(string role)
+        {
+            var members = await _repo.GetExceptMembersByRoleNameAsync(role);
+            return Ok(members);
+        }
+
+        [HttpGet]
+        [Route("except")]
+        public async Task<IHttpActionResult> GetExceptMembersByRole(int idRole)
+        {
+            var members = await _repo.GetExceptMembersByIdRoleAsync(idRole);
+            return Ok(members);
+        }
+
         [HttpPut]
         public async Task<IHttpActionResult> AddRolesToMember(string member, [FromBody]string[] roles)
         {
@@ -104,6 +120,20 @@ namespace Security.WebApi.Controllers
         public async Task<IHttpActionResult> DeleteMembersFromRole(int idRole, [FromBody]int[] idMembers)
         {
             await _repo.DeleteMembersFromRoleAsync(idMembers, idRole);
+            return Ok();
+        }
+
+        [HttpDelete]
+        public async Task<IHttpActionResult> DeleteRolesFromMember(string member, [FromBody] string[] roles)
+        {
+            await _repo.DeleteRolesFromMemberAsync(roles, member);
+            return Ok();
+        }
+
+        [HttpDelete]
+        public async Task<IHttpActionResult> DeleteMembersFromRole(string role, [FromBody] string[] members)
+        {
+            await _repo.DeleteMembersFromRoleAsync(members, role);
             return Ok();
         }
     }

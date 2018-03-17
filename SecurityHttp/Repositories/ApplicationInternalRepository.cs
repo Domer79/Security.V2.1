@@ -33,24 +33,22 @@ namespace SecurityHttp.Repositories
 
         public Application CreateEmpty(string prefixForRequired)
         {
-            var app = _commonWeb.Get<Application>($"api/applications", new {prefix = prefixForRequired});
-            return app;
+            throw new NotSupportedException();
         }
 
         public async Task<Application> CreateEmptyAsync(string prefixForRequired)
         {
-            var app = await _commonWeb.GetAsync<Application>($"api/applications", new { prefix = prefixForRequired });
-            return app;
+            throw new NotSupportedException();
         }
 
         public Application Get(object id)
         {
-            return _commonWeb.Get<Application>($"api/applications/{id}");
+            return _commonWeb.Get<Application>($"api/applications", new{id});
         }
 
-        public async Task<Application> GetAsync(object id)
+        public Task<Application> GetAsync(object id)
         {
-            return await _commonWeb.GetAsync<Application>($"api/applications/{id}").ConfigureAwait(false);
+            return _commonWeb.GetAsync<Application>($"api/applications", new { id });
         }
 
         public IEnumerable<Application> Get()
@@ -75,12 +73,12 @@ namespace SecurityHttp.Repositories
 
         public void Remove(object id)
         {
-            _commonWeb.Delete($"api/applications/{id}");
+            _commonWeb.Delete($"api/applications", new {id});
         }
 
         public async Task RemoveAsync(object id)
         {
-            await _commonWeb.DeleteAsync($"api/applications/{id}").ConfigureAwait(false);
+            await _commonWeb.DeleteAsync($"api/applications", new { id }).ConfigureAwait(false);
         }
 
         public void Update(Application entity)
@@ -91,6 +89,16 @@ namespace SecurityHttp.Repositories
         public async Task UpdateAsync(Application entity)
         {
             await _commonWeb.PutAsync("api/applications", entity);
+        }
+
+        public void Remove(string appName)
+        {
+            _commonWeb.Delete($"api/applications", new {appName});
+        }
+
+        public Task RemoveAsync(string appName)
+        {
+            return _commonWeb.DeleteAsync($"api/applications", new { appName });
         }
     }
 }

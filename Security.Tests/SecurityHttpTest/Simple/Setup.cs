@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.IO;
@@ -38,7 +39,17 @@ namespace Security.Tests.SecurityHttpTest.Simple
         {
             using (var security = new MySecurity())
             {
-                security.Config.RegisterSecurityObjects("HelloWorldApp1", "1", "2", "3");
+                string[] secObjects()
+                {
+                    var list = new List<string>();
+                    for (int i = 1; i < 21; i++)
+                    {
+                        list.Add(i.ToString());
+                    }
+
+                    return list.ToArray();
+                }
+                security.Config.RegisterSecurityObjects("HelloWorldApp1", secObjects());
 
                 security.Config.RegisterApplication("HelloWorldApp2", "Hello World Application 2!");
 
@@ -51,18 +62,7 @@ namespace Security.Tests.SecurityHttpTest.Simple
                 CreateUsers(security);
                 CreateGroups(security);
                 CreateUserGroups(security);
-
-                security.RoleRepository.Create(new Role()
-                {
-                    Name = "role1",
-                    Description = "Role1 Description"
-                });
-
-                security.RoleRepository.Create(new Role()
-                {
-                    Name = "role2",
-                    Description = "Role2 Description"
-                });
+                CreateRoles(security);
 
                 security.MemberRoleRepository.AddMembersToRole(new[] { "user1", "group1" }, "role1");
                 security.MemberRoleRepository.AddMembersToRole(new[] { "user1" }, "role2");
@@ -100,6 +100,18 @@ namespace Security.Tests.SecurityHttpTest.Simple
                 {
                     Name = $"group{i}",
                     Description = $"Group{i} Description"
+                });
+            }
+        }
+
+        private void CreateRoles(ISecurity security)
+        {
+            for (int i = 1; i <= 20; i++)
+            {
+                security.RoleRepository.Create(new Role()
+                {
+                    Name = $"role{i}",
+                    Description = $"Role{i} Description"
                 });
             }
         }

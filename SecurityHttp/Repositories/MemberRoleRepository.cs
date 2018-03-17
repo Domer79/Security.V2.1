@@ -27,6 +27,11 @@ namespace SecurityHttp.Repositories
             get { return _url ?? (_url = $"api/{_context.Application.AppName}/memberroles"); }
         }
 
+        public IEnumerable<Member> GetExceptMembersByRoleName(string role)
+        {
+            return _commonWeb.GetCollection<Member>($"{Url}/except", new {role});
+        }
+
         public void AddMembersToRole(int[] idMembers, int idRole)
         {
             _commonWeb.Put($"{Url}", idMembers, new {idRole});
@@ -35,6 +40,11 @@ namespace SecurityHttp.Repositories
         public void AddMembersToRole(string[] members, string role)
         {
             _commonWeb.Put($"{Url}", members, new { role });
+        }
+
+        public Task<IEnumerable<Member>> GetExceptMembersByRoleNameAsync(string role)
+        {
+            return _commonWeb.GetCollectionAsync<Member>($"{Url}/except", new { role });
         }
 
         public Task AddMembersToRoleAsync(int[] idMembers, int idRole)
@@ -49,22 +59,22 @@ namespace SecurityHttp.Repositories
 
         public void AddRolesToMember(int[] idRoles, int idMember)
         {
-            _commonWeb.Put($"{Url}", idRoles, idMember);
+            _commonWeb.Put($"{Url}", idRoles, new {idMember});
         }
 
         public void AddRolesToMember(string[] roles, string member)
         {
-            _commonWeb.Put($"{Url}", roles, member);
+            _commonWeb.Put($"{Url}", roles, new {member});
         }
 
         public Task AddRolesToMemberAsync(int[] idRoles, int idMember)
         {
-            return _commonWeb.PutAsync($"{Url}", idRoles, idMember);
+            return _commonWeb.PutAsync($"{Url}", idRoles, new {idMember});
         }
 
         public Task AddRolesToMemberAsync(string[] roles, string member)
         {
-            return _commonWeb.PutAsync($"{Url}", roles, member);
+            return _commonWeb.PutAsync($"{Url}", roles, new {member});
         }
 
         public void DeleteMembersFromRole(int[] idMembers, int idRole)
@@ -82,9 +92,29 @@ namespace SecurityHttp.Repositories
             _commonWeb.Delete($"{Url}", idRoles, new { idMember });
         }
 
+        public void DeleteMembersFromRole(string[] members, string role)
+        {
+            _commonWeb.Delete(Url, members, new {role});
+        }
+
+        public void DeleteRolesFromMember(string[] roles, string member)
+        {
+            _commonWeb.Delete(Url, roles, new {member});
+        }
+
         public Task DeleteRolesFromMemberAsync(int[] idRoles, int idMember)
         {
             return _commonWeb.DeleteAsync($"{Url}", idRoles, new { idMember });
+        }
+
+        public Task DeleteMembersFromRoleAsync(string[] members, string role)
+        {
+            return _commonWeb.DeleteAsync(Url, members, new { role });
+        }
+
+        public Task DeleteRolesFromMemberAsync(string[] roles, string member)
+        {
+            return _commonWeb.DeleteAsync(Url, roles, new { member });
         }
 
         public IEnumerable<Role> GetExceptRolesByIdMember(int idMember)
@@ -102,9 +132,19 @@ namespace SecurityHttp.Repositories
             return _commonWeb.GetCollection<Role>($"{Url}/except", new { member });
         }
 
+        public IEnumerable<Member> GetExceptMembersByIdRole(int idRole)
+        {
+            return _commonWeb.GetCollection<Member>($"{Url}/except", new { idRole });
+        }
+
         public Task<IEnumerable<Role>> GetExceptRolesByMemberNameAsync(string member)
         {
             return _commonWeb.GetCollectionAsync<Role>($"{Url}/except", new { member });
+        }
+
+        public Task<IEnumerable<Member>> GetExceptMembersByIdRoleAsync(int idRole)
+        {
+            return _commonWeb.GetCollectionAsync<Member>($"{Url}/except", new { idRole });
         }
 
         public IEnumerable<Member> GetMembersByIdRole(int idRole)

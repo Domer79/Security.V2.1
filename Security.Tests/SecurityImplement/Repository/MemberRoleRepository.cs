@@ -17,6 +17,11 @@ namespace Security.Tests.SecurityImplement.Repository
             _context = context;
         }
 
+        public IEnumerable<Member> GetExceptMembersByRoleName(string role)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public void AddMembersToRole(int[] idMembers, int idRole)
         {
             foreach (var idMember in idMembers)
@@ -35,6 +40,11 @@ namespace Security.Tests.SecurityImplement.Repository
                 var roleEntity = Database.Roles.First(_ => _.Name == role);
                 Database.MemberRoles.Add(member, roleEntity);
             }
+        }
+
+        public Task<IEnumerable<Member>> GetExceptMembersByRoleNameAsync(string role)
+        {
+            throw new System.NotImplementedException();
         }
 
         public Task AddMembersToRoleAsync(int[] idMembers, int idRole)
@@ -92,7 +102,27 @@ namespace Security.Tests.SecurityImplement.Repository
             throw new System.NotImplementedException();
         }
 
+        public void DeleteMembersFromRole(string[] members, string role)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void DeleteRolesFromMember(string[] roles, string member)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public Task DeleteRolesFromMemberAsync(int[] idRoles, int idMember)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Task DeleteMembersFromRoleAsync(string[] members, string role)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Task DeleteRolesFromMemberAsync(string[] roles, string member)
         {
             throw new System.NotImplementedException();
         }
@@ -112,7 +142,17 @@ namespace Security.Tests.SecurityImplement.Repository
             throw new System.NotImplementedException();
         }
 
+        public IEnumerable<Member> GetExceptMembersByIdRole(int idRole)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public Task<IEnumerable<Role>> GetExceptRolesByMemberNameAsync(string member)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Task<IEnumerable<Member>> GetExceptMembersByIdRoleAsync(int idRole)
         {
             throw new System.NotImplementedException();
         }

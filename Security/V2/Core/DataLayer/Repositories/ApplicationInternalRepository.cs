@@ -35,12 +35,12 @@ namespace Security.V2.Core.DataLayer.Repositories
 
         public Application Get(object id)
         {
-            return _commonDb.QuerySingle<Application>("select * from sec.Applications where idApplication = @id", new {id});
+            return _commonDb.QuerySingleOrDefault<Application>("select * from sec.Applications where idApplication = @id", new {id});
         }
 
         public Task<Application> GetAsync(object id)
         {
-            return _commonDb.QuerySingleAsync<Application>("select * from sec.Applications where idApplication = @id", new { id });
+            return _commonDb.QuerySingleOrDefaultAsync<Application>("select * from sec.Applications where idApplication = @id", new { id });
         }
 
         public IEnumerable<Application> Get()
@@ -75,12 +75,12 @@ namespace Security.V2.Core.DataLayer.Repositories
 
         public void Update(Application entity)
         {
-            _commonDb.ExecuteNonQuery("execute sec.UpdateApp @idApplication, @appName, @description", entity);
+            _commonDb.ExecuteNonQuery("execute sec.UpdateApp @idApplication, @description", new {entity.IdApplication, entity.Description});
         }
 
         public Task UpdateAsync(Application entity)
         {
-            return _commonDb.ExecuteNonQueryAsync("execute sec.UpdateApp @idApplication, @appName, @description", entity);
+            return _commonDb.ExecuteNonQueryAsync("execute sec.UpdateApp @idApplication, @description", new { entity.IdApplication, entity.Description });
         }
 
         public Application CreateEmpty(string prefixForRequired)
@@ -91,6 +91,16 @@ namespace Security.V2.Core.DataLayer.Repositories
         public Task<Application> CreateEmptyAsync(string prefixForRequired)
         {
             throw new NotSupportedException();
+        }
+
+        public void Remove(string appName)
+        {
+            _commonDb.ExecuteNonQuery(@"exec sec.DeleteAppByName @appName", new {appName});
+        }
+
+        public Task RemoveAsync(string appName)
+        {
+            return _commonDb.ExecuteNonQueryAsync(@"exec sec.DeleteAppByName @appName", new { appName });
         }
     }
 }

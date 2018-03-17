@@ -81,9 +81,7 @@
     <Compile Include="SecurityFake\UserPasswords.cs" />
     <Compile Include="SecurityHttpTest\Simple\BaseTest.cs" />
     <Compile Include="SecurityHttpTest\MySecurity.cs" />
-    <Compile Include="SecurityHttpTest\Simple\GlobalSettings.cs" />
     <Compile Include="SecurityHttpTest\Simple\Main.cs" />
-    <Compile Include="SecurityHttpTest\Simple\Repositoies\UserRepositoryTest.cs" />
     <Compile Include="SecurityHttpTest\Simple\Setup.cs" />
     <Compile Include="SecurityImplement\ApplicationContext.cs" />
     <Compile Include="SecurityImplement\Config.cs" />
@@ -122,7 +120,9 @@
     <Compile Include="SecurityInMemoryTests\SecuritySetupClass.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

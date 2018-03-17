@@ -18,6 +18,11 @@ namespace Security.V2.Core.DataLayer.Repositories
             _context = context;
         }
 
+        public IEnumerable<Member> GetExceptMembersByRoleName(string role)
+        {
+            return _commonDb.Query<Member>("select * from sec.Members where idMember not in (select idMember from sec.MemberRoles where idRole = (select idRole from sec.Roles where name = @role and idApplication = @idApplication)) and 1 = (select 1 from sec.Roles where name = @role)", new{role, _context.Application.IdApplication});
+        }
+           
         public void AddMembersToRole(int[] idMembers, int idRole)
         {
             _commonDb.ExecuteNonQuery(@"
@@ -38,6 +43,11 @@ select
 from 
 	(select idMember from sec.Members where name in @members) s1
 ", new {roleName = role, _context.Application.IdApplication, members});
+        }
+
+        public Task<IEnumerable<Member>> GetExceptMembersByRoleNameAsync(string role)
+        {
+            return _commonDb.QueryAsync<Member>("select * from sec.Members where idMember not in (select idMember from sec.MemberRoles where idRole = (select idRole from sec.Roles where name = @role and idApplication = @idApplication)) and 1 = (select 1 from sec.Roles where name = @role)", new{role, _context.Application.IdApplication });
         }
 
         public Task AddMembersToRoleAsync(int[] idMembers, int idRole)
@@ -119,9 +129,29 @@ from
             _commonDb.ExecuteNonQuery("delete from sec.MemberRoles where idMember = @idMember and idRole in @idRoles", new { idMember, idRoles });
         }
 
+        public void DeleteMembersFromRole(string[] members, string role)
+        {
+            _commonDb.ExecuteNonQuery("delete from sec.MemberRoles where idRole = (select idRole from sec.Roles where name = @role and idApplication = @idApplication) and idMember in (select idMember from sec.Members where name in @members)", new { members, role, _context.Application.IdApplication });
+        }
+
+        public void DeleteRolesFromMember(string[] roles, string member)
+        {
+            _commonDb.ExecuteNonQuery("delete from sec.MemberRoles where idMember = (select idMember from sec.Members where name = @member) and idRole in (select idRole from sec.Roles where name in @roles and idApplication = @idApplication)", new { roles, member, _context.Application.IdApplication });
+        }
+
         public Task DeleteRolesFromMemberAsync(int[] idRoles, int idMember)
         {
             return _commonDb.ExecuteNonQueryAsync("delete from sec.MemberRoles where idMember = @idMember and idRole in @idRoles", new { idMember, idRoles });
+        }
+
+        public Task DeleteMembersFromRoleAsync(string[] members, string role)
+        {
+            return _commonDb.ExecuteNonQueryAsync("delete from sec.MemberRoles where idRole = (select idRole from sec.Roles where name = @role and idApplication = @idApplication) and idMember in (select idMember from sec.Members where name in @members)", new { members, role, _context.Application.IdApplication });
+        }
+
+        public Task DeleteRolesFromMemberAsync(string[] roles, string member)
+        {
+            return _commonDb.ExecuteNonQueryAsync("delete from sec.MemberRoles where idMember = (select idMember from sec.Members where name = @member) and idRole in (select idRole from sec.Roles where name in @roles and idApplication = @idApplication)", new { roles, member, _context.Application.IdApplication });
         }
 
         public IEnumerable<Role> GetExceptRolesByIdMember(int idMember)
@@ -139,9 +169,19 @@ from
             return _commonDb.Query<Role>("select * from sec.Roles where idRole not in (select idRole from sec.MemberRoles where idMember = (select idMember from sec.Members where name = @member)) and idApplication = @idApplication and 1 = (select 1 from sec.Members where name = @member)", new {member, _context.Application.IdApplication});
         }
 
+        public IEnumerable<Member> GetExceptMembersByIdRole(int idRole)
+        {
+            return _commonDb.Query<Member>("select * from sec.Members where idMember not in (select idMember from sec.MemberRoles where idRole = @idRole) and 1 = (select 1 from sec.Roles where idRole = @idRole and idApplication = @idApplication)", new {idRole, _context.Application.IdApplication });
+        }
+
         public Task<IEnumerable<Role>> GetExceptRolesByMemberNameAsync(string member)
         {
             return _commonDb.QueryAsync<Role>("select * from sec.Roles where idRole not in (select idRole from sec.MemberRoles where idMember = (select idMember from sec.Members where name = @member)) and idApplication = @idApplication and 1 = (select 1 from sec.Members where name = @member)", new { member, _context.Application.IdApplication });
+        }
+
+        public Task<IEnumerable<Member>> GetExceptMembersByIdRoleAsync(int idRole)
+        {
+            return _commonDb.QueryAsync<Member>("select * from sec.Members where idMember not in (select idMember from sec.MemberRoles where idRole = @idRole) and 1 = (select 1 from sec.Roles where idRole = @idRole and idApplication = @idApplication)", new { idRole, _context.Application.IdApplication });
         }
 
         public IEnumerable<Member> GetMembersByIdRole(int idRole)

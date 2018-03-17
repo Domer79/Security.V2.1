@@ -52,7 +52,7 @@ namespace Security.V2.Core.DataLayer.Repositories
 
         public User Get(object id)
         {
-            return _commonDb.QuerySingle<User>("select * from sec.UsersView where idMember = @id", new {id});
+            return _commonDb.QuerySingleOrDefault<User>("select * from sec.UsersView where idMember = @id", new {id});
         }
 
         public IEnumerable<User> Get()
@@ -62,7 +62,7 @@ namespace Security.V2.Core.DataLayer.Repositories
 
         public Task<User> GetAsync(object id)
         {
-            return _commonDb.QuerySingleAsync<User>("select * from sec.UsersView where idMember = @id", new { id });
+            return _commonDb.QuerySingleOrDefaultAsync<User>("select * from sec.UsersView where idMember = @id", new { id });
         }
 
         public Task<IEnumerable<User>> GetAsync()
