@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NUnit.Framework;
 using Security.Model;
 using Security.V2.Contracts;
@@ -13,7 +10,7 @@ using SecurityHttp.Interfaces;
 using Assert = NUnit.Framework.Assert;
 using CollectionAssert = NUnit.Framework.CollectionAssert;
 
-namespace Security.Tests.SecurityHttpTest.Simple
+namespace Security.Tests.SecurityHttpTest.SimpleAsync
 {
     [TestFixture]
     public class Main : BaseTest
@@ -904,12 +901,6 @@ namespace Security.Tests.SecurityHttpTest.Simple
             Assert.Throws<NotSupportedException>(() => _security.ApplicationRepository.Remove(null));
             Assert.Throws<NotSupportedException>(() => _security.ApplicationRepository.CreateEmpty(null));
         }
-
-        #endregion
-
-        #region SecuritySettigns testing
-
-
 
         #endregion
 

@@ -79,6 +79,9 @@
     <Compile Include="SecurityFake\UserCollection.cs" />
     <Compile Include="SecurityFake\UserGroups.cs" />
     <Compile Include="SecurityFake\UserPasswords.cs" />
+    <Compile Include="SecurityHttpTest\SimpleAsync\BaseTest.cs" />
+    <Compile Include="SecurityHttpTest\SimpleAsync\Main.cs" />
+    <Compile Include="SecurityHttpTest\SimpleAsync\Setup.cs" />
     <Compile Include="SecurityHttpTest\Simple\BaseTest.cs" />
     <Compile Include="SecurityHttpTest\MySecurity.cs" />
     <Compile Include="SecurityHttpTest\Simple\Main.cs" />

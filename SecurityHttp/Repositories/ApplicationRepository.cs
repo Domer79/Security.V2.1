@@ -19,12 +19,12 @@ namespace SecurityHttp.Repositories
 
         public Application Create(Application entity)
         {
-            return _repo.Create(entity);
+            throw new NotSupportedException();
         }
 
         public Task<Application> CreateAsync(Application entity)
         {
-            return _repo.CreateAsync(entity);
+            throw new NotSupportedException();
         }
 
         public Application CreateEmpty(string prefixForRequired)

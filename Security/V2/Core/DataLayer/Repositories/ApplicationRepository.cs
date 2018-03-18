@@ -19,18 +19,12 @@ namespace Security.V2.Core.DataLayer.Repositories
 
         public Application Create(Application entity)
         {
-            var id = _commonDb.ExecuteScalar<int>("EXECUTE [sec].[AddApp] @appName ,@description", entity);
-            entity.IdApplication = id;
-
-            return entity;
+            throw new NotSupportedException();
         }
 
         public async Task<Application> CreateAsync(Application entity)
         {
-            var id = _commonDb.ExecuteScalarAsync<int>("EXECUTE [sec].[AddApp] @appName ,@description", entity);
-            entity.IdApplication = await id;
-
-            return entity;
+            throw new NotSupportedException();
         }
 
         public Application CreateEmpty(string prefixForRequired)
