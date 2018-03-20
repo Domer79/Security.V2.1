@@ -12,11 +12,11 @@ using NUnit.Framework;
 using Security.Dapper;
 using Security.Model;
 using Security.V2.Contracts;
-using SecurityHttp;
+using Security.V2.Core;
 using Group = Security.Model.Group;
 using User = Security.Model.User;
 
-namespace Security.Tests.SecurityHttpTest.SimpleAsync
+namespace Security.Tests.SecurityInDatabaseTest.SimpleAsync
 {
     [SetUpFixture]
     public class Setup
@@ -53,7 +53,7 @@ namespace Security.Tests.SecurityHttpTest.SimpleAsync
 
                 await security.Config.RegisterApplicationAsync("HelloWorldApp2", "Hello World Application 2!");
 
-                using (var security2 = new SecurityWebClient("HelloWorldApp2", "", IocConfig.GetLocator("HelloWorldApp2")))
+                using (var security2 = new V2.Core.Security("HelloWorldApp2", "", IocConfig.GetLocator("HelloWorldApp2")))
                 {
                     await security2.Config.RegisterSecurityObjectsAsync("HelloWorldApp2", "1", "4", "5", "6");
                 }

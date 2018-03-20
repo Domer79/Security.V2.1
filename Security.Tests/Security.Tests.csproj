@@ -67,18 +67,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SecurityFake\ApplicationCollection.cs" />
-    <Compile Include="SecurityFake\BaseCollection.cs" />
-    <Compile Include="SecurityFake\Database.cs" />
-    <Compile Include="SecurityFake\GrantCollection.cs" />
-    <Compile Include="SecurityFake\GroupCollection.cs" />
-    <Compile Include="SecurityFake\MemberCollection.cs" />
-    <Compile Include="SecurityFake\MemberRoles.cs" />
-    <Compile Include="SecurityFake\RoleCollection.cs" />
-    <Compile Include="SecurityFake\SecObjectCollection.cs" />
-    <Compile Include="SecurityFake\UserCollection.cs" />
-    <Compile Include="SecurityFake\UserGroups.cs" />
-    <Compile Include="SecurityFake\UserPasswords.cs" />
     <Compile Include="SecurityHttpTest\SimpleAsync\BaseTest.cs" />
     <Compile Include="SecurityHttpTest\SimpleAsync\Main.cs" />
     <Compile Include="SecurityHttpTest\SimpleAsync\Setup.cs" />
@@ -86,21 +74,6 @@
     <Compile Include="SecurityHttpTest\MySecurity.cs" />
     <Compile Include="SecurityHttpTest\Simple\Main.cs" />
     <Compile Include="SecurityHttpTest\Simple\Setup.cs" />
-    <Compile Include="SecurityImplement\ApplicationContext.cs" />
-    <Compile Include="SecurityImplement\Config.cs" />
-    <Compile Include="SecurityImplement\IocConfig.cs" />
-    <Compile Include="SecurityImplement\Repository\ApplicationInternalRepository.cs" />
-    <Compile Include="SecurityImplement\Repository\ApplicationRepository.cs" />
-    <Compile Include="SecurityImplement\Repository\EntityCollectionInfo.cs" />
-    <Compile Include="SecurityImplement\Repository\GrantRepository.cs" />
-    <Compile Include="SecurityImplement\Repository\GroupRepository.cs" />
-    <Compile Include="SecurityImplement\Repository\SecObjectRepositorty.cs" />
-    <Compile Include="SecurityImplement\Repository\MemberRoleRepository.cs" />
-    <Compile Include="SecurityImplement\Repository\RoleRepository.cs" />
-    <Compile Include="SecurityImplement\Repository\UserInternalRepository.cs" />
-    <Compile Include="SecurityImplement\SecurityFactory.cs" />
-    <Compile Include="SecurityImplement\Repository\UserGroupRepository.cs" />
-    <Compile Include="SecurityImplement\Repository\UserRepository.cs" />
     <Compile Include="DI\Concrete\IocService.cs" />
     <Compile Include="DI\Concrete\Sample1.cs" />
     <Compile Include="DI\Concrete\Sample2.cs" />
@@ -110,17 +83,13 @@
     <Compile Include="DI\Interfaces\ISample2.cs" />
     <Compile Include="DI\Interfaces\ISampleManager.cs" />
     <Compile Include="DI\ServiceLocatorTest.cs" />
-    <Compile Include="SecurityImplement\SecuritySettings.cs" />
     <Compile Include="SecurityInDatabaseTest\MySecurity.cs" />
-    <Compile Include="SecurityInDatabaseTest\RepositoryTestsAsync\SetupAsync.cs" />
-    <Compile Include="SecurityInDatabaseTest\RepositoryTests\BaseTest.cs" />
-    <Compile Include="SecurityInDatabaseTest\RepositoryTests\GrantRepositoryTest.cs" />
-    <Compile Include="SecurityInDatabaseTest\RepositoryTests\Main.cs" />
-    <Compile Include="SecurityInDatabaseTest\RepositoryTestsAsync\MainAsync.cs" />
-    <Compile Include="SecurityInDatabaseTest\RepositoryTests\Setup.cs" />
-    <Compile Include="SecurityInMemoryTests\MySecurity.cs" />
-    <Compile Include="SecurityInMemoryTests\SecurityConfigTest.cs" />
-    <Compile Include="SecurityInMemoryTests\SecuritySetupClass.cs" />
+    <Compile Include="SecurityInDatabaseTest\SimpleAsync\BaseTest.cs" />
+    <Compile Include="SecurityInDatabaseTest\SimpleAsync\Main.cs" />
+    <Compile Include="SecurityInDatabaseTest\SimpleAsync\Setup.cs" />
+    <Compile Include="SecurityInDatabaseTest\Simple\BaseTest.cs" />
+    <Compile Include="SecurityInDatabaseTest\Simple\Main.cs" />
+    <Compile Include="SecurityInDatabaseTest\Simple\Setup.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config">

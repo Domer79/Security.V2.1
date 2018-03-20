@@ -3,26 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
 using Security.Model;
+using Security.V2.CommonContracts;
 using Security.V2.Contracts;
 using Security.V2.Contracts.Repository;
-using SecurityHttp;
-using SecurityHttp.Interfaces;
+using Security.V2.Core;
 using Assert = NUnit.Framework.Assert;
 using CollectionAssert = NUnit.Framework.CollectionAssert;
 
-namespace Security.Tests.SecurityHttpTest.Simple
+namespace Security.Tests.SecurityInDatabaseTest.Simple
 {
     [TestFixture]
     public class Main : BaseTest
     {
         private ISecurity _security;
-        private ICommonWeb _commonDb;
+        private ICommonDb _commonDb;
 
         [SetUp]
         public void Setup()
         {
             _security = new MySecurity();
-            _commonDb = ServiceLocator.Resolve<ICommonWeb>();
+            _commonDb = ServiceLocator.Resolve<ICommonDb>();
         }
 
         [TearDown]
@@ -45,7 +45,7 @@ namespace Security.Tests.SecurityHttpTest.Simple
         [TestCase("HelloWorldApp1", "3")]
         public void SecObjectExistenceTest(string appName, string objectName)
         {
-            using (var security = new SecurityWebClient(appName, "", IocConfig.GetLocator(appName)))
+            using (var security = new V2.Core.Security(appName, "", IocConfig.GetLocator(appName)))
             {
                 var secObject = security.SecObjectRepository.GetByName(objectName);
                 Assert.That(secObject, Is.Not.Null);
@@ -93,12 +93,10 @@ namespace Security.Tests.SecurityHttpTest.Simple
             members.AddRange(_security.UserRepository.Get().Select(m => m.Name));
             members.AddRange(_security.GroupRepository.Get().Select(m => m.Name));
 
-            var list = new List<string>();
-            list.AddRange(_commonDb.GetCollection<User>("api/user").Select(_ => _.Name ));
-            list.AddRange(_commonDb.GetCollection<Group>("api/groups").Select(_ => _.Name ));
+            var list = _commonDb.Query<string>("select name from sec.Members");
 
             CollectionAssert.IsNotEmpty(members);
-            CollectionAssert.AreEqual(list, members);
+            CollectionAssert.AreEqual(list.OrderBy(_ => _), members.OrderBy(_ => _));
         }
 
         [Test]
@@ -697,7 +695,7 @@ namespace Security.Tests.SecurityHttpTest.Simple
         public void ApplicationInternal_Get_Update_And_Remove_ApplicationTest()
         {
             IServiceLocator locator = IocConfig.GetLocator("MyNewTestApp");
-            using (var security = new SecurityWebClient("MyNewTestApp", "MyNewTestApp Description", locator))
+            using (var security = new V2.Core.Security("MyNewTestApp", "MyNewTestApp Description", locator))
             {
                 security.Config.RegisterSecurityObjects("MyNewTestApp", "1", "2", "3", "4", "5", "6", "7", "8");
                 var user = security.UserRepository.GetByName("user1");
@@ -916,11 +914,14 @@ namespace Security.Tests.SecurityHttpTest.Simple
             Assert.DoesNotThrow(() => { _security.SecuritySettings.RemoveValue("key1");});
         }
 
-        [Test]
-        public void SecuritySettingsGetValueTest()
+        [TestCase(25, typeof(int))]
+        [TestCase(25.3, typeof(float))]
+        [TestCase(true, typeof(bool))]
+        [TestCase("qwerty", typeof(string))]
+        public void SecuritySettingsGetValueTest(object value, Type type)
         {
-            _security.SecuritySettings.SetValue("key2", 25);
-            Assert.That(_security.SecuritySettings.GetValue<int>("key2"), Is.EqualTo(25));
+            _security.SecuritySettings.SetValue("key2", value);
+            Assert.That(_security.SecuritySettings.GetValue("key2", type), Is.EqualTo(value).Within(value));
             Assert.DoesNotThrow(() => { _security.SecuritySettings.RemoveValue("key2"); });
         }
 

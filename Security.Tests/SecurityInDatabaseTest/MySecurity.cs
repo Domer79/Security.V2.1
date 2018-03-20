@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Security.V2.Contracts;
-using Security.V2.Core;
 
 namespace Security.Tests.SecurityInDatabaseTest
 {
-    public class MySecurity: V2.Core.Security
+    using Security.V2.Contracts;
+    using Security.V2.Core;
+
+    public class MySecurity: Security
     {
         internal MySecurity() 
-            : base("HelloWorldApp1", "Hello World Application 1!", IocConfig.GetLocator("HelloWorldApp1"))
+            : base("HelloWorldApp1", "Hello World Application 1!")
         {
         }
     }

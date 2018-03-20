@@ -20,7 +20,7 @@ namespace Security.V2.Core.DataLayer.Repositories
         {
             _commonDb.ExecuteNonQuery(@"
 insert into sec.UserGroups(idUser, idGroup)
-select @idUser idUser, idMember from (select idMember from sec.Groups where idGroup in @idGroups) s1
+select @idUser idUser, idMember from (select idMember from sec.Groups where idMember in @idGroups) s1
 ", new {idUser, idGroups});
         }
 
@@ -300,7 +300,7 @@ where
 
         public void RemoveGroupsFromUser(Guid[] groupsId, Guid userId)
         {
-            _commonDb.ExecuteNonQuery("delete from sec.UserGroups where idUser = (select idMember from sec.UsersView where id = @userId) and idGroup in (select idMember from sec.Members where id in @groupsId)");
+            _commonDb.ExecuteNonQuery("delete from sec.UserGroups where idUser = (select idMember from sec.UsersView where id = @userId) and idGroup in (select idMember from sec.Members where id in @groupsId)", new { groupsId, userId });
         }
 
         public void RemoveGroupsFromUser(string[] groups, string user)
@@ -345,7 +345,7 @@ where
 
         public IEnumerable<User> GetNonIncludedUsers(Guid groupId)
         {
-            return _commonDb.Query<User>("select * from sec.UsersView where idMember not in (select idUser from sec.UserGroups where idGroup = (select idMember from sec.Members where id = @groupId)) and 1 = (select 1 from sec.Members where id = @groupdId)", new{groupId});
+            return _commonDb.Query<User>("select * from sec.UsersView where idMember not in (select idUser from sec.UserGroups where idGroup = (select idMember from sec.Members where id = @groupId)) and 1 = (select 1 from sec.Members where id = @groupId)", new{groupId});
         }
 
         public IEnumerable<User> GetNonIncludedUsers(int idGroup)

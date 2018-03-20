@@ -2,7 +2,7 @@
 using Security.V2.Contracts;
 using Security.V2.Core;
 
-namespace Security.Tests.SecurityInDatabaseTest.RepositoryTests
+namespace Security.Tests.SecurityInDatabaseTest.Simple
 {
     public class BaseTest: IDisposable
     {

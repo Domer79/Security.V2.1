@@ -28,7 +28,7 @@ namespace Security.V2.Core
 
         public object GetValue(string key, Type type)
         {
-            var value = _commonDb.ExecuteScalar<string>("select value from sec.Settings where name = @key", new { key });
+            var value = _commonDb.ExecuteScalar<string>("select value from sec.Settings where name = @key", new { key = GetKey(key) });
 
             try
             {
