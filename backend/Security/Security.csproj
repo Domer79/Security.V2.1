@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{556713E5-2ADB-4B4B-8D40-74DF9393D33D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Security</RootNamespace>
+    <AssemblyName>Security</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'DebugPackage|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\СУНО\IPPS\SecurityPackage\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleasePackage|AnyCPU'">
+    <OutputPath>C:\ItGac\AccessRights\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Extensions.Configuration, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.1.0.0\lib\netstandard1.1\Microsoft.Extensions.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Abstractions.1.0.0\lib\netstandard1.0\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.1.0.0\lib\netstandard1.0\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.4.1.0\lib\net462\System.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Linq, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Linq.4.1.0\lib\net463\System.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.4.1.0\lib\net462\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Extensions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.Extensions.4.1.0\lib\net462\System.Runtime.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.4.1.0\lib\net462\System.Runtime.InteropServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dapper\CommandDefinition.cs" />
+    <Compile Include="Dapper\CommandFlags.cs" />
+    <Compile Include="Dapper\CustomPropertyTypeMap.cs" />
+    <Compile Include="Dapper\DataTableHandler.cs" />
+    <Compile Include="Dapper\DbString.cs" />
+    <Compile Include="Dapper\DefaultTypeMap.cs" />
+    <Compile Include="Dapper\DynamicParameters.CachedOutputSetters.cs" />
+    <Compile Include="Dapper\DynamicParameters.cs" />
+    <Compile Include="Dapper\DynamicParameters.ParamInfo.cs" />
+    <Compile Include="Dapper\ExplicitConstructorAttribute.cs" />
+    <Compile Include="Dapper\FeatureSupport.cs" />
+    <Compile Include="Dapper\SimpleMemberMap.cs" />
+    <Compile Include="Dapper\SqlDataRecordHandler.cs" />
+    <Compile Include="Dapper\SqlDataRecordListTVPParameter.cs" />
+    <Compile Include="Dapper\SqlMapper.Async.cs" />
+    <Compile Include="Dapper\SqlMapper.CacheInfo.cs" />
+    <Compile Include="Dapper\SqlMapper.cs" />
+    <Compile Include="Dapper\SqlMapper.DapperRow.cs" />
+    <Compile Include="Dapper\SqlMapper.DapperRowMetaObject.cs" />
+    <Compile Include="Dapper\SqlMapper.DapperTable.cs" />
+    <Compile Include="Dapper\SqlMapper.DeserializerState.cs" />
+    <Compile Include="Dapper\SqlMapper.DontMap.cs" />
+    <Compile Include="Dapper\SqlMapper.GridReader.Async.cs" />
+    <Compile Include="Dapper\SqlMapper.GridReader.cs" />
+    <Compile Include="Dapper\SqlMapper.ICustomQueryParameter.cs" />
+    <Compile Include="Dapper\SqlMapper.IDataReader.cs" />
+    <Compile Include="Dapper\SqlMapper.Identity.cs" />
+    <Compile Include="Dapper\SqlMapper.IDynamicParameters.cs" />
+    <Compile Include="Dapper\SqlMapper.IMemberMap.cs" />
+    <Compile Include="Dapper\SqlMapper.IParameterCallbacks.cs" />
+    <Compile Include="Dapper\SqlMapper.IParameterLookup.cs" />
+    <Compile Include="Dapper\SqlMapper.ITypeHandler.cs" />
+    <Compile Include="Dapper\SqlMapper.ITypeMap.cs" />
+    <Compile Include="Dapper\SqlMapper.Link.cs" />
+    <Compile Include="Dapper\SqlMapper.LiteralToken.cs" />
+    <Compile Include="Dapper\SqlMapper.Settings.cs" />
+    <Compile Include="Dapper\SqlMapper.TypeDeserializerCache.cs" />
+    <Compile Include="Dapper\SqlMapper.TypeHandler.cs" />
+    <Compile Include="Dapper\SqlMapper.TypeHandlerCache.cs" />
+    <Compile Include="Dapper\TableValuedParameter.cs" />
+    <Compile Include="Dapper\TypeExtensions.cs" />
+    <Compile Include="Dapper\UdtTypeHandler.cs" />
+    <Compile Include="Dapper\WrappedDataReader.cs" />
+    <Compile Include="Dapper\WrappedReader.cs" />
+    <Compile Include="Dapper\XmlHandlers.cs" />
+    <Compile Include="Exceptions\ConvertTypeException.cs" />
+    <Compile Include="Exceptions\SecurityNotSupportedException.cs" />
+    <Compile Include="Extensions\Tools.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CommonContracts\ICommonDb.cs" />
+    <Compile Include="CommonContracts\IEntityCollectionInfo.cs" />
+    <Compile Include="CommonContracts\IGlobalSettings.cs" />
+    <Compile Include="CommonContracts\IRepository.cs" />
+    <Compile Include="Contracts\ISecurityObject.cs" />
+    <Compile Include="Contracts\Repository\IUserInternalRepository.cs" />
+    <Compile Include="Core\Config.cs" />
+    <Compile Include="Core\IocConfig.cs" />
+    <Compile Include="Core\Ioc\AddInstanceEventArgs.cs" />
+    <Compile Include="Core\Ioc\AddInstanceHandler.cs" />
+    <Compile Include="Core\Ioc\Exceptions\DependencyResolveException.cs" />
+    <Compile Include="Core\Ioc\Scopes\BaseScope.cs" />
+    <Compile Include="Core\Ioc\Dependencies\Dependency.cs" />
+    <Compile Include="Core\Ioc\Dependencies\FactoryDependency.cs" />
+    <Compile Include="Core\Ioc\Interfaces\IDependency.cs" />
+    <Compile Include="Core\Ioc\Interfaces\IocService.cs" />
+    <Compile Include="Core\Ioc\Interfaces\IRequest.cs" />
+    <Compile Include="Core\Ioc\Interfaces\IScope.cs" />
+    <Compile Include="Core\Ioc\Request.cs" />
+    <Compile Include="Core\Ioc\Scopes\SingletonScope.cs" />
+    <Compile Include="Core\Ioc\Service.cs" />
+    <Compile Include="Core\Ioc\ServiceLocator.cs" />
+    <Compile Include="Contracts\IConfig.cs" />
+    <Compile Include="Contracts\IConnectionFactory.cs" />
+    <Compile Include="Contracts\IApplicationContext.cs" />
+    <Compile Include="Contracts\IServiceLocator.cs" />
+    <Compile Include="Contracts\Repository\IApplicationInternalRepository.cs" />
+    <Compile Include="Contracts\Repository\IApplicationRepository.cs" />
+    <Compile Include="Contracts\Repository\IGrantRepository.cs" />
+    <Compile Include="Contracts\Repository\IGroupRepository.cs" />
+    <Compile Include="Contracts\Repository\IMemberRoleRepository.cs" />
+    <Compile Include="Contracts\Repository\IRoleRepository.cs" />
+    <Compile Include="Contracts\Repository\ISecObjectRepository.cs" />
+    <Compile Include="Contracts\ISecurity.cs" />
+    <Compile Include="Contracts\Repository\Base\ISecurityBaseRepository.cs" />
+    <Compile Include="Contracts\ISecurityFactory.cs" />
+    <Compile Include="Contracts\ISecuritySettings.cs" />
+    <Compile Include="Contracts\Repository\IUserGroupRepository.cs" />
+    <Compile Include="Contracts\Repository\IUserRepository.cs" />
+    <Compile Include="Core\Ioc\Scopes\TransientScope.cs" />
+    <Compile Include="Core\Security.cs" />
+    <Compile Include="Core\SecurityFactory.cs" />
+    <Compile Include="Core\DataLayer\Repositories\ApplicationInternalRepository.cs" />
+    <Compile Include="Core\DataLayer\Repositories\ApplicationRepository.cs" />
+    <Compile Include="Core\DataLayer\CommonDb.cs" />
+    <Compile Include="Core\DataLayer\Repositories\GrantRepository.cs" />
+    <Compile Include="Core\DataLayer\Repositories\GroupRepository.cs" />
+    <Compile Include="Core\DataLayer\Repositories\MemberRoleRepository.cs" />
+    <Compile Include="Core\DataLayer\Repositories\RoleRepository.cs" />
+    <Compile Include="Core\DataLayer\Repositories\SecObjectRepository.cs" />
+    <Compile Include="Core\DataLayer\Repositories\UserGroupRepository.cs" />
+    <Compile Include="Core\DataLayer\Repositories\UserInternalRepository.cs" />
+    <Compile Include="Core\DataLayer\Repositories\UserRepository.cs" />
+    <Compile Include="Core\DataLayer\SqlConnectionFactory.cs" />
+    <Compile Include="Core\ApplicationContext.cs" />
+    <Compile Include="Core\SecuritySettings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Security.Model\Security.Model.csproj">
+      <Project>{69f6d882-5a1e-49a9-b10c-a81ad937d188}</Project>
+      <Name>Security.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="..\DebugPackageConfiguration.targets" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\Configuration.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
