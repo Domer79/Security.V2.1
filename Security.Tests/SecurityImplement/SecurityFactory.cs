@@ -13,8 +13,6 @@ namespace Security.Tests.SecurityImplement
 
         public IApplicationRepository ApplicationRepository { get; set; }
 
-        public IApplicationInternalRepository ApplicationInternalRepository { get; set; }
-
         public IUserGroupRepository UserGroupRepository { get; set; }
 
         public IMemberRoleRepository MemberRoleRepository { get; set; }

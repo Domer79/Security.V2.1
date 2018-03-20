@@ -113,32 +113,32 @@ namespace Security.Tests.SecurityImplement.Repository
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<User>> GetUsersByIdGroupAsync(int idGroup)
+        public Task<IEnumerable<User>> GetUsersAsync(int idGroup)
         {
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<Group>> GetGroupsByIdUserAsync(int idUser)
+        public Task<IEnumerable<Group>> GetGroupsAsync(int idUser)
         {
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<User>> GetUsersByGroupIdAsync(Guid id)
+        public Task<IEnumerable<User>> GetUsersAsync(Guid id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<Group>> GetGroupsByUserIdAsync(Guid id)
+        public Task<IEnumerable<Group>> GetGroupsAsync(Guid id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<User>> GetUsersByGroupNameAsync(string name)
+        public Task<IEnumerable<User>> GetUsersAsync(string name)
         {
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<Group>> GetGroupsByUserNameAsync(string name)
+        public Task<IEnumerable<Group>> GetGroupsAsync(string name)
         {
             throw new NotImplementedException();
         }

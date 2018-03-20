@@ -90,7 +90,7 @@ namespace Security.V2.Core.DataLayer.Repositories
 
         public Task<Application> CreateEmptyAsync(string prefixForRequired)
         {
-            throw new NotSupportedException();
+            return Task.FromException<Application>(new NotSupportedException());
         }
 
         public void Remove(string appName)

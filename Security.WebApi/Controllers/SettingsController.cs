@@ -26,7 +26,7 @@ namespace Security.WebApi.Controllers
             return Ok(value);
         }
 
-        [HttpPost]
+//        [HttpPost]
         public async Task<IHttpActionResult> Post(string key, string value, long lifetime)
         {
             await _settings.SetValueAsync(key, value, lifetime == 0 ? (TimeSpan?) null : TimeSpan.FromTicks(lifetime));
@@ -39,6 +39,12 @@ namespace Security.WebApi.Controllers
         {
             var isDeprecated = await _settings.IsDeprecatedAsync(key);
             return Ok(isDeprecated);
+        }
+
+        public async Task<IHttpActionResult> Delete(string key)
+        {
+            await _settings.RemoveValueAsync(key);
+            return Ok();
         }
     }
 }

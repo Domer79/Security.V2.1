@@ -25,42 +25,42 @@ namespace Security.WebApi.Controllers
         [HttpGet]
         public async Task<IHttpActionResult> GetUsersByGroupName(string groupName)
         {
-            var users = await _repo.GetUsersByGroupNameAsync(groupName);
+            var users = await _repo.GetUsersAsync(groupName);
             return Ok(users);
         }
 
         [HttpGet]
         public async Task<IHttpActionResult> GetUsersByGroupId(Guid groupId)
         {
-            var users = await _repo.GetUsersByGroupIdAsync(groupId);
+            var users = await _repo.GetUsersAsync(groupId);
             return Ok(users);
         }
 
         [HttpGet]
         public async Task<IHttpActionResult> GetUsersByIdGroup(int idGroup)
         {
-            var users = await _repo.GetUsersByIdGroupAsync(idGroup);
+            var users = await _repo.GetUsersAsync(idGroup);
             return Ok(users);
         }
 
         [HttpGet]
         public async Task<IHttpActionResult> GetGroupsByUserName(string userName)
         {
-            var groups = await _repo.GetGroupsByUserNameAsync(userName);
+            var groups = await _repo.GetGroupsAsync(userName);
             return Ok(groups);
         }
 
         [HttpGet]
         public async Task<IHttpActionResult> GetGroupsByUserId(Guid userId)
         {
-            var groups = await _repo.GetGroupsByUserIdAsync(userId);
+            var groups = await _repo.GetGroupsAsync(userId);
             return Ok(groups);
         }
 
         [HttpGet]
         public async Task<IHttpActionResult> GetGroupsByIdUser(int idUser)
         {
-            var groups = await _repo.GetGroupsByIdUserAsync(idUser);
+            var groups = await _repo.GetGroupsAsync(idUser);
             return Ok(groups);
         }
 

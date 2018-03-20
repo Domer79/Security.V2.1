@@ -13,8 +13,6 @@ namespace Security.V2.Core
 
         public IApplicationRepository ApplicationRepository { get; set; }
 
-        public IApplicationInternalRepository ApplicationInternalRepository { get; set; }
-
         public IUserGroupRepository UserGroupRepository { get; set; }
 
         public IMemberRoleRepository MemberRoleRepository { get; set; }

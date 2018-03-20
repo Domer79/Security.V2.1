@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using NUnit.Framework;
 using Security.Model;
 using Security.V2.Contracts;
@@ -19,22 +20,24 @@ namespace Security.Tests.SecurityHttpTest.SimpleAsync
         private ICommonWeb _commonDb;
 
         [SetUp]
-        public void Setup()
+        public Task Setup()
         {
             _security = new MySecurity();
             _commonDb = ServiceLocator.Resolve<ICommonWeb>();
+            return Task.Delay(0);
         }
 
         [TearDown]
-        public void TearDown()
+        public Task TearDown()
         {
             _security.Dispose();
+            return Task.Delay(0);
         }
 
         [TestCase("HelloWorldApp1", "Hello World Application 1!")]
-        public void RegisterApplicationTest(string name, string description)
+        public async Task RegisterApplicationTest(string name, string description)
         {
-            var application = _security.ApplicationRepository.GetByName(name);
+            var application = await _security.ApplicationRepository.GetByNameAsync(name);
 
             Assert.That(application, Has.Property("AppName").EqualTo(name));
             Assert.That(application, Has.Property("Description").EqualTo(description));
@@ -43,28 +46,30 @@ namespace Security.Tests.SecurityHttpTest.SimpleAsync
         [TestCase("HelloWorldApp1", "1")]
         [TestCase("HelloWorldApp1", "2")]
         [TestCase("HelloWorldApp1", "3")]
-        public void SecObjectExistenceTest(string appName, string objectName)
+        public async Task SecObjectExistenceTest(string appName, string objectName)
         {
             using (var security = new V2.Core.Security(appName, "", IocConfig.GetLocator(appName)))
             {
-                var secObject = security.SecObjectRepository.GetByName(objectName);
+                var secObject = await security.SecObjectRepository.GetByNameAsync(objectName);
                 Assert.That(secObject, Is.Not.Null);
             }
         }
 
         [Test]
-        public void PasswordValidateTest()
+        public Task PasswordValidateTest()
         {
-            Assert.That(() => _security.SetPassword("user1", "123456"), Is.True);
-            Assert.That(() => _security.UserValidate("user1", "123456"));
+            Assert.That(() => _security.SetPasswordAsync("user1", "123456"), Is.True);
+            Assert.That(() => _security.UserValidateAsync("user1", "123456"), Is.True);
 
-            Assert.That(() => _security.UserValidate("user1@mail.ru", "123456"));
+            Assert.That(() => _security.UserValidateAsync("user1@mail.ru", "123456"), Is.True);
+
+            return Task.Delay(0);
         }
 
         [Test]
-        public void User_MemberFields_ValidationTest()
+        public async Task User_MemberFields_ValidationTest()
         {
-            var user = _security.UserRepository.GetByName("user1");
+            var user = await _security.UserRepository.GetByNameAsync("user1");
 
             Assert.That(user, Has.Property("Login").EqualTo("user1"));
             Assert.That(user, Has.Property("Name").EqualTo("user1"));
@@ -77,34 +82,34 @@ namespace Security.Tests.SecurityHttpTest.SimpleAsync
         }
 
         [Test]
-        public void Group_MemberFields_ValidationTest()
+        public async Task Group_MemberFields_ValidationTest()
         {
-            var group = _security.GroupRepository.GetByName("group1");
+            var group = await _security.GroupRepository.GetByNameAsync("group1");
 
             Assert.That(group, Has.Property("Name").EqualTo("group1"));
             Assert.That(group, Has.Property("Description").EqualTo("Group1 Description"));
         }
 
         [Test]
-        public void Member_MemberFields_ValidationTest()
+        public async Task Member_MemberFields_ValidationTest()
         {
             var members = new List<string>();
 
-            members.AddRange(_security.UserRepository.Get().Select(m => m.Name));
-            members.AddRange(_security.GroupRepository.Get().Select(m => m.Name));
+            members.AddRange((await _security.UserRepository.GetAsync()).Select(m => m.Name));
+            members.AddRange((await _security.GroupRepository.GetAsync()).Select(m => m.Name));
 
             var list = new List<string>();
-            list.AddRange(_commonDb.GetCollection<User>("api/user").Select(_ => _.Name ));
-            list.AddRange(_commonDb.GetCollection<Group>("api/groups").Select(_ => _.Name ));
+            list.AddRange((await _commonDb.GetCollectionAsync<User>("api/user")).Select(_ => _.Name ));
+            list.AddRange((await _commonDb.GetCollectionAsync<Group>("api/groups")).Select(_ => _.Name ));
 
             CollectionAssert.IsNotEmpty(members);
             CollectionAssert.AreEqual(list, members);
         }
 
         [Test]
-        public void Role_MemberFields_ValidationTest()
+        public async Task Role_MemberFields_ValidationTest()
         {
-            var role = _security.RoleRepository.GetByName("role1");
+            var role = await _security.RoleRepository.GetByNameAsync("role1");
 
             Assert.That(role, Has.Property("Name").EqualTo("role1"));
             Assert.That(role, Has.Property("Description").EqualTo("Role1 Description"));
@@ -112,17 +117,17 @@ namespace Security.Tests.SecurityHttpTest.SimpleAsync
 
         [TestCase("user1 group1", "role1")]
         [TestCase("user1 user3", "role2")]
-        public void Check_Existence_Members_in_Role(string member, string role)
+        public async Task Check_Existence_Members_in_Role(string member, string role)
         {
-            var members = _security.MemberRoleRepository.GetMembersByRoleName(role).Select(m => m.Name);
+            var members = (await _security.MemberRoleRepository.GetMembersByRoleNameAsync(role)).Select(m => m.Name);
             CollectionAssert.AreEqual(member.Split(' '), members);
         }
 
         [TestCase("role1 role2", "user1")]
         [TestCase("role1", "group1")]
-        public void CheckExistsence_Roles_in_User(string roleNames, string member)
+        public async Task CheckExistsence_Roles_in_User(string roleNames, string member)
         {
-            var roles = _security.MemberRoleRepository.GetRolesByMemberName(member).Select(_ => _.Name);
+            var roles = (await _security.MemberRoleRepository.GetRolesByMemberNameAsync(member)).Select(_ => _.Name);
             CollectionAssert.AreEqual(roleNames.Split(' '), roles);
         }
 
@@ -136,45 +141,47 @@ namespace Security.Tests.SecurityHttpTest.SimpleAsync
         [TestCase("user2", "2")]
         [TestCase("user3", "2")]
         [TestCase("user3", "3")]
-        public void CheckAccessToMemberTest(string loginOrEmail, string objectName)
+        public Task CheckAccessToMemberTest(string loginOrEmail, string objectName)
         {
-            Assert.That(() => _security.CheckAccess(loginOrEmail, objectName), Is.True);
+            Assert.That(() => _security.CheckAccessAsync(loginOrEmail, objectName), Is.True);
+            return Task.Delay(0);
         }
 
         [TestCase("user2", "3")]
         [TestCase("user3", "1")]
-        public void CheckNotAccessToMemberTest(string loginOrEmail, string objectName)
+        public Task CheckNotAccessToMemberTest(string loginOrEmail, string objectName)
         {
-            Assert.That(() => _security.CheckAccess(loginOrEmail, objectName), Is.False);
+            Assert.That(() => _security.CheckAccessAsync(loginOrEmail, objectName), Is.False);
+            return Task.Delay(0);
         }
 
         #region UserGroupRepository testing
 
         [TestCase("user1", "group10,group11,group12,group13")]
-        public void CheckGroupListInUser(string userName, string groupsByDelimiters)
+        public async Task CheckGroupListInUser(string userName, string groupsByDelimiters)
         {
-            var groups = _security.GroupRepository.Get().Where(_ => groupsByDelimiters.Split(',').Contains(_.Name));
+            var groups = (await _security.GroupRepository.GetAsync()).Where(_ => groupsByDelimiters.Split(',').Contains(_.Name));
 
-            var member = _security.UserRepository.GetByName(userName);
+            var member = await _security.UserRepository.GetByNameAsync(userName);
 
-            var membersByIdMember = _security.UserGroupRepository.GetGroups(member.IdMember);
-            var membersByGuid = _security.UserGroupRepository.GetGroups(member.Id);
-            var membersByName = _security.UserGroupRepository.GetGroups(member.Name);
+            var membersByIdMember = await _security.UserGroupRepository.GetGroupsAsync(member.IdMember);
+            var membersByGuid = await _security.UserGroupRepository.GetGroupsAsync(member.Id);
+            var membersByName = await _security.UserGroupRepository.GetGroupsAsync(member.Name);
 
             CollectionAssert.AreEqual(membersByIdMember, membersByGuid, new GroupComparer());
             CollectionAssert.AreEqual(membersByIdMember, membersByName, new GroupComparer());
         }
 
         [TestCase("group4", "user2, user4,user6,user7,user12")]
-        public void CheckUserListInGroup(string groupName, string usersByDelimiters)
+        public async Task CheckUserListInGroup(string groupName, string usersByDelimiters)
         {
-            var users = _security.UserRepository.Get().Where(_ => usersByDelimiters.Split(',').Contains(_.Name));
+            var users = (await _security.UserRepository.GetAsync()).Where(_ => usersByDelimiters.Split(',').Contains(_.Name));
 
-            var member = _security.GroupRepository.GetByName(groupName);
+            var member = await _security.GroupRepository.GetByNameAsync(groupName);
 
-            var membersByIdMember = _security.UserGroupRepository.GetUsers(member.IdMember);
-            var membersByGuid = _security.UserGroupRepository.GetUsers(member.Id);
-            var membersByName = _security.UserGroupRepository.GetUsers(member.Name);
+            var membersByIdMember = await _security.UserGroupRepository.GetUsersAsync(member.IdMember);
+            var membersByGuid = await _security.UserGroupRepository.GetUsersAsync(member.Id);
+            var membersByName = await _security.UserGroupRepository.GetUsersAsync(member.Name);
 
             CollectionAssert.IsNotEmpty(membersByIdMember);
             CollectionAssert.IsNotEmpty(membersByGuid);
@@ -185,15 +192,15 @@ namespace Security.Tests.SecurityHttpTest.SimpleAsync
 
         [TestCase("group4", "user2, user4,user6,user7,user12")]
         [TestCase("group1", "user0,user1,user2, user7")]
-        public void CheckNonIncludedUsers(string groupName, string exceptUsersByDelimiters)
+        public async Task CheckNonIncludedUsers(string groupName, string exceptUsersByDelimiters)
         {
-            var users = _security.UserRepository.Get().Where(_ => !exceptUsersByDelimiters.Split(',').Contains(_.Name));
+            var users = (await _security.UserRepository.GetAsync()).Where(_ => !exceptUsersByDelimiters.Split(',').Contains(_.Name));
 
-            var member = _security.GroupRepository.GetByName(groupName);
+            var member = await _security.GroupRepository.GetByNameAsync(groupName);
 
-            var membersByIdMember = _security.UserGroupRepository.GetNonIncludedUsers(member.IdMember);
-            var membersByGuid = _security.UserGroupRepository.GetNonIncludedUsers(member.Id);
-            var membersByName = _security.UserGroupRepository.GetNonIncludedUsers(member.Name);
+            var membersByIdMember = await _security.UserGroupRepository.GetNonIncludedUsersAsync(member.IdMember);
+            var membersByGuid = await _security.UserGroupRepository.GetNonIncludedUsersAsync(member.Id);
+            var membersByName = await _security.UserGroupRepository.GetNonIncludedUsersAsync(member.Name);
 
             CollectionAssert.IsNotEmpty(membersByIdMember);
             CollectionAssert.IsNotEmpty(membersByGuid);
@@ -204,15 +211,15 @@ namespace Security.Tests.SecurityHttpTest.SimpleAsync
 
         [TestCase("user7", "group1,group4,group18,group2,group8")]
         [TestCase("user1", "group0,group1,group10,group11,group12,group13")]
-        public void CheckNonIncludedGroups(string userName, string exceptGroupsByDelimiters)
+        public async Task CheckNonIncludedGroups(string userName, string exceptGroupsByDelimiters)
         {
-            var groups = _security.GroupRepository.Get().Where(_ => !exceptGroupsByDelimiters.Split(',').Contains(_.Name));
+            var groups = (await _security.GroupRepository.GetAsync()).Where(_ => !exceptGroupsByDelimiters.Split(',').Contains(_.Name));
 
-            var member = _security.UserRepository.GetByName(userName);
+            var member = await _security.UserRepository.GetByNameAsync(userName);
 
-            var membersByIdMember = _security.UserGroupRepository.GetNonIncludedGroups(member.IdMember);
-            var membersByGuid = _security.UserGroupRepository.GetNonIncludedGroups(member.Id);
-            var membersByName = _security.UserGroupRepository.GetNonIncludedGroups(member.Name);
+            var membersByIdMember = await _security.UserGroupRepository.GetNonIncludedGroupsAsync(member.IdMember);
+            var membersByGuid = await _security.UserGroupRepository.GetNonIncludedGroupsAsync(member.Id);
+            var membersByName = await _security.UserGroupRepository.GetNonIncludedGroupsAsync(member.Name);
 
             CollectionAssert.IsNotEmpty(membersByIdMember);
             CollectionAssert.IsNotEmpty(membersByGuid);
@@ -226,7 +233,7 @@ namespace Security.Tests.SecurityHttpTest.SimpleAsync
         /// </summary>
         /// <param name="login"></param>
         [TestCase("user21")]
-        public void TestCreateUser(string login)
+        public async Task TestCreateUser(string login)
         {
             var user = new User
             {
@@ -238,7 +245,7 @@ namespace Security.Tests.SecurityHttpTest.SimpleAsync
                 Status = true,
                 DateCreated = DateTime.Now
             };
-            user = _security.UserRepository.Create(user);
+            user = await _security.UserRepository.CreateAsync(user);
 
             Assert.AreNotEqual(Guid.Empty, user.Id);
         }
@@ -260,14 +267,14 @@ namespace Security.Tests.SecurityHttpTest.SimpleAsync
         [TestCase(1, "group0", "user0,user1", 12)]
         [TestCase(2, "group0", "user0,user1", 21)]
         [TestCase(3, "group0", "user0,user1", 18)]
-        public void CheckRemoveUsersInGroup(int testCase, string groupName, string expectedNameUsers, int userCount)
+        public async Task CheckRemoveUsersInGroup(int testCase, string groupName, string expectedNameUsers, int userCount)
         {
-            var member = _security.GroupRepository.GetByName(groupName);
+            var member = await _security.GroupRepository.GetByNameAsync(groupName);
             var userList = new List<User>();
 
             for (int i = 20; i < (20 + userCount); i++)
             {
-                userList.Add(_security.UserRepository.Create(new User()
+                userList.Add(await _security.UserRepository.CreateAsync(new User()
                 {
                     Login = $"user{i}",
                     Email = $"user{i}@mail.ru",
@@ -279,23 +286,23 @@ namespace Security.Tests.SecurityHttpTest.SimpleAsync
                 }));
             }
 
-            _security.UserGroupRepository.AddUsersToGroup(userList.Select(_ => _.Name).ToArray(), member.Name);
+            await _security.UserGroupRepository.AddUsersToGroupAsync(userList.Select(_ => _.Name).ToArray(), member.Name);
 
             if (testCase == 1)
-                _security.UserGroupRepository.RemoveUsersFromGroup(userList.Select(_ => _.Name).ToArray(), groupName);
+                await _security.UserGroupRepository.RemoveUsersFromGroupAsync(userList.Select(_ => _.Name).ToArray(), groupName);
             if (testCase == 2)
-                _security.UserGroupRepository.RemoveUsersFromGroup(userList.Select(_ => _.Id).ToArray(), member.Id);
+                await _security.UserGroupRepository.RemoveUsersFromGroupAsync(userList.Select(_ => _.Id).ToArray(), member.Id);
             if (testCase == 3)
-                _security.UserGroupRepository.RemoveUsersFromGroup(userList.Select(_ => _.IdMember).ToArray(), member.IdMember);
+                await _security.UserGroupRepository.RemoveUsersFromGroupAsync(userList.Select(_ => _.IdMember).ToArray(), member.IdMember);
 
             foreach (var user in userList)
             {
-                _security.UserRepository.Remove(user.IdMember);
+                await _security.UserRepository.RemoveAsync(user.IdMember);
             }
 
-            var expectedUsers = _security.UserRepository.Get().Where(_ => expectedNameUsers.Split(',').Contains(_.Name)).OrderBy(_ => _.IdMember);
+            var expectedUsers = (await _security.UserRepository.GetAsync()).Where(_ => expectedNameUsers.Split(',').Contains(_.Name)).OrderBy(_ => _.IdMember);
 
-            var membersByName = _security.UserGroupRepository.GetUsers(member.Name).OrderBy(_ => _.IdMember);
+            var membersByName = (await _security.UserGroupRepository.GetUsersAsync(member.Name)).OrderBy(_ => _.IdMember);
 
             CollectionAssert.IsNotEmpty(membersByName);
             CollectionAssert.AreEqual(expectedUsers, membersByName, new UserComparer());
@@ -318,37 +325,37 @@ namespace Security.Tests.SecurityHttpTest.SimpleAsync
         [TestCase(1, "user7", "group1,group2,group4,group8,group18", 12)]
         [TestCase(2, "user7", "group1,group2,group4,group8,group18", 21)]
         [TestCase(3, "user7", "group1,group2,group4,group8,group18", 18)]
-        public void CheckRemoveGroupsInUser(int testCase, string userName, string expectedNameGroups, int groupCount)
+        public async Task CheckRemoveGroupsInUser(int testCase, string userName, string expectedNameGroups, int groupCount)
         {
-            var member = _security.UserRepository.GetByName(userName);
+            var member = await _security.UserRepository.GetByNameAsync(userName);
             var groupList = new List<Group>();
 
             for (int i = 20; i < (20 + groupCount); i++)
             {
-                groupList.Add(_security.GroupRepository.Create(new Group()
+                groupList.Add(await _security.GroupRepository.CreateAsync(new Group()
                 {
                     Name = $"group{i}",
                     Description = $"Group{i} Description",
                 }));
             }
 
-            _security.UserGroupRepository.AddGroupsToUser(groupList.Select(_ => _.Name).ToArray(), member.Name);
+            await _security.UserGroupRepository.AddGroupsToUserAsync(groupList.Select(_ => _.Name).ToArray(), member.Name);
 
             if (testCase == 1)
-                _security.UserGroupRepository.RemoveGroupsFromUser(groupList.Select(_ => _.Name).ToArray(), userName);
+                await _security.UserGroupRepository.RemoveGroupsFromUserAsync(groupList.Select(_ => _.Name).ToArray(), userName);
             if (testCase == 2)
-                _security.UserGroupRepository.RemoveGroupsFromUser(groupList.Select(_ => _.Id).ToArray(), member.Id);
+                await _security.UserGroupRepository.RemoveGroupsFromUserAsync(groupList.Select(_ => _.Id).ToArray(), member.Id);
             if (testCase == 3)
-                _security.UserGroupRepository.RemoveGroupsFromUser(groupList.Select(_ => _.IdMember).ToArray(), member.IdMember);
+                await _security.UserGroupRepository.RemoveGroupsFromUserAsync(groupList.Select(_ => _.IdMember).ToArray(), member.IdMember);
 
             foreach (var @group in groupList)
             {
-                _security.GroupRepository.Remove(@group.IdMember);
+                await _security.GroupRepository.RemoveAsync(@group.IdMember);
             }
 
-            var expectedGroups = _security.GroupRepository.Get().Where(_ => expectedNameGroups.Split(',').Contains(_.Name)).OrderBy(_ => _.IdMember);
+            var expectedGroups = (await _security.GroupRepository.GetAsync()).Where(_ => expectedNameGroups.Split(',').Contains(_.Name)).OrderBy(_ => _.IdMember);
 
-            var membersByName = _security.UserGroupRepository.GetGroups(member.Name).OrderBy(_ => _.IdMember);
+            var membersByName = (await _security.UserGroupRepository.GetGroupsAsync(member.Name)).OrderBy(_ => _.IdMember);
 
             CollectionAssert.IsNotEmpty(membersByName);
             CollectionAssert.AreEqual(expectedGroups, membersByName, new GroupComparer());
@@ -359,7 +366,7 @@ namespace Security.Tests.SecurityHttpTest.SimpleAsync
         #region UserRepository testing
 
         [Test]
-        public void CreateUserTest()
+        public async Task CreateUserTest()
         {
             var user = new User
             {
@@ -373,17 +380,20 @@ namespace Security.Tests.SecurityHttpTest.SimpleAsync
                 DateCreated = DateTime.Now
             };
 
-            var readyUser = _security.UserRepository.Create(user);
+            var readyUser = await _security.UserRepository.CreateAsync(user);
             Assert.That(readyUser, Is.InstanceOf(typeof(User)));
             Assert.That(readyUser, Has.Property("Login").EqualTo("Domer3"));
-            Assert.DoesNotThrow(() => { _security.UserRepository.Remove(readyUser.IdMember);});
+            Assert.DoesNotThrowAsync(() =>
+            {
+                return _security.UserRepository.RemoveAsync(readyUser.IdMember);
+            });
         }
 
         [Test]
-        public void CreateEmptyUserTest()
+        public async Task CreateEmptyUserTest()
         {
-            var user = _security.UserRepository.CreateEmpty("new_user");
-            _security.UserRepository.Remove(user.IdMember);
+            var user = await _security.UserRepository.CreateEmptyAsync("new_user");
+            await _security.UserRepository.RemoveAsync(user.IdMember);
 
             Assert.That(user, Is.InstanceOf(typeof(User)));
             Assert.That(user, Has.Property("Login").StartWith("new_user"));
@@ -393,9 +403,9 @@ namespace Security.Tests.SecurityHttpTest.SimpleAsync
         }
 
         [Test]
-        public void CheckGetAllUsers()
+        public async Task CheckGetAllUsers()
         {
-            var users = _security.UserRepository.Get();
+            var users = await _security.UserRepository.GetAsync();
 
             CollectionAssert.IsNotEmpty(users);
             Assert.That(users.Count(), Is.EqualTo(20));
@@ -407,9 +417,9 @@ namespace Security.Tests.SecurityHttpTest.SimpleAsync
         [TestCase(6)]
         [TestCase(7)]
         [TestCase(8)]
-        public void UpdateUser_And_Check_UpdatedPropertiesTest(int idMember)
+        public async Task UpdateUser_And_Check_UpdatedPropertiesTest(int idMember)
         {
-            var user = _security.UserRepository.Get(idMember);
+            var user = await _security.UserRepository.GetAsync(idMember);
 
             user.Login = $"new_login{idMember}";
             user.FirstName = "new_FirstName";
@@ -423,9 +433,9 @@ namespace Security.Tests.SecurityHttpTest.SimpleAsync
             var userStatus = !user.Status;
             user.Status = userStatus;
 
-            _security.UserRepository.Update(user);
+            await _security.UserRepository.UpdateAsync(user);
 
-            user = _security.UserRepository.Get(idMember);
+            user = await _security.UserRepository.GetAsync(idMember);
 
             Assert.IsNotNull(user);
 
@@ -441,16 +451,16 @@ namespace Security.Tests.SecurityHttpTest.SimpleAsync
         }
 
         [Test]
-        public void SetUserStatusTest()
+        public async Task SetUserStatusTest()
         {
-            _security.UserRepository.SetStatus("user0", false);
-            var user = _security.UserRepository.GetByName("user0");
+            await _security.UserRepository.SetStatusAsync("user0", false);
+            var user = await _security.UserRepository.GetByNameAsync("user0");
 
             Assert.IsFalse(user.Status);
         }
 
         [TestCase(21)]
-        public void RemoveUserTest(int idMember)
+        public async Task RemoveUserTest(int idMember)
         {
             var user = new User()
             {
@@ -462,25 +472,25 @@ namespace Security.Tests.SecurityHttpTest.SimpleAsync
                 Status = true,
                 DateCreated = DateTime.Now
             };
-            user = _security.UserRepository.Create(user);
+            user = await _security.UserRepository.CreateAsync(user);
 
             var group = new Group
             {
                 Name = $"Group{idMember}"
             };
-            group = _security.GroupRepository.Create(group);
+            group = await _security.GroupRepository.CreateAsync(group);
 
             var role = new Role()
             {
                 Name = $"Role{idMember}"
             };
-            role = _security.RoleRepository.Create(role);
+            role = await _security.RoleRepository.CreateAsync(role);
 
-            _security.UserGroupRepository.AddGroupsToUser(new []{group.Name}, user.Login);
-            _security.MemberRoleRepository.AddRolesToMember(new []{role.Name}, user.Name);
+            await _security.UserGroupRepository.AddGroupsToUserAsync(new []{group.Name}, user.Login);
+            await _security.MemberRoleRepository.AddRolesToMemberAsync(new []{role.Name}, user.Name);
 
-            Assert.That(() => _security.UserRepository.Remove(user.IdMember), Throws.Nothing);
-            _security.RoleRepository.Remove(role.IdRole);
+            Assert.DoesNotThrowAsync(() => _security.UserRepository.RemoveAsync(user.IdMember));
+            Assert.DoesNotThrowAsync(() => _security.RoleRepository.RemoveAsync(role.IdRole));
         }
 
         #endregion
@@ -488,17 +498,17 @@ namespace Security.Tests.SecurityHttpTest.SimpleAsync
         #region GroupRepository testing
 
         [Test]
-        public void CreateEmptyGroupTest()
+        public async Task CreateEmptyGroupTest()
         {
-            var group = _security.GroupRepository.CreateEmpty("new_Group");
-            _security.GroupRepository.Remove(group.IdMember);
+            var group = await _security.GroupRepository.CreateEmptyAsync("new_Group");
+            await _security.GroupRepository.RemoveAsync(group.IdMember);
             Assert.That(group, Has.Property("Name").StartWith("new_Group"));
         }
 
         [Test]
-        public void GetAllGroupsTest()
+        public async Task GetAllGroupsTest()
         {
-            var groups = _security.GroupRepository.Get();
+            var groups = await _security.GroupRepository.GetAsync();
 
             CollectionAssert.IsNotEmpty(groups);
             Assert.That(groups.Count(), Is.EqualTo(20));
@@ -510,16 +520,16 @@ namespace Security.Tests.SecurityHttpTest.SimpleAsync
         [TestCase(24)]
         [TestCase(25)]
         [TestCase(26)]
-        public void UpdateGroup_And_Check_UpdatedPropertiesTest(int idMember)
+        public async Task UpdateGroup_And_Check_UpdatedPropertiesTest(int idMember)
         {
-            var group = _security.GroupRepository.Get(idMember);
+            var group = await _security.GroupRepository.GetAsync(idMember);
 
             group.Name = $"new_Name{idMember}";
             group.Description = "new_Description";
 
-            _security.GroupRepository.Update(group);
+            await _security.GroupRepository.UpdateAsync(group);
 
-            group = _security.GroupRepository.Get(idMember);
+            group = await _security.GroupRepository.GetAsync(idMember);
 
             Assert.IsNotNull(group);
 
@@ -528,23 +538,23 @@ namespace Security.Tests.SecurityHttpTest.SimpleAsync
         }
 
         [TestCase(41)]
-        public void RemoveGroupTest(int idMember)
+        public async Task RemoveGroupTest(int idMember)
         {
             var group = new Group()
             {
                 Name = $"Group{idMember}",
             };
-            group = _security.GroupRepository.Create(group);
+            group = await _security.GroupRepository.CreateAsync(group);
 
-            var user = _security.UserRepository.CreateEmpty("new_user");
+            var user = await _security.UserRepository.CreateEmptyAsync("new_user");
 
-            var role = _security.RoleRepository.CreateEmpty("new_role");
+            var role = await _security.RoleRepository.CreateEmptyAsync("new_role");
 
-            _security.UserGroupRepository.AddUsersToGroup(new[] { user.Name }, group.Name);
-            _security.MemberRoleRepository.AddRolesToMember(new[] { role.Name }, group.Name);
+            await _security.UserGroupRepository.AddUsersToGroupAsync(new[] { user.Name }, group.Name);
+            await _security.MemberRoleRepository.AddRolesToMemberAsync(new[] { role.Name }, group.Name);
 
-            Assert.That(() => _security.GroupRepository.Remove(group.IdMember), Throws.Nothing);
-            _security.RoleRepository.Remove(role.IdRole);
+            Assert.DoesNotThrowAsync(() => _security.GroupRepository.RemoveAsync(group.IdMember));
+            Assert.DoesNotThrowAsync(() => _security.RoleRepository.RemoveAsync(role.IdRole));
         }
 
         #endregion
@@ -552,17 +562,18 @@ namespace Security.Tests.SecurityHttpTest.SimpleAsync
         #region SecObjectRepository testing
 
         [Test]
-        public void SecObjectCreateEmptyTest()
+        public async Task SecObjectCreateEmptyTest()
         {
-            var policy = _security.SecObjectRepository.CreateEmpty("new_Policy");
-            _security.SecObjectRepository.Remove(policy.IdSecObject);
+            var policy = await _security.SecObjectRepository.CreateEmptyAsync("new_Policy");
+            await _security.SecObjectRepository.RemoveAsync(policy.IdSecObject);
+
             Assert.That(policy, Has.Property("ObjectName").StartWith("new_Policy"));
         }
 
         [Test]
-        public void SecObjectGetAllTest()
+        public async Task SecObjectGetAllTest()
         {
-            var policies = _security.SecObjectRepository.Get();
+            var policies = await _security.SecObjectRepository.GetAsync();
 
             CollectionAssert.IsNotEmpty(policies);
             Assert.That(policies.Count(), Is.EqualTo(20));
@@ -574,15 +585,15 @@ namespace Security.Tests.SecurityHttpTest.SimpleAsync
         [TestCase(4)]
         [TestCase(5)]
         [TestCase(6)]
-        public void SecObjectUpdate_And_Check_UpdatedPropertiesTest(int idSecObject)
+        public async Task SecObjectUpdate_And_Check_UpdatedPropertiesTest(int idSecObject)
         {
-            var secObject = _security.SecObjectRepository.Get(idSecObject);
+            var secObject = await _security.SecObjectRepository.GetAsync(idSecObject);
 
             secObject.ObjectName= $"new_Policy{idSecObject}";
 
-            _security.SecObjectRepository.Update(secObject);
+            await _security.SecObjectRepository.UpdateAsync(secObject);
 
-            secObject = _security.SecObjectRepository.Get(idSecObject);
+            secObject = await _security.SecObjectRepository.GetAsync(idSecObject);
 
             Assert.IsNotNull(secObject);
 
@@ -593,29 +604,28 @@ namespace Security.Tests.SecurityHttpTest.SimpleAsync
         [TestCase(22)]
         [TestCase(23)]
         [TestCase(24)]
-        public void SecObject_GetById_AnotherApplication(int idSecObject)
+        public async Task SecObject_GetById_AnotherApplication(int idSecObject)
         {
-            var secObject = _security.SecObjectRepository.Get(idSecObject);
+            var secObject = await _security.SecObjectRepository.GetAsync(idSecObject);
 
             Assert.That(secObject, Is.Null);
         }
 
         [TestCase(31)]
-        public void SecObjectRemoveTest(int idSecObject)
+        public async Task SecObjectRemoveTest(int idSecObject)
         {
             var policy = new SecObject()
             {
                 ObjectName = $"Policy{idSecObject}",
             };
-            policy = _security.SecObjectRepository.Create(policy);
+            policy = await _security.SecObjectRepository.CreateAsync(policy);
 
-            var role = _security.RoleRepository.CreateEmpty("new_role");
+            var role = await _security.RoleRepository.CreateEmptyAsync("new_role");
 
-            _security.GrantRepository.SetGrants(role.Name, new[] { policy.ObjectName });
+            await _security.GrantRepository.SetGrantsAsync(role.Name, new[] { policy.ObjectName });
 
-            Assert.That(() => _security.SecObjectRepository.Remove(policy.IdSecObject), Throws.Nothing);
-
-            _security.RoleRepository.Remove(role.IdRole);
+            Assert.DoesNotThrowAsync(() => _security.SecObjectRepository.RemoveAsync(policy.IdSecObject));
+            Assert.DoesNotThrowAsync(() => _security.RoleRepository.RemoveAsync(role.IdRole));
         }
 
         #endregion
@@ -623,17 +633,18 @@ namespace Security.Tests.SecurityHttpTest.SimpleAsync
         #region RoleRepository testing
 
         [Test]
-        public void RoleCreateEmptyTest()
+        public async Task RoleCreateEmptyTest()
         {
-            var role = _security.RoleRepository.CreateEmpty("new_Role");
-            _security.RoleRepository.Remove(role.IdRole);
+            var role = await _security.RoleRepository.CreateEmptyAsync("new_Role");
+            await _security.RoleRepository.RemoveAsync(role.IdRole);
+
             Assert.That(role, Has.Property("Name").StartWith("new_Role"));
         }
 
         [Test]
-        public void RoleGetAllTest()
+        public async Task RoleGetAllTest()
         {
-            var roles = _security.RoleRepository.Get();
+            var roles = await _security.RoleRepository.GetAsync();
 
             CollectionAssert.IsNotEmpty(roles);
             Assert.That(roles.Count(), Is.EqualTo(20));
@@ -645,15 +656,15 @@ namespace Security.Tests.SecurityHttpTest.SimpleAsync
         [TestCase(4)]
         [TestCase(5)]
         [TestCase(6)]
-        public void RolesUpdate_And_Check_UpdatedPropertiesTest(int idRole)
+        public async Task RolesUpdate_And_Check_UpdatedPropertiesTest(int idRole)
         {
-            var role = _security.RoleRepository.Get(idRole);
+            var role = await _security.RoleRepository.GetAsync(idRole);
 
             role.Name = $"new_Role{idRole}";
 
-            _security.RoleRepository.Update(role);
+            await _security.RoleRepository.UpdateAsync(role);
 
-            role = _security.RoleRepository.Get(idRole);
+            role = await _security.RoleRepository.GetAsync(idRole);
 
             Assert.IsNotNull(role);
 
@@ -664,29 +675,29 @@ namespace Security.Tests.SecurityHttpTest.SimpleAsync
         [TestCase(22)]
         [TestCase(23)]
         [TestCase(24)]
-        public void Role_GetById_AnotherApplication(int idRole)
+        public async Task Role_GetById_AnotherApplication(int idRole)
         {
-            var role = _security.RoleRepository.Get(idRole);
+            var role = await _security.RoleRepository.GetAsync(idRole);
 
             Assert.That(role, Is.Null);
         }
 
         [TestCase(31)]
-        public void RoleRemoveTest(int idSecObject)
+        public async Task RoleRemoveTest(int idSecObject)
         {
             var role = new Role()
             {
                 Name = $"Policy{idSecObject}",
             };
-            role = _security.RoleRepository.Create(role);
+            role = await _security.RoleRepository.CreateAsync(role);
 
-            var secObject = _security.SecObjectRepository.CreateEmpty("new_Policy");
+            var secObject = await _security.SecObjectRepository.CreateEmptyAsync("new_Policy");
 
-            _security.GrantRepository.SetGrants(role.Name, new[] { secObject.ObjectName });
-            _security.MemberRoleRepository.AddMembersToRole(new[] {"user1"}, role.Name);
+            await _security.GrantRepository.SetGrantsAsync(role.Name, new[] { secObject.ObjectName });
+            await _security.MemberRoleRepository.AddMembersToRoleAsync(new[] {"user1"}, role.Name);
 
-            Assert.That(() => _security.RoleRepository.Remove(role.IdRole), Throws.Nothing);
-            _security.SecObjectRepository.Remove(secObject.IdSecObject);
+            Assert.DoesNotThrowAsync(() => _security.RoleRepository.RemoveAsync(role.IdRole));
+            Assert.DoesNotThrowAsync(() => _security.SecObjectRepository.RemoveAsync(secObject.IdSecObject));
         }
 
         #endregion
@@ -694,45 +705,46 @@ namespace Security.Tests.SecurityHttpTest.SimpleAsync
         #region ApplicationInternalRepository testing
 
         [Test]
-        public void ApplicationInternal_Get_Update_And_Remove_ApplicationTest()
+        public async Task ApplicationInternal_Get_Update_And_Remove_ApplicationTest()
         {
             IServiceLocator locator = IocConfig.GetLocator("MyNewTestApp");
             using (var security = new SecurityWebClient("MyNewTestApp", "MyNewTestApp Description", locator))
             {
-                security.Config.RegisterSecurityObjects("MyNewTestApp", "1", "2", "3", "4", "5", "6", "7", "8");
-                var user = security.UserRepository.GetByName("user1");
+                await security.Config.RegisterSecurityObjectsAsync("MyNewTestApp", "1", "2", "3", "4", "5", "6", "7", "8");
+                var user = await security.UserRepository.GetByNameAsync("user1");
 
-                var group = security.GroupRepository.GetByName("group1");
+                var group = await security.GroupRepository.GetByNameAsync("group1");
 
-                var role = security.RoleRepository.Create(new Role(){Name = "Role1"});
-                var policy = security.SecObjectRepository.Create(new SecObject() {ObjectName = "policy1"});
+                var role = await security.RoleRepository.CreateAsync(new Role(){Name = "Role1"});
+                var policy = await security.SecObjectRepository.CreateAsync(new SecObject() {ObjectName = "policy1"});
 
-                security.MemberRoleRepository.AddMembersToRole(new[] {user.IdMember, group.IdMember},
-                    role.IdRole);
+                await security.MemberRoleRepository.AddMembersToRoleAsync(new[] {user.IdMember, group.IdMember}, role.IdRole);
             }
 
             var repo = locator.Resolve<IApplicationInternalRepository>();
-            var apps = repo.Get();
+            var apps = await repo.GetAsync();
 
             foreach (var app in apps)
             {
                 var oldDescription = app.Description;
                 app.Description = $"New {app.AppName} Description 2.0";
-                repo.Update(app);
-                var application = repo.Get(app.IdApplication);
+                await repo.UpdateAsync(app);
+                var application = await repo.GetAsync(app.IdApplication);
 
                 Assert.That(application, Has.Property("Description").EqualTo(app.Description));
                 Assert.That(application, Is.Not.Null);
 
                 app.Description = oldDescription;
-                repo.Update(app);
+                await repo.UpdateAsync(app);
             }
 
-            Assert.DoesNotThrow(() =>
+            Assert.DoesNotThrowAsync(async() =>
             {
-                _security.Config.RemoveApplication("MyNewTestApp");
-                repo.Remove(apps.First(_ => _.AppName == "HelloWorldApp2").IdApplication);
+                await _security.Config.RemoveApplicationAsync("MyNewTestApp");
+                await repo.RemoveAsync(apps.First(_ => _.AppName == "HelloWorldApp2").IdApplication);
             });
+
+            Assert.ThrowsAsync<NotSupportedException>(() => repo.CreateEmptyAsync(null));
         }
 
         #endregion
@@ -740,40 +752,40 @@ namespace Security.Tests.SecurityHttpTest.SimpleAsync
         #region GrantRepository testing
 
         [Test]
-        public void GrantRemoveGrantTest()
+        public async Task GrantRemoveGrantTest()
         {
-            _security.GrantRepository.SetGrant("role10", "5");
+            await _security.GrantRepository.SetGrantAsync("role10", "5");
 
-            var policies = _security.GrantRepository.GetRoleGrants("role10").Select(_ => _.ObjectName);
+            var policies = (await _security.GrantRepository.GetRoleGrantsAsync("role10")).Select(_ => _.ObjectName);
 
             CollectionAssert.AreEqual(new[] {"5"}, policies);
-            Assert.DoesNotThrow(() => { _security.GrantRepository.RemoveGrant("role10", "5");});
+            Assert.DoesNotThrowAsync(() => _security.GrantRepository.RemoveGrantAsync("role10", "5"));
         }
 
         [Test]
-        public void GrantRemoveGrantsTest()
+        public async Task GrantRemoveGrantsTest()
         {
-            _security.GrantRepository.SetGrants("role10", new []{"5", "6", "7", "8"});
+            await _security.GrantRepository.SetGrantsAsync("role10", new []{"5", "6", "7", "8"});
 
-            var policies = _security.GrantRepository.GetRoleGrants("role10").Select(_ => _.ObjectName);
+            var policies = (await _security.GrantRepository.GetRoleGrantsAsync("role10")).Select(_ => _.ObjectName);
 
             CollectionAssert.AreEqual(new[] { "5", "6", "7", "8" }, policies);
-            Assert.DoesNotThrow(() => { _security.GrantRepository.RemoveGrants("role10", new[] { "5", "6", "7", "8" }); });
+            Assert.DoesNotThrowAsync(() => _security.GrantRepository.RemoveGrantsAsync("role10", new[] { "5", "6", "7", "8" }));
         }
 
         [Test]
-        public void GrantGetExceptRoleGrantsTest()
+        public async Task GrantGetExceptRoleGrantsTest()
         {
             var secObjects = new []{1,2,3,4,5}.Select(_ => _.ToString()).ToArray();
             var exceptSecObjects = new[] {6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}
                 .Select(_ => _.ToString()).OrderBy(_ => _).ToArray();
 
-            _security.GrantRepository.SetGrants("role10", secObjects);
-            var policies = _security.GrantRepository.GetExceptRoleGrant("role10").OrderBy(_ => _.ObjectName).Select(_ => _.ObjectName);
+            await _security.GrantRepository.SetGrantsAsync("role10", secObjects);
+            var policies = (await _security.GrantRepository.GetExceptRoleGrantAsync("role10")).OrderBy(_ => _.ObjectName).Select(_ => _.ObjectName);
 
             Assert.That(policies.Count(), Is.EqualTo(15));
             CollectionAssert.AreEqual(exceptSecObjects, policies);
-            Assert.DoesNotThrow(() => { _security.GrantRepository.RemoveGrants("role10", secObjects);});
+            Assert.DoesNotThrowAsync(() => _security.GrantRepository.RemoveGrantsAsync("role10", secObjects));
         }
 
         #endregion
@@ -781,45 +793,45 @@ namespace Security.Tests.SecurityHttpTest.SimpleAsync
         #region MemberRoleRepository testing
 
         [Test]
-        public void MemberRoleAddMembersToRoleByName()
+        public async Task MemberRoleAddMembersToRoleByName()
         {
             var memberStrings = new []{"user10", "user11", "user12", "group10","group11","group12"};
             var exceptMemberStrings = new[] { "group0", "group1", "group13", "group14", "group15", "group16", "group17", "group18", "group19", "group2", "group3", "group4", "group5", "group6", "group7", "group8", "group9", "user0", "user1", "user13", "user14", "user15", "user16", "user17", "user18", "user19", "user2", "user3", "user4", "user5", "user6", "user7", "user8", "user9" };
 
-            _security.MemberRoleRepository.AddMembersToRole(memberStrings, "role10");
+            await _security.MemberRoleRepository.AddMembersToRoleAsync(memberStrings, "role10");
 
-            var members = _security.MemberRoleRepository.GetMembersByRoleName("role10").OrderBy(_ => _.Name).Select(_ => _.Name);
-            var exceptMembers = _security.MemberRoleRepository.GetExceptMembersByRoleName("role10").OrderBy(_ => _.Name).Select(_ => _.Name);
+            var members = (await _security.MemberRoleRepository.GetMembersByRoleNameAsync("role10")).OrderBy(_ => _.Name).Select(_ => _.Name);
+            var exceptMembers = (await _security.MemberRoleRepository.GetExceptMembersByRoleNameAsync("role10")).OrderBy(_ => _.Name).Select(_ => _.Name);
 
             Assert.That(members.Count(), Is.EqualTo(6));
             Assert.That(exceptMembers.Count(), Is.EqualTo(34));
             CollectionAssert.AreEqual(memberStrings.OrderBy(_ => _), members);
             CollectionAssert.AreEqual(exceptMemberStrings.OrderBy(_ => _), exceptMembers);
 
-            Assert.DoesNotThrow(() => { _security.MemberRoleRepository.DeleteMembersFromRole(memberStrings, "role10");});
+            Assert.DoesNotThrowAsync(() => _security.MemberRoleRepository.DeleteMembersFromRoleAsync(memberStrings, "role10"));
         }
 
         [Test]
-        public void MemberRoleAddMembersToRoleById()
+        public async Task MemberRoleAddMembersToRoleById()
         {
             var idMembers = new[] {11, 12, 13, 31, 32, 33};
             var exceptIdMembers = new[] { 21, 22, 34, 35, 36, 37, 38, 39, 40, 23, 24, 25, 26, 27, 28, 29, 30, 1, 2, 14, 15, 16, 17, 18, 19, 20, 3, 4, 5, 6, 7, 8, 9, 10 };
 
-            _security.MemberRoleRepository.AddMembersToRole(idMembers, 10);
+            await _security.MemberRoleRepository.AddMembersToRoleAsync(idMembers, 10);
 
-            var members = _security.MemberRoleRepository.GetMembersByIdRole(10).OrderBy(_ => _.IdMember).Select(_ => _.IdMember);
-            var exceptMembers = _security.MemberRoleRepository.GetExceptMembersByIdRole(10).OrderBy(_ => _.IdMember).Select(_ => _.IdMember);
+            var members = (await _security.MemberRoleRepository.GetMembersByIdRoleAsync(10)).OrderBy(_ => _.IdMember).Select(_ => _.IdMember);
+            var exceptMembers = (await _security.MemberRoleRepository.GetExceptMembersByIdRoleAsync(10)).OrderBy(_ => _.IdMember).Select(_ => _.IdMember);
 
             Assert.That(members.Count(), Is.EqualTo(6));
             Assert.That(exceptMembers.Count(), Is.EqualTo(34));
             CollectionAssert.AreEqual(idMembers.OrderBy(_ => _), members);
             CollectionAssert.AreEqual(exceptIdMembers.OrderBy(_ => _), exceptMembers);
 
-            Assert.DoesNotThrow(() => { _security.MemberRoleRepository.DeleteMembersFromRole(idMembers, 10);});
+            Assert.DoesNotThrowAsync(() => _security.MemberRoleRepository.DeleteMembersFromRoleAsync(idMembers, 10));
         }
 
         [Test]
-        public void MemberRoleAddRolesToMemberByName()
+        public async Task MemberRoleAddRolesToMemberByName()
         {
             var roleStrings = new[] {"role11", "role12", "role13", "role14", "role15", };
             var exceptRoleStrings = new[]
@@ -841,36 +853,36 @@ namespace Security.Tests.SecurityHttpTest.SimpleAsync
                 "role20",
             };
 
-            _security.MemberRoleRepository.AddRolesToMember(roleStrings, "user15");
+            await _security.MemberRoleRepository.AddRolesToMemberAsync(roleStrings, "user15");
 
-            var members = _security.MemberRoleRepository.GetRolesByMemberName("user15").OrderBy(_ => _.Name).Select(_ => _.Name);
-            var exceptMembers = _security.MemberRoleRepository.GetExceptRolesByMemberName("user15").OrderBy(_ => _.Name).Select(_ => _.Name);
+            var members = (await _security.MemberRoleRepository.GetRolesByMemberNameAsync("user15")).OrderBy(_ => _.Name).Select(_ => _.Name);
+            var exceptMembers = (await _security.MemberRoleRepository.GetExceptRolesByMemberNameAsync("user15")).OrderBy(_ => _.Name).Select(_ => _.Name);
 
             Assert.That(members.Count(), Is.EqualTo(5));
             Assert.That(exceptMembers.Count(), Is.EqualTo(15));
             CollectionAssert.AreEqual(roleStrings.OrderBy(_ => _), members);
             CollectionAssert.AreEqual(exceptRoleStrings.OrderBy(_ => _), exceptMembers);
 
-            Assert.DoesNotThrow(() => { _security.MemberRoleRepository.DeleteRolesFromMember(roleStrings, "user15"); });
+            Assert.DoesNotThrowAsync(() => _security.MemberRoleRepository.DeleteRolesFromMemberAsync(roleStrings, "user15"));
         }
 
         [Test]
-        public void MemberRoleAddRolesToMemberById()
+        public async Task MemberRoleAddRolesToMemberById()
         {
             var idRoles = new[] {11, 12, 13, 14, 15};
             var exceptIdRoles = new[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 16, 17, 18, 19, 20};
 
-            _security.MemberRoleRepository.AddRolesToMember(idRoles, 15);
+            await _security.MemberRoleRepository.AddRolesToMemberAsync(idRoles, 15);
 
-            var members = _security.MemberRoleRepository.GetRolesByIdMember(15).OrderBy(_ => _.IdRole).Select(_ => _.IdRole);
-            var exceptMembers = _security.MemberRoleRepository.GetExceptRolesByIdMember(15).OrderBy(_ => _.IdRole).Select(_ => _.IdRole);
+            var members = (await _security.MemberRoleRepository.GetRolesByIdMemberAsync(15)).OrderBy(_ => _.IdRole).Select(_ => _.IdRole);
+            var exceptMembers = (await _security.MemberRoleRepository.GetExceptRolesByIdMemberAsync(15)).OrderBy(_ => _.IdRole).Select(_ => _.IdRole);
 
             Assert.That(members.Count(), Is.EqualTo(5));
             Assert.That(exceptMembers.Count(), Is.EqualTo(15));
             CollectionAssert.AreEqual(idRoles.OrderBy(_ => _), members);
             CollectionAssert.AreEqual(exceptIdRoles.OrderBy(_ => _), exceptMembers);
 
-            Assert.DoesNotThrow(() => { _security.MemberRoleRepository.DeleteRolesFromMember(idRoles, 15); });
+            Assert.DoesNotThrow(() => _security.MemberRoleRepository.DeleteRolesFromMemberAsync(idRoles, 15));
         }
 
         #endregion
@@ -878,28 +890,50 @@ namespace Security.Tests.SecurityHttpTest.SimpleAsync
         #region ApplicationRepository testing
 
         [Test]
-        public void ApplicationRepositoryGetAll()
+        public async Task ApplicationRepositoryGetAll()
         {
-            var applications = _security.ApplicationRepository.Get();
+            var applications = await _security.ApplicationRepository.GetAsync();
+
             CollectionAssert.AllItemsAreNotNull(applications);
             CollectionAssert.AllItemsAreInstancesOfType(applications, typeof(Application));
         }
 
         [Test]
-        public void ApplicationRepositoryGetById()
+        public async Task ApplicationRepositoryGetById()
         {
-            var application = _security.ApplicationRepository.Get(1);
+            var application = await _security.ApplicationRepository.GetAsync(1);
             Assert.IsNotNull(application);
             Assert.IsInstanceOf(typeof(Application), application);
         }
 
         [Test]
-        public void ApplicationRepositoryNotSupportedMethodsTest()
+        public Task ApplicationRepositoryNotSupportedMethodsTest()
         {
-            Assert.Throws<NotSupportedException>(() => _security.ApplicationRepository.Create(null));
-            Assert.Throws<NotSupportedException>(() => _security.ApplicationRepository.Update(null));
-            Assert.Throws<NotSupportedException>(() => _security.ApplicationRepository.Remove(null));
-            Assert.Throws<NotSupportedException>(() => _security.ApplicationRepository.CreateEmpty(null));
+            Assert.ThrowsAsync<NotSupportedException>(() => _security.ApplicationRepository.CreateAsync(null));
+            Assert.ThrowsAsync<NotSupportedException>(() => _security.ApplicationRepository.UpdateAsync(null));
+            Assert.ThrowsAsync<NotSupportedException>(() => _security.ApplicationRepository.RemoveAsync(null));
+            Assert.ThrowsAsync<NotSupportedException>(() => _security.ApplicationRepository.CreateEmptyAsync(null));
+            return Task.Delay(0);
+        }
+
+        #endregion
+
+        #region SecuritySettigns testing
+
+        [Test]
+        public async Task SecuritySettingsSetValue_ValidParameterOfOneSeconds_Test()
+        {
+            await _security.SecuritySettings.SetValueAsync("key1", "value1", TimeSpan.FromSeconds(1));
+            Assert.IsFalse(await _security.SecuritySettings.IsDeprecatedAsync("key1"));
+            Assert.DoesNotThrowAsync(() => _security.SecuritySettings.RemoveValueAsync("key1"));
+        }
+
+        [Test]
+        public async Task SecuritySettingsGetValueTest()
+        {
+            await _security.SecuritySettings.SetValueAsync("key2", 25);
+            Assert.That(await _security.SecuritySettings.GetValueAsync<int>("key2"), Is.EqualTo(25));
+            Assert.DoesNotThrowAsync(() => _security.SecuritySettings.RemoveValueAsync("key2"));
         }
 
         #endregion

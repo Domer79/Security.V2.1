@@ -141,7 +141,7 @@ where
 ", new {id});
         }
 
-        public Task<IEnumerable<Group>> GetGroupsByUserIdAsync(Guid id)
+        public Task<IEnumerable<Group>> GetGroupsAsync(Guid id)
         {
             return _commonDb.QueryAsync<Group>(@"
 select
@@ -167,7 +167,7 @@ where
 ", new { idUser });
         }
 
-        public Task<IEnumerable<Group>> GetGroupsByIdUserAsync(int idUser)
+        public Task<IEnumerable<Group>> GetGroupsAsync(int idUser)
         {
             return _commonDb.QueryAsync<Group>(@"
 select
@@ -193,7 +193,7 @@ where
 ", new { name });
         }
 
-        public Task<IEnumerable<Group>> GetGroupsByUserNameAsync(string name)
+        public Task<IEnumerable<Group>> GetGroupsAsync(string name)
         {
             return _commonDb.QueryAsync<Group>(@"
 select
@@ -218,7 +218,7 @@ where
 	m.name = @name", new {name});
         }
 
-        public Task<IEnumerable<User>> GetUsersByGroupNameAsync(string name)
+        public Task<IEnumerable<User>> GetUsersAsync(string name)
         {
             return _commonDb.QueryAsync<User>(@"
 select
@@ -242,7 +242,7 @@ where
 	m.id = @id", new { id });
         }
 
-        public Task<IEnumerable<User>> GetUsersByGroupIdAsync(Guid id)
+        public Task<IEnumerable<User>> GetUsersAsync(Guid id)
         {
             return _commonDb.QueryAsync<User>(@"
 select
@@ -266,7 +266,7 @@ where
 	m.idMember = @idGroup", new { idGroup });
         }
 
-        public Task<IEnumerable<User>> GetUsersByIdGroupAsync(int idGroup)
+        public Task<IEnumerable<User>> GetUsersAsync(int idGroup)
         {
             return _commonDb.QueryAsync<User>(@"
 select

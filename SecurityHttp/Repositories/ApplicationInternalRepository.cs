@@ -36,9 +36,9 @@ namespace SecurityHttp.Repositories
             throw new NotSupportedException();
         }
 
-        public async Task<Application> CreateEmptyAsync(string prefixForRequired)
+        public Task<Application> CreateEmptyAsync(string prefixForRequired)
         {
-            throw new NotSupportedException();
+            return Task.FromException<Application>(new NotSupportedException());
         }
 
         public Application Get(object id)

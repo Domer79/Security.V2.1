@@ -96,7 +96,7 @@ namespace SecurityHttp.Repositories
 
         public Task SetStatusAsync(string loginOrEmail, bool status)
         {
-            return _commonWeb.PostAsync("api/user/setstatus", new {loginOrEmail, status});
+            return _commonWeb.PostAsync("api/user/setstatus", null, new {loginOrEmail, status});
         }
 
         public void Update(User entity)

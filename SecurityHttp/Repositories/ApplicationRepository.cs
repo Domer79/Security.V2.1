@@ -24,7 +24,7 @@ namespace SecurityHttp.Repositories
 
         public Task<Application> CreateAsync(Application entity)
         {
-            throw new NotSupportedException();
+            return Task.FromException<Application>(new NotSupportedException());
         }
 
         public Application CreateEmpty(string prefixForRequired)
@@ -34,7 +34,7 @@ namespace SecurityHttp.Repositories
 
         public Task<Application> CreateEmptyAsync(string prefixForRequired)
         {
-            throw new NotSupportedException();
+            return Task.FromException<Application>(new NotSupportedException());
         }
 
         public Application Get(object id)
@@ -74,7 +74,7 @@ namespace SecurityHttp.Repositories
 
         public Task RemoveAsync(object id)
         {
-            throw new NotSupportedException();
+            return Task.FromException<Application>(new NotSupportedException());
         }
 
         public void Update(Application entity)
@@ -84,7 +84,7 @@ namespace SecurityHttp.Repositories
 
         public Task UpdateAsync(Application entity)
         {
-            throw new NotSupportedException();
+            return Task.FromException<Application>(new NotSupportedException());
         }
     }
 }

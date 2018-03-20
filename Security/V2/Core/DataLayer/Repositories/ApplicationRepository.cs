@@ -22,9 +22,9 @@ namespace Security.V2.Core.DataLayer.Repositories
             throw new NotSupportedException();
         }
 
-        public async Task<Application> CreateAsync(Application entity)
+        public Task<Application> CreateAsync(Application entity)
         {
-            throw new NotSupportedException();
+            return Task.FromException<Application>(new NotSupportedException());
         }
 
         public Application CreateEmpty(string prefixForRequired)
@@ -34,7 +34,7 @@ namespace Security.V2.Core.DataLayer.Repositories
 
         public Task<Application> CreateEmptyAsync(string prefixForRequired)
         {
-            throw new NotSupportedException();
+            return Task.FromException<Application>(new NotSupportedException());
         }
 
         public Application Get(object id)
@@ -74,7 +74,7 @@ namespace Security.V2.Core.DataLayer.Repositories
 
         public Task RemoveAsync(object id)
         {
-            throw new NotSupportedException();
+            return Task.FromException<Application>(new NotSupportedException());
         }
 
         public void Update(Application entity)
@@ -84,7 +84,7 @@ namespace Security.V2.Core.DataLayer.Repositories
 
         public Task UpdateAsync(Application entity)
         {
-            throw new NotSupportedException();
+            return Task.FromException<Application>(new NotSupportedException());
         }
     }
 }

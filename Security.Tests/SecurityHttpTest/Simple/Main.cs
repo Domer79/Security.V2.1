@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NUnit.Framework;
@@ -736,6 +737,8 @@ namespace Security.Tests.SecurityHttpTest.Simple
                 _security.Config.RemoveApplication("MyNewTestApp");
                 repo.Remove(apps.First(_ => _.AppName == "HelloWorldApp2").IdApplication);
             });
+
+            Assert.Throws<NotSupportedException>(() => repo.CreateEmpty(null));
         }
 
         #endregion
@@ -909,7 +912,21 @@ namespace Security.Tests.SecurityHttpTest.Simple
 
         #region SecuritySettigns testing
 
+        [Test]
+        public void SecuritySettingsSetValue_ValidParameterOfOneSeconds_Test()
+        {
+            _security.SecuritySettings.SetValue("key1", "value1", TimeSpan.FromSeconds(1));
+            Assert.IsFalse(_security.SecuritySettings.IsDeprecated("key1"));
+            Assert.DoesNotThrow(() => { _security.SecuritySettings.RemoveValue("key1");});
+        }
 
+        [Test]
+        public void SecuritySettingsGetValueTest()
+        {
+            _security.SecuritySettings.SetValue("key2", 25);
+            Assert.That(_security.SecuritySettings.GetValue<int>("key2"), Is.EqualTo(25));
+            Assert.DoesNotThrow(() => { _security.SecuritySettings.RemoveValue("key2"); });
+        }
 
         #endregion
 

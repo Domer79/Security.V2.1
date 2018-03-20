@@ -46,9 +46,26 @@ namespace SecurityHttp
             }
         }
 
-        public async Task<object> GetAsync<T>(string path, object queryData = null)
+        public async Task<T> GetAsync<T>(string path, object queryData = null)
         {
-            throw new NotImplementedException();
+            var builder = new UriBuilder(_host);
+            var queryBuilder = new QueryBuilder(queryData);
+            builder.Path = path;
+            builder.Query = queryBuilder.ToString();
+
+            var request = WebRequest.Create(builder.Uri);
+            request.Method = WebRequestMethods.Http.Get;
+            using (HttpWebResponse response = await request.GetResponseAsync().ConfigureAwait(false) as HttpWebResponse)
+            {
+                if (response.StatusCode != HttpStatusCode.OK)
+                    throw ThrowsHelper.WebException("Произошла ошибка при выполнении запроса", response);
+
+                using (var sr = new StreamReader(response.GetResponseStream()))
+                {
+                    var rawValue = await sr.ReadToEndAsync().ConfigureAwait(false);
+                    return (T)JsonConvert.DeserializeObject(rawValue, typeof(T));
+                }
+            }
         }
 
         public bool Post(string path, object data, object queryData = null)
@@ -107,14 +124,60 @@ namespace SecurityHttp
             }
         }
 
-        public Task<T> PostAndGetAsync<T>(string path, object data, object queryData = null)
+        public async Task<bool> PostAsync(string path, object data, object queryData = null)
         {
-            throw new NotImplementedException();
+            var builder = new UriBuilder(_host);
+            var queryBuilder = new QueryBuilder(queryData);
+            builder.Path = path;
+            builder.Query = queryBuilder.ToString();
+
+            var request = WebRequest.Create(builder.Uri);
+            request.Method = WebRequestMethods.Http.Post;
+            var byteArray = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(data));
+            request.ContentLength = byteArray.Length;
+            request.ContentType = "application/json";
+            using (var requestStream = await request.GetRequestStreamAsync().ConfigureAwait(false))
+            {
+                await requestStream.WriteAsync(byteArray, 0, byteArray.Length).ConfigureAwait(false);
+            }
+
+            using (HttpWebResponse response = await request.GetResponseAsync().ConfigureAwait(false) as HttpWebResponse)
+            {
+                if (response.StatusCode != HttpStatusCode.OK)
+                    throw ThrowsHelper.WebException("Произошла ошибка при выполнении запроса", response);
+
+                return true;
+            }
         }
 
-        public Task<bool> PostAsync(string path, object data, object queryData = null)
+        public async Task<T> PostAndGetAsync<T>(string path, object data, object queryData = null)
         {
-            throw new NotImplementedException();
+            var builder = new UriBuilder(_host);
+            var queryBuilder = new QueryBuilder(queryData);
+            builder.Path = path;
+            builder.Query = queryBuilder.ToString();
+
+            var request = WebRequest.Create(builder.Uri);
+            request.Method = WebRequestMethods.Http.Post;
+            var byteArray = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(data));
+            request.ContentType = "application/json";
+            request.ContentLength = byteArray.Length;
+            using (var requestStream = await request.GetRequestStreamAsync().ConfigureAwait(false))
+            {
+                await requestStream.WriteAsync(byteArray, 0, byteArray.Length).ConfigureAwait(false);
+            }
+
+            using (HttpWebResponse response = await request.GetResponseAsync().ConfigureAwait(false) as HttpWebResponse)
+            {
+                if (response.StatusCode != HttpStatusCode.OK)
+                    throw ThrowsHelper.WebException("Произошла ошибка при выполнении запроса", response);
+
+                using (var sr = new StreamReader(response.GetResponseStream()))
+                {
+                    var value = await sr.ReadToEndAsync().ConfigureAwait(false);
+                    return (T)JsonConvert.DeserializeObject(value, typeof(T));
+                }
+            }
         }
 
         public bool Put(string path, object data, object queryData = null)
@@ -143,14 +206,30 @@ namespace SecurityHttp
             }
         }
 
-        public Task<bool> PutAsync(string path, object data, object queryData = null)
+        public async Task<bool> PutAsync(string path, object data, object queryData = null)
         {
-            throw new NotImplementedException();
-        }
+            var builder = new UriBuilder(_host);
+            var queryBuilder = new QueryBuilder(queryData);
+            builder.Path = path;
+            builder.Query = queryBuilder.ToString();
 
-        Task<T> ICommonWeb.GetAsync<T>(string path, object queryData)
-        {
-            throw new NotImplementedException();
+            var request = WebRequest.Create(builder.Uri);
+            request.Method = WebRequestMethods.Http.Put;
+            var byteArray = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(data));
+            request.ContentType = "application/json";
+            request.ContentLength = byteArray.Length;
+            using (var requestStream = await request.GetRequestStreamAsync().ConfigureAwait(false))
+            {
+                await requestStream.WriteAsync(byteArray, 0, byteArray.Length).ConfigureAwait(false);
+            }
+
+            using (HttpWebResponse response = await request.GetResponseAsync().ConfigureAwait(false) as HttpWebResponse)
+            {
+                if (response.StatusCode != HttpStatusCode.OK)
+                    throw ThrowsHelper.WebException("Произошла ошибка при выполнении запроса", response);
+
+                return true;
+            }
         }
 
         public T PutAndGet<T>(string path, object data, object queryData = null)
@@ -183,9 +262,34 @@ namespace SecurityHttp
             }
         }
 
-        public Task<T> PutAndGetAsync<T>(string path, object data, object queryData = null)
+        public async Task<T> PutAndGetAsync<T>(string path, object data, object queryData = null)
         {
-            throw new NotImplementedException();
+            var builder = new UriBuilder(_host);
+            var queryBuilder = new QueryBuilder(queryData);
+            builder.Path = path;
+            builder.Query = queryBuilder.ToString();
+
+            var request = WebRequest.Create(builder.Uri);
+            request.Method = WebRequestMethods.Http.Put;
+            var byteArray = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(data));
+            request.ContentType = "application/json";
+            request.ContentLength = byteArray.Length;
+            using (var requestStream = await request.GetRequestStreamAsync().ConfigureAwait(false))
+            {
+                await requestStream.WriteAsync(byteArray, 0, byteArray.Length).ConfigureAwait(false);
+            }
+
+            using (HttpWebResponse response = await request.GetResponseAsync().ConfigureAwait(false) as HttpWebResponse)
+            {
+                if (response.StatusCode != HttpStatusCode.OK)
+                    throw ThrowsHelper.WebException("Произошла ошибка при выполнении запроса", response);
+
+                using (var sr = new StreamReader(response.GetResponseStream()))
+                {
+                    var value = await sr.ReadToEndAsync().ConfigureAwait(false);
+                    return (T)JsonConvert.DeserializeObject(value, typeof(T));
+                }
+            }
         }
 
         public IEnumerable<T> GetCollection<T>(string path, object queryData = null)
@@ -209,9 +313,25 @@ namespace SecurityHttp
             }
         }
 
-        public Task<IEnumerable<T>> GetCollectionAsync<T>(string path, object queryDsta = null)
+        public async Task<IEnumerable<T>> GetCollectionAsync<T>(string path, object queryData = null)
         {
-            throw new NotImplementedException();
+            var builder = new UriBuilder(_host);
+            var queryBuilder = new QueryBuilder(queryData);
+            builder.Path = path;
+            builder.Query = queryBuilder.ToString();
+
+            var request = WebRequest.Create(builder.Uri);
+            request.Method = WebRequestMethods.Http.Get;
+            using (HttpWebResponse response = await request.GetResponseAsync().ConfigureAwait(false) as HttpWebResponse)
+            {
+                if (response.StatusCode != HttpStatusCode.OK)
+                    throw ThrowsHelper.WebException("Произошла ошибка при выполнении запроса", response);
+
+                using (var sr = new StreamReader(response.GetResponseStream()))
+                {
+                    return (IEnumerable<T>)JsonConvert.DeserializeObject(sr.ReadToEnd(), typeof(IEnumerable<T>));
+                }
+            }
         }
 
         public bool Delete(string path, object data, object queryData = null)
@@ -286,7 +406,20 @@ namespace SecurityHttp
 
         public async Task<bool> DeleteAsync(string path, object queryData = null)
         {
-            throw new NotImplementedException();
+            var builder = new UriBuilder(_host);
+            var queryBuilder = new QueryBuilder(queryData);
+            builder.Path = path;
+            builder.Query = queryBuilder.ToString();
+
+            var request = WebRequest.Create(builder.Uri);
+            request.Method = "DELETE";
+            using (HttpWebResponse response = await request.GetResponseAsync() as HttpWebResponse)
+            {
+                if (response.StatusCode != HttpStatusCode.OK)
+                    throw ThrowsHelper.WebException("Response status invalid", response);
+
+                return true;
+            }
         }
     }
 

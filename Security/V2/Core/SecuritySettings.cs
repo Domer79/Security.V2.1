@@ -40,6 +40,11 @@ namespace Security.V2.Core
             }
         }
 
+        public void RemoveValue(string key)
+        {
+            _commonDb.ExecuteNonQuery("delete from sec.Settings where name = @key", new {key = GetKey(key)});
+        }
+
         public async Task<T> GetValueAsync<T>(string key)
         {
             return (T) await GetValueAsync(key, typeof(T));
@@ -75,9 +80,9 @@ namespace Security.V2.Core
             return setting.Deprecated;
         }
 
-        public void SetValue<T>(string key, T value, TimeSpan? lifetime = null)
+        public Task RemoveValueAsync(string key)
         {
-            SetValue(key, value, lifetime);
+            return _commonDb.ExecuteNonQueryAsync("delete from sec.Settings where name = @key", new { key = GetKey(key)});
         }
 
         public void SetValue(string key, object value, TimeSpan? lifetime = null)
@@ -101,11 +106,6 @@ from
 
             long? lt = lifetime.HasValue ? lifetime.Value.Ticks : (long?)null;
             _commonDb.ExecuteNonQuery("insert into sec.Settings(name, value, inDbLifetime, changedDate) values(@key, @value, @lifetime, @changedDate)", new { key = GetKey(key), value = value.ToString(), lifetime = lt, changedDate = DateTime.Now });
-        }
-
-        public async Task SetValueAsync<T>(string key, T value, TimeSpan? lifetime = null)
-        {
-            await SetValueAsync(key, (object)value, lifetime);
         }
 
         public async Task SetValueAsync(string key, object value, TimeSpan? lifetime = null)

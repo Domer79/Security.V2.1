@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 using Microsoft.SqlServer.Management.Common;
 using Microsoft.SqlServer.Management.Smo;
 using NUnit.Framework;
@@ -21,20 +22,20 @@ namespace Security.Tests.SecurityHttpTest.SimpleAsync
     public class Setup
     {
         [OneTimeSetUp]
-        public void OneTimeSetup()
+        public async Task OneTimeSetup()
         {
-            CreateDatabase();
-            ExecuteDatabaseScript(ConfigurationManager.AppSettings["scriptPath"]);
-            FillDatabase();
+            await CreateDatabase();
+            await ExecuteDatabaseScript(ConfigurationManager.AppSettings["scriptPath"]);
+            await FillDatabase();
         }
 
         [OneTimeTearDown]
-        public void OneTimeTearDown()
+        public Task OneTimeTearDown()
         {
-            DropDatabase();
+            return DropDatabase();
         }
 
-        private void FillDatabase()
+        private async Task FillDatabase()
         {
             using (var security = new MySecurity())
             {
@@ -48,37 +49,37 @@ namespace Security.Tests.SecurityHttpTest.SimpleAsync
 
                     return list.ToArray();
                 }
-                security.Config.RegisterSecurityObjects("HelloWorldApp1", secObjects());
+                await security.Config.RegisterSecurityObjectsAsync("HelloWorldApp1", secObjects());
 
-                security.Config.RegisterApplication("HelloWorldApp2", "Hello World Application 2!");
+                await security.Config.RegisterApplicationAsync("HelloWorldApp2", "Hello World Application 2!");
 
                 using (var security2 =
                     new V2.Core.Security("HelloWorldApp2", "", IocConfig.GetLocator("HelloWorldApp2")))
                 {
-                    security2.Config.RegisterSecurityObjects("HelloWorldApp2", "1", "4", "5", "6");
+                    await security2.Config.RegisterSecurityObjectsAsync("HelloWorldApp2", "1", "4", "5", "6");
                 }
 
-                CreateUsers(security);
-                CreateGroups(security);
-                CreateUserGroups(security);
-                CreateRoles(security);
+                await CreateUsers(security);
+                await CreateGroups(security);
+                await CreateUserGroups(security);
+                await CreateRoles(security);
 
-                security.MemberRoleRepository.AddMembersToRole(new[] { "user1", "group1" }, "role1");
-                security.MemberRoleRepository.AddMembersToRole(new[] { "user1" }, "role2");
-                security.MemberRoleRepository.AddMembersToRole(new[] { "user3" }, "role2");
-
-                security.GrantRepository.SetGrant("role1", "1");
-                security.GrantRepository.SetGrant("role1", "2");
-                security.GrantRepository.SetGrant("role2", "2");
-                security.GrantRepository.SetGrant("role2", "3");
+                await security.MemberRoleRepository.AddMembersToRoleAsync(new[] { "user1", "group1" }, "role1");
+                await security.MemberRoleRepository.AddMembersToRoleAsync(new[] { "user1" }, "role2");
+                await security.MemberRoleRepository.AddMembersToRoleAsync(new[] { "user3" }, "role2");
+                
+                await security.GrantRepository.SetGrantAsync("role1", "1");
+                await security.GrantRepository.SetGrantAsync("role1", "2");
+                await security.GrantRepository.SetGrantAsync("role2", "2");
+                await security.GrantRepository.SetGrantAsync("role2", "3");
             }
         }
 
-        private void CreateUsers(ISecurity security)
+        private async Task CreateUsers(ISecurity security)
         {
             for (int i = 0; i < 20; i++)
             {
-                security.UserRepository.Create(new User()
+                await security.UserRepository.CreateAsync(new User()
                 {
                     Login = $"user{i}",
                     Email = $"user{i}@mail.ru",
@@ -91,11 +92,11 @@ namespace Security.Tests.SecurityHttpTest.SimpleAsync
             }
         }
 
-        private void CreateGroups(ISecurity security)
+        private async Task CreateGroups(ISecurity security)
         {
             for (int i = 0; i < 20; i++)
             {
-                security.GroupRepository.Create(new Group()
+                await security.GroupRepository.CreateAsync(new Group()
                 {
                     Name = $"group{i}",
                     Description = $"Group{i} Description"
@@ -103,11 +104,11 @@ namespace Security.Tests.SecurityHttpTest.SimpleAsync
             }
         }
 
-        private void CreateRoles(ISecurity security)
+        private async Task CreateRoles(ISecurity security)
         {
             for (int i = 1; i <= 20; i++)
             {
-                security.RoleRepository.Create(new Role()
+                await security.RoleRepository.CreateAsync(new Role()
                 {
                     Name = $"role{i}",
                     Description = $"Role{i} Description"
@@ -115,40 +116,40 @@ namespace Security.Tests.SecurityHttpTest.SimpleAsync
             }
         }
 
-        private void CreateUserGroups(ISecurity security)
+        private async Task CreateUserGroups(ISecurity security)
         {
-            var users = security.UserRepository.Get().ToList();
-            var groups = security.GroupRepository.Get().ToList();
+            var users = (await security.UserRepository.GetAsync()).ToList();
+            var groups = (await security.GroupRepository.GetAsync()).ToList();
 
-            security.UserGroupRepository.AddUsersToGroup(new []{users[0].Id, users[1].Id}, groups[0].Id);
-            security.UserGroupRepository.AddUsersToGroup(new[] {users[0].IdMember, users[1].IdMember, users[2].IdMember}, groups[1].IdMember);
-            security.UserGroupRepository.AddUsersToGroup(new[] {users[4].Login, users[6].Login, users[7].Login, users[12].Login}, groups[4].Name);
+            await security.UserGroupRepository.AddUsersToGroupAsync(new []{users[0].Id, users[1].Id}, groups[0].Id);
+            await security.UserGroupRepository.AddUsersToGroupAsync(new[] {users[0].IdMember, users[1].IdMember, users[2].IdMember}, groups[1].IdMember);
+            await security.UserGroupRepository.AddUsersToGroupAsync(new[] {users[4].Login, users[6].Login, users[7].Login, users[12].Login}, groups[4].Name);
 
-            security.UserGroupRepository.AddGroupsToUser(new []{groups[10].Id, groups[11].Id, groups[12].Id, groups[13].Id, }, users[1].Id);
-            security.UserGroupRepository.AddGroupsToUser(new []{groups[12].IdMember, groups[15].IdMember, groups[18].IdMember, groups[4].IdMember, }, users[2].IdMember);
-            security.UserGroupRepository.AddGroupsToUser(new []{groups[1].Name, groups[18].Name, groups[2].Name, groups[8].Name, }, users[7].Name);
+            await security.UserGroupRepository.AddGroupsToUserAsync(new []{groups[10].Id, groups[11].Id, groups[12].Id, groups[13].Id, }, users[1].Id);
+            await security.UserGroupRepository.AddGroupsToUserAsync(new []{groups[12].IdMember, groups[15].IdMember, groups[18].IdMember, groups[4].IdMember, }, users[2].IdMember);
+            await security.UserGroupRepository.AddGroupsToUserAsync(new []{groups[1].Name, groups[18].Name, groups[2].Name, groups[8].Name, }, users[7].Name);
         }
 
-        private void DropDatabase()
+        private async Task DropDatabase()
         {
             using (var connection = new SqlConnection(GetMasterConnectionString()))
             {
                 var dbName = GetDbName(GetConnectionString());
-                connection.Execute($@"
+                await connection.ExecuteAsync($@"
 alter database {dbName} set single_user with rollback immediate;
 drop database {dbName};
 ");
             }
         }
 
-        private void CreateDatabase()
+        private async Task CreateDatabase()
         {
             var connectionString = GetConnectionString();
             var dbName = GetDbName(connectionString);
 
             using (var connection = new SqlConnection(GetMasterConnectionString()))
             {
-                connection.Execute($"create database {dbName}");
+                await connection.ExecuteAsync($"create database {dbName}");
             }
         }
 
@@ -170,7 +171,7 @@ drop database {dbName};
             return dbName;
         }
 
-        private void ExecuteDatabaseScript(string scriptPath)
+        private async Task ExecuteDatabaseScript(string scriptPath)
         {
             string sqlConnectionString = GetConnectionString();
             string script = File.ReadAllText(scriptPath);
@@ -179,6 +180,7 @@ drop database {dbName};
             {
                 Server server = new Server(new ServerConnection(conn));
                 server.ConnectionContext.ExecuteNonQuery(script);
+                await Task.Delay(0);
             }
         }
     }

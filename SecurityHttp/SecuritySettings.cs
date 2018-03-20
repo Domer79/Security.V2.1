@@ -21,8 +21,8 @@ namespace SecurityHttp
 
         public T GetValue<T>(string key)
         {
-            var value = _commonWeb.Get<T>(_url, new {key});
-            return value;
+            var value = GetValue(key, typeof(T));
+            return (T)value;
         }
 
         public object GetValue(string key, Type type)
@@ -32,10 +32,15 @@ namespace SecurityHttp
             return value;
         }
 
+        public void RemoveValue(string key)
+        {
+            _commonWeb.Delete(_url, new {key});
+        }
+
         public async Task<T> GetValueAsync<T>(string key)
         {
-            var value = await _commonWeb.GetAsync<T>(_url, new { key });
-            return value;
+            var value = await GetValueAsync(key, typeof(T));
+            return (T)value;
         }
 
         public async Task<object> GetValueAsync(string key, Type type)
@@ -55,24 +60,19 @@ namespace SecurityHttp
             return _commonWeb.GetAsync<bool>($"{_url}/isdeprecated", new { key });
         }
 
-        public void SetValue<T>(string key, T value, TimeSpan? lifetime = null)
+        public Task RemoveValueAsync(string key)
         {
-            SetValue(key, (object)value, lifetime);
+            return _commonWeb.DeleteAsync(_url, new { key });
         }
 
         public void SetValue(string key, object value, TimeSpan? lifetime = null)
         {
-            _commonWeb.Post(_url, new { key, value, lifetime = lifetime.HasValue ? lifetime.Value.Ticks : 0 });
-        }
-
-        public Task SetValueAsync<T>(string key, T value, TimeSpan? lifetime = null)
-        {
-            return SetValueAsync(key, (object) value, lifetime);
+            _commonWeb.Post(_url, null, new { key, value, lifetime = lifetime.HasValue ? lifetime.Value.Ticks : 0 });
         }
 
         public Task SetValueAsync(string key, object value, TimeSpan? lifetime = null)
         {
-            return _commonWeb.PostAsync(_url, new { key, value, lifetime = lifetime.HasValue ? lifetime.Value.Ticks : 0 });
+            return _commonWeb.PostAsync(_url, null, new { key, value, lifetime = lifetime.HasValue ? lifetime.Value.Ticks : 0 });
         }
     }
 }

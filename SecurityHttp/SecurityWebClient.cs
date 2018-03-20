@@ -23,8 +23,6 @@ namespace SecurityHttp
             Config.RegisterApplication(appName, description);
         }
 
-        public IApplicationContext ApplicationContext => Locator.Resolve<IApplicationContext>();
-
         public IUserRepository UserRepository => Factory.UserRepository;
 
         public IGroupRepository GroupRepository => Factory.GroupRepository;

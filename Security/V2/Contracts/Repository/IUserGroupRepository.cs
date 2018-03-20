@@ -41,14 +41,13 @@ namespace Security.V2.Contracts.Repository
 
         #region Async
 
-        Task<IEnumerable<User>> GetUsersByIdGroupAsync(int idGroup);
-        Task<IEnumerable<Group>> GetGroupsByIdUserAsync(int idUser);
+        Task<IEnumerable<User>> GetUsersAsync(int idGroup);
+        Task<IEnumerable<User>> GetUsersAsync(Guid id);
+        Task<IEnumerable<User>> GetUsersAsync(string name);
 
-        Task<IEnumerable<User>> GetUsersByGroupIdAsync(Guid id);
-        Task<IEnumerable<Group>> GetGroupsByUserIdAsync(Guid id);
-        
-        Task<IEnumerable<User>> GetUsersByGroupNameAsync(string name);
-        Task<IEnumerable<Group>> GetGroupsByUserNameAsync(string name);
+        Task<IEnumerable<Group>> GetGroupsAsync(int idUser);
+        Task<IEnumerable<Group>> GetGroupsAsync(Guid id);
+        Task<IEnumerable<Group>> GetGroupsAsync(string name);
 
         Task<IEnumerable<User>> GetNonIncludedUsersAsync(string group);
         Task<IEnumerable<User>> GetNonIncludedUsersAsync(Guid groupId);

@@ -8,7 +8,6 @@ namespace Security.V2.Contracts
         IUserInternalRepository UserInternalRepository { get; set; }
         IGroupRepository GroupRepository { get; set; }
         IApplicationRepository ApplicationRepository { get; set; }
-        IApplicationInternalRepository ApplicationInternalRepository { get; set; }
         IUserGroupRepository UserGroupRepository { get; set; }
         IMemberRoleRepository MemberRoleRepository { get; set; }
         IRoleRepository RoleRepository { get; set; }

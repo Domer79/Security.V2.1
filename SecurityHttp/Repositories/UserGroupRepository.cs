@@ -85,7 +85,7 @@ namespace SecurityHttp.Repositories
             return _commonWeb.GetCollection<Group>($"{_url}", new {idUser});
         }
 
-        public Task<IEnumerable<Group>> GetGroupsByIdUserAsync(int idUser)
+        public Task<IEnumerable<Group>> GetGroupsAsync(int idUser)
         {
             return _commonWeb.GetCollectionAsync<Group>($"{_url}", new { idUser });
         }
@@ -95,7 +95,7 @@ namespace SecurityHttp.Repositories
             return _commonWeb.GetCollection<Group>($"{_url}", new { userId = id });
         }
 
-        public Task<IEnumerable<Group>> GetGroupsByUserIdAsync(Guid id)
+        public Task<IEnumerable<Group>> GetGroupsAsync(Guid id)
         {
             return _commonWeb.GetCollectionAsync<Group>($"{_url}", new { userId = id });
         }
@@ -105,7 +105,7 @@ namespace SecurityHttp.Repositories
             return _commonWeb.GetCollection<Group>($"{_url}", new { userName = name });
         }
 
-        public Task<IEnumerable<Group>> GetGroupsByUserNameAsync(string name)
+        public Task<IEnumerable<Group>> GetGroupsAsync(string name)
         {
             return _commonWeb.GetCollectionAsync<Group>($"{_url}", new { userName = name });
         }
@@ -175,7 +175,7 @@ namespace SecurityHttp.Repositories
             return _commonWeb.GetCollection<User>($"{_url}", new {groupId = id});
         }
 
-        public Task<IEnumerable<User>> GetUsersByGroupIdAsync(Guid id)
+        public Task<IEnumerable<User>> GetUsersAsync(Guid id)
         {
             return _commonWeb.GetCollectionAsync<User>($"{_url}", new { groupId = id });
         }
@@ -185,7 +185,7 @@ namespace SecurityHttp.Repositories
             return _commonWeb.GetCollection<User>($"{_url}", new { groupName = name });
         }
 
-        public Task<IEnumerable<User>> GetUsersByGroupNameAsync(string name)
+        public Task<IEnumerable<User>> GetUsersAsync(string name)
         {
             return _commonWeb.GetCollectionAsync<User>($"{_url}", new { groupName = name });
         }
@@ -195,7 +195,7 @@ namespace SecurityHttp.Repositories
             return _commonWeb.GetCollection<User>($"{_url}", new { idGroup });
         }
 
-        public Task<IEnumerable<User>> GetUsersByIdGroupAsync(int idGroup)
+        public Task<IEnumerable<User>> GetUsersAsync(int idGroup)
         {
             return _commonWeb.GetCollectionAsync<User>($"{_url}", new { idGroup });
         }

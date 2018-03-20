@@ -127,7 +127,7 @@ namespace Security.Tests.SecurityInDatabaseTest.RepositoryTestsAsync
         [Test]
         public async Task Check_Existence_Group_in_User()
         {
-            var group = (await _security.UserGroupRepository.GetGroupsByUserNameAsync("user1")).FirstOrDefault();
+            var group = (await _security.UserGroupRepository.GetGroupsAsync("user1")).FirstOrDefault();
 
             Assert.That(group, Is.Not.Null);
             Assert.That(group.Name, Is.EqualTo("group1"));
@@ -136,7 +136,7 @@ namespace Security.Tests.SecurityInDatabaseTest.RepositoryTestsAsync
         [Test]
         public async Task Check_Existence_User_in_Group()
         {
-            var user = (await _security.UserGroupRepository.GetUsersByGroupNameAsync("group1")).FirstOrDefault();
+            var user = (await _security.UserGroupRepository.GetUsersAsync("group1")).FirstOrDefault();
 
             Assert.That(user, Is.Not.Null);
             Assert.That(user.Login, Is.EqualTo("user1"));

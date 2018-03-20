@@ -27,8 +27,6 @@ namespace Security.V2.Core
             Config.RegisterApplication(appName, description);
         }
 
-        public IApplicationContext ApplicationContext => Locator.Resolve<IApplicationContext>();
-
         public IUserRepository UserRepository => Factory.UserRepository;
 
         public IGroupRepository GroupRepository => Factory.GroupRepository;
