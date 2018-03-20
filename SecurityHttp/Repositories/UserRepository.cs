@@ -6,9 +6,8 @@ using System.Net.Mime;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using Security.Contracts.Repository;
 using Security.Model;
-using Security.V2.CommonContracts;
-using Security.V2.Contracts.Repository;
 using SecurityHttp.Helpers;
 using SecurityHttp.Interfaces;
 

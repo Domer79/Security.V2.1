@@ -23,7 +23,7 @@ namespace Security.Web
 
         private static User GetUser(string login, string applicationName)
         {
-            using (var security = new V2.Core.Security(applicationName))
+            using (var security = new Core.Security(applicationName))
             {
                 var user = security.UserRepository.GetByName(login);
                 return user;

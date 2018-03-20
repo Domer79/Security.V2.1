@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Web.Http.Controllers;
-using Security.V2.Contracts;
+using Security.Contracts;
 
 namespace Security.Web.Http
 {
@@ -30,7 +30,7 @@ namespace Security.Web.Http
             _action = actionContext.ActionDescriptor.ActionName;
             _controller = actionContext.ControllerContext.ControllerDescriptor.ControllerName;
 
-            using (var security = new V2.Core.Security(_applicationName))
+            using (var security = new Core.Security(_applicationName))
             {
                 var login = ((UserIdentity)principal.Identity).User.Login;
                 return security.CheckAccess(login, ((ISecurityObject)this).ObjectName ?? Mvc.AuthorizeAttribute.GetObjectName(_controller, _action));

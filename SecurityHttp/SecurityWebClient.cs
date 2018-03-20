@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Security.V2.Contracts;
-using Security.V2.Contracts.Repository;
+using Security.Contracts;
+using Security.Contracts.Repository;
 
 namespace SecurityHttp
 {

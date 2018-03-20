@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Web.Mvc;
-using Security.V2.Contracts;
+using Security.Contracts;
 using Tools.Extensions;
 
 namespace Security.Web
@@ -161,7 +161,7 @@ namespace Security.Web
     }
 
     /// <summary>
-    /// Осуществляет поиск контроллеров и его действий, помеченных атрибутом <see cref="Security.Web.Mvc.AuthorizeAttribute"/> и преобразует эти атрибуты в объекты <see cref="ISecurityObject"/>, для последующей передачи в метод <see cref="V2.Core.Config.RegisterApplication(Security.Interfaces.ISecurityObjects[])"/>
+    /// Осуществляет поиск контроллеров и его действий, помеченных атрибутом <see cref="Security.Web.Mvc.AuthorizeAttribute"/> и преобразует эти атрибуты в объекты <see cref="ISecurityObject"/>, для последующей передачи в метод <see cref="Core.Config.RegisterApplication(Security.Interfaces.ISecurityObjects[])"/>
     /// </summary>
     /// <code>
     /// Config.RegisterApplication(new ExecSecurityObjects(new []{Assembly.GetExecutingAssembly()}));
@@ -185,7 +185,7 @@ namespace Security.Web
     }
 
     /// <summary>
-    /// Осуществляет поиск контроллеров и его действий, помеченных атрибутом <see cref="Security.Web.Http.AuthorizeAttribute"/> и преобразует эти атрибуты в объекты <see cref="ISecurityObject"/>, для последующей передачи в метод <see cref="V2.Core.Config.RegisterApplication(Security.Interfaces.ISecurityObjects[])"/>
+    /// Осуществляет поиск контроллеров и его действий, помеченных атрибутом <see cref="Security.Web.Http.AuthorizeAttribute"/> и преобразует эти атрибуты в объекты <see cref="ISecurityObject"/>, для последующей передачи в метод <see cref="Core.Config.RegisterApplication(Security.Interfaces.ISecurityObjects[])"/>
     /// </summary>
     /// <code>
     /// Config.RegisterApplication(new ExecSecurityObjects(new []{Assembly.GetExecutingAssembly()}));

@@ -1,7 +1,7 @@
 ﻿using Autofac;
 using CommonContracts;
 using Orm;
-using Security.V2.Contracts;
+using Security.Contracts;
 using WpfApp_TestSecurity.AbonentBL;
 using WpfApp_TestSecurity.AbonentBL.Interfaces;
 using WpfApp_TestSecurity.AbonentBL.Repositories;
@@ -19,7 +19,7 @@ namespace WpfApp_TestSecurity
         public static void Configure()
         {
             var builder = new ContainerBuilder();
-            builder.RegisterType<Security.V2.Core.Security>().As<ISecurity>().WithParameter("appName", "IPPS.LightingSystem");
+            builder.RegisterType<Security.Core.Security>().As<ISecurity>().WithParameter("appName", "IPPS.LightingSystem");
             builder.RegisterType<UserManager>().AsSelf().SingleInstance();
             builder.RegisterType<RoleManager>().AsSelf().SingleInstance();
             builder.RegisterType<UserRoleManager>().AsSelf().SingleInstance();

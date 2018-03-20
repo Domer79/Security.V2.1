@@ -12,6 +12,21 @@
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -138,62 +153,62 @@
     <Compile Include="Exceptions\SecurityNotSupportedException.cs" />
     <Compile Include="Extensions\Tools.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="V2\CommonContracts\ICommonDb.cs" />
-    <Compile Include="V2\CommonContracts\IEntityCollectionInfo.cs" />
-    <Compile Include="V2\CommonContracts\IGlobalSettings.cs" />
-    <Compile Include="V2\CommonContracts\IRepository.cs" />
-    <Compile Include="V2\Contracts\ISecurityObject.cs" />
-    <Compile Include="V2\Contracts\Repository\IUserInternalRepository.cs" />
-    <Compile Include="V2\Core\Config.cs" />
-    <Compile Include="V2\Core\IocConfig.cs" />
-    <Compile Include="V2\Core\Ioc\AddInstanceEventArgs.cs" />
-    <Compile Include="V2\Core\Ioc\AddInstanceHandler.cs" />
-    <Compile Include="V2\Core\Ioc\Exceptions\DependencyResolveException.cs" />
-    <Compile Include="V2\Core\Ioc\Scopes\BaseScope.cs" />
-    <Compile Include="V2\Core\Ioc\Dependencies\Dependency.cs" />
-    <Compile Include="V2\Core\Ioc\Dependencies\FactoryDependency.cs" />
-    <Compile Include="V2\Core\Ioc\Interfaces\IDependency.cs" />
-    <Compile Include="V2\Core\Ioc\Interfaces\IocService.cs" />
-    <Compile Include="V2\Core\Ioc\Interfaces\IRequest.cs" />
-    <Compile Include="V2\Core\Ioc\Interfaces\IScope.cs" />
-    <Compile Include="V2\Core\Ioc\Request.cs" />
-    <Compile Include="V2\Core\Ioc\Scopes\SingletonScope.cs" />
-    <Compile Include="V2\Core\Ioc\Service.cs" />
-    <Compile Include="V2\Core\Ioc\ServiceLocator.cs" />
-    <Compile Include="V2\Contracts\IConfig.cs" />
-    <Compile Include="V2\Contracts\IConnectionFactory.cs" />
-    <Compile Include="V2\Contracts\IApplicationContext.cs" />
-    <Compile Include="V2\Contracts\IServiceLocator.cs" />
-    <Compile Include="V2\Contracts\Repository\IApplicationInternalRepository.cs" />
-    <Compile Include="V2\Contracts\Repository\IApplicationRepository.cs" />
-    <Compile Include="V2\Contracts\Repository\IGrantRepository.cs" />
-    <Compile Include="V2\Contracts\Repository\IGroupRepository.cs" />
-    <Compile Include="V2\Contracts\Repository\IMemberRoleRepository.cs" />
-    <Compile Include="V2\Contracts\Repository\IRoleRepository.cs" />
-    <Compile Include="V2\Contracts\Repository\ISecObjectRepository.cs" />
-    <Compile Include="V2\Contracts\ISecurity.cs" />
-    <Compile Include="V2\Contracts\Repository\Base\ISecurityBaseRepository.cs" />
-    <Compile Include="V2\Contracts\ISecurityFactory.cs" />
-    <Compile Include="V2\Contracts\ISecuritySettings.cs" />
-    <Compile Include="V2\Contracts\Repository\IUserGroupRepository.cs" />
-    <Compile Include="V2\Contracts\Repository\IUserRepository.cs" />
-    <Compile Include="V2\Core\Ioc\Scopes\TransientScope.cs" />
-    <Compile Include="V2\Core\Security.cs" />
-    <Compile Include="V2\Core\SecurityFactory.cs" />
-    <Compile Include="V2\Core\DataLayer\Repositories\ApplicationInternalRepository.cs" />
-    <Compile Include="V2\Core\DataLayer\Repositories\ApplicationRepository.cs" />
-    <Compile Include="V2\Core\DataLayer\CommonDb.cs" />
-    <Compile Include="V2\Core\DataLayer\Repositories\GrantRepository.cs" />
-    <Compile Include="V2\Core\DataLayer\Repositories\GroupRepository.cs" />
-    <Compile Include="V2\Core\DataLayer\Repositories\MemberRoleRepository.cs" />
-    <Compile Include="V2\Core\DataLayer\Repositories\RoleRepository.cs" />
-    <Compile Include="V2\Core\DataLayer\Repositories\SecObjectRepository.cs" />
-    <Compile Include="V2\Core\DataLayer\Repositories\UserGroupRepository.cs" />
-    <Compile Include="V2\Core\DataLayer\Repositories\UserInternalRepository.cs" />
-    <Compile Include="V2\Core\DataLayer\Repositories\UserRepository.cs" />
-    <Compile Include="V2\Core\DataLayer\SqlConnectionFactory.cs" />
-    <Compile Include="V2\Core\ApplicationContext.cs" />
-    <Compile Include="V2\Core\SecuritySettings.cs" />
+    <Compile Include="CommonContracts\ICommonDb.cs" />
+    <Compile Include="CommonContracts\IEntityCollectionInfo.cs" />
+    <Compile Include="CommonContracts\IGlobalSettings.cs" />
+    <Compile Include="CommonContracts\IRepository.cs" />
+    <Compile Include="Contracts\ISecurityObject.cs" />
+    <Compile Include="Contracts\Repository\IUserInternalRepository.cs" />
+    <Compile Include="Core\Config.cs" />
+    <Compile Include="Core\IocConfig.cs" />
+    <Compile Include="Core\Ioc\AddInstanceEventArgs.cs" />
+    <Compile Include="Core\Ioc\AddInstanceHandler.cs" />
+    <Compile Include="Core\Ioc\Exceptions\DependencyResolveException.cs" />
+    <Compile Include="Core\Ioc\Scopes\BaseScope.cs" />
+    <Compile Include="Core\Ioc\Dependencies\Dependency.cs" />
+    <Compile Include="Core\Ioc\Dependencies\FactoryDependency.cs" />
+    <Compile Include="Core\Ioc\Interfaces\IDependency.cs" />
+    <Compile Include="Core\Ioc\Interfaces\IocService.cs" />
+    <Compile Include="Core\Ioc\Interfaces\IRequest.cs" />
+    <Compile Include="Core\Ioc\Interfaces\IScope.cs" />
+    <Compile Include="Core\Ioc\Request.cs" />
+    <Compile Include="Core\Ioc\Scopes\SingletonScope.cs" />
+    <Compile Include="Core\Ioc\Service.cs" />
+    <Compile Include="Core\Ioc\ServiceLocator.cs" />
+    <Compile Include="Contracts\IConfig.cs" />
+    <Compile Include="Contracts\IConnectionFactory.cs" />
+    <Compile Include="Contracts\IApplicationContext.cs" />
+    <Compile Include="Contracts\IServiceLocator.cs" />
+    <Compile Include="Contracts\Repository\IApplicationInternalRepository.cs" />
+    <Compile Include="Contracts\Repository\IApplicationRepository.cs" />
+    <Compile Include="Contracts\Repository\IGrantRepository.cs" />
+    <Compile Include="Contracts\Repository\IGroupRepository.cs" />
+    <Compile Include="Contracts\Repository\IMemberRoleRepository.cs" />
+    <Compile Include="Contracts\Repository\IRoleRepository.cs" />
+    <Compile Include="Contracts\Repository\ISecObjectRepository.cs" />
+    <Compile Include="Contracts\ISecurity.cs" />
+    <Compile Include="Contracts\Repository\Base\ISecurityBaseRepository.cs" />
+    <Compile Include="Contracts\ISecurityFactory.cs" />
+    <Compile Include="Contracts\ISecuritySettings.cs" />
+    <Compile Include="Contracts\Repository\IUserGroupRepository.cs" />
+    <Compile Include="Contracts\Repository\IUserRepository.cs" />
+    <Compile Include="Core\Ioc\Scopes\TransientScope.cs" />
+    <Compile Include="Core\Security.cs" />
+    <Compile Include="Core\SecurityFactory.cs" />
+    <Compile Include="Core\DataLayer\Repositories\ApplicationInternalRepository.cs" />
+    <Compile Include="Core\DataLayer\Repositories\ApplicationRepository.cs" />
+    <Compile Include="Core\DataLayer\CommonDb.cs" />
+    <Compile Include="Core\DataLayer\Repositories\GrantRepository.cs" />
+    <Compile Include="Core\DataLayer\Repositories\GroupRepository.cs" />
+    <Compile Include="Core\DataLayer\Repositories\MemberRoleRepository.cs" />
+    <Compile Include="Core\DataLayer\Repositories\RoleRepository.cs" />
+    <Compile Include="Core\DataLayer\Repositories\SecObjectRepository.cs" />
+    <Compile Include="Core\DataLayer\Repositories\UserGroupRepository.cs" />
+    <Compile Include="Core\DataLayer\Repositories\UserInternalRepository.cs" />
+    <Compile Include="Core\DataLayer\Repositories\UserRepository.cs" />
+    <Compile Include="Core\DataLayer\SqlConnectionFactory.cs" />
+    <Compile Include="Core\ApplicationContext.cs" />
+    <Compile Include="Core\SecuritySettings.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Security.Model\Security.Model.csproj">
@@ -205,7 +220,18 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
   <Import Project="..\DebugPackageConfiguration.targets" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\Configuration.targets" />

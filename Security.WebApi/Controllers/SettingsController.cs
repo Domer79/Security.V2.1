@@ -5,7 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
-using Security.V2.Contracts;
+using Security.Contracts;
 
 namespace Security.WebApi.Controllers
 {

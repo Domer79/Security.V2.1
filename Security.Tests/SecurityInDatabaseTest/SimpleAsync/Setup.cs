@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 using Microsoft.SqlServer.Management.Common;
 using Microsoft.SqlServer.Management.Smo;
 using NUnit.Framework;
+using Security.Contracts;
+using Security.Core;
 using Security.Dapper;
 using Security.Model;
-using Security.V2.Contracts;
-using Security.V2.Core;
 using Group = Security.Model.Group;
 using User = Security.Model.User;
 
@@ -53,7 +53,7 @@ namespace Security.Tests.SecurityInDatabaseTest.SimpleAsync
 
                 await security.Config.RegisterApplicationAsync("HelloWorldApp2", "Hello World Application 2!");
 
-                using (var security2 = new V2.Core.Security("HelloWorldApp2", "", IocConfig.GetLocator("HelloWorldApp2")))
+                using (var security2 = new Core.Security("HelloWorldApp2", "", IocConfig.GetLocator("HelloWorldApp2")))
                 {
                     await security2.Config.RegisterSecurityObjectsAsync("HelloWorldApp2", "1", "4", "5", "6");
                 }

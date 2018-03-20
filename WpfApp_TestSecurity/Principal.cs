@@ -4,7 +4,7 @@ using System.Linq;
 using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
-using Security.V2.Contracts;
+using Security.Contracts;
 
 namespace WpfApp_TestSecurity
 {

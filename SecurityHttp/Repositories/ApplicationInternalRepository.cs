@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Security.Contracts.Repository;
 using Security.Model;
-using Security.V2.Contracts.Repository;
 using SecurityHttp.Helpers;
 using SecurityHttp.Interfaces;
 

@@ -6,8 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
+using Security.Contracts;
 using Security.Model;
-using Security.V2.Contracts;
 using WpfApp_TestSecurity.ViewModels;
 
 namespace WpfApp_TestSecurity.ViewModelManagers

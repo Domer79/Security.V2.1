@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace Security.Tests.SecurityInDatabaseTest
 {
-    using Security.V2.Contracts;
-    using Security.V2.Core;
-
-    public class MySecurity: Security
+    public class MySecurity: Core.Security
     {
         internal MySecurity() 
             : base("HelloWorldApp1", "Hello World Application 1!")

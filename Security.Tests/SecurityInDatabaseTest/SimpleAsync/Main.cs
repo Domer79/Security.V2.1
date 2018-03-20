@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using NUnit.Framework;
+using Security.CommonContracts;
+using Security.Contracts;
+using Security.Contracts.Repository;
+using Security.Core;
 using Security.Model;
-using Security.V2.CommonContracts;
-using Security.V2.Contracts;
-using Security.V2.Contracts.Repository;
-using Security.V2.Core;
 using Assert = NUnit.Framework.Assert;
 using CollectionAssert = NUnit.Framework.CollectionAssert;
 
@@ -48,7 +48,7 @@ namespace Security.Tests.SecurityInDatabaseTest.SimpleAsync
         [TestCase("HelloWorldApp1", "3")]
         public async Task SecObjectExistenceTest(string appName, string objectName)
         {
-            using (var security = new V2.Core.Security(appName, "", IocConfig.GetLocator(appName)))
+            using (var security = new Core.Security(appName, "", IocConfig.GetLocator(appName)))
             {
                 var secObject = await security.SecObjectRepository.GetByNameAsync(objectName);
                 Assert.That(secObject, Is.Not.Null);
@@ -706,7 +706,7 @@ namespace Security.Tests.SecurityInDatabaseTest.SimpleAsync
         public async Task ApplicationInternal_Get_Update_And_Remove_ApplicationTest()
         {
             IServiceLocator locator = IocConfig.GetLocator("MyNewTestApp");
-            using (var security = new V2.Core.Security("MyNewTestApp", "MyNewTestApp Description", locator))
+            using (var security = new Core.Security("MyNewTestApp", "MyNewTestApp Description", locator))
             {
                 await security.Config.RegisterSecurityObjectsAsync("MyNewTestApp", "1", "2", "3", "4", "5", "6", "7", "8");
                 var user = await security.UserRepository.GetByNameAsync("user1");

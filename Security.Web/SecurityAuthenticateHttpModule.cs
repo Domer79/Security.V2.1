@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Web;
 using System.Web.Mvc;
-using Security.V2.Contracts;
+using Security.Contracts;
 
 namespace Security.Web
 {

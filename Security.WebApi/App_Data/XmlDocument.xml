@@ -486,7 +486,7 @@
             API для работы с приложениями
             </summary>
         </member>
-        <member name="M:Security.WebApi.Controllers.ApplicationsController.#ctor(Security.V2.Contracts.Repository.IApplicationInternalRepository,Security.V2.Contracts.IApplicationContext)">
+        <member name="M:Security.WebApi.Controllers.ApplicationsController.#ctor(Security.Contracts.Repository.IApplicationInternalRepository,Security.Contracts.IApplicationContext)">
             <summary>
             
             </summary>

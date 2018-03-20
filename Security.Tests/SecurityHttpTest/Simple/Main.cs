@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
+using Security.Contracts;
+using Security.Contracts.Repository;
 using Security.Model;
-using Security.V2.Contracts;
-using Security.V2.Contracts.Repository;
 using SecurityHttp;
 using SecurityHttp.Interfaces;
 using Assert = NUnit.Framework.Assert;

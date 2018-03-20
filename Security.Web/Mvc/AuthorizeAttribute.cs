@@ -4,7 +4,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
-using Security.V2.Contracts;
+using Security.Contracts;
 using Security.Web.Exceptions;
 using Tools.Extensions;
 
@@ -28,7 +28,7 @@ namespace Security.Web.Mvc
         protected override bool AuthorizeCore(HttpContextBase httpContext)
         {
             _unAuthorizedResult = null;
-            using (var security = new V2.Core.Security(_applicationName))
+            using (var security = new Core.Security(_applicationName))
             {
                 try
                 {

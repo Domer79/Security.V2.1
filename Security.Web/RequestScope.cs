@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Web;
-using Security.V2.Contracts;
-using Security.V2.Core.Ioc;
-using Security.V2.Core.Ioc.Interfaces;
+using Security.Contracts;
+using Security.Core.Ioc.Interfaces;
 
 namespace Security.Web
 {

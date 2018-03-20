@@ -1,6 +1,6 @@
 ﻿using System;
-using Security.V2.Contracts;
-using Security.V2.Core;
+using Security.Contracts;
+using Security.Core;
 
 namespace Security.Tests.SecurityInDatabaseTest.Simple
 {

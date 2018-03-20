@@ -1,5 +1,5 @@
 ﻿using System;
-using Security.V2.Contracts;
+using Security.Contracts;
 using SecurityHttp;
 
 namespace Security.Tests.SecurityHttpTest.SimpleAsync

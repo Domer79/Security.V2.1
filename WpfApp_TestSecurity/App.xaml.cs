@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Threading;
 using NLog;
-using Security.V2.Contracts;
+using Security.Contracts;
 
 namespace WpfApp_TestSecurity
 {

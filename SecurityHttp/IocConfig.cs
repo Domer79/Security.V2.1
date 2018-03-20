@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Security.V2.CommonContracts;
-using Security.V2.Contracts;
-using Security.V2.Contracts.Repository;
-using Security.V2.Core.Ioc;
+using Security.CommonContracts;
+using Security.Contracts;
+using Security.Contracts.Repository;
+using Security.Core.Ioc;
 using SecurityHttp.Interfaces;
 using SecurityHttp.Repositories;
 

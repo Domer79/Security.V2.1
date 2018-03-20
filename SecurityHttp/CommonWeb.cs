@@ -6,8 +6,8 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using Security.CommonContracts;
 using Security.Model;
-using Security.V2.CommonContracts;
 using SecurityHttp.Helpers;
 using SecurityHttp.Interfaces;
 

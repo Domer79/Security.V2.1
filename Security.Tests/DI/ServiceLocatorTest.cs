@@ -1,9 +1,9 @@
 ﻿using System;
 using NUnit.Framework;
+using Security.Core.Ioc;
+using Security.Core.Ioc.Exceptions;
 using Security.Tests.DI.Concrete;
 using Security.Tests.DI.Interfaces;
-using Security.V2.Core.Ioc;
-using Security.V2.Core.Ioc.Exceptions;
 
 namespace Security.Tests.DI
 {

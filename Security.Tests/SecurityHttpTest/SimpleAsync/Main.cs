@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using NUnit.Framework;
+using Security.Contracts;
+using Security.Contracts.Repository;
 using Security.Model;
-using Security.V2.Contracts;
-using Security.V2.Contracts.Repository;
 using SecurityHttp;
 using SecurityHttp.Interfaces;
 using Assert = NUnit.Framework.Assert;
@@ -48,7 +48,7 @@ namespace Security.Tests.SecurityHttpTest.SimpleAsync
         [TestCase("HelloWorldApp1", "3")]
         public async Task SecObjectExistenceTest(string appName, string objectName)
         {
-            using (var security = new V2.Core.Security(appName, "", IocConfig.GetLocator(appName)))
+            using (var security = new Core.Security(appName, "", IocConfig.GetLocator(appName)))
             {
                 var secObject = await security.SecObjectRepository.GetByNameAsync(objectName);
                 Assert.That(secObject, Is.Not.Null);

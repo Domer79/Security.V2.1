@@ -5,9 +5,8 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
+using Security.Contracts.Repository;
 using Security.Model;
-using Security.V2.Contracts;
-using Security.V2.Contracts.Repository;
 using Security.WebApi.Infrastructure;
 
 namespace Security.WebApi.Controllers

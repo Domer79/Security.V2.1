@@ -1,4 +1,4 @@
-﻿using Security.V2.Core.Ioc.Interfaces;
+﻿using Security.Core.Ioc.Interfaces;
 
 namespace Security.Tests.DI.Concrete
 {
