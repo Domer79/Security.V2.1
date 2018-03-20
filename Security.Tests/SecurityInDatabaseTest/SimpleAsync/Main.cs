@@ -117,7 +117,7 @@ namespace Security.Tests.SecurityInDatabaseTest.SimpleAsync
         [TestCase("user1 user3", "role2")]
         public async Task Check_Existence_Members_in_Role(string member, string role)
         {
-            var members = (await _security.MemberRoleRepository.GetMembersByRoleNameAsync(role)).Select(m => m.Name);
+            var members = (await _security.MemberRoleRepository.GetMembersAsync(role)).Select(m => m.Name);
             CollectionAssert.AreEqual(member.Split(' '), members);
         }
 
@@ -125,7 +125,7 @@ namespace Security.Tests.SecurityInDatabaseTest.SimpleAsync
         [TestCase("role1", "group1")]
         public async Task CheckExistsence_Roles_in_User(string roleNames, string member)
         {
-            var roles = (await _security.MemberRoleRepository.GetRolesByMemberNameAsync(member)).Select(_ => _.Name);
+            var roles = (await _security.MemberRoleRepository.GetRolesAsync(member)).Select(_ => _.Name);
             CollectionAssert.AreEqual(roleNames.Split(' '), roles);
         }
 
@@ -798,8 +798,8 @@ namespace Security.Tests.SecurityInDatabaseTest.SimpleAsync
 
             await _security.MemberRoleRepository.AddMembersToRoleAsync(memberStrings, "role10");
 
-            var members = (await _security.MemberRoleRepository.GetMembersByRoleNameAsync("role10")).OrderBy(_ => _.Name).Select(_ => _.Name);
-            var exceptMembers = (await _security.MemberRoleRepository.GetExceptMembersByRoleNameAsync("role10")).OrderBy(_ => _.Name).Select(_ => _.Name);
+            var members = (await _security.MemberRoleRepository.GetMembersAsync("role10")).OrderBy(_ => _.Name).Select(_ => _.Name);
+            var exceptMembers = (await _security.MemberRoleRepository.GetExceptMembersAsync("role10")).OrderBy(_ => _.Name).Select(_ => _.Name);
 
             Assert.That(members.Count(), Is.EqualTo(6));
             Assert.That(exceptMembers.Count(), Is.EqualTo(34));
@@ -817,8 +817,8 @@ namespace Security.Tests.SecurityInDatabaseTest.SimpleAsync
 
             await _security.MemberRoleRepository.AddMembersToRoleAsync(idMembers, 10);
 
-            var members = (await _security.MemberRoleRepository.GetMembersByIdRoleAsync(10)).OrderBy(_ => _.IdMember).Select(_ => _.IdMember);
-            var exceptMembers = (await _security.MemberRoleRepository.GetExceptMembersByIdRoleAsync(10)).OrderBy(_ => _.IdMember).Select(_ => _.IdMember);
+            var members = (await _security.MemberRoleRepository.GetMembersAsync(10)).OrderBy(_ => _.IdMember).Select(_ => _.IdMember);
+            var exceptMembers = (await _security.MemberRoleRepository.GetExceptMembersAsync(10)).OrderBy(_ => _.IdMember).Select(_ => _.IdMember);
 
             Assert.That(members.Count(), Is.EqualTo(6));
             Assert.That(exceptMembers.Count(), Is.EqualTo(34));
@@ -853,8 +853,8 @@ namespace Security.Tests.SecurityInDatabaseTest.SimpleAsync
 
             await _security.MemberRoleRepository.AddRolesToMemberAsync(roleStrings, "user15");
 
-            var members = (await _security.MemberRoleRepository.GetRolesByMemberNameAsync("user15")).OrderBy(_ => _.Name).Select(_ => _.Name);
-            var exceptMembers = (await _security.MemberRoleRepository.GetExceptRolesByMemberNameAsync("user15")).OrderBy(_ => _.Name).Select(_ => _.Name);
+            var members = (await _security.MemberRoleRepository.GetRolesAsync("user15")).OrderBy(_ => _.Name).Select(_ => _.Name);
+            var exceptMembers = (await _security.MemberRoleRepository.GetExceptRolesAsync("user15")).OrderBy(_ => _.Name).Select(_ => _.Name);
 
             Assert.That(members.Count(), Is.EqualTo(5));
             Assert.That(exceptMembers.Count(), Is.EqualTo(15));
@@ -872,8 +872,8 @@ namespace Security.Tests.SecurityInDatabaseTest.SimpleAsync
 
             await _security.MemberRoleRepository.AddRolesToMemberAsync(idRoles, 15);
 
-            var members = (await _security.MemberRoleRepository.GetRolesByIdMemberAsync(15)).OrderBy(_ => _.IdRole).Select(_ => _.IdRole);
-            var exceptMembers = (await _security.MemberRoleRepository.GetExceptRolesByIdMemberAsync(15)).OrderBy(_ => _.IdRole).Select(_ => _.IdRole);
+            var members = (await _security.MemberRoleRepository.GetRolesAsync(15)).OrderBy(_ => _.IdRole).Select(_ => _.IdRole);
+            var exceptMembers = (await _security.MemberRoleRepository.GetExceptRolesAsync(15)).OrderBy(_ => _.IdRole).Select(_ => _.IdRole);
 
             Assert.That(members.Count(), Is.EqualTo(5));
             Assert.That(exceptMembers.Count(), Is.EqualTo(15));

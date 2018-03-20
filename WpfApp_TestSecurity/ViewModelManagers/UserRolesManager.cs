@@ -28,7 +28,7 @@ namespace WpfApp_TestSecurity.ViewModelManagers
 
         private void AddRole(object obj)
         {
-            var exceptRoles = Security.MemberRoleRepository.GetExceptRolesByIdMember(_userManager.SelectedItem.IdMember).Select(_ => Mapper.Map<RoleViewModel>(_));
+            var exceptRoles = Security.MemberRoleRepository.GetExceptRoles(_userManager.SelectedItem.IdMember).Select(_ => Mapper.Map<RoleViewModel>(_));
 
             if (exceptRoles.SelectItemsDialogShow(out var selectedRoles))
             {
@@ -71,7 +71,7 @@ namespace WpfApp_TestSecurity.ViewModelManagers
             if (_userManager?.SelectedItem == null)
                 return new RoleViewModel[] { };
 
-            var items = Security.MemberRoleRepository.GetRolesByIdMember(_userManager.SelectedItem.IdMember);
+            var items = Security.MemberRoleRepository.GetRoles(_userManager.SelectedItem.IdMember);
             return items.Select(_ => Mapper.Map<RoleViewModel>(_));
         }
 
@@ -80,7 +80,7 @@ namespace WpfApp_TestSecurity.ViewModelManagers
             if (_userManager?.SelectedItem == null)
                 return new RoleViewModel[] { };
 
-            var items = await Security.MemberRoleRepository.GetRolesByIdMemberAsync(_userManager.SelectedItem.IdMember).ConfigureAwait(false);
+            var items = await Security.MemberRoleRepository.GetRolesAsync(_userManager.SelectedItem.IdMember).ConfigureAwait(false);
             return items.Select(_ => Mapper.Map<RoleViewModel>(_));
         }
 

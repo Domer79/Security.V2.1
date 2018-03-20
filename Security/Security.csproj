@@ -89,8 +89,6 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AssemblySecurityApplicationInfoAttribute.cs" />
-    <Compile Include="Configurations\Config.cs" />
     <Compile Include="Dapper\CommandDefinition.cs" />
     <Compile Include="Dapper\CommandFlags.cs" />
     <Compile Include="Dapper\CustomPropertyTypeMap.cs" />
@@ -136,14 +134,10 @@
     <Compile Include="Dapper\WrappedDataReader.cs" />
     <Compile Include="Dapper\WrappedReader.cs" />
     <Compile Include="Dapper\XmlHandlers.cs" />
-    <Compile Include="Exceptions\AccessTypeMissingException.cs" />
-    <Compile Include="Exceptions\AccessTypeValidException.cs" />
-    <Compile Include="Exceptions\BaseException.cs" />
     <Compile Include="Exceptions\ConvertTypeException.cs" />
     <Compile Include="Exceptions\SecurityNotSupportedException.cs" />
-    <Compile Include="Extensions\SecurityInfoExtensions.cs" />
+    <Compile Include="Extensions\Tools.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="CoreSecurity.cs" />
     <Compile Include="V2\CommonContracts\ICommonDb.cs" />
     <Compile Include="V2\CommonContracts\IEntityCollectionInfo.cs" />
     <Compile Include="V2\CommonContracts\IGlobalSettings.cs" />
@@ -202,17 +196,9 @@
     <Compile Include="V2\Core\SecuritySettings.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Security.Interfaces\Security.Interfaces.csproj">
-      <Project>{026352E5-2A65-4064-9848-FB60AB1046AC}</Project>
-      <Name>Security.Interfaces</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Security.Model\Security.Model.csproj">
       <Project>{69f6d882-5a1e-49a9-b10c-a81ad937d188}</Project>
       <Name>Security.Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Tools\Tools.csproj">
-      <Project>{2F1F6E24-1FA5-412B-8949-0A7888B9BE71}</Project>
-      <Name>Tools</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

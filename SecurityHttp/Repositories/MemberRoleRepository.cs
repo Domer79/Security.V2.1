@@ -27,7 +27,7 @@ namespace SecurityHttp.Repositories
             get { return _url ?? (_url = $"api/{_context.Application.AppName}/memberroles"); }
         }
 
-        public IEnumerable<Member> GetExceptMembersByRoleName(string role)
+        public IEnumerable<Member> GetExceptMembers(string role)
         {
             return _commonWeb.GetCollection<Member>($"{Url}/except", new {role});
         }
@@ -42,7 +42,7 @@ namespace SecurityHttp.Repositories
             _commonWeb.Put($"{Url}", members, new { role });
         }
 
-        public Task<IEnumerable<Member>> GetExceptMembersByRoleNameAsync(string role)
+        public Task<IEnumerable<Member>> GetExceptMembersAsync(string role)
         {
             return _commonWeb.GetCollectionAsync<Member>($"{Url}/except", new { role });
         }
@@ -117,72 +117,72 @@ namespace SecurityHttp.Repositories
             return _commonWeb.DeleteAsync(Url, roles, new { member });
         }
 
-        public IEnumerable<Role> GetExceptRolesByIdMember(int idMember)
+        public IEnumerable<Role> GetExceptRoles(int idMember)
         {
             return _commonWeb.GetCollection<Role>($"{Url}/except", new {idMember});
         }
 
-        public Task<IEnumerable<Role>> GetExceptRolesByIdMemberAsync(int idMember)
+        public Task<IEnumerable<Role>> GetExceptRolesAsync(int idMember)
         {
             return _commonWeb.GetCollectionAsync<Role>($"{Url}/except", new { idMember });
         }
 
-        public IEnumerable<Role> GetExceptRolesByMemberName(string member)
+        public IEnumerable<Role> GetExceptRoles(string member)
         {
             return _commonWeb.GetCollection<Role>($"{Url}/except", new { member });
         }
 
-        public IEnumerable<Member> GetExceptMembersByIdRole(int idRole)
+        public IEnumerable<Member> GetExceptMembers(int idRole)
         {
             return _commonWeb.GetCollection<Member>($"{Url}/except", new { idRole });
         }
 
-        public Task<IEnumerable<Role>> GetExceptRolesByMemberNameAsync(string member)
+        public Task<IEnumerable<Role>> GetExceptRolesAsync(string member)
         {
             return _commonWeb.GetCollectionAsync<Role>($"{Url}/except", new { member });
         }
 
-        public Task<IEnumerable<Member>> GetExceptMembersByIdRoleAsync(int idRole)
+        public Task<IEnumerable<Member>> GetExceptMembersAsync(int idRole)
         {
             return _commonWeb.GetCollectionAsync<Member>($"{Url}/except", new { idRole });
         }
 
-        public IEnumerable<Member> GetMembersByIdRole(int idRole)
+        public IEnumerable<Member> GetMembers(int idRole)
         {
             return _commonWeb.GetCollection<Member>($"{Url}", new {idRole});
         }
 
-        public Task<IEnumerable<Member>> GetMembersByIdRoleAsync(int idRole)
+        public Task<IEnumerable<Member>> GetMembersAsync(int idRole)
         {
             return _commonWeb.GetCollectionAsync<Member>($"{Url}", new { idRole });
         }
 
-        public IEnumerable<Member> GetMembersByRoleName(string role)
+        public IEnumerable<Member> GetMembers(string role)
         {
             return _commonWeb.GetCollection<Member>($"{Url}", new {role});
         }
 
-        public Task<IEnumerable<Member>> GetMembersByRoleNameAsync(string role)
+        public Task<IEnumerable<Member>> GetMembersAsync(string role)
         {
             return _commonWeb.GetCollectionAsync<Member>($"{Url}", new { role });
         }
 
-        public IEnumerable<Role> GetRolesByIdMember(int idMember)
+        public IEnumerable<Role> GetRoles(int idMember)
         {
             return _commonWeb.GetCollection<Role>($"{Url}", new { idMember });
         }
 
-        public Task<IEnumerable<Role>> GetRolesByIdMemberAsync(int idMember)
+        public Task<IEnumerable<Role>> GetRolesAsync(int idMember)
         {
             return _commonWeb.GetCollectionAsync<Role>($"{Url}", new { idMember });
         }
 
-        public IEnumerable<Role> GetRolesByMemberName(string member)
+        public IEnumerable<Role> GetRoles(string member)
         {
             return _commonWeb.GetCollection<Role>($"{Url}", new { member });
         }
 
-        public Task<IEnumerable<Role>> GetRolesByMemberNameAsync(string member)
+        public Task<IEnumerable<Role>> GetRolesAsync(string member)
         {
             return _commonWeb.GetCollectionAsync<Role>($"{Url}", new { member });
         }

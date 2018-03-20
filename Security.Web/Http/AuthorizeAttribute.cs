@@ -1,15 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Security.Principal;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web.Http.Controllers;
-using Security.Configurations;
-using Security.Interfaces;
-using Security.Web.Exceptions;
-using Security.Exceptions;
+using Security.V2.Contracts;
 
 namespace Security.Web.Http
 {
@@ -21,29 +12,10 @@ namespace Security.Web.Http
         private string _controller;
         private string _action;
         private readonly string _applicationName;
-        private string _accessType = Config.Exec;
 
         protected AuthorizeAttribute(string applicationName)
         {
             _applicationName = applicationName;
-        }
-
-        /// <summary>
-        /// Конструктор 
-        /// </summary>
-        /// <param name="callAssembly"></param>
-        /// <exception cref="SecurityNotSupportedException"></exception>
-        protected AuthorizeAttribute(Assembly callAssembly)
-        {
-            if (callAssembly == null)
-                throw new ArgumentNullException(nameof(callAssembly));
-
-            var productAttribute = callAssembly.GetCustomAttribute<AssemblySecurityApplicationInfoAttribute>();
-
-            if (productAttribute == null)
-                throw new SecurityNotSupportedException("Отсутствует информация о приложении");
-
-            _applicationName = productAttribute.ApplicationName;
         }
 
         protected override bool IsAuthorized(HttpActionContext actionContext)
@@ -58,10 +30,10 @@ namespace Security.Web.Http
             _action = actionContext.ActionDescriptor.ActionName;
             _controller = actionContext.ControllerContext.ControllerDescriptor.ControllerName;
 
-            using (var security = new CoreSecurity(_applicationName))
+            using (var security = new V2.Core.Security(_applicationName))
             {
                 var login = ((UserIdentity)principal.Identity).User.Login;
-                return security.CheckAccess(login, ((ISecurityObject)this).ObjectName ?? Mvc.AuthorizeAttribute.GetObjectName(_controller, _action), Config.Exec, _applicationName);
+                return security.CheckAccess(login, ((ISecurityObject)this).ObjectName ?? Mvc.AuthorizeAttribute.GetObjectName(_controller, _action));
             }
         }
 
@@ -69,14 +41,5 @@ namespace Security.Web.Http
         /// Наименование объекта безопасности, для которого требуется запрашивать разрешение на доступ
         /// </summary>
         public string ObjectName { get; set; }
-
-        /// <summary>
-        /// Тип доступа для объекта безопасности
-        /// </summary>
-        public string AccessType
-        {
-            get { return _accessType; }
-            set { _accessType = Config.Exec; }
-        }
     }
 }

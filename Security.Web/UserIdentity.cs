@@ -23,9 +23,9 @@ namespace Security.Web
 
         private static User GetUser(string login, string applicationName)
         {
-            using (var security = new CoreSecurity(applicationName))
+            using (var security = new V2.Core.Security(applicationName))
             {
-                var user = security.UserCollection.AsNoTracking().FirstOrDefault(e => e.Login.Equals(login, StringComparison.OrdinalIgnoreCase));
+                var user = security.UserRepository.GetByName(login);
                 return user;
             }
         }

@@ -26,14 +26,10 @@ namespace Security.Web
         /// <returns>True, если пользователь имеет данную роль, иначе False</returns>
         public bool IsInRole(string role)
         {
-            using (var security = new CoreSecurity(_applicationName))
+            using (var security = new V2.Core.Security(_applicationName))
             {
-                //todo: fix this to role
-                var roles = security.MemberCollection.WithRoles()
-                    .Where(u => u.Name == _login);
-                    //.SelectMany(m => m.Roles);
-
-                return roles.Any(e => e.Name.Equals(role, StringComparison.OrdinalIgnoreCase));
+                var roles = security.MemberRoleRepository.GetRoles(_login);
+                return roles.Any(_ => _.Name == role);
             }
         }
 

@@ -24,28 +24,28 @@ namespace Security.WebApi.Controllers
         [HttpGet]
         public async Task<IHttpActionResult> GetRolesByMemberName(string member)
         {
-            var roles = await _repo.GetRolesByMemberNameAsync(member);
+            var roles = await _repo.GetRolesAsync(member);
             return Ok(roles);
         }
 
         [HttpGet]
         public async Task<IHttpActionResult> GetRolesByIdMember(int idMember)
         {
-            var roles = await _repo.GetRolesByIdMemberAsync(idMember);
+            var roles = await _repo.GetRolesAsync(idMember);
             return Ok(roles);
         }
 
         [HttpGet]
         public async Task<IHttpActionResult> GetMembersByRoleName(string role)
         {
-            var members = await _repo.GetMembersByRoleNameAsync(role);
+            var members = await _repo.GetMembersAsync(role);
             return Ok(members);
         }
 
         [HttpGet]
         public async Task<IHttpActionResult> GetMembersByIdRole(int idRole)
         {
-            var members = await _repo.GetMembersByIdRoleAsync(idRole);
+            var members = await _repo.GetMembersAsync(idRole);
             return Ok(members);
         }
 
@@ -53,7 +53,7 @@ namespace Security.WebApi.Controllers
         [Route("except")]
         public async Task<IHttpActionResult> GetExceptRolesByMemberName(string member)
         {
-            var roles = await _repo.GetExceptRolesByMemberNameAsync(member);
+            var roles = await _repo.GetExceptRolesAsync(member);
             return Ok(roles);
         }
 
@@ -61,7 +61,7 @@ namespace Security.WebApi.Controllers
         [Route("except")]
         public async Task<IHttpActionResult> GetExceptRolesByIdMember(int idMember)
         {
-            var roles = await _repo.GetExceptRolesByIdMemberAsync(idMember);
+            var roles = await _repo.GetExceptRolesAsync(idMember);
             return Ok(roles);
         }
 
@@ -69,7 +69,7 @@ namespace Security.WebApi.Controllers
         [Route("except")]
         public async Task<IHttpActionResult> GetExceptMembersByRole(string role)
         {
-            var members = await _repo.GetExceptMembersByRoleNameAsync(role);
+            var members = await _repo.GetExceptMembersAsync(role);
             return Ok(members);
         }
 
@@ -77,7 +77,7 @@ namespace Security.WebApi.Controllers
         [Route("except")]
         public async Task<IHttpActionResult> GetExceptMembersByRole(int idRole)
         {
-            var members = await _repo.GetExceptMembersByIdRoleAsync(idRole);
+            var members = await _repo.GetExceptMembersAsync(idRole);
             return Ok(members);
         }
 

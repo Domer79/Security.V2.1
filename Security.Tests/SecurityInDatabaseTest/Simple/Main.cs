@@ -112,7 +112,7 @@ namespace Security.Tests.SecurityInDatabaseTest.Simple
         [TestCase("user1 user3", "role2")]
         public void Check_Existence_Members_in_Role(string member, string role)
         {
-            var members = _security.MemberRoleRepository.GetMembersByRoleName(role).Select(m => m.Name);
+            var members = _security.MemberRoleRepository.GetMembers(role).Select(m => m.Name);
             CollectionAssert.AreEqual(member.Split(' '), members);
         }
 
@@ -120,7 +120,7 @@ namespace Security.Tests.SecurityInDatabaseTest.Simple
         [TestCase("role1", "group1")]
         public void CheckExistsence_Roles_in_User(string roleNames, string member)
         {
-            var roles = _security.MemberRoleRepository.GetRolesByMemberName(member).Select(_ => _.Name);
+            var roles = _security.MemberRoleRepository.GetRoles(member).Select(_ => _.Name);
             CollectionAssert.AreEqual(roleNames.Split(' '), roles);
         }
 
@@ -788,8 +788,8 @@ namespace Security.Tests.SecurityInDatabaseTest.Simple
 
             _security.MemberRoleRepository.AddMembersToRole(memberStrings, "role10");
 
-            var members = _security.MemberRoleRepository.GetMembersByRoleName("role10").OrderBy(_ => _.Name).Select(_ => _.Name);
-            var exceptMembers = _security.MemberRoleRepository.GetExceptMembersByRoleName("role10").OrderBy(_ => _.Name).Select(_ => _.Name);
+            var members = _security.MemberRoleRepository.GetMembers("role10").OrderBy(_ => _.Name).Select(_ => _.Name);
+            var exceptMembers = _security.MemberRoleRepository.GetExceptMembers("role10").OrderBy(_ => _.Name).Select(_ => _.Name);
 
             Assert.That(members.Count(), Is.EqualTo(6));
             Assert.That(exceptMembers.Count(), Is.EqualTo(34));
@@ -807,8 +807,8 @@ namespace Security.Tests.SecurityInDatabaseTest.Simple
 
             _security.MemberRoleRepository.AddMembersToRole(idMembers, 10);
 
-            var members = _security.MemberRoleRepository.GetMembersByIdRole(10).OrderBy(_ => _.IdMember).Select(_ => _.IdMember);
-            var exceptMembers = _security.MemberRoleRepository.GetExceptMembersByIdRole(10).OrderBy(_ => _.IdMember).Select(_ => _.IdMember);
+            var members = _security.MemberRoleRepository.GetMembers(10).OrderBy(_ => _.IdMember).Select(_ => _.IdMember);
+            var exceptMembers = _security.MemberRoleRepository.GetExceptMembers(10).OrderBy(_ => _.IdMember).Select(_ => _.IdMember);
 
             Assert.That(members.Count(), Is.EqualTo(6));
             Assert.That(exceptMembers.Count(), Is.EqualTo(34));
@@ -843,8 +843,8 @@ namespace Security.Tests.SecurityInDatabaseTest.Simple
 
             _security.MemberRoleRepository.AddRolesToMember(roleStrings, "user15");
 
-            var members = _security.MemberRoleRepository.GetRolesByMemberName("user15").OrderBy(_ => _.Name).Select(_ => _.Name);
-            var exceptMembers = _security.MemberRoleRepository.GetExceptRolesByMemberName("user15").OrderBy(_ => _.Name).Select(_ => _.Name);
+            var members = _security.MemberRoleRepository.GetRoles("user15").OrderBy(_ => _.Name).Select(_ => _.Name);
+            var exceptMembers = _security.MemberRoleRepository.GetExceptRoles("user15").OrderBy(_ => _.Name).Select(_ => _.Name);
 
             Assert.That(members.Count(), Is.EqualTo(5));
             Assert.That(exceptMembers.Count(), Is.EqualTo(15));
@@ -862,8 +862,8 @@ namespace Security.Tests.SecurityInDatabaseTest.Simple
 
             _security.MemberRoleRepository.AddRolesToMember(idRoles, 15);
 
-            var members = _security.MemberRoleRepository.GetRolesByIdMember(15).OrderBy(_ => _.IdRole).Select(_ => _.IdRole);
-            var exceptMembers = _security.MemberRoleRepository.GetExceptRolesByIdMember(15).OrderBy(_ => _.IdRole).Select(_ => _.IdRole);
+            var members = _security.MemberRoleRepository.GetRoles(15).OrderBy(_ => _.IdRole).Select(_ => _.IdRole);
+            var exceptMembers = _security.MemberRoleRepository.GetExceptRoles(15).OrderBy(_ => _.IdRole).Select(_ => _.IdRole);
 
             Assert.That(members.Count(), Is.EqualTo(5));
             Assert.That(exceptMembers.Count(), Is.EqualTo(15));

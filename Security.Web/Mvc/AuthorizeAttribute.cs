@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Net;
-using System.Reflection;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
-using Security.Configurations;
-using Security.Interfaces;
+using Security.V2.Contracts;
 using Security.Web.Exceptions;
 using Tools.Extensions;
-using Security.Exceptions;
 
 namespace Security.Web.Mvc
 {
@@ -22,30 +19,16 @@ namespace Security.Web.Mvc
         private string _controllerName;
         private string _actionName;
         private ActionResult _unAuthorizedResult;
-        private string _accessType = Config.Exec;
 
         protected AuthorizeAttribute(string applicationName)
         {
             _applicationName = applicationName;
         }
 
-        protected AuthorizeAttribute(Assembly callAssembly)
-        {
-            if (callAssembly == null)
-                throw new ArgumentNullException(nameof(callAssembly));
-
-            var productAttribute = callAssembly.GetCustomAttribute<AssemblySecurityApplicationInfoAttribute>();
-
-            if (productAttribute == null)
-                throw new SecurityNotSupportedException("Отсутствует информация о приложении");
-
-            _applicationName = productAttribute.ApplicationName;
-        }
-
         protected override bool AuthorizeCore(HttpContextBase httpContext)
         {
             _unAuthorizedResult = null;
-            using (var security = new CoreSecurity(_applicationName))
+            using (var security = new V2.Core.Security(_applicationName))
             {
                 try
                 {
@@ -64,7 +47,7 @@ namespace Security.Web.Mvc
 #endif
 
                     var login = ((UserIdentity)httpContext.User.Identity).User.Login;
-                    var allow = security.CheckAccess(login, ((ISecurityObject)this).ObjectName ?? GetObjectName(_controllerName, _actionName), Config.Exec, _applicationName);
+                    var allow = security.CheckAccess(login, ((ISecurityObject)this).ObjectName ?? GetObjectName(_controllerName, _actionName));
 
                     if (!allow)
                         if (new HttpRequestWrapper(HttpContext.Current.Request).IsAjaxRequest())
@@ -148,15 +131,6 @@ namespace Security.Web.Mvc
         /// Наименование объекта безопасности, для которого требуется запрашивать разрешение на доступ
         /// </summary>        
         public string ObjectName { get; set; }
-
-        /// <summary>
-        /// Тип доступа для объекта безопасности
-        /// </summary>
-        public string AccessType
-        {
-            get { return _accessType; }
-            set { _accessType = Config.Exec; }
-        }
 
         private static string DefaultAction => ((Route) RouteTable.Routes["Default"]).Defaults["action"].ToString();
 

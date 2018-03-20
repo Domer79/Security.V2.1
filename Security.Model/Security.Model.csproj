@@ -72,12 +72,6 @@
     <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Tools\Tools.csproj">
-      <Project>{2f1f6e24-1fa5-412b-8949-0a7888b9be71}</Project>
-      <Name>Tools</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="..\DebugPackageConfiguration.targets" />

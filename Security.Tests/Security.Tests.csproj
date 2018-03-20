@@ -110,10 +110,6 @@
       <Project>{556713E5-2ADB-4B4B-8D40-74DF9393D33D}</Project>
       <Name>Security</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Tools\Tools.csproj">
-      <Project>{2F1F6E24-1FA5-412B-8949-0A7888B9BE71}</Project>
-      <Name>Tools</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
