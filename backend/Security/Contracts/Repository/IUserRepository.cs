@@ -7,8 +7,13 @@ namespace Security.Contracts.Repository
     public interface IUserRepository: ISecurityBaseRepository<User>
     {
         new User GetByName(string loginOrEmail);
-        new Task<User> GetByNameAsync(string loginOrEmail);
         void SetStatus(string loginOrEmail, bool status);
+
+        #region Async
+
+        new Task<User> GetByNameAsync(string loginOrEmail);
         Task SetStatusAsync(string loginOrEmail, bool status);
+
+        #endregion
     }
 }

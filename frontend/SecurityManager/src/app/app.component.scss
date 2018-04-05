@@ -1,0 +1,17 @@
+.main{
+    min-height: 800px;
+}
+
+@supports (display: flex){
+    @media all and (max-width: 640px){
+        .main{
+            flex-direction: column;
+        }
+        .splitter{
+            max-width: 100% !important;
+            width: 100% !important;
+            max-height: 1px;
+            height: 1px;
+        }
+    }
+}
