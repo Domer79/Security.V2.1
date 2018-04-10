@@ -27,17 +27,15 @@ export class UsersService implements UserRepository {
     return this.httpClient.get<User>("api/user").pipe(catchError(this.common.handleError));
   }
   getElement(id: number): Observable<User> {
-    var params = new HttpParams();
-    params.append("id", id.toString());
-    return this.httpClient.get<User>("api/user", {params: params}).pipe(catchError(this.common.handleError))
+    return this.httpClient.get<User>("api/user", {params: {id: id.toString()}}).pipe(catchError(this.common.handleError));
   }
   create(object: User): Observable<User> {
-    throw new Error("Method not implemented.");
+    return this.httpClient.post("api/user", object).pipe(catchError(this.common.handleError));
   }
   update(object: User): Promise<void> {
     return this.httpClient.put("api/user", object).pipe(catchError(this.common.handleError)).toPromise();
   }
   remove(object: User): Promise<void> {
-    throw new Error("Method not implemented.");
+    return this.httpClient.delete("api/user", {params: {id: object.IdMember.toString()}}).pipe(catchError(this.common.handleError)).toPromise();
   }
 }

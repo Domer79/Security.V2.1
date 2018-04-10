@@ -1,5 +1,5 @@
 <div>
-  <ngb-accordion [closeOthers]="true">
+  <ngb-accordion [closeOthers]="true" activeIds="{{selectedId | async}}">
     <ngb-panel *ngFor="let user of users | async" id="member{{user.IdMember}}">
       <ng-template ngbPanelTitle>
         <a routerLink="{{user.Login}}">{{user.Login}}</a>

@@ -13,12 +13,20 @@ import { CommonService } from './system/service/common.service';
 import { SecurityService } from './services/security.service';
 import { SettingsComponent } from './settings/settings.component';
 import { MainModule } from './main/main.module';
-
+import { ApplicationService } from './services/application.service';
+import { ApplicationContextService } from './services/application-context.service';
+import { ApplicationPageComponent } from './application-page/application-page.component';
+import { APP_BASE_HREF } from '@angular/common';
+import { ApplicationComponent } from './fordelete/application/application.component';
+import { ApplicationInfoComponent } from './application-info/application-info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SettingsComponent
+    SettingsComponent,
+    ApplicationPageComponent,
+    ApplicationComponent,
+    ApplicationInfoComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +43,9 @@ import { MainModule } from './main/main.module';
     },
     UsersService,
     CommonService,
-    SecurityService
+    SecurityService,
+    ApplicationService,
+    ApplicationContextService
   ],
   bootstrap: [AppComponent]
 })

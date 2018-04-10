@@ -4,21 +4,25 @@ import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { SettingsComponent } from '../settings/settings.component';
 import { environment } from '../../environments/environment';
+import { ApplicationPageComponent } from '../application-page/application-page.component';
+import { ApplicationComponent } from '../fordelete/application/application.component';
 
 const appRoutes: Routes = [
-  {
-    path: "",
-    redirectTo: "/main",
-    pathMatch: "full"
-  },
-  {
-    path: "main",
-    loadChildren: "app/main/main.module#MainModule"
-  },
-  {
-    path: "settings",
-    component: SettingsComponent
-  }
+
+  // { 
+  //   path: ":application", 
+  //   component: ApplicationComponent,
+  //   children: [
+      {
+        path: "",
+        redirectTo: "/main",
+        pathMatch: "full"
+      },
+      { path: "main", loadChildren: "app/main/main.module#MainModule" },
+      { path: "settings", component: SettingsComponent },
+      { path: "applications", component: ApplicationPageComponent }    
+  //   ]
+  // },
 ];
 
 @NgModule({

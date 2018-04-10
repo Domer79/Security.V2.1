@@ -1,0 +1,10 @@
+div.container-fluid{
+    max-width: 800px;
+    margin-top: 10px;
+    .btn-outline-primary {
+        color: #303030;
+        background-color: transparent;
+        background-image: none;
+        border-color: #303030;
+    }
+}
