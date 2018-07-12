@@ -1,4 +1,6 @@
-export class Policy {
+import { IEntity } from "./IEntity";
+
+export class Policy implements IEntity {
     IdPolicy: number;
     Name: string;
 

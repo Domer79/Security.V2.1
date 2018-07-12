@@ -1,4 +1,4 @@
-<div class="container-fluid" *ngIf="appContext.Application | async; let selectedApp">
+<div class="container-fluid" *ngIf="application$ | async; let selectedApp">
   <div class="card>">
     <div class="card-header">
       <select class="custom-select custom-select-lg mb-3" (change)="selectApp($event)">

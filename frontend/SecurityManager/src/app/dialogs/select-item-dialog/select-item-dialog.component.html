@@ -1,0 +1,18 @@
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Select items</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let item of items | async" (click)="item.selected = !item.selected;select(item)"
+        [class.active]="item.selected">{{item.Name}}</li>
+    </ul>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-success" (click)="c('Ok')">Save</button>
+    <button type="button" class="btn btn-outline-dark" (click)="d('Cancel')">Cancel</button>
+  </div>
+</ng-template>

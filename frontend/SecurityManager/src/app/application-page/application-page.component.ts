@@ -3,7 +3,7 @@ import { ApplicationService } from '../services/application.service';
 import { Application } from '../contracts/models/Application';
 import { ApplicationContextService } from '../services/application-context.service';
 import { Observable } from 'rxjs/Observable';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, UrlTree, UrlSegmentGroup, PRIMARY_OUTLET } from '@angular/router';
 import { Location } from '@angular/common';
 
 @Component({
@@ -14,6 +14,9 @@ import { Location } from '@angular/common';
 export class ApplicationPageComponent implements OnInit {
 
   applications$: Observable<Application[]>;
+  get application$(): Observable<Application>{
+    return this.appContext.Application;
+  }
 
   constructor(
     private appService: ApplicationService,
@@ -24,10 +27,16 @@ export class ApplicationPageComponent implements OnInit {
 
   ngOnInit() {
     this.applications$ = this.appService.getAll();
+    // this.application$ = this.appContext.Application;
   }
 
   selectApp($event): void {
     this.appContext.setApplication($event.target.value);
+    // this.application$ = this.appContext.Application;
+
+    let tree: UrlTree = this.router.parseUrl(this.router.url)
+    let g: UrlSegmentGroup = tree.root.children[PRIMARY_OUTLET];
+    this.router.navigate([`/${$event.target.value}/${g.segments[1]}`]);
   }
 
   changeDescription(app: Application): void {

@@ -17,8 +17,10 @@ import { ApplicationService } from './services/application.service';
 import { ApplicationContextService } from './services/application-context.service';
 import { ApplicationPageComponent } from './application-page/application-page.component';
 import { APP_BASE_HREF } from '@angular/common';
-import { ApplicationComponent } from './fordelete/application/application.component';
+import { ApplicationComponent } from './application/application.component';
 import { ApplicationInfoComponent } from './application-info/application-info.component';
+import { ApplicationRedirectComponent } from './application-redirect/application-redirect.component';
+import { HttpNotFoundComponent } from './http-not-found/http-not-found.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { ApplicationInfoComponent } from './application-info/application-info.co
     SettingsComponent,
     ApplicationPageComponent,
     ApplicationComponent,
-    ApplicationInfoComponent
+    ApplicationInfoComponent,
+    ApplicationRedirectComponent,
+    HttpNotFoundComponent
   ],
   imports: [
     BrowserModule,

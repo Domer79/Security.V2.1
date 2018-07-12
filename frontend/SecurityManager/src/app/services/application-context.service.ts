@@ -11,7 +11,7 @@ export class ApplicationContextService implements ApplicationContext {
   private _application: Observable<Application>;
 
   constructor(
-    private appService: ApplicationService
+    private appService: ApplicationService,
   ) { 
   }
   

@@ -21,7 +21,7 @@ export class ProfileComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.user$ = this.route.data.map((data: {user: User}) => {
+    this.user$ = this.route.parent.data.map((data: {user: User}) => {
       this.idMember = data.user.IdMember;
       return data.user;
     });
