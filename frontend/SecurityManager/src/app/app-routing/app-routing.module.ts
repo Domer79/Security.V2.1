@@ -33,7 +33,7 @@ const appRoutes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forRoot(appRoutes, {
-      enableTracing: !environment.production
+      enableTracing: environment.routeTrace
     })
   ],
   declarations: [],

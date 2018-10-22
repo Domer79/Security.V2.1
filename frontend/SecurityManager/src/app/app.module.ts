@@ -21,6 +21,7 @@ import { ApplicationComponent } from './application/application.component';
 import { ApplicationInfoComponent } from './application-info/application-info.component';
 import { ApplicationRedirectComponent } from './application-redirect/application-redirect.component';
 import { HttpNotFoundComponent } from './http-not-found/http-not-found.component';
+import { GroupsService } from './services/groups.service';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { HttpNotFoundComponent } from './http-not-found/http-not-found.component
       multi: true
     },
     UsersService,
+    GroupsService,
     CommonService,
     SecurityService,
     ApplicationService,

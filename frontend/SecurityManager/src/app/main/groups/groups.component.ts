@@ -1,35 +1,35 @@
-import { Component, OnInit, Inject, AfterViewChecked } from '@angular/core';
-import { UsersService } from '../../services/users.service';
-import { User } from '../../contracts/models/user';
+import { Component, OnInit, AfterViewChecked } from '@angular/core';
 import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
-import { Observable } from 'rxjs/Observable';
-import "rxjs/add/operator/map";
+import { Observable } from 'rxjs';
+import { map } from "rxjs/operators"
 import { Location } from '@angular/common';
+import { GroupsService } from '../../services/groups.service';
+import { Group } from '../../contracts/models/group';
 
 @Component({
-  selector: 'users',
-  templateUrl: './users.component.html',
-  styleUrls: ['./users.component.scss']
+  selector: 'groups',
+  templateUrl: './groups.component.html',
+  styleUrls: ['./groups.component.scss']
 })
-export class UsersComponent implements OnInit, AfterViewChecked {
-  users: Observable<User[]>;
+export class GroupsComponent implements OnInit, AfterViewChecked {
+  groups: Observable<Group[]>;
   selectedId: Observable<string>;
 
   constructor(
     private router: Router,
-    private usersService: UsersService,
+    private groupsService: GroupsService,
     private route: ActivatedRoute,
     private location: Location
   ) {
   }
 
   ngOnInit() {
-    this.users = this.usersService.getAll();
+    this.groups = this.groupsService.getAll();
 
     if (this.route.firstChild != null) {
-      this.selectedId = this.route.firstChild.data.map((data: { user: User }) => {
-        return `member${data.user.IdMember}`;
-      });
+      this.selectedId = this.route.firstChild.data.pipe(map((data: { group: Group }) => {
+        return `member${data.group.IdMember}`;
+      }));
     }
   }
 

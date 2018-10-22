@@ -1,4 +1,3 @@
-import {of} from 'rxjs/observable/of';
 import { Injectable } from '@angular/core';
 import { ApplicationContext } from '../contracts/ApplicationContext';
 import { Application } from '../contracts/models/Application';

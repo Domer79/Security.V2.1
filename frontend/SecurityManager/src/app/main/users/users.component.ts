@@ -3,8 +3,9 @@ import { UsersService } from '../../services/users.service';
 import { User } from '../../contracts/models/user';
 import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
-import "rxjs/add/operator/map";
 import { Location } from '@angular/common';
+import { map, concat }  from "rxjs/operators"
+import { from, OperatorFunction, Subject } from 'rxjs';
 
 @Component({
   selector: 'users',
@@ -27,9 +28,9 @@ export class UsersComponent implements OnInit, AfterViewChecked {
     this.users = this.usersService.getAll();
 
     if (this.route.firstChild != null) {
-      this.selectedId = this.route.firstChild.data.map((data: { user: User }) => {
+      this.selectedId = this.route.firstChild.data.pipe(map((data: { user: User }) => {
         return `member${data.user.IdMember}`;
-      });
+      }));
     }
   }
 
@@ -42,5 +43,11 @@ export class UsersComponent implements OnInit, AfterViewChecked {
         }
       });
     }
+  }
+
+  createEmptyUser(): void{
+    this.usersService.createEmpty().toPromise().then(user => {
+      this.users = this.usersService.getAll();
+    });
   }
 }

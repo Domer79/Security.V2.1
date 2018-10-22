@@ -593,5 +593,16 @@
             <param name="name"></param>
             <returns></returns>
         </member>
+        <member name="T:Security.WebApi.Controllers.UserGroupsController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Security.WebApi.Controllers.UserGroupsController.#ctor(Security.Contracts.Repository.IUserGroupRepository)">
+            <summary>
+            
+            </summary>
+            <param name="repo"></param>
+        </member>
     </members>
 </doc>

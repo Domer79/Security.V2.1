@@ -14,19 +14,19 @@ export class ApplicationService {
   ) { }
 
   getAll(): Observable<Application[]>{
-    return this.httpClient.get<Application>("api/applications").pipe(catchError(this.common.handleError));
+    return this.httpClient.get<Application[]>("api/applications").pipe(catchError(this.common.handleError("getAll", [])));
   }
 
   getApp(id: number): Observable<Application>{
-    return this.httpClient.get("api/applications", {params: {id: id.toString()}}).pipe(catchError(this.common.handleError));
+    return this.httpClient.get<Application>("api/applications", {params: {id: id.toString()}}).pipe(catchError(this.common.handleError("getApp", null)));
   }
 
   getByName(appName: string): Observable<Application>{
     console.log("Call ApplicationService.getbyName function");
-    return this.httpClient.get("api/applications", {params: {name: appName}}).pipe(catchError(this.common.handleError));
+    return this.httpClient.get<Application>("api/applications", {params: {name: appName}}).pipe(catchError(this.common.handleError("getByName", null)));
   }
 
   saveApp(app: Application): Promise<void>{
-    return this.httpClient.put("api/applications", app).pipe(catchError(this.common.handleError)).toPromise();
+    return this.httpClient.put("api/applications", app).pipe(catchError(this.common.handleError("saveApp", null))).toPromise();
   }
 }

@@ -1,4 +1,4 @@
-<select-item-dialog #content [items]="nonIncludedRoles$" (save)="addRolesToUser($event)" (cancel)="cancelAddRoles($event)"></select-item-dialog>
+<select-item-dialog #content [items]="nonIncludedRoles$" (save)="addRolesToGroup($event)" (cancel)="cancelAddRoles($event)"></select-item-dialog>
 <confirm-dialog #confirmDialogContent confirmmessage="Подтвердите удаление!" (ok)="deleteRoles()" (cancel)="deleteCancel()"></confirm-dialog>
 
 <div class="container-fluid">

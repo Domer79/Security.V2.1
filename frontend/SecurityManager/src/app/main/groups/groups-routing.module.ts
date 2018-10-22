@@ -1,28 +1,28 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { ProfileComponent } from './profile/profile.component';
-import { UsersComponent } from './users.component';
-import { UserDetailComponent } from './user-detail/user-detail.component';
-import { UserGroupsComponent } from './user-groups/user-groups.component';
-import { UserRolesComponent } from './user-roles/user-roles.component';
-import { UserDetailResolverService } from './services/user-detail-resolver.service';
+import { NgModule } from "@angular/core";
+import { RouterModule, Routes } from "@angular/router"
+import { GroupProfileComponent } from './group-profile/group-profile.component';
+import { GroupsComponent } from './groups.component';
+import { GroupDetailComponent } from './group-detail/group-detail.component';
+import { GroupUsersComponent } from './group-users/group-users.component';
+import { GroupRolesComponent } from './group-roles/group-roles.component';
+import { GroupDetailResolverService } from './services/group-detail-resolver.service';
 
 const routes: Routes = [
   { 
     path: '',
-    component: UsersComponent,
+    component: GroupsComponent,
     children: [
       { 
-        path: ':username',
-        component: UserDetailComponent,
+        path: ':groupname',
+        component: GroupDetailComponent,
         resolve: {
-          user: UserDetailResolverService
+          group: GroupDetailResolverService
         },
         children: [
           { path: '', redirectTo: 'profile', pathMatch: 'full' },
-          { path: 'profile', component: ProfileComponent, },
-          { path: 'groups', component: UserGroupsComponent },
-          { path: 'roles', component: UserRolesComponent }
+          { path: 'profile', component: GroupProfileComponent, },
+          { path: 'users', component: GroupUsersComponent },
+          { path: 'roles', component: GroupRolesComponent }
         ]
       },
     ]
@@ -33,7 +33,7 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
   providers: [
-    UserDetailResolverService
+    GroupDetailResolverService
   ]
 })
-export class UsersRoutingModule { }
+export class GroupsRoutingModule { }

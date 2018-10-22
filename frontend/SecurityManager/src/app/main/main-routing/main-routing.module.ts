@@ -15,7 +15,10 @@ const mainRoutes: Routes = [
         path: 'users', 
         loadChildren: "app/main/users/users.module#UsersModule"
       },
-      { path: 'groups', component: GroupsComponent },
+      { 
+        path: 'groups', 
+        loadChildren: "app/main/groups/groups.module#GroupsModule" 
+      },
       { path: 'roles', component: RolesComponent }
     ]
   }

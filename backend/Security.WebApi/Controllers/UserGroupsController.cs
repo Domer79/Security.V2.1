@@ -12,11 +12,18 @@ using Security.WebApi.Models;
 
 namespace Security.WebApi.Controllers
 {
+    /// <summary>
+    /// 
+    /// </summary>
     [RoutePrefix("api/usergroups")]
     public class UserGroupsController : ApiController
     {
         private readonly IUserGroupRepository _repo;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="repo"></param>
         public UserGroupsController(IUserGroupRepository repo)
         {
             _repo = repo;

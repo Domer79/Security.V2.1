@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { CommonService } from '../system/service/common.service';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams, HttpRequest } from '@angular/common/http';
 import { ApplicationContextService } from './application-context.service';
-import { catchError } from 'rxjs/operators';
-import { Observable } from 'rxjs/Observable';
+import { catchError, switchMap } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 import { Group } from '../contracts/models/group';
 import { User } from '../contracts/models/user';
+import { Role } from '../contracts/models/role';
 
 @Injectable()
 export class GroupsService {
@@ -17,63 +18,63 @@ export class GroupsService {
   ) { }
 
   createEmpty(prefix: string): Observable<Group> {
-    return this.httpClient.get<Group>("api/groups", {params: {prefixForRequired: 'new_group'}}).pipe(catchError(this.common.handleError));
+    return this.httpClient.get<Group>("api/groups", {params: {prefixForRequired: 'new_group'}}).pipe(catchError(this.common.handleError("createEmpty", null)));
   }
   getByName(name: string): Observable<Group> {
-    return this.httpClient.get<Group>("api/groups", {params: {name}}).pipe(catchError(this.common.handleError));
+    return this.httpClient.get<Group>("api/groups", {params: {name}}).pipe(catchError(this.common.handleError("getByName", null)));
   }
   getAll(): Observable<Group[]> {
-    return this.httpClient.get<Group>("api/groups").pipe(catchError(this.common.handleError));
+    return this.httpClient.get<Group[]>("api/groups").pipe(catchError(this.common.handleError("getAll", [])));
   }
   getElement(id: number): Observable<Group> {
-    return this.httpClient.get<Group>("api/groups", {params: {id: id.toString()}}).pipe(catchError(this.common.handleError));
+    return this.httpClient.get<Group>("api/groups", {params: {id: id.toString()}}).pipe(catchError(this.common.handleError("getElement", null)));
   }
   create(object: Group): Observable<Group> {
-    return this.httpClient.post("api/groups", object).pipe(catchError(this.common.handleError));
+    return this.httpClient.post("api/groups", object).pipe(catchError(this.common.handleError("create", null)));
   }
   update(object: Group): Promise<void> {
-    return this.httpClient.put("api/groups", object).pipe(catchError(this.common.handleError)).toPromise();
+    return this.httpClient.put("api/groups", object).pipe(catchError(this.common.handleError("update", null))).toPromise();
   }
   remove(object: Group): Promise<void> {
-    return this.httpClient.delete("api/groups", {params: {id: object.IdMember.toString()}}).pipe(catchError(this.common.handleError)).toPromise();
+    return this.httpClient.delete("api/groups", {params: {id: object.IdMember.toString()}}).pipe(catchError(this.common.handleError("remove", null))).toPromise();
   }
   getGroupUsers(group: Group): Observable<User[]>{
-    return this.httpClient.get<User>("api/usergroups", {params: {idGroup: group.IdMember.toString()}}).pipe(catchError(this.common.handleError));
+    return this.httpClient.get<User[]>("api/usergroups", {params: {idGroup: group.IdMember.toString()}}).pipe(catchError(this.common.handleError("getGroupUsers", [])));
   }
   getNonIncludedUsers(group: Group): Observable<User[]>{
-    return this.httpClient.get<Group>("api/usergroups/exceptfor", {params: {idGroup: group.IdMember.toString()}}).pipe(catchError(this.common.handleError));
+    return this.httpClient.get<User[]>("api/usergroups/exceptfor", {params: {idGroup: group.IdMember.toString()}}).pipe(catchError(this.common.handleError("getNonIncludedUsers", [])));
   }
   addUsersToGroup(group: Group, users: User[]): Promise<void>{
-    return this.httpClient.put("api/usergroups", users.map(_ => _.IdMember), {params: {idGroup: group.IdMember.toString()}}).pipe(catchError(this.common.handleError)).toPromise();
+    return this.httpClient.put("api/usergroups", users.map(_ => _.IdMember), {params: {idGroup: group.IdMember.toString()}}).pipe(catchError(this.common.handleError("addUsersToGroup", null))).toPromise();
   }
-  deleteGroupsFromUser(user: User, groups: Group[]): Promise<void>{
+  deleteUsersFromGroup(group: Group, users: User[]): Promise<void>{
     let params = new HttpParams();
-    params = params.set("idUser", user.IdMember.toString());
-    let request = new HttpRequest<any>("DELETE", "api/usergroups", groups.map(_ => _.IdMember), {params: params});
-    return this.httpClient.request(request).pipe(catchError(this.common.handleError)).toPromise();
+    params = params.set("idGroup", group.IdMember.toString());
+    let request = new HttpRequest<any>("DELETE", "api/usergroups", users.map(_ => _.IdMember), {params: params});
+    return this.httpClient.request(request).pipe(catchError(this.common.handleError("deleteUsersFromGroup", null))).toPromise();
   }
-  getUserRoles(user: User): Observable<Role[]>{
-    return this.appContext.Application.switchMap(app => {
-      return this.httpClient.get<Role>(`api/${app.AppName}/memberroles`, {params: {idMember: user.IdMember.toString()}}).pipe(catchError(this.common.handleError));
-    });
+  getGroupRoles(group: Group): Observable<Role[]>{
+    return this.appContext.Application.pipe(switchMap(app => {
+      return this.httpClient.get<Role[]>(`api/${app.AppName}/memberroles`, {params: {idMember: group.IdMember.toString()}}).pipe(catchError(this.common.handleError("getGroupRoles", [])));
+    }));
   }
-  getNonIncludedRoles(user: User): Observable<Role[]>{
-    return this.appContext.Application.switchMap(app => {
-      return this.httpClient.get<Role>(`api/${app.AppName}/memberroles/except`, {params: {idMember: user.IdMember.toString()}}).pipe(catchError(this.common.handleError));
-    });
+  getNonIncludedRoles(group: Group): Observable<Role[]>{
+    return this.appContext.Application.pipe(switchMap(app => {
+      return this.httpClient.get<Role[]>(`api/${app.AppName}/memberroles/except`, {params: {idMember: group.IdMember.toString()}}).pipe(catchError(this.common.handleError("getNonIncludedRoles", [])));
+    }));
   }
-  addRolesToUser(user: User, roles: Role[]): Promise<void>{
-    return this.appContext.Application.switchMap(app => {
-      return this.httpClient.put<Role>(`api/${app.AppName}/memberroles`, roles.map(_ => _.IdRole), {params: {idMember: user.IdMember.toString()}}).pipe(catchError(this.common.handleError));
-    }).toPromise();
+  addRolesToGroup(group: Group, roles: Role[]): Promise<void>{
+    return this.appContext.Application.pipe(switchMap(app => {
+      return this.httpClient.put<Role>(`api/${app.AppName}/memberroles`, roles.map(_ => _.IdRole), {params: {idMember: group.IdMember.toString()}}).pipe(catchError(this.common.handleError("AddRolesToGroup", null)));
+    })).toPromise();
   }
-  deleteRolesFromUser(user: User, roles: Role[]): Promise<void>{
-    return this.appContext.Application.switchMap(app => {
+  deleteRolesFromGroup(group: Group, roles: Role[]): Promise<void>{
+    return this.appContext.Application.pipe(switchMap(app => {
       let params = new HttpParams();
-      params = params.set("idMember", user.IdMember.toString());
+      params = params.set("idMember", group.IdMember.toString());
       let request = new HttpRequest<any>("DELETE", `api/${app.AppName}/memberroles`, roles.map(_ => _.IdRole), {params: params});
 
-      return this.httpClient.request(request).pipe(catchError(this.common.handleError));
-    }).toPromise();
+      return this.httpClient.request(request).pipe(catchError(this.common.handleError("deleteRolesFromGroup", null)));
+    })).toPromise();
   }
 }

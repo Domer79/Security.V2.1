@@ -1,17 +1,17 @@
 import { Component, OnInit, ElementRef, OnDestroy } from '@angular/core';
 import { Router, NavigationEnd, ActivatedRoute, RouterEvent } from '@angular/router';
 import { Location } from '@angular/common';
-import { Subscription } from 'rxjs/Subscription';
-import { User } from '../../../contracts/models/user';
+import { Subscription } from 'rxjs';
+import { Group } from '../../../contracts/models/group';
 
 type ActiveLink = 'PROFILE' | 'GROUPS' | 'ROLES';
 
 @Component({
-  selector: 'app-user-detail',
-  templateUrl: './user-detail.component.html',
-  styleUrls: ['./user-detail.component.scss']
+  selector: 'app-group-detail',
+  templateUrl: './group-detail.component.html',
+  styleUrls: ['./group-detail.component.scss']
 })
-export class UserDetailComponent implements OnInit, OnDestroy {
+export class GroupDetailComponent implements OnInit, OnDestroy {
   routerEventSubscriber: Subscription;
   fragment: string;
   link: ActiveLink;
