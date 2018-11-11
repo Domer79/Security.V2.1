@@ -1,4 +1,3 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -12,16 +11,16 @@ import { UsersService } from './services/users.service';
 import { CommonService } from './system/service/common.service';
 import { SecurityService } from './services/security.service';
 import { SettingsComponent } from './settings/settings.component';
-import { MainModule } from './main/main.module';
 import { ApplicationService } from './services/application.service';
 import { ApplicationContextService } from './services/application-context.service';
 import { ApplicationPageComponent } from './application-page/application-page.component';
-import { APP_BASE_HREF } from '@angular/common';
 import { ApplicationComponent } from './application/application.component';
 import { ApplicationInfoComponent } from './application-info/application-info.component';
 import { ApplicationRedirectComponent } from './application-redirect/application-redirect.component';
 import { HttpNotFoundComponent } from './http-not-found/http-not-found.component';
 import { GroupsService } from './services/groups.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -34,7 +33,8 @@ import { GroupsService } from './services/groups.service';
     HttpNotFoundComponent
   ],
   imports: [
-    BrowserModule,
+    CommonModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
     NgbModule.forRoot(),

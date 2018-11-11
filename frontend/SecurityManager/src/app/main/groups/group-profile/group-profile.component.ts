@@ -6,6 +6,7 @@ import { Observable } from 'rxjs';
 import { map } from "rxjs/operators";
 import { Group } from '../../../contracts/models/group';
 import { GroupsService } from '../../../services/groups.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'group-profile',
@@ -30,9 +31,11 @@ export class GroupProfileComponent implements OnInit {
     // });
   }
 
-  onSubmit(group: Group):void{
-    this.groupsService.update(group).then(() => {
-      this.group$ = this.groupsService.getElement(this.idMember);
+  onSubmit(groupForm: NgForm):void{
+    this.group$.subscribe(group => {
+      this.groupsService.update(group).then(() => {
+        groupForm.control.markAsPristine();
+      });
     });
   }
 

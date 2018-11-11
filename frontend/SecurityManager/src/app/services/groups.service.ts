@@ -17,8 +17,8 @@ export class GroupsService {
     private appContext: ApplicationContextService
   ) { }
 
-  createEmpty(prefix: string): Observable<Group> {
-    return this.httpClient.get<Group>("api/groups", {params: {prefixForRequired: 'new_group'}}).pipe(catchError(this.common.handleError("createEmpty", null)));
+  createEmpty(prefix: string = null): Observable<Group> {
+    return this.httpClient.get<Group>("api/groups", {params: {prefix: prefix || 'new_group'}}).pipe(catchError(this.common.handleError("createEmpty", null)));
   }
   getByName(name: string): Observable<Group> {
     return this.httpClient.get<Group>("api/groups", {params: {name}}).pipe(catchError(this.common.handleError("getByName", null)));

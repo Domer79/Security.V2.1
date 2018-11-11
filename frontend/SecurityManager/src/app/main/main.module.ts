@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MainRoutingModule } from './main-routing/main-routing.module';
 import { MainComponent } from './main.component';
 import { RolesComponent } from './roles/roles.component';
+import { SidePanelService } from './services/side-panel.service';
 
 
 @NgModule({
@@ -13,6 +14,9 @@ import { RolesComponent } from './roles/roles.component';
   declarations: [
     MainComponent,
     RolesComponent
+  ],
+  providers: [
+    SidePanelService
   ]
 })
 export class MainModule { }

@@ -1,6 +1,6 @@
 <div class="card" >
   <div class="card-body">
-    <form (ngSubmit)="onSubmit(group)" #groupForm="ngForm" *ngIf="group$ | async; let group">
+    <form (ngSubmit)="onSubmit(groupForm)" #groupForm="ngForm" *ngIf="group$ | async; let group" [ngFormOptions]="{updateOn: 'change'}">
       <h5 class="card-title">{{group.Name}} [{{group.Description}}]</h5>
       <hr>
       <div class="input-group indent">

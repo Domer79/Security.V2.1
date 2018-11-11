@@ -5,7 +5,7 @@ type LinkEnum = 'USERS'|'GROUPS'|'ROLES';
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
-  styleUrls: ['./main.component.scss']
+  styleUrls: ['./main.component.sass']
 })
 export class MainComponent implements OnInit {
 

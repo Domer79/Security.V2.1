@@ -1,6 +1,7 @@
 <div>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#usersMenu" aria-controls="usersMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#usersMenu" aria-controls="usersMenu"
+      aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -8,7 +9,7 @@
       <button class="btn btn-outline-success" (click)="createEmptyUser()">Create</button>
     </div>
   </nav>
-  <ngb-accordion [closeOthers]="true" activeIds="{{selectedId | async}}">
+  <!-- <ngb-accordion [closeOthers]="true" activeIds="{{selectedId | async}}">
     <ngb-panel *ngFor="let user of users | async" id="member{{user.IdMember}}">
       <ng-template ngbPanelTitle>
         <a routerLink="{{user.Login}}">{{user.Login}}</a>
@@ -17,5 +18,17 @@
         <router-outlet></router-outlet>
       </ng-template>
     </ngb-panel>
-  </ngb-accordion>
+  </ngb-accordion> -->
+  <div style="position: relative">
+    <ul class="list-group">
+      <li class="list-group-item selectable" [class.select]="selectedUser ? selectedUser.IdMember == user.IdMember : false"
+        (click)="selectUser(user)" *ngFor="let user of users | async;" id="member{{user.IdMember}}">{{user.Login}}</li>
+    </ul>
+    <div class="side-panel" [class.open]="isOpenPanel()">
+      <button type="button" class="close" aria-label="Close" (click)="closePanel()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 </div>

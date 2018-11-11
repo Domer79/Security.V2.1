@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, ParamMap } from '@angular/router';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 import { User } from '../../../contracts/models/user';
 import { UsersService } from '../../../services/users.service';
-import { NgForm } from '@angular/forms';
+import { NgForm, Form } from '@angular/forms';
 import { map } from 'rxjs/operators';
+import { SidePanelService } from '../../services/side-panel.service';
 
 @Component({
   selector: 'app-profile',
@@ -16,7 +17,9 @@ export class ProfileComponent implements OnInit {
   user$: Observable<User>;
   constructor(
     private route: ActivatedRoute,
-    private usersService: UsersService
+    private usersService: UsersService,
+    private router: Router,
+    private sidePanelService: SidePanelService
   ) { }
 
   ngOnInit() {
@@ -29,9 +32,11 @@ export class ProfileComponent implements OnInit {
     // });
   }
 
-  onSubmit(user: User):void{
-    this.usersService.update(user).then(() => {
-      this.user$ = this.usersService.getElement(this.idMember);
+  onSubmit(userForm: NgForm):void{
+    this.user$.subscribe(user => {
+      this.usersService.update(user).then(() => {
+        userForm.control.markAsPristine();
+      });
     });
   }
 

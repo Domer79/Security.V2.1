@@ -1,6 +1,6 @@
 <div class="card" >
   <div class="card-body">
-    <form (ngSubmit)="onSubmit(user)" #userForm="ngForm" *ngIf="user$ | async; let user">
+    <form (ngSubmit)="onSubmit(userForm)" #userForm="ngForm" *ngIf="user$ | async; let user" [ngFormOptions]="{updateOn: 'change'}">
       <h5 class="card-title" [class.active]="user.Status" [class.inactive]="!user.Status">{{user.LastName}} {{user.FirstName}}</h5>
       <hr>
       <div class="input-group indent">
@@ -29,7 +29,7 @@
       </div>
       <div class="btn-group-toggle indent" data-toggle="buttons">
         <label class="btn btn-secondary active">
-          <input type="checkbox" checked autocomplete="off" [(ngModel)]="user.Status" name="status" class="form-control"> Change status
+          <input type="checkbox" autocomplete="off" [(ngModel)]="user.Status" name="status" class="form-control"> Change status {{user.Status}}
         </label>
       </div>
       <hr>

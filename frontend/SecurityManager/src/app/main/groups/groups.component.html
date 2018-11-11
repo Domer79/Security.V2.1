@@ -1,12 +1,34 @@
 <div>
-  <ngb-accordion [closeOthers]="true" activeIds="{{selectedId | async}}">
-    <ngb-panel *ngFor="let group of groups | async" id="member{{group.IdMember}}">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#groupsMenu" aria-controls="groupsMenu"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="groupsMenu">
+      <button class="btn btn-outline-success" (click)="createEmptyGroup()">Create</button>
+    </div>
+  </nav>
+  <!-- <ngb-accordion [closeOthers]="true" activeIds="{{selectedId | async}}">
+    <ngb-panel *ngFor="let user of users | async" id="member{{user.IdMember}}">
       <ng-template ngbPanelTitle>
-        <a routerLink="{{group.Name}}">{{group.Name}}</a>
+        <a routerLink="{{user.Login}}">{{user.Login}}</a>
       </ng-template>
       <ng-template ngbPanelContent>
         <router-outlet></router-outlet>
       </ng-template>
     </ngb-panel>
-  </ngb-accordion>
+  </ngb-accordion> -->
+  <div style="position: relative">
+    <ul class="list-group">
+      <li class="list-group-item selectable" [class.select]="selectedGroup ? selectedGroup.IdMember == group.IdMember : false"
+        (click)="selectGroup(group)" *ngFor="let group of groups | async;" id="member{{group.IdMember}}">{{group.Name}}</li>
+    </ul>
+    <div class="side-panel" [class.open]="isOpenPanel()">
+      <button type="button" class="close" aria-label="Close" (click)="closePanel()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 </div>
