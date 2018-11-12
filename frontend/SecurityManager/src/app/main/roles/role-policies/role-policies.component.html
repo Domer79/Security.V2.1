@@ -1,0 +1,11 @@
+<select-item-dialog #content [items]="nonIncludedPolicies$" (save)="setGrants($event)" (cancel)="cancelSetGrants($event)"></select-item-dialog>
+<confirm-dialog #confirmDialogContent confirmmessage="Подтвердите удаление!" (ok)="removePolicies()" (cancel)="deleteCancel()"></confirm-dialog>
+
+<div class="container-fluid side-list">
+  <button type="button" class="btn btn-outline-secondary" (click)="open(content)">Add</button>
+  <button type="button" class="btn btn-outline-secondary" (click)="open(confirmDialogContent)" [hidden]="selectedPolicies.length === 0">Remove</button>
+  <hr>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let policy of policies$ | async" (click)="policy.selected = !policy.selected;select(policy)" [class.active]="policy.selected">{{policy.Name}}</li>
+  </ul>
+</div>

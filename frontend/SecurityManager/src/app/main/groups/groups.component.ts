@@ -37,8 +37,8 @@ export class GroupsComponent implements OnInit, AfterViewChecked {
         let memberId = selectedId.substring(6);
         let userId = +memberId;
         this.groups.subscribe(groups => {
-          let user = groups.filter((group: Group) => group.IdMember === userId)[0];
-          this.selectGroup(user);
+          let group = groups.filter((group: Group) => group.IdMember === userId)[0];
+          this.selectGroup(group);
         });
       });
     }

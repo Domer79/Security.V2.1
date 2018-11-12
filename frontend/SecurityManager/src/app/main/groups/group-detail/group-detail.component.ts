@@ -4,7 +4,7 @@ import { Location } from '@angular/common';
 import { Subscription } from 'rxjs';
 import { Group } from '../../../contracts/models/group';
 
-type ActiveLink = 'PROFILE' | 'GROUPS' | 'ROLES';
+type ActiveLink = 'PROFILE' | 'USERS' | 'ROLES';
 
 @Component({
   selector: 'app-group-detail',

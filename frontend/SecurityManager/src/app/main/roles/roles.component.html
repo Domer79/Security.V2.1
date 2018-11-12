@@ -1,3 +1,24 @@
-<p>
-  roles works!
-</p>
+<div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#rolesMenu" aria-controls="rolesMenu"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="rolesMenu">
+      <button class="btn btn-outline-success" (click)="createEmptyRole()">Create</button>
+    </div>
+  </nav>
+  <div style="position: relative">
+    <ul class="list-group">
+      <li class="list-group-item selectable" [class.select]="selectedRole ? selectedRole.IdRole == role.IdRole : false"
+        (click)="selectRole(role)" *ngFor="let role of roles | async;" id="role{{role.IdRole}}">{{role.Name}}</li>
+    </ul>
+    <div class="side-panel" [class.open]="isOpenPanel()">
+      <button type="button" class="close" aria-label="Close" (click)="closePanel()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

@@ -13,7 +13,7 @@ export class Policy implements IEntity {
     }
 }
 
-class SecObject{
+export class SecObject{
     IdSecObject: number;
     ObjectName: string;
 }

@@ -19,7 +19,10 @@ const mainRoutes: Routes = [
         path: 'groups', 
         loadChildren: "app/main/groups/groups.module#GroupsModule" 
       },
-      { path: 'roles', component: RolesComponent }
+      { 
+        path: 'roles', 
+        loadChildren: "app/main/roles/roles.module#RolesModule"
+      }
     ]
   }
 ];

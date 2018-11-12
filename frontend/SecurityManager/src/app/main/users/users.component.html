@@ -9,16 +9,6 @@
       <button class="btn btn-outline-success" (click)="createEmptyUser()">Create</button>
     </div>
   </nav>
-  <!-- <ngb-accordion [closeOthers]="true" activeIds="{{selectedId | async}}">
-    <ngb-panel *ngFor="let user of users | async" id="member{{user.IdMember}}">
-      <ng-template ngbPanelTitle>
-        <a routerLink="{{user.Login}}">{{user.Login}}</a>
-      </ng-template>
-      <ng-template ngbPanelContent>
-        <router-outlet></router-outlet>
-      </ng-template>
-    </ngb-panel>
-  </ngb-accordion> -->
   <div style="position: relative">
     <ul class="list-group">
       <li class="list-group-item selectable" [class.select]="selectedUser ? selectedUser.IdMember == user.IdMember : false"
