@@ -84766,3 +84766,2493 @@ key=[name] : value=[new_group2272]
 {
   Content-Type: application/json; charset=utf-8
 }
+2018-11-12 10:56:47.7324 ##Trace [Security.WebApi.Request] [Applications/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/applications?name=SecurityManager', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 10:56:48.3514 ##Trace [Security.WebApi.Response] [Applications/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Application, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 10:56:49.2132 ##Trace [Security.WebApi.Request] [Applications/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/applications?name=SecurityManager', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/users
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 10:56:49.2132 ##Trace [Security.WebApi.Request] [Applications/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/applications?name=SecurityManager', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/users
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 10:56:49.2132 ##Trace [Security.WebApi.Request] [User/Get] | Method: GET, RequestUri: 'http://localhost:14797/api/user', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/users
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 10:56:49.2132 ##Trace [Security.WebApi.Request] [Applications/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/applications?name=SecurityManager', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/users
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 10:56:49.2302 ##Trace [Security.WebApi.Response] [Applications/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Application, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 10:56:49.2302 ##Trace [Security.WebApi.Response] [Applications/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Application, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 10:56:49.2457 ##Trace [Security.WebApi.Response] [Applications/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Application, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 10:56:49.2603 ##Trace [Security.WebApi.Response] [User/Get] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.User, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 10:57:15.2102 ##Trace [Security.WebApi.Request] [User/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/user?loginOrEmail=adm-atp', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/users
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 10:57:15.2262 ##Trace [Security.WebApi.Response] [User/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.User, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 10:57:20.5372 ##Trace [Security.WebApi.Request] [Applications/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/applications?name=SecurityManager', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/users/adm-atp/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 10:57:20.5512 ##Trace [Security.WebApi.Response] [Applications/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Application, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 10:57:20.5848 ##Trace [Security.WebApi.Request] [MemberRoles/GetRolesByIdMember] | Method: GET, RequestUri: 'http://localhost:14797/api/SecurityManager/memberroles?idMember=2200', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/users/adm-atp/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 10:57:20.6033 ##Trace [Security.WebApi.Response] [MemberRoles/GetRolesByIdMember] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Role, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 10:57:23.1236 ##Trace [Security.WebApi.Request] [User/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/user?loginOrEmail=adm-atp', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/users/adm-atp/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 10:57:23.1316 ##Trace [Security.WebApi.Response] [User/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.User, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 10:57:23.1641 ##Trace [Security.WebApi.Request] [Applications/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/applications?name=SecurityManager', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/users/adm-atp/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 10:57:23.1641 ##Trace [Security.WebApi.Request] [Applications/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/applications?name=SecurityManager', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/users/adm-atp/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 10:57:23.1641 ##Trace [Security.WebApi.Response] [Applications/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Application, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 10:57:23.1812 ##Trace [Security.WebApi.Request] [User/Get] | Method: GET, RequestUri: 'http://localhost:14797/api/user', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/users/adm-atp/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 10:57:23.1641 ##Trace [Security.WebApi.Request] [User/Get] | Method: GET, RequestUri: 'http://localhost:14797/api/user', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/users/adm-atp/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 10:57:23.1812 ##Trace [Security.WebApi.Response] [Applications/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Application, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 10:57:23.1812 ##Trace [Security.WebApi.Request] [Applications/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/applications?name=SecurityManager', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/users/adm-atp/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 10:57:23.2207 ##Trace [Security.WebApi.Response] [User/Get] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.User, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 10:57:23.2262 ##Trace [Security.WebApi.Response] [User/Get] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.User, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 10:57:23.2027 ##Trace [Security.WebApi.Request] [Applications/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/applications?name=SecurityManager', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/users/adm-atp/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 10:57:23.2412 ##Trace [Security.WebApi.Response] [Applications/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Application, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 10:57:23.2612 ##Trace [Security.WebApi.Response] [Applications/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Application, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 10:57:23.3403 ##Trace [Security.WebApi.Request] [MemberRoles/GetRolesByIdMember] | Method: GET, RequestUri: 'http://localhost:14797/api/SecurityManager/memberroles?idMember=2200', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/users/adm-atp/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 10:57:23.3688 ##Trace [Security.WebApi.Response] [MemberRoles/GetRolesByIdMember] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Role, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 10:57:27.0171 ##Trace [Security.WebApi.Request] [Groups/Get] | Method: GET, RequestUri: 'http://localhost:14797/api/groups', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 10:57:27.0306 ##Trace [Security.WebApi.Response] [Groups/Get] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Group, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 10:58:29.9258 ##Trace [Security.WebApi.Request] [Groups/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/groups?name=7', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 10:58:29.9513 ##Trace [Security.WebApi.Response] [Groups/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Group, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 10:59:30.1533 ##Trace [Security.WebApi.Request] [Applications/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/applications?name=SecurityManager', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 10:59:30.1773 ##Trace [Security.WebApi.Response] [Applications/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Application, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 10:59:30.4061 ##Trace [Security.WebApi.Request] [Applications/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/applications?name=SecurityManager', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/users
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 10:59:30.4061 ##Trace [Security.WebApi.Request] [Applications/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/applications?name=SecurityManager', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/users
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 10:59:30.4161 ##Trace [Security.WebApi.Request] [Applications/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/applications?name=SecurityManager', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/users
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 10:59:30.4161 ##Trace [Security.WebApi.Response] [Applications/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Application, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 10:59:30.4161 ##Trace [Security.WebApi.Response] [Applications/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Application, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 10:59:30.4161 ##Trace [Security.WebApi.Request] [User/Get] | Method: GET, RequestUri: 'http://localhost:14797/api/user', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/users
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 10:59:30.4381 ##Trace [Security.WebApi.Response] [Applications/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Application, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 10:59:30.4646 ##Trace [Security.WebApi.Response] [User/Get] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.User, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 10:59:32.6323 ##Trace [Security.WebApi.Request] [Groups/Get] | Method: GET, RequestUri: 'http://localhost:14797/api/groups', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 10:59:32.6323 ##Trace [Security.WebApi.Response] [Groups/Get] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Group, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 10:59:35.3982 ##Trace [Security.WebApi.Request] [Groups/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/groups?name=7', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 10:59:35.4453 ##Trace [Security.WebApi.Response] [Groups/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Group, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 10:59:40.3859 ##Trace [Security.WebApi.Request] [Applications/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/applications?name=SecurityManager', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/7/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 10:59:40.3859 ##Trace [Security.WebApi.Response] [Applications/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Application, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 10:59:40.4154 ##Trace [Security.WebApi.Request] [MemberRoles/GetRolesByIdMember] | Method: GET, RequestUri: 'http://localhost:14797/api/SecurityManager/memberroles?idMember=1009', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/7/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 10:59:40.4154 ##Trace [Security.WebApi.Response] [MemberRoles/GetRolesByIdMember] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Role, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 10:59:43.4809 ##Trace [Security.WebApi.Request] [Groups/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/groups?name=7', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/7/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 10:59:43.8125 ##Trace [Security.WebApi.Response] [Groups/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Group, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 10:59:43.8505 ##Trace [Security.WebApi.Request] [Applications/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/applications?name=SecurityManager', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/7/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 10:59:43.8505 ##Trace [Security.WebApi.Request] [Applications/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/applications?name=SecurityManager', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/7/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 10:59:43.8505 ##Trace [Security.WebApi.Response] [Applications/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Application, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 10:59:43.8871 ##Trace [Security.WebApi.Request] [Groups/Get] | Method: GET, RequestUri: 'http://localhost:14797/api/groups', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/7/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 10:59:43.8871 ##Trace [Security.WebApi.Response] [Applications/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Application, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 10:59:43.9110 ##Trace [Security.WebApi.Request] [Applications/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/applications?name=SecurityManager', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/7/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 10:59:43.8666 ##Trace [Security.WebApi.Request] [Groups/Get] | Method: GET, RequestUri: 'http://localhost:14797/api/groups', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/7/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 10:59:43.8871 ##Trace [Security.WebApi.Request] [Applications/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/applications?name=SecurityManager', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/7/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 10:59:43.9376 ##Trace [Security.WebApi.Response] [Groups/Get] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Group, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 10:59:43.9706 ##Trace [Security.WebApi.Response] [Applications/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Application, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 10:59:43.9761 ##Trace [Security.WebApi.Response] [Groups/Get] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Group, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 10:59:43.9761 ##Trace [Security.WebApi.Response] [Applications/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Application, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 10:59:45.1098 ##Trace [Security.WebApi.Request] [MemberRoles/GetRolesByIdMember] | Method: GET, RequestUri: 'http://localhost:14797/api/SecurityManager/memberroles?idMember=1009', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/7/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 10:59:45.1284 ##Trace [Security.WebApi.Response] [MemberRoles/GetRolesByIdMember] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Role, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 10:59:59.4306 ##Trace [Security.WebApi.Request] [Applications/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/applications?name=SecurityManager', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/7/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 10:59:59.4306 ##Trace [Security.WebApi.Response] [Applications/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Application, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 10:59:59.4622 ##Trace [Security.WebApi.Request] [MemberRoles/GetExceptRolesByIdMember] | Method: GET, RequestUri: 'http://localhost:14797/api/SecurityManager/memberroles/except?idMember=1009', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/7/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 10:59:59.4622 ##Trace [Security.WebApi.Response] [MemberRoles/GetExceptRolesByIdMember] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Role, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 11:00:02.8135 ##Trace [Security.WebApi.Request] [Applications/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/applications?name=SecurityManager', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/7/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 11:00:02.8385 ##Trace [Security.WebApi.Response] [Applications/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Application, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 11:00:02.9151 ##Trace [Security.WebApi.Request] [MemberRoles/AddRolesToMemberByIds] | Method: PUT, RequestUri: 'http://localhost:14797/api/SecurityManager/memberroles?idMember=1009', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/7/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 11
+  Content-Type: application/json
+}
+2018-11-12 11:00:03.5522 ##Trace [Security.WebApi.Response] [MemberRoles/AddRolesToMemberByIds] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: <null>, Headers:
+{
+}
+2018-11-12 11:00:03.5637 ##Trace [Security.WebApi.Request] [Applications/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/applications?name=SecurityManager', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/7/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 11:00:03.5723 ##Trace [Security.WebApi.Response] [Applications/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Application, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 11:00:03.5873 ##Trace [Security.WebApi.Request] [MemberRoles/GetRolesByIdMember] | Method: GET, RequestUri: 'http://localhost:14797/api/SecurityManager/memberroles?idMember=1009', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/7/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 11:00:03.5873 ##Trace [Security.WebApi.Response] [MemberRoles/GetRolesByIdMember] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Role, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 11:00:07.6853 ##Trace [Security.WebApi.Request] [Groups/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/groups?name=Group1', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/7/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 11:00:07.6998 ##Trace [Security.WebApi.Response] [Groups/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Group, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 11:00:07.7213 ##Trace [Security.WebApi.Request] [Groups/Get] | Method: GET, RequestUri: 'http://localhost:14797/api/groups', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/Group1/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 11:00:07.7213 ##Trace [Security.WebApi.Request] [Applications/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/applications?name=SecurityManager', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/Group1/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 11:00:07.7333 ##Trace [Security.WebApi.Response] [Groups/Get] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Group, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 11:00:07.7333 ##Trace [Security.WebApi.Response] [Applications/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Application, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 11:00:07.7518 ##Trace [Security.WebApi.Request] [MemberRoles/GetRolesByIdMember] | Method: GET, RequestUri: 'http://localhost:14797/api/SecurityManager/memberroles?idMember=2244', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/Group1/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 11:00:07.7603 ##Trace [Security.WebApi.Response] [MemberRoles/GetRolesByIdMember] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Role, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 11:00:09.4596 ##Trace [Security.WebApi.Request] [Groups/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/groups?name=7', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/Group1/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 11:00:09.4596 ##Trace [Security.WebApi.Response] [Groups/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Group, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 11:00:09.4806 ##Trace [Security.WebApi.Request] [Groups/Get] | Method: GET, RequestUri: 'http://localhost:14797/api/groups', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/7/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 11:00:09.4806 ##Trace [Security.WebApi.Request] [Applications/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/applications?name=SecurityManager', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/7/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 11:00:09.4806 ##Trace [Security.WebApi.Response] [Groups/Get] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Group, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 11:00:09.4971 ##Trace [Security.WebApi.Response] [Applications/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Application, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 11:00:09.5167 ##Trace [Security.WebApi.Request] [MemberRoles/GetRolesByIdMember] | Method: GET, RequestUri: 'http://localhost:14797/api/SecurityManager/memberroles?idMember=1009', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/7/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 11:00:09.5262 ##Trace [Security.WebApi.Response] [MemberRoles/GetRolesByIdMember] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Role, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 11:00:12.5549 ##Trace [Security.WebApi.Request] [Groups/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/groups?name=7', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/7/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 11:00:12.5549 ##Trace [Security.WebApi.Response] [Groups/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Group, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 11:00:12.6019 ##Trace [Security.WebApi.Request] [Applications/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/applications?name=SecurityManager', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/7/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 11:00:12.6019 ##Trace [Security.WebApi.Request] [Applications/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/applications?name=SecurityManager', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/7/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 11:00:12.6310 ##Trace [Security.WebApi.Response] [Applications/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Application, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 11:00:12.6320 ##Trace [Security.WebApi.Request] [Groups/Get] | Method: GET, RequestUri: 'http://localhost:14797/api/groups', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/7/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 11:00:12.6550 ##Trace [Security.WebApi.Request] [Applications/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/applications?name=SecurityManager', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/7/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 11:00:12.6320 ##Trace [Security.WebApi.Response] [Applications/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Application, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 11:00:12.6320 ##Trace [Security.WebApi.Request] [Groups/Get] | Method: GET, RequestUri: 'http://localhost:14797/api/groups', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/7/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 11:00:12.6320 ##Trace [Security.WebApi.Request] [Applications/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/applications?name=SecurityManager', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/7/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 11:00:12.6815 ##Trace [Security.WebApi.Response] [Applications/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Application, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 11:00:12.6815 ##Trace [Security.WebApi.Response] [Groups/Get] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Group, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 11:00:12.7000 ##Trace [Security.WebApi.Response] [Applications/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Application, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 11:00:12.7000 ##Trace [Security.WebApi.Response] [Groups/Get] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Group, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 11:00:12.7160 ##Trace [Security.WebApi.Request] [MemberRoles/GetRolesByIdMember] | Method: GET, RequestUri: 'http://localhost:14797/api/SecurityManager/memberroles?idMember=1009', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/7/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 11:00:12.7586 ##Trace [Security.WebApi.Response] [MemberRoles/GetRolesByIdMember] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Role, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 11:10:55.4105 ##Trace [Security.WebApi.Request] [Groups/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/groups?name=Group1', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/7/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 11:10:55.4355 ##Trace [Security.WebApi.Response] [Groups/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Group, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 11:10:55.4511 ##Trace [Security.WebApi.Request] [Groups/Get] | Method: GET, RequestUri: 'http://localhost:14797/api/groups', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/Group1/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 11:10:55.4511 ##Trace [Security.WebApi.Request] [Applications/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/applications?name=SecurityManager', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/Group1/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 11:10:55.4611 ##Trace [Security.WebApi.Response] [Groups/Get] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Group, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 11:10:55.4611 ##Trace [Security.WebApi.Response] [Applications/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Application, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 11:10:55.4896 ##Trace [Security.WebApi.Request] [MemberRoles/GetRolesByIdMember] | Method: GET, RequestUri: 'http://localhost:14797/api/SecurityManager/memberroles?idMember=2244', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/Group1/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 11:10:55.4991 ##Trace [Security.WebApi.Response] [MemberRoles/GetRolesByIdMember] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Role, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 11:10:56.0116 ##Trace [Security.WebApi.Request] [Groups/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/groups?name=new_group2270', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/Group1/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 11:10:56.0116 ##Trace [Security.WebApi.Response] [Groups/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Group, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 11:10:56.0356 ##Trace [Security.WebApi.Request] [Groups/Get] | Method: GET, RequestUri: 'http://localhost:14797/api/groups', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/new_group2270/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 11:10:56.0391 ##Trace [Security.WebApi.Request] [Applications/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/applications?name=SecurityManager', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/new_group2270/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 11:10:56.0391 ##Trace [Security.WebApi.Response] [Groups/Get] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Group, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 11:10:56.0391 ##Trace [Security.WebApi.Response] [Applications/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Application, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 11:10:56.0716 ##Trace [Security.WebApi.Request] [MemberRoles/GetRolesByIdMember] | Method: GET, RequestUri: 'http://localhost:14797/api/SecurityManager/memberroles?idMember=2271', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/new_group2270/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 11:10:56.0716 ##Trace [Security.WebApi.Response] [MemberRoles/GetRolesByIdMember] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Role, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 11:11:02.1732 ##Trace [Security.WebApi.Request] [Groups/Get] | Method: GET, RequestUri: 'http://localhost:14797/api/groups', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 11:11:02.1832 ##Trace [Security.WebApi.Response] [Groups/Get] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Group, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 11:11:03.4534 ##Trace [Security.WebApi.Request] [Groups/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/groups?name=astana', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 11:11:03.4634 ##Trace [Security.WebApi.Response] [Groups/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Group, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 11:11:14.0232 ##Trace [Security.WebApi.Request] [Groups/Get] | Method: GET, RequestUri: 'http://localhost:14797/api/groups', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 11:11:14.0232 ##Trace [Security.WebApi.Response] [Groups/Get] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Group, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 11:11:26.5068 ##Trace [Security.WebApi.Request] [Groups/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/groups?name=8', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 11:11:26.5068 ##Trace [Security.WebApi.Response] [Groups/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Group, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 11:11:37.2673 ##Trace [Security.WebApi.Request] [Groups/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/groups?name=Group2', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/8/profile
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 11:11:37.2758 ##Trace [Security.WebApi.Response] [Groups/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Group, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 11:11:39.0974 ##Trace [Security.WebApi.Request] [Applications/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/applications?name=SecurityManager', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/Group2/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 11:11:39.1074 ##Trace [Security.WebApi.Response] [Applications/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Application, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 11:11:39.1209 ##Trace [Security.WebApi.Request] [MemberRoles/GetRolesByIdMember] | Method: GET, RequestUri: 'http://localhost:14797/api/SecurityManager/memberroles?idMember=2245', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/Group2/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 11:11:39.1319 ##Trace [Security.WebApi.Response] [MemberRoles/GetRolesByIdMember] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Role, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 11:11:42.5308 ##Trace [Security.WebApi.Request] [Groups/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/groups?name=7', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/Group2/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 11:11:42.5378 ##Trace [Security.WebApi.Response] [Groups/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Group, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 11:11:42.5538 ##Trace [Security.WebApi.Request] [Applications/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/applications?name=SecurityManager', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/7/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 11:11:42.5538 ##Trace [Security.WebApi.Response] [Applications/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Application, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 11:11:42.5773 ##Trace [Security.WebApi.Request] [MemberRoles/GetRolesByIdMember] | Method: GET, RequestUri: 'http://localhost:14797/api/SecurityManager/memberroles?idMember=1009', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/7/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 11:11:42.5848 ##Trace [Security.WebApi.Response] [MemberRoles/GetRolesByIdMember] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Role, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 11:11:47.1617 ##Trace [Security.WebApi.Request] [Groups/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/groups?name=7', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/7/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 11:11:47.1717 ##Trace [Security.WebApi.Response] [Groups/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Group, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 11:11:47.2117 ##Trace [Security.WebApi.Request] [Applications/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/applications?name=SecurityManager', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/7/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 11:11:47.2117 ##Trace [Security.WebApi.Request] [Applications/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/applications?name=SecurityManager', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/7/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 11:11:47.2117 ##Trace [Security.WebApi.Response] [Applications/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Application, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 11:11:47.2488 ##Trace [Security.WebApi.Request] [Applications/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/applications?name=SecurityManager', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/7/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 11:11:47.2488 ##Trace [Security.WebApi.Request] [Applications/GetByName] | Method: GET, RequestUri: 'http://localhost:14797/api/applications?name=SecurityManager', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/7/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 11:11:47.2488 ##Trace [Security.WebApi.Request] [Groups/Get] | Method: GET, RequestUri: 'http://localhost:14797/api/groups', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/7/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 11:11:47.2488 ##Trace [Security.WebApi.Request] [Groups/Get] | Method: GET, RequestUri: 'http://localhost:14797/api/groups', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/7/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 11:11:47.2903 ##Trace [Security.WebApi.Response] [Applications/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Application, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 11:11:47.2903 ##Trace [Security.WebApi.Response] [Applications/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Application, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 11:11:47.3053 ##Trace [Security.WebApi.Response] [Groups/Get] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Group, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 11:11:47.3053 ##Trace [Security.WebApi.Response] [Groups/Get] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Group, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 11:11:47.2788 ##Trace [Security.WebApi.Response] [Applications/GetByName] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[Security.Model.Application, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}
+2018-11-12 11:11:47.3253 ##Trace [Security.WebApi.Request] [MemberRoles/GetRolesByIdMember] | Method: GET, RequestUri: 'http://localhost:14797/api/SecurityManager/memberroles?idMember=1009', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Cache-Control: no-cache
+  Connection: keep-alive
+  Pragma: no-cache
+  Accept: application/json
+  Accept: text/plain
+  Accept: */*
+  Accept-Encoding: gzip
+  Accept-Encoding: deflate
+  Accept-Encoding: br
+  Accept-Language: ru-RU
+  Accept-Language: ru; q=0.9
+  Accept-Language: en-US; q=0.8
+  Accept-Language: en; q=0.7
+  Host: localhost:14797
+  Referer: http://localhost:4200/SecurityManager/main/groups/7/roles
+  User-Agent: Mozilla/5.0
+  User-Agent: (Windows NT 10.0; Win64; x64)
+  User-Agent: AppleWebKit/537.36
+  User-Agent: (KHTML, like Gecko)
+  User-Agent: Chrome/70.0.3538.77
+  User-Agent: Safari/537.36
+  Origin: http://localhost:4200
+  Content-Length: 0
+}
+2018-11-12 11:11:47.3774 ##Trace [Security.WebApi.Response] [MemberRoles/GetRolesByIdMember] | StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.ObjectContent`1[[System.Collections.Generic.IEnumerable`1[[Security.Model.Role, Security.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Headers:
+{
+  Content-Type: application/json; charset=utf-8
+}

@@ -1,5 +1,5 @@
 import { Component, OnInit, AfterViewChecked } from '@angular/core';
-import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
+import { Router, ActivatedRoute, NavigationEnd, UrlSegment } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map } from "rxjs/operators"
 import { Location } from '@angular/common';
@@ -63,9 +63,36 @@ export class GroupsComponent implements OnInit, AfterViewChecked {
 
   selectGroup(group: Group): void{
     this.selectedGroup = group;
-    this.router.navigate([`${group.Name}`], {relativeTo: this.route});
+    this.navigateToLogin(`${group.Name}`);
     if (!this.sidePanelService.checkOpen())
       this.openPanel();
+  }
+
+  navigateToLogin(login: string): void {
+    var activatedRoute = this.route.children[0];
+    var segments: Observable<UrlSegment[]>[] = [];
+    var paths: string[] = [login];
+    while (activatedRoute != null){
+      let component: any = activatedRoute.component;
+      if (component.name === "GroupDetailComponent"){
+        activatedRoute = activatedRoute.children[0];
+        continue;
+      }
+
+      let segment = activatedRoute.url;
+      segments.push(segment)
+      activatedRoute = activatedRoute.children[0];
+    }
+
+    segments.forEach(element => {
+      element.subscribe(seg => {
+        if (seg.length == 1)
+          if (paths.indexOf(seg[0].path) === -1)
+            paths.push(seg[0].path)
+      });
+    });
+
+    this.router.navigate(paths, {relativeTo: this.route});
   }
 
   openPanel(){

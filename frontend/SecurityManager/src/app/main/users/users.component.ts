@@ -64,9 +64,15 @@ export class UsersComponent implements OnInit, AfterViewChecked {
 
   selectUser(user: User): void{
     this.selectedUser = user;
+    this.navigateToLogin(`${user.Login}`);
+    if (!this.sidePanelService.checkOpen())
+      this.openPanel();
+  }
+
+  navigateToLogin(login: string): void {
     var activatedRoute = this.route.children[0];
     var segments: Observable<UrlSegment[]>[] = [];
-    var paths: string[] = [`${user.Login}`];
+    var paths: string[] = [login];
     while (activatedRoute != null){
       let component: any = activatedRoute.component;
       if (component.name === "UserDetailComponent"){
@@ -88,8 +94,6 @@ export class UsersComponent implements OnInit, AfterViewChecked {
     });
 
     this.router.navigate(paths, {relativeTo: this.route});
-    if (!this.sidePanelService.checkOpen())
-      this.openPanel();
   }
 
   openPanel(){
