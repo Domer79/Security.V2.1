@@ -28,6 +28,7 @@ export class UsersComponent implements OnInit, AfterViewChecked {
 
   ngOnInit() {
     this.users = this.usersService.getAll();
+    this.sidePanelService.close();
 
     if (this.route.firstChild != null) {
       this.selectedId = this.route.firstChild.data.pipe(map((data: { user: User }) => {

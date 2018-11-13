@@ -33,16 +33,20 @@ namespace SecurityHttp
 
             var request = WebRequest.Create(builder.Uri);
             request.Method = WebRequestMethods.Http.Get;
-            using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
+            try
             {
-                if (response.StatusCode != HttpStatusCode.OK)
-                    throw ThrowsHelper.WebException("Произошла ошибка при выполнении запроса", response);
-
-                using (var sr = new StreamReader(response.GetResponseStream()))
+                using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
                 {
-                    var rawValue = sr.ReadToEnd();
-                    return (T)JsonConvert.DeserializeObject(rawValue, typeof(T));
+                    using (var sr = new StreamReader(response.GetResponseStream()))
+                    {
+                        var rawValue = sr.ReadToEnd();
+                        return (T)JsonConvert.DeserializeObject(rawValue, typeof(T));
+                    }
                 }
+            }
+            catch (WebException e)
+            {
+                throw ThrowsHelper.WebException("Произошла ошибка при выполнении запроса", e);
             }
         }
 
@@ -55,16 +59,21 @@ namespace SecurityHttp
 
             var request = WebRequest.Create(builder.Uri);
             request.Method = WebRequestMethods.Http.Get;
-            using (HttpWebResponse response = await request.GetResponseAsync().ConfigureAwait(false) as HttpWebResponse)
+            try
             {
-                if (response.StatusCode != HttpStatusCode.OK)
-                    throw ThrowsHelper.WebException("Произошла ошибка при выполнении запроса", response);
-
-                using (var sr = new StreamReader(response.GetResponseStream()))
+                using (HttpWebResponse response = await request.GetResponseAsync().ConfigureAwait(false) as HttpWebResponse)
                 {
-                    var rawValue = await sr.ReadToEndAsync().ConfigureAwait(false);
-                    return (T)JsonConvert.DeserializeObject(rawValue, typeof(T));
+                    using (var sr = new StreamReader(response.GetResponseStream()))
+                    {
+                        var rawValue = await sr.ReadToEndAsync().ConfigureAwait(false);
+                        return (T)JsonConvert.DeserializeObject(rawValue, typeof(T));
+                    }
                 }
+            }
+            catch (WebException e)
+            {
+                throw ThrowsHelper.WebException("Произошла ошибка при выполнении запроса", e);
+                throw;
             }
         }
 
@@ -85,12 +94,14 @@ namespace SecurityHttp
                 requestStream.Write(byteArray, 0, byteArray.Length);
             }
 
-            using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
+            try
             {
-                if (response.StatusCode != HttpStatusCode.OK)
-                    throw ThrowsHelper.WebException("Произошла ошибка при выполнении запроса", response);
-
+                request.GetResponse();
                 return true;
+            }
+            catch (WebException e)
+            {
+                throw ThrowsHelper.WebException("Произошла ошибка при выполнении запроса", e);
             }
         }
 
@@ -111,16 +122,20 @@ namespace SecurityHttp
                 requestStream.Write(byteArray, 0, byteArray.Length);
             }
 
-            using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
+            try
             {
-                if (response.StatusCode != HttpStatusCode.OK)
-                    throw ThrowsHelper.WebException("Произошла ошибка при выполнении запроса", response);
-
-                using (var sr = new StreamReader(response.GetResponseStream()))
+                using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
                 {
-                    var value = sr.ReadToEnd();
-                    return (T)JsonConvert.DeserializeObject(value, typeof(T));
+                    using (var sr = new StreamReader(response.GetResponseStream()))
+                    {
+                        var value = sr.ReadToEnd();
+                        return (T)JsonConvert.DeserializeObject(value, typeof(T));
+                    }
                 }
+            }
+            catch (WebException e)
+            {
+                throw ThrowsHelper.WebException("Произошла ошибка при выполнении запроса", e);
             }
         }
 
@@ -141,12 +156,14 @@ namespace SecurityHttp
                 await requestStream.WriteAsync(byteArray, 0, byteArray.Length).ConfigureAwait(false);
             }
 
-            using (HttpWebResponse response = await request.GetResponseAsync().ConfigureAwait(false) as HttpWebResponse)
+            try
             {
-                if (response.StatusCode != HttpStatusCode.OK)
-                    throw ThrowsHelper.WebException("Произошла ошибка при выполнении запроса", response);
-
+                await request.GetResponseAsync().ConfigureAwait(false);
                 return true;
+            }
+            catch (WebException e)
+            {
+                throw ThrowsHelper.WebException("Произошла ошибка при выполнении запроса", e);
             }
         }
 
@@ -167,16 +184,20 @@ namespace SecurityHttp
                 await requestStream.WriteAsync(byteArray, 0, byteArray.Length).ConfigureAwait(false);
             }
 
-            using (HttpWebResponse response = await request.GetResponseAsync().ConfigureAwait(false) as HttpWebResponse)
+            try
             {
-                if (response.StatusCode != HttpStatusCode.OK)
-                    throw ThrowsHelper.WebException("Произошла ошибка при выполнении запроса", response);
-
-                using (var sr = new StreamReader(response.GetResponseStream()))
+                using (HttpWebResponse response = await request.GetResponseAsync().ConfigureAwait(false) as HttpWebResponse)
                 {
-                    var value = await sr.ReadToEndAsync().ConfigureAwait(false);
-                    return (T)JsonConvert.DeserializeObject(value, typeof(T));
+                    using (var sr = new StreamReader(response.GetResponseStream()))
+                    {
+                        var value = await sr.ReadToEndAsync().ConfigureAwait(false);
+                        return (T)JsonConvert.DeserializeObject(value, typeof(T));
+                    }
                 }
+            }
+            catch (WebException e)
+            {
+                throw ThrowsHelper.WebException("Произошла ошибка при выполнении запроса", e);
             }
         }
 
@@ -197,12 +218,14 @@ namespace SecurityHttp
                 requestStream.Write(byteArray, 0, byteArray.Length);
             }
 
-            using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
+            try
             {
-                if (response.StatusCode != HttpStatusCode.OK)
-                    throw ThrowsHelper.WebException("Произошла ошибка при выполнении запроса", response);
-
+                request.GetResponse();
                 return true;
+            }
+            catch (WebException e)
+            {
+                throw ThrowsHelper.WebException("Произошла ошибка при выполнении запроса", e);
             }
         }
 
@@ -223,12 +246,14 @@ namespace SecurityHttp
                 await requestStream.WriteAsync(byteArray, 0, byteArray.Length).ConfigureAwait(false);
             }
 
-            using (HttpWebResponse response = await request.GetResponseAsync().ConfigureAwait(false) as HttpWebResponse)
+            try
             {
-                if (response.StatusCode != HttpStatusCode.OK)
-                    throw ThrowsHelper.WebException("Произошла ошибка при выполнении запроса", response);
-
+                await request.GetResponseAsync().ConfigureAwait(false);
                 return true;
+            }
+            catch (WebException e)
+            {
+                throw ThrowsHelper.WebException("Произошла ошибка при выполнении запроса", e);
             }
         }
 
@@ -249,16 +274,20 @@ namespace SecurityHttp
                 requestStream.Write(byteArray, 0, byteArray.Length);
             }
 
-            using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
+            try
             {
-                if (response.StatusCode != HttpStatusCode.OK)
-                    throw ThrowsHelper.WebException("Произошла ошибка при выполнении запроса", response);
-
-                using (var sr = new StreamReader(response.GetResponseStream()))
+                using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
                 {
-                    var value = sr.ReadToEnd();
-                    return (T)JsonConvert.DeserializeObject(value, typeof(T));
+                    using (var sr = new StreamReader(response.GetResponseStream()))
+                    {
+                        var value = sr.ReadToEnd();
+                        return (T)JsonConvert.DeserializeObject(value, typeof(T));
+                    }
                 }
+            }
+            catch (WebException e)
+            {
+                throw ThrowsHelper.WebException("Произошла ошибка при выполнении запроса", e);
             }
         }
 
@@ -279,16 +308,20 @@ namespace SecurityHttp
                 await requestStream.WriteAsync(byteArray, 0, byteArray.Length).ConfigureAwait(false);
             }
 
-            using (HttpWebResponse response = await request.GetResponseAsync().ConfigureAwait(false) as HttpWebResponse)
+            try
             {
-                if (response.StatusCode != HttpStatusCode.OK)
-                    throw ThrowsHelper.WebException("Произошла ошибка при выполнении запроса", response);
-
-                using (var sr = new StreamReader(response.GetResponseStream()))
+                using (HttpWebResponse response = await request.GetResponseAsync().ConfigureAwait(false) as HttpWebResponse)
                 {
-                    var value = await sr.ReadToEndAsync().ConfigureAwait(false);
-                    return (T)JsonConvert.DeserializeObject(value, typeof(T));
+                    using (var sr = new StreamReader(response.GetResponseStream()))
+                    {
+                        var value = await sr.ReadToEndAsync().ConfigureAwait(false);
+                        return (T)JsonConvert.DeserializeObject(value, typeof(T));
+                    }
                 }
+            }
+            catch (WebException e)
+            {
+                throw ThrowsHelper.WebException("Произошла ошибка при выполнении запроса", e);
             }
         }
 
@@ -301,15 +334,19 @@ namespace SecurityHttp
 
             var request = WebRequest.Create(builder.Uri);
             request.Method = WebRequestMethods.Http.Get;
-            using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
+            try
             {
-                if (response.StatusCode != HttpStatusCode.OK)
-                    throw ThrowsHelper.WebException("Произошла ошибка при выполнении запроса", response);
-
-                using (var sr = new StreamReader(response.GetResponseStream()))
+                using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
                 {
-                    return (IEnumerable<T>)JsonConvert.DeserializeObject(sr.ReadToEnd(), typeof(IEnumerable<T>));
+                    using (var sr = new StreamReader(response.GetResponseStream()))
+                    {
+                        return (IEnumerable<T>)JsonConvert.DeserializeObject(sr.ReadToEnd(), typeof(IEnumerable<T>));
+                    }
                 }
+            }
+            catch (WebException e)
+            {
+                throw ThrowsHelper.WebException("Произошла ошибка при выполнении запроса", e);
             }
         }
 
@@ -322,15 +359,19 @@ namespace SecurityHttp
 
             var request = WebRequest.Create(builder.Uri);
             request.Method = WebRequestMethods.Http.Get;
-            using (HttpWebResponse response = await request.GetResponseAsync().ConfigureAwait(false) as HttpWebResponse)
+            try
             {
-                if (response.StatusCode != HttpStatusCode.OK)
-                    throw ThrowsHelper.WebException("Произошла ошибка при выполнении запроса", response);
-
-                using (var sr = new StreamReader(response.GetResponseStream()))
+                using (HttpWebResponse response = await request.GetResponseAsync().ConfigureAwait(false) as HttpWebResponse)
                 {
-                    return (IEnumerable<T>)JsonConvert.DeserializeObject(sr.ReadToEnd(), typeof(IEnumerable<T>));
+                    using (var sr = new StreamReader(response.GetResponseStream()))
+                    {
+                        return (IEnumerable<T>)JsonConvert.DeserializeObject(sr.ReadToEnd(), typeof(IEnumerable<T>));
+                    }
                 }
+            }
+            catch (WebException e)
+            {
+                throw ThrowsHelper.WebException("Произошла ошибка при выполнении запроса", e);
             }
         }
 
@@ -351,12 +392,14 @@ namespace SecurityHttp
                 requestStream.Write(byteArray, 0, byteArray.Length);
             }
 
-            using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
+            try
             {
-                if (response.StatusCode != HttpStatusCode.OK)
-                    throw ThrowsHelper.WebException("Произошла ошибка при выполнении запроса", response);
-
+                request.GetResponse();
                 return true;
+            }
+            catch (WebException e)
+            {
+                throw ThrowsHelper.WebException("Произошла ошибка при выполнении запроса", e);
             }
         }
 
@@ -377,12 +420,14 @@ namespace SecurityHttp
                 await requestStream.WriteAsync(byteArray, 0, byteArray.Length).ConfigureAwait(false);
             }
 
-            using (HttpWebResponse response = await request.GetResponseAsync().ConfigureAwait(false) as HttpWebResponse)
+            try
             {
-                if (response.StatusCode != HttpStatusCode.OK)
-                    throw ThrowsHelper.WebException("Произошла ошибка при выполнении запроса", response);
-
+                await request.GetResponseAsync().ConfigureAwait(false);
                 return true;
+            }
+            catch (WebException e)
+            {
+                throw ThrowsHelper.WebException("Произошла ошибка при выполнении запроса", e);
             }
         }
 
@@ -395,12 +440,14 @@ namespace SecurityHttp
 
             var request = WebRequest.Create(builder.Uri);
             request.Method = "DELETE";
-            using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
+            try
             {
-                if (response.StatusCode != HttpStatusCode.OK)
-                    throw ThrowsHelper.WebException("Response status invalid", response);
-
+                request.GetResponse();
                 return true;
+            }
+            catch (WebException e)
+            {
+                throw ThrowsHelper.WebException("Произошла ошибка при выполнении запроса", e);
             }
         }
 
@@ -413,12 +460,14 @@ namespace SecurityHttp
 
             var request = WebRequest.Create(builder.Uri);
             request.Method = "DELETE";
-            using (HttpWebResponse response = await request.GetResponseAsync() as HttpWebResponse)
+            try
             {
-                if (response.StatusCode != HttpStatusCode.OK)
-                    throw ThrowsHelper.WebException("Response status invalid", response);
-
+                await request.GetResponseAsync();
                 return true;
+            }
+            catch (WebException e)
+            {
+                throw ThrowsHelper.WebException("Произошла ошибка при выполнении запроса", e);
             }
         }
     }

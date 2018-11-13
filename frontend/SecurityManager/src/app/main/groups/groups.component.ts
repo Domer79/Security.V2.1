@@ -27,6 +27,7 @@ export class GroupsComponent implements OnInit, AfterViewChecked {
 
   ngOnInit() {
     this.groups = this.groupsService.getAll();
+    this.sidePanelService.close();
 
     if (this.route.firstChild != null) {
       this.selectedId = this.route.firstChild.data.pipe(map((data: { group: Group }) => {

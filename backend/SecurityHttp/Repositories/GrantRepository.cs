@@ -29,22 +29,22 @@ namespace SecurityHttp.Repositories
 
         public IEnumerable<SecObject> GetExceptRoleGrant(string role)
         {
-            return _commonWeb.GetCollection<SecObject>($"{Url}/except/{role}");
+            return _commonWeb.GetCollection<SecObject>($"{Url}/except", new {role});
         }
 
         public Task<IEnumerable<SecObject>> GetExceptRoleGrantAsync(string role)
         {
-            return _commonWeb.GetCollectionAsync<SecObject>($"{Url}/except/{role}");
+            return _commonWeb.GetCollectionAsync<SecObject>($"{Url}/except", new { role });
         }
 
         public IEnumerable<SecObject> GetRoleGrants(string role)
         {
-            return _commonWeb.GetCollection<SecObject>($"{Url}/{role}");
+            return _commonWeb.GetCollection<SecObject>(Url, new {role});
         }
 
         public Task<IEnumerable<SecObject>> GetRoleGrantsAsync(string role)
         {
-            return _commonWeb.GetCollectionAsync<SecObject>($"{Url}/{role}");
+            return _commonWeb.GetCollectionAsync<SecObject>(Url, new { role });
         }
 
         public void RemoveGrant(string role, string secObject)

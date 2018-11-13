@@ -27,6 +27,7 @@ export class RolesComponent implements OnInit, AfterViewChecked {
 
   ngOnInit() {
     this.roles = this.rolesService.getAll();
+    this.sidePanelService.close();
 
     if (this.route.firstChild != null) {
       this.selectedId = this.route.firstChild.data.pipe(map((data: { role: Role }) => {

@@ -22,7 +22,7 @@ namespace Security.WebApi.Controllers
         }
 
         [HttpGet]
-        [Route("except/{role}")]
+        [Route("except")]
         public async Task<IHttpActionResult> GetExceptRoleGrant(string role)
         {
             var secObjects = await _repo.GetExceptRoleGrantAsync(role);
@@ -30,7 +30,6 @@ namespace Security.WebApi.Controllers
         }
 
         [HttpGet]
-        [Route("{role}")]
         public async Task<IHttpActionResult> GetRoleGrants(string role)
         {
             var secObject = await _repo.GetRoleGrantsAsync(role);

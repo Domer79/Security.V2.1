@@ -9,7 +9,7 @@ import { SelectDialog } from '../interfaces/dialog';
 @Component({
   selector: 'select-item-dialog',
   templateUrl: './select-item-dialog.component.html',
-  styleUrls: ['./select-item-dialog.component.scss']
+  styleUrls: ['./select-item-dialog.component.sass']
 })
 export class SelectItemDialogComponent implements OnInit, SelectDialog {
   selectedItems: IEntity[] = [];

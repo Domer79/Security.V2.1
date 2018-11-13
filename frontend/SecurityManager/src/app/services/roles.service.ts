@@ -60,7 +60,7 @@ export class RolesService {
   }
   getPolicies(role: Role): Observable<Policy[]> {
     return this.appContext.Application.pipe(switchMap(app => {
-      return this.httpClient.get<SecObject[]>(`api/${app.AppName}/grants/${role.Name}`).pipe(map((secObjects: SecObject[]) => {
+      return this.httpClient.get<SecObject[]>(`api/${app.AppName}/grants`, {params: {role: role.Name}}).pipe(map((secObjects: SecObject[]) => {
         return secObjects.map(so => {
           let policy = new Policy();
           policy.IdPolicy = so.IdSecObject;
@@ -80,12 +80,12 @@ export class RolesService {
   }
   setGrants(role: Role, policies: Policy[]): Promise<void> {
     return this.appContext.Application.pipe(switchMap(app => {
-      return this.httpClient.put(`api/${app.AppName}/grants`, policies.map(_ => _.Name), {params: {id: role.Name}}).pipe(catchError(this.common.handleError("setGrants", null)));
+      return this.httpClient.put(`api/${app.AppName}/grants`, policies.map(_ => _.Name), {params: {role: role.Name}}).pipe(catchError(this.common.handleError("setGrants", null)));
     })).toPromise();    
   }
   getNonIncludedPolicies(role: Role): Observable<Policy[]> {
     return this.appContext.Application.pipe(switchMap(app => {
-      return this.httpClient.get<SecObject[]>(`api/${app.AppName}/grants/except/${role.Name}`).pipe(map((secObjects: SecObject[]) => {
+      return this.httpClient.get<SecObject[]>(`api/${app.AppName}/grants/except`, {params: {role: role.Name}}).pipe(map((secObjects: SecObject[]) => {
         return secObjects.map(so => {
           let policy = new Policy();
           policy.IdPolicy = so.IdSecObject;
