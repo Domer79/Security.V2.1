@@ -1,7 +1,7 @@
 <select-item-dialog #content [items]="nonIncludedRoles$" (save)="addRolesToUser($event)" (cancel)="cancelAddRoles($event)"></select-item-dialog>
 <confirm-dialog #confirmDialogContent confirmmessage="Подтвердите удаление!" (ok)="deleteRoles()" (cancel)="deleteCancel()"></confirm-dialog>
 
-<div class="container-fluid">
+<div class="container-fluid side-list">
   <button type="button" class="btn btn-outline-secondary" (click)="open(content)">Add</button>
   <button type="button" class="btn btn-outline-secondary" (click)="open(confirmDialogContent)" [hidden]="selectedRoles.length === 0">Remove</button>
   <hr>

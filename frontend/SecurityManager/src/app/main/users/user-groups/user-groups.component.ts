@@ -10,7 +10,7 @@ import { DialogsService } from '../../../dialogs/dialogs.service';
 @Component({
   selector: 'app-user-groups',
   templateUrl: './user-groups.component.html',
-  styleUrls: ['./user-groups.component.scss']
+  styleUrls: ['./user-groups.component.sass']
 })
 export class UserGroupsComponent implements OnInit {
 

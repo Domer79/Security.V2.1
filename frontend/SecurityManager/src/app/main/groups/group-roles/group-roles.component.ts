@@ -10,7 +10,7 @@ import { GroupsService } from '../../../services/groups.service';
 @Component({
   selector: 'app-group-roles',
   templateUrl: './group-roles.component.html',
-  styleUrls: ['./group-roles.component.scss']
+  styleUrls: ['./group-roles.component.sass']
 })
 export class GroupRolesComponent implements OnInit {
   group: Group;

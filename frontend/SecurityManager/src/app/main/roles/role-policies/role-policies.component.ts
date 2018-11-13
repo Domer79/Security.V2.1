@@ -9,7 +9,7 @@ import { RolesService } from '../../../services/roles.service';
 @Component({
   selector: 'app-role-policies',
   templateUrl: './role-policies.component.html',
-  styleUrls: ['./role-policies.component.scss']
+  styleUrls: ['./role-policies.component.sass']
 })
 export class RolePoliciesComponent implements OnInit {
 

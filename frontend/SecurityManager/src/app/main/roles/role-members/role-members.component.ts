@@ -9,7 +9,7 @@ import { RolesService } from '../../../services/roles.service';
 @Component({
   selector: 'app-role-roles',
   templateUrl: './role-members.component.html',
-  styleUrls: ['./role-members.component.scss']
+  styleUrls: ['./role-members.component.sass']
 })
 export class RoleMembersComponent implements OnInit {
   role: Role;

@@ -9,7 +9,7 @@ import { DialogsService } from '../../../dialogs/dialogs.service';
 @Component({
   selector: 'app-user-roles',
   templateUrl: './user-roles.component.html',
-  styleUrls: ['./user-roles.component.scss']
+  styleUrls: ['./user-roles.component.sass']
 })
 export class UserRolesComponent implements OnInit {
   user: User;
