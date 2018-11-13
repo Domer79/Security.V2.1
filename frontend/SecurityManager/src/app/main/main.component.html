@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Access settings</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item" [class.active]="link=='USERS'">
+          <a class="nav-link" routerLink="./" (click)="selectPage('USERS')">Users
+
+          </a>
+        </li>
+        <li class="nav-item" [class.active]="link=='GROUPS'">
+          <a class="nav-link" routerLink="./groups" (click)="selectPage('GROUPS')">Groups  
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item" [class.active]="link=='ROLES'">
+          <a class="nav-link" routerLink="./roles" (click)="selectPage('ROLES')">Roles</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <router-outlet></router-outlet>
+
+</div>

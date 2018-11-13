@@ -1,0 +1,11 @@
+<select-item-dialog #content [items]="nonIncludedUsers$" (save)="addUsersToGroup($event)" (cancel)="cancelAddUsers($event)"></select-item-dialog>
+<confirm-dialog #confirmDialogContent confirmmessage="Подтвердите удаление!" (ok)="deleteUsers()" (cancel)="deleteCancel()"></confirm-dialog>
+
+<div class="container-fluid side-list">
+  <button type="button" class="btn btn-outline-secondary" (click)="open(content)">Add</button>
+  <button type="button" class="btn btn-outline-secondary" (click)="open(confirmDialogContent)" [hidden]="selectedUsers.length === 0">Remove</button>
+  <hr>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let user of users$ | async" (click)="user.selected = !user.selected;select(user)" [class.active]="user.selected">{{user.Login}}</li>
+  </ul>
+</div>

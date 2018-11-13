@@ -1,0 +1,12 @@
+<ul class="nav">
+  <li class="nav-item">
+    <a routerLink="./" class="nav-link" [class.active]="link === 'PROFILE'" (click)="link = 'PROFILE'">Profile</a>
+  </li>
+  <li class="nav-item">
+    <a routerLink="members" class="nav-link" [class.active]="link === 'MEMBERS'" (click)="link = 'MEMBERS'">Members</a>
+  </li>
+  <li class="nav-item">
+    <a routerLink="policy" class="nav-link" [class.active]="link === 'POLICY'" (click)="link = 'POLICY'">Policy</a>
+  </li>
+</ul>
+<router-outlet></router-outlet>

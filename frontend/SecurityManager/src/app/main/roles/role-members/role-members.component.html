@@ -1,0 +1,5 @@
+<div class="container-fluid side-list">
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let member of members$ | async" (click)="member.selected = !member.selected;select(member)" [class.active]="member.selected">{{member.Name}}</li>
+  </ul>
+</div>

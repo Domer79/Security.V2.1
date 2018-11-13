@@ -1,0 +1,22 @@
+<div class="card" >
+  <div class="card-body">
+    <form (ngSubmit)="onSubmit(groupForm)" #groupForm="ngForm" *ngIf="group$ | async; let group" [ngFormOptions]="{updateOn: 'change'}">
+      <h5 class="card-title">{{group.Name}} [{{group.Description}}]</h5>
+      <hr>
+      <div class="input-group indent">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Name</span>
+        </div>
+        <input type="text" class="form-control" [(ngModel)]="group.Name" name="firstName" />
+      </div>
+      <div class="input-group indent">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Description</span>
+        </div>
+        <input type="text" class="form-control" [(ngModel)]="group.Description" name="lastName"/>
+      </div>
+      <hr>
+      <input type="submit" value="Save" [disabled]="!groupForm.form.dirty" class="btn btn-success"/>
+    </form>
+  </div>
+</div>

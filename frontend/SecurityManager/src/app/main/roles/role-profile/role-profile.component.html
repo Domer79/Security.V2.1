@@ -1,0 +1,22 @@
+<div class="card" >
+  <div class="card-body">
+    <form (ngSubmit)="onSubmit(roleForm)" #roleForm="ngForm" *ngIf="role$ | async; let role" [ngFormOptions]="{updateOn: 'change'}">
+      <h5 class="card-title">{{role.Name}} [{{role.Description}}]</h5>
+      <hr>
+      <div class="input-group indent">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Name</span>
+        </div>
+        <input type="text" class="form-control" [(ngModel)]="role.Name" name="roleName" />
+      </div>
+      <div class="input-group indent">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Description</span>
+        </div>
+        <input type="text" class="form-control" [(ngModel)]="role.Description" name="description"/>
+      </div>
+      <hr>
+      <input type="submit" value="Save" [disabled]="!roleForm.form.dirty" class="btn btn-success"/>
+    </form>
+  </div>
+</div>

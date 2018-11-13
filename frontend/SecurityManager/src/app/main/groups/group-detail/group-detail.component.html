@@ -1,0 +1,12 @@
+<ul class="nav">
+  <li class="nav-item">
+    <a routerLink="./" class="nav-link" [class.active]="link === 'PROFILE'" (click)="link = 'PROFILE'">Profile</a>
+  </li>
+  <li class="nav-item">
+    <a routerLink="users" class="nav-link" [class.active]="link === 'USERS'" (click)="link = 'USERS'">Users</a>
+  </li>
+  <li class="nav-item">
+    <a routerLink="roles" class="nav-link" [class.active]="link === 'ROLES'" (click)="link = 'ROLES'">Roles</a>
+  </li>
+</ul>
+<router-outlet></router-outlet>

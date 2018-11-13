@@ -1,0 +1,18 @@
+<div class="container-fluid" *ngIf="application$ | async; let selectedApp">
+  <div class="card>">
+    <div class="card-header">
+      <select class="custom-select custom-select-lg mb-3" (change)="selectApp($event)">
+        <option *ngFor="let app of applications$ | async; let app" value="{{app.AppName}}" [selected]="app.AppName === selectedApp.AppName">{{app.Description}}</option>
+      </select>
+    </div>
+    <div class="card-body">
+      <form>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input type="description" class="form-control" id="description" [(ngModel)]="selectedApp.Description" name="description"
+            placeholder="Enter application description" (change)="changeDescription(selectedApp)">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
