@@ -1,0 +1,26 @@
+<div class="container-fluid" *ngIf="application$ | async; let selectedApp">
+  <div class="card>">
+    <div class="card-header">
+      <select class="custom-select custom-select-lg mb-3" (change)="selectUser($event)">
+        <option *ngFor="let user of users$ | async; let user" value="{{user.Login}}" [selected]="user.Login === selectedUser.Login">{{user.Login}}</option>
+      </select>
+    </div>
+    <div class="card-body">
+      <form>
+        <div class="form-group">
+          <label for="policySelect">Select Policy</label>
+          <select class="custom-select custom-select-lg mb-3" (change)="selectPolicy($event)" id="policySelect" name="policySelect">
+            <option *ngFor="let policy of policies$ | async; let policy" value="{{policy.Name}}" [selected]="policy.Name === selectedPolicy.Name">{{policy.Name}}</option>
+          </select>
+        </div>
+      </form>
+
+      <div>
+        <button type="button" class="btn btn-primary" (click)="checkAccess()">Проверить</button>
+        <br />
+        <br />
+        <span *ngIf="result$ | async; let result" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 30mm">{{result}}</span>
+      </div>
+    </div>
+  </div>
+</div>

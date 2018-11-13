@@ -21,6 +21,7 @@ import { HttpNotFoundComponent } from './http-not-found/http-not-found.component
 import { GroupsService } from './services/groups.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
+import { TestAccessComponent } from './test-access/test-access.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { CommonModule } from '@angular/common';
     ApplicationComponent,
     ApplicationInfoComponent,
     ApplicationRedirectComponent,
-    HttpNotFoundComponent
+    HttpNotFoundComponent,
+    TestAccessComponent
   ],
   imports: [
     CommonModule,

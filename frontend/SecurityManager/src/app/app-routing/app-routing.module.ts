@@ -8,6 +8,7 @@ import { ApplicationPageComponent } from '../application-page/application-page.c
 import { ApplicationComponent } from '../application/application.component';
 import { ApplicationRedirectComponent } from '../application-redirect/application-redirect.component';
 import { HttpNotFoundComponent } from '../http-not-found/http-not-found.component';
+import { TestAccessComponent } from '../test-access/test-access.component';
 
 const appRoutes: Routes = [
   { path: "", component: ApplicationRedirectComponent },
@@ -24,6 +25,7 @@ const appRoutes: Routes = [
       { path: "main", loadChildren: "app/main/main.module#MainModule" },
       { path: "settings", component: SettingsComponent },
       { path: "applications", component: ApplicationPageComponent },
+      { path: "testaccess", component: TestAccessComponent },
       { path: "**", redirectTo: "/notfound", pathMatch: "full" },
     ]
   },
