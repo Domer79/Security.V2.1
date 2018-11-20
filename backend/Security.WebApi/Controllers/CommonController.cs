@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
+using System.Web.Http.Description;
 using Security.Contracts;
 using Security.Contracts.Repository;
 
@@ -29,6 +30,14 @@ namespace Security.WebApi.Controllers
             return Ok(result);
         }
 
+        [Route("api/{app}/common/check-access-token")]
+        [HttpGet]
+        public async Task<IHttpActionResult> CheckAccessByToken(string token, string policy)
+        {
+            var result = await _repo.CheckTokenAccessAsync(token, policy);
+            return Ok(result);
+        }
+
         [Route("api/common/setpassword")]
         [HttpGet]
         public async Task<IHttpActionResult> SetPassword(string loginOrEmail, string password)
@@ -43,6 +52,15 @@ namespace Security.WebApi.Controllers
         {
             var result = await _repo.UserValidateAsync(loginOrEmail, password);
             return Ok(result);
+        }
+
+        [Route("api/common/create-token")]
+        [ResponseType(typeof(string))]
+        [HttpPost]
+        public async Task<IHttpActionResult> CreateToken(string loginOrEmail, string password)
+        {
+            var token = await _repo.CreateTokenAsync(loginOrEmail, password);
+            return Ok(token);
         }
 
         [Route("api/common/registerapp")]

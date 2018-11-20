@@ -14,6 +14,7 @@ namespace Security.Contracts
         ISecObjectRepository SecObjectRepository { get; set; }
         IGrantRepository GrantRepository { get; set; }
         ISecuritySettings SecuritySettings { get; set; }
+        ITokenService TokenService { get; set; }
         IConfig Config { get; set; }
     }
 }

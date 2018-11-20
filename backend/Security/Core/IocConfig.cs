@@ -28,6 +28,7 @@ namespace Security.Core
             locator.RegisterType<ISecuritySettings, SecuritySettings>().InSingletonScope();
             locator.RegisterFactory(typeof(ISecurityFactory), typeof(SecurityFactory)).InSingletonScope();
             locator.RegisterByMethod(typeof(IApplicationContext), () => new ApplicationContext(locator.Resolve<ICommonDb>(), appName));
+            locator.RegisterType<ITokenService, TokenService>().InSingletonScope();
 
             return locator;
         }

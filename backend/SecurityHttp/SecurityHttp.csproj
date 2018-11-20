@@ -59,6 +59,7 @@
     <Compile Include="Repositories\MemberRoleRepository.cs" />
     <Compile Include="Repositories\RoleRepository.cs" />
     <Compile Include="Repositories\SecObjectRepository.cs" />
+    <Compile Include="Repositories\TokenService.cs" />
     <Compile Include="Repositories\UserGroupRepository.cs" />
     <Compile Include="Repositories\UserInternalRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />

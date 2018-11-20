@@ -69,6 +69,7 @@
     <Compile Include="Extensions\ObjectHelper.cs" />
     <Compile Include="Extensions\StreamExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Extensions\TokenGenerator.cs" />
     <Compile Include="Extensions\TypeExtentions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

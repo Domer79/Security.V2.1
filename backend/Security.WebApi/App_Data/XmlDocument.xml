@@ -593,6 +593,47 @@
             <param name="name"></param>
             <returns></returns>
         </member>
+        <member name="T:Security.WebApi.Controllers.TokenController">
+            <summary>
+            API поддержки токена
+            </summary>
+        </member>
+        <member name="M:Security.WebApi.Controllers.TokenController.#ctor(Security.Contracts.Repository.ITokenService)">
+            <summary>
+            
+            </summary>
+            <param name="tokenService"></param>
+        </member>
+        <member name="M:Security.WebApi.Controllers.TokenController.Create(System.Int32)">
+            <summary>
+            Создание токена
+            </summary>
+            <param name="idUser"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.TokenController.Create(System.String)">
+            <summary>
+            Создание токена
+            </summary>
+            <param name="loginOrEmail"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.TokenController.StopExpire(System.String,System.String)">
+            <summary>
+            Прекращение действия отдельного токена
+            </summary>
+            <param name="tokenId"></param>
+            <param name="reason"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.TokenController.StopExpireForUser(System.String,System.String)">
+            <summary>
+            Прекращение действия всех токенов связанных с пользователем
+            </summary>
+            <param name="tokenId"></param>
+            <param name="reason"></param>
+            <returns></returns>
+        </member>
         <member name="T:Security.WebApi.Controllers.UserGroupsController">
             <summary>
             

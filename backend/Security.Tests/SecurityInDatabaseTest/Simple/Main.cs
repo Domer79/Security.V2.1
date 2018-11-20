@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using NUnit.Framework;
 using Security.CommonContracts;
 using Security.Contracts;
@@ -931,6 +932,180 @@ namespace Security.Tests.SecurityInDatabaseTest.Simple
         {
             public string ObjectName { get; set; }
         }
+
+        #region Token
+
+        [Test]
+        public void CreateTokenTest()
+        {
+            var login = "testLogin";
+            var user = new User
+            {
+                Login = $"{login}",
+                Email = $"{login}@mail.ru",
+                FirstName = $"{login}First",
+                LastName = $"{login}Last",
+                MiddleName = $"{login}Middle",
+                Status = true,
+                DateCreated = DateTime.Now
+            };
+            user = _security.UserRepository.Create(user);
+            _security.SetPassword(login, "test");
+
+            var token = _security.CreateToken(login, "test");
+            
+            Assert.IsNotNull(token);
+            Assert.IsNotEmpty(token);
+            Assert.AreEqual(100, token.Length);
+        }
+
+        [Test]
+        public void CheckAccessByToken_Expected_True_Test()
+        {
+            var login = "testForCheckAccessLogin4";
+            var user = new User
+            {
+                Login = $"{login}",
+                Email = $"{login}@mail.ru",
+                FirstName = $"{login}First",
+                LastName = $"{login}Last",
+                MiddleName = $"{login}Middle",
+                Status = true,
+                DateCreated = DateTime.Now
+            };
+            user = _security.UserRepository.Create(user);
+            _security.SetPassword(login, "test");
+
+            var secObject = new SecObject() {ObjectName = "TestObjectForCheckAccess4"};
+            var role = new Role() { Name = "TestRole", Description = "TestRoleDescription" };
+            _security.SecObjectRepository.Create(secObject);
+            _security.RoleRepository.Create(role);
+            _security.GrantRepository.SetGrant(role.Name, secObject.ObjectName);
+            _security.MemberRoleRepository.AddMembersToRole(new []{login}, role.Name);
+
+            var token = _security.CreateToken(login, "test");
+            var allow = _security.CheckAccessByToken(token, secObject.ObjectName);
+
+            Assert.IsTrue(allow);
+        }
+
+        [Test]
+        public void CheckAccessByToken_Expected_False_Test()
+        {
+            var login = "testForCheckAccessLogin3";
+            var user = new User
+            {
+                Login = $"{login}",
+                Email = $"{login}@mail.ru",
+                FirstName = $"{login}First",
+                LastName = $"{login}Last",
+                MiddleName = $"{login}Middle",
+                Status = true,
+                DateCreated = DateTime.Now
+            };
+            user = _security.UserRepository.Create(user);
+            _security.SetPassword(login, "test");
+
+            var secObject = new SecObject() { ObjectName = "TestObjectForCheckAccess3" };
+            var role = new Role() { Name = "TestRole3", Description = "TestRoleDescription" };
+            _security.SecObjectRepository.Create(secObject);
+            _security.RoleRepository.Create(role);
+            _security.GrantRepository.SetGrant(role.Name, secObject.ObjectName);
+            _security.MemberRoleRepository.AddMembersToRole(new[] { login }, role.Name);
+
+            var token = _security.CreateToken(login, "test");
+            _security.StopExpire(token);
+            Thread.Sleep(10);
+            var allow = _security.CheckAccessByToken(token, secObject.ObjectName);
+
+            Assert.IsFalse(allow);
+        }
+
+        [Test]
+        public void CheckAccessBySeveralToken_Expected_True_And_Token2IsFalse_Test()
+        {
+            var login = "testForCheckAccessLogin2";
+            var user = new User
+            {
+                Login = $"{login}",
+                Email = $"{login}@mail.ru",
+                FirstName = $"{login}First",
+                LastName = $"{login}Last",
+                MiddleName = $"{login}Middle",
+                Status = true,
+                DateCreated = DateTime.Now
+            };
+            user = _security.UserRepository.Create(user);
+            _security.SetPassword(login, "test");
+
+            var secObject = new SecObject() { ObjectName = "TestObjectForCheckAccess2" };
+            var role = new Role() { Name = "TestRole2", Description = "TestRoleDescription" };
+            _security.SecObjectRepository.Create(secObject);
+            _security.RoleRepository.Create(role);
+            _security.GrantRepository.SetGrant(role.Name, secObject.ObjectName);
+            _security.MemberRoleRepository.AddMembersToRole(new[] { login }, role.Name);
+
+            var token1 = _security.CreateToken(login, "test");
+            var token2 = _security.CreateToken(login, "test");
+            var token3 = _security.CreateToken(login, "test");
+            var token4 = _security.CreateToken(login, "test");
+
+            _security.StopExpire(token2);
+
+            var allow1 = _security.CheckAccessByToken(token1, secObject.ObjectName);
+            var allow2 = _security.CheckAccessByToken(token2, secObject.ObjectName);
+            var allow3 = _security.CheckAccessByToken(token3, secObject.ObjectName);
+            var allow4 = _security.CheckAccessByToken(token4, secObject.ObjectName);
+
+            Assert.IsTrue(allow1);
+            Assert.IsFalse(allow2);
+            Assert.IsTrue(allow3);
+            Assert.IsTrue(allow4);
+        }
+
+        [Test]
+        public void CheckAccessBySeveralToken_Expected_AllFalse_Test()
+        {
+            var login = "testForCheckAccessLogin1";
+            var user = new User
+            {
+                Login = $"{login}",
+                Email = $"{login}@mail.ru",
+                FirstName = $"{login}First",
+                LastName = $"{login}Last",
+                MiddleName = $"{login}Middle",
+                Status = true,
+                DateCreated = DateTime.Now
+            };
+            user = _security.UserRepository.Create(user);
+            _security.SetPassword(login, "test");
+
+            var secObject = new SecObject() { ObjectName = "TestObjectForCheckAccess1" };
+            var role = new Role() { Name = "TestRole1", Description = "TestRoleDescription" };
+            _security.SecObjectRepository.Create(secObject);
+            _security.RoleRepository.Create(role);
+            _security.GrantRepository.SetGrant(role.Name, secObject.ObjectName);
+            _security.MemberRoleRepository.AddMembersToRole(new[] { login }, role.Name);
+
+            var token1 = _security.CreateToken(login, "test");
+            var token2 = _security.CreateToken(login, "test");
+            var token3 = _security.CreateToken(login, "test");
+            var token4 = _security.CreateToken(login, "test");
+
+            _security.StopExpireForUser(token2);
+
+            var allow1 = _security.CheckAccessByToken(token1, secObject.ObjectName);
+            var allow2 = _security.CheckAccessByToken(token2, secObject.ObjectName);
+            var allow3 = _security.CheckAccessByToken(token3, secObject.ObjectName);
+            var allow4 = _security.CheckAccessByToken(token4, secObject.ObjectName);
+
+            Assert.IsFalse(allow1);
+            Assert.IsFalse(allow2);
+            Assert.IsFalse(allow3);
+            Assert.IsFalse(allow4);
+        }
+
+        #endregion
     }
 
     public class GroupComparer : Comparer<Group>

@@ -69,6 +69,7 @@
     <Compile Include="Role.cs" />
     <Compile Include="SecObject.cs" />
     <Compile Include="Setting.cs" />
+    <Compile Include="Token.cs" />
     <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -104,6 +104,8 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\Repository\ITokenService.cs" />
+    <Compile Include="Core\DataLayer\Repositories\TokenService.cs" />
     <Compile Include="Dapper\CommandDefinition.cs" />
     <Compile Include="Dapper\CommandFlags.cs" />
     <Compile Include="Dapper\CustomPropertyTypeMap.cs" />
@@ -150,6 +152,7 @@
     <Compile Include="Dapper\WrappedReader.cs" />
     <Compile Include="Dapper\XmlHandlers.cs" />
     <Compile Include="Exceptions\ConvertTypeException.cs" />
+    <Compile Include="Exceptions\InvalidLoginPasswordException.cs" />
     <Compile Include="Exceptions\SecurityNotSupportedException.cs" />
     <Compile Include="Extensions\Tools.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

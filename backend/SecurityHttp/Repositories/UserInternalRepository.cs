@@ -25,6 +25,11 @@ namespace SecurityHttp.Repositories
             return _commonWeb.Get<bool>($"api/{_context.Application.AppName}/common/checkaccess", new {loginOrEmail, policy = secObject});
         }
 
+        public bool CheckTokenAccess(string token, string policy)
+        {
+            return _commonWeb.Get<bool>($"api/{_context.Application.AppName}/common/check-access-token", new {token, policy});
+        }
+
         public Task<bool> CheckAccessAsync(string loginOrEmail, string secObject)
         {
             return _commonWeb.GetAsync<bool>($"api/{_context.Application.AppName}/common/checkaccess", new { loginOrEmail, policy = secObject });
@@ -45,9 +50,24 @@ namespace SecurityHttp.Repositories
             return _commonWeb.Get<bool>("api/common/validate", new {loginOrEmail, password});
         }
 
+        public string CreateToken(string loginOrEmail, string password)
+        {
+            return _commonWeb.PostAndGet<string>("api/common/create-token", null, new {loginOrEmail, password});
+        }
+
         public Task<bool> UserValidateAsync(string loginOrEmail, string password)
         {
             return _commonWeb.GetAsync<bool>("api/common/validate", new { loginOrEmail, password });
+        }
+
+        public Task<string> CreateTokenAsync(string loginOrEmail, string password)
+        {
+            return _commonWeb.PostAndGetAsync<string>("api/common/create-token", null, new { loginOrEmail, password });
+        }
+
+        public Task<bool> CheckTokenAccessAsync(string token, string policy)
+        {
+            return _commonWeb.GetAsync<bool>($"api/{_context.Application.AppName}/common/check-access-token", new { token, policy });
         }
     }
 }

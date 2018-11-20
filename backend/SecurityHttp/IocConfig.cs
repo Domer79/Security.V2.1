@@ -33,6 +33,7 @@ namespace SecurityHttp
             locator.RegisterFactory(typeof(ISecurityFactory), typeof(SecurityFactory)).InSingletonScope();
             locator.RegisterByMethod(typeof(IApplicationContext), () => new ApplicationContext(locator.Resolve<IApplicationRepository>(), appName));
             locator.RegisterType<IGlobalSettings, GlobalSettings>().InSingletonScope();
+            locator.RegisterType<ITokenService, TokenService>().InSingletonScope();
 
             return locator;
         }

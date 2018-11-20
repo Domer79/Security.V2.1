@@ -6,8 +6,6 @@ namespace Security.Core
 {
     public class Security : ISecurity
     {
-        private readonly string _appName;
-
         public Security(string appName, string description = null)
             :this(appName, description, IocConfig.GetLocator(appName))
         {
@@ -15,7 +13,6 @@ namespace Security.Core
 
         internal Security(string appName, string description, IServiceLocator locator)
         {
-            _appName = appName;
             Locator = locator;
 
             //Register application if not exists
@@ -53,9 +50,29 @@ namespace Security.Core
             return UserInternalRepository.CheckAccess(loginOrEmail, secObject);
         }
 
+        public bool CheckAccessByToken(string token, string policy)
+        {
+            return UserInternalRepository.CheckTokenAccess(token, policy);
+        }
+
         public bool SetPassword(string loginOrEmail, string password)
         {
             return UserInternalRepository.SetPassword(loginOrEmail, password);
+        }
+
+        public string CreateToken(string loginOrEmail, string password)
+        {
+            return UserInternalRepository.CreateToken(loginOrEmail, password);
+        }
+
+        public void StopExpire(string tokenId, string reason = null)
+        {
+            TokenService.StopExpire(tokenId, reason);
+        }
+
+        public void StopExpireForUser(string tokenId, string reason = null)
+        {
+            TokenService.StopExpireForUser(tokenId, reason);
         }
 
         public bool UserValidate(string loginOrEmail, string password)
@@ -78,9 +95,31 @@ namespace Security.Core
             return UserInternalRepository.CheckAccessAsync(loginOrEmail, secObject);
         }
 
+        public Task<bool> CheckAccessByTokenAsync(string token, string policy)
+        {
+            return UserInternalRepository.CheckTokenAccessAsync(token, policy);
+        }
+
         public Task<bool> SetPasswordAsync(string loginOrEmail, string password)
         {
             return UserInternalRepository.SetPasswordAsync(loginOrEmail, password);
         }
+
+        public Task<string> CreateTokenAsync(string loginOrEmail, string password)
+        {
+            return UserInternalRepository.CreateTokenAsync(loginOrEmail, password);
+        }
+
+        public Task StopExpireAsync(string tokenId, string reason = null)
+        {
+            return TokenService.StopExpireAsync(tokenId, reason);
+        }
+
+        public Task StopExpireForUserAsync(string tokenId, string reason = null)
+        {
+            return TokenService.StopExpireForUserAsync(tokenId, reason);
+        }
+
+        private ITokenService TokenService => Factory.TokenService;
     }
 }

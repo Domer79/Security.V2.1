@@ -25,6 +25,8 @@ namespace Security.Core
 
         public ISecuritySettings SecuritySettings { get; set; }
 
+        public ITokenService TokenService { get; set; }
+
         public IConfig Config { get; set; }
     }
 }

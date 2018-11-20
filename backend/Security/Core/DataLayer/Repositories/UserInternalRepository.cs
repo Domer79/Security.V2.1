@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Security.CommonContracts;
 using Security.Contracts;
 using Security.Contracts.Repository;
+using Security.Exceptions;
 using Security.Extensions;
 
 namespace Security.Core.DataLayer.Repositories
@@ -12,17 +13,28 @@ namespace Security.Core.DataLayer.Repositories
         private readonly ICommonDb _commonDb;
         private readonly IApplicationContext _context;
         private readonly IUserRepository _userRepository;
+        private readonly ITokenService _tokenService;
 
-        public UserInternalRepository(ICommonDb commonDb, IApplicationContext context, IUserRepository userRepository)
+        public UserInternalRepository(
+            ICommonDb commonDb, 
+            IApplicationContext context, 
+            IUserRepository userRepository,
+            ITokenService tokenService)
         {
             _commonDb = commonDb;
             _context = context;
             _userRepository = userRepository;
+            _tokenService = tokenService;
         }
 
         public bool CheckAccess(string loginOrEmail, string secObject)
         {
             return _commonDb.ExecuteScalar<bool>("select sec.IsAllowByName(@secObject, @loginOrEmail, @appName)", new { secObject, loginOrEmail, _context.Application.AppName });
+        }
+
+        public bool CheckTokenAccess(string token, string policy)
+        {
+            return _commonDb.ExecuteScalar<bool>("select sec.IsAllowByToken(@secObject, @token, @appName)", new { secObject = policy, token, _context.Application.AppName });
         }
 
         public Task<bool> CheckAccessAsync(string loginOrEmail, string secObject)
@@ -67,6 +79,14 @@ namespace Security.Core.DataLayer.Repositories
             return hashPassword.SequenceEqual(hashPassword2);
         }
 
+        public string CreateToken(string loginOrEmail, string password)
+        {
+            if (!UserValidate(loginOrEmail, password))
+                throw new InvalidLoginPasswordException(loginOrEmail, password);
+
+            return _tokenService.Create(loginOrEmail);
+        }
+
         public async Task<bool> UserValidateAsync(string loginOrEmail, string password)
         {
             var hashPassword = password.GetSHA1HashBytes();
@@ -76,6 +96,19 @@ namespace Security.Core.DataLayer.Repositories
             var hashPassword2 = await GetPasswordAsync(loginOrEmail);
 
             return hashPassword.SequenceEqual(hashPassword2);
+        }
+
+        public async Task<string> CreateTokenAsync(string loginOrEmail, string password)
+        {
+            if (!await UserValidateAsync(loginOrEmail, password))
+                throw new InvalidLoginPasswordException(loginOrEmail, password);
+
+            return await _tokenService.CreateAsync(loginOrEmail);
+        }
+
+        public Task<bool> CheckTokenAccessAsync(string token, string policy)
+        {
+            return _commonDb.ExecuteScalarAsync<bool>("select sec.IsAllowByToken(@secObject, @token, @appName)", new { secObject = policy, token, _context.Application.AppName });
         }
     }
 }
