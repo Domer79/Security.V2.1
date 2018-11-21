@@ -57,6 +57,7 @@ namespace Security.WebApi.App_Start
             builder.RegisterType<GroupRepository>().As<IGroupRepository>().InstancePerRequest();
             builder.RegisterType<SecuritySettings>().As<ISecuritySettings>().InstancePerRequest();
             builder.RegisterType<Config>().As<IConfig>().InstancePerRequest();
+            builder.RegisterType<TokenService>().As<ITokenService>().InstancePerRequest();
         }
     }
 }

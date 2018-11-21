@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using NUnit.Framework;
 using Security.Contracts;
 using Security.Contracts.Repository;
 using Security.Model;
+using Security.Tests.Scenarios;
 using SecurityHttp;
 using SecurityHttp.Interfaces;
 using Assert = NUnit.Framework.Assert;
@@ -934,6 +936,92 @@ namespace Security.Tests.SecurityHttpTest.SimpleAsync
             await _security.SecuritySettings.SetValueAsync("key2", 25);
             Assert.That(await _security.SecuritySettings.GetValueAsync<int>("key2"), Is.EqualTo(25));
             Assert.DoesNotThrowAsync(() => _security.SecuritySettings.RemoveValueAsync("key2"));
+        }
+
+        #endregion
+
+        #region Token
+
+        [Test]
+        public async Task CheckAccessByToken_Expected_True_Test()
+        {
+            using (var scenario = new CreateUserAndGrantAccessScenario())
+            {
+                var result = await scenario.RunAsync(_security);
+
+                var token = await _security.CreateTokenAsync(result.Login, "test");
+                var allow = await _security.CheckAccessByTokenAsync(token, result.UserPolicies[0]);
+
+                Assert.IsTrue(allow);
+            }
+        }
+
+        [Test]
+        public async Task CheckAccessByToken_Expected_False_Test()
+        {
+            using (var scenario = new CreateUserAndGrantAccessScenario())
+            {
+                var result = await scenario.RunAsync(_security);
+
+                var token = await _security.CreateTokenAsync(result.Login, "test");
+                await _security.StopExpireAsync(token);
+                Thread.Sleep(10);
+                var allow = await _security.CheckAccessByTokenAsync(token, result.UserPolicies[0]);
+
+                Assert.IsFalse(allow);
+            }
+        }
+
+        [Test]
+        public async Task CheckAccessBySeveralToken_Expected_True_And_Token2IsFalse_Test()
+        {
+            using (var scenario = new CreateUserAndGrantAccessScenario())
+            {
+                var result = await scenario.RunAsync(_security);
+
+                var token1 = result.UserTokens[0];
+                var token2 = result.UserTokens[1];
+                var token3 = result.UserTokens[2];
+                var token4 = result.UserTokens[3];
+
+                await _security.StopExpireAsync(token2);
+
+                var allow1 = await _security.CheckAccessByTokenAsync(token1, result.UserPolicies[0]);
+                var allow2 = await _security.CheckAccessByTokenAsync(token2, result.UserPolicies[0]);
+                var allow3 = await _security.CheckAccessByTokenAsync(token3, result.UserPolicies[0]);
+                var allow4 = await _security.CheckAccessByTokenAsync(token4, result.UserPolicies[0]);
+
+                Assert.IsTrue(allow1);
+                Assert.IsFalse(allow2);
+                Assert.IsTrue(allow3);
+                Assert.IsTrue(allow4);
+            }
+        }
+
+        [Test]
+        public async Task CheckAccessBySeveralToken_Expected_AllFalse_Test()
+        {
+            using (var scenario = new CreateUserAndGrantAccessScenario())
+            {
+                var result = await scenario.RunAsync(_security);
+
+                var token1 = result.UserTokens[0];
+                var token2 = result.UserTokens[1];
+                var token3 = result.UserTokens[2];
+                var token4 = result.UserTokens[3];
+
+                await _security.StopExpireForUserAsync(token2);
+
+                var allow1 = await _security.CheckAccessByTokenAsync(token1, result.UserPolicies[0]);
+                var allow2 = await _security.CheckAccessByTokenAsync(token2, result.UserPolicies[0]);
+                var allow3 = await _security.CheckAccessByTokenAsync(token3, result.UserPolicies[0]);
+                var allow4 = await _security.CheckAccessByTokenAsync(token4, result.UserPolicies[0]);
+
+                Assert.IsFalse(allow1);
+                Assert.IsFalse(allow2);
+                Assert.IsFalse(allow3);
+                Assert.IsFalse(allow4);
+            }
         }
 
         #endregion

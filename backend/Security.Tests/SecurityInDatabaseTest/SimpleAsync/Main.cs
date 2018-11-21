@@ -9,6 +9,7 @@ using Security.Contracts;
 using Security.Contracts.Repository;
 using Security.Core;
 using Security.Model;
+using Security.Tests.Scenarios;
 using Assert = NUnit.Framework.Assert;
 using CollectionAssert = NUnit.Framework.CollectionAssert;
 
@@ -940,177 +941,88 @@ namespace Security.Tests.SecurityInDatabaseTest.SimpleAsync
         #region Token
 
         [Test]
-        public async Task CreateTokenTest()
-        {
-            var login = "testLogin";
-            var user = new User
-            {
-                Login = $"{login}",
-                Email = $"{login}@mail.ru",
-                FirstName = $"{login}First",
-                LastName = $"{login}Last",
-                MiddleName = $"{login}Middle",
-                Status = true,
-                DateCreated = DateTime.Now
-            };
-            user = await _security.UserRepository.CreateAsync(user);
-            await _security.SetPasswordAsync(login, "test");
-
-            var token = await _security.CreateTokenAsync(login, "test");
-
-            Assert.IsNotNull(token);
-            Assert.IsNotEmpty(token);
-            Assert.AreEqual(100, token.Length);
-        }
-
-        [Test]
         public async Task CheckAccessByToken_Expected_True_Test()
         {
-            var login = "testForCheckAccessLogin4";
-            var user = new User
+            using (var scenario = new CreateUserAndGrantAccessScenario())
             {
-                Login = $"{login}",
-                Email = $"{login}@mail.ru",
-                FirstName = $"{login}First",
-                LastName = $"{login}Last",
-                MiddleName = $"{login}Middle",
-                Status = true,
-                DateCreated = DateTime.Now
-            };
-            user = await _security.UserRepository.CreateAsync(user);
-            await _security.SetPasswordAsync(login, "test");
+                var result = await scenario.RunAsync(_security);
 
-            var secObject = new SecObject() { ObjectName = "TestObjectForCheckAccess4" };
-            var role = new Role() { Name = "TestRole4", Description = "TestRoleDescription" };
-            await _security.SecObjectRepository.CreateAsync(secObject);
-            await _security.RoleRepository.CreateAsync(role);
-            await _security.GrantRepository.SetGrantAsync(role.Name, secObject.ObjectName);
-            await _security.MemberRoleRepository.AddMembersToRoleAsync(new[] { login }, role.Name);
+                var token = await _security.CreateTokenAsync(result.Login, "test");
+                var allow = await _security.CheckAccessByTokenAsync(token, result.UserPolicies[0]);
 
-            var token = await _security.CreateTokenAsync(login, "test");
-            var allow = await _security.CheckAccessByTokenAsync(token, secObject.ObjectName);
-
-            Assert.IsTrue(allow);
+                Assert.IsTrue(allow);
+            }
         }
 
         [Test]
         public async Task CheckAccessByToken_Expected_False_Test()
         {
-            var login = "testForCheckAccessLogin3";
-            var user = new User
+            using (var scenario = new CreateUserAndGrantAccessScenario())
             {
-                Login = $"{login}",
-                Email = $"{login}@mail.ru",
-                FirstName = $"{login}First",
-                LastName = $"{login}Last",
-                MiddleName = $"{login}Middle",
-                Status = true,
-                DateCreated = DateTime.Now
-            };
-            user = await _security.UserRepository.CreateAsync(user);
-            await _security.SetPasswordAsync(login, "test");
+                var result = await scenario.RunAsync(_security);
 
-            var secObject = new SecObject() { ObjectName = "TestObjectForCheckAccess3" };
-            var role = new Role() { Name = "TestRole3", Description = "TestRoleDescription" };
-            await _security.SecObjectRepository.CreateAsync(secObject);
-            await _security.RoleRepository.CreateAsync(role);
-            await _security.GrantRepository.SetGrantAsync(role.Name, secObject.ObjectName);
-            await _security.MemberRoleRepository.AddMembersToRoleAsync(new[] { login }, role.Name);
+                var token = await _security.CreateTokenAsync(result.Login, "test");
+                await _security.StopExpireAsync(token);
+                Thread.Sleep(10);
+                var allow = await _security.CheckAccessByTokenAsync(token, result.UserPolicies[0]);
 
-            var token = await _security.CreateTokenAsync(login, "test");
-            await _security.StopExpireAsync(token);
-            Thread.Sleep(10);
-            var allow = await _security.CheckAccessByTokenAsync(token, secObject.ObjectName);
-
-            Assert.IsFalse(allow);
+                Assert.IsFalse(allow);
+            }
         }
 
         [Test]
         public async Task CheckAccessBySeveralToken_Expected_True_And_Token2IsFalse_Test()
         {
-            var login = "testForCheckAccessLogin2";
-            var user = new User
+            using (var scenario = new CreateUserAndGrantAccessScenario())
             {
-                Login = $"{login}",
-                Email = $"{login}@mail.ru",
-                FirstName = $"{login}First",
-                LastName = $"{login}Last",
-                MiddleName = $"{login}Middle",
-                Status = true,
-                DateCreated = DateTime.Now
-            };
-            user = await _security.UserRepository.CreateAsync(user);
-            await _security.SetPasswordAsync(login, "test");
+                var result = await scenario.RunAsync(_security);
 
-            var secObject = new SecObject() { ObjectName = "TestObjectForCheckAccess2" };
-            var role = new Role() { Name = "TestRole2", Description = "TestRoleDescription" };
-            await _security.SecObjectRepository.CreateAsync(secObject);
-            await _security.RoleRepository.CreateAsync(role);
-            await _security.GrantRepository.SetGrantAsync(role.Name, secObject.ObjectName);
-            await _security.MemberRoleRepository.AddMembersToRoleAsync(new[] { login }, role.Name);
+                var token1 = result.UserTokens[0];
+                var token2 = result.UserTokens[1];
+                var token3 = result.UserTokens[2];
+                var token4 = result.UserTokens[3];
 
-            var token1 = await _security.CreateTokenAsync(login, "test");
-            var token2 = await _security.CreateTokenAsync(login, "test");
-            var token3 = await _security.CreateTokenAsync(login, "test");
-            var token4 = await _security.CreateTokenAsync(login, "test");
+                await _security.StopExpireAsync(token2);
 
-            await _security.StopExpireAsync(token2);
+                var allow1 = await _security.CheckAccessByTokenAsync(token1, result.UserPolicies[0]);
+                var allow2 = await _security.CheckAccessByTokenAsync(token2, result.UserPolicies[0]);
+                var allow3 = await _security.CheckAccessByTokenAsync(token3, result.UserPolicies[0]);
+                var allow4 = await _security.CheckAccessByTokenAsync(token4, result.UserPolicies[0]);
 
-            var allow1 = await _security.CheckAccessByTokenAsync(token1, secObject.ObjectName);
-            var allow2 = await _security.CheckAccessByTokenAsync(token2, secObject.ObjectName);
-            var allow3 = await _security.CheckAccessByTokenAsync(token3, secObject.ObjectName);
-            var allow4 = await _security.CheckAccessByTokenAsync(token4, secObject.ObjectName);
-
-            Assert.IsTrue(allow1);
-            Assert.IsFalse(allow2);
-            Assert.IsTrue(allow3);
-            Assert.IsTrue(allow4);
+                Assert.IsTrue(allow1);
+                Assert.IsFalse(allow2);
+                Assert.IsTrue(allow3);
+                Assert.IsTrue(allow4);
+            }
         }
 
         [Test]
         public async Task CheckAccessBySeveralToken_Expected_AllFalse_Test()
         {
-            var login = "testForCheckAccessLogin1";
-            var user = new User
+            using (var scenario = new CreateUserAndGrantAccessScenario())
             {
-                Login = $"{login}",
-                Email = $"{login}@mail.ru",
-                FirstName = $"{login}First",
-                LastName = $"{login}Last",
-                MiddleName = $"{login}Middle",
-                Status = true,
-                DateCreated = DateTime.Now
-            };
-            user = await _security.UserRepository.CreateAsync(user);
-            await _security.SetPasswordAsync(login, "test");
+                var result = await scenario.RunAsync(_security);
 
-            var secObject = new SecObject() { ObjectName = "TestObjectForCheckAccess1" };
-            var role = new Role() { Name = "TestRole1", Description = "TestRoleDescription" };
-            await _security.SecObjectRepository.CreateAsync(secObject);
-            await _security.RoleRepository.CreateAsync(role);
-            await _security.GrantRepository.SetGrantAsync(role.Name, secObject.ObjectName);
-            await _security.MemberRoleRepository.AddMembersToRoleAsync(new[] { login }, role.Name);
+                var token1 = result.UserTokens[0];
+                var token2 = result.UserTokens[1];
+                var token3 = result.UserTokens[2];
+                var token4 = result.UserTokens[3];
 
-            var token1 = await _security.CreateTokenAsync(login, "test");
-            var token2 = await _security.CreateTokenAsync(login, "test");
-            var token3 = await _security.CreateTokenAsync(login, "test");
-            var token4 = await _security.CreateTokenAsync(login, "test");
+                await _security.StopExpireForUserAsync(token2);
 
-            await _security.StopExpireForUserAsync(token2);
+                var allow1 = await _security.CheckAccessByTokenAsync(token1, result.UserPolicies[0]);
+                var allow2 = await _security.CheckAccessByTokenAsync(token2, result.UserPolicies[0]);
+                var allow3 = await _security.CheckAccessByTokenAsync(token3, result.UserPolicies[0]);
+                var allow4 = await _security.CheckAccessByTokenAsync(token4, result.UserPolicies[0]);
 
-            var allow1 = await _security.CheckAccessByTokenAsync(token1, secObject.ObjectName);
-            var allow2 = await _security.CheckAccessByTokenAsync(token2, secObject.ObjectName);
-            var allow3 = await _security.CheckAccessByTokenAsync(token3, secObject.ObjectName);
-            var allow4 = await _security.CheckAccessByTokenAsync(token4, secObject.ObjectName);
-
-            Assert.IsFalse(allow1);
-            Assert.IsFalse(allow2);
-            Assert.IsFalse(allow3);
-            Assert.IsFalse(allow4);
+                Assert.IsFalse(allow1);
+                Assert.IsFalse(allow2);
+                Assert.IsFalse(allow3);
+                Assert.IsFalse(allow4);
+            }
         }
 
         #endregion
-
 
         class SecurityObject : ISecurityObject
         {

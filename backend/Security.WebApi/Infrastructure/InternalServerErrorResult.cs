@@ -19,6 +19,8 @@ namespace Security.WebApi.Infrastructure
         {
             _request = request;
             _httpError = new HttpError("Что-то пошло не так! Приносим свои извиннения!");
+            _httpError.Message = exception.Message;
+            _httpError.MessageDetail = exception.StackTrace;
         }
 
         public Task<HttpResponseMessage> ExecuteAsync(CancellationToken cancellationToken)
