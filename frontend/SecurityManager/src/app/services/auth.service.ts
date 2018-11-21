@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { Observable, of } from 'rxjs';
 import { CommonService } from '../system/service/common.service';
-import { catchError } from 'rxjs/operators';
+import { catchError, map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+  static readonly NotAuthenticated: string = "notauthenticated";
 
   constructor(
     private common: CommonService,
@@ -15,10 +16,23 @@ export class AuthService {
   ) { }
 
   checkTokenExpire(token: string): Observable<boolean>{
-    return this.httpClient.get<boolean>("api/token/check-expire", {params: {token}}).pipe(catchError(this.common.handleError("createEmpty", false)));
+    return this.httpClient.get<boolean>("api/token/check-expire", {params: {token}}).pipe(catchError(this.common.handleError("checkTokenExpire", false)));
   }
 
-  checkLogin(login: string, password: string): Observable<string>{
-    
+  createToken(loginOrEmail: string, password: string): Observable<string>{
+    return this.httpClient.post("api/common/create-token", null, {params: {loginOrEmail, password}}).pipe(map(res => res as string), catchError(this.handleError("createToken", AuthService.NotAuthenticated)));
   }
+
+  handleError<T> (operation = 'operation', result?: T) {
+    return (error: HttpErrorResponse): Observable<T> => {
+   
+      // TODO: send the error to remote logging infrastructure
+      console.error(`Error by operation: ${operation}`);
+      console.error(error); // log to console instead
+      
+      // Let the app keep running by returning an empty result.
+      return of(result as T);
+    };
+  }
+
 }

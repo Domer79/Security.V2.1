@@ -9,12 +9,16 @@ import { ApplicationComponent } from '../application/application.component';
 import { ApplicationRedirectComponent } from '../application-redirect/application-redirect.component';
 import { HttpNotFoundComponent } from '../http-not-found/http-not-found.component';
 import { TestAccessComponent } from '../test-access/test-access.component';
+import { LoginComponent } from '../login/login.component';
+import { AuthGuard } from '../services/auth.guard';
 
 const appRoutes: Routes = [
   { path: "", component: ApplicationRedirectComponent },
   { path: "notfound", component: HttpNotFoundComponent },
+  { path: "to/login/page", component: LoginComponent },
   { 
     path: ":application", 
+    canActivate: [AuthGuard],
     component: ApplicationComponent,
     children: [
       {
@@ -28,7 +32,7 @@ const appRoutes: Routes = [
       { path: "testaccess", component: TestAccessComponent },
       { path: "**", redirectTo: "/notfound", pathMatch: "full" },
     ]
-  },
+  }
 ];
 
 @NgModule({

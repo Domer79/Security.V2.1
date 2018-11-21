@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from '../main.component';
 import { GroupsComponent } from '../groups/groups.component';
 import { RolesComponent } from '../roles/roles.component';
+import { AuthGuard } from '../../services/auth.guard';
 
 const mainRoutes: Routes = [
   {

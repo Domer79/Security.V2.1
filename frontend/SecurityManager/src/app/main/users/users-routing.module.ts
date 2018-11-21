@@ -6,6 +6,7 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
 import { UserGroupsComponent } from './user-groups/user-groups.component';
 import { UserRolesComponent } from './user-roles/user-roles.component';
 import { UserDetailResolverService } from './services/user-detail-resolver.service';
+import { AuthGuard } from '../../services/auth.guard';
 
 const routes: Routes = [
   { 
@@ -20,7 +21,7 @@ const routes: Routes = [
         },
         children: [
           { path: '', redirectTo: 'profile', pathMatch: 'full' },
-          { path: 'profile', component: ProfileComponent, },
+          { path: 'profile', component: ProfileComponent },
           { path: 'groups', component: UserGroupsComponent },
           { path: 'roles', component: UserRolesComponent }
         ]

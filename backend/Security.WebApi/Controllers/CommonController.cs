@@ -39,7 +39,8 @@ namespace Security.WebApi.Controllers
         }
 
         [Route("api/common/setpassword")]
-        [HttpGet]
+        [HttpPost]
+        [ResponseType(typeof(bool))]
         public async Task<IHttpActionResult> SetPassword(string loginOrEmail, string password)
         {
             var result = await _repo.SetPasswordAsync(loginOrEmail, password);

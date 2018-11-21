@@ -6,5 +6,5 @@
 export const environment = {
   production: false,
   host: "http://localhost:14797",
-  routeTrace: false,
+  routeTrace: true,
 };
