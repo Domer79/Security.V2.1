@@ -1018,6 +1018,36 @@ namespace Security.Tests.SecurityInDatabaseTest.Simple
             }
         }
 
+        [Test]
+        public void CheckTokenExpire_ExpectedFalse()
+        {
+            using (var scenario = new CreateUserAndGrantAccessScenario())
+            {
+                var result = scenario.Run(_security);
+                var token = result.UserTokens[0];
+
+                _security.StopExpire(token);
+                Thread.Sleep(10);
+                var expired = _security.CheckTokenExpire(token);
+
+                Assert.IsFalse(expired);
+            }
+        }
+
+        [Test]
+        public void CheckTokenExpire_ExpectedTrue()
+        {
+            using (var scenario = new CreateUserAndGrantAccessScenario())
+            {
+                var result = scenario.Run(_security);
+                var token = result.UserTokens[0];
+
+                var expired = _security.CheckTokenExpire(token);
+
+                Assert.IsTrue(expired);
+            }
+        }
+
         #endregion
     }
 

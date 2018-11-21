@@ -88,6 +88,16 @@ namespace Security.Core.DataLayer.Repositories
         }
 
         /// <summary>
+        /// Проверка срока действия токена
+        /// </summary>
+        /// <param name="token"></param>
+        /// <returns></returns>
+        public bool CheckExpire(string token)
+        {
+            return _commonDb.ExecuteScalar<bool>("select cast(1 as bit) from sec.Tokens where tokenId = @token and expire > GETUTCDATE() union select CAST(0 as bit)", new {token});
+        }
+
+        /// <summary>
         /// Создание токена
         /// </summary>
         /// <param name="idUser"></param>
@@ -147,6 +157,16 @@ namespace Security.Core.DataLayer.Repositories
         public Task StopExpireForUserAsync(string tokenId, string reason = null)
         {
             return _commonDb.ExecuteNonQueryAsync("update sec.Tokens set expire = @expire where tokenId in (select tokenId from sec.Tokens where idUser = (select idUser from sec.Tokens where tokenId = @tokenId))", new { expire = DateTime.UtcNow, tokenId });
+        }
+
+        /// <summary>
+        /// Проверка срока действия токена
+        /// </summary>
+        /// <param name="token"></param>
+        /// <returns></returns>
+        public Task<bool> CheckExpireAsync(string token)
+        {
+            return _commonDb.ExecuteScalarAsync<bool>("select cast(1 as bit) from sec.Tokens where tokenId = @token and expire > GETUTCDATE() union select CAST(0 as bit)", new { token });
         }
 
         /// <summary>

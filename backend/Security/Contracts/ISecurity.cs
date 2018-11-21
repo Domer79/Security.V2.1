@@ -47,6 +47,13 @@ namespace Security.Contracts
         string CreateToken(string loginOrEmail, string password);
 
         /// <summary>
+        /// Проверка срока действия токена
+        /// </summary>
+        /// <param name="token"></param>
+        /// <returns></returns>
+        bool CheckTokenExpire(string token);
+
+        /// <summary>
         /// Прекращение действия токена
         /// </summary>
         /// <param name="tokenId"></param>
@@ -99,6 +106,13 @@ namespace Security.Contracts
         /// <param name="password"></param>
         /// <returns></returns>
         Task<string> CreateTokenAsync(string loginOrEmail, string password);
+
+        /// <summary>
+        /// Проверка срока действия токена
+        /// </summary>
+        /// <param name="token"></param>
+        /// <returns></returns>
+        Task<bool> CheckTokenExpireAsync(string token);
 
         /// <summary>
         /// Прекращение действия токена

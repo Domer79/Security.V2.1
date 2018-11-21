@@ -65,6 +65,11 @@ namespace Security.Core
             return UserInternalRepository.CreateToken(loginOrEmail, password);
         }
 
+        public bool CheckTokenExpire(string token)
+        {
+            return TokenService.CheckExpire(token);
+        }
+
         public void StopExpire(string tokenId, string reason = null)
         {
             TokenService.StopExpire(tokenId, reason);
@@ -108,6 +113,11 @@ namespace Security.Core
         public Task<string> CreateTokenAsync(string loginOrEmail, string password)
         {
             return UserInternalRepository.CreateTokenAsync(loginOrEmail, password);
+        }
+
+        public Task<bool> CheckTokenExpireAsync(string token)
+        {
+            return TokenService.CheckExpireAsync(token);
         }
 
         public Task StopExpireAsync(string tokenId, string reason = null)

@@ -1022,6 +1022,35 @@ namespace Security.Tests.SecurityInDatabaseTest.SimpleAsync
             }
         }
 
+        [Test]
+        public async Task CheckTokenExpire_ExpectedFalse()
+        {
+            using (var scenario = new CreateUserAndGrantAccessScenario())
+            {
+                var result = await scenario.RunAsync(_security);
+                var token = result.UserTokens[0];
+
+                await _security.StopExpireAsync(token);
+                var expired = await _security.CheckTokenExpireAsync(token);
+
+                Assert.IsFalse(expired);
+            }
+        }
+
+        [Test]
+        public async Task CheckTokenExpire_ExpectedTrue()
+        {
+            using (var scenario = new CreateUserAndGrantAccessScenario())
+            {
+                var result = await scenario.RunAsync(_security);
+                var token = result.UserTokens[0];
+
+                var expired = await _security.CheckTokenExpireAsync(token);
+
+                Assert.IsTrue(expired);
+            }
+        }
+
         #endregion
 
         class SecurityObject : ISecurityObject

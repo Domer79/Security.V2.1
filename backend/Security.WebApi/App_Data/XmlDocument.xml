@@ -634,6 +634,13 @@
             <param name="reason"></param>
             <returns></returns>
         </member>
+        <member name="M:Security.WebApi.Controllers.TokenController.CheckExpire(System.String)">
+            <summary>
+            Проверка срока действия токена
+            </summary>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
         <member name="T:Security.WebApi.Controllers.UserGroupsController">
             <summary>
             

@@ -37,6 +37,11 @@ namespace SecurityHttp.Repositories
             _commonWeb.Delete("api/token/stop-all", new { tokenId, reason });
         }
 
+        public bool CheckExpire(string token)
+        {
+            return _commonWeb.Get<bool>("api/token/check-expire", new {token});
+        }
+
         public Task<string> CreateAsync(int idUser)
         {
             return _commonWeb.PostAndGetAsync<string>("api/token/create-by-id", null, new { idUser });
@@ -55,6 +60,11 @@ namespace SecurityHttp.Repositories
         public Task StopExpireForUserAsync(string tokenId, string reason = null)
         {
             return _commonWeb.DeleteAsync("api/token/stop-all", new { tokenId, reason });
+        }
+
+        public Task<bool> CheckExpireAsync(string token)
+        {
+            return _commonWeb.GetAsync<bool>("api/token/check-expire", new { token });
         }
     }
 }

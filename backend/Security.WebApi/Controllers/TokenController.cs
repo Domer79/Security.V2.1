@@ -82,5 +82,19 @@ namespace Security.WebApi.Controllers
             await _tokenService.StopExpireForUserAsync(tokenId, reason);
             return Ok();
         }
+
+        /// <summary>
+        /// Проверка срока действия токена
+        /// </summary>
+        /// <param name="token"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("check-expire")]
+        [ResponseType(typeof(bool))]
+        public async Task<IHttpActionResult> CheckExpire(string token)
+        {
+            var expired = await _tokenService.CheckExpireAsync(token);
+            return Ok(expired);
+        }
     }
 }
