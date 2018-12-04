@@ -58,14 +58,20 @@ namespace Security.Tests.SecurityHttpTest.SimpleAsync
         }
 
         [Test]
-        public Task PasswordValidateTest()
+        public async Task PasswordValidateTest()
         {
-            Assert.That(() => _security.SetPasswordAsync("user1", "123456"), Is.True);
-            Assert.That(() => _security.UserValidateAsync("user1", "123456"), Is.True);
+            var user = await _security.UserRepository.CreateAsync(new User()
+            {
+                Login = "admin",
+                Email = "admin@mail.ru",
+                FirstName = "admin",
+                LastName = "admin",
+                DateCreated = DateTime.UtcNow
+            });
+            Assert.That(async () => await _security.SetPasswordAsync("admin", "admin"), Is.True);
+            Assert.That(async () => await _security.UserValidateAsync("admin", "admin"), Is.True);
 
-            Assert.That(() => _security.UserValidateAsync("user1@mail.ru", "123456"), Is.True);
-
-            return Task.Delay(0);
+            Assert.That(async () => await _security.UserValidateAsync("admin@mail.ru", "admin"), Is.True);
         }
 
         [Test]

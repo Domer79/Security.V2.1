@@ -23,6 +23,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { TestAccessComponent } from './test-access/test-access.component';
 import { LoginComponent } from './login/login.component';
+import { AccessDeniedComponent } from './access-denied/access-denied.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { LoginComponent } from './login/login.component';
     ApplicationRedirectComponent,
     HttpNotFoundComponent,
     TestAccessComponent,
-    LoginComponent
+    LoginComponent,
+    AccessDeniedComponent
   ],
   imports: [
     CommonModule,

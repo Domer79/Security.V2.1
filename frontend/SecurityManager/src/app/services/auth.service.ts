@@ -3,6 +3,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { CommonService } from '../system/service/common.service';
 import { catchError, map } from 'rxjs/operators';
+import { TokenService } from './token.service';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,8 @@ export class AuthService {
 
   constructor(
     private common: CommonService,
-    private httpClient: HttpClient
+    private httpClient: HttpClient, 
+    private tokenService: TokenService
   ) { }
 
   checkTokenExpire(token: string): Observable<boolean>{
@@ -33,6 +35,10 @@ export class AuthService {
       // Let the app keep running by returning an empty result.
       return of(result as T);
     };
+  }
+
+  exit(): Promise<void>{
+    return this.httpClient.delete("api/token/stop", {params: {token: this.tokenService.token, reason: null}}).pipe(catchError(this.common.handleError("exit", null))).toPromise();
   }
 
 }

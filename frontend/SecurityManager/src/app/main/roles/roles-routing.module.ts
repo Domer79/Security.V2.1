@@ -6,6 +6,7 @@ import { RoleDetailComponent } from './role-detail/role-detail.component';
 import { RolePoliciesComponent } from './role-policies/role-policies.component';
 import { RoleMembersComponent } from './role-members/role-members.component';
 import { RoleDetailResolverService } from './services/roles-detail-resolver.service';
+import { AuthGuard } from "../../services/auth.guard";
 
 const routes: Routes = [
   { 
@@ -20,9 +21,9 @@ const routes: Routes = [
         },
         children: [
           { path: '', redirectTo: 'profile', pathMatch: 'full' },
-          { path: 'profile', component: RoleProfileComponent, },
-          { path: 'members', component: RoleMembersComponent },
-          { path: 'policy', component: RolePoliciesComponent }
+          { path: 'profile', component: RoleProfileComponent, canActivate: [AuthGuard] },
+          { path: 'members', component: RoleMembersComponent, canActivate: [AuthGuard]  },
+          { path: 'policy', component: RolePoliciesComponent, canActivate: [AuthGuard]  }
         ]
       },
     ]

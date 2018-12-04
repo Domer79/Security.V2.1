@@ -37,12 +37,12 @@ namespace SecurityHttp.Repositories
 
         public bool SetPassword(string loginOrEmail, string password)
         {
-            return _commonWeb.Get<bool>("api/common/setpassword", new {loginOrEmail, password});
+            return _commonWeb.PostAndGet<bool>("api/common/setpassword", null, new {loginOrEmail, password});
         }
 
         public Task<bool> SetPasswordAsync(string loginOrEmail, string password)
         {
-            return _commonWeb.GetAsync<bool>("api/common/setpassword", new { loginOrEmail, password });
+            return _commonWeb.PostAndGetAsync<bool>("api/common/setpassword", null, new { loginOrEmail, password });
         }
 
         public bool UserValidate(string loginOrEmail, string password)

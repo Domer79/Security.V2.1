@@ -57,10 +57,18 @@ namespace Security.Tests.SecurityInDatabaseTest.Simple
         [Test]
         public void PasswordValidateTest()
         {
-            Assert.That(() => _security.SetPassword("user1", "123456"), Is.True);
-            Assert.That(() => _security.UserValidate("user1", "123456"));
+            var user = _security.UserRepository.Create(new User()
+            {
+                Login = "admin",
+                Email = "admin@mail.ru",
+                FirstName = "admin",
+                LastName = "admin",
+                DateCreated = DateTime.UtcNow
+            });
+            Assert.That(() => _security.SetPassword("admin", "admin"), Is.True);
+            Assert.That(() => _security.UserValidate("admin", "admin"), Is.True);
 
-            Assert.That(() => _security.UserValidate("user1@mail.ru", "123456"));
+            Assert.That(() => _security.UserValidate("admin@mail.ru", "admin"), Is.True);
         }
 
         [Test]

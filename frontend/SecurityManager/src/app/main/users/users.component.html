@@ -9,7 +9,12 @@
       <button class="btn btn-outline-success" (click)="createEmptyUser()">Create</button>
     </div>
   </nav>
-  <div style="position: relative">
+  <div style="position: relative" *ngIf="!(accessed$ | async)">
+    <h1>
+      Access denied!
+    </h1>
+  </div>
+  <div style="position: relative" *ngIf="accessed$ | async">
     <ul class="list-group">
       <li class="list-group-item selectable" [class.select]="selectedUser ? selectedUser.IdMember == user.IdMember : false"
         (click)="selectUser(user)" *ngFor="let user of users | async;" id="member{{user.IdMember}}">{{user.Login}}</li>

@@ -21,9 +21,9 @@ const routes: Routes = [
         },
         children: [
           { path: '', redirectTo: 'profile', pathMatch: 'full' },
-          { path: 'profile', component: ProfileComponent },
-          { path: 'groups', component: UserGroupsComponent },
-          { path: 'roles', component: UserRolesComponent }
+          { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
+          { path: 'groups', component: UserGroupsComponent, canActivate: [AuthGuard] },
+          { path: 'roles', component: UserRolesComponent, canActivate: [AuthGuard] }
         ]
       },
     ]

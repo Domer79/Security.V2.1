@@ -7,6 +7,8 @@ import { Location } from '@angular/common';
 import { map }  from "rxjs/operators"
 import { SidePanelService } from '../services/side-panel.service';
 import { UserDetailComponent } from './user-detail/user-detail.component';
+import { SecurityService } from '../../services/security.service';
+import { Policy } from '../../contracts/models/policy';
 
 @Component({
   selector: 'users',
@@ -17,16 +19,19 @@ export class UsersComponent implements OnInit, AfterViewChecked {
   users: Observable<User[]>;
   selectedId: Observable<string>;
   selectedUser: User;
+  accessed$: Observable<boolean>;
 
   constructor(
     private router: Router,
     private usersService: UsersService,
     private route: ActivatedRoute,
-    private sidePanelService: SidePanelService
+    private sidePanelService: SidePanelService,
+    private securityService: SecurityService
   ) {
   }
 
   ngOnInit() {
+    this.accessed$ = this.securityService.checkAccess(Policy.ShowUsers);
     this.users = this.usersService.getAll();
     this.sidePanelService.close();
 

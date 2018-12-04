@@ -622,7 +622,7 @@
             <summary>
             Прекращение действия отдельного токена
             </summary>
-            <param name="tokenId"></param>
+            <param name="token"></param>
             <param name="reason"></param>
             <returns></returns>
         </member>

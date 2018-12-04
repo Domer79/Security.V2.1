@@ -58,14 +58,14 @@ namespace Security.WebApi.Controllers
         /// <summary>
         /// Прекращение действия отдельного токена
         /// </summary>
-        /// <param name="tokenId"></param>
+        /// <param name="token"></param>
         /// <param name="reason"></param>
         /// <returns></returns>
         [HttpDelete]
         [Route("stop")]
-        public async Task<IHttpActionResult> StopExpire(string tokenId, string reason = null)
+        public async Task<IHttpActionResult> StopExpire(string token, string reason = null)
         {
-            await _tokenService.StopExpireAsync(tokenId, reason);
+            await _tokenService.StopExpireAsync(token, reason);
             return Ok();
         }
 

@@ -11,11 +11,16 @@ import { HttpNotFoundComponent } from '../http-not-found/http-not-found.componen
 import { TestAccessComponent } from '../test-access/test-access.component';
 import { LoginComponent } from '../login/login.component';
 import { AuthGuard } from '../services/auth.guard';
+import { AccessDeniedComponent } from '../access-denied/access-denied.component';
 
 const appRoutes: Routes = [
   { path: "", component: ApplicationRedirectComponent },
   { path: "notfound", component: HttpNotFoundComponent },
   { path: "to/login/page", component: LoginComponent },
+  {
+    path: 'accessdenied',
+    component: AccessDeniedComponent
+  },
   { 
     path: ":application", 
     canActivate: [AuthGuard],
@@ -26,10 +31,10 @@ const appRoutes: Routes = [
         redirectTo: "main",
         pathMatch: "full"
       },
-      { path: "main", loadChildren: "app/main/main.module#MainModule" },
+      { path: "main", loadChildren: "app/main/main.module#MainModule", canLoad: [AuthGuard] },
       { path: "settings", component: SettingsComponent },
-      { path: "applications", component: ApplicationPageComponent },
-      { path: "testaccess", component: TestAccessComponent },
+      { path: "applications", component: ApplicationPageComponent, canActivate: [AuthGuard] },
+      { path: "testaccess", component: TestAccessComponent, canActivate: [AuthGuard] },
       { path: "**", redirectTo: "/notfound", pathMatch: "full" },
     ]
   }

@@ -13,17 +13,15 @@ namespace SecurityHttp.Helpers
         public static Exception WebException(string message, WebException e)
         {
             var response = e.Response as HttpWebResponse;
+
+            if (response == null)
+                return e;
+
             using (var sr = new StreamReader(response.GetResponseStream()))
             {
                 var str = sr.ReadToEnd();
-                var webException = new WebException($"{message}. {str}", WebExceptionStatus.UnknownError);
-                if (response != null)
-                {
-                    webException.Data["StatusCode"] = response.StatusCode;
-                    webException.Data["StatusDescription"] = response.StatusDescription;
-                }
-
-                return webException;
+                var ex = new WebException($"{message}. {str}", e, e.Status, e.Response);
+                return ex;
             }
         }
     }

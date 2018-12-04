@@ -29,5 +29,4 @@ export class PolicyService {
       }), catchError(this.common.handleError("getAll", [])));
     }));    
   }
-
 }

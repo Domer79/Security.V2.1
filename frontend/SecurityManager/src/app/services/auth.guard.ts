@@ -1,17 +1,18 @@
 import { Injectable } from '@angular/core';
-import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, CanActivateChild, CanLoad, Route, Router, RouteReuseStrategy } from '@angular/router';
+import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, CanActivateChild, CanLoad, Route, Router, RouteReuseStrategy, ActivatedRoute } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { AuthService } from './auth.service';
 import { TokenService } from './token.service';
 import { isNullOrUndefined } from 'util';
 import { map } from 'rxjs/operators';
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AuthGuard implements CanActivate
-  // CanActivateChild, 
-  // CanLoad 
+export class AuthGuard implements CanActivate,
+  CanActivateChild, 
+  CanLoad 
   {
   constructor(
     private authService: AuthService,
@@ -30,13 +31,13 @@ export class AuthGuard implements CanActivate
       return canActivate;;
   }
 
-  // canActivateChild(childRoute: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | Observable<boolean> | Promise<boolean> {
-  //   return this.checkToken();
-  // }
+  canActivateChild(childRoute: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | Observable<boolean> | Promise<boolean> {
+    return this.checkToken();
+  }
 
-  // canLoad(route: Route): Observable<boolean>  {
-  //   return this.checkToken();
-  // }
+  canLoad(route: Route): Observable<boolean>  {
+    return this.checkToken();
+  }
 
   checkToken(): Observable<boolean>{
     let token = this.tokenService.token;
