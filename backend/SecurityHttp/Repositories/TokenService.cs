@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Security.Contracts.Repository;
+using Security.Model;
 using SecurityHttp.Interfaces;
 
 namespace SecurityHttp.Repositories
@@ -42,6 +43,11 @@ namespace SecurityHttp.Repositories
             return _commonWeb.Get<bool>("api/token/check-expire", new {token});
         }
 
+        public User GetUser(string token)
+        {
+            return _commonWeb.Get<User>("api/token/get-user", new {token});
+        }
+
         public Task<string> CreateAsync(int idUser)
         {
             return _commonWeb.PostAndGetAsync<string>("api/token/create-by-id", null, new { idUser });
@@ -65,6 +71,11 @@ namespace SecurityHttp.Repositories
         public Task<bool> CheckExpireAsync(string token)
         {
             return _commonWeb.GetAsync<bool>("api/token/check-expire", new { token });
+        }
+
+        public Task<User> GetUserAsync(string token)
+        {
+            return _commonWeb.GetAsync<User>("api/token/get-user", new { token });
         }
     }
 }

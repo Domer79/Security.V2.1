@@ -98,6 +98,16 @@ namespace Security.Core.DataLayer.Repositories
         }
 
         /// <summary>
+        /// Возвращает пользователя по токену
+        /// </summary>
+        /// <param name="token"></param>
+        /// <returns></returns>
+        public User GetUser(string token)
+        {
+            return _commonDb.QuerySingle<User>("select * from sec.UsersView where idMember = (select idUser from sec.Tokens where tokenId = @tokenId)");
+        }
+
+        /// <summary>
         /// Создание токена
         /// </summary>
         /// <param name="idUser"></param>
@@ -167,6 +177,11 @@ namespace Security.Core.DataLayer.Repositories
         public Task<bool> CheckExpireAsync(string token)
         {
             return _commonDb.ExecuteScalarAsync<bool>("select cast(1 as bit) from sec.Tokens where tokenId = @token and expire > GETUTCDATE() union select CAST(0 as bit)", new { token });
+        }
+
+        public Task<User> GetUserAsync(string token)
+        {
+            return _commonDb.QuerySingleAsync<User>("select * from sec.UsersView where idMember = (select idUser from sec.Tokens where tokenId = @tokenId)");
         }
 
         /// <summary>

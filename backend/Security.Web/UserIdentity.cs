@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Linq;
 using System.Security.Principal;
+using System.Web.Mvc;
 using System.Web.Security;
+using Security.Contracts;
 using Security.Model;
 
 namespace Security.Web
@@ -11,9 +13,9 @@ namespace Security.Web
     /// </summary>
     public class UserIdentity : IIdentity
     {
-        public UserIdentity(string login, string applicationName)
+        public UserIdentity(string login)
         {
-            User = GetUser(login, applicationName);
+            User = GetUser(login);
         }
 
         /// <summary>
@@ -21,13 +23,11 @@ namespace Security.Web
         /// </summary>
         public User User { get; }
 
-        private static User GetUser(string login, string applicationName)
+        private static User GetUser(string token)
         {
-            using (var security = new Core.Security(applicationName))
-            {
-                var user = security.UserRepository.GetByName(login);
-                return user;
-            }
+            var security = DependencyResolver.Current.GetService<ISecurity>();
+            var user = security.GetByToken(token);
+            return user;
         }
 
         /// <summary>

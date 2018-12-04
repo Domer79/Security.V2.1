@@ -40,6 +40,13 @@ namespace Security.Contracts.Repository
         /// <returns></returns>
         bool CheckExpire(string token);
 
+        /// <summary>
+        /// Возвращает пользователя по токену
+        /// </summary>
+        /// <param name="token"></param>
+        /// <returns></returns>
+        User GetUser(string token);
+
         #region async
 
         /// <summary>
@@ -76,6 +83,13 @@ namespace Security.Contracts.Repository
         /// <param name="token"></param>
         /// <returns></returns>
         Task<bool> CheckExpireAsync(string token);
+
+        /// <summary>
+        /// Проверка срока действия токена
+        /// </summary>
+        /// <param name="token"></param>
+        /// <returns></returns>
+        Task<User> GetUserAsync(string token);
 
         #endregion
     }

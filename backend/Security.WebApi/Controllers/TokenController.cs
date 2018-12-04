@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
 using Security.Contracts.Repository;
+using Security.Model;
 
 namespace Security.WebApi.Controllers
 {
@@ -95,6 +91,20 @@ namespace Security.WebApi.Controllers
         {
             var expired = await _tokenService.CheckExpireAsync(token);
             return Ok(expired);
+        }
+
+        /// <summary>
+        /// Возвращает пользователя по токену
+        /// </summary>
+        /// <param name="token"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("get-user")]
+        [ResponseType(typeof(User))]
+        public async Task<IHttpActionResult> GetUser(string token)
+        {
+            var user = await _tokenService.GetUserAsync(token);
+            return Ok(user);
         }
     }
 }

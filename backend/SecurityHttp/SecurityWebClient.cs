@@ -3,6 +3,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
 using Security.Contracts;
 using Security.Contracts.Repository;
+using Security.Model;
 
 namespace SecurityHttp
 {
@@ -65,6 +66,11 @@ namespace SecurityHttp
             return UserInternalRepository.CheckTokenAccess(token, policy);
         }
 
+        public User GetByToken(string token)
+        {
+            return TokenService.GetUser(token);
+        }
+
         public bool SetPassword(string loginOrEmail, string password)
         {
             return UserInternalRepository.SetPassword(loginOrEmail, password);
@@ -113,6 +119,11 @@ namespace SecurityHttp
         public Task<bool> CheckAccessByTokenAsync(string token, string policy)
         {
             return UserInternalRepository.CheckTokenAccessAsync(token, policy);
+        }
+
+        public Task<User> GetByTokenAsync(string token)
+        {
+            return TokenService.GetUserAsync(token);
         }
 
         public Task<bool> SetPasswordAsync(string loginOrEmail, string password)

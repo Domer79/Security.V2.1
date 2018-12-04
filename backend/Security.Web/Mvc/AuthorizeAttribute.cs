@@ -15,60 +15,52 @@ namespace Security.Web.Mvc
     /// </summary>
     public abstract class AuthorizeAttribute : System.Web.Mvc.AuthorizeAttribute, ISecurityObject
     {
-        private readonly string _applicationName;
         private string _controllerName;
         private string _actionName;
         private ActionResult _unAuthorizedResult;
 
-        protected AuthorizeAttribute(string applicationName)
-        {
-            _applicationName = applicationName;
-        }
-
         protected override bool AuthorizeCore(HttpContextBase httpContext)
         {
             _unAuthorizedResult = null;
-            using (var security = new Core.Security(_applicationName))
+            try
             {
-                try
-                {
-                    if (!ConfigHelper.GetAppSettings<bool>("remotemode"))
-                        if (httpContext.Request.Params["REMOTE_ADDR"] == "127.0.0.1" ||
-                            httpContext.Request.Params["REMOTE_ADDR"] == "::1")
-                            return true;
+                var security = DependencyResolver.Current.GetService<ISecurity>();
+                if (!ConfigHelper.GetAppSettings<bool>("remotemode"))
+                    if (httpContext.Request.Params["REMOTE_ADDR"] == "127.0.0.1" ||
+                        httpContext.Request.Params["REMOTE_ADDR"] == "::1")
+                        return true;
 #if DEBUG
-                    Debugger.Log(0, "Security", $"httpContext.User = {httpContext.User}\r\n");
+                Debugger.Log(0, "Security", $"httpContext.User = {httpContext.User}\r\n");
 #endif
-                    if (!httpContext.User.Identity.IsAuthenticated)
-                        return false;
+                if (!httpContext.User.Identity.IsAuthenticated)
+                    return false;
 
 #if DEBUG
-                    Debugger.Log(0, "Security", $"httpContext.User.Identity = {httpContext.User.Identity}\r\n");
+                Debugger.Log(0, "Security", $"httpContext.User.Identity = {httpContext.User.Identity}\r\n");
 #endif
 
-                    var login = ((UserIdentity)httpContext.User.Identity).User.Login;
-                    var allow = security.CheckAccess(login, ((ISecurityObject)this).ObjectName ?? GetObjectName(_controllerName, _actionName));
+                var login = ((UserIdentity) httpContext.User.Identity).User.Login;
+                var allow = security.CheckAccess(login, ((ISecurityObject) this).ObjectName ?? GetObjectName(_controllerName, _actionName));
 
-                    if (!allow)
-                        if (new HttpRequestWrapper(HttpContext.Current.Request).IsAjaxRequest())
-                        {
-                            _unAuthorizedResult = GetNotAllowAjaxResult();
-                            return true;
-                        }
-                        else
-                        {
-                            _unAuthorizedResult = GetNotAllowViewResult();
-                        }
+                if (!allow)
+                    if (new HttpRequestWrapper(HttpContext.Current.Request).IsAjaxRequest())
+                    {
+                        _unAuthorizedResult = GetNotAllowAjaxResult();
+                        return true;
+                    }
+                    else
+                    {
+                        _unAuthorizedResult = GetNotAllowViewResult();
+                    }
 
-                    return allow;
-                }
-                catch (AuthorizeException)
-                {
-                    return base.AuthorizeCore(httpContext);
-                }
+                return allow;
+            }
+            catch (AuthorizeException)
+            {
+                return base.AuthorizeCore(httpContext);
             }
         }
-        
+
         /// <summary>
         /// Возвращает страницу с сообщением об ошибке на обычный http запрос
         /// </summary>
@@ -112,19 +104,6 @@ namespace Security.Web.Mvc
         private void SetControllerName(string name)
         {
             _controllerName = GetControllerName(name);
-        }
-
-        /// <summary>
-        /// Called when the caching module requests authorization.
-        /// Реализовать в случае необходимости
-        /// </summary>
-        /// <returns>
-        /// A reference to the validation status.
-        /// </returns>
-        /// <param name="httpContext">The HTTP context, which encapsulates all HTTP-specific information about an individual HTTP request.</param><exception cref="T:System.ArgumentNullException">The <paramref name="httpContext"/> parameter is null.</exception>
-        protected override HttpValidationStatus OnCacheAuthorization(HttpContextBase httpContext)
-        {
-            return base.OnCacheAuthorization(httpContext);
         }
 
         /// <summary>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Security.Contracts.Repository;
+using Security.Model;
 
 namespace Security.Contracts
 {
@@ -29,6 +30,13 @@ namespace Security.Contracts
         /// <param name="policy"></param>
         /// <returns></returns>
         bool CheckAccessByToken(string token, string policy);
+
+        /// <summary>
+        /// Возвращает пользователя по токену
+        /// </summary>
+        /// <param name="token"></param>
+        /// <returns></returns>
+        User GetByToken(string token);
 
         /// <summary>
         /// Установка нового пароля
@@ -90,6 +98,13 @@ namespace Security.Contracts
         /// <param name="policy"></param>
         /// <returns></returns>
         Task<bool> CheckAccessByTokenAsync(string token, string policy);
+
+        /// <summary>
+        /// Возвращает пользователя по токену
+        /// </summary>
+        /// <param name="token"></param>
+        /// <returns></returns>
+        Task<User> GetByTokenAsync(string token);
 
         /// <summary>
         /// Асинхронно. Установка нового пароля
