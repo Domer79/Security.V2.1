@@ -72,7 +72,8 @@ namespace Security.Core.DataLayer.Repositories
         {
             var hashPassword = password.GetSHA1HashBytes();
             var user = _userRepository.GetByName(loginOrEmail);
-            if (!user.Status)
+
+            if (user == null || !user.Status)
                 return false;
 
             hashPassword = hashPassword.Concat(user.PasswordSalt.GetSHA1HashBytes()).ToArray().GetSHA1HashBytes();
@@ -94,7 +95,8 @@ namespace Security.Core.DataLayer.Repositories
         {
             var hashPassword = password.GetSHA1HashBytes();
             var user = await _userRepository.GetByNameAsync(loginOrEmail);
-            if (!user.Status)
+
+            if (user == null || !user.Status)
                 return false;
 
             hashPassword = hashPassword.Concat(user.PasswordSalt.GetSHA1HashBytes()).ToArray().GetSHA1HashBytes();

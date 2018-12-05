@@ -2,11 +2,11 @@
 using System.Diagnostics;
 using System.Net;
 using System.Web;
+using System.Web.Configuration;
 using System.Web.Mvc;
 using System.Web.Routing;
 using Security.Contracts;
 using Security.Web.Exceptions;
-using Tools.Extensions;
 
 namespace Security.Web.Mvc
 {
@@ -17,7 +17,7 @@ namespace Security.Web.Mvc
     {
         private ActionResult _unAuthorizedResult;
 
-        protected AuthorizeAttribute(string policy)
+        public AuthorizeAttribute(string policy)
         {
             Policy = policy;
         }
@@ -28,7 +28,8 @@ namespace Security.Web.Mvc
             try
             {
                 var security = DependencyResolver.Current.GetService<ISecurity>();
-                if (!ConfigHelper.GetAppSettings<bool>("remotemode"))
+                bool.TryParse(WebConfigurationManager.AppSettings["remotemode"], out var remoteMode);
+                if (remoteMode)
                     if (httpContext.Request.Params["REMOTE_ADDR"] == "127.0.0.1" ||
                         httpContext.Request.Params["REMOTE_ADDR"] == "::1")
                         return true;

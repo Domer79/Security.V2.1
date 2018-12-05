@@ -72,12 +72,12 @@ namespace Security.Core.DataLayer.Repositories
 
         public User GetByName(string loginOrEmail)
         {
-            return _commonDb.QuerySingle<User>("select * from sec.UsersView where login = @loginOrEmail or email = @loginOrEmail", new {loginOrEmail});
+            return _commonDb.QuerySingleOrDefault<User>("select * from sec.UsersView where login = @loginOrEmail or email = @loginOrEmail", new {loginOrEmail});
         }
 
         public Task<User> GetByNameAsync(string loginOrEmail)
         {
-            return _commonDb.QuerySingleAsync<User>("select * from sec.UsersView where login = @loginOrEmail or email = @loginOrEmail", new { loginOrEmail });
+            return _commonDb.QuerySingleOrDefaultAsync<User>("select * from sec.UsersView where login = @loginOrEmail or email = @loginOrEmail", new { loginOrEmail });
         }
 
         public void Remove(object id)
