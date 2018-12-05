@@ -13,7 +13,7 @@ namespace Security.Web.Mvc
     /// <summary>
     /// Абстрактный класс атрибута авторизации. Осуществляет проверку авторизации пользователя
     /// </summary>
-    public abstract class AuthorizeAttribute : System.Web.Mvc.AuthorizeAttribute
+    public class AuthorizeAttribute : System.Web.Mvc.AuthorizeAttribute
     {
         private ActionResult _unAuthorizedResult;
 
@@ -67,13 +67,19 @@ namespace Security.Web.Mvc
         /// Возвращает страницу с сообщением об ошибке на обычный http запрос
         /// </summary>
         /// <returns>ActionResult</returns>
-        protected abstract ActionResult GetNotAllowViewResult();
+        protected virtual ActionResult GetNotAllowViewResult()
+        {
+            return new HttpStatusCodeResult(HttpStatusCode.Forbidden, "Access denied!");
+        }
 
         /// <summary>
         /// Возвращает сообщение об ошибки на AJAX запрос, задействуется только если в заголовке запроса присутствует атрибут XmlHttpRequest
         /// </summary>
         /// <returns>Сообщение в формате JSON, XML или в любых других форматах</returns>
-        protected abstract ActionResult GetNotAllowAjaxResult();
+        protected virtual ActionResult GetNotAllowAjaxResult()
+        {
+            return new HttpStatusCodeResult(HttpStatusCode.Forbidden, "Access denied!");
+        }
 
         protected virtual int GetHttpStatusCode()
         {
