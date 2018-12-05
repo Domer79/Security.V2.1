@@ -56,7 +56,7 @@ namespace Security.Core
             return UserInternalRepository.CheckTokenAccess(token, policy);
         }
 
-        public User GetByToken(string token)
+        public User GetUserByToken(string token)
         {
             return TokenService.GetUser(token);
         }
@@ -111,7 +111,7 @@ namespace Security.Core
             return UserInternalRepository.CheckTokenAccessAsync(token, policy);
         }
 
-        public Task<User> GetByTokenAsync(string token)
+        public Task<User> GetUserByTokenAsync(string token)
         {
             return TokenService.GetUserAsync(token);
         }

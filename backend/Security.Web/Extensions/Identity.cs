@@ -5,6 +5,7 @@ using System.Net;
 using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Mvc;
 using System.Web.Security;
 using Security.Contracts;
 using Security.Exceptions;
@@ -20,7 +21,8 @@ namespace Security.Web.Extensions
         /// <returns></returns>
         public static string GetLogin(this IIdentity identity)
         {
-            return (identity as UserIdentity)?.User.Login ?? identity.Name;
+            var security = DependencyResolver.Current.GetService<ISecurity>();
+            return security.GetUserByToken(identity.Name).Login;
         }
 
         /// <summary>

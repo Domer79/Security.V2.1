@@ -36,7 +36,7 @@ namespace Security.Contracts
         /// </summary>
         /// <param name="token"></param>
         /// <returns></returns>
-        User GetByToken(string token);
+        User GetUserByToken(string token);
 
         /// <summary>
         /// Установка нового пароля
@@ -104,7 +104,7 @@ namespace Security.Contracts
         /// </summary>
         /// <param name="token"></param>
         /// <returns></returns>
-        Task<User> GetByTokenAsync(string token);
+        Task<User> GetUserByTokenAsync(string token);
 
         /// <summary>
         /// Асинхронно. Установка нового пароля

@@ -9,8 +9,13 @@ namespace Security.Web.Http
     /// <summary>
     /// Абстрактный класс атрибута авторизации. Осуществляет проверку авторизации пользователя
     /// </summary>
-    public class AuthorizeAttribute : System.Web.Http.AuthorizeAttribute, ISecurityObject
+    public class AuthorizeAttribute : System.Web.Http.AuthorizeAttribute
     {
+        public AuthorizeAttribute(string policy)
+        {
+            Policy = policy;
+        }
+
         protected override bool IsAuthorized(HttpActionContext actionContext)
         {
             if (actionContext == null)
@@ -24,12 +29,12 @@ namespace Security.Web.Http
                 return false;
 
             var security = DependencyResolver.Current.GetService<ISecurity>();
-            return security.CheckAccessByToken(token, ObjectName);
+            return security.CheckAccessByToken(token, Policy);
         }
 
         /// <summary>
         /// Наименование объекта безопасности, для которого требуется запрашивать разрешение на доступ
         /// </summary>
-        public string ObjectName { get; set; }
+        public string Policy { get; set; }
     }
 }

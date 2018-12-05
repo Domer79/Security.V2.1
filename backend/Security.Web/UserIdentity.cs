@@ -13,21 +13,9 @@ namespace Security.Web
     /// </summary>
     public class UserIdentity : IIdentity
     {
-        public UserIdentity(string login)
+        public UserIdentity(string token)
         {
-            User = GetUser(login);
-        }
-
-        /// <summary>
-        /// Профиль пользователя
-        /// </summary>
-        public User User { get; }
-
-        private static User GetUser(string token)
-        {
-            var security = DependencyResolver.Current.GetService<ISecurity>();
-            var user = security.GetByToken(token);
-            return user;
+            Name = token;
         }
 
         /// <summary>
@@ -36,7 +24,7 @@ namespace Security.Web
         /// <returns>
         /// Имя пользователя, от имени которого выполняется код.
         /// </returns>
-        public string Name => User == null ? "" : $"{User.LastName} {User.FirstName}";
+        public string Name { get; }
 
         /// <summary>
         /// Возвращает тип проверки подлинности.
@@ -52,7 +40,7 @@ namespace Security.Web
         /// <returns>
         /// true, если пользователь был аутентифицирован; в противном случае false.
         /// </returns>
-        public bool IsAuthenticated => User != null;
+        public bool IsAuthenticated => !string.IsNullOrEmpty(Name);
 
         /// <summary>
         /// Возвращает имя текущего пользователя

@@ -27,7 +27,7 @@ namespace Security.Web
         public bool IsInRole(string role)
         {
             var security = DependencyResolver.Current.GetService<ISecurity>();
-            var user = security.GetByToken(_token);
+            var user = security.GetUserByToken(_token);
             var roles = security.MemberRoleRepository.GetRoles(user.Login);
             return roles.Any(_ => _.Name == role);
         }

@@ -104,7 +104,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ExecSecurityObjects.cs" />
     <Compile Include="Exceptions\AuthorizeException.cs" />
     <Compile Include="Extensions\Identity.cs" />
     <Compile Include="Http\AuthorizeAttribute.cs" />

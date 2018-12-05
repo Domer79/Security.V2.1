@@ -13,11 +13,14 @@ namespace Security.Web.Mvc
     /// <summary>
     /// Абстрактный класс атрибута авторизации. Осуществляет проверку авторизации пользователя
     /// </summary>
-    public abstract class AuthorizeAttribute : System.Web.Mvc.AuthorizeAttribute, ISecurityObject
+    public abstract class AuthorizeAttribute : System.Web.Mvc.AuthorizeAttribute
     {
-        private string _controllerName;
-        private string _actionName;
         private ActionResult _unAuthorizedResult;
+
+        protected AuthorizeAttribute(string policy)
+        {
+            Policy = policy;
+        }
 
         protected override bool AuthorizeCore(HttpContextBase httpContext)
         {
@@ -39,8 +42,7 @@ namespace Security.Web.Mvc
                 Debugger.Log(0, "Security", $"httpContext.User.Identity = {httpContext.User.Identity}\r\n");
 #endif
 
-                var login = ((UserIdentity) httpContext.User.Identity).User.Login;
-                var allow = security.CheckAccess(login, ((ISecurityObject) this).ObjectName ?? GetObjectName(_controllerName, _actionName));
+                var allow = security.CheckAccessByToken(httpContext.User.Identity.Name, Policy);
 
                 if (!allow)
                     if (new HttpRequestWrapper(HttpContext.Current.Request).IsAjaxRequest())
@@ -84,9 +86,6 @@ namespace Security.Web.Mvc
         /// <param name="filterContext">The filter context, which encapsulates information for using <see cref="T:System.Web.Mvc.AuthorizeAttribute"/>.</param><exception cref="T:System.ArgumentNullException">The <paramref name="filterContext"/> parameter is null.</exception>
         public override void OnAuthorization(AuthorizationContext filterContext)
         {
-            SetControllerName(filterContext.ActionDescriptor.ControllerDescriptor.ControllerName);
-            SetActionName(filterContext.ActionDescriptor.ActionName);
-
             base.OnAuthorization(filterContext);
 
             if (_unAuthorizedResult != null)
@@ -96,53 +95,6 @@ namespace Security.Web.Mvc
             }
         }
 
-        private void SetActionName(string actionName)
-        {
-            _actionName = actionName;
-        }
-
-        private void SetControllerName(string name)
-        {
-            _controllerName = GetControllerName(name);
-        }
-
-        /// <summary>
-        /// Наименование объекта безопасности, для которого требуется запрашивать разрешение на доступ
-        /// </summary>        
-        public string ObjectName { get; set; }
-
-        private static string DefaultAction => ((Route) RouteTable.Routes["Default"]).Defaults["action"].ToString();
-
-        private static string GetControllerName(string name)
-        {
-            var length = name.ToLower().IndexOf("controller", StringComparison.Ordinal);
-            return length == -1 ? name : name.Substring(0, length);
-        }
-
-        /// <summary>
-        /// Формирует наименование "объекта безопасности" по умолчанию "ControllerName"
-        /// </summary>
-        /// <param name="controller"></param>
-        /// <returns></returns>
-        public static string GetObjectName(string controller)
-        {
-            return GetObjectName(controller, string.Empty);
-        }
-
-        /// <summary>
-        /// Формирует наименование "объекта безопасности" по умолчанию "ControllerName + ActionName"
-        /// </summary>
-        /// <param name="controller"></param>
-        /// <returns></returns>
-        public static string GetObjectName(string controller, string action)
-        {
-            if (controller == null && action == null)
-                return null;
-
-            if (action == DefaultAction)
-                action = string.Empty;
-
-            return $"{GetControllerName(controller)}/{action}";
-        }
+        public string Policy { get; set; }
     }
 }
