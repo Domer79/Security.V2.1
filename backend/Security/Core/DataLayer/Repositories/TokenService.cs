@@ -104,7 +104,7 @@ namespace Security.Core.DataLayer.Repositories
         /// <returns></returns>
         public User GetUser(string token)
         {
-            return _commonDb.QuerySingle<User>("select * from sec.UsersView where idMember = (select idUser from sec.Tokens where tokenId = @tokenId)");
+            return _commonDb.QuerySingle<User>("select * from sec.UsersView where idMember = (select idUser from sec.Tokens where tokenId = @token)", new {token});
         }
 
         /// <summary>
@@ -181,7 +181,7 @@ namespace Security.Core.DataLayer.Repositories
 
         public Task<User> GetUserAsync(string token)
         {
-            return _commonDb.QuerySingleAsync<User>("select * from sec.UsersView where idMember = (select idUser from sec.Tokens where tokenId = @tokenId)");
+            return _commonDb.QuerySingleAsync<User>("select * from sec.UsersView where idMember = (select idUser from sec.Tokens where tokenId = @token)", new { token });
         }
 
         /// <summary>

@@ -30,7 +30,7 @@ export class GroupsComponent implements OnInit, AfterViewChecked {
   }
 
   ngOnInit() {
-    this.accessed$ = this.securityService.checkAccess(Policy.ShowRoles);
+    this.accessed$ = this.securityService.checkAccess(Policy.ShowGroups);
     this.groups = this.groupsService.getAll();
     this.sidePanelService.close();
 

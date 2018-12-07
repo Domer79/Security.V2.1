@@ -24,6 +24,7 @@ import { CommonModule } from '@angular/common';
 import { TestAccessComponent } from './test-access/test-access.component';
 import { LoginComponent } from './login/login.component';
 import { AccessDeniedComponent } from './access-denied/access-denied.component';
+import { UserInfoComponent } from './user-info/user-info.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { AccessDeniedComponent } from './access-denied/access-denied.component';
     HttpNotFoundComponent,
     TestAccessComponent,
     LoginComponent,
-    AccessDeniedComponent
+    AccessDeniedComponent,
+    UserInfoComponent
   ],
   imports: [
     CommonModule,
