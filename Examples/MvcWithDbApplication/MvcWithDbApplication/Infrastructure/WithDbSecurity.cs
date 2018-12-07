@@ -9,6 +9,7 @@ namespace MvcWithDbApplication.Infrastructure
     {
         public WithDbSecurity() : base("MvcWithDbApplication", "Тестовое приложение MvcWithDbApplication")
         {
+            Config.RegisterSecurityObjects("MvcWithDbApplication", "contact");            
         }
     }
 }

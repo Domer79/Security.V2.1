@@ -6,6 +6,8 @@ import { Location } from '@angular/common';
 import { GroupsService } from '../../services/groups.service';
 import { Group } from '../../contracts/models/group';
 import { SidePanelService } from '../services/side-panel.service';
+import { SecurityService } from '../../services/security.service';
+import { Policy } from '../../contracts/models/policy';
 
 @Component({
   selector: 'groups',
@@ -16,16 +18,19 @@ export class GroupsComponent implements OnInit, AfterViewChecked {
   groups: Observable<Group[]>;
   selectedId: Observable<string>;
   selectedGroup: Group;
+  accessed$: Observable<boolean>;
 
   constructor(
     private router: Router,
     private groupsService: GroupsService,
     private route: ActivatedRoute,
-    private sidePanelService: SidePanelService
+    private sidePanelService: SidePanelService,
+    private securityService: SecurityService
   ) {
   }
 
   ngOnInit() {
+    this.accessed$ = this.securityService.checkAccess(Policy.ShowRoles);
     this.groups = this.groupsService.getAll();
     this.sidePanelService.close();
 
@@ -106,5 +111,11 @@ export class GroupsComponent implements OnInit, AfterViewChecked {
 
   isOpenPanel(): boolean{
     return this.sidePanelService.checkOpen();
+  }
+
+  saveGroup($event: Group):void{
+    this.groupsService.update($event).then(res => {
+      this.selectGroup($event);
+    });
   }
 }

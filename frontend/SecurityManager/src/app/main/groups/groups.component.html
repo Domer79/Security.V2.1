@@ -9,20 +9,17 @@
       <button class="btn btn-outline-success" (click)="createEmptyGroup()">Create</button>
     </div>
   </nav>
-  <!-- <ngb-accordion [closeOthers]="true" activeIds="{{selectedId | async}}">
-    <ngb-panel *ngFor="let user of users | async" id="member{{user.IdMember}}">
-      <ng-template ngbPanelTitle>
-        <a routerLink="{{user.Login}}">{{user.Login}}</a>
-      </ng-template>
-      <ng-template ngbPanelContent>
-        <router-outlet></router-outlet>
-      </ng-template>
-    </ngb-panel>
-  </ngb-accordion> -->
-  <div style="position: relative">
+  <div style="position: relative" *ngIf="!(accessed$ | async)">
+    <h1>
+      Access denied!
+    </h1>
+  </div>
+  <div style="position: relative" *ngIf="accessed$ | async">
     <ul class="list-group">
       <li class="list-group-item selectable" [class.select]="selectedGroup ? selectedGroup.IdMember == group.IdMember : false"
-        (click)="selectGroup(group)" *ngFor="let group of groups | async;" id="member{{group.IdMember}}">{{group.Name}}</li>
+        (click)="selectGroup(group)" *ngFor="let group of groups | async;" id="member{{group.IdMember}}">
+        <list-item [item]="group" (saveItem)="saveGroup($event)" ></list-item>
+      </li>
     </ul>
     <div class="side-panel" [class.open]="isOpenPanel()">
       <button type="button" class="close" aria-label="Close" (click)="closePanel()">

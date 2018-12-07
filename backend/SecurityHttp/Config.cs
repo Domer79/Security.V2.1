@@ -69,7 +69,11 @@ namespace SecurityHttp
         {
             foreach (var securityObject in securityObjects)
             {
-                var secObject = new SecObject()
+                var secObject = await _secObjectRepository.GetByNameAsync(securityObject.ObjectName);
+                if (secObject != null)
+                    continue;
+
+                secObject = new SecObject()
                 {
                     ObjectName = securityObject.ObjectName
                 };

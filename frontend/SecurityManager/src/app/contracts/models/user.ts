@@ -1,7 +1,19 @@
 import { Member } from "./member";
+import { IEntity } from "./IEntity";
 
-export class User extends Member{
-    Login: string;
+export class User implements IEntity{
+    get IdNumber(): number{
+        return this.IdMember;
+    }
+    IdMember: number;
+    get Login(): string{
+        return this.Name;
+    }
+
+    set Login(value: string){
+        this.Name = value;
+    }
+    Name: string;
     FirstName: string;
     LastName: string;
     MiddleName: string;

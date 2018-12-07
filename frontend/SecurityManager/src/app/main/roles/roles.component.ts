@@ -6,6 +6,8 @@ import { RolesService } from '../../services/roles.service';
 import { SidePanelService } from '../services/side-panel.service';
 import { Role } from '../../contracts/models/role';
 import { RoleDetailComponent } from './role-detail/role-detail.component';
+import { SecurityService } from '../../services/security.service';
+import { Policy } from '../../contracts/models/policy';
 
 @Component({
   selector: 'roles',
@@ -16,16 +18,19 @@ export class RolesComponent implements OnInit, AfterViewChecked {
   roles: Observable<Role[]>;
   selectedId: Observable<string>;
   selectedRole: Role;
+  accessed$: Observable<boolean>;
 
   constructor(
     private router: Router,
     private rolesService: RolesService,
     private route: ActivatedRoute,
-    private sidePanelService: SidePanelService
+    private sidePanelService: SidePanelService,
+    private securityService: SecurityService
   ) {
   }
 
   ngOnInit() {
+    this.accessed$ = this.securityService.checkAccess(Policy.ShowRoles);
     this.roles = this.rolesService.getAll();
     this.sidePanelService.close();
 
@@ -106,5 +111,11 @@ export class RolesComponent implements OnInit, AfterViewChecked {
 
   isOpenPanel(): boolean{
     return this.sidePanelService.checkOpen();
+  }
+
+  saveRole($event: Role): void{
+    this.rolesService.update($event).then(res => {
+      this.selectRole($event);
+    });
   }
 }

@@ -17,7 +17,9 @@
   <div style="position: relative" *ngIf="accessed$ | async">
     <ul class="list-group">
       <li class="list-group-item selectable" [class.select]="selectedUser ? selectedUser.IdMember == user.IdMember : false"
-        (click)="selectUser(user)" *ngFor="let user of users | async;" id="member{{user.IdMember}}">{{user.Login}}</li>
+        (click)="selectUser(user)" *ngFor="let user of users | async;" id="member{{user.IdMember}}">
+        <list-item [item]="user" (saveItem)="saveUser($event)" ></list-item>
+      </li>
     </ul>
     <div class="side-panel" [class.open]="isOpenPanel()">
       <button type="button" class="close" aria-label="Close" (click)="closePanel()">

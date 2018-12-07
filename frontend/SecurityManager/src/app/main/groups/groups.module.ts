@@ -10,6 +10,7 @@ import { GroupsComponent } from './groups.component';
 import { GroupDetailComponent } from './group-detail/group-detail.component';
 import { GroupUsersComponent } from './group-users/group-users.component';
 import { GroupRolesComponent } from './group-roles/group-roles.component';
+import { CommonComponentsModule } from '../common-components/common-components.module';
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { GroupRolesComponent } from './group-roles/group-roles.component';
     FormsModule,
     GroupsRoutingModule,
     NgbModule,
-    DialogsModule
+    DialogsModule,
+    CommonComponentsModule
   ],
   declarations: [
     GroupsComponent,

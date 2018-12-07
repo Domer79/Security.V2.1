@@ -1,6 +1,9 @@
 import { IEntity } from "./IEntity";
 
 export class Policy implements IEntity {
+    get IdNumber(): number{
+        return this.IdPolicy;
+    }
     IdPolicy: number;
     Name: string;
 

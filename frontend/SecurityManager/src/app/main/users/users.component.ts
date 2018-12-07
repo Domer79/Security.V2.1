@@ -113,4 +113,12 @@ export class UsersComponent implements OnInit, AfterViewChecked {
   isOpenPanel(): boolean{
     return this.sidePanelService.checkOpen();
   }
+
+  saveUser($event: User): void{
+    let user: User = $event;
+    user.Login = $event.Name;
+    this.usersService.update(user).then(res => {
+      this.selectUser(user);
+    });
+  }
 }

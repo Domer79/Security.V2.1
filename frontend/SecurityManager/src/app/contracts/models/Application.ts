@@ -10,6 +10,10 @@ export class Application implements IEntity{
         this.AppName = value;
     }
     
+    get IdNumber(): number{
+        return this.IdApplication;
+    }
+    
     IdApplication: number;
     AppName: string;
     Description: string;
