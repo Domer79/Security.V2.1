@@ -52,14 +52,17 @@
       <HintPath>..\packages\Autofac.Mvc5.4.0.2\lib\net45\Autofac.Integration.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Security">
-      <HintPath>SecurityDlls\Security.dll</HintPath>
+    <Reference Include="Security, Version=3.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SecurityDlls\Security.dll</HintPath>
     </Reference>
-    <Reference Include="Security.Model">
-      <HintPath>SecurityDlls\Security.Model.dll</HintPath>
+    <Reference Include="Security.Model, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SecurityDlls\Security.Model.dll</HintPath>
     </Reference>
-    <Reference Include="Security.Web">
-      <HintPath>SecurityDlls\Security.Web.dll</HintPath>
+    <Reference Include="Security.Web, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SecurityDlls\Security.Web.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -203,6 +206,9 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
