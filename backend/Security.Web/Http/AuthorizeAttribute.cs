@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Linq;
+using System.Net.Http;
+using System.Web.Http;
 using System.Web.Http.Controllers;
-using System.Web.Mvc;
 using Security.Contracts;
 
 namespace Security.Web.Http
@@ -28,7 +29,8 @@ namespace Security.Web.Http
             if (token == null)
                 return false;
 
-            var security = DependencyResolver.Current.GetService<ISecurity>();
+            var dependencyScope = actionContext.Request.GetDependencyScope();
+            var security = (ISecurity)dependencyScope.GetService(typeof(ISecurity));
             return security.CheckAccessByToken(token, Policy);
         }
 
