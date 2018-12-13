@@ -45,10 +45,9 @@ namespace Security.Tests.SecurityHttpTest
                 builder.Query = queryBuilder.ToString();
 
                 var json = "";
-                if (queryData != null)
+                if (data != null)
                 {
                     json = NewtonsoftJsonSerialize(data);
-                    Console.WriteLine(json);
                 }
 
                 var request = new HttpRequestMessage();
@@ -110,10 +109,9 @@ namespace Security.Tests.SecurityHttpTest
                 builder.Query = queryBuilder.ToString();
 
                 var json = "";
-                if (queryData != null)
+                if (data != null)
                 {
                     json = NewtonsoftJsonSerialize(data);
-                    Console.WriteLine(json);
                 }
 
                 var request = new HttpRequestMessage();
@@ -141,10 +139,9 @@ namespace Security.Tests.SecurityHttpTest
                 builder.Query = queryBuilder.ToString();
 
                 var json = "";
-                if (queryData != null)
+                if (data != null)
                 {
                     json = NewtonsoftJsonSerialize(data);
-                    Console.WriteLine(json);
                 }
 
                 var request = new HttpRequestMessage();
@@ -172,10 +169,9 @@ namespace Security.Tests.SecurityHttpTest
                 builder.Query = queryBuilder.ToString();
 
                 var json = "";
-                if (queryData != null)
+                if (data != null)
                 {
                     json = NewtonsoftJsonSerialize(data);
-                    Console.WriteLine(json);
                 }
 
                 var request = new HttpRequestMessage();
@@ -202,10 +198,9 @@ namespace Security.Tests.SecurityHttpTest
                 builder.Query = queryBuilder.ToString();
 
                 var json = "";
-                if (queryData != null)
+                if (data != null)
                 {
                     json = NewtonsoftJsonSerialize(data);
-                    Console.WriteLine(json);
                 }
 
                 var request = new HttpRequestMessage();
@@ -250,10 +245,9 @@ namespace Security.Tests.SecurityHttpTest
                 builder.Query = queryBuilder.ToString();
 
                 var json = "";
-                if (queryData != null)
+                if (data != null)
                 {
                     json = NewtonsoftJsonSerialize(data);
-                    Console.WriteLine(json);
                 }
 
                 var request = new HttpRequestMessage();
@@ -315,10 +309,9 @@ namespace Security.Tests.SecurityHttpTest
                 builder.Query = queryBuilder.ToString();
 
                 var json = "";
-                if (queryData != null)
+                if (data != null)
                 {
                     json = NewtonsoftJsonSerialize(data);
-                    Console.WriteLine(json);
                 }
 
                 var request = new HttpRequestMessage();
@@ -346,10 +339,9 @@ namespace Security.Tests.SecurityHttpTest
                 builder.Query = queryBuilder.ToString();
 
                 var json = "";
-                if (queryData != null)
+                if (data != null)
                 {
                     json = NewtonsoftJsonSerialize(data);
-                    Console.WriteLine(json);
                 }
 
                 var request = new HttpRequestMessage();
@@ -376,10 +368,9 @@ namespace Security.Tests.SecurityHttpTest
                 builder.Query = queryBuilder.ToString();
 
                 var json = "";
-                if (queryData != null)
+                if (data != null)
                 {
                     json = NewtonsoftJsonSerialize(data);
-                    Console.WriteLine(json);
                 }
 
                 var request = new HttpRequestMessage();
@@ -407,10 +398,9 @@ namespace Security.Tests.SecurityHttpTest
                 builder.Query = queryBuilder.ToString();
 
                 var json = "";
-                if (queryData != null)
+                if (data != null)
                 {
                     json = NewtonsoftJsonSerialize(data);
-                    Console.WriteLine(json);
                 }
 
                 var request = new HttpRequestMessage();

@@ -30,7 +30,7 @@ namespace SecurityHttp.Repositories
 
         public void StopExpire(string tokenId, string reason = null)
         {
-            _commonWeb.Delete("api/token/stop", new {tokenId, reason});
+            _commonWeb.Delete("api/token/stop", new {token = tokenId, reason});
         }
 
         public void StopExpireForUser(string tokenId, string reason = null)
@@ -60,7 +60,7 @@ namespace SecurityHttp.Repositories
 
         public Task StopExpireAsync(string tokenId, string reason = null)
         {
-            return _commonWeb.DeleteAsync("api/token/stop", new { tokenId, reason });
+            return _commonWeb.DeleteAsync("api/token/stop", new { token = tokenId, reason });
         }
 
         public Task StopExpireForUserAsync(string tokenId, string reason = null)

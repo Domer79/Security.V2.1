@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using NLog;
 using Security.Contracts;
@@ -10,6 +11,7 @@ namespace Security.Tests.Scenarios
         private readonly Logger _logger;
         private ISecurity _security;
         private bool _isAsync = false;
+        private Stopwatch _stopwatch;
 
         protected BaseScenario()
         {
@@ -46,6 +48,10 @@ namespace Security.Tests.Scenarios
                 Console.WriteLine(e);
                 throw;
             }
+            finally
+            {
+                _stopwatch = Stopwatch.StartNew();
+            }
         }
 
         /// <summary>
@@ -57,6 +63,10 @@ namespace Security.Tests.Scenarios
         {
             if (!_isAsync)
                 return;
+
+            var elapsed = _stopwatch.Elapsed;
+            _stopwatch.Stop();
+            Console.WriteLine($"Elapsed time: {elapsed}");
 
             try
             {
@@ -124,6 +134,10 @@ namespace Security.Tests.Scenarios
                 Console.WriteLine(e);
                 throw;
             }
+            finally
+            {
+                _stopwatch = Stopwatch.StartNew();
+            }
         }
 
         /// <summary>
@@ -135,6 +149,10 @@ namespace Security.Tests.Scenarios
         {
             if (_isAsync)
                 return;
+
+            var elapsed = _stopwatch.Elapsed;
+            _stopwatch.Stop();
+            Console.WriteLine($"Elapsed time: {elapsed}");
 
             try
             {

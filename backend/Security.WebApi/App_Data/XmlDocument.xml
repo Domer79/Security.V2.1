@@ -659,5 +659,10 @@
             </summary>
             <param name="repo"></param>
         </member>
+        <member name="T:Security.WebApi.Infrastructure.DelegatingHandlers.SecurityApiInternalServerError">
+            <summary>
+            Общая ошибка сервера
+            </summary>
+        </member>
     </members>
 </doc>

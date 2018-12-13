@@ -494,5 +494,11 @@ namespace SecurityHttp
             var trim = aggregateString.Trim('&');
             return trim;
         }
+
+        public IEnumerable<KeyValuePair<string, string>> ToKeyValuePairs()
+        {
+            var keyValuePairs = _params.ToDictionary(pair => pair.Key, pair => pair.ToString());
+            return keyValuePairs;
+        }
     }
 }
