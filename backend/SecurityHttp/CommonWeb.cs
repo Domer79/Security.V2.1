@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using Newtonsoft.Json;
 using Security.CommonContracts;
 using Security.Model;
@@ -483,7 +484,7 @@ namespace SecurityHttp
                 var properties = data.GetType().GetProperties();
                 foreach (var propertyInfo in properties)
                 {
-                    _params[propertyInfo.Name] = propertyInfo.GetValue(data);
+                    _params[propertyInfo.Name] = HttpUtility.UrlEncode(propertyInfo.GetValue(data).ToString());
                 }
             }
         }
