@@ -11,17 +11,31 @@ using Security.Contracts.Repository;
 
 namespace Security.WebApi.Controllers
 {
+    /// <summary>
+    /// Общие методы
+    /// </summary>
     public class CommonController : ApiController
     {
         private readonly IUserInternalRepository _repo;
         private readonly IConfig _config;
 
+        /// <summary>
+        /// Общие методы
+        /// </summary>
+        /// <param name="repo"></param>
+        /// <param name="config"></param>
         public CommonController(IUserInternalRepository repo, IConfig config)
         {
             _repo = repo;
             _config = config;
         }
 
+        /// <summary>
+        /// Проверка доступа по логину или email
+        /// </summary>
+        /// <param name="loginOrEmail"></param>
+        /// <param name="policy"></param>
+        /// <returns></returns>
         [Route("api/{app}/common/checkaccess")]
         [HttpGet]
         public async Task<IHttpActionResult> CheckAccess(string loginOrEmail, string policy)
@@ -30,6 +44,12 @@ namespace Security.WebApi.Controllers
             return Ok(result);
         }
 
+        /// <summary>
+        /// Проверка доступа по токену
+        /// </summary>
+        /// <param name="token"></param>
+        /// <param name="policy"></param>
+        /// <returns></returns>
         [Route("api/{app}/common/check-access-token")]
         [HttpGet]
         public async Task<IHttpActionResult> CheckAccessByToken(string token, string policy)
@@ -38,6 +58,12 @@ namespace Security.WebApi.Controllers
             return Ok(result);
         }
 
+        /// <summary>
+        /// Установка пароля для пользователя
+        /// </summary>
+        /// <param name="loginOrEmail"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
         [Route("api/common/setpassword")]
         [HttpPost]
         [ResponseType(typeof(bool))]
@@ -47,6 +73,12 @@ namespace Security.WebApi.Controllers
             return Ok(result);
         }
 
+        /// <summary>
+        /// Проверка пароля пользователя
+        /// </summary>
+        /// <param name="loginOrEmail"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
         [Route("api/common/validate")]
         [HttpGet]
         public async Task<IHttpActionResult> UserValidate(string loginOrEmail, string password)
@@ -55,6 +87,12 @@ namespace Security.WebApi.Controllers
             return Ok(result);
         }
 
+        /// <summary>
+        /// Создание токена для пользователя по логину и паролю
+        /// </summary>
+        /// <param name="loginOrEmail"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
         [Route("api/common/create-token")]
         [ResponseType(typeof(string))]
         [HttpPost]
@@ -64,6 +102,12 @@ namespace Security.WebApi.Controllers
             return Ok(token);
         }
 
+        /// <summary>
+        /// Регистрация нового приложения
+        /// </summary>
+        /// <param name="appName"></param>
+        /// <param name="description"></param>
+        /// <returns></returns>
         [Route("api/common/registerapp")]
         [HttpPut]
         public async Task<IHttpActionResult> RegisterApplication(string appName, string description)
@@ -72,6 +116,12 @@ namespace Security.WebApi.Controllers
             return Ok();
         }
 
+        /// <summary>
+        /// Регистрация политик безопасности
+        /// </summary>
+        /// <param name="appName"></param>
+        /// <param name="securityObjects"></param>
+        /// <returns></returns>
         [Route("api/common/registerpolicy")]
         [HttpPut]
         public async Task<IHttpActionResult> RegisterSecurityObjects(string appName, [FromBody] string[] securityObjects)

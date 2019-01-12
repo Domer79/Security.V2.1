@@ -19,6 +19,9 @@ namespace Security.WebApi.Controllers
     {
         private readonly IRoleRepository _repository;
 
+        /// <summary>
+        /// API для работы с ролями
+        /// </summary>
         public RolesController(IRoleRepository repository)
         {
             _repository = repository;

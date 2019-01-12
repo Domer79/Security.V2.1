@@ -488,10 +488,31 @@
         </member>
         <member name="M:Security.WebApi.Controllers.ApplicationsController.#ctor(Security.Contracts.Repository.IApplicationInternalRepository,Security.Contracts.IApplicationContext)">
             <summary>
-            
+            API для работы с приложениями
             </summary>
             <param name="repository"></param>
             <param name="context"></param>
+        </member>
+        <member name="M:Security.WebApi.Controllers.ApplicationsController.CreateEmpty(System.String)">
+            <summary>
+            Создание нового приложения с заданным префиксом
+            </summary>
+            <param name="prefix"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.ApplicationsController.Delete(System.Int32)">
+            <summary>
+            Удаление приложения по его идентификатору
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.ApplicationsController.Delete(System.String)">
+            <summary>
+            Удаление приложения по имени
+            </summary>
+            <param name="appName"></param>
+            <returns></returns>
         </member>
         <member name="M:Security.WebApi.Controllers.ApplicationsController.Get">
             <summary>
@@ -499,10 +520,200 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:Security.WebApi.Controllers.ApplicationsController.Get(System.Int32)">
+            <summary>
+            Возвращает приложение по идентификатору
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.ApplicationsController.GetByName(System.String)">
+            <summary>
+            Возвращает приложение по его имени
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.ApplicationsController.Post(Security.Model.Application)">
+            <summary>
+            Создание приложения
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.ApplicationsController.Put(Security.Model.Application)">
+            <summary>
+            Обновление приложения
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Security.WebApi.Controllers.CommonController">
+            <summary>
+            Общие методы
+            </summary>
+        </member>
+        <member name="M:Security.WebApi.Controllers.CommonController.#ctor(Security.Contracts.Repository.IUserInternalRepository,Security.Contracts.IConfig)">
+            <summary>
+            Общие методы
+            </summary>
+            <param name="repo"></param>
+            <param name="config"></param>
+        </member>
+        <member name="M:Security.WebApi.Controllers.CommonController.CheckAccess(System.String,System.String)">
+            <summary>
+            Проверка доступа по логину или email
+            </summary>
+            <param name="loginOrEmail"></param>
+            <param name="policy"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.CommonController.CheckAccessByToken(System.String,System.String)">
+            <summary>
+            Проверка доступа по токену
+            </summary>
+            <param name="token"></param>
+            <param name="policy"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.CommonController.SetPassword(System.String,System.String)">
+            <summary>
+            Установка пароля для пользователя
+            </summary>
+            <param name="loginOrEmail"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.CommonController.UserValidate(System.String,System.String)">
+            <summary>
+            Проверка пароля пользователя
+            </summary>
+            <param name="loginOrEmail"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.CommonController.CreateToken(System.String,System.String)">
+            <summary>
+            Создание токена для пользователя по логину и паролю
+            </summary>
+            <param name="loginOrEmail"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.CommonController.RegisterApplication(System.String,System.String)">
+            <summary>
+            Регистрация нового приложения
+            </summary>
+            <param name="appName"></param>
+            <param name="description"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.CommonController.RegisterSecurityObjects(System.String,System.String[])">
+            <summary>
+            Регистрация политик безопасности
+            </summary>
+            <param name="appName"></param>
+            <param name="securityObjects"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Security.WebApi.Controllers.GrantsController">
+            <summary>
+            Управление разрешениями
+            </summary>
+        </member>
+        <member name="M:Security.WebApi.Controllers.GrantsController.#ctor(Security.Contracts.Repository.IGrantRepository)">
+            <summary>
+            Управление разрешениями
+            </summary>
+            <param name="repo"></param>
+        </member>
+        <member name="M:Security.WebApi.Controllers.GrantsController.GetExceptRoleGrant(System.String)">
+            <summary>
+            Возвращает политики безопасности, не установленные для роли
+            </summary>
+            <param name="role"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.GrantsController.GetRoleGrants(System.String)">
+            <summary>
+            Возвращает политики безопасности, установленные для роли
+            </summary>
+            <param name="role"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.GrantsController.RemoveGrants(System.String,System.String[])">
+            <summary>
+            Удаляет указанные политики безопасности для роли
+            </summary>
+            <param name="role"></param>
+            <param name="secObjects"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.GrantsController.SetGrants(System.String,System.String[])">
+            <summary>
+            Устанавливает указанные политики безопасности для роли
+            </summary>
+            <param name="role"></param>
+            <param name="secObjects"></param>
+            <returns></returns>
+        </member>
         <member name="T:Security.WebApi.Controllers.GroupsController">
             <summary>
             API для работы с группами
             </summary>
+        </member>
+        <member name="M:Security.WebApi.Controllers.GroupsController.#ctor(Security.Contracts.Repository.IGroupRepository)">
+            <summary>
+            API для работы с группами
+            </summary>
+        </member>
+        <member name="M:Security.WebApi.Controllers.GroupsController.CreateEmpty(System.String)">
+            <summary>
+            Создает пустую группу с заданным префиксом
+            </summary>
+            <param name="prefix"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.GroupsController.Delete(System.Int32)">
+            <summary>
+            Удаляет группу по идентификатору
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.GroupsController.Get">
+            <summary>
+            Возвращает список всех групп
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.GroupsController.Get(System.Int32)">
+            <summary>
+            Возвращает группу по идентификатору
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.GroupsController.GetByName(System.String)">
+            <summary>
+            Возвращает группу по имени
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.GroupsController.Post(Security.Model.Group)">
+            <summary>
+            Создает новую группу с указанными свойствами
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.GroupsController.Put(Security.Model.Group)">
+            <summary>
+            Обновляет информацию о группе
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
         </member>
         <member name="M:Security.WebApi.Controllers.ISecurityController`1.Get">
             <summary>
@@ -546,7 +757,195 @@
             <param name="name"></param>
             <returns></returns>
         </member>
+        <member name="T:Security.WebApi.Controllers.MemberRolesController">
+            <summary>
+            Управление ролями участников безопасности
+            </summary>
+        </member>
+        <member name="M:Security.WebApi.Controllers.MemberRolesController.#ctor(Security.Contracts.Repository.IMemberRoleRepository)">
+            <summary>
+            Управление ролями
+            </summary>
+            <param name="repo"></param>
+        </member>
+        <member name="M:Security.WebApi.Controllers.MemberRolesController.GetRolesByMemberName(System.String)">
+            <summary>
+            Возвращает список ролей для участника по его имени
+            </summary>
+            <param name="member"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.MemberRolesController.GetRolesByIdMember(System.Int32)">
+            <summary>
+            Возвращает список ролей для участника по его идентификатору
+            </summary>
+            <param name="idMember"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.MemberRolesController.GetMembersByRoleName(System.String)">
+            <summary>
+            Возвращает список участников роли по ее имени
+            </summary>
+            <param name="role"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.MemberRolesController.GetMembersByIdRole(System.Int32)">
+            <summary>
+            Возвращает список участников роли по ее идентификатору
+            </summary>
+            <param name="idRole"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.MemberRolesController.GetExceptRolesByMemberName(System.String)">
+            <summary>
+            Возвращает список ролей не установленных для участника по его имени
+            </summary>
+            <param name="member"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.MemberRolesController.GetExceptRolesByIdMember(System.Int32)">
+            <summary>
+            Возвращает список ролей не установленных для участника по его идентификатору
+            </summary>
+            <param name="idMember"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.MemberRolesController.GetExceptMembersByRole(System.String)">
+            <summary>
+            Возвращает список участников не установленных для роли по ее имени
+            </summary>
+            <param name="role"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.MemberRolesController.GetExceptMembersByRole(System.Int32)">
+            <summary>
+            Возвращает список участников не установленных для роли по ее идентификатору
+            </summary>
+            <param name="idRole"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.MemberRolesController.AddRolesToMember(System.String,System.String[])">
+            <summary>
+            Добавляет роли участнику
+            </summary>
+            <param name="member"></param>
+            <param name="roles"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.MemberRolesController.AddRolesToMemberByIds(System.Int32,System.Int32[])">
+            <summary>
+            Добавляет роли участнику
+            </summary>
+            <param name="idMember"></param>
+            <param name="idRoles"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.MemberRolesController.AddMembersToRole(System.String,System.String[])">
+            <summary>
+            Добавляет участников для роли
+            </summary>
+            <param name="role"></param>
+            <param name="members"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.MemberRolesController.AddMembersToRoleByIds(System.Int32,System.Int32[])">
+            <summary>
+            Добавляет участников для роли
+            </summary>
+            <param name="idRole"></param>
+            <param name="idMembers"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.MemberRolesController.DeleteRolesFromMember(System.Int32,System.Int32[])">
+            <summary>
+            Удаляет роли у участника
+            </summary>
+            <param name="idMember"></param>
+            <param name="idRoles"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.MemberRolesController.DeleteMembersFromRole(System.Int32,System.Int32[])">
+            <summary>
+            Удаляет участников у роли
+            </summary>
+            <param name="idRole"></param>
+            <param name="idMembers"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.MemberRolesController.DeleteRolesFromMember(System.String,System.String[])">
+            <summary>
+            Удаляет роли у участника
+            </summary>
+            <param name="member"></param>
+            <param name="roles"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.MemberRolesController.DeleteMembersFromRole(System.String,System.String[])">
+            <summary>
+            Удаляет участников у роли
+            </summary>
+            <param name="role"></param>
+            <param name="members"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Security.WebApi.Controllers.PolicyController">
+            <summary>
+            Управление политиками текущего приложения
+            </summary>
+        </member>
+        <member name="M:Security.WebApi.Controllers.PolicyController.#ctor(Security.Contracts.Repository.ISecObjectRepository)">
+            <summary>
+            Управление политиками текущего приложения
+            </summary>
+            <param name="repo"></param>
+        </member>
+        <member name="M:Security.WebApi.Controllers.PolicyController.Get">
+            <summary>
+            Возвращает список все политик для текущего приложения
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.PolicyController.Get(System.Int32)">
+            <summary>
+            Возвращает политику по ее идентификатору
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.PolicyController.Post(Security.Model.SecObject)">
+            <summary>
+            Создает новую политику
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.PolicyController.Put(Security.Model.SecObject)">
+            <summary>
+            Обновляет политику
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.PolicyController.Delete(System.Int32)">
+            <summary>
+            Удаление политики
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.PolicyController.GetByName(System.String)">
+            <summary>
+            Возвращает политику по ее имени
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
         <member name="T:Security.WebApi.Controllers.RolesController">
+            <summary>
+            API для работы с ролями
+            </summary>
+        </member>
+        <member name="M:Security.WebApi.Controllers.RolesController.#ctor(Security.Contracts.Repository.IRoleRepository)">
             <summary>
             API для работы с ролями
             </summary>
@@ -591,6 +990,48 @@
             Возвращает роль приложения по ее имени
             </summary>
             <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Security.WebApi.Controllers.SettingsController">
+            <summary>
+            Управление настройками
+            </summary>
+        </member>
+        <member name="M:Security.WebApi.Controllers.SettingsController.#ctor(Security.Contracts.ISecuritySettings)">
+            <summary>
+            Управление настройками
+            </summary>
+            <param name="settings"></param>
+        </member>
+        <member name="M:Security.WebApi.Controllers.SettingsController.Get(System.String,System.String)">
+            <summary>
+            Получение значения 
+            </summary>
+            <param name="key"></param>
+            <param name="systemType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.SettingsController.Post(System.String,System.String,System.Int64)">
+            <summary>
+            Обновление значения
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <param name="lifetime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.SettingsController.IsDeprecated(System.String)">
+            <summary>
+            Проверка актуальности значения настройки
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.SettingsController.Delete(System.String)">
+            <summary>
+            Удаление настройки
+            </summary>
+            <param name="key"></param>
             <returns></returns>
         </member>
         <member name="T:Security.WebApi.Controllers.TokenController">
@@ -648,16 +1089,263 @@
             <param name="token"></param>
             <returns></returns>
         </member>
+        <member name="T:Security.WebApi.Controllers.UserController">
+            <summary>
+            Управление пользователями
+            </summary>
+        </member>
+        <member name="M:Security.WebApi.Controllers.UserController.#ctor(Security.Contracts.Repository.IUserRepository)">
+            <summary>
+            Управление пользователями
+            </summary>
+            <param name="repo"></param>
+        </member>
+        <member name="M:Security.WebApi.Controllers.UserController.GetByName(System.String)">
+            <summary>
+            Возвращает пользователя по логину или email
+            </summary>
+            <param name="loginOrEmail"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.UserController.SetStatus(System.String,System.Boolean)">
+            <summary>
+            Установка статуса пользователя по логину или email
+            </summary>
+            <param name="loginOrEmail"></param>
+            <param name="status"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.UserController.CreateEmpty(System.String)">
+            <summary>
+            Создание пустого пользователя с заданным префиксом
+            </summary>
+            <param name="prefixForRequired"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.UserController.Get(System.Int32)">
+            <summary>
+            Возвращает пользователя по идентификатору
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.UserController.Get">
+            <summary>
+            Возвращает список всех пользователей
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.UserController.Post(Security.Model.User)">
+            <summary>
+            Создание пустого пользователя
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.UserController.Put(Security.Model.User)">
+            <summary>
+            Обновление данных пользователя
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.UserController.Delete(System.Int32)">
+            <summary>
+            Удаление пользователя
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
         <member name="T:Security.WebApi.Controllers.UserGroupsController">
             <summary>
-            
+            Управление группами пользователя
             </summary>
         </member>
         <member name="M:Security.WebApi.Controllers.UserGroupsController.#ctor(Security.Contracts.Repository.IUserGroupRepository)">
             <summary>
-            
+            Управление группами пользователя
             </summary>
             <param name="repo"></param>
+        </member>
+        <member name="M:Security.WebApi.Controllers.UserGroupsController.GetUsersByGroupName(System.String)">
+            <summary>
+            Возвращает список пользователей группы по ее имени
+            </summary>
+            <param name="groupName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.UserGroupsController.GetUsersByGroupId(System.Guid)">
+            <summary>
+            Возвращает список пользователей группы по ее идентификатору <see cref="T:System.Guid"/>
+            </summary>
+            <param name="groupId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.UserGroupsController.GetUsersByIdGroup(System.Int32)">
+            <summary>
+            Возвращает список пользователей группы по ее идентификатору
+            </summary>
+            <param name="idGroup"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.UserGroupsController.GetGroupsByUserName(System.String)">
+            <summary>
+            Возвращает список групп пользователя по его логину
+            </summary>
+            <param name="userName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.UserGroupsController.GetGroupsByUserId(System.Guid)">
+            <summary>
+            Возвращает список групп пользователя по его идентификатору <see cref="T:System.Guid"/>
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.UserGroupsController.GetGroupsByIdUser(System.Int32)">
+            <summary>
+            Возвращает список групп пользователя по его идентификатору
+            </summary>
+            <param name="idUser"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.UserGroupsController.GetNotIncludedUsers(System.String)">
+            <summary>
+            Возвращает список пользователей, отсутствующих в группе
+            </summary>
+            <param name="group"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.UserGroupsController.GetNotIncludedUsers(System.Guid)">
+            <summary>
+            Возвращает список пользователей, отсутствующих в группе
+            </summary>
+            <param name="groupId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.UserGroupsController.GetNotIncludedUsers(System.Int32)">
+            <summary>
+            Возвращает список пользователей, отсутствующих в группе
+            </summary>
+            <param name="idGroup"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.UserGroupsController.GetNotIncludedGroups(System.String)">
+            <summary>
+            Возвращает список групп, отсутствующих у пользователя
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.UserGroupsController.GetNotIncludedGroups(System.Guid)">
+            <summary>
+            Возвращает список групп, отсутствующих у пользователя
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.UserGroupsController.GetNotIncludedGroups(System.Int32)">
+            <summary>
+            Возвращает список групп, отсутствующих у пользователя
+            </summary>
+            <param name="idUser"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.UserGroupsController.AddUsersToGroup(System.String,System.String[])">
+            <summary>
+            Добавляет пользователей в группу
+            </summary>
+            <param name="group"></param>
+            <param name="users"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.UserGroupsController.AddUsersToGroup(System.Guid,System.Guid[])">
+            <summary>
+            Добавляет пользователей в группу
+            </summary>
+            <param name="groupId"></param>
+            <param name="users"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.UserGroupsController.AddUsersToGroup(System.Int32,System.Int32[])">
+            <summary>
+            Добавляет пользователей в группу
+            </summary>
+            <param name="idGroup"></param>
+            <param name="users"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.UserGroupsController.AddGroupsToUser(System.String,System.String[])">
+            <summary>
+            Добавляет пользователя сразу в несколько групп
+            </summary>
+            <param name="user"></param>
+            <param name="groups"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.UserGroupsController.AddGroupsToUser(System.Guid,System.Guid[])">
+            <summary>
+            Добавляет пользователя сразу в несколько групп
+            </summary>
+            <param name="userId"></param>
+            <param name="groups"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.UserGroupsController.AddGroupsToUser(System.Int32,System.Int32[])">
+            <summary>
+            Добавляет пользователя сразу в несколько групп
+            </summary>
+            <param name="idUser"></param>
+            <param name="groups"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.UserGroupsController.RemoveUsersFromGroup(System.Int32,System.Int32[])">
+            <summary>
+            Удаление пользователей из группы
+            </summary>
+            <param name="idGroup"></param>
+            <param name="idUsers"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.UserGroupsController.RemoveUsersFromGroup(System.Guid,System.Guid[])">
+            <summary>
+            Удаление пользователей из группы
+            </summary>
+            <param name="groupId"></param>
+            <param name="usersId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.UserGroupsController.RemoveUsersFromGroup(System.String,System.String[])">
+            <summary>
+            Удаление пользователей из группы
+            </summary>
+            <param name="group"></param>
+            <param name="users"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.UserGroupsController.RemoveGroupsFromUser(System.Int32,System.Int32[])">
+            <summary>
+            Удаление пользователя сразу из несколько групп
+            </summary>
+            <param name="idUser"></param>
+            <param name="idGroups"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.UserGroupsController.RemoveGroupsFromUser(System.Guid,System.Guid[])">
+            <summary>
+            Удаление пользователя сразу из несколько групп
+            </summary>
+            <param name="userId"></param>
+            <param name="groupsId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Security.WebApi.Controllers.UserGroupsController.RemoveGroupsFromUser(System.String,System.String[])">
+            <summary>
+            Удаление пользователя сразу из несколько групп
+            </summary>
+            <param name="user"></param>
+            <param name="groups"></param>
+            <returns></returns>
         </member>
         <member name="T:Security.WebApi.Infrastructure.DelegatingHandlers.SecurityApiInternalServerError">
             <summary>
