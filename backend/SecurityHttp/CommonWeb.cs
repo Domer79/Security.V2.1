@@ -484,7 +484,8 @@ namespace SecurityHttp
                 var properties = data.GetType().GetProperties();
                 foreach (var propertyInfo in properties)
                 {
-                    _params[propertyInfo.Name] = HttpUtility.UrlEncode(propertyInfo.GetValue(data).ToString());
+                    var value = propertyInfo.GetValue(data);
+                    _params[propertyInfo.Name] = HttpUtility.UrlEncode(value?.ToString());
                 }
             }
         }
