@@ -6,6 +6,9 @@ using Security.Contracts;
 
 namespace Security.Core.DataLayer
 {
+    /// <summary>
+    /// Управление соединением с БД
+    /// </summary>
     public class SqlConnectionFactory: IConnectionFactory
     {
         private string ConnectionString => GetConnectionString();
@@ -15,6 +18,9 @@ namespace Security.Core.DataLayer
             return ConfigurationManager.ConnectionStrings["securitydb"].ConnectionString;
         }
 
+        /// <summary>
+        /// Создание соединения с БД
+        /// </summary>
         public Func<IDbConnection> CreateConnection => GetConnection;
 
         private IDbConnection GetConnection()

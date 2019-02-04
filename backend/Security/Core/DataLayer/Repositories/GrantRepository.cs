@@ -7,27 +7,48 @@ using Security.Model;
 
 namespace Security.Core.DataLayer.Repositories
 {
+    /// <summary>
+    /// Управление разрешениями
+    /// </summary>
     public class GrantRepository : IGrantRepository
     {
         private readonly ICommonDb _commonDb;
         private readonly IApplicationContext _context;
 
+        /// <summary>
+        /// Управление разрешениями
+        /// </summary>
         public GrantRepository(ICommonDb commonDb, IApplicationContext context)
         {
             _commonDb = commonDb;
             _context = context;
         }
 
+        /// <summary>
+        /// Получение отсутствующих у роли политик безопасности
+        /// </summary>
+        /// <param name="role"></param>
+        /// <returns></returns>
         public IEnumerable<SecObject> GetExceptRoleGrant(string role)
         {
             return _commonDb.Query<SecObject>("select * from sec.SecObjects where idApplication = @idApplication and idSecObject not in (select g.idSecObject from sec.Grants g inner join sec.Roles r on g.idRole = r.idRole where r.name = @role)", new {role, _context.Application.IdApplication});
         }
 
+        /// <summary>
+        /// Получение отсутствующих у роли политик безопасности
+        /// </summary>
+        /// <param name="role"></param>
+        /// <returns></returns>
         public Task<IEnumerable<SecObject>> GetExceptRoleGrantAsync(string role)
         {
             return _commonDb.QueryAsync<SecObject>("select * from sec.SecObjects where idApplication = @idApplication and idSecObject not in (select g.idSecObject from sec.Grants g inner join sec.Roles r on g.idRole = r.idRole where r.name = @role)", new { role, _context.Application.IdApplication });
         }
 
+        /// <summary>
+        /// Получение политик безопасности для роли
+        /// </summary>
+        /// <param name="role"></param>
+        /// <returns></returns>
         public IEnumerable<SecObject> GetRoleGrants(string role)
         {
             return _commonDb.Query<SecObject>(@"
@@ -41,6 +62,11 @@ where
 ", new {roleName = role, idApplication = _context.Application.IdApplication});
         }
 
+        /// <summary>
+        /// Получение политик безопасности для роли
+        /// </summary>
+        /// <param name="role"></param>
+        /// <returns></returns>
         public Task<IEnumerable<SecObject>> GetRoleGrantsAsync(string role)
         {
             return _commonDb.QueryAsync<SecObject>(@"
@@ -54,6 +80,11 @@ where
 ", new { roleName = role, idApplication = _context.Application.IdApplication });
         }
 
+        /// <summary>
+        /// Удаление разрешения из роли
+        /// </summary>
+        /// <param name="role"></param>
+        /// <param name="secObject"></param>
         public void RemoveGrant(string role, string secObject)
         {
             _commonDb.ExecuteNonQuery(@"
@@ -62,6 +93,12 @@ and idRole = (select idRole from sec.Roles where name = @roleName and idApplicat
 ", new {objectName = secObject, roleName = role, _context.Application.IdApplication });
         }
 
+        /// <summary>
+        /// Удаление разрешения из роли
+        /// </summary>
+        /// <param name="role"></param>
+        /// <param name="secObject"></param>
+        /// <returns></returns>
         public Task RemoveGrantAsync(string role, string secObject)
         {
             return _commonDb.ExecuteNonQueryAsync(@"
@@ -70,6 +107,11 @@ and idRole = (select idRole from sec.Roles where name = @roleName and idApplicat
 ", new { objectName = secObject, roleName = role, _context.Application.IdApplication });
         }
 
+        /// <summary>
+        /// Удаление нескольких разрешений для роли
+        /// </summary>
+        /// <param name="role">Роль</param>
+        /// <param name="secObjects">Политики безопасности</param>
         public void RemoveGrants(string role, string[] secObjects)
         {
             _commonDb.ExecuteNonQuery(@"
@@ -78,6 +120,12 @@ and idSecObject in (select idSecObject from sec.SecObjects where idApplication =
 ", new {roleName = role, objectNames = secObjects, _context.Application.IdApplication});
         }
 
+        /// <summary>
+        /// Удаление нескольких разрешений для роли
+        /// </summary>
+        /// <param name="role"></param>
+        /// <param name="secObjects"></param>
+        /// <returns></returns>
         public Task RemoveGrantsAsync(string role, string[] secObjects)
         {
             return _commonDb.ExecuteNonQueryAsync(@"
@@ -86,6 +134,11 @@ and idSecObject in (select idSecObject from sec.SecObjects where idApplication =
 ", new { roleName = role, objectNames = secObjects, _context.Application.IdApplication });
         }
 
+        /// <summary>
+        /// Установка разрешения для роли
+        /// </summary>
+        /// <param name="role">Роль</param>
+        /// <param name="secObject">Политика безопасности</param>
         public void SetGrant(string role, string secObject)
         {
             _commonDb.ExecuteNonQuery(@"
@@ -96,6 +149,12 @@ select
 ", new {objectName = secObject, roleName = role, idApplication = _context.Application.IdApplication});
         }
 
+        /// <summary>
+        /// Установка разрешения для роли
+        /// </summary>
+        /// <param name="role"></param>
+        /// <param name="secObject"></param>
+        /// <returns></returns>
         public Task SetGrantAsync(string role, string secObject)
         {
             return _commonDb.ExecuteNonQueryAsync(@"
@@ -106,6 +165,11 @@ select
 ", new { objectName = secObject, roleName = role, idApplication = _context.Application.IdApplication });
         }
 
+        /// <summary>
+        /// Установка нескольких разрешений для роли
+        /// </summary>
+        /// <param name="role">Роль</param>
+        /// <param name="secObjects">Политики безопасности</param>
         public void SetGrants(string role, string[] secObjects)
         {
             _commonDb.ExecuteNonQuery(@"
@@ -118,6 +182,12 @@ from
 ", new { objectNames = secObjects, roleName = role, idApplication = _context.Application.IdApplication });
         }
 
+        /// <summary>
+        /// Установка нескольких разрешений для роли
+        /// </summary>
+        /// <param name="role"></param>
+        /// <param name="secObjects"></param>
+        /// <returns></returns>
         public Task SetGrantsAsync(string role, string[] secObjects)
         {
             return _commonDb.ExecuteNonQueryAsync(@"

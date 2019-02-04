@@ -5,6 +5,9 @@ using Security.Model;
 
 namespace Security.Contracts
 {
+    /// <summary>
+    /// Контекст безопасности
+    /// </summary>
     public interface ISecurity: IDisposable
     {
         /// <summary>

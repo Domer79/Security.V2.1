@@ -9,11 +9,17 @@ using SecurityHttp.Interfaces;
 
 namespace SecurityHttp.Repositories
 {
+    /// <summary>
+    /// Управление пользователями и группами
+    /// </summary>
     public class UserGroupRepository : IUserGroupRepository
     {
         private readonly ICommonWeb _commonWeb;
         private readonly string _url;
 
+        /// <summary>
+        /// Управление пользователями и группами
+        /// </summary>
         public UserGroupRepository(ICommonWeb commonWeb)
         {
             _commonWeb = commonWeb;

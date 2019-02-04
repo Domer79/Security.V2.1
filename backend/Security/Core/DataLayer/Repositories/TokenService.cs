@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,10 +9,16 @@ using Security.Model;
 
 namespace Security.Core.DataLayer.Repositories
 {
+    /// <summary>
+    /// Управление токенами
+    /// </summary>
     public class TokenService: ITokenService
     {
         private readonly ICommonDb _commonDb;
 
+        /// <summary>
+        /// Управление токенами
+        /// </summary>
         public TokenService(ICommonDb commonDb)
         {
             _commonDb = commonDb;
@@ -131,6 +135,11 @@ namespace Security.Core.DataLayer.Repositories
             return token.TokenId;
         }
 
+        /// <summary>
+        /// Создание токена
+        /// </summary>
+        /// <param name="loginOrEmail"></param>
+        /// <returns></returns>
         public async Task<string> CreateAsync(string loginOrEmail)
         {
             var tokenExpireSetting = ConfigurationManager.AppSettings["TokenExpire"];
@@ -187,7 +196,6 @@ namespace Security.Core.DataLayer.Repositories
         /// <summary>
         /// Генерация токена
         /// </summary>
-        /// <param name="size"></param>
         /// <returns></returns>
         private static string Generate()
         {

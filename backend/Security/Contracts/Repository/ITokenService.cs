@@ -3,6 +3,9 @@ using Security.Model;
 
 namespace Security.Contracts.Repository
 {
+    /// <summary>
+    /// Управление токенами
+    /// </summary>
     public interface ITokenService
     {
         /// <summary>

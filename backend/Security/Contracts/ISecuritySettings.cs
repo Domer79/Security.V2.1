@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 namespace Security.Contracts
 {
     /// <summary>
-    /// Интерфейс настроечных параметров для системы доступа
+    /// Управление параметрами для системы доступа
     /// </summary>
     public interface ISecuritySettings
     {
@@ -19,18 +19,17 @@ namespace Security.Contracts
         /// <summary>
         /// Возвращает значение переданного ключа <see cref="key"/>
         /// </summary>
-        /// <typeparam name="T">Тип значения</typeparam>
         /// <param name="key">Ключ</param>
-        /// <param name="type"></param>
-        /// <returns>Значение типа <see cref="T"/></returns>
+        /// <param name="type">Тип значения</param>
+        /// <returns>Значение типа <see cref="Object"/></returns>
         object GetValue(string key, Type type);
 
         /// <summary>
         /// Устанавливает значения для ключа <see cref="key"/>
         /// </summary>
-        /// <typeparam name="T">Тип значения</typeparam>
         /// <param name="key">Ключ</param>
         /// <param name="value">Значение</param>
+        /// <param name="lifetime"></param>
         void SetValue(string key, object value, TimeSpan? lifetime = null);
 
         /// <summary>
@@ -57,18 +56,17 @@ namespace Security.Contracts
         /// <summary>
         /// Возвращает значение переданного ключа <see cref="key"/>
         /// </summary>
-        /// <typeparam name="T">Тип значения</typeparam>
         /// <param name="key">Ключ</param>
-        /// <param name="type"></param>
-        /// <returns>Значение типа <see cref="T"/></returns>
+        /// <param name="type">Тип значения</param>
+        /// <returns>Значение типа <see cref="Task{TResult}"/></returns>
         Task<object> GetValueAsync(string key, Type type);
 
         /// <summary>
         /// Устанавливает значения для ключа <see cref="key"/>
         /// </summary>
-        /// <typeparam name="T">Тип значения</typeparam>
         /// <param name="key">Ключ</param>
         /// <param name="value">Значение</param>
+        /// <param name="lifetime"></param>
         Task SetValueAsync(string key, object value, TimeSpan? lifetime = null);
 
         /// <summary>

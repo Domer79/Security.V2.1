@@ -2,6 +2,9 @@
 
 namespace Security.Contracts.Repository
 {
+    /// <summary>
+    /// Дополнительное управление пользователями
+    /// </summary>
     public interface IUserInternalRepository
     {
         /// <summary>
