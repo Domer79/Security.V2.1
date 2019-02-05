@@ -81,7 +81,7 @@ export class UsersComponent implements OnInit, AfterViewChecked {
     var paths: string[] = [login];
     while (activatedRoute != null){
       let component: any = activatedRoute.component;
-      if (component.name === "UserDetailComponent"){
+      if (component.name === UserDetailComponent.name){
         activatedRoute = activatedRoute.children[0];
         continue;
       }

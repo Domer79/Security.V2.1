@@ -8,6 +8,7 @@ import { Group } from '../../contracts/models/group';
 import { SidePanelService } from '../services/side-panel.service';
 import { SecurityService } from '../../services/security.service';
 import { Policy } from '../../contracts/models/policy';
+import { GroupDetailComponent } from './group-detail/group-detail.component';
 
 @Component({
   selector: 'groups',
@@ -80,7 +81,7 @@ export class GroupsComponent implements OnInit, AfterViewChecked {
     var paths: string[] = [login];
     while (activatedRoute != null){
       let component: any = activatedRoute.component;
-      if (component.name === "GroupDetailComponent"){
+      if (component.name === GroupDetailComponent.name){
         activatedRoute = activatedRoute.children[0];
         continue;
       }

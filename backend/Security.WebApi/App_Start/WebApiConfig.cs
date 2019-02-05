@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Configuration;
 using System.Web.Http;
 using System.Web.Http.Cors;
 using System.Web.Http.ExceptionHandling;
@@ -21,7 +19,9 @@ namespace Security.WebApi
             config.Services.Replace(typeof(IExceptionHandler), new ExceptionHandler());
             config.Services.Replace(typeof(IExceptionLogger), new ExceptionLogger());
 
-            var corsAttribute = new EnableCorsAttribute("http://localhost:4200", "*", "*");
+            var uiHostName = ConfigurationManager.AppSettings["UiHostName"];
+
+            var corsAttribute = new EnableCorsAttribute(uiHostName ?? "http://localhost:4200", "*", "*");
             config.EnableCors(corsAttribute);
 
             config.Routes.MapHttpRoute(
