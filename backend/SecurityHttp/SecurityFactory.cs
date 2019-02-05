@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using Security.Contracts;
 using Security.Contracts.Repository;
-using Security.Model;
 
 namespace SecurityHttp
 {

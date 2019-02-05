@@ -256,10 +256,6 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\Security.Model\Security.Model.csproj">
-      <Project>{69F6D882-5A1E-49A9-B10C-A81AD937D188}</Project>
-      <Name>Security.Model</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Security\Security.csproj">
       <Project>{556713e5-2adb-4b4b-8d40-74df9393d33d}</Project>
       <Name>Security</Name>

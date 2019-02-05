@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 using System.Web;
 using Newtonsoft.Json;
 using Security.CommonContracts;
-using Security.Model;
 using SecurityHttp.Helpers;
 using SecurityHttp.Interfaces;
 

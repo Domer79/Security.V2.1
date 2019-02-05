@@ -57,9 +57,6 @@
     <Reference Include="Security">
       <HintPath>..\..\SecurityDlls\Security.dll</HintPath>
     </Reference>
-    <Reference Include="Security.Model">
-      <HintPath>..\..\SecurityDlls\Security.Model.dll</HintPath>
-    </Reference>
     <Reference Include="Security.Web">
       <HintPath>..\..\SecurityDlls\Security.Web.dll</HintPath>
     </Reference>

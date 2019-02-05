@@ -56,10 +56,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\SecurityDlls\Security.dll</HintPath>
     </Reference>
-    <Reference Include="Security.Model, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\SecurityDlls\Security.Model.dll</HintPath>
-    </Reference>
     <Reference Include="Security.Web, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\SecurityDlls\Security.Web.dll</HintPath>

@@ -6,7 +6,6 @@ using System.Windows;
 using System.Windows.Input;
 using AutoMapper;
 using Security.Contracts;
-using Security.Model;
 using WpfApp_TestSecurity.Dialogs;
 using WpfApp_TestSecurity.Infrastructure;
 using WpfApp_TestSecurity.ViewModels;

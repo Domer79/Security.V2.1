@@ -4,7 +4,6 @@ using System.Security.Principal;
 using System.Web.Mvc;
 using System.Web.Security;
 using Security.Contracts;
-using Security.Model;
 
 namespace Security.Web
 {
