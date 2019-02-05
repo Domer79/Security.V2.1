@@ -48,5 +48,6 @@ var searchData=
   ['removevalue',['RemoveValue',['../interface_security_1_1_contracts_1_1_i_security_settings.html#a27d76a17ec8fc8c51aa374e91968d538',1,'Security.Contracts.ISecuritySettings.RemoveValue()'],['../class_security_1_1_core_1_1_security_settings.html#a037f83e4c3ead3c216a7671e36440065',1,'Security.Core.SecuritySettings.RemoveValue()']]],
   ['removevalueasync',['RemoveValueAsync',['../interface_security_1_1_contracts_1_1_i_security_settings.html#af85ca1f6723fdfc36562e29eeb055e20',1,'Security.Contracts.ISecuritySettings.RemoveValueAsync()'],['../class_security_1_1_core_1_1_security_settings.html#a461473ef76756bdd8fc0d644d2c68903',1,'Security.Core.SecuritySettings.RemoveValueAsync()']]],
   ['request',['Request',['../class_security_1_1_core_1_1_ioc_1_1_request.html',1,'Security::Core::Ioc']]],
+  ['role',['Role',['../class_security_1_1_model_1_1_role.html',1,'Security::Model']]],
   ['rolerepository',['RoleRepository',['../class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_role_repository.html',1,'Security.Core.DataLayer.Repositories.RoleRepository'],['../class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_role_repository.html#a62e5c6c3d22b4a1695ec965a3353f830',1,'Security.Core.DataLayer.Repositories.RoleRepository.RoleRepository()']]]
 ];

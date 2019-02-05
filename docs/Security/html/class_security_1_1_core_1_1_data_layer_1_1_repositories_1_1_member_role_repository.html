@@ -101,7 +101,7 @@ $(function() {
 <tr class="memitem:a6d2759ccc52f54e58bdc624d6d73aab1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_member_role_repository.html#a6d2759ccc52f54e58bdc624d6d73aab1">MemberRoleRepository</a> (<a class="el" href="interface_security_1_1_common_contracts_1_1_i_common_db.html">ICommonDb</a> commonDb, <a class="el" href="interface_security_1_1_contracts_1_1_i_application_context.html">IApplicationContext</a> context)</td></tr>
 <tr class="memdesc:a6d2759ccc52f54e58bdc624d6d73aab1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Управление участниками безопасности (пользователи и группы) и ролей  <a href="#a6d2759ccc52f54e58bdc624d6d73aab1">Подробнее...</a><br /></td></tr>
 <tr class="separator:a6d2759ccc52f54e58bdc624d6d73aab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5ff8df9bc9c74edf5dd705d065e348e"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; Member &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_member_role_repository.html#ac5ff8df9bc9c74edf5dd705d065e348e">GetExceptMembers</a> (string role)</td></tr>
+<tr class="memitem:ac5ff8df9bc9c74edf5dd705d065e348e"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; <a class="el" href="class_security_1_1_model_1_1_member.html">Member</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_member_role_repository.html#ac5ff8df9bc9c74edf5dd705d065e348e">GetExceptMembers</a> (string role)</td></tr>
 <tr class="memdesc:ac5ff8df9bc9c74edf5dd705d065e348e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает отсутствующих у роли участников  <a href="#ac5ff8df9bc9c74edf5dd705d065e348e">Подробнее...</a><br /></td></tr>
 <tr class="separator:ac5ff8df9bc9c74edf5dd705d065e348e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a664b54d136ed451346bf0c6350ccd28e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_member_role_repository.html#a664b54d136ed451346bf0c6350ccd28e">AddMembersToRole</a> (int[] idMembers, int idRole)</td></tr>
@@ -110,7 +110,7 @@ $(function() {
 <tr class="memitem:aedce9be2ee5ac0f421e2d39205e3791f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_member_role_repository.html#aedce9be2ee5ac0f421e2d39205e3791f">AddMembersToRole</a> (string[] members, string role)</td></tr>
 <tr class="memdesc:aedce9be2ee5ac0f421e2d39205e3791f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет роль нескольким участникам  <a href="#aedce9be2ee5ac0f421e2d39205e3791f">Подробнее...</a><br /></td></tr>
 <tr class="separator:aedce9be2ee5ac0f421e2d39205e3791f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa741fa12d961bf36491678467e2da26f"><td class="memItemLeft" align="right" valign="top">Task&lt; IEnumerable&lt; Member &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_member_role_repository.html#aa741fa12d961bf36491678467e2da26f">GetExceptMembersAsync</a> (string role)</td></tr>
+<tr class="memitem:aa741fa12d961bf36491678467e2da26f"><td class="memItemLeft" align="right" valign="top">Task&lt; IEnumerable&lt; <a class="el" href="class_security_1_1_model_1_1_member.html">Member</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_member_role_repository.html#aa741fa12d961bf36491678467e2da26f">GetExceptMembersAsync</a> (string role)</td></tr>
 <tr class="memdesc:aa741fa12d961bf36491678467e2da26f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает отсутствующих у роли участников  <a href="#aa741fa12d961bf36491678467e2da26f">Подробнее...</a><br /></td></tr>
 <tr class="separator:aa741fa12d961bf36491678467e2da26f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac23a7aced9a6edc2c01164d997c1dc1d"><td class="memItemLeft" align="right" valign="top">Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_member_role_repository.html#ac23a7aced9a6edc2c01164d997c1dc1d">AddMembersToRoleAsync</a> (int[] idMembers, int idRole)</td></tr>
@@ -155,46 +155,46 @@ $(function() {
 <tr class="memitem:a06be7320e275d25e3848b84bb780f36d"><td class="memItemLeft" align="right" valign="top">Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_member_role_repository.html#a06be7320e275d25e3848b84bb780f36d">DeleteRolesFromMemberAsync</a> (string[] roles, string member)</td></tr>
 <tr class="memdesc:a06be7320e275d25e3848b84bb780f36d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаляет несколько ролей у участника  <a href="#a06be7320e275d25e3848b84bb780f36d">Подробнее...</a><br /></td></tr>
 <tr class="separator:a06be7320e275d25e3848b84bb780f36d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a277151f3395b8c8234695e3a1b742b2a"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; Role &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_member_role_repository.html#a277151f3395b8c8234695e3a1b742b2a">GetExceptRoles</a> (int idMember)</td></tr>
+<tr class="memitem:a277151f3395b8c8234695e3a1b742b2a"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; <a class="el" href="class_security_1_1_model_1_1_role.html">Role</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_member_role_repository.html#a277151f3395b8c8234695e3a1b742b2a">GetExceptRoles</a> (int idMember)</td></tr>
 <tr class="memdesc:a277151f3395b8c8234695e3a1b742b2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает отсутствующие у участника роли  <a href="#a277151f3395b8c8234695e3a1b742b2a">Подробнее...</a><br /></td></tr>
 <tr class="separator:a277151f3395b8c8234695e3a1b742b2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c73c79a0a198f995ab81db7d1b70683"><td class="memItemLeft" align="right" valign="top">Task&lt; IEnumerable&lt; Role &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_member_role_repository.html#a0c73c79a0a198f995ab81db7d1b70683">GetExceptRolesAsync</a> (int idMember)</td></tr>
+<tr class="memitem:a0c73c79a0a198f995ab81db7d1b70683"><td class="memItemLeft" align="right" valign="top">Task&lt; IEnumerable&lt; <a class="el" href="class_security_1_1_model_1_1_role.html">Role</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_member_role_repository.html#a0c73c79a0a198f995ab81db7d1b70683">GetExceptRolesAsync</a> (int idMember)</td></tr>
 <tr class="memdesc:a0c73c79a0a198f995ab81db7d1b70683"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает отсутствующие у участника роли  <a href="#a0c73c79a0a198f995ab81db7d1b70683">Подробнее...</a><br /></td></tr>
 <tr class="separator:a0c73c79a0a198f995ab81db7d1b70683"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa93127d3167c46fcb3e01b09ea4eb36d"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; Role &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_member_role_repository.html#aa93127d3167c46fcb3e01b09ea4eb36d">GetExceptRoles</a> (string member)</td></tr>
+<tr class="memitem:aa93127d3167c46fcb3e01b09ea4eb36d"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; <a class="el" href="class_security_1_1_model_1_1_role.html">Role</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_member_role_repository.html#aa93127d3167c46fcb3e01b09ea4eb36d">GetExceptRoles</a> (string member)</td></tr>
 <tr class="memdesc:aa93127d3167c46fcb3e01b09ea4eb36d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает отсутствующие у участника роли  <a href="#aa93127d3167c46fcb3e01b09ea4eb36d">Подробнее...</a><br /></td></tr>
 <tr class="separator:aa93127d3167c46fcb3e01b09ea4eb36d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8fda64537b67bb5c1015fda29ccc0cd5"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; Member &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_member_role_repository.html#a8fda64537b67bb5c1015fda29ccc0cd5">GetExceptMembers</a> (int idRole)</td></tr>
+<tr class="memitem:a8fda64537b67bb5c1015fda29ccc0cd5"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; <a class="el" href="class_security_1_1_model_1_1_member.html">Member</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_member_role_repository.html#a8fda64537b67bb5c1015fda29ccc0cd5">GetExceptMembers</a> (int idRole)</td></tr>
 <tr class="memdesc:a8fda64537b67bb5c1015fda29ccc0cd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает отсутствующих у роли участников  <a href="#a8fda64537b67bb5c1015fda29ccc0cd5">Подробнее...</a><br /></td></tr>
 <tr class="separator:a8fda64537b67bb5c1015fda29ccc0cd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a292d8172f5abf87fa226a4c3ff0926af"><td class="memItemLeft" align="right" valign="top">Task&lt; IEnumerable&lt; Role &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_member_role_repository.html#a292d8172f5abf87fa226a4c3ff0926af">GetExceptRolesAsync</a> (string member)</td></tr>
+<tr class="memitem:a292d8172f5abf87fa226a4c3ff0926af"><td class="memItemLeft" align="right" valign="top">Task&lt; IEnumerable&lt; <a class="el" href="class_security_1_1_model_1_1_role.html">Role</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_member_role_repository.html#a292d8172f5abf87fa226a4c3ff0926af">GetExceptRolesAsync</a> (string member)</td></tr>
 <tr class="memdesc:a292d8172f5abf87fa226a4c3ff0926af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает отсутствующие у участника роли  <a href="#a292d8172f5abf87fa226a4c3ff0926af">Подробнее...</a><br /></td></tr>
 <tr class="separator:a292d8172f5abf87fa226a4c3ff0926af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d1ac6d097fbf4a903b99c9f2d7f1e25"><td class="memItemLeft" align="right" valign="top">Task&lt; IEnumerable&lt; Member &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_member_role_repository.html#a8d1ac6d097fbf4a903b99c9f2d7f1e25">GetExceptMembersAsync</a> (int idRole)</td></tr>
+<tr class="memitem:a8d1ac6d097fbf4a903b99c9f2d7f1e25"><td class="memItemLeft" align="right" valign="top">Task&lt; IEnumerable&lt; <a class="el" href="class_security_1_1_model_1_1_member.html">Member</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_member_role_repository.html#a8d1ac6d097fbf4a903b99c9f2d7f1e25">GetExceptMembersAsync</a> (int idRole)</td></tr>
 <tr class="memdesc:a8d1ac6d097fbf4a903b99c9f2d7f1e25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает отсутствующих у роли участников  <a href="#a8d1ac6d097fbf4a903b99c9f2d7f1e25">Подробнее...</a><br /></td></tr>
 <tr class="separator:a8d1ac6d097fbf4a903b99c9f2d7f1e25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88741d8d356f585afc49a3af0b1d7b1e"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; Member &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_member_role_repository.html#a88741d8d356f585afc49a3af0b1d7b1e">GetMembers</a> (int idRole)</td></tr>
+<tr class="memitem:a88741d8d356f585afc49a3af0b1d7b1e"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; <a class="el" href="class_security_1_1_model_1_1_member.html">Member</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_member_role_repository.html#a88741d8d356f585afc49a3af0b1d7b1e">GetMembers</a> (int idRole)</td></tr>
 <tr class="memdesc:a88741d8d356f585afc49a3af0b1d7b1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает участников роли  <a href="#a88741d8d356f585afc49a3af0b1d7b1e">Подробнее...</a><br /></td></tr>
 <tr class="separator:a88741d8d356f585afc49a3af0b1d7b1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65882b1586401a471c74d783e8a9b07f"><td class="memItemLeft" align="right" valign="top">Task&lt; IEnumerable&lt; Member &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_member_role_repository.html#a65882b1586401a471c74d783e8a9b07f">GetMembersAsync</a> (int idRole)</td></tr>
+<tr class="memitem:a65882b1586401a471c74d783e8a9b07f"><td class="memItemLeft" align="right" valign="top">Task&lt; IEnumerable&lt; <a class="el" href="class_security_1_1_model_1_1_member.html">Member</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_member_role_repository.html#a65882b1586401a471c74d783e8a9b07f">GetMembersAsync</a> (int idRole)</td></tr>
 <tr class="memdesc:a65882b1586401a471c74d783e8a9b07f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает участников роли  <a href="#a65882b1586401a471c74d783e8a9b07f">Подробнее...</a><br /></td></tr>
 <tr class="separator:a65882b1586401a471c74d783e8a9b07f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ba109d8c715d0f503df905aeb7a94a1"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; Member &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_member_role_repository.html#a1ba109d8c715d0f503df905aeb7a94a1">GetMembers</a> (string role)</td></tr>
+<tr class="memitem:a1ba109d8c715d0f503df905aeb7a94a1"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; <a class="el" href="class_security_1_1_model_1_1_member.html">Member</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_member_role_repository.html#a1ba109d8c715d0f503df905aeb7a94a1">GetMembers</a> (string role)</td></tr>
 <tr class="memdesc:a1ba109d8c715d0f503df905aeb7a94a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает участников роли  <a href="#a1ba109d8c715d0f503df905aeb7a94a1">Подробнее...</a><br /></td></tr>
 <tr class="separator:a1ba109d8c715d0f503df905aeb7a94a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38c1f4767d7f6a171c594bfc6ebeb28e"><td class="memItemLeft" align="right" valign="top">Task&lt; IEnumerable&lt; Member &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_member_role_repository.html#a38c1f4767d7f6a171c594bfc6ebeb28e">GetMembersAsync</a> (string role)</td></tr>
+<tr class="memitem:a38c1f4767d7f6a171c594bfc6ebeb28e"><td class="memItemLeft" align="right" valign="top">Task&lt; IEnumerable&lt; <a class="el" href="class_security_1_1_model_1_1_member.html">Member</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_member_role_repository.html#a38c1f4767d7f6a171c594bfc6ebeb28e">GetMembersAsync</a> (string role)</td></tr>
 <tr class="memdesc:a38c1f4767d7f6a171c594bfc6ebeb28e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает участников роли  <a href="#a38c1f4767d7f6a171c594bfc6ebeb28e">Подробнее...</a><br /></td></tr>
 <tr class="separator:a38c1f4767d7f6a171c594bfc6ebeb28e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a992872680ee0032efed4f7a020dcbf05"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; Role &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_member_role_repository.html#a992872680ee0032efed4f7a020dcbf05">GetRoles</a> (int idMember)</td></tr>
+<tr class="memitem:a992872680ee0032efed4f7a020dcbf05"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; <a class="el" href="class_security_1_1_model_1_1_role.html">Role</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_member_role_repository.html#a992872680ee0032efed4f7a020dcbf05">GetRoles</a> (int idMember)</td></tr>
 <tr class="memdesc:a992872680ee0032efed4f7a020dcbf05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает роли участника безопасности  <a href="#a992872680ee0032efed4f7a020dcbf05">Подробнее...</a><br /></td></tr>
 <tr class="separator:a992872680ee0032efed4f7a020dcbf05"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0abb837c2794e0e0be40a56bb2454414"><td class="memItemLeft" align="right" valign="top">Task&lt; IEnumerable&lt; Role &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_member_role_repository.html#a0abb837c2794e0e0be40a56bb2454414">GetRolesAsync</a> (int idMember)</td></tr>
+<tr class="memitem:a0abb837c2794e0e0be40a56bb2454414"><td class="memItemLeft" align="right" valign="top">Task&lt; IEnumerable&lt; <a class="el" href="class_security_1_1_model_1_1_role.html">Role</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_member_role_repository.html#a0abb837c2794e0e0be40a56bb2454414">GetRolesAsync</a> (int idMember)</td></tr>
 <tr class="memdesc:a0abb837c2794e0e0be40a56bb2454414"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает роли участника безопасности  <a href="#a0abb837c2794e0e0be40a56bb2454414">Подробнее...</a><br /></td></tr>
 <tr class="separator:a0abb837c2794e0e0be40a56bb2454414"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86f62b26e1a0f109ab4ed8a6473e7459"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; Role &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_member_role_repository.html#a86f62b26e1a0f109ab4ed8a6473e7459">GetRoles</a> (string member)</td></tr>
+<tr class="memitem:a86f62b26e1a0f109ab4ed8a6473e7459"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; <a class="el" href="class_security_1_1_model_1_1_role.html">Role</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_member_role_repository.html#a86f62b26e1a0f109ab4ed8a6473e7459">GetRoles</a> (string member)</td></tr>
 <tr class="memdesc:a86f62b26e1a0f109ab4ed8a6473e7459"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает роли участника безопасности  <a href="#a86f62b26e1a0f109ab4ed8a6473e7459">Подробнее...</a><br /></td></tr>
 <tr class="separator:a86f62b26e1a0f109ab4ed8a6473e7459"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac31d7776e47bfee21b2ad2e3a2228a7d"><td class="memItemLeft" align="right" valign="top">Task&lt; IEnumerable&lt; Role &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_member_role_repository.html#ac31d7776e47bfee21b2ad2e3a2228a7d">GetRolesAsync</a> (string member)</td></tr>
+<tr class="memitem:ac31d7776e47bfee21b2ad2e3a2228a7d"><td class="memItemLeft" align="right" valign="top">Task&lt; IEnumerable&lt; <a class="el" href="class_security_1_1_model_1_1_role.html">Role</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_member_role_repository.html#ac31d7776e47bfee21b2ad2e3a2228a7d">GetRolesAsync</a> (string member)</td></tr>
 <tr class="memdesc:ac31d7776e47bfee21b2ad2e3a2228a7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает роли участника безопасности  <a href="#ac31d7776e47bfee21b2ad2e3a2228a7d">Подробнее...</a><br /></td></tr>
 <tr class="separator:ac31d7776e47bfee21b2ad2e3a2228a7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -871,7 +871,7 @@ $(function() {
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">IEnumerable&lt;Member&gt; Security.Core.DataLayer.Repositories.MemberRoleRepository.GetExceptMembers </td>
+          <td class="memname">IEnumerable&lt;<a class="el" href="class_security_1_1_model_1_1_member.html">Member</a>&gt; Security.Core.DataLayer.Repositories.MemberRoleRepository.GetExceptMembers </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>role</em></td><td>)</td>
@@ -900,7 +900,7 @@ $(function() {
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">IEnumerable&lt;Member&gt; Security.Core.DataLayer.Repositories.MemberRoleRepository.GetExceptMembers </td>
+          <td class="memname">IEnumerable&lt;<a class="el" href="class_security_1_1_model_1_1_member.html">Member</a>&gt; Security.Core.DataLayer.Repositories.MemberRoleRepository.GetExceptMembers </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>idRole</em></td><td>)</td>
@@ -929,7 +929,7 @@ $(function() {
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Task&lt;IEnumerable&lt;Member&gt; &gt; Security.Core.DataLayer.Repositories.MemberRoleRepository.GetExceptMembersAsync </td>
+          <td class="memname">Task&lt;IEnumerable&lt;<a class="el" href="class_security_1_1_model_1_1_member.html">Member</a>&gt; &gt; Security.Core.DataLayer.Repositories.MemberRoleRepository.GetExceptMembersAsync </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>role</em></td><td>)</td>
@@ -958,7 +958,7 @@ $(function() {
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Task&lt;IEnumerable&lt;Member&gt; &gt; Security.Core.DataLayer.Repositories.MemberRoleRepository.GetExceptMembersAsync </td>
+          <td class="memname">Task&lt;IEnumerable&lt;<a class="el" href="class_security_1_1_model_1_1_member.html">Member</a>&gt; &gt; Security.Core.DataLayer.Repositories.MemberRoleRepository.GetExceptMembersAsync </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>idRole</em></td><td>)</td>
@@ -987,7 +987,7 @@ $(function() {
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">IEnumerable&lt;Role&gt; Security.Core.DataLayer.Repositories.MemberRoleRepository.GetExceptRoles </td>
+          <td class="memname">IEnumerable&lt;<a class="el" href="class_security_1_1_model_1_1_role.html">Role</a>&gt; Security.Core.DataLayer.Repositories.MemberRoleRepository.GetExceptRoles </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>idMember</em></td><td>)</td>
@@ -1016,7 +1016,7 @@ $(function() {
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">IEnumerable&lt;Role&gt; Security.Core.DataLayer.Repositories.MemberRoleRepository.GetExceptRoles </td>
+          <td class="memname">IEnumerable&lt;<a class="el" href="class_security_1_1_model_1_1_role.html">Role</a>&gt; Security.Core.DataLayer.Repositories.MemberRoleRepository.GetExceptRoles </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>member</em></td><td>)</td>
@@ -1045,7 +1045,7 @@ $(function() {
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Task&lt;IEnumerable&lt;Role&gt; &gt; Security.Core.DataLayer.Repositories.MemberRoleRepository.GetExceptRolesAsync </td>
+          <td class="memname">Task&lt;IEnumerable&lt;<a class="el" href="class_security_1_1_model_1_1_role.html">Role</a>&gt; &gt; Security.Core.DataLayer.Repositories.MemberRoleRepository.GetExceptRolesAsync </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>idMember</em></td><td>)</td>
@@ -1074,7 +1074,7 @@ $(function() {
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Task&lt;IEnumerable&lt;Role&gt; &gt; Security.Core.DataLayer.Repositories.MemberRoleRepository.GetExceptRolesAsync </td>
+          <td class="memname">Task&lt;IEnumerable&lt;<a class="el" href="class_security_1_1_model_1_1_role.html">Role</a>&gt; &gt; Security.Core.DataLayer.Repositories.MemberRoleRepository.GetExceptRolesAsync </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>member</em></td><td>)</td>
@@ -1103,7 +1103,7 @@ $(function() {
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">IEnumerable&lt;Member&gt; Security.Core.DataLayer.Repositories.MemberRoleRepository.GetMembers </td>
+          <td class="memname">IEnumerable&lt;<a class="el" href="class_security_1_1_model_1_1_member.html">Member</a>&gt; Security.Core.DataLayer.Repositories.MemberRoleRepository.GetMembers </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>idRole</em></td><td>)</td>
@@ -1132,7 +1132,7 @@ $(function() {
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">IEnumerable&lt;Member&gt; Security.Core.DataLayer.Repositories.MemberRoleRepository.GetMembers </td>
+          <td class="memname">IEnumerable&lt;<a class="el" href="class_security_1_1_model_1_1_member.html">Member</a>&gt; Security.Core.DataLayer.Repositories.MemberRoleRepository.GetMembers </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>role</em></td><td>)</td>
@@ -1161,7 +1161,7 @@ $(function() {
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Task&lt;IEnumerable&lt;Member&gt; &gt; Security.Core.DataLayer.Repositories.MemberRoleRepository.GetMembersAsync </td>
+          <td class="memname">Task&lt;IEnumerable&lt;<a class="el" href="class_security_1_1_model_1_1_member.html">Member</a>&gt; &gt; Security.Core.DataLayer.Repositories.MemberRoleRepository.GetMembersAsync </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>idRole</em></td><td>)</td>
@@ -1190,7 +1190,7 @@ $(function() {
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Task&lt;IEnumerable&lt;Member&gt; &gt; Security.Core.DataLayer.Repositories.MemberRoleRepository.GetMembersAsync </td>
+          <td class="memname">Task&lt;IEnumerable&lt;<a class="el" href="class_security_1_1_model_1_1_member.html">Member</a>&gt; &gt; Security.Core.DataLayer.Repositories.MemberRoleRepository.GetMembersAsync </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>role</em></td><td>)</td>
@@ -1219,7 +1219,7 @@ $(function() {
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">IEnumerable&lt;Role&gt; Security.Core.DataLayer.Repositories.MemberRoleRepository.GetRoles </td>
+          <td class="memname">IEnumerable&lt;<a class="el" href="class_security_1_1_model_1_1_role.html">Role</a>&gt; Security.Core.DataLayer.Repositories.MemberRoleRepository.GetRoles </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>idMember</em></td><td>)</td>
@@ -1248,7 +1248,7 @@ $(function() {
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">IEnumerable&lt;Role&gt; Security.Core.DataLayer.Repositories.MemberRoleRepository.GetRoles </td>
+          <td class="memname">IEnumerable&lt;<a class="el" href="class_security_1_1_model_1_1_role.html">Role</a>&gt; Security.Core.DataLayer.Repositories.MemberRoleRepository.GetRoles </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>member</em></td><td>)</td>
@@ -1277,7 +1277,7 @@ $(function() {
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Task&lt;IEnumerable&lt;Role&gt; &gt; Security.Core.DataLayer.Repositories.MemberRoleRepository.GetRolesAsync </td>
+          <td class="memname">Task&lt;IEnumerable&lt;<a class="el" href="class_security_1_1_model_1_1_role.html">Role</a>&gt; &gt; Security.Core.DataLayer.Repositories.MemberRoleRepository.GetRolesAsync </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>idMember</em></td><td>)</td>
@@ -1306,7 +1306,7 @@ $(function() {
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Task&lt;IEnumerable&lt;Role&gt; &gt; Security.Core.DataLayer.Repositories.MemberRoleRepository.GetRolesAsync </td>
+          <td class="memname">Task&lt;IEnumerable&lt;<a class="el" href="class_security_1_1_model_1_1_role.html">Role</a>&gt; &gt; Security.Core.DataLayer.Repositories.MemberRoleRepository.GetRolesAsync </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>member</em></td><td>)</td>

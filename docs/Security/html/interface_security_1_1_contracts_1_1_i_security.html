@@ -109,7 +109,7 @@ $(function() {
 <tr class="memitem:aaa86e2b6e8c21d50ff9ea59c10a4c314"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_security_1_1_contracts_1_1_i_security.html#aaa86e2b6e8c21d50ff9ea59c10a4c314">CheckAccessByToken</a> (string token, string policy)</td></tr>
 <tr class="memdesc:aaa86e2b6e8c21d50ff9ea59c10a4c314"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверка доступа пользователя по токену  <a href="#aaa86e2b6e8c21d50ff9ea59c10a4c314">Подробнее...</a><br /></td></tr>
 <tr class="separator:aaa86e2b6e8c21d50ff9ea59c10a4c314"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21b7c49edf9d4b5a13642c80bfd557a8"><td class="memItemLeft" align="right" valign="top">User&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_security_1_1_contracts_1_1_i_security.html#a21b7c49edf9d4b5a13642c80bfd557a8">GetUserByToken</a> (string token)</td></tr>
+<tr class="memitem:a21b7c49edf9d4b5a13642c80bfd557a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_security_1_1_model_1_1_user.html">User</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_security_1_1_contracts_1_1_i_security.html#a21b7c49edf9d4b5a13642c80bfd557a8">GetUserByToken</a> (string token)</td></tr>
 <tr class="memdesc:a21b7c49edf9d4b5a13642c80bfd557a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает пользователя по токену  <a href="#a21b7c49edf9d4b5a13642c80bfd557a8">Подробнее...</a><br /></td></tr>
 <tr class="separator:a21b7c49edf9d4b5a13642c80bfd557a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0368166581ca7b23dcb23fb5688cbc8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_security_1_1_contracts_1_1_i_security.html#ae0368166581ca7b23dcb23fb5688cbc8">SetPassword</a> (string loginOrEmail, string password)</td></tr>
@@ -136,7 +136,7 @@ $(function() {
 <tr class="memitem:a82e928fa01de39668d9c66a0dcb12cb5"><td class="memItemLeft" align="right" valign="top">Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_security_1_1_contracts_1_1_i_security.html#a82e928fa01de39668d9c66a0dcb12cb5">CheckAccessByTokenAsync</a> (string token, string policy)</td></tr>
 <tr class="memdesc:a82e928fa01de39668d9c66a0dcb12cb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверка доступа пользователя по токену  <a href="#a82e928fa01de39668d9c66a0dcb12cb5">Подробнее...</a><br /></td></tr>
 <tr class="separator:a82e928fa01de39668d9c66a0dcb12cb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50c9ebf1a1413c3368b00c4e9f37c72e"><td class="memItemLeft" align="right" valign="top">Task&lt; User &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_security_1_1_contracts_1_1_i_security.html#a50c9ebf1a1413c3368b00c4e9f37c72e">GetUserByTokenAsync</a> (string token)</td></tr>
+<tr class="memitem:a50c9ebf1a1413c3368b00c4e9f37c72e"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="class_security_1_1_model_1_1_user.html">User</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_security_1_1_contracts_1_1_i_security.html#a50c9ebf1a1413c3368b00c4e9f37c72e">GetUserByTokenAsync</a> (string token)</td></tr>
 <tr class="memdesc:a50c9ebf1a1413c3368b00c4e9f37c72e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает пользователя по токену  <a href="#a50c9ebf1a1413c3368b00c4e9f37c72e">Подробнее...</a><br /></td></tr>
 <tr class="separator:a50c9ebf1a1413c3368b00c4e9f37c72e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc31120a1ccc1dd6918c2e1857263cfa"><td class="memItemLeft" align="right" valign="top">Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_security_1_1_contracts_1_1_i_security.html#afc31120a1ccc1dd6918c2e1857263cfa">SetPasswordAsync</a> (string loginOrEmail, string password)</td></tr>
@@ -496,7 +496,7 @@ $(function() {
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">User Security.Contracts.ISecurity.GetUserByToken </td>
+          <td class="memname"><a class="el" href="class_security_1_1_model_1_1_user.html">User</a> Security.Contracts.ISecurity.GetUserByToken </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>token</em></td><td>)</td>
@@ -525,7 +525,7 @@ $(function() {
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Task&lt;User&gt; Security.Contracts.ISecurity.GetUserByTokenAsync </td>
+          <td class="memname">Task&lt;<a class="el" href="class_security_1_1_model_1_1_user.html">User</a>&gt; Security.Contracts.ISecurity.GetUserByTokenAsync </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>token</em></td><td>)</td>

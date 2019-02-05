@@ -11,6 +11,7 @@ var searchData=
   ['extensions',['Extensions',['../namespace_security_1_1_extensions.html',1,'Security']]],
   ['interfaces',['Interfaces',['../namespace_security_1_1_core_1_1_ioc_1_1_interfaces.html',1,'Security::Core::Ioc']]],
   ['ioc',['Ioc',['../namespace_security_1_1_core_1_1_ioc.html',1,'Security::Core']]],
+  ['model',['Model',['../namespace_security_1_1_model.html',1,'Security']]],
   ['repositories',['Repositories',['../namespace_security_1_1_core_1_1_data_layer_1_1_repositories.html',1,'Security::Core::DataLayer']]],
   ['repository',['Repository',['../namespace_security_1_1_contracts_1_1_repository.html',1,'Security::Contracts']]],
   ['scopes',['Scopes',['../namespace_security_1_1_core_1_1_ioc_1_1_scopes.html',1,'Security::Core::Ioc']]],

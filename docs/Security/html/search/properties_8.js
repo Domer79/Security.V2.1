@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['reader',['Reader',['../interface_security_1_1_dapper_1_1_i_wrapped_data_reader.html#ae29624a0e2fc343c51b9a453f0f9d1fe',1,'Security::Dapper::IWrappedDataReader']]],
-  ['removeunused',['RemoveUnused',['../class_security_1_1_dapper_1_1_dynamic_parameters.html#a8c0e286a2a71bc11d386621af52f21a3',1,'Security::Dapper::DynamicParameters']]]
+  ['name',['Name',['../class_security_1_1_model_1_1_group.html#a7901f1a6a674e859e433bcd319b90190',1,'Security.Model.Group.Name()'],['../class_security_1_1_model_1_1_member.html#aae16a9b4d46718a1388bffae9e930b5b',1,'Security.Model.Member.Name()'],['../class_security_1_1_model_1_1_role.html#a661e0b10075130d934665b6857bb7dfa',1,'Security.Model.Role.Name()'],['../class_security_1_1_model_1_1_setting.html#a4fb31fdfd098e578413d80c0d9b9cd22',1,'Security.Model.Setting.Name()']]]
 ];
