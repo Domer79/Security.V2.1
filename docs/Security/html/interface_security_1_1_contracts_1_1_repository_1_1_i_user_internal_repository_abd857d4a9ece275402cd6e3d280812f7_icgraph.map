@@ -1,0 +1,4 @@
+<map id="Security.Contracts.Repository.IUserInternalRepository.CheckTokenAccessAsync" name="Security.Contracts.Repository.IUserInternalRepository.CheckTokenAccessAsync">
+<area shape="rect" id="node1" title="Проверка доступа по токену" alt="" coords="248,5,480,61"/>
+<area shape="rect" id="node2" href="$class_security_1_1_core_1_1_security.html#a2a82eb78922f64c9d3d9b35068b97448" title="Проверка доступа пользователя по токену" alt="" coords="5,13,200,54"/>
+</map>

@@ -1,4 +1,12 @@
-﻿<!DOCTYPE html>
+﻿@using Security.Web.Extensions
+@{
+    if (Context.User.Identity != null && Context.User.Identity.IsAuthenticated)
+    {
+        var user = Context.User.Identity.GetUser();
+        ViewBag.UserName = $"{user.FirstName} {user.LastName}";
+    }
+}
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -24,6 +32,9 @@
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>
+                <div style="float: left">
+                    <span style="color: white">@ViewBag.UserName</span>
+                </div>
             </div>
         </div>
     </div>

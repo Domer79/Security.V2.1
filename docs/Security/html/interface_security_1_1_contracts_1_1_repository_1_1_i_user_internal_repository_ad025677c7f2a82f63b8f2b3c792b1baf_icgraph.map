@@ -1,0 +1,4 @@
+<map id="Security.Contracts.Repository.IUserInternalRepository.UserValidateAsync" name="Security.Contracts.Repository.IUserInternalRepository.UserValidateAsync">
+<area shape="rect" id="node1" title="Проверка аутентификации" alt="" coords="237,5,508,47"/>
+<area shape="rect" id="node2" href="$class_security_1_1_core_1_1_security.html#a3845fa93da061124489d8ac2ce6d90b4" title="Асинхронно. Производит идентификацию пользователя" alt="" coords="5,5,189,47"/>
+</map>

@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Applications Security: Security.Web</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Applications Security
+   &#160;<span id="projectnumber">2.1</span>
+   </div>
+   <div id="projectbrief">Apps Security</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title"><a class="el" href="namespace_security_1_1_web.html">Security.Web</a> </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>Этот модуль явялется расширением системы безопасности для web-приложений.</p>
+<h2><a class="el" href="class_security_1_1_web_1_1_security_authenticate_http_module.html" title="Модуль аутентификации">Security.Web.SecurityAuthenticateHttpModule</a></h2>
+<p>Это модуль, реализующий интерфейс IHttpModule и который проверяет аутентифицирован пользователь или нет и если да, свои экземляры классов <code>IPrincipal</code> и <code>IIdentity</code></p>
+<h3>Подключение модуля</h3>
+<p>Подключение модуля производится в файле конфигурации</p>
+<div class="fragment"><div class="line">&lt;<span class="keywordtype">system.webServer</span>&gt;</div><div class="line">  &lt;<span class="keywordtype">modules</span>&gt;</div><div class="line">    &lt;<span class="keywordtype">remove</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;SecurityAuthenticateHttpModule&quot;</span>/&gt;</div><div class="line">    &lt;<span class="keywordtype">add</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;SecurityAuthenticateHttpModule&quot;</span> <span class="keyword">type</span>=<span class="stringliteral">&quot;Security.Web.SecurityAuthenticateHttpModule, Security.Web&quot;</span>/&gt;</div><div class="line">  &lt;/<span class="keywordtype">modules</span>&gt;</div><div class="line">&lt;/<span class="keywordtype">system.webServer</span>&gt;</div></div><!-- fragment --><h2><a class="el" href="class_security_1_1_web_1_1_user_principal.html" title="Представляет контекст безопасности пользователя, от лица которого выполняется код,...">Security.Web.UserPrincipal</a></h2>
+<p>Класс, реализующий интерфейс IPrincipal</p>
+<h2><a class="el" href="class_security_1_1_web_1_1_user_identity.html" title="Удостоверение пользователя. Определяет основные возможности объекта удостоверения.">Security.Web.UserIdentity</a></h2>
+<p>Класс, реализующий интерфейс IIdentity, в свойстве Name, которого хранится токен пользователя. Для получения подробной информации по пользователю, можно обратиться к методам расширения <code>GetLogin()</code> и <code>GetUser()</code>, расположенными в классе <code>Security.Web.Extensions.Identity</code></p>
+<h2><a class="el" href="class_security_1_1_web_1_1_http_1_1_authorize_attribute.html" title="Абстрактный класс атрибута авторизации. Осуществляет проверку авторизации пользователя">Security.Web.Http.AuthorizeAttribute</a></h2>
+<p>Атрибут, который предназначен для проверки доступа в приложениях ASP.NET WebApi</p>
+<h2><a class="el" href="class_security_1_1_web_1_1_mvc_1_1_authorize_attribute.html" title="Абстрактный класс атрибута авторизации. Осуществляет проверку авторизации пользователя">Security.Web.Mvc.AuthorizeAttribute</a></h2>
+<p>Атрибут, который предназначен для проверки доступа в приложениях ASP.NET MVC </p>
+</div></div><!-- PageDoc -->
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>

@@ -1,0 +1,4 @@
+<map id="Security.Core.Security.SetPassword" name="Security.Core.Security.SetPassword">
+<area shape="rect" id="node1" title="Установка нового пароля" alt="" coords="5,5,183,47"/>
+<area shape="rect" id="node2" href="$interface_security_1_1_contracts_1_1_repository_1_1_i_user_internal_repository.html#a246f35be9c1502d48553a5c79a523304" title="Установка пароля для пользователя" alt="" coords="231,5,468,47"/>
+</map>

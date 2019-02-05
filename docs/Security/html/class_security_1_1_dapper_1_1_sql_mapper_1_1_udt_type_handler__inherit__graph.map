@@ -1,0 +1,4 @@
+<map id="Security.Dapper.SqlMapper.UdtTypeHandler" name="Security.Dapper.SqlMapper.UdtTypeHandler">
+<area shape="rect" id="node1" title="A type handler for data&#45;types that are supported by the underlying provider, but which need a well&#45;kn..." alt="" coords="5,80,191,121"/>
+<area shape="rect" id="node2" href="$interface_security_1_1_dapper_1_1_sql_mapper_1_1_i_type_handler.html" title="Implement this interface to perform custom type&#45;based parameter handling and value parsing" alt="" coords="49,5,147,32"/>
+</map>

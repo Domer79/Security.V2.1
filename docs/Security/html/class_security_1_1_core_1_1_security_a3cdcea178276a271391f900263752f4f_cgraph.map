@@ -1,0 +1,4 @@
+<map id="Security.Core.Security.CheckTokenExpireAsync" name="Security.Core.Security.CheckTokenExpireAsync">
+<area shape="rect" id="node1" title="Проверка срока действия токена" alt="" coords="5,5,200,47"/>
+<area shape="rect" id="node2" href="$interface_security_1_1_contracts_1_1_repository_1_1_i_token_service.html#ace91ef920511955bd1982de975d2d536" title="Проверка срока действия токена" alt="" coords="248,5,465,47"/>
+</map>

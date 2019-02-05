@@ -1,0 +1,4 @@
+<map id="Security.Dapper.SqlMapper.StringTypeHandler.Format" name="Security.Dapper.SqlMapper.StringTypeHandler.Format">
+<area shape="rect" id="node1" title="Format an instace into a string (the instance will never be null)" alt="" coords="239,5,424,47"/>
+<area shape="rect" id="node2" href="$class_security_1_1_dapper_1_1_sql_mapper_1_1_string_type_handler.html#a4b850008d67bd9f58070022c93bc13f7" title="Assign the value of a parameter before a command executes" alt="" coords="5,5,191,47"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="Security.Dapper.SqlMapper.ICustomQueryParameter" name="Security.Dapper.SqlMapper.ICustomQueryParameter">
+<area shape="rect" id="node1" title="Implement this interface to pass an arbitrary db specific parameter to Dapper" alt="" coords="5,57,191,98"/>
+<area shape="rect" id="node2" href="$class_security_1_1_dapper_1_1_db_string.html" title="This class represents a SQL string, it can be used if you need to denote your parameter is a Char vs ..." alt="" coords="257,5,427,32"/>
+<area shape="rect" id="node3" href="$class_security_1_1_dapper_1_1_sql_data_record_list_t_v_p_parameter.html" title="Used to pass a IEnumerable&lt;SqlDataRecord&gt; as a SqlDataRecordListTVPParameter" alt="" coords="239,57,445,98"/>
+<area shape="rect" id="node4" href="$class_security_1_1_dapper_1_1_table_valued_parameter.html" title="Used to pass a DataTable as a TableValuedParameter" alt="" coords="247,122,437,163"/>
+</map>

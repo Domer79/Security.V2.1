@@ -1,0 +1,5 @@
+<map id="Security.Core.DataLayer.Repositories.ApplicationInternalRepository" name="Security.Core.DataLayer.Repositories.ApplicationInternalRepository">
+<area shape="rect" id="node1" title="Управление приложениями" alt="" coords="5,169,209,225"/>
+<area shape="rect" id="node2" href="$interface_security_1_1_contracts_1_1_repository_1_1_i_application_internal_repository.html" title="Управление приложениями" alt="" coords="11,95,204,121"/>
+<area shape="rect" id="node3" href="$interface_security_1_1_contracts_1_1_repository_1_1_base_1_1_i_security_base_repository.html" title=" " alt="" coords="25,5,190,47"/>
+</map>

@@ -1,0 +1,444 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Applications Security: Класс Security.WebApi.Controllers.CommonController</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Applications Security
+   &#160;<span id="projectnumber">2.1</span>
+   </div>
+   <div id="projectbrief">Apps Security</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_security.html">Security</a></li><li class="navelem"><a class="el" href="namespace_security_1_1_web_api.html">WebApi</a></li><li class="navelem"><a class="el" href="namespace_security_1_1_web_api_1_1_controllers.html">Controllers</a></li><li class="navelem"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_common_controller.html">CommonController</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="class_security_1_1_web_api_1_1_controllers_1_1_common_controller-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс Security.WebApi.Controllers.CommonController</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Общие методы  
+ <a href="class_security_1_1_web_api_1_1_controllers_1_1_common_controller.html#details">Подробнее...</a></p>
+<div class="dynheader">
+Граф наследования:Security.WebApi.Controllers.CommonController:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_security_1_1_web_api_1_1_controllers_1_1_common_controller__inherit__graph.png" border="0" usemap="#_security_8_web_api_8_controllers_8_common_controller_inherit__map" alt="Inheritance graph"/></div>
+<map name="_security_8_web_api_8_controllers_8_common_controller_inherit__map" id="_security_8_web_api_8_controllers_8_common_controller_inherit__map">
+<area shape="rect"  title="ÐÐ±ÑÐ¸Ðµ Ð¼ÐµÑÐ¾Ð´Ñ" alt="" coords="5,80,196,121"/>
+<area shape="rect"  title=" " alt="" coords="53,5,149,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса Security.WebApi.Controllers.CommonController:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_security_1_1_web_api_1_1_controllers_1_1_common_controller__coll__graph.png" border="0" usemap="#_security_8_web_api_8_controllers_8_common_controller_coll__map" alt="Collaboration graph"/></div>
+<map name="_security_8_web_api_8_controllers_8_common_controller_coll__map" id="_security_8_web_api_8_controllers_8_common_controller_coll__map">
+<area shape="rect"  title="ÐÐ±ÑÐ¸Ðµ Ð¼ÐµÑÐ¾Ð´Ñ" alt="" coords="5,80,196,121"/>
+<area shape="rect"  title=" " alt="" coords="53,5,149,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:acfc37feb70cefddcd215e3312fb26edd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_common_controller.html#acfc37feb70cefddcd215e3312fb26edd">CommonController</a> (IUserInternalRepository repo, IConfig config)</td></tr>
+<tr class="memdesc:acfc37feb70cefddcd215e3312fb26edd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Общие методы  <a href="#acfc37feb70cefddcd215e3312fb26edd">Подробнее...</a><br /></td></tr>
+<tr class="separator:acfc37feb70cefddcd215e3312fb26edd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d9c1b0fec5cb1a0fb79fed22876f261"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_common_controller.html#a0d9c1b0fec5cb1a0fb79fed22876f261">CheckAccess</a> (string loginOrEmail, string policy)</td></tr>
+<tr class="memdesc:a0d9c1b0fec5cb1a0fb79fed22876f261"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверка доступа по логину или email  <a href="#a0d9c1b0fec5cb1a0fb79fed22876f261">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0d9c1b0fec5cb1a0fb79fed22876f261"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a831931b868fad56a1d7f274f5746be3f"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_common_controller.html#a831931b868fad56a1d7f274f5746be3f">CheckAccessByToken</a> (string token, string policy)</td></tr>
+<tr class="memdesc:a831931b868fad56a1d7f274f5746be3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверка доступа по токену  <a href="#a831931b868fad56a1d7f274f5746be3f">Подробнее...</a><br /></td></tr>
+<tr class="separator:a831931b868fad56a1d7f274f5746be3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b41adccc2dcb95e9cd04369ac21b96f"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_common_controller.html#a6b41adccc2dcb95e9cd04369ac21b96f">SetPassword</a> (string loginOrEmail, string password)</td></tr>
+<tr class="memdesc:a6b41adccc2dcb95e9cd04369ac21b96f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Установка пароля для пользователя  <a href="#a6b41adccc2dcb95e9cd04369ac21b96f">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6b41adccc2dcb95e9cd04369ac21b96f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bf4ffb063184ff4b462d20de766344b"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_common_controller.html#a2bf4ffb063184ff4b462d20de766344b">UserValidate</a> (string loginOrEmail, string password)</td></tr>
+<tr class="memdesc:a2bf4ffb063184ff4b462d20de766344b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверка пароля пользователя  <a href="#a2bf4ffb063184ff4b462d20de766344b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2bf4ffb063184ff4b462d20de766344b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c07f406f5f5934fed96da14b477569c"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_common_controller.html#a6c07f406f5f5934fed96da14b477569c">CreateToken</a> (string loginOrEmail, string password)</td></tr>
+<tr class="memdesc:a6c07f406f5f5934fed96da14b477569c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создание токена для пользователя по логину и паролю  <a href="#a6c07f406f5f5934fed96da14b477569c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6c07f406f5f5934fed96da14b477569c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6050d75dbfb43c3838a8abd4d6dcd7e"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_common_controller.html#ab6050d75dbfb43c3838a8abd4d6dcd7e">RegisterApplication</a> (string appName, string description)</td></tr>
+<tr class="memdesc:ab6050d75dbfb43c3838a8abd4d6dcd7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Регистрация нового приложения  <a href="#ab6050d75dbfb43c3838a8abd4d6dcd7e">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab6050d75dbfb43c3838a8abd4d6dcd7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2f7fd0d1939518996c77362c7a6a82d"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_common_controller.html#ad2f7fd0d1939518996c77362c7a6a82d">RegisterSecurityObjects</a> (string appName, [FromBody] string[] securityObjects)</td></tr>
+<tr class="memdesc:ad2f7fd0d1939518996c77362c7a6a82d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Регистрация политик безопасности  <a href="#ad2f7fd0d1939518996c77362c7a6a82d">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad2f7fd0d1939518996c77362c7a6a82d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Общие методы </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="acfc37feb70cefddcd215e3312fb26edd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfc37feb70cefddcd215e3312fb26edd">&#9670;&nbsp;</a></span>CommonController()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Security.WebApi.Controllers.CommonController.CommonController </td>
+          <td>(</td>
+          <td class="paramtype">IUserInternalRepository&#160;</td>
+          <td class="paramname"><em>repo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IConfig&#160;</td>
+          <td class="paramname"><em>config</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Общие методы </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">repo</td><td></td></tr>
+    <tr><td class="paramname">config</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a0d9c1b0fec5cb1a0fb79fed22876f261"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d9c1b0fec5cb1a0fb79fed22876f261">&#9670;&nbsp;</a></span>CheckAccess()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.CommonController.CheckAccess </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>loginOrEmail</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>policy</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Проверка доступа по логину или email </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">loginOrEmail</td><td></td></tr>
+    <tr><td class="paramname">policy</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a831931b868fad56a1d7f274f5746be3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a831931b868fad56a1d7f274f5746be3f">&#9670;&nbsp;</a></span>CheckAccessByToken()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.CommonController.CheckAccessByToken </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>token</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>policy</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Проверка доступа по токену </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">token</td><td></td></tr>
+    <tr><td class="paramname">policy</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a6c07f406f5f5934fed96da14b477569c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c07f406f5f5934fed96da14b477569c">&#9670;&nbsp;</a></span>CreateToken()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.CommonController.CreateToken </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>loginOrEmail</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>password</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создание токена для пользователя по логину и паролю </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">loginOrEmail</td><td></td></tr>
+    <tr><td class="paramname">password</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="ab6050d75dbfb43c3838a8abd4d6dcd7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6050d75dbfb43c3838a8abd4d6dcd7e">&#9670;&nbsp;</a></span>RegisterApplication()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.CommonController.RegisterApplication </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>appName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>description</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Регистрация нового приложения </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">appName</td><td></td></tr>
+    <tr><td class="paramname">description</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="ad2f7fd0d1939518996c77362c7a6a82d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2f7fd0d1939518996c77362c7a6a82d">&#9670;&nbsp;</a></span>RegisterSecurityObjects()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.CommonController.RegisterSecurityObjects </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>appName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[FromBody] string []&#160;</td>
+          <td class="paramname"><em>securityObjects</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Регистрация политик безопасности </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">appName</td><td></td></tr>
+    <tr><td class="paramname">securityObjects</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a6b41adccc2dcb95e9cd04369ac21b96f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b41adccc2dcb95e9cd04369ac21b96f">&#9670;&nbsp;</a></span>SetPassword()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.CommonController.SetPassword </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>loginOrEmail</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>password</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Установка пароля для пользователя </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">loginOrEmail</td><td></td></tr>
+    <tr><td class="paramname">password</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a2bf4ffb063184ff4b462d20de766344b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bf4ffb063184ff4b462d20de766344b">&#9670;&nbsp;</a></span>UserValidate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.CommonController.UserValidate </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>loginOrEmail</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>password</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Проверка пароля пользователя </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">loginOrEmail</td><td></td></tr>
+    <tr><td class="paramname">password</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>C:/Users/Domer/source/repos/Security.V2.1/backend/Security.WebApi/Controllers/CommonController.cs</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>

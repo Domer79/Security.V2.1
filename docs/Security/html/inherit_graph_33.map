@@ -1,0 +1,6 @@
+<map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
+<area shape="rect" id="node1" href="$interface_security_1_1_dapper_1_1_sql_mapper_1_1_i_dynamic_parameters.html" title="Implement this interface to pass an arbitrary db specific set of parameters to Dapper" alt="" coords="5,25,191,66"/>
+<area shape="rect" id="node2" href="$class_security_1_1_dapper_1_1_dynamic_parameters.html" title="A bag of parameters that can be passed to the Dapper Query and Execute methods" alt="" coords="472,32,709,59"/>
+<area shape="rect" id="node3" href="$interface_security_1_1_dapper_1_1_sql_mapper_1_1_i_parameter_callbacks.html" title="Extends IDynamicParameters with facilities for executing callbacks after commands have completed" alt="" coords="239,25,424,66"/>
+<area shape="rect" id="node4" href="$interface_security_1_1_dapper_1_1_sql_mapper_1_1_i_parameter_lookup.html" title="Extends IDynamicParameters providing by&#45;name lookup of parameter values" alt="" coords="239,90,424,132"/>
+</map>

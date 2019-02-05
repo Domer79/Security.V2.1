@@ -1,0 +1,4 @@
+<map id="Security.Contracts.IConnectionFactory" name="Security.Contracts.IConnectionFactory">
+<area shape="rect" id="node1" title="Управление соединением с БД" alt="" coords="5,5,208,47"/>
+<area shape="rect" id="node2" href="$class_security_1_1_core_1_1_data_layer_1_1_sql_connection_factory.html" title="Управление соединением с БД" alt="" coords="23,95,191,136"/>
+</map>

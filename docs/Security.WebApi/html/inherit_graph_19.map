@@ -1,0 +1,17 @@
+<map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
+<area shape="rect" id="node1" title=" " alt="" coords="65,339,161,366"/>
+<area shape="rect" id="node2" href="$class_security_1_1_web_api_1_1_controllers_1_1_applications_controller.html" title="API для работы с приложениями" alt="" coords="269,5,460,47"/>
+<area shape="rect" id="node3" href="$class_security_1_1_web_api_1_1_controllers_1_1_common_controller.html" title="Общие методы" alt="" coords="269,201,460,243"/>
+<area shape="rect" id="node4" href="$class_security_1_1_web_api_1_1_controllers_1_1_grants_controller.html" title="Управление разрешениями" alt="" coords="269,267,460,308"/>
+<area shape="rect" id="node5" href="$class_security_1_1_web_api_1_1_controllers_1_1_groups_controller.html" title="API для работы с группами" alt="" coords="269,71,460,112"/>
+<area shape="rect" id="node6" href="$class_security_1_1_web_api_1_1_controllers_1_1_member_roles_controller.html" title="Управление ролями участников безопасности" alt="" coords="269,332,460,373"/>
+<area shape="rect" id="node7" href="$class_security_1_1_web_api_1_1_controllers_1_1_policy_controller.html" title="Управление политиками текущего приложения" alt="" coords="269,397,460,439"/>
+<area shape="rect" id="node8" href="$class_security_1_1_web_api_1_1_controllers_1_1_roles_controller.html" title="API для работы с ролями" alt="" coords="269,659,460,700"/>
+<area shape="rect" id="node9" href="$class_security_1_1_web_api_1_1_controllers_1_1_settings_controller.html" title="Управление настройками" alt="" coords="269,463,460,504"/>
+<area shape="rect" id="node10" href="$class_security_1_1_web_api_1_1_controllers_1_1_token_controller.html" title="API поддержки токена" alt="" coords="269,528,460,569"/>
+<area shape="rect" id="node11" href="$class_security_1_1_web_api_1_1_controllers_1_1_user_controller.html" title="Управление пользователями" alt="" coords="269,593,460,635"/>
+<area shape="rect" id="node12" href="$class_security_1_1_web_api_1_1_controllers_1_1_user_groups_controller.html" title="Управление группами пользователя" alt="" coords="269,136,460,177"/>
+<area shape="rect" id="node13" href="$interface_security_1_1_web_api_1_1_controllers_1_1_i_security_controller.html" title=" " alt="" coords="5,5,221,47"/>
+<area shape="rect" id="node14" href="$interface_security_1_1_web_api_1_1_controllers_1_1_i_security_controller.html" title=" " alt="" coords="18,71,209,112"/>
+<area shape="rect" id="node15" href="$interface_security_1_1_web_api_1_1_controllers_1_1_i_security_controller.html" title=" " alt="" coords="18,659,209,700"/>
+</map>

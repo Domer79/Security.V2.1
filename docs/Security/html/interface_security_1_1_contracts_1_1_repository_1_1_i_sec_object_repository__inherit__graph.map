@@ -1,0 +1,5 @@
+<map id="Security.Contracts.Repository.ISecObjectRepository" name="Security.Contracts.Repository.ISecObjectRepository">
+<area shape="rect" id="node1" title="Управление политиками безопасности" alt="" coords="16,95,216,136"/>
+<area shape="rect" id="node3" href="$class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_sec_object_repository.html" title="Управление политиками безопасности" alt="" coords="5,184,227,225"/>
+<area shape="rect" id="node2" href="$interface_security_1_1_contracts_1_1_repository_1_1_base_1_1_i_security_base_repository.html" title=" " alt="" coords="33,5,199,47"/>
+</map>

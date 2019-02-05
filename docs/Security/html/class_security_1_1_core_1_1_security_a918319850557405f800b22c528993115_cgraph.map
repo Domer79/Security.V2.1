@@ -1,0 +1,4 @@
+<map id="Security.Core.Security.UserValidate" name="Security.Core.Security.UserValidate">
+<area shape="rect" id="node1" title="Производит идентификацию пользователя" alt="" coords="5,5,189,47"/>
+<area shape="rect" id="node2" href="$interface_security_1_1_contracts_1_1_repository_1_1_i_user_internal_repository.html#a077b9f2a08dbfb1399778cfae61f203f" title="Проверка аутентификации" alt="" coords="237,5,472,47"/>
+</map>

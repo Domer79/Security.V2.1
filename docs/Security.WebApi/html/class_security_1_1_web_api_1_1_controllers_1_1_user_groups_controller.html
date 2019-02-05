@@ -1,0 +1,998 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Applications Security: Класс Security.WebApi.Controllers.UserGroupsController</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Applications Security
+   &#160;<span id="projectnumber">2.1</span>
+   </div>
+   <div id="projectbrief">Apps Security</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_security.html">Security</a></li><li class="navelem"><a class="el" href="namespace_security_1_1_web_api.html">WebApi</a></li><li class="navelem"><a class="el" href="namespace_security_1_1_web_api_1_1_controllers.html">Controllers</a></li><li class="navelem"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_user_groups_controller.html">UserGroupsController</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="class_security_1_1_web_api_1_1_controllers_1_1_user_groups_controller-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс Security.WebApi.Controllers.UserGroupsController</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Управление группами пользователя  
+ <a href="class_security_1_1_web_api_1_1_controllers_1_1_user_groups_controller.html#details">Подробнее...</a></p>
+<div class="dynheader">
+Граф наследования:Security.WebApi.Controllers.UserGroupsController:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_security_1_1_web_api_1_1_controllers_1_1_user_groups_controller__inherit__graph.png" border="0" usemap="#_security_8_web_api_8_controllers_8_user_groups_controller_inherit__map" alt="Inheritance graph"/></div>
+<map name="_security_8_web_api_8_controllers_8_user_groups_controller_inherit__map" id="_security_8_web_api_8_controllers_8_user_groups_controller_inherit__map">
+<area shape="rect"  title="Ð£Ð¿ÑÐ°Ð²Ð»ÐµÐ½Ð¸Ðµ Ð³ÑÑÐ¿Ð¿Ð°Ð¼Ð¸ Ð¿Ð¾Ð»ÑÐ·Ð¾Ð²Ð°ÑÐµÐ»Ñ" alt="" coords="5,80,196,121"/>
+<area shape="rect"  title=" " alt="" coords="53,5,149,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса Security.WebApi.Controllers.UserGroupsController:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_security_1_1_web_api_1_1_controllers_1_1_user_groups_controller__coll__graph.png" border="0" usemap="#_security_8_web_api_8_controllers_8_user_groups_controller_coll__map" alt="Collaboration graph"/></div>
+<map name="_security_8_web_api_8_controllers_8_user_groups_controller_coll__map" id="_security_8_web_api_8_controllers_8_user_groups_controller_coll__map">
+<area shape="rect"  title="Ð£Ð¿ÑÐ°Ð²Ð»ÐµÐ½Ð¸Ðµ Ð³ÑÑÐ¿Ð¿Ð°Ð¼Ð¸ Ð¿Ð¾Ð»ÑÐ·Ð¾Ð²Ð°ÑÐµÐ»Ñ" alt="" coords="5,80,196,121"/>
+<area shape="rect"  title=" " alt="" coords="53,5,149,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a20a9a40610391a135b37bab7a477e67f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_user_groups_controller.html#a20a9a40610391a135b37bab7a477e67f">UserGroupsController</a> (IUserGroupRepository repo)</td></tr>
+<tr class="memdesc:a20a9a40610391a135b37bab7a477e67f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Управление группами пользователя  <a href="#a20a9a40610391a135b37bab7a477e67f">Подробнее...</a><br /></td></tr>
+<tr class="separator:a20a9a40610391a135b37bab7a477e67f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a025cf731ef869a0e9496237bb270dde8"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_user_groups_controller.html#a025cf731ef869a0e9496237bb270dde8">GetUsersByGroupName</a> (string groupName)</td></tr>
+<tr class="memdesc:a025cf731ef869a0e9496237bb270dde8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает список пользователей группы по ее имени  <a href="#a025cf731ef869a0e9496237bb270dde8">Подробнее...</a><br /></td></tr>
+<tr class="separator:a025cf731ef869a0e9496237bb270dde8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea37271f3048f00a97c9f2490def0e07"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_user_groups_controller.html#aea37271f3048f00a97c9f2490def0e07">GetUsersByGroupId</a> (Guid groupId)</td></tr>
+<tr class="memdesc:aea37271f3048f00a97c9f2490def0e07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает список пользователей группы по ее идентификатору Guid  <a href="#aea37271f3048f00a97c9f2490def0e07">Подробнее...</a><br /></td></tr>
+<tr class="separator:aea37271f3048f00a97c9f2490def0e07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fb3074dc3e9287a437693f5b9c35f5f"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_user_groups_controller.html#a4fb3074dc3e9287a437693f5b9c35f5f">GetUsersByIdGroup</a> (int idGroup)</td></tr>
+<tr class="memdesc:a4fb3074dc3e9287a437693f5b9c35f5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает список пользователей группы по ее идентификатору  <a href="#a4fb3074dc3e9287a437693f5b9c35f5f">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4fb3074dc3e9287a437693f5b9c35f5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4bcd9bda8d60b7ea751f3a639c2c6e7"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_user_groups_controller.html#ac4bcd9bda8d60b7ea751f3a639c2c6e7">GetGroupsByUserName</a> (string userName)</td></tr>
+<tr class="memdesc:ac4bcd9bda8d60b7ea751f3a639c2c6e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает список групп пользователя по его логину  <a href="#ac4bcd9bda8d60b7ea751f3a639c2c6e7">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac4bcd9bda8d60b7ea751f3a639c2c6e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89d14e7df0cd2c9036c002b7c0420c53"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_user_groups_controller.html#a89d14e7df0cd2c9036c002b7c0420c53">GetGroupsByUserId</a> (Guid userId)</td></tr>
+<tr class="memdesc:a89d14e7df0cd2c9036c002b7c0420c53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает список групп пользователя по его идентификатору Guid  <a href="#a89d14e7df0cd2c9036c002b7c0420c53">Подробнее...</a><br /></td></tr>
+<tr class="separator:a89d14e7df0cd2c9036c002b7c0420c53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a400d8a9255477c33459eb4a5c5408ee4"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_user_groups_controller.html#a400d8a9255477c33459eb4a5c5408ee4">GetGroupsByIdUser</a> (int idUser)</td></tr>
+<tr class="memdesc:a400d8a9255477c33459eb4a5c5408ee4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает список групп пользователя по его идентификатору  <a href="#a400d8a9255477c33459eb4a5c5408ee4">Подробнее...</a><br /></td></tr>
+<tr class="separator:a400d8a9255477c33459eb4a5c5408ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac94a9ddf6407923629eb4854dc62603c"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_user_groups_controller.html#ac94a9ddf6407923629eb4854dc62603c">GetNotIncludedUsers</a> (string group)</td></tr>
+<tr class="memdesc:ac94a9ddf6407923629eb4854dc62603c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает список пользователей, отсутствующих в группе  <a href="#ac94a9ddf6407923629eb4854dc62603c">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac94a9ddf6407923629eb4854dc62603c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a786609284c34a720bfa2619bd95e18"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_user_groups_controller.html#a3a786609284c34a720bfa2619bd95e18">GetNotIncludedUsers</a> (Guid groupId)</td></tr>
+<tr class="memdesc:a3a786609284c34a720bfa2619bd95e18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает список пользователей, отсутствующих в группе  <a href="#a3a786609284c34a720bfa2619bd95e18">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3a786609284c34a720bfa2619bd95e18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba9adaefc518cc0b6beb8e537ad3303f"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_user_groups_controller.html#aba9adaefc518cc0b6beb8e537ad3303f">GetNotIncludedUsers</a> (int idGroup)</td></tr>
+<tr class="memdesc:aba9adaefc518cc0b6beb8e537ad3303f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает список пользователей, отсутствующих в группе  <a href="#aba9adaefc518cc0b6beb8e537ad3303f">Подробнее...</a><br /></td></tr>
+<tr class="separator:aba9adaefc518cc0b6beb8e537ad3303f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f923ecfe420c4594f293d76ffaee4de"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_user_groups_controller.html#a1f923ecfe420c4594f293d76ffaee4de">GetNotIncludedGroups</a> (string user)</td></tr>
+<tr class="memdesc:a1f923ecfe420c4594f293d76ffaee4de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает список групп, отсутствующих у пользователя  <a href="#a1f923ecfe420c4594f293d76ffaee4de">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1f923ecfe420c4594f293d76ffaee4de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01acfaea7ee0c34aaa7133efc591f6ca"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_user_groups_controller.html#a01acfaea7ee0c34aaa7133efc591f6ca">GetNotIncludedGroups</a> (Guid userId)</td></tr>
+<tr class="memdesc:a01acfaea7ee0c34aaa7133efc591f6ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает список групп, отсутствующих у пользователя  <a href="#a01acfaea7ee0c34aaa7133efc591f6ca">Подробнее...</a><br /></td></tr>
+<tr class="separator:a01acfaea7ee0c34aaa7133efc591f6ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af43c5276fb7bbe024037618564e00f53"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_user_groups_controller.html#af43c5276fb7bbe024037618564e00f53">GetNotIncludedGroups</a> (int idUser)</td></tr>
+<tr class="memdesc:af43c5276fb7bbe024037618564e00f53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает список групп, отсутствующих у пользователя  <a href="#af43c5276fb7bbe024037618564e00f53">Подробнее...</a><br /></td></tr>
+<tr class="separator:af43c5276fb7bbe024037618564e00f53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacadbe6405c62d3ecd1fcfb798bf6e84"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_user_groups_controller.html#aacadbe6405c62d3ecd1fcfb798bf6e84">AddUsersToGroup</a> (string group, [FromBody] string[] users)</td></tr>
+<tr class="memdesc:aacadbe6405c62d3ecd1fcfb798bf6e84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет пользователей в группу  <a href="#aacadbe6405c62d3ecd1fcfb798bf6e84">Подробнее...</a><br /></td></tr>
+<tr class="separator:aacadbe6405c62d3ecd1fcfb798bf6e84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab78dd85e462137f4a941347b65bcebf0"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_user_groups_controller.html#ab78dd85e462137f4a941347b65bcebf0">AddUsersToGroup</a> (Guid groupId, [FromBody] Guid[] users)</td></tr>
+<tr class="memdesc:ab78dd85e462137f4a941347b65bcebf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет пользователей в группу  <a href="#ab78dd85e462137f4a941347b65bcebf0">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab78dd85e462137f4a941347b65bcebf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f31f99d93c603df07800fc72230d54b"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_user_groups_controller.html#a8f31f99d93c603df07800fc72230d54b">AddUsersToGroup</a> (int idGroup, [FromBody] int[] users)</td></tr>
+<tr class="memdesc:a8f31f99d93c603df07800fc72230d54b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет пользователей в группу  <a href="#a8f31f99d93c603df07800fc72230d54b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8f31f99d93c603df07800fc72230d54b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a119a74146b12052ccdd5c711038163d0"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_user_groups_controller.html#a119a74146b12052ccdd5c711038163d0">AddGroupsToUser</a> (string user, [FromBody] string[] groups)</td></tr>
+<tr class="memdesc:a119a74146b12052ccdd5c711038163d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет пользователя сразу в несколько групп  <a href="#a119a74146b12052ccdd5c711038163d0">Подробнее...</a><br /></td></tr>
+<tr class="separator:a119a74146b12052ccdd5c711038163d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78472c65caecab1d4e32691baa49dc8d"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_user_groups_controller.html#a78472c65caecab1d4e32691baa49dc8d">AddGroupsToUser</a> (Guid userId, [FromBody] Guid[] groups)</td></tr>
+<tr class="memdesc:a78472c65caecab1d4e32691baa49dc8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет пользователя сразу в несколько групп  <a href="#a78472c65caecab1d4e32691baa49dc8d">Подробнее...</a><br /></td></tr>
+<tr class="separator:a78472c65caecab1d4e32691baa49dc8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a652fda610c2960b9d99a5554d24336"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_user_groups_controller.html#a0a652fda610c2960b9d99a5554d24336">AddGroupsToUser</a> (int idUser, [FromBody] int[] groups)</td></tr>
+<tr class="memdesc:a0a652fda610c2960b9d99a5554d24336"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет пользователя сразу в несколько групп  <a href="#a0a652fda610c2960b9d99a5554d24336">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0a652fda610c2960b9d99a5554d24336"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a109f321a6ddf824e5fe28a1df80e1dd2"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_user_groups_controller.html#a109f321a6ddf824e5fe28a1df80e1dd2">RemoveUsersFromGroup</a> (int idGroup, [FromBody]int[] idUsers)</td></tr>
+<tr class="memdesc:a109f321a6ddf824e5fe28a1df80e1dd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаление пользователей из группы  <a href="#a109f321a6ddf824e5fe28a1df80e1dd2">Подробнее...</a><br /></td></tr>
+<tr class="separator:a109f321a6ddf824e5fe28a1df80e1dd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62bc845bb72a201ba4e6c273364333f8"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_user_groups_controller.html#a62bc845bb72a201ba4e6c273364333f8">RemoveUsersFromGroup</a> (Guid groupId, [FromBody]Guid[] usersId)</td></tr>
+<tr class="memdesc:a62bc845bb72a201ba4e6c273364333f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаление пользователей из группы  <a href="#a62bc845bb72a201ba4e6c273364333f8">Подробнее...</a><br /></td></tr>
+<tr class="separator:a62bc845bb72a201ba4e6c273364333f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59790beaa82358e444579695a693166e"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_user_groups_controller.html#a59790beaa82358e444579695a693166e">RemoveUsersFromGroup</a> (string group, [FromBody]string[] users)</td></tr>
+<tr class="memdesc:a59790beaa82358e444579695a693166e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаление пользователей из группы  <a href="#a59790beaa82358e444579695a693166e">Подробнее...</a><br /></td></tr>
+<tr class="separator:a59790beaa82358e444579695a693166e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adda6aedfb7e8717a00bc076bfeaa1f95"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_user_groups_controller.html#adda6aedfb7e8717a00bc076bfeaa1f95">RemoveGroupsFromUser</a> (int idUser, [FromBody]int[] idGroups)</td></tr>
+<tr class="memdesc:adda6aedfb7e8717a00bc076bfeaa1f95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаление пользователя сразу из несколько групп  <a href="#adda6aedfb7e8717a00bc076bfeaa1f95">Подробнее...</a><br /></td></tr>
+<tr class="separator:adda6aedfb7e8717a00bc076bfeaa1f95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd5440d5c7629689b9b497072ba37ab0"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_user_groups_controller.html#afd5440d5c7629689b9b497072ba37ab0">RemoveGroupsFromUser</a> (Guid userId, [FromBody]Guid[] groupsId)</td></tr>
+<tr class="memdesc:afd5440d5c7629689b9b497072ba37ab0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаление пользователя сразу из несколько групп  <a href="#afd5440d5c7629689b9b497072ba37ab0">Подробнее...</a><br /></td></tr>
+<tr class="separator:afd5440d5c7629689b9b497072ba37ab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1bb0893a8b3b188232ac473b7bf2c0a"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_user_groups_controller.html#af1bb0893a8b3b188232ac473b7bf2c0a">RemoveGroupsFromUser</a> (string user, [FromBody]string[] groups)</td></tr>
+<tr class="memdesc:af1bb0893a8b3b188232ac473b7bf2c0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаление пользователя сразу из несколько групп  <a href="#af1bb0893a8b3b188232ac473b7bf2c0a">Подробнее...</a><br /></td></tr>
+<tr class="separator:af1bb0893a8b3b188232ac473b7bf2c0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Управление группами пользователя </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a20a9a40610391a135b37bab7a477e67f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20a9a40610391a135b37bab7a477e67f">&#9670;&nbsp;</a></span>UserGroupsController()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Security.WebApi.Controllers.UserGroupsController.UserGroupsController </td>
+          <td>(</td>
+          <td class="paramtype">IUserGroupRepository&#160;</td>
+          <td class="paramname"><em>repo</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Управление группами пользователя </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">repo</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a119a74146b12052ccdd5c711038163d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a119a74146b12052ccdd5c711038163d0">&#9670;&nbsp;</a></span>AddGroupsToUser() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.UserGroupsController.AddGroupsToUser </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>user</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[FromBody] string []&#160;</td>
+          <td class="paramname"><em>groups</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавляет пользователя сразу в несколько групп </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">user</td><td></td></tr>
+    <tr><td class="paramname">groups</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a78472c65caecab1d4e32691baa49dc8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78472c65caecab1d4e32691baa49dc8d">&#9670;&nbsp;</a></span>AddGroupsToUser() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.UserGroupsController.AddGroupsToUser </td>
+          <td>(</td>
+          <td class="paramtype">Guid&#160;</td>
+          <td class="paramname"><em>userId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[FromBody] Guid []&#160;</td>
+          <td class="paramname"><em>groups</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавляет пользователя сразу в несколько групп </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userId</td><td></td></tr>
+    <tr><td class="paramname">groups</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a0a652fda610c2960b9d99a5554d24336"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a652fda610c2960b9d99a5554d24336">&#9670;&nbsp;</a></span>AddGroupsToUser() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.UserGroupsController.AddGroupsToUser </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idUser</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[FromBody] int []&#160;</td>
+          <td class="paramname"><em>groups</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавляет пользователя сразу в несколько групп </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idUser</td><td></td></tr>
+    <tr><td class="paramname">groups</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="aacadbe6405c62d3ecd1fcfb798bf6e84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacadbe6405c62d3ecd1fcfb798bf6e84">&#9670;&nbsp;</a></span>AddUsersToGroup() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.UserGroupsController.AddUsersToGroup </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>group</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[FromBody] string []&#160;</td>
+          <td class="paramname"><em>users</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавляет пользователей в группу </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">group</td><td></td></tr>
+    <tr><td class="paramname">users</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="ab78dd85e462137f4a941347b65bcebf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab78dd85e462137f4a941347b65bcebf0">&#9670;&nbsp;</a></span>AddUsersToGroup() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.UserGroupsController.AddUsersToGroup </td>
+          <td>(</td>
+          <td class="paramtype">Guid&#160;</td>
+          <td class="paramname"><em>groupId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[FromBody] Guid []&#160;</td>
+          <td class="paramname"><em>users</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавляет пользователей в группу </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">groupId</td><td></td></tr>
+    <tr><td class="paramname">users</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a8f31f99d93c603df07800fc72230d54b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f31f99d93c603df07800fc72230d54b">&#9670;&nbsp;</a></span>AddUsersToGroup() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.UserGroupsController.AddUsersToGroup </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idGroup</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[FromBody] int []&#160;</td>
+          <td class="paramname"><em>users</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавляет пользователей в группу </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idGroup</td><td></td></tr>
+    <tr><td class="paramname">users</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a400d8a9255477c33459eb4a5c5408ee4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a400d8a9255477c33459eb4a5c5408ee4">&#9670;&nbsp;</a></span>GetGroupsByIdUser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.UserGroupsController.GetGroupsByIdUser </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idUser</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает список групп пользователя по его идентификатору </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idUser</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a89d14e7df0cd2c9036c002b7c0420c53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89d14e7df0cd2c9036c002b7c0420c53">&#9670;&nbsp;</a></span>GetGroupsByUserId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.UserGroupsController.GetGroupsByUserId </td>
+          <td>(</td>
+          <td class="paramtype">Guid&#160;</td>
+          <td class="paramname"><em>userId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает список групп пользователя по его идентификатору Guid </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userId</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="ac4bcd9bda8d60b7ea751f3a639c2c6e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4bcd9bda8d60b7ea751f3a639c2c6e7">&#9670;&nbsp;</a></span>GetGroupsByUserName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.UserGroupsController.GetGroupsByUserName </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>userName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает список групп пользователя по его логину </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userName</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a1f923ecfe420c4594f293d76ffaee4de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f923ecfe420c4594f293d76ffaee4de">&#9670;&nbsp;</a></span>GetNotIncludedGroups() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.UserGroupsController.GetNotIncludedGroups </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>user</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает список групп, отсутствующих у пользователя </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">user</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a01acfaea7ee0c34aaa7133efc591f6ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01acfaea7ee0c34aaa7133efc591f6ca">&#9670;&nbsp;</a></span>GetNotIncludedGroups() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.UserGroupsController.GetNotIncludedGroups </td>
+          <td>(</td>
+          <td class="paramtype">Guid&#160;</td>
+          <td class="paramname"><em>userId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает список групп, отсутствующих у пользователя </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userId</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="af43c5276fb7bbe024037618564e00f53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af43c5276fb7bbe024037618564e00f53">&#9670;&nbsp;</a></span>GetNotIncludedGroups() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.UserGroupsController.GetNotIncludedGroups </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idUser</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает список групп, отсутствующих у пользователя </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idUser</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="ac94a9ddf6407923629eb4854dc62603c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac94a9ddf6407923629eb4854dc62603c">&#9670;&nbsp;</a></span>GetNotIncludedUsers() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.UserGroupsController.GetNotIncludedUsers </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>group</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает список пользователей, отсутствующих в группе </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">group</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a3a786609284c34a720bfa2619bd95e18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a786609284c34a720bfa2619bd95e18">&#9670;&nbsp;</a></span>GetNotIncludedUsers() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.UserGroupsController.GetNotIncludedUsers </td>
+          <td>(</td>
+          <td class="paramtype">Guid&#160;</td>
+          <td class="paramname"><em>groupId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает список пользователей, отсутствующих в группе </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">groupId</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="aba9adaefc518cc0b6beb8e537ad3303f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba9adaefc518cc0b6beb8e537ad3303f">&#9670;&nbsp;</a></span>GetNotIncludedUsers() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.UserGroupsController.GetNotIncludedUsers </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idGroup</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает список пользователей, отсутствующих в группе </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idGroup</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="aea37271f3048f00a97c9f2490def0e07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea37271f3048f00a97c9f2490def0e07">&#9670;&nbsp;</a></span>GetUsersByGroupId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.UserGroupsController.GetUsersByGroupId </td>
+          <td>(</td>
+          <td class="paramtype">Guid&#160;</td>
+          <td class="paramname"><em>groupId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает список пользователей группы по ее идентификатору Guid </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">groupId</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a025cf731ef869a0e9496237bb270dde8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a025cf731ef869a0e9496237bb270dde8">&#9670;&nbsp;</a></span>GetUsersByGroupName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.UserGroupsController.GetUsersByGroupName </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>groupName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает список пользователей группы по ее имени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">groupName</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a4fb3074dc3e9287a437693f5b9c35f5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fb3074dc3e9287a437693f5b9c35f5f">&#9670;&nbsp;</a></span>GetUsersByIdGroup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.UserGroupsController.GetUsersByIdGroup </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idGroup</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает список пользователей группы по ее идентификатору </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idGroup</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="adda6aedfb7e8717a00bc076bfeaa1f95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adda6aedfb7e8717a00bc076bfeaa1f95">&#9670;&nbsp;</a></span>RemoveGroupsFromUser() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.UserGroupsController.RemoveGroupsFromUser </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idUser</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[FromBody] int []&#160;</td>
+          <td class="paramname"><em>idGroups</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Удаление пользователя сразу из несколько групп </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idUser</td><td></td></tr>
+    <tr><td class="paramname">idGroups</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="afd5440d5c7629689b9b497072ba37ab0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd5440d5c7629689b9b497072ba37ab0">&#9670;&nbsp;</a></span>RemoveGroupsFromUser() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.UserGroupsController.RemoveGroupsFromUser </td>
+          <td>(</td>
+          <td class="paramtype">Guid&#160;</td>
+          <td class="paramname"><em>userId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[FromBody] Guid []&#160;</td>
+          <td class="paramname"><em>groupsId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Удаление пользователя сразу из несколько групп </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userId</td><td></td></tr>
+    <tr><td class="paramname">groupsId</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="af1bb0893a8b3b188232ac473b7bf2c0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1bb0893a8b3b188232ac473b7bf2c0a">&#9670;&nbsp;</a></span>RemoveGroupsFromUser() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.UserGroupsController.RemoveGroupsFromUser </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>user</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[FromBody] string []&#160;</td>
+          <td class="paramname"><em>groups</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Удаление пользователя сразу из несколько групп </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">user</td><td></td></tr>
+    <tr><td class="paramname">groups</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a109f321a6ddf824e5fe28a1df80e1dd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a109f321a6ddf824e5fe28a1df80e1dd2">&#9670;&nbsp;</a></span>RemoveUsersFromGroup() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.UserGroupsController.RemoveUsersFromGroup </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idGroup</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[FromBody] int []&#160;</td>
+          <td class="paramname"><em>idUsers</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Удаление пользователей из группы </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idGroup</td><td></td></tr>
+    <tr><td class="paramname">idUsers</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a62bc845bb72a201ba4e6c273364333f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62bc845bb72a201ba4e6c273364333f8">&#9670;&nbsp;</a></span>RemoveUsersFromGroup() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.UserGroupsController.RemoveUsersFromGroup </td>
+          <td>(</td>
+          <td class="paramtype">Guid&#160;</td>
+          <td class="paramname"><em>groupId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[FromBody] Guid []&#160;</td>
+          <td class="paramname"><em>usersId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Удаление пользователей из группы </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">groupId</td><td></td></tr>
+    <tr><td class="paramname">usersId</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a59790beaa82358e444579695a693166e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59790beaa82358e444579695a693166e">&#9670;&nbsp;</a></span>RemoveUsersFromGroup() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.UserGroupsController.RemoveUsersFromGroup </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>group</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[FromBody] string []&#160;</td>
+          <td class="paramname"><em>users</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Удаление пользователей из группы </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">group</td><td></td></tr>
+    <tr><td class="paramname">users</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>C:/Users/Domer/source/repos/Security.V2.1/backend/Security.WebApi/Controllers/UserGroupsController.cs</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>

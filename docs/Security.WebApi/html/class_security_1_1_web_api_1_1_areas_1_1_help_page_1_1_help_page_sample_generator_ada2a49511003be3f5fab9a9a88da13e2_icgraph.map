@@ -1,0 +1,7 @@
+<map id="Security.WebApi.Areas.HelpPage.HelpPageSampleGenerator.ResolveType" name="Security.WebApi.Areas.HelpPage.HelpPageSampleGenerator.ResolveType">
+<area shape="rect" id="node1" title="Resolves the type of the action parameter or return value when HttpRequestMessage or HttpResponseMess..." alt="" coords="603,93,893,134"/>
+<area shape="rect" id="node2" href="$class_security_1_1_web_api_1_1_areas_1_1_help_page_1_1_help_page_sample_generator.html#a76544df6a39eaaf3195d487d24c8527d" title="Gets the request or response body samples." alt="" coords="304,45,543,101"/>
+<area shape="rect" id="node5" href="$class_security_1_1_web_api_1_1_areas_1_1_help_page_1_1_help_page_sample_generator.html#a552e1d72762c05af0314a5d888b9920b" title="Resolves the actual type of System.Net.Http.ObjectContent&lt;T&gt; passed to the System...." alt="" coords="292,125,555,181"/>
+<area shape="rect" id="node3" href="$class_security_1_1_web_api_1_1_areas_1_1_help_page_1_1_help_page_sample_generator.html#a2da9932a512ffead6a56b7f751a7187d" title="Gets the request body samples for a given ApiDescription." alt="" coords="5,5,244,61"/>
+<area shape="rect" id="node4" href="$class_security_1_1_web_api_1_1_areas_1_1_help_page_1_1_help_page_sample_generator.html#af8c05b81ee0d48be10e0f4113bd153ea" title="Gets the response body samples for a given ApiDescription." alt="" coords="5,85,244,141"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="Security.Dapper.SqlMapper.StringTypeHandler.Parse" name="Security.Dapper.SqlMapper.StringTypeHandler.Parse">
+<area shape="rect" id="node1" title="Parse a database value back to a typed value" alt="" coords="5,5,191,47"/>
+<area shape="rect" id="node2" href="$class_security_1_1_dapper_1_1_sql_mapper_1_1_string_type_handler.html#ad7111dc489d770be41065a43de52f7e5" title="Parse a string into the expected type (the string will never be null)" alt="" coords="239,5,424,47"/>
+</map>

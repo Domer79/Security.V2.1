@@ -1,0 +1,4 @@
+<map id="Security.Contracts.Repository.IUserInternalRepository.SetPasswordAsync" name="Security.Contracts.Repository.IUserInternalRepository.SetPasswordAsync">
+<area shape="rect" id="node1" title="Установка пароля для пользователя" alt="" coords="231,5,505,47"/>
+<area shape="rect" id="node2" href="$class_security_1_1_core_1_1_security.html#a9dbc4b58be75d7ae1b1f0f2c14dc7d48" title="Асинхронно. Установка нового пароля" alt="" coords="5,5,183,47"/>
+</map>

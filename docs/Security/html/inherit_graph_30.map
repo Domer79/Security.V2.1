@@ -1,0 +1,5 @@
+<map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
+<area shape="rect" id="node1" title=" " alt="" coords="5,13,99,39"/>
+<area shape="rect" id="node2" href="$interface_security_1_1_dapper_1_1_i_wrapped_data_reader.html" title="Describes a reader that controls the lifetime of both a command and a reader, exposing the downstream..." alt="" coords="147,5,321,47"/>
+<area shape="rect" id="node3" href="$class_security_1_1_dapper_1_1_wrapped_reader.html" title=" " alt="" coords="369,13,581,39"/>
+</map>

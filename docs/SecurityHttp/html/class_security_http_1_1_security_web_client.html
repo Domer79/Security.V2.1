@@ -1,0 +1,896 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Applications Security: Класс SecurityHttp.SecurityWebClient</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Applications Security
+   &#160;<span id="projectnumber">2.1</span>
+   </div>
+   <div id="projectbrief">Apps Security</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_security_http.html">SecurityHttp</a></li><li class="navelem"><a class="el" href="class_security_http_1_1_security_web_client.html">SecurityWebClient</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="class_security_http_1_1_security_web_client-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс SecurityHttp.SecurityWebClient</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Контекст безопасности  
+ <a href="class_security_http_1_1_security_web_client.html#details">Подробнее...</a></p>
+<div class="dynheader">
+Граф наследования:SecurityHttp.SecurityWebClient:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_security_http_1_1_security_web_client__inherit__graph.png" border="0" usemap="#_security_http_8_security_web_client_inherit__map" alt="Inheritance graph"/></div>
+<map name="_security_http_8_security_web_client_inherit__map" id="_security_http_8_security_web_client_inherit__map">
+<area shape="rect"  title="ÐÐ¾Ð½ÑÐµÐºÑÑ Ð±ÐµÐ·Ð¾Ð¿Ð°ÑÐ½Ð¾ÑÑÐ¸" alt="" coords="5,80,179,121"/>
+<area shape="rect"  title=" " alt="" coords="55,5,129,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса SecurityHttp.SecurityWebClient:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_security_http_1_1_security_web_client__coll__graph.png" border="0" usemap="#_security_http_8_security_web_client_coll__map" alt="Collaboration graph"/></div>
+<map name="_security_http_8_security_web_client_coll__map" id="_security_http_8_security_web_client_coll__map">
+<area shape="rect"  title="ÐÐ¾Ð½ÑÐµÐºÑÑ Ð±ÐµÐ·Ð¾Ð¿Ð°ÑÐ½Ð¾ÑÑÐ¸" alt="" coords="5,80,179,121"/>
+<area shape="rect"  title=" " alt="" coords="55,5,129,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a8895554e19203b74818999acf46af1b9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_security_web_client.html#a8895554e19203b74818999acf46af1b9">SecurityWebClient</a> (string appName, string description=null)</td></tr>
+<tr class="memdesc:a8895554e19203b74818999acf46af1b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Контекст безопасности  <a href="#a8895554e19203b74818999acf46af1b9">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8895554e19203b74818999acf46af1b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef38825a47e87e169d2f73e4b63cc95d"><td class="memItemLeft" align="right" valign="top">Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_security_web_client.html#aef38825a47e87e169d2f73e4b63cc95d">StopExpireForUserAsync</a> (string tokenId, string reason=null)</td></tr>
+<tr class="memdesc:aef38825a47e87e169d2f73e4b63cc95d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Прекращение действия всех токенов пользователя  <a href="#aef38825a47e87e169d2f73e4b63cc95d">Подробнее...</a><br /></td></tr>
+<tr class="separator:aef38825a47e87e169d2f73e4b63cc95d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac54da83ace0f41b0a82e08cc65f34c22"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_security_web_client.html#ac54da83ace0f41b0a82e08cc65f34c22">CheckAccess</a> (string loginOrEmail, string secObject)</td></tr>
+<tr class="memdesc:ac54da83ace0f41b0a82e08cc65f34c22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверка доступа пользователя  <a href="#ac54da83ace0f41b0a82e08cc65f34c22">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac54da83ace0f41b0a82e08cc65f34c22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab870f31067df22fd7eecc2b1879ae7f7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_security_web_client.html#ab870f31067df22fd7eecc2b1879ae7f7">CheckAccessByToken</a> (string token, string policy)</td></tr>
+<tr class="memdesc:ab870f31067df22fd7eecc2b1879ae7f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверка доступа пользователя по токену  <a href="#ab870f31067df22fd7eecc2b1879ae7f7">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab870f31067df22fd7eecc2b1879ae7f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a8612fde354d141ae7a573c918a7cf9"><td class="memItemLeft" align="right" valign="top">User&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_security_web_client.html#a4a8612fde354d141ae7a573c918a7cf9">GetUserByToken</a> (string token)</td></tr>
+<tr class="memdesc:a4a8612fde354d141ae7a573c918a7cf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает пользователя по токену  <a href="#a4a8612fde354d141ae7a573c918a7cf9">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4a8612fde354d141ae7a573c918a7cf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8930b4aed6327336bdffc096732b8b88"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_security_web_client.html#a8930b4aed6327336bdffc096732b8b88">SetPassword</a> (string loginOrEmail, string password)</td></tr>
+<tr class="memdesc:a8930b4aed6327336bdffc096732b8b88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Установка нового пароля  <a href="#a8930b4aed6327336bdffc096732b8b88">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8930b4aed6327336bdffc096732b8b88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1adca97ea26be2653c6de8a741d41c2d"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_security_web_client.html#a1adca97ea26be2653c6de8a741d41c2d">CreateToken</a> (string loginOrEmail, string password)</td></tr>
+<tr class="memdesc:a1adca97ea26be2653c6de8a741d41c2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создание токена  <a href="#a1adca97ea26be2653c6de8a741d41c2d">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1adca97ea26be2653c6de8a741d41c2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef211fff1d2faca410405ab4117d7ee2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_security_web_client.html#aef211fff1d2faca410405ab4117d7ee2">CheckTokenExpire</a> (string token)</td></tr>
+<tr class="memdesc:aef211fff1d2faca410405ab4117d7ee2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверка срока действия токена  <a href="#aef211fff1d2faca410405ab4117d7ee2">Подробнее...</a><br /></td></tr>
+<tr class="separator:aef211fff1d2faca410405ab4117d7ee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a01303f3e8226ccb2e39cf4316ff5ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_security_web_client.html#a1a01303f3e8226ccb2e39cf4316ff5ed">StopExpire</a> (string tokenId, string reason=null)</td></tr>
+<tr class="memdesc:a1a01303f3e8226ccb2e39cf4316ff5ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Прекращение действия токена  <a href="#a1a01303f3e8226ccb2e39cf4316ff5ed">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1a01303f3e8226ccb2e39cf4316ff5ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a096f99047b791f9902f99b97ad03de8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_security_web_client.html#a096f99047b791f9902f99b97ad03de8a">StopExpireForUser</a> (string tokenId, string reason=null)</td></tr>
+<tr class="memdesc:a096f99047b791f9902f99b97ad03de8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Прекращение действия всех токенов пользователя  <a href="#a096f99047b791f9902f99b97ad03de8a">Подробнее...</a><br /></td></tr>
+<tr class="separator:a096f99047b791f9902f99b97ad03de8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52a92d46dd83c3f19dbb7749120b7d2b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_security_web_client.html#a52a92d46dd83c3f19dbb7749120b7d2b">UserValidate</a> (string loginOrEmail, string password)</td></tr>
+<tr class="memdesc:a52a92d46dd83c3f19dbb7749120b7d2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Производит идентификацию пользователя  <a href="#a52a92d46dd83c3f19dbb7749120b7d2b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a52a92d46dd83c3f19dbb7749120b7d2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6aa25c2c64667f3bd85d5ebaab26d72"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_security_web_client.html#af6aa25c2c64667f3bd85d5ebaab26d72">Dispose</a> ()</td></tr>
+<tr class="memdesc:af6aa25c2c64667f3bd85d5ebaab26d72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.  <a href="#af6aa25c2c64667f3bd85d5ebaab26d72">Подробнее...</a><br /></td></tr>
+<tr class="separator:af6aa25c2c64667f3bd85d5ebaab26d72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a146fe5081d8aacafea7c380a67290c00"><td class="memItemLeft" align="right" valign="top">Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_security_web_client.html#a146fe5081d8aacafea7c380a67290c00">UserValidateAsync</a> (string loginOrEmail, string password)</td></tr>
+<tr class="memdesc:a146fe5081d8aacafea7c380a67290c00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Асинхронно. Производит идентификацию пользователя  <a href="#a146fe5081d8aacafea7c380a67290c00">Подробнее...</a><br /></td></tr>
+<tr class="separator:a146fe5081d8aacafea7c380a67290c00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a683c4a59995201ddc44cdf0a28e3bda9"><td class="memItemLeft" align="right" valign="top">Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_security_web_client.html#a683c4a59995201ddc44cdf0a28e3bda9">CheckAccessAsync</a> (string loginOrEmail, string secObject)</td></tr>
+<tr class="memdesc:a683c4a59995201ddc44cdf0a28e3bda9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Асинхронно. Проверка доступа пользователя  <a href="#a683c4a59995201ddc44cdf0a28e3bda9">Подробнее...</a><br /></td></tr>
+<tr class="separator:a683c4a59995201ddc44cdf0a28e3bda9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90760a9ddc7e177c8b86dd5b01b6d2d7"><td class="memItemLeft" align="right" valign="top">Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_security_web_client.html#a90760a9ddc7e177c8b86dd5b01b6d2d7">CheckAccessByTokenAsync</a> (string token, string policy)</td></tr>
+<tr class="memdesc:a90760a9ddc7e177c8b86dd5b01b6d2d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверка доступа пользователя по токену  <a href="#a90760a9ddc7e177c8b86dd5b01b6d2d7">Подробнее...</a><br /></td></tr>
+<tr class="separator:a90760a9ddc7e177c8b86dd5b01b6d2d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51b5d4ae76e0ec05b212f7d9f5627871"><td class="memItemLeft" align="right" valign="top">Task&lt; User &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_security_web_client.html#a51b5d4ae76e0ec05b212f7d9f5627871">GetUserByTokenAsync</a> (string token)</td></tr>
+<tr class="memdesc:a51b5d4ae76e0ec05b212f7d9f5627871"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает пользователя по токену  <a href="#a51b5d4ae76e0ec05b212f7d9f5627871">Подробнее...</a><br /></td></tr>
+<tr class="separator:a51b5d4ae76e0ec05b212f7d9f5627871"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9d4ddd137513c095d702008fce3fcbd"><td class="memItemLeft" align="right" valign="top">Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_security_web_client.html#ad9d4ddd137513c095d702008fce3fcbd">SetPasswordAsync</a> (string loginOrEmail, string password)</td></tr>
+<tr class="memdesc:ad9d4ddd137513c095d702008fce3fcbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Асинхронно. Установка нового пароля  <a href="#ad9d4ddd137513c095d702008fce3fcbd">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad9d4ddd137513c095d702008fce3fcbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47303de8d5d8ac52bc56936de617567a"><td class="memItemLeft" align="right" valign="top">Task&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_security_web_client.html#a47303de8d5d8ac52bc56936de617567a">CreateTokenAsync</a> (string loginOrEmail, string password)</td></tr>
+<tr class="memdesc:a47303de8d5d8ac52bc56936de617567a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создание токена  <a href="#a47303de8d5d8ac52bc56936de617567a">Подробнее...</a><br /></td></tr>
+<tr class="separator:a47303de8d5d8ac52bc56936de617567a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4edd87e65aa738f9c477054459258810"><td class="memItemLeft" align="right" valign="top">Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_security_web_client.html#a4edd87e65aa738f9c477054459258810">CheckTokenExpireAsync</a> (string token)</td></tr>
+<tr class="memdesc:a4edd87e65aa738f9c477054459258810"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверка срока действия токена  <a href="#a4edd87e65aa738f9c477054459258810">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4edd87e65aa738f9c477054459258810"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a922a524c5df07e1c5102aa912f46dc01"><td class="memItemLeft" align="right" valign="top">Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_security_web_client.html#a922a524c5df07e1c5102aa912f46dc01">StopExpireAsync</a> (string tokenId, string reason=null)</td></tr>
+<tr class="memdesc:a922a524c5df07e1c5102aa912f46dc01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Прекращение действия токена  <a href="#a922a524c5df07e1c5102aa912f46dc01">Подробнее...</a><br /></td></tr>
+<tr class="separator:a922a524c5df07e1c5102aa912f46dc01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a606bf36a7eae32333256b08f6e6a79e4"><td class="memItemLeft" align="right" valign="top"><a id="a606bf36a7eae32333256b08f6e6a79e4"></a>
+IUserRepository&#160;</td><td class="memItemRight" valign="bottom"><b>UserRepository</b> =&gt; Factory.UserRepository</td></tr>
+<tr class="separator:a606bf36a7eae32333256b08f6e6a79e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05b13d1f3a0e42f5c8e31ddef3cd2f7f"><td class="memItemLeft" align="right" valign="top"><a id="a05b13d1f3a0e42f5c8e31ddef3cd2f7f"></a>
+IGroupRepository&#160;</td><td class="memItemRight" valign="bottom"><b>GroupRepository</b> =&gt; Factory.GroupRepository</td></tr>
+<tr class="separator:a05b13d1f3a0e42f5c8e31ddef3cd2f7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aade4e647f249bda5f516bade3f9b2329"><td class="memItemLeft" align="right" valign="top"><a id="aade4e647f249bda5f516bade3f9b2329"></a>
+IApplicationRepository&#160;</td><td class="memItemRight" valign="bottom"><b>ApplicationRepository</b> =&gt; Factory.ApplicationRepository</td></tr>
+<tr class="separator:aade4e647f249bda5f516bade3f9b2329"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab316d68897dac7d38a8c92c127f7638c"><td class="memItemLeft" align="right" valign="top"><a id="ab316d68897dac7d38a8c92c127f7638c"></a>
+IUserGroupRepository&#160;</td><td class="memItemRight" valign="bottom"><b>UserGroupRepository</b> =&gt; Factory.UserGroupRepository</td></tr>
+<tr class="separator:ab316d68897dac7d38a8c92c127f7638c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa128bdb7050371a373b2b3355d33e23"><td class="memItemLeft" align="right" valign="top"><a id="afa128bdb7050371a373b2b3355d33e23"></a>
+IMemberRoleRepository&#160;</td><td class="memItemRight" valign="bottom"><b>MemberRoleRepository</b> =&gt; Factory.MemberRoleRepository</td></tr>
+<tr class="separator:afa128bdb7050371a373b2b3355d33e23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbe179286424fbc601022a417cdc8ff5"><td class="memItemLeft" align="right" valign="top"><a id="afbe179286424fbc601022a417cdc8ff5"></a>
+IRoleRepository&#160;</td><td class="memItemRight" valign="bottom"><b>RoleRepository</b> =&gt; Factory.RoleRepository</td></tr>
+<tr class="separator:afbe179286424fbc601022a417cdc8ff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3da8b033a986779f579a3230ff173c8"><td class="memItemLeft" align="right" valign="top"><a id="ae3da8b033a986779f579a3230ff173c8"></a>
+ISecObjectRepository&#160;</td><td class="memItemRight" valign="bottom"><b>SecObjectRepository</b> =&gt; Factory.SecObjectRepository</td></tr>
+<tr class="separator:ae3da8b033a986779f579a3230ff173c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5d1321afc537864adc1491e255d2af0"><td class="memItemLeft" align="right" valign="top"><a id="ab5d1321afc537864adc1491e255d2af0"></a>
+IGrantRepository&#160;</td><td class="memItemRight" valign="bottom"><b>GrantRepository</b> =&gt; Factory.GrantRepository</td></tr>
+<tr class="separator:ab5d1321afc537864adc1491e255d2af0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec5f1f5bf877ecf4dc5a7f8431466c31"><td class="memItemLeft" align="right" valign="top"><a id="aec5f1f5bf877ecf4dc5a7f8431466c31"></a>
+ISecuritySettings&#160;</td><td class="memItemRight" valign="bottom"><b>SecuritySettings</b> =&gt; Factory.SecuritySettings</td></tr>
+<tr class="separator:aec5f1f5bf877ecf4dc5a7f8431466c31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dea314dff4b56c8fb201b115b3335fd"><td class="memItemLeft" align="right" valign="top"><a id="a0dea314dff4b56c8fb201b115b3335fd"></a>
+IConfig&#160;</td><td class="memItemRight" valign="bottom"><b>Config</b> =&gt; Factory.Config</td></tr>
+<tr class="separator:a0dea314dff4b56c8fb201b115b3335fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Контекст безопасности </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a8895554e19203b74818999acf46af1b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8895554e19203b74818999acf46af1b9">&#9670;&nbsp;</a></span>SecurityWebClient()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SecurityHttp.SecurityWebClient.SecurityWebClient </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>appName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>description</em> = <code>null</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Контекст безопасности </p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="ac54da83ace0f41b0a82e08cc65f34c22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac54da83ace0f41b0a82e08cc65f34c22">&#9670;&nbsp;</a></span>CheckAccess()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SecurityHttp.SecurityWebClient.CheckAccess </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>loginOrEmail</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>secObject</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Проверка доступа пользователя </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">loginOrEmail</td><td></td></tr>
+    <tr><td class="paramname">secObject</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a683c4a59995201ddc44cdf0a28e3bda9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a683c4a59995201ddc44cdf0a28e3bda9">&#9670;&nbsp;</a></span>CheckAccessAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;bool&gt; SecurityHttp.SecurityWebClient.CheckAccessAsync </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>loginOrEmail</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>secObject</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Асинхронно. Проверка доступа пользователя </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">loginOrEmail</td><td></td></tr>
+    <tr><td class="paramname">secObject</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="ab870f31067df22fd7eecc2b1879ae7f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab870f31067df22fd7eecc2b1879ae7f7">&#9670;&nbsp;</a></span>CheckAccessByToken()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SecurityHttp.SecurityWebClient.CheckAccessByToken </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>token</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>policy</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Проверка доступа пользователя по токену </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">token</td><td></td></tr>
+    <tr><td class="paramname">policy</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a90760a9ddc7e177c8b86dd5b01b6d2d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90760a9ddc7e177c8b86dd5b01b6d2d7">&#9670;&nbsp;</a></span>CheckAccessByTokenAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;bool&gt; SecurityHttp.SecurityWebClient.CheckAccessByTokenAsync </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>token</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>policy</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Проверка доступа пользователя по токену </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">token</td><td></td></tr>
+    <tr><td class="paramname">policy</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="aef211fff1d2faca410405ab4117d7ee2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef211fff1d2faca410405ab4117d7ee2">&#9670;&nbsp;</a></span>CheckTokenExpire()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SecurityHttp.SecurityWebClient.CheckTokenExpire </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>token</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Проверка срока действия токена </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">token</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a4edd87e65aa738f9c477054459258810"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4edd87e65aa738f9c477054459258810">&#9670;&nbsp;</a></span>CheckTokenExpireAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;bool&gt; SecurityHttp.SecurityWebClient.CheckTokenExpireAsync </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>token</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Проверка срока действия токена </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">token</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a1adca97ea26be2653c6de8a741d41c2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1adca97ea26be2653c6de8a741d41c2d">&#9670;&nbsp;</a></span>CreateToken()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string SecurityHttp.SecurityWebClient.CreateToken </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>loginOrEmail</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>password</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создание токена </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">loginOrEmail</td><td></td></tr>
+    <tr><td class="paramname">password</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a47303de8d5d8ac52bc56936de617567a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47303de8d5d8ac52bc56936de617567a">&#9670;&nbsp;</a></span>CreateTokenAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;string&gt; SecurityHttp.SecurityWebClient.CreateTokenAsync </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>loginOrEmail</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>password</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создание токена </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">loginOrEmail</td><td></td></tr>
+    <tr><td class="paramname">password</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="af6aa25c2c64667f3bd85d5ebaab26d72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6aa25c2c64667f3bd85d5ebaab26d72">&#9670;&nbsp;</a></span>Dispose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SecurityHttp.SecurityWebClient.Dispose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources. </p>
+
+</div>
+</div>
+<a id="a4a8612fde354d141ae7a573c918a7cf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a8612fde354d141ae7a573c918a7cf9">&#9670;&nbsp;</a></span>GetUserByToken()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">User SecurityHttp.SecurityWebClient.GetUserByToken </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>token</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает пользователя по токену </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">token</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a51b5d4ae76e0ec05b212f7d9f5627871"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51b5d4ae76e0ec05b212f7d9f5627871">&#9670;&nbsp;</a></span>GetUserByTokenAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;User&gt; SecurityHttp.SecurityWebClient.GetUserByTokenAsync </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>token</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает пользователя по токену </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">token</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a8930b4aed6327336bdffc096732b8b88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8930b4aed6327336bdffc096732b8b88">&#9670;&nbsp;</a></span>SetPassword()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SecurityHttp.SecurityWebClient.SetPassword </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>loginOrEmail</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>password</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Установка нового пароля </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">loginOrEmail</td><td></td></tr>
+    <tr><td class="paramname">password</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="ad9d4ddd137513c095d702008fce3fcbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9d4ddd137513c095d702008fce3fcbd">&#9670;&nbsp;</a></span>SetPasswordAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;bool&gt; SecurityHttp.SecurityWebClient.SetPasswordAsync </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>loginOrEmail</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>password</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Асинхронно. Установка нового пароля </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">loginOrEmail</td><td></td></tr>
+    <tr><td class="paramname">password</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a1a01303f3e8226ccb2e39cf4316ff5ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a01303f3e8226ccb2e39cf4316ff5ed">&#9670;&nbsp;</a></span>StopExpire()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SecurityHttp.SecurityWebClient.StopExpire </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>tokenId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>reason</em> = <code>null</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Прекращение действия токена </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tokenId</td><td></td></tr>
+    <tr><td class="paramname">reason</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a922a524c5df07e1c5102aa912f46dc01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a922a524c5df07e1c5102aa912f46dc01">&#9670;&nbsp;</a></span>StopExpireAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task SecurityHttp.SecurityWebClient.StopExpireAsync </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>tokenId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>reason</em> = <code>null</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Прекращение действия токена </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tokenId</td><td></td></tr>
+    <tr><td class="paramname">reason</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a096f99047b791f9902f99b97ad03de8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a096f99047b791f9902f99b97ad03de8a">&#9670;&nbsp;</a></span>StopExpireForUser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SecurityHttp.SecurityWebClient.StopExpireForUser </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>tokenId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>reason</em> = <code>null</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Прекращение действия всех токенов пользователя </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tokenId</td><td></td></tr>
+    <tr><td class="paramname">reason</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aef38825a47e87e169d2f73e4b63cc95d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef38825a47e87e169d2f73e4b63cc95d">&#9670;&nbsp;</a></span>StopExpireForUserAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task SecurityHttp.SecurityWebClient.StopExpireForUserAsync </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>tokenId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>reason</em> = <code>null</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Прекращение действия всех токенов пользователя </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tokenId</td><td></td></tr>
+    <tr><td class="paramname">reason</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a52a92d46dd83c3f19dbb7749120b7d2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52a92d46dd83c3f19dbb7749120b7d2b">&#9670;&nbsp;</a></span>UserValidate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SecurityHttp.SecurityWebClient.UserValidate </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>loginOrEmail</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>password</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Производит идентификацию пользователя </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">loginOrEmail</td><td>Логин пользователя</td></tr>
+    <tr><td class="paramname">password</td><td>Пароль</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>True или False</dd></dl>
+
+</div>
+</div>
+<a id="a146fe5081d8aacafea7c380a67290c00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a146fe5081d8aacafea7c380a67290c00">&#9670;&nbsp;</a></span>UserValidateAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;bool&gt; SecurityHttp.SecurityWebClient.UserValidateAsync </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>loginOrEmail</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>password</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Асинхронно. Производит идентификацию пользователя </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">loginOrEmail</td><td>Логин пользователя</td></tr>
+    <tr><td class="paramname">password</td><td>Пароль</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>True или False</dd></dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>C:/Users/Domer/source/repos/Security.V2.1/backend/SecurityHttp/SecurityWebClient.cs</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>

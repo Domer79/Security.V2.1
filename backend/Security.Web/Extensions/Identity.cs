@@ -1,17 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
+﻿using System.Net;
 using System.Security.Principal;
-using System.Text;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 using System.Web.Security;
 using Security.Contracts;
 using Security.Exceptions;
+using Security.Model;
 
 namespace Security.Web.Extensions
 {
+    /// <summary>
+    /// Класс предоставляющий несколько методов расширения
+    /// </summary>
     public static class Identity
     {
         /// <summary>
@@ -23,6 +23,17 @@ namespace Security.Web.Extensions
         {
             var security = DependencyResolver.Current.GetService<ISecurity>();
             return security.GetUserByToken(identity.Name).Login;
+        }
+
+        /// <summary>
+        /// Возвращает объект пользователя, вошедшего в систему
+        /// </summary>
+        /// <param name="identity"></param>
+        /// <returns></returns>
+        public static User GetUser(this IIdentity identity)
+        {
+            var security = DependencyResolver.Current.GetService<ISecurity>();
+            return security.GetUserByToken(identity.Name);
         }
 
         /// <summary>

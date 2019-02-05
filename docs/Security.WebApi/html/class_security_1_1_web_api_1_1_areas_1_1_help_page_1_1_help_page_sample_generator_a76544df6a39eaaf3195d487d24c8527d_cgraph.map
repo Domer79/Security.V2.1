@@ -1,0 +1,7 @@
+<map id="Security.WebApi.Areas.HelpPage.HelpPageSampleGenerator.GetSample" name="Security.WebApi.Areas.HelpPage.HelpPageSampleGenerator.GetSample">
+<area shape="rect" id="node1" title="Gets the request or response body samples." alt="" coords="5,111,244,167"/>
+<area shape="rect" id="node2" href="$class_security_1_1_web_api_1_1_areas_1_1_help_page_1_1_help_page_sample_generator.html#ada2a49511003be3f5fab9a9a88da13e2" title="Resolves the type of the action parameter or return value when HttpRequestMessage or HttpResponseMess..." alt="" coords="292,5,583,47"/>
+<area shape="rect" id="node3" href="$class_security_1_1_web_api_1_1_areas_1_1_help_page_1_1_help_page_sample_generator.html#aaee03f0bea628dded1983570b4455c1e" title="Gets the sample object that will be serialized by the formatters. First, it will look at the SampleOb..." alt="" coords="318,71,557,127"/>
+<area shape="rect" id="node4" href="$class_security_1_1_web_api_1_1_areas_1_1_help_page_1_1_help_page_sample_generator.html#a9a2fed0110b89fc3dee4839796b1e926" title="Search for samples that are provided directly through ActionSamples." alt="" coords="318,151,557,207"/>
+<area shape="rect" id="node5" href="$class_security_1_1_web_api_1_1_areas_1_1_help_page_1_1_help_page_sample_generator.html#a55f8419a58855e50f27dc4fc5b3d332b" title="Writes the sample object using formatter." alt="" coords="313,231,561,287"/>
+</map>

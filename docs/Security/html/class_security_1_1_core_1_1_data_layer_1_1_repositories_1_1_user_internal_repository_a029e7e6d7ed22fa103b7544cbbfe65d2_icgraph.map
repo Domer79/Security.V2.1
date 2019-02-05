@@ -1,0 +1,4 @@
+<map id="Security.Core.DataLayer.Repositories.UserInternalRepository.UserValidate" name="Security.Core.DataLayer.Repositories.UserInternalRepository.UserValidate">
+<area shape="rect" id="node1" title="Проверка аутентификации" alt="" coords="287,5,520,61"/>
+<area shape="rect" id="node2" href="$class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_internal_repository.html#a9355c7c179dc45ea52771389fdad65e3" title="Создание токена для пользователя" alt="" coords="5,5,239,61"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="Security.Dapper.SqlMapper.IParameterLookup" name="Security.Dapper.SqlMapper.IParameterLookup">
+<area shape="rect" id="node1" title="Extends IDynamicParameters providing by&#45;name lookup of parameter values" alt="" coords="31,80,217,121"/>
+<area shape="rect" id="node3" href="$class_security_1_1_dapper_1_1_dynamic_parameters.html" title="A bag of parameters that can be passed to the Dapper Query and Execute methods" alt="" coords="5,169,243,196"/>
+<area shape="rect" id="node2" href="$interface_security_1_1_dapper_1_1_sql_mapper_1_1_i_dynamic_parameters.html" title="Implement this interface to pass an arbitrary db specific set of parameters to Dapper" alt="" coords="53,5,195,32"/>
+</map>

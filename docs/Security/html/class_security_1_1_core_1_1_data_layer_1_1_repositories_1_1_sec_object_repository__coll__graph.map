@@ -1,0 +1,5 @@
+<map id="Security.Core.DataLayer.Repositories.SecObjectRepository" name="Security.Core.DataLayer.Repositories.SecObjectRepository">
+<area shape="rect" id="node1" title="Управление политиками безопасности" alt="" coords="5,169,227,211"/>
+<area shape="rect" id="node2" href="$interface_security_1_1_contracts_1_1_repository_1_1_i_sec_object_repository.html" title="Управление политиками безопасности" alt="" coords="42,95,190,121"/>
+<area shape="rect" id="node3" href="$interface_security_1_1_contracts_1_1_repository_1_1_base_1_1_i_security_base_repository.html" title=" " alt="" coords="33,5,199,47"/>
+</map>

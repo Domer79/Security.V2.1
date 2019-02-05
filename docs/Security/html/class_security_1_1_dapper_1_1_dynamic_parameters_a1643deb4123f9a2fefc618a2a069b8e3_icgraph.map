@@ -1,0 +1,4 @@
+<map id="Security.Dapper.DynamicParameters.AddDynamicParams" name="Security.Dapper.DynamicParameters.AddDynamicParams">
+<area shape="rect" id="node1" title="Append a whole object full of params to the dynamic EG: AddDynamicParams(new {A = 1,..." alt="" coords="295,5,536,47"/>
+<area shape="rect" id="node2" href="$class_security_1_1_dapper_1_1_dynamic_parameters.html#a65d55b6a7344f468704af974e7f071cd" title="construct a dynamic parameter bag" alt="" coords="5,5,247,47"/>
+</map>

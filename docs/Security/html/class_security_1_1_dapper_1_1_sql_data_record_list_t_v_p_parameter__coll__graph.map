@@ -1,0 +1,4 @@
+<map id="Security.Dapper.SqlDataRecordListTVPParameter" name="Security.Dapper.SqlDataRecordListTVPParameter">
+<area shape="rect" id="node1" title="Used to pass a IEnumerable&lt;SqlDataRecord&gt; as a SqlDataRecordListTVPParameter" alt="" coords="19,80,226,121"/>
+<area shape="rect" id="node2" href="$interface_security_1_1_dapper_1_1_sql_mapper_1_1_i_custom_query_parameter.html" title="Implement this interface to pass an arbitrary db specific parameter to Dapper" alt="" coords="5,5,240,32"/>
+</map>

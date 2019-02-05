@@ -1,0 +1,390 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Applications Security: Класс Security.WebApi.Controllers.UserController</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Applications Security
+   &#160;<span id="projectnumber">2.1</span>
+   </div>
+   <div id="projectbrief">Apps Security</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_security.html">Security</a></li><li class="navelem"><a class="el" href="namespace_security_1_1_web_api.html">WebApi</a></li><li class="navelem"><a class="el" href="namespace_security_1_1_web_api_1_1_controllers.html">Controllers</a></li><li class="navelem"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_user_controller.html">UserController</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="class_security_1_1_web_api_1_1_controllers_1_1_user_controller-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс Security.WebApi.Controllers.UserController</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Управление пользователями  
+ <a href="class_security_1_1_web_api_1_1_controllers_1_1_user_controller.html#details">Подробнее...</a></p>
+<div class="dynheader">
+Граф наследования:Security.WebApi.Controllers.UserController:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_security_1_1_web_api_1_1_controllers_1_1_user_controller__inherit__graph.png" border="0" usemap="#_security_8_web_api_8_controllers_8_user_controller_inherit__map" alt="Inheritance graph"/></div>
+<map name="_security_8_web_api_8_controllers_8_user_controller_inherit__map" id="_security_8_web_api_8_controllers_8_user_controller_inherit__map">
+<area shape="rect"  title="Ð£Ð¿ÑÐ°Ð²Ð»ÐµÐ½Ð¸Ðµ Ð¿Ð¾Ð»ÑÐ·Ð¾Ð²Ð°ÑÐµÐ»ÑÐ¼Ð¸" alt="" coords="5,80,196,121"/>
+<area shape="rect"  title=" " alt="" coords="53,5,149,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса Security.WebApi.Controllers.UserController:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_security_1_1_web_api_1_1_controllers_1_1_user_controller__coll__graph.png" border="0" usemap="#_security_8_web_api_8_controllers_8_user_controller_coll__map" alt="Collaboration graph"/></div>
+<map name="_security_8_web_api_8_controllers_8_user_controller_coll__map" id="_security_8_web_api_8_controllers_8_user_controller_coll__map">
+<area shape="rect"  title="Ð£Ð¿ÑÐ°Ð²Ð»ÐµÐ½Ð¸Ðµ Ð¿Ð¾Ð»ÑÐ·Ð¾Ð²Ð°ÑÐµÐ»ÑÐ¼Ð¸" alt="" coords="5,80,196,121"/>
+<area shape="rect"  title=" " alt="" coords="53,5,149,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ab3e2a1424a4d05b28ab51424999d0ed7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_user_controller.html#ab3e2a1424a4d05b28ab51424999d0ed7">UserController</a> (IUserRepository repo)</td></tr>
+<tr class="memdesc:ab3e2a1424a4d05b28ab51424999d0ed7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Управление пользователями  <a href="#ab3e2a1424a4d05b28ab51424999d0ed7">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab3e2a1424a4d05b28ab51424999d0ed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe7da717c3cc5a7b1bc66611fe0aa94f"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_user_controller.html#afe7da717c3cc5a7b1bc66611fe0aa94f">GetByName</a> (string loginOrEmail)</td></tr>
+<tr class="memdesc:afe7da717c3cc5a7b1bc66611fe0aa94f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает пользователя по логину или email  <a href="#afe7da717c3cc5a7b1bc66611fe0aa94f">Подробнее...</a><br /></td></tr>
+<tr class="separator:afe7da717c3cc5a7b1bc66611fe0aa94f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4e017782564bd109919037de40a6bc9"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_user_controller.html#ab4e017782564bd109919037de40a6bc9">SetStatus</a> (string loginOrEmail, bool status)</td></tr>
+<tr class="memdesc:ab4e017782564bd109919037de40a6bc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Установка статуса пользователя по логину или email  <a href="#ab4e017782564bd109919037de40a6bc9">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab4e017782564bd109919037de40a6bc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ba497651da47721f174ce0c6b40e784"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_user_controller.html#a6ba497651da47721f174ce0c6b40e784">CreateEmpty</a> (string prefixForRequired)</td></tr>
+<tr class="memdesc:a6ba497651da47721f174ce0c6b40e784"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создание пустого пользователя с заданным префиксом  <a href="#a6ba497651da47721f174ce0c6b40e784">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6ba497651da47721f174ce0c6b40e784"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0917fc704b90ac6e962c99643bc45bfd"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_user_controller.html#a0917fc704b90ac6e962c99643bc45bfd">Get</a> (int id)</td></tr>
+<tr class="memdesc:a0917fc704b90ac6e962c99643bc45bfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает пользователя по идентификатору  <a href="#a0917fc704b90ac6e962c99643bc45bfd">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0917fc704b90ac6e962c99643bc45bfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb2103489df92f3add96ea36bdcdacc5"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_user_controller.html#abb2103489df92f3add96ea36bdcdacc5">Get</a> ()</td></tr>
+<tr class="memdesc:abb2103489df92f3add96ea36bdcdacc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает список всех пользователей  <a href="#abb2103489df92f3add96ea36bdcdacc5">Подробнее...</a><br /></td></tr>
+<tr class="separator:abb2103489df92f3add96ea36bdcdacc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d88bb5b0b970df6e88a47592bd815ac"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_user_controller.html#a0d88bb5b0b970df6e88a47592bd815ac">Post</a> (User entity)</td></tr>
+<tr class="memdesc:a0d88bb5b0b970df6e88a47592bd815ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создание пустого пользователя  <a href="#a0d88bb5b0b970df6e88a47592bd815ac">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0d88bb5b0b970df6e88a47592bd815ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac580a0e7fba262a7cdf2b3a702240dae"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_user_controller.html#ac580a0e7fba262a7cdf2b3a702240dae">Put</a> (User entity)</td></tr>
+<tr class="memdesc:ac580a0e7fba262a7cdf2b3a702240dae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновление данных пользователя  <a href="#ac580a0e7fba262a7cdf2b3a702240dae">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac580a0e7fba262a7cdf2b3a702240dae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ba77e06e233331bc082cf18d73d218c"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_user_controller.html#a0ba77e06e233331bc082cf18d73d218c">Delete</a> (int id)</td></tr>
+<tr class="memdesc:a0ba77e06e233331bc082cf18d73d218c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаление пользователя  <a href="#a0ba77e06e233331bc082cf18d73d218c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0ba77e06e233331bc082cf18d73d218c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Управление пользователями </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="ab3e2a1424a4d05b28ab51424999d0ed7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3e2a1424a4d05b28ab51424999d0ed7">&#9670;&nbsp;</a></span>UserController()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Security.WebApi.Controllers.UserController.UserController </td>
+          <td>(</td>
+          <td class="paramtype">IUserRepository&#160;</td>
+          <td class="paramname"><em>repo</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Управление пользователями </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">repo</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a6ba497651da47721f174ce0c6b40e784"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ba497651da47721f174ce0c6b40e784">&#9670;&nbsp;</a></span>CreateEmpty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.UserController.CreateEmpty </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>prefixForRequired</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создание пустого пользователя с заданным префиксом </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">prefixForRequired</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a0ba77e06e233331bc082cf18d73d218c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ba77e06e233331bc082cf18d73d218c">&#9670;&nbsp;</a></span>Delete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.UserController.Delete </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Удаление пользователя </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a0917fc704b90ac6e962c99643bc45bfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0917fc704b90ac6e962c99643bc45bfd">&#9670;&nbsp;</a></span>Get() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.UserController.Get </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает пользователя по идентификатору </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="abb2103489df92f3add96ea36bdcdacc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb2103489df92f3add96ea36bdcdacc5">&#9670;&nbsp;</a></span>Get() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.UserController.Get </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает список всех пользователей </p>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="afe7da717c3cc5a7b1bc66611fe0aa94f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe7da717c3cc5a7b1bc66611fe0aa94f">&#9670;&nbsp;</a></span>GetByName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.UserController.GetByName </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>loginOrEmail</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает пользователя по логину или email </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">loginOrEmail</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a0d88bb5b0b970df6e88a47592bd815ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d88bb5b0b970df6e88a47592bd815ac">&#9670;&nbsp;</a></span>Post()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.UserController.Post </td>
+          <td>(</td>
+          <td class="paramtype">User&#160;</td>
+          <td class="paramname"><em>entity</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создание пустого пользователя </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entity</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="ac580a0e7fba262a7cdf2b3a702240dae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac580a0e7fba262a7cdf2b3a702240dae">&#9670;&nbsp;</a></span>Put()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.UserController.Put </td>
+          <td>(</td>
+          <td class="paramtype">User&#160;</td>
+          <td class="paramname"><em>entity</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Обновление данных пользователя </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entity</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="ab4e017782564bd109919037de40a6bc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4e017782564bd109919037de40a6bc9">&#9670;&nbsp;</a></span>SetStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.UserController.SetStatus </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>loginOrEmail</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Установка статуса пользователя по логину или email </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">loginOrEmail</td><td></td></tr>
+    <tr><td class="paramname">status</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>C:/Users/Domer/source/repos/Security.V2.1/backend/Security.WebApi/Controllers/UserController.cs</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>

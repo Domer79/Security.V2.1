@@ -1,0 +1,4 @@
+<map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
+<area shape="rect" id="node1" href="$interface_security_1_1_dapper_1_1_sql_mapper_1_1_i_member_map.html" title="Implements this interface to provide custom member mapping" alt="" coords="5,5,191,47"/>
+<area shape="rect" id="node2" href="$class_security_1_1_dapper_1_1_simple_member_map.html" title="Represents simple member map for one of target parameter or property or field to source DataReader co..." alt="" coords="239,13,469,39"/>
+</map>

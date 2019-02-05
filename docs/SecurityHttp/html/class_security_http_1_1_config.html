@@ -1,0 +1,485 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Applications Security: Класс SecurityHttp.Config</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Applications Security
+   &#160;<span id="projectnumber">2.1</span>
+   </div>
+   <div id="projectbrief">Apps Security</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_security_http.html">SecurityHttp</a></li><li class="navelem"><a class="el" href="class_security_http_1_1_config.html">Config</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="class_security_http_1_1_config-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс SecurityHttp.Config</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Создание и настройка политик безопасности  
+ <a href="class_security_http_1_1_config.html#details">Подробнее...</a></p>
+<div class="dynheader">
+Граф наследования:SecurityHttp.Config:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_security_http_1_1_config__inherit__graph.png" border="0" usemap="#_security_http_8_config_inherit__map" alt="Inheritance graph"/></div>
+<map name="_security_http_8_config_inherit__map" id="_security_http_8_config_inherit__map">
+<area shape="rect"  title="Ð¡Ð¾Ð·Ð´Ð°Ð½Ð¸Ðµ Ð¸ Ð½Ð°ÑÑÑÐ¾Ð¹ÐºÐ° Ð¿Ð¾Ð»Ð¸ÑÐ¸Ðº Ð±ÐµÐ·Ð¾Ð¿Ð°ÑÐ½Ð¾ÑÑÐ¸" alt="" coords="5,80,140,107"/>
+<area shape="rect"  title=" " alt="" coords="42,5,103,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса SecurityHttp.Config:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_security_http_1_1_config__coll__graph.png" border="0" usemap="#_security_http_8_config_coll__map" alt="Collaboration graph"/></div>
+<map name="_security_http_8_config_coll__map" id="_security_http_8_config_coll__map">
+<area shape="rect"  title="Ð¡Ð¾Ð·Ð´Ð°Ð½Ð¸Ðµ Ð¸ Ð½Ð°ÑÑÑÐ¾Ð¹ÐºÐ° Ð¿Ð¾Ð»Ð¸ÑÐ¸Ðº Ð±ÐµÐ·Ð¾Ð¿Ð°ÑÐ½Ð¾ÑÑÐ¸" alt="" coords="5,80,140,107"/>
+<area shape="rect"  title=" " alt="" coords="42,5,103,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a2d6268f4648c417d676d2fde48972249"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_config.html#a2d6268f4648c417d676d2fde48972249">Config</a> (IApplicationInternalRepository applicationRepository, ISecObjectRepository secObjectRepository)</td></tr>
+<tr class="memdesc:a2d6268f4648c417d676d2fde48972249"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создание и настройка политик безопасности  <a href="#a2d6268f4648c417d676d2fde48972249">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2d6268f4648c417d676d2fde48972249"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adda23b672107897bdb4914cbcd20b8c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_config.html#adda23b672107897bdb4914cbcd20b8c5">RegisterApplication</a> (string appName, string description)</td></tr>
+<tr class="memdesc:adda23b672107897bdb4914cbcd20b8c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Регистрация приложения  <a href="#adda23b672107897bdb4914cbcd20b8c5">Подробнее...</a><br /></td></tr>
+<tr class="separator:adda23b672107897bdb4914cbcd20b8c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94a8c05556b206f1374a26a3d4d30fe5"><td class="memItemLeft" align="right" valign="top">async Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_config.html#a94a8c05556b206f1374a26a3d4d30fe5">RegisterApplicationAsync</a> (string appName, string description)</td></tr>
+<tr class="memdesc:a94a8c05556b206f1374a26a3d4d30fe5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Регистрация приложения  <a href="#a94a8c05556b206f1374a26a3d4d30fe5">Подробнее...</a><br /></td></tr>
+<tr class="separator:a94a8c05556b206f1374a26a3d4d30fe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab99f790c67738c610e1990439cb3b370"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_config.html#ab99f790c67738c610e1990439cb3b370">RegisterSecurityObjects</a> (string appName, params ISecurityObject[] securityObjects)</td></tr>
+<tr class="memdesc:ab99f790c67738c610e1990439cb3b370"><td class="mdescLeft">&#160;</td><td class="mdescRight">Регистрация политик безопасности  <a href="#ab99f790c67738c610e1990439cb3b370">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab99f790c67738c610e1990439cb3b370"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c84203be335775fd20e290d2dc8b337"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_config.html#a5c84203be335775fd20e290d2dc8b337">RegisterSecurityObjects</a> (string appName, params string[] securityObjects)</td></tr>
+<tr class="memdesc:a5c84203be335775fd20e290d2dc8b337"><td class="mdescLeft">&#160;</td><td class="mdescRight">Регистрация политик безопасности  <a href="#a5c84203be335775fd20e290d2dc8b337">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5c84203be335775fd20e290d2dc8b337"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2021e9d07fce622155532cba0ab70fd5"><td class="memItemLeft" align="right" valign="top">async Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_config.html#a2021e9d07fce622155532cba0ab70fd5">RegisterSecurityObjectsAsync</a> (string appName, params ISecurityObject[] securityObjects)</td></tr>
+<tr class="memdesc:a2021e9d07fce622155532cba0ab70fd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Регистрация политик безопасности  <a href="#a2021e9d07fce622155532cba0ab70fd5">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2021e9d07fce622155532cba0ab70fd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad6c6adac18cdffcf6a6c2028dd29bc1"><td class="memItemLeft" align="right" valign="top">Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_config.html#aad6c6adac18cdffcf6a6c2028dd29bc1">RegisterSecurityObjectsAsync</a> (string appName, params string[] securityObjects)</td></tr>
+<tr class="memdesc:aad6c6adac18cdffcf6a6c2028dd29bc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Регистрация политик безопасности  <a href="#aad6c6adac18cdffcf6a6c2028dd29bc1">Подробнее...</a><br /></td></tr>
+<tr class="separator:aad6c6adac18cdffcf6a6c2028dd29bc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10c4996dfe121a7432e47d0cec998316"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_config.html#a10c4996dfe121a7432e47d0cec998316">RemoveApplication</a> (string appName)</td></tr>
+<tr class="memdesc:a10c4996dfe121a7432e47d0cec998316"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаление приложения  <a href="#a10c4996dfe121a7432e47d0cec998316">Подробнее...</a><br /></td></tr>
+<tr class="separator:a10c4996dfe121a7432e47d0cec998316"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43d908a70c96a8a8939ada8eee8a18ca"><td class="memItemLeft" align="right" valign="top">Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_config.html#a43d908a70c96a8a8939ada8eee8a18ca">RemoveApplicationAsync</a> (string appName)</td></tr>
+<tr class="memdesc:a43d908a70c96a8a8939ada8eee8a18ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаление приложения  <a href="#a43d908a70c96a8a8939ada8eee8a18ca">Подробнее...</a><br /></td></tr>
+<tr class="separator:a43d908a70c96a8a8939ada8eee8a18ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Создание и настройка политик безопасности </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a2d6268f4648c417d676d2fde48972249"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d6268f4648c417d676d2fde48972249">&#9670;&nbsp;</a></span>Config()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SecurityHttp.Config.Config </td>
+          <td>(</td>
+          <td class="paramtype">IApplicationInternalRepository&#160;</td>
+          <td class="paramname"><em>applicationRepository</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ISecObjectRepository&#160;</td>
+          <td class="paramname"><em>secObjectRepository</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создание и настройка политик безопасности </p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="adda23b672107897bdb4914cbcd20b8c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adda23b672107897bdb4914cbcd20b8c5">&#9670;&nbsp;</a></span>RegisterApplication()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SecurityHttp.Config.RegisterApplication </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>appName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>description</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Регистрация приложения </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">appName</td><td></td></tr>
+    <tr><td class="paramname">description</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a94a8c05556b206f1374a26a3d4d30fe5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94a8c05556b206f1374a26a3d4d30fe5">&#9670;&nbsp;</a></span>RegisterApplicationAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task SecurityHttp.Config.RegisterApplicationAsync </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>appName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>description</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Регистрация приложения </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">appName</td><td></td></tr>
+    <tr><td class="paramname">description</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab99f790c67738c610e1990439cb3b370"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab99f790c67738c610e1990439cb3b370">&#9670;&nbsp;</a></span>RegisterSecurityObjects() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SecurityHttp.Config.RegisterSecurityObjects </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>appName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">params ISecurityObject []&#160;</td>
+          <td class="paramname"><em>securityObjects</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Регистрация политик безопасности </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">appName</td><td></td></tr>
+    <tr><td class="paramname">securityObjects</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_security_http_1_1_config_ab99f790c67738c610e1990439cb3b370_icgraph.png" border="0" usemap="#class_security_http_1_1_config_ab99f790c67738c610e1990439cb3b370_icgraph" alt=""/></div>
+<map name="class_security_http_1_1_config_ab99f790c67738c610e1990439cb3b370_icgraph" id="class_security_http_1_1_config_ab99f790c67738c610e1990439cb3b370_icgraph">
+<area shape="rect"  title="Ð ÐµÐ³Ð¸ÑÑÑÐ°ÑÐ¸Ñ Ð¿Ð¾Ð»Ð¸ÑÐ¸Ðº Ð±ÐµÐ·Ð¾Ð¿Ð°ÑÐ½Ð¾ÑÑÐ¸" alt="" coords="240,5,427,47"/>
+<area shape="rect"  href="class_security_http_1_1_config.html#a5c84203be335775fd20e290d2dc8b337" title="Ð ÐµÐ³Ð¸ÑÑÑÐ°ÑÐ¸Ñ Ð¿Ð¾Ð»Ð¸ÑÐ¸Ðº Ð±ÐµÐ·Ð¾Ð¿Ð°ÑÐ½Ð¾ÑÑÐ¸" alt="" coords="5,5,192,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5c84203be335775fd20e290d2dc8b337"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c84203be335775fd20e290d2dc8b337">&#9670;&nbsp;</a></span>RegisterSecurityObjects() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SecurityHttp.Config.RegisterSecurityObjects </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>appName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">params string []&#160;</td>
+          <td class="paramname"><em>securityObjects</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Регистрация политик безопасности </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">appName</td><td></td></tr>
+    <tr><td class="paramname">securityObjects</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_security_http_1_1_config_a5c84203be335775fd20e290d2dc8b337_cgraph.png" border="0" usemap="#class_security_http_1_1_config_a5c84203be335775fd20e290d2dc8b337_cgraph" alt=""/></div>
+<map name="class_security_http_1_1_config_a5c84203be335775fd20e290d2dc8b337_cgraph" id="class_security_http_1_1_config_a5c84203be335775fd20e290d2dc8b337_cgraph">
+<area shape="rect"  title="Ð ÐµÐ³Ð¸ÑÑÑÐ°ÑÐ¸Ñ Ð¿Ð¾Ð»Ð¸ÑÐ¸Ðº Ð±ÐµÐ·Ð¾Ð¿Ð°ÑÐ½Ð¾ÑÑÐ¸" alt="" coords="5,5,192,47"/>
+<area shape="rect"  href="class_security_http_1_1_config.html#ab99f790c67738c610e1990439cb3b370" title="Ð ÐµÐ³Ð¸ÑÑÑÐ°ÑÐ¸Ñ Ð¿Ð¾Ð»Ð¸ÑÐ¸Ðº Ð±ÐµÐ·Ð¾Ð¿Ð°ÑÐ½Ð¾ÑÑÐ¸" alt="" coords="240,5,427,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2021e9d07fce622155532cba0ab70fd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2021e9d07fce622155532cba0ab70fd5">&#9670;&nbsp;</a></span>RegisterSecurityObjectsAsync() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task SecurityHttp.Config.RegisterSecurityObjectsAsync </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>appName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">params ISecurityObject []&#160;</td>
+          <td class="paramname"><em>securityObjects</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Регистрация политик безопасности </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">appName</td><td></td></tr>
+    <tr><td class="paramname">securityObjects</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_security_http_1_1_config_a2021e9d07fce622155532cba0ab70fd5_icgraph.png" border="0" usemap="#class_security_http_1_1_config_a2021e9d07fce622155532cba0ab70fd5_icgraph" alt=""/></div>
+<map name="class_security_http_1_1_config_a2021e9d07fce622155532cba0ab70fd5_icgraph" id="class_security_http_1_1_config_a2021e9d07fce622155532cba0ab70fd5_icgraph">
+<area shape="rect"  title="Ð ÐµÐ³Ð¸ÑÑÑÐ°ÑÐ¸Ñ Ð¿Ð¾Ð»Ð¸ÑÐ¸Ðº Ð±ÐµÐ·Ð¾Ð¿Ð°ÑÐ½Ð¾ÑÑÐ¸" alt="" coords="240,5,427,47"/>
+<area shape="rect"  href="class_security_http_1_1_config.html#aad6c6adac18cdffcf6a6c2028dd29bc1" title="Ð ÐµÐ³Ð¸ÑÑÑÐ°ÑÐ¸Ñ Ð¿Ð¾Ð»Ð¸ÑÐ¸Ðº Ð±ÐµÐ·Ð¾Ð¿Ð°ÑÐ½Ð¾ÑÑÐ¸" alt="" coords="5,5,192,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aad6c6adac18cdffcf6a6c2028dd29bc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad6c6adac18cdffcf6a6c2028dd29bc1">&#9670;&nbsp;</a></span>RegisterSecurityObjectsAsync() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task SecurityHttp.Config.RegisterSecurityObjectsAsync </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>appName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">params string []&#160;</td>
+          <td class="paramname"><em>securityObjects</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Регистрация политик безопасности </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">appName</td><td></td></tr>
+    <tr><td class="paramname">securityObjects</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_security_http_1_1_config_aad6c6adac18cdffcf6a6c2028dd29bc1_cgraph.png" border="0" usemap="#class_security_http_1_1_config_aad6c6adac18cdffcf6a6c2028dd29bc1_cgraph" alt=""/></div>
+<map name="class_security_http_1_1_config_aad6c6adac18cdffcf6a6c2028dd29bc1_cgraph" id="class_security_http_1_1_config_aad6c6adac18cdffcf6a6c2028dd29bc1_cgraph">
+<area shape="rect"  title="Ð ÐµÐ³Ð¸ÑÑÑÐ°ÑÐ¸Ñ Ð¿Ð¾Ð»Ð¸ÑÐ¸Ðº Ð±ÐµÐ·Ð¾Ð¿Ð°ÑÐ½Ð¾ÑÑÐ¸" alt="" coords="5,5,192,47"/>
+<area shape="rect"  href="class_security_http_1_1_config.html#a2021e9d07fce622155532cba0ab70fd5" title="Ð ÐµÐ³Ð¸ÑÑÑÐ°ÑÐ¸Ñ Ð¿Ð¾Ð»Ð¸ÑÐ¸Ðº Ð±ÐµÐ·Ð¾Ð¿Ð°ÑÐ½Ð¾ÑÑÐ¸" alt="" coords="240,5,427,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a10c4996dfe121a7432e47d0cec998316"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10c4996dfe121a7432e47d0cec998316">&#9670;&nbsp;</a></span>RemoveApplication()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SecurityHttp.Config.RemoveApplication </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>appName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Удаление приложения </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">appName</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a43d908a70c96a8a8939ada8eee8a18ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43d908a70c96a8a8939ada8eee8a18ca">&#9670;&nbsp;</a></span>RemoveApplicationAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task SecurityHttp.Config.RemoveApplicationAsync </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>appName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Удаление приложения </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">appName</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>C:/Users/Domer/source/repos/Security.V2.1/backend/SecurityHttp/Config.cs</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>
