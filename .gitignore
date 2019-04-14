@@ -286,3 +286,6 @@ __pycache__/
 *.btm.cs
 *.odx.cs
 *.xsd.cs
+/backend/nuget_packages/SecurityHttp
+/backend/nuget_packages/Security.Web
+/backend/nuget_packages/Security
