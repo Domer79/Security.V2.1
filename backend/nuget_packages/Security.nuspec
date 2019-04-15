@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <package>
-	<metadata>
+    <metadata>
 		<id>Net.Authorize</id>
 		<version>2.1.0</version>
 		<title>Garipovd Security 2.1</title
 		<authors>Damir Garipov</authors>
 		<owners>Damir Garipov</owners>
-		<licenseUrl>https://www.website.com/terms</licenseUrl>
+		<licenseUrl>https://github.com/Domer79/Security.V2.1/blob/dev/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/Domer79/Security.V2.1/tree/dev</projectUrl>
+        <iconUrl>http://github.com/domer79/noicon</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Access Management Control</description>
+        <releaseNotes>First release</releaseNotes>
+        <copyright>Copyright 2019</copyright>
+        <tags>Security, Access, Athentication, Authorize, Users, Roles, Passwords</tags>
+        
 	</metadata>
 	<files>
 	</files>

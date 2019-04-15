@@ -17,10 +17,10 @@ namespace Security.WebApi.Infrastructure.DelegatingHandlers
         protected override async Task<HttpResponseMessage> SendAsync(
             HttpRequestMessage request, CancellationToken cancellationToken)
         {
-            if (request.RequestUri.Segments.Length >= 5)
-                if (_repositories.Contains(request.RequestUri.Segments[4].Replace("/", "")))
+            if (request.RequestUri.Segments.Length >= 4)
+                if (_repositories.Contains(request.RequestUri.Segments[3].Replace("/", "")))
                 {
-                    ApplicationName = request.RequestUri.Segments[3].Replace("/", "");
+                    ApplicationName = request.RequestUri.Segments[2].Replace("/", "");
                 }
 
             // log request body
