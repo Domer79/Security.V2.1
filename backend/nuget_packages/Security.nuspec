@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<package>
+	<metadata>
+		<id>Net.Authorize</id>
+		<version>2.1.0</version>
+		<title>Garipovd Security 2.1</title
+		<authors>Damir Garipov</authors>
+		<owners>Damir Garipov</owners>
+		<licenseUrl>https://www.website.com/terms</licenseUrl>
+	</metadata>
+	<files>
+	</files>
+</package>
