@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
     <metadata>
-		<id>Net.Authorize.Security</id>
+		<id>Net.Authorize.SecurityHttp</id>
 		<version>2.1.0</version>
-		<title>Net.Authorize Security 2.1</title>
+		<title>Net.Authorize SecurityHttp 2.1</title>
 		<authors>Damir Garipov</authors>
 		<owners>Damir Garipov</owners>
         <projectUrl>https://github.com/Domer79/Security.V2.1/tree/dev</projectUrl>
         <iconUrl>http://github.com/domer79/noicon</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>Access Management Control</description>
+        <description>Access Management Control by RESTfull API</description>
         <releaseNotes>First release</releaseNotes>
         <copyright>Copyright 2019</copyright>
         <tags>Security, Access, Athentication, Authorize, Users, Roles, Passwords</tags>
 
+        <dependencies>
+            <dependency id="Net.Authorize.Security" version="2.1.0"/>
+        </dependencies>
 	</metadata>
 	<files>
-        <file src="lib/Security.dll" target="lib/net46"/>
+        <file src="SecurityHttp/SecurityHttp.dll" target="lib/net46"/>
 	</files>
 </package>

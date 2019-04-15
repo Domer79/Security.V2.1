@@ -289,3 +289,4 @@ __pycache__/
 /backend/nuget_packages/SecurityHttp
 /backend/nuget_packages/Security.Web
 /backend/nuget_packages/Security
+/backend/nuget_packages/lib
