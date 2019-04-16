@@ -2,12 +2,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
     <metadata>
 		<id>Net.Authorize.SecurityHttp</id>
-		<version>2.1.0</version>
+		<version>2.1.1</version>
 		<title>Net.Authorize SecurityHttp 2.1</title>
 		<authors>Damir Garipov</authors>
 		<owners>Damir Garipov</owners>
         <licenseUrl>https://github.com/Domer79/Security.V2.1/blob/dev/LICENSE</licenseUrl>
-        <projectUrl>https://github.com/Domer79/Security.V2.1/tree/dev</projectUrl>
+        <projectUrl>https://github.com/Domer79/Security.V2.1/tree/dev/backend/SecurityHttp</projectUrl>
         <iconUrl>http://github.com/domer79/noicon</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Access Management Control by RESTfull API</description>

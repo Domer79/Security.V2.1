@@ -55,13 +55,13 @@
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
     <Reference Include="Security, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Net.Authorize.Security.2.1.0\lib\net46\Security.dll</HintPath>
+      <HintPath>..\packages\Net.Authorize.Security.2.1.1\lib\net46\Security.dll</HintPath>
     </Reference>
     <Reference Include="Security.Web, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Net.Authorize.Security.Web.2.1.0\lib\net46\Security.Web.dll</HintPath>
+      <HintPath>..\packages\Net.Authorize.Security.Web.2.1.1\lib\net46\Security.Web.dll</HintPath>
     </Reference>
     <Reference Include="SecurityHttp, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Net.Authorize.SecurityHttp.2.1.0\lib\net46\SecurityHttp.dll</HintPath>
+      <HintPath>..\packages\Net.Authorize.SecurityHttp.2.1.1\lib\net46\SecurityHttp.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">

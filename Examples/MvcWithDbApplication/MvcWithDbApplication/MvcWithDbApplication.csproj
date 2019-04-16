@@ -53,10 +53,10 @@
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Security, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Net.Authorize.Security.2.1.0\lib\net46\Security.dll</HintPath>
+      <HintPath>..\packages\Net.Authorize.Security.2.1.1\lib\net46\Security.dll</HintPath>
     </Reference>
     <Reference Include="Security.Web, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Net.Authorize.Security.Web.2.1.0\lib\net46\Security.Web.dll</HintPath>
+      <HintPath>..\packages\Net.Authorize.Security.Web.2.1.1\lib\net46\Security.Web.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
