@@ -1,0 +1,5 @@
+<map id="Security.Contracts.Repository.IUserRepository" name="Security.Contracts.Repository.IUserRepository">
+<area shape="rect" id="node1" title="Управление пользователями" alt="" coords="5,95,205,136"/>
+<area shape="rect" id="node3" href="$class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_repository.html" title="Управление пользователями" alt="" coords="12,184,199,225"/>
+<area shape="rect" id="node2" href="$interface_security_1_1_contracts_1_1_repository_1_1_base_1_1_i_security_base_repository.html" title=" " alt="" coords="23,5,188,47"/>
+</map>

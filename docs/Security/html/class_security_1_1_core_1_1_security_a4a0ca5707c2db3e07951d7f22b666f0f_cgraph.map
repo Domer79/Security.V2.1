@@ -1,0 +1,4 @@
+<map id="Security.Core.Security.StopExpireForUser" name="Security.Core.Security.StopExpireForUser">
+<area shape="rect" id="node1" title="Прекращение действия всех токенов пользователя" alt="" coords="5,5,189,47"/>
+<area shape="rect" id="node2" href="$interface_security_1_1_contracts_1_1_repository_1_1_i_token_service.html#a18b8d824e47a0b0e7444020041217337" title="Прекращение действия всех токенов связанных с пользователем" alt="" coords="237,5,453,47"/>
+</map>

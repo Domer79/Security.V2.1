@@ -41,7 +41,7 @@ namespace Security.WebApi.App_Start
                 if (fullLog)
                     builder.RegisterType<LoggingActionFilter>().AsWebApiActionFilterFor<ApiController>().SingleInstance();
             }
-            builder.RegisterType<ExceptionActionFilter>().AsWebApiExceptionFilterFor<ApiController>().InstancePerRequest();
+            //builder.RegisterType<ExceptionActionFilter>().AsWebApiExceptionFilterFor<ApiController>().InstancePerRequest();
 
             builder.RegisterType<ApplicationInternalRepository>().As<IApplicationInternalRepository>().InstancePerRequest();
             builder.RegisterType<CommonDb>().As<ICommonDb>().SingleInstance();
@@ -57,6 +57,7 @@ namespace Security.WebApi.App_Start
             builder.RegisterType<GroupRepository>().As<IGroupRepository>().InstancePerRequest();
             builder.RegisterType<SecuritySettings>().As<ISecuritySettings>().InstancePerRequest();
             builder.RegisterType<Config>().As<IConfig>().InstancePerRequest();
+            builder.RegisterType<TokenService>().As<ITokenService>().InstancePerRequest();
         }
     }
 }

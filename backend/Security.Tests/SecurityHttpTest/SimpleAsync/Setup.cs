@@ -63,7 +63,7 @@ namespace Security.Tests.SecurityHttpTest.SimpleAsync
                 await CreateUserGroups(security);
                 await CreateRoles(security);
 
-                await security.MemberRoleRepository.AddMembersToRoleAsync(new[] { "user1", "group1" }, "role1");
+                await security.MemberRoleRepository.AddMembersToRoleAsync(new[] { "user1", "user2", "group1" }, "role1");
                 await security.MemberRoleRepository.AddMembersToRoleAsync(new[] { "user1" }, "role2");
                 await security.MemberRoleRepository.AddMembersToRoleAsync(new[] { "user3" }, "role2");
                 

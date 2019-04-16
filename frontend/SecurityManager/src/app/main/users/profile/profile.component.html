@@ -35,5 +35,13 @@
       <hr>
       <input type="submit" value="Save" [disabled]="!userForm.form.dirty" class="btn btn-success"/>
     </form>
+    <hr>
+    <form>
+      <div class="form-group">
+        <label for="setPassword">Set up password</label>
+        <input type="password" class="form-control" id="setPassword" placeholder="Password" #pass>
+      </div>
+      <button type="submit" class="btn btn-primary" (click)="setPassword(pass.value)" >Set password</button>
+    </form>
   </div>
 </div>

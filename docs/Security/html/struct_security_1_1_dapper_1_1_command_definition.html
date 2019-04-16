@@ -1,0 +1,442 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Applications Security: Структура Security.Dapper.CommandDefinition</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Applications Security
+   &#160;<span id="projectnumber">2.1</span>
+   </div>
+   <div id="projectbrief">Apps Security</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_security.html">Security</a></li><li class="navelem"><a class="el" href="namespace_security_1_1_dapper.html">Dapper</a></li><li class="navelem"><a class="el" href="struct_security_1_1_dapper_1_1_command_definition.html">CommandDefinition</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="#properties">Свойства</a> &#124;
+<a href="struct_security_1_1_dapper_1_1_command_definition-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Структура Security.Dapper.CommandDefinition</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Represents the key aspects of a sql operation  
+ <a href="struct_security_1_1_dapper_1_1_command_definition.html#details">Подробнее...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a16ad6d072bbb7337fdccb9dddc12e25f"><td class="memItemLeft" align="right" valign="top"><a id="a16ad6d072bbb7337fdccb9dddc12e25f"></a>
+internal void&#160;</td><td class="memItemRight" valign="bottom"><b>OnCompleted</b> ()</td></tr>
+<tr class="separator:a16ad6d072bbb7337fdccb9dddc12e25f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bc5c6d47ca0c511e02a25b4f9123206"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_security_1_1_dapper_1_1_command_definition.html#a4bc5c6d47ca0c511e02a25b4f9123206">CommandDefinition</a> (string commandText, object parameters=null, IDbTransaction transaction=null, int? commandTimeout=null, <a class="el" href="struct_security_1_1_dapper_1_1_command_definition.html#a7f63a3a98940a63e349c3ba01ce2205c">CommandType</a>? commandType=null, <a class="el" href="namespace_security_1_1_dapper.html#a9de7ae72d6da68cdd287c7d90c632068">CommandFlags</a> flags=<a class="el" href="namespace_security_1_1_dapper.html#a9de7ae72d6da68cdd287c7d90c632068a97010abc74ca9d1176408d3ef61b8c24">CommandFlags.Buffered</a>, <a class="el" href="struct_security_1_1_dapper_1_1_command_definition.html#a5550c728f58a89e1f6278a70a098d129">CancellationToken</a> cancellationToken=default(<a class="el" href="struct_security_1_1_dapper_1_1_command_definition.html#a5550c728f58a89e1f6278a70a098d129">CancellationToken</a>))</td></tr>
+<tr class="memdesc:a4bc5c6d47ca0c511e02a25b4f9123206"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the command definition  <a href="#a4bc5c6d47ca0c511e02a25b4f9123206">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4bc5c6d47ca0c511e02a25b4f9123206"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a344e9c5f03fe30217b17995358477516"><td class="memItemLeft" align="right" valign="top"><a id="a344e9c5f03fe30217b17995358477516"></a>
+internal IDbCommand&#160;</td><td class="memItemRight" valign="bottom"><b>SetupCommand</b> (IDbConnection cnn, Action&lt; IDbCommand, object &gt; paramReader)</td></tr>
+<tr class="separator:a344e9c5f03fe30217b17995358477516"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:ad05c2fbf7419cf8b956489326e4276b0"><td class="memItemLeft" align="right" valign="top"><a id="ad05c2fbf7419cf8b956489326e4276b0"></a>
+static internal <a class="el" href="struct_security_1_1_dapper_1_1_command_definition.html">CommandDefinition</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ForCallback</b> (object parameters)</td></tr>
+<tr class="separator:ad05c2fbf7419cf8b956489326e4276b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a81adb24c909149308dd6717dd26ac671"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_security_1_1_dapper_1_1_command_definition.html#a81adb24c909149308dd6717dd26ac671">Buffered</a> =&gt; (<a class="el" href="struct_security_1_1_dapper_1_1_command_definition.html#a775a270c1a05c9de4c87c448ffdaaa6c">Flags</a> &amp; CommandFlags.Buffered) != 0</td></tr>
+<tr class="memdesc:a81adb24c909149308dd6717dd26ac671"><td class="mdescLeft">&#160;</td><td class="mdescRight">Should data be buffered before returning?  <a href="#a81adb24c909149308dd6717dd26ac671">Подробнее...</a><br /></td></tr>
+<tr class="separator:a81adb24c909149308dd6717dd26ac671"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fd2f03b48390f4c924bc31b2b2ec7ee"><td class="memItemLeft" align="right" valign="top">internal bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_security_1_1_dapper_1_1_command_definition.html#a4fd2f03b48390f4c924bc31b2b2ec7ee">AddToCache</a> =&gt; (<a class="el" href="struct_security_1_1_dapper_1_1_command_definition.html#a775a270c1a05c9de4c87c448ffdaaa6c">Flags</a> &amp; <a class="el" href="namespace_security_1_1_dapper.html#a9de7ae72d6da68cdd287c7d90c632068a9c2a36ed94b288fe8f5ce5b6b16d3fdd">CommandFlags.NoCache</a>) == 0</td></tr>
+<tr class="memdesc:a4fd2f03b48390f4c924bc31b2b2ec7ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Should the plan for this query be cached?  <a href="#a4fd2f03b48390f4c924bc31b2b2ec7ee">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4fd2f03b48390f4c924bc31b2b2ec7ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a865cac40222a2a30a4f869295bf7152f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_security_1_1_dapper_1_1_command_definition.html#a865cac40222a2a30a4f869295bf7152f">Pipelined</a> =&gt; (<a class="el" href="struct_security_1_1_dapper_1_1_command_definition.html#a775a270c1a05c9de4c87c448ffdaaa6c">Flags</a> &amp; CommandFlags.Pipelined) != 0</td></tr>
+<tr class="memdesc:a865cac40222a2a30a4f869295bf7152f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Can async queries be pipelined?  <a href="#a865cac40222a2a30a4f869295bf7152f">Подробнее...</a><br /></td></tr>
+<tr class="separator:a865cac40222a2a30a4f869295bf7152f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Свойства</h2></td></tr>
+<tr class="memitem:aeaaa72766365d27d8c4ed7510e393751"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_security_1_1_dapper_1_1_command_definition.html#aeaaa72766365d27d8c4ed7510e393751">CommandText</a><code> [get]</code></td></tr>
+<tr class="memdesc:aeaaa72766365d27d8c4ed7510e393751"><td class="mdescLeft">&#160;</td><td class="mdescRight">The command (sql or a stored-procedure name) to execute  <a href="#aeaaa72766365d27d8c4ed7510e393751">Подробнее...</a><br /></td></tr>
+<tr class="separator:aeaaa72766365d27d8c4ed7510e393751"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ff643903080f804f4bb1ca7e5dea82e"><td class="memItemLeft" align="right" valign="top">object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_security_1_1_dapper_1_1_command_definition.html#a5ff643903080f804f4bb1ca7e5dea82e">Parameters</a><code> [get]</code></td></tr>
+<tr class="memdesc:a5ff643903080f804f4bb1ca7e5dea82e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The parameters associated with the command  <a href="#a5ff643903080f804f4bb1ca7e5dea82e">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5ff643903080f804f4bb1ca7e5dea82e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3e6b5dae82d98bf80da191000e2c15b"><td class="memItemLeft" align="right" valign="top">IDbTransaction&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_security_1_1_dapper_1_1_command_definition.html#aa3e6b5dae82d98bf80da191000e2c15b">Transaction</a><code> [get]</code></td></tr>
+<tr class="memdesc:aa3e6b5dae82d98bf80da191000e2c15b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The active transaction for the command  <a href="#aa3e6b5dae82d98bf80da191000e2c15b">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa3e6b5dae82d98bf80da191000e2c15b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af04c67bfa00760aa2a52e31df986f79a"><td class="memItemLeft" align="right" valign="top">int?&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_security_1_1_dapper_1_1_command_definition.html#af04c67bfa00760aa2a52e31df986f79a">CommandTimeout</a><code> [get]</code></td></tr>
+<tr class="memdesc:af04c67bfa00760aa2a52e31df986f79a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The effective timeout for the command  <a href="#af04c67bfa00760aa2a52e31df986f79a">Подробнее...</a><br /></td></tr>
+<tr class="separator:af04c67bfa00760aa2a52e31df986f79a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f63a3a98940a63e349c3ba01ce2205c"><td class="memItemLeft" align="right" valign="top">CommandType?&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_security_1_1_dapper_1_1_command_definition.html#a7f63a3a98940a63e349c3ba01ce2205c">CommandType</a><code> [get]</code></td></tr>
+<tr class="memdesc:a7f63a3a98940a63e349c3ba01ce2205c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of command that the command-text represents  <a href="#a7f63a3a98940a63e349c3ba01ce2205c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a7f63a3a98940a63e349c3ba01ce2205c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a775a270c1a05c9de4c87c448ffdaaa6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_security_1_1_dapper.html#a9de7ae72d6da68cdd287c7d90c632068">CommandFlags</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_security_1_1_dapper_1_1_command_definition.html#a775a270c1a05c9de4c87c448ffdaaa6c">Flags</a><code> [get]</code></td></tr>
+<tr class="memdesc:a775a270c1a05c9de4c87c448ffdaaa6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Additional state flags against this command  <a href="#a775a270c1a05c9de4c87c448ffdaaa6c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a775a270c1a05c9de4c87c448ffdaaa6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5550c728f58a89e1f6278a70a098d129"><td class="memItemLeft" align="right" valign="top">CancellationToken&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_security_1_1_dapper_1_1_command_definition.html#a5550c728f58a89e1f6278a70a098d129">CancellationToken</a><code> [get]</code></td></tr>
+<tr class="memdesc:a5550c728f58a89e1f6278a70a098d129"><td class="mdescLeft">&#160;</td><td class="mdescRight">For asynchronous operations, the cancellation-token  <a href="#a5550c728f58a89e1f6278a70a098d129">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5550c728f58a89e1f6278a70a098d129"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Represents the key aspects of a sql operation </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a4bc5c6d47ca0c511e02a25b4f9123206"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bc5c6d47ca0c511e02a25b4f9123206">&#9670;&nbsp;</a></span>CommandDefinition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Security.Dapper.CommandDefinition.CommandDefinition </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>commandText</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>parameters</em> = <code>null</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IDbTransaction&#160;</td>
+          <td class="paramname"><em>transaction</em> = <code>null</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int?&#160;</td>
+          <td class="paramname"><em>commandTimeout</em> = <code>null</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_security_1_1_dapper_1_1_command_definition.html#a7f63a3a98940a63e349c3ba01ce2205c">CommandType</a>?&#160;</td>
+          <td class="paramname"><em>commandType</em> = <code>null</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_security_1_1_dapper.html#a9de7ae72d6da68cdd287c7d90c632068">CommandFlags</a>&#160;</td>
+          <td class="paramname"><em>flags</em> = <code><a class="el" href="namespace_security_1_1_dapper.html#a9de7ae72d6da68cdd287c7d90c632068a97010abc74ca9d1176408d3ef61b8c24">CommandFlags.Buffered</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_security_1_1_dapper_1_1_command_definition.html#a5550c728f58a89e1f6278a70a098d129">CancellationToken</a>&#160;</td>
+          <td class="paramname"><em>cancellationToken</em> = <code>default(<a class="el" href="struct_security_1_1_dapper_1_1_command_definition.html#a5550c728f58a89e1f6278a70a098d129">CancellationToken</a>)</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize the command definition </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">commandText</td><td>The text for this command.</td></tr>
+    <tr><td class="paramname">parameters</td><td>The parameters for this command.</td></tr>
+    <tr><td class="paramname">transaction</td><td>The transaction for this command to participate in.</td></tr>
+    <tr><td class="paramname">commandTimeout</td><td>The timeout (in seconds) for this command.</td></tr>
+    <tr><td class="paramname">commandType</td><td>The <a class="el" href="struct_security_1_1_dapper_1_1_command_definition.html#a7f63a3a98940a63e349c3ba01ce2205c" title="The type of command that the command-text represents">CommandType</a> for this command.</td></tr>
+    <tr><td class="paramname">flags</td><td>The behavior flags for this command.</td></tr>
+    <tr><td class="paramname">cancellationToken</td><td>The cancellation token for this command.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a4fd2f03b48390f4c924bc31b2b2ec7ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fd2f03b48390f4c924bc31b2b2ec7ee">&#9670;&nbsp;</a></span>AddToCache</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">internal bool Security.Dapper.CommandDefinition.AddToCache =&gt; (<a class="el" href="struct_security_1_1_dapper_1_1_command_definition.html#a775a270c1a05c9de4c87c448ffdaaa6c">Flags</a> &amp; <a class="el" href="namespace_security_1_1_dapper.html#a9de7ae72d6da68cdd287c7d90c632068a9c2a36ed94b288fe8f5ce5b6b16d3fdd">CommandFlags.NoCache</a>) == 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Should the plan for this query be cached? </p>
+
+</div>
+</div>
+<a id="a81adb24c909149308dd6717dd26ac671"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81adb24c909149308dd6717dd26ac671">&#9670;&nbsp;</a></span>Buffered</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Security.Dapper.CommandDefinition.Buffered =&gt; (<a class="el" href="struct_security_1_1_dapper_1_1_command_definition.html#a775a270c1a05c9de4c87c448ffdaaa6c">Flags</a> &amp; CommandFlags.Buffered) != 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Should data be buffered before returning? </p>
+
+</div>
+</div>
+<a id="a865cac40222a2a30a4f869295bf7152f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a865cac40222a2a30a4f869295bf7152f">&#9670;&nbsp;</a></span>Pipelined</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Security.Dapper.CommandDefinition.Pipelined =&gt; (<a class="el" href="struct_security_1_1_dapper_1_1_command_definition.html#a775a270c1a05c9de4c87c448ffdaaa6c">Flags</a> &amp; CommandFlags.Pipelined) != 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Can async queries be pipelined? </p>
+
+</div>
+</div>
+<h2 class="groupheader">Полный список свойств</h2>
+<a id="a5550c728f58a89e1f6278a70a098d129"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5550c728f58a89e1f6278a70a098d129">&#9670;&nbsp;</a></span>CancellationToken</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CancellationToken Security.Dapper.CommandDefinition.CancellationToken</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>For asynchronous operations, the cancellation-token </p>
+
+</div>
+</div>
+<a id="aeaaa72766365d27d8c4ed7510e393751"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeaaa72766365d27d8c4ed7510e393751">&#9670;&nbsp;</a></span>CommandText</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Security.Dapper.CommandDefinition.CommandText</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The command (sql or a stored-procedure name) to execute </p>
+
+</div>
+</div>
+<a id="af04c67bfa00760aa2a52e31df986f79a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af04c67bfa00760aa2a52e31df986f79a">&#9670;&nbsp;</a></span>CommandTimeout</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int? Security.Dapper.CommandDefinition.CommandTimeout</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The effective timeout for the command </p>
+
+</div>
+</div>
+<a id="a7f63a3a98940a63e349c3ba01ce2205c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f63a3a98940a63e349c3ba01ce2205c">&#9670;&nbsp;</a></span>CommandType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CommandType? Security.Dapper.CommandDefinition.CommandType</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The type of command that the command-text represents </p>
+
+</div>
+</div>
+<a id="a775a270c1a05c9de4c87c448ffdaaa6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a775a270c1a05c9de4c87c448ffdaaa6c">&#9670;&nbsp;</a></span>Flags</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_security_1_1_dapper.html#a9de7ae72d6da68cdd287c7d90c632068">CommandFlags</a> Security.Dapper.CommandDefinition.Flags</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Additional state flags against this command </p>
+
+</div>
+</div>
+<a id="a5ff643903080f804f4bb1ca7e5dea82e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ff643903080f804f4bb1ca7e5dea82e">&#9670;&nbsp;</a></span>Parameters</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">object Security.Dapper.CommandDefinition.Parameters</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The parameters associated with the command </p>
+
+</div>
+</div>
+<a id="aa3e6b5dae82d98bf80da191000e2c15b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3e6b5dae82d98bf80da191000e2c15b">&#9670;&nbsp;</a></span>Transaction</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IDbTransaction Security.Dapper.CommandDefinition.Transaction</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The active transaction for the command </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>C:/Users/Domer/source/repos/Security.V2.1/backend/Security/Dapper/CommandDefinition.cs</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>

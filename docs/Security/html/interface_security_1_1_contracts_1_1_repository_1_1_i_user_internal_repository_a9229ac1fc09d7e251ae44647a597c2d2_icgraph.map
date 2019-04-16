@@ -1,0 +1,4 @@
+<map id="Security.Contracts.Repository.IUserInternalRepository.CheckAccessAsync" name="Security.Contracts.Repository.IUserInternalRepository.CheckAccessAsync">
+<area shape="rect" id="node1" title="Проверка доступа по логину" alt="" coords="248,5,527,47"/>
+<area shape="rect" id="node2" href="$class_security_1_1_core_1_1_security.html#ac4c0d2b6adf84d99958ba7237ab27019" title="Асинхронно. Проверка доступа пользователя" alt="" coords="5,5,200,47"/>
+</map>

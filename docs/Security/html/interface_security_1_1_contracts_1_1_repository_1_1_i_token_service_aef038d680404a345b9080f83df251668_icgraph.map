@@ -1,0 +1,4 @@
+<map id="Security.Contracts.Repository.ITokenService.GetUser" name="Security.Contracts.Repository.ITokenService.GetUser">
+<area shape="rect" id="node1" title="Возвращает пользователя по токену" alt="" coords="232,5,432,47"/>
+<area shape="rect" id="node2" href="$class_security_1_1_core_1_1_security.html#a1a902b4c5a70f912e160647805694869" title="Возвращает пользователя по токену" alt="" coords="5,5,184,47"/>
+</map>

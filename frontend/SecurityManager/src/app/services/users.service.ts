@@ -21,6 +21,9 @@ export class UsersService implements UserRepository {
   SetStatus(loginOrEmail: string, status: boolean): Promise<void> {
     return this.httpClient.post("api/user/setstatus", {loginOrEmail, status}).pipe(catchError(this.common.handleError("SetStatus", null))).toPromise();
   }
+  setPassword(loginOrEmail: string, password: string): Promise<void>{
+    return this.httpClient.post("api/common/setpassword", null, {params: {loginOrEmail, password}}).pipe(catchError(this.common.handleError("setPassword", null))).toPromise();
+  }
   createEmpty(prefix: string = null): Observable<User> {
     return this.httpClient.get<User>("api/user", {params: {prefixForRequired: prefix || 'new_user'}}).pipe(catchError(this.common.handleError("createEmpty", null)));
   }

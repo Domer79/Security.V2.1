@@ -1,0 +1,1513 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Applications Security: Класс Security.Dapper.SqlMapper.GridReader</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Applications Security
+   &#160;<span id="projectnumber">2.1</span>
+   </div>
+   <div id="projectbrief">Apps Security</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_security.html">Security</a></li><li class="navelem"><a class="el" href="namespace_security_1_1_dapper.html">Dapper</a></li><li class="navelem"><b>SqlMapper</b></li><li class="navelem"><a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html">GridReader</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#properties">Свойства</a> &#124;
+<a href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс Security.Dapper.SqlMapper.GridReader</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>The grid reader provides interfaces for reading multiple result sets from a <a class="el" href="namespace_security_1_1_dapper.html">Dapper</a> query  
+ <a href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#details">Подробнее...</a></p>
+<div class="dynheader">
+Граф наследования:Security.Dapper.SqlMapper.GridReader:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader__inherit__graph.png" border="0" usemap="#_security_8_dapper_8_sql_mapper_8_grid_reader_inherit__map" alt="Inheritance graph"/></div>
+<map name="_security_8_dapper_8_sql_mapper_8_grid_reader_inherit__map" id="_security_8_dapper_8_sql_mapper_8_grid_reader_inherit__map">
+<area shape="rect"  title="The grid reader provides interfaces for reading multiple result sets from a Dapper query" alt="" coords="5,80,191,121"/>
+<area shape="rect"  title=" " alt="" coords="53,5,143,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса Security.Dapper.SqlMapper.GridReader:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader__coll__graph.png" border="0" usemap="#_security_8_dapper_8_sql_mapper_8_grid_reader_coll__map" alt="Collaboration graph"/></div>
+<map name="_security_8_dapper_8_sql_mapper_8_grid_reader_coll__map" id="_security_8_dapper_8_sql_mapper_8_grid_reader_coll__map">
+<area shape="rect"  title="The grid reader provides interfaces for reading multiple result sets from a Dapper query" alt="" coords="5,80,191,121"/>
+<area shape="rect"  title=" " alt="" coords="53,5,143,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a38ac6050d1035f194136bf0c70e4a206"><td class="memItemLeft" align="right" valign="top">Task&lt; IEnumerable&lt; dynamic &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#a38ac6050d1035f194136bf0c70e4a206">ReadAsync</a> (bool buffered=true)</td></tr>
+<tr class="memdesc:a38ac6050d1035f194136bf0c70e4a206"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the next grid of results, returned as a dynamic object  <a href="#a38ac6050d1035f194136bf0c70e4a206">Подробнее...</a><br /></td></tr>
+<tr class="separator:a38ac6050d1035f194136bf0c70e4a206"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43710a2c231289b96859fed20b3747e1"><td class="memItemLeft" align="right" valign="top">Task&lt; dynamic &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#a43710a2c231289b96859fed20b3747e1">ReadFirstAsync</a> ()</td></tr>
+<tr class="memdesc:a43710a2c231289b96859fed20b3747e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read an individual row of the next grid of results, returned as a dynamic object  <a href="#a43710a2c231289b96859fed20b3747e1">Подробнее...</a><br /></td></tr>
+<tr class="separator:a43710a2c231289b96859fed20b3747e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a733cb0f102e40303869ffbc2a37dca02"><td class="memItemLeft" align="right" valign="top">Task&lt; dynamic &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#a733cb0f102e40303869ffbc2a37dca02">ReadFirstOrDefaultAsync</a> ()</td></tr>
+<tr class="memdesc:a733cb0f102e40303869ffbc2a37dca02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read an individual row of the next grid of results, returned as a dynamic object  <a href="#a733cb0f102e40303869ffbc2a37dca02">Подробнее...</a><br /></td></tr>
+<tr class="separator:a733cb0f102e40303869ffbc2a37dca02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a769a4601bc1d6305ca52797e5c6537e5"><td class="memItemLeft" align="right" valign="top">Task&lt; dynamic &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#a769a4601bc1d6305ca52797e5c6537e5">ReadSingleAsync</a> ()</td></tr>
+<tr class="memdesc:a769a4601bc1d6305ca52797e5c6537e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read an individual row of the next grid of results, returned as a dynamic object  <a href="#a769a4601bc1d6305ca52797e5c6537e5">Подробнее...</a><br /></td></tr>
+<tr class="separator:a769a4601bc1d6305ca52797e5c6537e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78577aeecfe63a5051527b0390388ce6"><td class="memItemLeft" align="right" valign="top">Task&lt; dynamic &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#a78577aeecfe63a5051527b0390388ce6">ReadSingleOrDefaultAsync</a> ()</td></tr>
+<tr class="memdesc:a78577aeecfe63a5051527b0390388ce6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read an individual row of the next grid of results, returned as a dynamic object  <a href="#a78577aeecfe63a5051527b0390388ce6">Подробнее...</a><br /></td></tr>
+<tr class="separator:a78577aeecfe63a5051527b0390388ce6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd67875c26a8ab7b48ca1870c39b39d2"><td class="memItemLeft" align="right" valign="top">Task&lt; IEnumerable&lt; object &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#acd67875c26a8ab7b48ca1870c39b39d2">ReadAsync</a> (Type type, bool buffered=true)</td></tr>
+<tr class="memdesc:acd67875c26a8ab7b48ca1870c39b39d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the next grid of results  <a href="#acd67875c26a8ab7b48ca1870c39b39d2">Подробнее...</a><br /></td></tr>
+<tr class="separator:acd67875c26a8ab7b48ca1870c39b39d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44a3d2fcba8d1bbd4b92869ebd5c3938"><td class="memItemLeft" align="right" valign="top">Task&lt; object &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#a44a3d2fcba8d1bbd4b92869ebd5c3938">ReadFirstAsync</a> (Type type)</td></tr>
+<tr class="memdesc:a44a3d2fcba8d1bbd4b92869ebd5c3938"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read an individual row of the next grid of results  <a href="#a44a3d2fcba8d1bbd4b92869ebd5c3938">Подробнее...</a><br /></td></tr>
+<tr class="separator:a44a3d2fcba8d1bbd4b92869ebd5c3938"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a382d66ec821d412b925b70c249fbba18"><td class="memItemLeft" align="right" valign="top">Task&lt; object &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#a382d66ec821d412b925b70c249fbba18">ReadFirstOrDefaultAsync</a> (Type type)</td></tr>
+<tr class="memdesc:a382d66ec821d412b925b70c249fbba18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read an individual row of the next grid of results.  <a href="#a382d66ec821d412b925b70c249fbba18">Подробнее...</a><br /></td></tr>
+<tr class="separator:a382d66ec821d412b925b70c249fbba18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c0baa53d02ccd384d6aec8dd338634d"><td class="memItemLeft" align="right" valign="top">Task&lt; object &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#a1c0baa53d02ccd384d6aec8dd338634d">ReadSingleAsync</a> (Type type)</td></tr>
+<tr class="memdesc:a1c0baa53d02ccd384d6aec8dd338634d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read an individual row of the next grid of results.  <a href="#a1c0baa53d02ccd384d6aec8dd338634d">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1c0baa53d02ccd384d6aec8dd338634d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3515955b5685ebdee81706107e81039"><td class="memItemLeft" align="right" valign="top">Task&lt; object &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#aa3515955b5685ebdee81706107e81039">ReadSingleOrDefaultAsync</a> (Type type)</td></tr>
+<tr class="memdesc:aa3515955b5685ebdee81706107e81039"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read an individual row of the next grid of results.  <a href="#aa3515955b5685ebdee81706107e81039">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa3515955b5685ebdee81706107e81039"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b01d5aea6f5b803af86f24100d65bf3"><td class="memItemLeft" align="right" valign="top">Task&lt; IEnumerable&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#a9b01d5aea6f5b803af86f24100d65bf3">ReadAsync&lt; T &gt;</a> (bool buffered=true)</td></tr>
+<tr class="memdesc:a9b01d5aea6f5b803af86f24100d65bf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the next grid of results.  <a href="#a9b01d5aea6f5b803af86f24100d65bf3">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9b01d5aea6f5b803af86f24100d65bf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f1784f174f87789c74abe899fc9c132"><td class="memItemLeft" align="right" valign="top">Task&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#a2f1784f174f87789c74abe899fc9c132">ReadFirstAsync&lt; T &gt;</a> ()</td></tr>
+<tr class="memdesc:a2f1784f174f87789c74abe899fc9c132"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read an individual row of the next grid of results.  <a href="#a2f1784f174f87789c74abe899fc9c132">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2f1784f174f87789c74abe899fc9c132"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68d12e0c166c2a3f4f69a66bbd5a0a35"><td class="memItemLeft" align="right" valign="top">Task&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#a68d12e0c166c2a3f4f69a66bbd5a0a35">ReadFirstOrDefaultAsync&lt; T &gt;</a> ()</td></tr>
+<tr class="memdesc:a68d12e0c166c2a3f4f69a66bbd5a0a35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read an individual row of the next grid of results.  <a href="#a68d12e0c166c2a3f4f69a66bbd5a0a35">Подробнее...</a><br /></td></tr>
+<tr class="separator:a68d12e0c166c2a3f4f69a66bbd5a0a35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6845e2e2a0ad3a7b2fa9148c249aa88"><td class="memItemLeft" align="right" valign="top">Task&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#ae6845e2e2a0ad3a7b2fa9148c249aa88">ReadSingleAsync&lt; T &gt;</a> ()</td></tr>
+<tr class="memdesc:ae6845e2e2a0ad3a7b2fa9148c249aa88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read an individual row of the next grid of results.  <a href="#ae6845e2e2a0ad3a7b2fa9148c249aa88">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae6845e2e2a0ad3a7b2fa9148c249aa88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1b6a5dd45d2393f0d92d79bfc22166b"><td class="memItemLeft" align="right" valign="top">Task&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#ad1b6a5dd45d2393f0d92d79bfc22166b">ReadSingleOrDefaultAsync&lt; T &gt;</a> ()</td></tr>
+<tr class="memdesc:ad1b6a5dd45d2393f0d92d79bfc22166b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read an individual row of the next grid of results.  <a href="#ad1b6a5dd45d2393f0d92d79bfc22166b">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad1b6a5dd45d2393f0d92d79bfc22166b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bdddc29fa3a013b8d8916f6c486ceb2"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; dynamic &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#a9bdddc29fa3a013b8d8916f6c486ceb2">Read</a> (bool buffered=true)</td></tr>
+<tr class="memdesc:a9bdddc29fa3a013b8d8916f6c486ceb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the next grid of results, returned as a dynamic object.  <a href="#a9bdddc29fa3a013b8d8916f6c486ceb2">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9bdddc29fa3a013b8d8916f6c486ceb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58e8b0dbab054cc734c0f4f69f3b31be"><td class="memItemLeft" align="right" valign="top">dynamic&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#a58e8b0dbab054cc734c0f4f69f3b31be">ReadFirst</a> ()</td></tr>
+<tr class="memdesc:a58e8b0dbab054cc734c0f4f69f3b31be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read an individual row of the next grid of results, returned as a dynamic object.  <a href="#a58e8b0dbab054cc734c0f4f69f3b31be">Подробнее...</a><br /></td></tr>
+<tr class="separator:a58e8b0dbab054cc734c0f4f69f3b31be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa49a0db1020b7bad805989f2caea87f4"><td class="memItemLeft" align="right" valign="top">dynamic&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#aa49a0db1020b7bad805989f2caea87f4">ReadFirstOrDefault</a> ()</td></tr>
+<tr class="memdesc:aa49a0db1020b7bad805989f2caea87f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read an individual row of the next grid of results, returned as a dynamic object.  <a href="#aa49a0db1020b7bad805989f2caea87f4">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa49a0db1020b7bad805989f2caea87f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5525949c2c8fe5307d0285b0b032974"><td class="memItemLeft" align="right" valign="top">dynamic&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#af5525949c2c8fe5307d0285b0b032974">ReadSingle</a> ()</td></tr>
+<tr class="memdesc:af5525949c2c8fe5307d0285b0b032974"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read an individual row of the next grid of results, returned as a dynamic object.  <a href="#af5525949c2c8fe5307d0285b0b032974">Подробнее...</a><br /></td></tr>
+<tr class="separator:af5525949c2c8fe5307d0285b0b032974"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94cae5b5ae2181c3a901fd3b2c14eb56"><td class="memItemLeft" align="right" valign="top">dynamic&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#a94cae5b5ae2181c3a901fd3b2c14eb56">ReadSingleOrDefault</a> ()</td></tr>
+<tr class="memdesc:a94cae5b5ae2181c3a901fd3b2c14eb56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read an individual row of the next grid of results, returned as a dynamic object.  <a href="#a94cae5b5ae2181c3a901fd3b2c14eb56">Подробнее...</a><br /></td></tr>
+<tr class="separator:a94cae5b5ae2181c3a901fd3b2c14eb56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2230df0d08b9197a0cb7c8588a7f0eb0"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#a2230df0d08b9197a0cb7c8588a7f0eb0">Read&lt; T &gt;</a> (bool buffered=true)</td></tr>
+<tr class="memdesc:a2230df0d08b9197a0cb7c8588a7f0eb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the next grid of results.  <a href="#a2230df0d08b9197a0cb7c8588a7f0eb0">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2230df0d08b9197a0cb7c8588a7f0eb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dd6e343085e08aeccd29d32cd4b52c1"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#a2dd6e343085e08aeccd29d32cd4b52c1">ReadFirst&lt; T &gt;</a> ()</td></tr>
+<tr class="memdesc:a2dd6e343085e08aeccd29d32cd4b52c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read an individual row of the next grid of results.  <a href="#a2dd6e343085e08aeccd29d32cd4b52c1">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2dd6e343085e08aeccd29d32cd4b52c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03199f1fd303049fcc874726c01f5f89"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#a03199f1fd303049fcc874726c01f5f89">ReadFirstOrDefault&lt; T &gt;</a> ()</td></tr>
+<tr class="memdesc:a03199f1fd303049fcc874726c01f5f89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read an individual row of the next grid of results.  <a href="#a03199f1fd303049fcc874726c01f5f89">Подробнее...</a><br /></td></tr>
+<tr class="separator:a03199f1fd303049fcc874726c01f5f89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93e34d2205328a8d20c903aa7b427658"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#a93e34d2205328a8d20c903aa7b427658">ReadSingle&lt; T &gt;</a> ()</td></tr>
+<tr class="memdesc:a93e34d2205328a8d20c903aa7b427658"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read an individual row of the next grid of results.  <a href="#a93e34d2205328a8d20c903aa7b427658">Подробнее...</a><br /></td></tr>
+<tr class="separator:a93e34d2205328a8d20c903aa7b427658"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b86d52a75f72151e89e3c2cef46763c"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#a1b86d52a75f72151e89e3c2cef46763c">ReadSingleOrDefault&lt; T &gt;</a> ()</td></tr>
+<tr class="memdesc:a1b86d52a75f72151e89e3c2cef46763c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read an individual row of the next grid of results.  <a href="#a1b86d52a75f72151e89e3c2cef46763c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1b86d52a75f72151e89e3c2cef46763c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac62155ede868e36f57431b27ca4ac3ca"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; object &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#ac62155ede868e36f57431b27ca4ac3ca">Read</a> (Type type, bool buffered=true)</td></tr>
+<tr class="memdesc:ac62155ede868e36f57431b27ca4ac3ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the next grid of results.  <a href="#ac62155ede868e36f57431b27ca4ac3ca">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac62155ede868e36f57431b27ca4ac3ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0d26aca542e605214cc61ff4aa1a270"><td class="memItemLeft" align="right" valign="top">object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#ad0d26aca542e605214cc61ff4aa1a270">ReadFirst</a> (Type type)</td></tr>
+<tr class="memdesc:ad0d26aca542e605214cc61ff4aa1a270"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read an individual row of the next grid of results.  <a href="#ad0d26aca542e605214cc61ff4aa1a270">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad0d26aca542e605214cc61ff4aa1a270"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada6b75bc6b32a0339c5b50a80a10c837"><td class="memItemLeft" align="right" valign="top">object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#ada6b75bc6b32a0339c5b50a80a10c837">ReadFirstOrDefault</a> (Type type)</td></tr>
+<tr class="memdesc:ada6b75bc6b32a0339c5b50a80a10c837"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read an individual row of the next grid of results.  <a href="#ada6b75bc6b32a0339c5b50a80a10c837">Подробнее...</a><br /></td></tr>
+<tr class="separator:ada6b75bc6b32a0339c5b50a80a10c837"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae017d5ba7a87dbe40316d09c1b40512c"><td class="memItemLeft" align="right" valign="top">object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#ae017d5ba7a87dbe40316d09c1b40512c">ReadSingle</a> (Type type)</td></tr>
+<tr class="memdesc:ae017d5ba7a87dbe40316d09c1b40512c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read an individual row of the next grid of results.  <a href="#ae017d5ba7a87dbe40316d09c1b40512c">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae017d5ba7a87dbe40316d09c1b40512c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97b7753e866d9aa212081754edc4c87c"><td class="memItemLeft" align="right" valign="top">object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#a97b7753e866d9aa212081754edc4c87c">ReadSingleOrDefault</a> (Type type)</td></tr>
+<tr class="memdesc:a97b7753e866d9aa212081754edc4c87c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read an individual row of the next grid of results.  <a href="#a97b7753e866d9aa212081754edc4c87c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a97b7753e866d9aa212081754edc4c87c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a051ad3d8c7b6b38ad723c6c98810367d"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; TReturn &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#a051ad3d8c7b6b38ad723c6c98810367d">Read&lt; TFirst, TSecond, TReturn &gt;</a> (Func&lt; TFirst, TSecond, TReturn &gt; func, string splitOn=&quot;id&quot;, bool buffered=true)</td></tr>
+<tr class="memdesc:a051ad3d8c7b6b38ad723c6c98810367d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read multiple objects from a single record set on the grid.  <a href="#a051ad3d8c7b6b38ad723c6c98810367d">Подробнее...</a><br /></td></tr>
+<tr class="separator:a051ad3d8c7b6b38ad723c6c98810367d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a443c98ffa79fef403f02ad894d1061af"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; TReturn &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#a443c98ffa79fef403f02ad894d1061af">Read&lt; TFirst, TSecond, TThird, TReturn &gt;</a> (Func&lt; TFirst, TSecond, TThird, TReturn &gt; func, string splitOn=&quot;id&quot;, bool buffered=true)</td></tr>
+<tr class="memdesc:a443c98ffa79fef403f02ad894d1061af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read multiple objects from a single record set on the grid.  <a href="#a443c98ffa79fef403f02ad894d1061af">Подробнее...</a><br /></td></tr>
+<tr class="separator:a443c98ffa79fef403f02ad894d1061af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fa3a72bcf14f883855daf6c0bb3e5e3"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; TReturn &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#a8fa3a72bcf14f883855daf6c0bb3e5e3">Read&lt; TFirst, TSecond, TThird, TFourth, TReturn &gt;</a> (Func&lt; TFirst, TSecond, TThird, TFourth, TReturn &gt; func, string splitOn=&quot;id&quot;, bool buffered=true)</td></tr>
+<tr class="memdesc:a8fa3a72bcf14f883855daf6c0bb3e5e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read multiple objects from a single record set on the grid  <a href="#a8fa3a72bcf14f883855daf6c0bb3e5e3">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8fa3a72bcf14f883855daf6c0bb3e5e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3153f6042c1d009e87ecf4fcf8685fa8"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; TReturn &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#a3153f6042c1d009e87ecf4fcf8685fa8">Read&lt; TFirst, TSecond, TThird, TFourth, TFifth, TReturn &gt;</a> (Func&lt; TFirst, TSecond, TThird, TFourth, TFifth, TReturn &gt; func, string splitOn=&quot;id&quot;, bool buffered=true)</td></tr>
+<tr class="memdesc:a3153f6042c1d009e87ecf4fcf8685fa8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read multiple objects from a single record set on the grid  <a href="#a3153f6042c1d009e87ecf4fcf8685fa8">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3153f6042c1d009e87ecf4fcf8685fa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d14f5ec8a3a8442ca8b3661f938ef8f"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; TReturn &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#a1d14f5ec8a3a8442ca8b3661f938ef8f">Read&lt; TFirst, TSecond, TThird, TFourth, TFifth, TSixth, TReturn &gt;</a> (Func&lt; TFirst, TSecond, TThird, TFourth, TFifth, TSixth, TReturn &gt; func, string splitOn=&quot;id&quot;, bool buffered=true)</td></tr>
+<tr class="memdesc:a1d14f5ec8a3a8442ca8b3661f938ef8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read multiple objects from a single record set on the grid  <a href="#a1d14f5ec8a3a8442ca8b3661f938ef8f">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1d14f5ec8a3a8442ca8b3661f938ef8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac73fb3ae480073cc1b92b07da673a4e4"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; TReturn &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#ac73fb3ae480073cc1b92b07da673a4e4">Read&lt; TFirst, TSecond, TThird, TFourth, TFifth, TSixth, TSeventh, TReturn &gt;</a> (Func&lt; TFirst, TSecond, TThird, TFourth, TFifth, TSixth, TSeventh, TReturn &gt; func, string splitOn=&quot;id&quot;, bool buffered=true)</td></tr>
+<tr class="memdesc:ac73fb3ae480073cc1b92b07da673a4e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read multiple objects from a single record set on the grid  <a href="#ac73fb3ae480073cc1b92b07da673a4e4">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac73fb3ae480073cc1b92b07da673a4e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb0ed1e19ea0a9120c5909929be9fb8a"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; TReturn &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#afb0ed1e19ea0a9120c5909929be9fb8a">Read&lt; TReturn &gt;</a> (Type[] types, Func&lt; object[], TReturn &gt; map, string splitOn=&quot;id&quot;, bool buffered=true)</td></tr>
+<tr class="memdesc:afb0ed1e19ea0a9120c5909929be9fb8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read multiple objects from a single record set on the grid  <a href="#afb0ed1e19ea0a9120c5909929be9fb8a">Подробнее...</a><br /></td></tr>
+<tr class="separator:afb0ed1e19ea0a9120c5909929be9fb8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a7bc5bbdee69738e47d0290b952a055"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#a1a7bc5bbdee69738e47d0290b952a055">Dispose</a> ()</td></tr>
+<tr class="memdesc:a1a7bc5bbdee69738e47d0290b952a055"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispose the grid, closing and disposing both the underlying reader and command.  <a href="#a1a7bc5bbdee69738e47d0290b952a055">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1a7bc5bbdee69738e47d0290b952a055"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Свойства</h2></td></tr>
+<tr class="memitem:a8bf96859d1134755607d0b3c0494fea0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#a8bf96859d1134755607d0b3c0494fea0">IsConsumed</a><code> [get]</code></td></tr>
+<tr class="memdesc:a8bf96859d1134755607d0b3c0494fea0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Has the underlying reader been consumed?  <a href="#a8bf96859d1134755607d0b3c0494fea0">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8bf96859d1134755607d0b3c0494fea0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a680c1236df562e207b6e2877f6073986"><td class="memItemLeft" align="right" valign="top">IDbCommand&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#a680c1236df562e207b6e2877f6073986">Command</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a680c1236df562e207b6e2877f6073986"><td class="mdescLeft">&#160;</td><td class="mdescRight">The command associated with the reader  <a href="#a680c1236df562e207b6e2877f6073986">Подробнее...</a><br /></td></tr>
+<tr class="separator:a680c1236df562e207b6e2877f6073986"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>The grid reader provides interfaces for reading multiple result sets from a <a class="el" href="namespace_security_1_1_dapper.html">Dapper</a> query </p>
+</div><h2 class="groupheader">Методы</h2>
+<a id="a1a7bc5bbdee69738e47d0290b952a055"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a7bc5bbdee69738e47d0290b952a055">&#9670;&nbsp;</a></span>Dispose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Security.Dapper.SqlMapper.GridReader.Dispose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dispose the grid, closing and disposing both the underlying reader and command. </p>
+
+</div>
+</div>
+<a id="a9bdddc29fa3a013b8d8916f6c486ceb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bdddc29fa3a013b8d8916f6c486ceb2">&#9670;&nbsp;</a></span>Read() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt;dynamic&gt; Security.Dapper.SqlMapper.GridReader.Read </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>buffered</em> = <code>true</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read the next grid of results, returned as a dynamic object. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffered</td><td>Whether the results should be buffered in memory.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Note: each row can be accessed via "dynamic", or by casting to an IDictionary&lt;string,object&gt;</p>
+
+</div>
+</div>
+<a id="ac62155ede868e36f57431b27ca4ac3ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac62155ede868e36f57431b27ca4ac3ca">&#9670;&nbsp;</a></span>Read() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt;object&gt; Security.Dapper.SqlMapper.GridReader.Read </td>
+          <td>(</td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>buffered</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read the next grid of results. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>The type to read.</td></tr>
+    <tr><td class="paramname">buffered</td><td>Whether to buffer the results.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">ArgumentNullException</td><td><em>type</em>  is <code>null</code>.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2230df0d08b9197a0cb7c8588a7f0eb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2230df0d08b9197a0cb7c8588a7f0eb0">&#9670;&nbsp;</a></span>Read&lt; T &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt;T&gt; <a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#a9bdddc29fa3a013b8d8916f6c486ceb2">Security.Dapper.SqlMapper.GridReader.Read</a>&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>buffered</em> = <code>true</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read the next grid of results. </p>
+<dl class="tparams"><dt>Параметры шаблона</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type to read.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffered</td><td>Whether the results should be buffered in memory.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a051ad3d8c7b6b38ad723c6c98810367d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a051ad3d8c7b6b38ad723c6c98810367d">&#9670;&nbsp;</a></span>Read&lt; TFirst, TSecond, TReturn &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt;TReturn&gt; <a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#a9bdddc29fa3a013b8d8916f6c486ceb2">Security.Dapper.SqlMapper.GridReader.Read</a>&lt; TFirst, TSecond, TReturn &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Func&lt; TFirst, TSecond, TReturn &gt;&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>splitOn</em> = <code>&quot;id&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>buffered</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read multiple objects from a single record set on the grid. </p>
+<dl class="tparams"><dt>Параметры шаблона</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">TFirst</td><td>The first type in the record set.</td></tr>
+    <tr><td class="paramname">TSecond</td><td>The second type in the record set.</td></tr>
+    <tr><td class="paramname">TReturn</td><td>The type to return from the record set.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">func</td><td>The mapping function from the read types to the return type.</td></tr>
+    <tr><td class="paramname">splitOn</td><td>The field(s) we should split and read the second object from (defaults to "id")</td></tr>
+    <tr><td class="paramname">buffered</td><td>Whether to buffer results in memory.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3153f6042c1d009e87ecf4fcf8685fa8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3153f6042c1d009e87ecf4fcf8685fa8">&#9670;&nbsp;</a></span>Read&lt; TFirst, TSecond, TThird, TFourth, TFifth, TReturn &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt;TReturn&gt; <a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#a9bdddc29fa3a013b8d8916f6c486ceb2">Security.Dapper.SqlMapper.GridReader.Read</a>&lt; TFirst, TSecond, TThird, TFourth, TFifth, TReturn &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Func&lt; TFirst, TSecond, TThird, TFourth, TFifth, TReturn &gt;&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>splitOn</em> = <code>&quot;id&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>buffered</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read multiple objects from a single record set on the grid </p>
+<dl class="tparams"><dt>Параметры шаблона</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">TFirst</td><td>The first type in the record set.</td></tr>
+    <tr><td class="paramname">TSecond</td><td>The second type in the record set.</td></tr>
+    <tr><td class="paramname">TThird</td><td>The third type in the record set.</td></tr>
+    <tr><td class="paramname">TFourth</td><td>The fourth type in the record set.</td></tr>
+    <tr><td class="paramname">TFifth</td><td>The fifth type in the record set.</td></tr>
+    <tr><td class="paramname">TReturn</td><td>The type to return from the record set.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">func</td><td>The mapping function from the read types to the return type.</td></tr>
+    <tr><td class="paramname">splitOn</td><td>The field(s) we should split and read the second object from (defaults to "id")</td></tr>
+    <tr><td class="paramname">buffered</td><td>Whether to buffer results in memory.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1d14f5ec8a3a8442ca8b3661f938ef8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d14f5ec8a3a8442ca8b3661f938ef8f">&#9670;&nbsp;</a></span>Read&lt; TFirst, TSecond, TThird, TFourth, TFifth, TSixth, TReturn &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt;TReturn&gt; <a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#a9bdddc29fa3a013b8d8916f6c486ceb2">Security.Dapper.SqlMapper.GridReader.Read</a>&lt; TFirst, TSecond, TThird, TFourth, TFifth, TSixth, TReturn &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Func&lt; TFirst, TSecond, TThird, TFourth, TFifth, TSixth, TReturn &gt;&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>splitOn</em> = <code>&quot;id&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>buffered</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read multiple objects from a single record set on the grid </p>
+<dl class="tparams"><dt>Параметры шаблона</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">TFirst</td><td>The first type in the record set.</td></tr>
+    <tr><td class="paramname">TSecond</td><td>The second type in the record set.</td></tr>
+    <tr><td class="paramname">TThird</td><td>The third type in the record set.</td></tr>
+    <tr><td class="paramname">TFourth</td><td>The fourth type in the record set.</td></tr>
+    <tr><td class="paramname">TFifth</td><td>The fifth type in the record set.</td></tr>
+    <tr><td class="paramname">TSixth</td><td>The sixth type in the record set.</td></tr>
+    <tr><td class="paramname">TReturn</td><td>The type to return from the record set.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">func</td><td>The mapping function from the read types to the return type.</td></tr>
+    <tr><td class="paramname">splitOn</td><td>The field(s) we should split and read the second object from (defaults to "id")</td></tr>
+    <tr><td class="paramname">buffered</td><td>Whether to buffer results in memory.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac73fb3ae480073cc1b92b07da673a4e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac73fb3ae480073cc1b92b07da673a4e4">&#9670;&nbsp;</a></span>Read&lt; TFirst, TSecond, TThird, TFourth, TFifth, TSixth, TSeventh, TReturn &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt;TReturn&gt; <a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#a9bdddc29fa3a013b8d8916f6c486ceb2">Security.Dapper.SqlMapper.GridReader.Read</a>&lt; TFirst, TSecond, TThird, TFourth, TFifth, TSixth, TSeventh, TReturn &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Func&lt; TFirst, TSecond, TThird, TFourth, TFifth, TSixth, TSeventh, TReturn &gt;&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>splitOn</em> = <code>&quot;id&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>buffered</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read multiple objects from a single record set on the grid </p>
+<dl class="tparams"><dt>Параметры шаблона</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">TFirst</td><td>The first type in the record set.</td></tr>
+    <tr><td class="paramname">TSecond</td><td>The second type in the record set.</td></tr>
+    <tr><td class="paramname">TThird</td><td>The third type in the record set.</td></tr>
+    <tr><td class="paramname">TFourth</td><td>The fourth type in the record set.</td></tr>
+    <tr><td class="paramname">TFifth</td><td>The fifth type in the record set.</td></tr>
+    <tr><td class="paramname">TSixth</td><td>The sixth type in the record set.</td></tr>
+    <tr><td class="paramname">TSeventh</td><td>The seventh type in the record set.</td></tr>
+    <tr><td class="paramname">TReturn</td><td>The type to return from the record set.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">func</td><td>The mapping function from the read types to the return type.</td></tr>
+    <tr><td class="paramname">splitOn</td><td>The field(s) we should split and read the second object from (defaults to "id")</td></tr>
+    <tr><td class="paramname">buffered</td><td>Whether to buffer results in memory.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8fa3a72bcf14f883855daf6c0bb3e5e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fa3a72bcf14f883855daf6c0bb3e5e3">&#9670;&nbsp;</a></span>Read&lt; TFirst, TSecond, TThird, TFourth, TReturn &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt;TReturn&gt; <a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#a9bdddc29fa3a013b8d8916f6c486ceb2">Security.Dapper.SqlMapper.GridReader.Read</a>&lt; TFirst, TSecond, TThird, TFourth, TReturn &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Func&lt; TFirst, TSecond, TThird, TFourth, TReturn &gt;&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>splitOn</em> = <code>&quot;id&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>buffered</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read multiple objects from a single record set on the grid </p>
+<dl class="tparams"><dt>Параметры шаблона</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">TFirst</td><td>The first type in the record set.</td></tr>
+    <tr><td class="paramname">TSecond</td><td>The second type in the record set.</td></tr>
+    <tr><td class="paramname">TThird</td><td>The third type in the record set.</td></tr>
+    <tr><td class="paramname">TFourth</td><td>The fourth type in the record set.</td></tr>
+    <tr><td class="paramname">TReturn</td><td>The type to return from the record set.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">func</td><td>The mapping function from the read types to the return type.</td></tr>
+    <tr><td class="paramname">splitOn</td><td>The field(s) we should split and read the second object from (defaults to "id")</td></tr>
+    <tr><td class="paramname">buffered</td><td>Whether to buffer results in memory.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a443c98ffa79fef403f02ad894d1061af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a443c98ffa79fef403f02ad894d1061af">&#9670;&nbsp;</a></span>Read&lt; TFirst, TSecond, TThird, TReturn &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt;TReturn&gt; <a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#a9bdddc29fa3a013b8d8916f6c486ceb2">Security.Dapper.SqlMapper.GridReader.Read</a>&lt; TFirst, TSecond, TThird, TReturn &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Func&lt; TFirst, TSecond, TThird, TReturn &gt;&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>splitOn</em> = <code>&quot;id&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>buffered</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read multiple objects from a single record set on the grid. </p>
+<dl class="tparams"><dt>Параметры шаблона</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">TFirst</td><td>The first type in the record set.</td></tr>
+    <tr><td class="paramname">TSecond</td><td>The second type in the record set.</td></tr>
+    <tr><td class="paramname">TThird</td><td>The third type in the record set.</td></tr>
+    <tr><td class="paramname">TReturn</td><td>The type to return from the record set.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">func</td><td>The mapping function from the read types to the return type.</td></tr>
+    <tr><td class="paramname">splitOn</td><td>The field(s) we should split and read the second object from (defaults to "id")</td></tr>
+    <tr><td class="paramname">buffered</td><td>Whether to buffer results in memory.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afb0ed1e19ea0a9120c5909929be9fb8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb0ed1e19ea0a9120c5909929be9fb8a">&#9670;&nbsp;</a></span>Read&lt; TReturn &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt;TReturn&gt; <a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#a9bdddc29fa3a013b8d8916f6c486ceb2">Security.Dapper.SqlMapper.GridReader.Read</a>&lt; TReturn &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Type []&#160;</td>
+          <td class="paramname"><em>types</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Func&lt; object[], TReturn &gt;&#160;</td>
+          <td class="paramname"><em>map</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>splitOn</em> = <code>&quot;id&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>buffered</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read multiple objects from a single record set on the grid </p>
+<dl class="tparams"><dt>Параметры шаблона</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">TReturn</td><td>The type to return from the record set.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">types</td><td>The types to read from the result set.</td></tr>
+    <tr><td class="paramname">map</td><td>The mapping function from the read types to the return type.</td></tr>
+    <tr><td class="paramname">splitOn</td><td>The field(s) we should split and read the second object from (defaults to "id")</td></tr>
+    <tr><td class="paramname">buffered</td><td>Whether to buffer results in memory.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a38ac6050d1035f194136bf0c70e4a206"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38ac6050d1035f194136bf0c70e4a206">&#9670;&nbsp;</a></span>ReadAsync() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;IEnumerable&lt;dynamic&gt; &gt; Security.Dapper.SqlMapper.GridReader.ReadAsync </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>buffered</em> = <code>true</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read the next grid of results, returned as a dynamic object </p>
+<p>Note: each row can be accessed via "dynamic", or by casting to an IDictionary&lt;string,object&gt;</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffered</td><td>Whether to buffer the results.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acd67875c26a8ab7b48ca1870c39b39d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd67875c26a8ab7b48ca1870c39b39d2">&#9670;&nbsp;</a></span>ReadAsync() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;IEnumerable&lt;object&gt; &gt; Security.Dapper.SqlMapper.GridReader.ReadAsync </td>
+          <td>(</td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>buffered</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read the next grid of results </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>The type to read.</td></tr>
+    <tr><td class="paramname">buffered</td><td>Whether to buffer the results.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">ArgumentNullException</td><td><em>type</em>  is <code>null</code>.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9b01d5aea6f5b803af86f24100d65bf3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b01d5aea6f5b803af86f24100d65bf3">&#9670;&nbsp;</a></span>ReadAsync&lt; T &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;IEnumerable&lt;T&gt; &gt; <a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#a38ac6050d1035f194136bf0c70e4a206">Security.Dapper.SqlMapper.GridReader.ReadAsync</a>&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>buffered</em> = <code>true</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read the next grid of results. </p>
+<dl class="tparams"><dt>Параметры шаблона</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type to read.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffered</td><td>Whether the results should be buffered in memory.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a58e8b0dbab054cc734c0f4f69f3b31be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58e8b0dbab054cc734c0f4f69f3b31be">&#9670;&nbsp;</a></span>ReadFirst() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">dynamic Security.Dapper.SqlMapper.GridReader.ReadFirst </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read an individual row of the next grid of results, returned as a dynamic object. </p>
+<p>Note: the row can be accessed via "dynamic", or by casting to an IDictionary&lt;string,object&gt;</p>
+
+</div>
+</div>
+<a id="ad0d26aca542e605214cc61ff4aa1a270"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0d26aca542e605214cc61ff4aa1a270">&#9670;&nbsp;</a></span>ReadFirst() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">object Security.Dapper.SqlMapper.GridReader.ReadFirst </td>
+          <td>(</td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read an individual row of the next grid of results. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>The type to read.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">ArgumentNullException</td><td><em>type</em>  is <code>null</code>.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2dd6e343085e08aeccd29d32cd4b52c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dd6e343085e08aeccd29d32cd4b52c1">&#9670;&nbsp;</a></span>ReadFirst&lt; T &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#a58e8b0dbab054cc734c0f4f69f3b31be">Security.Dapper.SqlMapper.GridReader.ReadFirst</a>&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read an individual row of the next grid of results. </p>
+<dl class="tparams"><dt>Параметры шаблона</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type to read.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a43710a2c231289b96859fed20b3747e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43710a2c231289b96859fed20b3747e1">&#9670;&nbsp;</a></span>ReadFirstAsync() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;dynamic&gt; Security.Dapper.SqlMapper.GridReader.ReadFirstAsync </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read an individual row of the next grid of results, returned as a dynamic object </p>
+<p>Note: the row can be accessed via "dynamic", or by casting to an IDictionary&lt;string,object&gt;</p>
+
+</div>
+</div>
+<a id="a44a3d2fcba8d1bbd4b92869ebd5c3938"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44a3d2fcba8d1bbd4b92869ebd5c3938">&#9670;&nbsp;</a></span>ReadFirstAsync() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;object&gt; Security.Dapper.SqlMapper.GridReader.ReadFirstAsync </td>
+          <td>(</td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read an individual row of the next grid of results </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>The type to read.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">ArgumentNullException</td><td><em>type</em>  is <code>null</code>.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2f1784f174f87789c74abe899fc9c132"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f1784f174f87789c74abe899fc9c132">&#9670;&nbsp;</a></span>ReadFirstAsync&lt; T &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;T&gt; <a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#a43710a2c231289b96859fed20b3747e1">Security.Dapper.SqlMapper.GridReader.ReadFirstAsync</a>&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read an individual row of the next grid of results. </p>
+<dl class="tparams"><dt>Параметры шаблона</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type to read.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa49a0db1020b7bad805989f2caea87f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa49a0db1020b7bad805989f2caea87f4">&#9670;&nbsp;</a></span>ReadFirstOrDefault() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">dynamic Security.Dapper.SqlMapper.GridReader.ReadFirstOrDefault </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read an individual row of the next grid of results, returned as a dynamic object. </p>
+<p>Note: the row can be accessed via "dynamic", or by casting to an IDictionary&lt;string,object&gt;</p>
+
+</div>
+</div>
+<a id="ada6b75bc6b32a0339c5b50a80a10c837"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada6b75bc6b32a0339c5b50a80a10c837">&#9670;&nbsp;</a></span>ReadFirstOrDefault() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">object Security.Dapper.SqlMapper.GridReader.ReadFirstOrDefault </td>
+          <td>(</td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read an individual row of the next grid of results. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>The type to read.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">ArgumentNullException</td><td><em>type</em>  is <code>null</code>.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a03199f1fd303049fcc874726c01f5f89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03199f1fd303049fcc874726c01f5f89">&#9670;&nbsp;</a></span>ReadFirstOrDefault&lt; T &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#aa49a0db1020b7bad805989f2caea87f4">Security.Dapper.SqlMapper.GridReader.ReadFirstOrDefault</a>&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read an individual row of the next grid of results. </p>
+<dl class="tparams"><dt>Параметры шаблона</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type to read.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a733cb0f102e40303869ffbc2a37dca02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a733cb0f102e40303869ffbc2a37dca02">&#9670;&nbsp;</a></span>ReadFirstOrDefaultAsync() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;dynamic&gt; Security.Dapper.SqlMapper.GridReader.ReadFirstOrDefaultAsync </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read an individual row of the next grid of results, returned as a dynamic object </p>
+<p>Note: the row can be accessed via "dynamic", or by casting to an IDictionary&lt;string,object&gt;</p>
+
+</div>
+</div>
+<a id="a382d66ec821d412b925b70c249fbba18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a382d66ec821d412b925b70c249fbba18">&#9670;&nbsp;</a></span>ReadFirstOrDefaultAsync() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;object&gt; Security.Dapper.SqlMapper.GridReader.ReadFirstOrDefaultAsync </td>
+          <td>(</td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read an individual row of the next grid of results. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>The type to read.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">ArgumentNullException</td><td><em>type</em>  is <code>null</code>.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a68d12e0c166c2a3f4f69a66bbd5a0a35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68d12e0c166c2a3f4f69a66bbd5a0a35">&#9670;&nbsp;</a></span>ReadFirstOrDefaultAsync&lt; T &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;T&gt; <a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#a733cb0f102e40303869ffbc2a37dca02">Security.Dapper.SqlMapper.GridReader.ReadFirstOrDefaultAsync</a>&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read an individual row of the next grid of results. </p>
+<dl class="tparams"><dt>Параметры шаблона</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type to read.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af5525949c2c8fe5307d0285b0b032974"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5525949c2c8fe5307d0285b0b032974">&#9670;&nbsp;</a></span>ReadSingle() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">dynamic Security.Dapper.SqlMapper.GridReader.ReadSingle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read an individual row of the next grid of results, returned as a dynamic object. </p>
+<p>Note: the row can be accessed via "dynamic", or by casting to an IDictionary&lt;string,object&gt;</p>
+
+</div>
+</div>
+<a id="ae017d5ba7a87dbe40316d09c1b40512c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae017d5ba7a87dbe40316d09c1b40512c">&#9670;&nbsp;</a></span>ReadSingle() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">object Security.Dapper.SqlMapper.GridReader.ReadSingle </td>
+          <td>(</td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read an individual row of the next grid of results. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>The type to read.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">ArgumentNullException</td><td><em>type</em>  is <code>null</code>.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a93e34d2205328a8d20c903aa7b427658"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93e34d2205328a8d20c903aa7b427658">&#9670;&nbsp;</a></span>ReadSingle&lt; T &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#af5525949c2c8fe5307d0285b0b032974">Security.Dapper.SqlMapper.GridReader.ReadSingle</a>&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read an individual row of the next grid of results. </p>
+<dl class="tparams"><dt>Параметры шаблона</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type to read.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a769a4601bc1d6305ca52797e5c6537e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a769a4601bc1d6305ca52797e5c6537e5">&#9670;&nbsp;</a></span>ReadSingleAsync() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;dynamic&gt; Security.Dapper.SqlMapper.GridReader.ReadSingleAsync </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read an individual row of the next grid of results, returned as a dynamic object </p>
+<p>Note: the row can be accessed via "dynamic", or by casting to an IDictionary&lt;string,object&gt;</p>
+
+</div>
+</div>
+<a id="a1c0baa53d02ccd384d6aec8dd338634d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c0baa53d02ccd384d6aec8dd338634d">&#9670;&nbsp;</a></span>ReadSingleAsync() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;object&gt; Security.Dapper.SqlMapper.GridReader.ReadSingleAsync </td>
+          <td>(</td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read an individual row of the next grid of results. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>The type to read.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">ArgumentNullException</td><td><em>type</em>  is <code>null</code>.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae6845e2e2a0ad3a7b2fa9148c249aa88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6845e2e2a0ad3a7b2fa9148c249aa88">&#9670;&nbsp;</a></span>ReadSingleAsync&lt; T &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;T&gt; <a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#a769a4601bc1d6305ca52797e5c6537e5">Security.Dapper.SqlMapper.GridReader.ReadSingleAsync</a>&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read an individual row of the next grid of results. </p>
+<dl class="tparams"><dt>Параметры шаблона</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type to read.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a94cae5b5ae2181c3a901fd3b2c14eb56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94cae5b5ae2181c3a901fd3b2c14eb56">&#9670;&nbsp;</a></span>ReadSingleOrDefault() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">dynamic Security.Dapper.SqlMapper.GridReader.ReadSingleOrDefault </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read an individual row of the next grid of results, returned as a dynamic object. </p>
+<p>Note: the row can be accessed via "dynamic", or by casting to an IDictionary&lt;string,object&gt;</p>
+
+</div>
+</div>
+<a id="a97b7753e866d9aa212081754edc4c87c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97b7753e866d9aa212081754edc4c87c">&#9670;&nbsp;</a></span>ReadSingleOrDefault() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">object Security.Dapper.SqlMapper.GridReader.ReadSingleOrDefault </td>
+          <td>(</td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read an individual row of the next grid of results. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>The type to read.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">ArgumentNullException</td><td><em>type</em>  is <code>null</code>.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1b86d52a75f72151e89e3c2cef46763c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b86d52a75f72151e89e3c2cef46763c">&#9670;&nbsp;</a></span>ReadSingleOrDefault&lt; T &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#a94cae5b5ae2181c3a901fd3b2c14eb56">Security.Dapper.SqlMapper.GridReader.ReadSingleOrDefault</a>&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read an individual row of the next grid of results. </p>
+<dl class="tparams"><dt>Параметры шаблона</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type to read.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a78577aeecfe63a5051527b0390388ce6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78577aeecfe63a5051527b0390388ce6">&#9670;&nbsp;</a></span>ReadSingleOrDefaultAsync() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;dynamic&gt; Security.Dapper.SqlMapper.GridReader.ReadSingleOrDefaultAsync </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read an individual row of the next grid of results, returned as a dynamic object </p>
+<p>Note: the row can be accessed via "dynamic", or by casting to an IDictionary&lt;string,object&gt;</p>
+
+</div>
+</div>
+<a id="aa3515955b5685ebdee81706107e81039"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3515955b5685ebdee81706107e81039">&#9670;&nbsp;</a></span>ReadSingleOrDefaultAsync() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;object&gt; Security.Dapper.SqlMapper.GridReader.ReadSingleOrDefaultAsync </td>
+          <td>(</td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read an individual row of the next grid of results. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>The type to read.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">ArgumentNullException</td><td><em>type</em>  is <code>null</code>.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad1b6a5dd45d2393f0d92d79bfc22166b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1b6a5dd45d2393f0d92d79bfc22166b">&#9670;&nbsp;</a></span>ReadSingleOrDefaultAsync&lt; T &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;T&gt; <a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html#a78577aeecfe63a5051527b0390388ce6">Security.Dapper.SqlMapper.GridReader.ReadSingleOrDefaultAsync</a>&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read an individual row of the next grid of results. </p>
+<dl class="tparams"><dt>Параметры шаблона</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type to read.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Полный список свойств</h2>
+<a id="a680c1236df562e207b6e2877f6073986"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a680c1236df562e207b6e2877f6073986">&#9670;&nbsp;</a></span>Command</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IDbCommand Security.Dapper.SqlMapper.GridReader.Command</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The command associated with the reader </p>
+
+</div>
+</div>
+<a id="a8bf96859d1134755607d0b3c0494fea0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bf96859d1134755607d0b3c0494fea0">&#9670;&nbsp;</a></span>IsConsumed</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Security.Dapper.SqlMapper.GridReader.IsConsumed</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Has the underlying reader been consumed? </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>C:/Users/Domer/source/repos/Security.V2.1/backend/Security/Dapper/SqlMapper.GridReader.Async.cs</li>
+<li>C:/Users/Domer/source/repos/Security.V2.1/backend/Security/Dapper/SqlMapper.GridReader.cs</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>

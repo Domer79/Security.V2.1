@@ -1,0 +1,5 @@
+<map id="Security.Dapper.SqlMapper.ITypeMap" name="Security.Dapper.SqlMapper.ITypeMap">
+<area shape="rect" id="node1" title="Implement this interface to change default mapping of reader columns to type members" alt="" coords="138,5,323,47"/>
+<area shape="rect" id="node2" href="$class_security_1_1_dapper_1_1_custom_property_type_map.html" title="Implements custom property mapping by user provided criteria (usually presence of some custom attribu..." alt="" coords="5,95,219,136"/>
+<area shape="rect" id="node3" href="$class_security_1_1_dapper_1_1_default_type_map.html" title="Represents default type mapping strategy used by Dapper" alt="" coords="243,102,455,129"/>
+</map>

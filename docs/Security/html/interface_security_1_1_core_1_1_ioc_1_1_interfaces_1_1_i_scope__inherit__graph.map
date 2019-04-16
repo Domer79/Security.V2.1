@@ -1,0 +1,7 @@
+<map id="Security.Core.Ioc.Interfaces.IScope" name="Security.Core.Ioc.Interfaces.IScope">
+<area shape="rect" id="node1" title=" " alt="" coords="143,71,329,112"/>
+<area shape="rect" id="node3" href="$class_security_1_1_core_1_1_ioc_1_1_scopes_1_1_base_scope.html" title=" " alt="" coords="377,5,552,47"/>
+<area shape="rect" id="node4" href="$class_security_1_1_core_1_1_ioc_1_1_scopes_1_1_singleton_scope.html" title=" " alt="" coords="377,71,552,112"/>
+<area shape="rect" id="node5" href="$class_security_1_1_core_1_1_ioc_1_1_scopes_1_1_transient_scope.html" title=" " alt="" coords="377,136,552,177"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,78,95,105"/>
+</map>

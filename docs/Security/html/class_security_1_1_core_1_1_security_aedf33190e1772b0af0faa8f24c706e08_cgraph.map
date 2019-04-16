@@ -1,0 +1,4 @@
+<map id="Security.Core.Security.StopExpireAsync" name="Security.Core.Security.StopExpireAsync">
+<area shape="rect" id="node1" title="Прекращение действия токена" alt="" coords="5,5,189,47"/>
+<area shape="rect" id="node2" href="$interface_security_1_1_contracts_1_1_repository_1_1_i_token_service.html#a2553280e211e04f9b6365be6e4b6c684" title="Прекращение действия отдельного токена" alt="" coords="237,5,444,47"/>
+</map>

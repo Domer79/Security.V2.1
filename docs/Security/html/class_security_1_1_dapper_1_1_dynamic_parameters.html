@@ -1,0 +1,612 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Applications Security: Класс Security.Dapper.DynamicParameters</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Applications Security
+   &#160;<span id="projectnumber">2.1</span>
+   </div>
+   <div id="projectbrief">Apps Security</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_security.html">Security</a></li><li class="navelem"><a class="el" href="namespace_security_1_1_dapper.html">Dapper</a></li><li class="navelem"><a class="el" href="class_security_1_1_dapper_1_1_dynamic_parameters.html">DynamicParameters</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="#pro-methods">Защищенные члены</a> &#124;
+<a href="#properties">Свойства</a> &#124;
+<a href="class_security_1_1_dapper_1_1_dynamic_parameters-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс Security.Dapper.DynamicParameters</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>A bag of parameters that can be passed to the <a class="el" href="namespace_security_1_1_dapper.html">Dapper</a> Query and Execute methods  
+ <a href="class_security_1_1_dapper_1_1_dynamic_parameters.html#details">Подробнее...</a></p>
+<div class="dynheader">
+Граф наследования:Security.Dapper.DynamicParameters:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_security_1_1_dapper_1_1_dynamic_parameters__inherit__graph.png" border="0" usemap="#_security_8_dapper_8_dynamic_parameters_inherit__map" alt="Inheritance graph"/></div>
+<map name="_security_8_dapper_8_dynamic_parameters_inherit__map" id="_security_8_dapper_8_dynamic_parameters_inherit__map">
+<area shape="rect"  title="A bag of parameters that can be passed to the Dapper Query and Execute methods" alt="" coords="457,56,695,83"/>
+<area shape="rect"  href="interface_security_1_1_dapper_1_1_sql_mapper_1_1_i_dynamic_parameters.html" title="Implement this interface to pass an arbitrary db specific set of parameters to Dapper" alt="" coords="196,5,409,32"/>
+<area shape="rect"  href="interface_security_1_1_dapper_1_1_sql_mapper_1_1_i_parameter_lookup.html" title="Extends IDynamicParameters providing by&#45;name lookup of parameter values" alt="" coords="204,56,401,83"/>
+<area shape="rect"  href="interface_security_1_1_dapper_1_1_sql_mapper_1_1_i_dynamic_parameters.html" title="Implement this interface to pass an arbitrary db specific set of parameters to Dapper" alt="" coords="5,81,148,108"/>
+<area shape="rect"  href="interface_security_1_1_dapper_1_1_sql_mapper_1_1_i_parameter_callbacks.html" title="Extends IDynamicParameters with facilities for executing callbacks after commands have completed" alt="" coords="197,107,409,133"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса Security.Dapper.DynamicParameters:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_security_1_1_dapper_1_1_dynamic_parameters__coll__graph.png" border="0" usemap="#_security_8_dapper_8_dynamic_parameters_coll__map" alt="Collaboration graph"/></div>
+<map name="_security_8_dapper_8_dynamic_parameters_coll__map" id="_security_8_dapper_8_dynamic_parameters_coll__map">
+<area shape="rect"  title="A bag of parameters that can be passed to the Dapper Query and Execute methods" alt="" coords="457,56,695,83"/>
+<area shape="rect"  href="interface_security_1_1_dapper_1_1_sql_mapper_1_1_i_dynamic_parameters.html" title="Implement this interface to pass an arbitrary db specific set of parameters to Dapper" alt="" coords="196,5,409,32"/>
+<area shape="rect"  href="interface_security_1_1_dapper_1_1_sql_mapper_1_1_i_parameter_lookup.html" title="Extends IDynamicParameters providing by&#45;name lookup of parameter values" alt="" coords="204,56,401,83"/>
+<area shape="rect"  href="interface_security_1_1_dapper_1_1_sql_mapper_1_1_i_dynamic_parameters.html" title="Implement this interface to pass an arbitrary db specific set of parameters to Dapper" alt="" coords="5,81,148,108"/>
+<area shape="rect"  href="interface_security_1_1_dapper_1_1_sql_mapper_1_1_i_parameter_callbacks.html" title="Extends IDynamicParameters with facilities for executing callbacks after commands have completed" alt="" coords="197,107,409,133"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:afaac96fc23f4f03f1d641a6681eb10ee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_dynamic_parameters.html#afaac96fc23f4f03f1d641a6681eb10ee">DynamicParameters</a> ()</td></tr>
+<tr class="memdesc:afaac96fc23f4f03f1d641a6681eb10ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">construct a dynamic parameter bag  <a href="#afaac96fc23f4f03f1d641a6681eb10ee">Подробнее...</a><br /></td></tr>
+<tr class="separator:afaac96fc23f4f03f1d641a6681eb10ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65d55b6a7344f468704af974e7f071cd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_dynamic_parameters.html#a65d55b6a7344f468704af974e7f071cd">DynamicParameters</a> (object template)</td></tr>
+<tr class="memdesc:a65d55b6a7344f468704af974e7f071cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">construct a dynamic parameter bag  <a href="#a65d55b6a7344f468704af974e7f071cd">Подробнее...</a><br /></td></tr>
+<tr class="separator:a65d55b6a7344f468704af974e7f071cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1643deb4123f9a2fefc618a2a069b8e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_dynamic_parameters.html#a1643deb4123f9a2fefc618a2a069b8e3">AddDynamicParams</a> (object param)</td></tr>
+<tr class="memdesc:a1643deb4123f9a2fefc618a2a069b8e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append a whole object full of params to the dynamic EG: AddDynamicParams(new {A = 1, B = 2}) // will add property A and B to the dynamic  <a href="#a1643deb4123f9a2fefc618a2a069b8e3">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1643deb4123f9a2fefc618a2a069b8e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a520d9dfbe357cf614cb30f9b38abe4c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_dynamic_parameters.html#a520d9dfbe357cf614cb30f9b38abe4c1">Add</a> (string name, object value, DbType? dbType, ParameterDirection? direction, int? size)</td></tr>
+<tr class="memdesc:a520d9dfbe357cf614cb30f9b38abe4c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a parameter to this dynamic parameter list.  <a href="#a520d9dfbe357cf614cb30f9b38abe4c1">Подробнее...</a><br /></td></tr>
+<tr class="separator:a520d9dfbe357cf614cb30f9b38abe4c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8026b6aad87a56857f3c294ceb00fba2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_dynamic_parameters.html#a8026b6aad87a56857f3c294ceb00fba2">Add</a> (string name, object value=null, DbType? dbType=null, ParameterDirection? direction=null, int? size=null, byte? precision=null, byte? scale=null)</td></tr>
+<tr class="memdesc:a8026b6aad87a56857f3c294ceb00fba2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a parameter to this dynamic parameter list.  <a href="#a8026b6aad87a56857f3c294ceb00fba2">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8026b6aad87a56857f3c294ceb00fba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20059df5e65552e2d1b2d3a8391364b2"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_dynamic_parameters.html#a20059df5e65552e2d1b2d3a8391364b2">Get&lt; T &gt;</a> (string name)</td></tr>
+<tr class="memdesc:a20059df5e65552e2d1b2d3a8391364b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value of a parameter  <a href="#a20059df5e65552e2d1b2d3a8391364b2">Подробнее...</a><br /></td></tr>
+<tr class="separator:a20059df5e65552e2d1b2d3a8391364b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c835e254a8f01172c7230fe87de2962"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_security_1_1_dapper_1_1_dynamic_parameters.html">DynamicParameters</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_dynamic_parameters.html#a1c835e254a8f01172c7230fe87de2962">Output&lt; T &gt;</a> (T target, Expression&lt; Func&lt; T, object &gt;&gt; expression, DbType? dbType=null, int? size=null)</td></tr>
+<tr class="memdesc:a1c835e254a8f01172c7230fe87de2962"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows you to automatically populate a target property/field from output parameters. It actually creates an InputOutput parameter, so you can still pass data in.  <a href="#a1c835e254a8f01172c7230fe87de2962">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1c835e254a8f01172c7230fe87de2962"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a0c5e60a2c91c230b22e92cd410507a73"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_dynamic_parameters.html#a0c5e60a2c91c230b22e92cd410507a73">ParameterNames</a> =&gt; parameters.Select(p =&gt; p.Key)</td></tr>
+<tr class="memdesc:a0c5e60a2c91c230b22e92cd410507a73"><td class="mdescLeft">&#160;</td><td class="mdescRight">All the names of the param in the bag, use Get to yank them out  <a href="#a0c5e60a2c91c230b22e92cd410507a73">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0c5e60a2c91c230b22e92cd410507a73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Защищенные члены</h2></td></tr>
+<tr class="memitem:a39b026f986e0533f997f60ddd3ace809"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_dynamic_parameters.html#a39b026f986e0533f997f60ddd3ace809">AddParameters</a> (IDbCommand command, <a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_identity.html">SqlMapper.Identity</a> identity)</td></tr>
+<tr class="memdesc:a39b026f986e0533f997f60ddd3ace809"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add all the parameters needed to the command just before it executes  <a href="#a39b026f986e0533f997f60ddd3ace809">Подробнее...</a><br /></td></tr>
+<tr class="separator:a39b026f986e0533f997f60ddd3ace809"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Свойства</h2></td></tr>
+<tr class="memitem:a8c0e286a2a71bc11d386621af52f21a3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_dapper_1_1_dynamic_parameters.html#a8c0e286a2a71bc11d386621af52f21a3">RemoveUnused</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a8c0e286a2a71bc11d386621af52f21a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, the command-text is inspected and only values that are clearly used are included on the connection  <a href="#a8c0e286a2a71bc11d386621af52f21a3">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8c0e286a2a71bc11d386621af52f21a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header properties_interface_security_1_1_dapper_1_1_sql_mapper_1_1_i_parameter_lookup"><td colspan="2" onclick="javascript:toggleInherit('properties_interface_security_1_1_dapper_1_1_sql_mapper_1_1_i_parameter_lookup')"><img src="closed.png" alt="-"/>&#160;Свойства унаследованные от <a class="el" href="interface_security_1_1_dapper_1_1_sql_mapper_1_1_i_parameter_lookup.html">Security.Dapper.SqlMapper.IParameterLookup</a></td></tr>
+<tr class="memitem:adad90edde414490bcd7910e14ce0bb69 inherit properties_interface_security_1_1_dapper_1_1_sql_mapper_1_1_i_parameter_lookup"><td class="memItemLeft" align="right" valign="top">object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_security_1_1_dapper_1_1_sql_mapper_1_1_i_parameter_lookup.html#adad90edde414490bcd7910e14ce0bb69">this[string name]</a><code> [get]</code></td></tr>
+<tr class="memdesc:adad90edde414490bcd7910e14ce0bb69 inherit properties_interface_security_1_1_dapper_1_1_sql_mapper_1_1_i_parameter_lookup"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value of the specified parameter (return null if not found)  <a href="interface_security_1_1_dapper_1_1_sql_mapper_1_1_i_parameter_lookup.html#adad90edde414490bcd7910e14ce0bb69">Подробнее...</a><br /></td></tr>
+<tr class="separator:adad90edde414490bcd7910e14ce0bb69 inherit properties_interface_security_1_1_dapper_1_1_sql_mapper_1_1_i_parameter_lookup"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>A bag of parameters that can be passed to the <a class="el" href="namespace_security_1_1_dapper.html">Dapper</a> Query and Execute methods </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="afaac96fc23f4f03f1d641a6681eb10ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afaac96fc23f4f03f1d641a6681eb10ee">&#9670;&nbsp;</a></span>DynamicParameters() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Security.Dapper.DynamicParameters.DynamicParameters </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>construct a dynamic parameter bag </p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_security_1_1_dapper_1_1_dynamic_parameters_afaac96fc23f4f03f1d641a6681eb10ee_icgraph.png" border="0" usemap="#class_security_1_1_dapper_1_1_dynamic_parameters_afaac96fc23f4f03f1d641a6681eb10ee_icgraph" alt=""/></div>
+<map name="class_security_1_1_dapper_1_1_dynamic_parameters_afaac96fc23f4f03f1d641a6681eb10ee_icgraph" id="class_security_1_1_dapper_1_1_dynamic_parameters_afaac96fc23f4f03f1d641a6681eb10ee_icgraph">
+<area shape="rect"  title="construct a dynamic parameter bag" alt="" coords="584,5,825,47"/>
+<area shape="rect"  href="class_security_1_1_dapper_1_1_dynamic_parameters.html#a1643deb4123f9a2fefc618a2a069b8e3" title="Append a whole object full of params to the dynamic EG: AddDynamicParams(new {A = 1,..." alt="" coords="295,5,536,47"/>
+<area shape="rect"  href="class_security_1_1_dapper_1_1_dynamic_parameters.html#a65d55b6a7344f468704af974e7f071cd" title="construct a dynamic parameter bag" alt="" coords="5,5,247,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a65d55b6a7344f468704af974e7f071cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65d55b6a7344f468704af974e7f071cd">&#9670;&nbsp;</a></span>DynamicParameters() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Security.Dapper.DynamicParameters.DynamicParameters </td>
+          <td>(</td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>template</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>construct a dynamic parameter bag </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">template</td><td>can be an anonymous type or a <a class="el" href="class_security_1_1_dapper_1_1_dynamic_parameters.html" title="A bag of parameters that can be passed to the Dapper Query and Execute methods">DynamicParameters</a> bag</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_security_1_1_dapper_1_1_dynamic_parameters_a65d55b6a7344f468704af974e7f071cd_cgraph.png" border="0" usemap="#class_security_1_1_dapper_1_1_dynamic_parameters_a65d55b6a7344f468704af974e7f071cd_cgraph" alt=""/></div>
+<map name="class_security_1_1_dapper_1_1_dynamic_parameters_a65d55b6a7344f468704af974e7f071cd_cgraph" id="class_security_1_1_dapper_1_1_dynamic_parameters_a65d55b6a7344f468704af974e7f071cd_cgraph">
+<area shape="rect"  title="construct a dynamic parameter bag" alt="" coords="5,35,247,76"/>
+<area shape="rect"  href="class_security_1_1_dapper_1_1_dynamic_parameters.html#a1643deb4123f9a2fefc618a2a069b8e3" title="Append a whole object full of params to the dynamic EG: AddDynamicParams(new {A = 1,..." alt="" coords="295,35,536,76"/>
+<area shape="rect"  href="class_security_1_1_dapper_1_1_dynamic_parameters.html#afaac96fc23f4f03f1d641a6681eb10ee" title="construct a dynamic parameter bag" alt="" coords="595,5,837,47"/>
+<area shape="rect"  href="class_security_1_1_dapper_1_1_dynamic_parameters.html#a520d9dfbe357cf614cb30f9b38abe4c1" title="Add a parameter to this dynamic parameter list." alt="" coords="584,71,848,98"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a520d9dfbe357cf614cb30f9b38abe4c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a520d9dfbe357cf614cb30f9b38abe4c1">&#9670;&nbsp;</a></span>Add() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Security.Dapper.DynamicParameters.Add </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DbType?&#160;</td>
+          <td class="paramname"><em>dbType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ParameterDirection?&#160;</td>
+          <td class="paramname"><em>direction</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int?&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a parameter to this dynamic parameter list. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>The name of the parameter.</td></tr>
+    <tr><td class="paramname">value</td><td>The value of the parameter.</td></tr>
+    <tr><td class="paramname">dbType</td><td>The type of the parameter.</td></tr>
+    <tr><td class="paramname">direction</td><td>The in or out direction of the parameter.</td></tr>
+    <tr><td class="paramname">size</td><td>The size of the parameter.</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_security_1_1_dapper_1_1_dynamic_parameters_a520d9dfbe357cf614cb30f9b38abe4c1_icgraph.png" border="0" usemap="#class_security_1_1_dapper_1_1_dynamic_parameters_a520d9dfbe357cf614cb30f9b38abe4c1_icgraph" alt=""/></div>
+<map name="class_security_1_1_dapper_1_1_dynamic_parameters_a520d9dfbe357cf614cb30f9b38abe4c1_icgraph" id="class_security_1_1_dapper_1_1_dynamic_parameters_a520d9dfbe357cf614cb30f9b38abe4c1_icgraph">
+<area shape="rect"  title="Add a parameter to this dynamic parameter list." alt="" coords="584,46,848,73"/>
+<area shape="rect"  href="class_security_1_1_dapper_1_1_dynamic_parameters.html#a1643deb4123f9a2fefc618a2a069b8e3" title="Append a whole object full of params to the dynamic EG: AddDynamicParams(new {A = 1,..." alt="" coords="295,5,536,47"/>
+<area shape="rect"  href="class_security_1_1_dapper_1_1_dynamic_parameters.html#a1c835e254a8f01172c7230fe87de2962" title="Allows you to automatically populate a target property/field from output parameters...." alt="" coords="295,71,536,112"/>
+<area shape="rect"  href="class_security_1_1_dapper_1_1_dynamic_parameters.html#a65d55b6a7344f468704af974e7f071cd" title="construct a dynamic parameter bag" alt="" coords="5,5,247,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8026b6aad87a56857f3c294ceb00fba2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8026b6aad87a56857f3c294ceb00fba2">&#9670;&nbsp;</a></span>Add() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Security.Dapper.DynamicParameters.Add </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>value</em> = <code>null</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DbType?&#160;</td>
+          <td class="paramname"><em>dbType</em> = <code>null</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ParameterDirection?&#160;</td>
+          <td class="paramname"><em>direction</em> = <code>null</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int?&#160;</td>
+          <td class="paramname"><em>size</em> = <code>null</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte?&#160;</td>
+          <td class="paramname"><em>precision</em> = <code>null</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte?&#160;</td>
+          <td class="paramname"><em>scale</em> = <code>null</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a parameter to this dynamic parameter list. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>The name of the parameter.</td></tr>
+    <tr><td class="paramname">value</td><td>The value of the parameter.</td></tr>
+    <tr><td class="paramname">dbType</td><td>The type of the parameter.</td></tr>
+    <tr><td class="paramname">direction</td><td>The in or out direction of the parameter.</td></tr>
+    <tr><td class="paramname">size</td><td>The size of the parameter.</td></tr>
+    <tr><td class="paramname">precision</td><td>The precision of the parameter.</td></tr>
+    <tr><td class="paramname">scale</td><td>The scale of the parameter.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1643deb4123f9a2fefc618a2a069b8e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1643deb4123f9a2fefc618a2a069b8e3">&#9670;&nbsp;</a></span>AddDynamicParams()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Security.Dapper.DynamicParameters.AddDynamicParams </td>
+          <td>(</td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>param</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Append a whole object full of params to the dynamic EG: AddDynamicParams(new {A = 1, B = 2}) // will add property A and B to the dynamic </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">param</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_security_1_1_dapper_1_1_dynamic_parameters_a1643deb4123f9a2fefc618a2a069b8e3_cgraph.png" border="0" usemap="#class_security_1_1_dapper_1_1_dynamic_parameters_a1643deb4123f9a2fefc618a2a069b8e3_cgraph" alt=""/></div>
+<map name="class_security_1_1_dapper_1_1_dynamic_parameters_a1643deb4123f9a2fefc618a2a069b8e3_cgraph" id="class_security_1_1_dapper_1_1_dynamic_parameters_a1643deb4123f9a2fefc618a2a069b8e3_cgraph">
+<area shape="rect"  title="Append a whole object full of params to the dynamic EG: AddDynamicParams(new {A = 1,..." alt="" coords="5,35,247,76"/>
+<area shape="rect"  href="class_security_1_1_dapper_1_1_dynamic_parameters.html#afaac96fc23f4f03f1d641a6681eb10ee" title="construct a dynamic parameter bag" alt="" coords="306,5,547,47"/>
+<area shape="rect"  href="class_security_1_1_dapper_1_1_dynamic_parameters.html#a520d9dfbe357cf614cb30f9b38abe4c1" title="Add a parameter to this dynamic parameter list." alt="" coords="295,71,559,98"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_security_1_1_dapper_1_1_dynamic_parameters_a1643deb4123f9a2fefc618a2a069b8e3_icgraph.png" border="0" usemap="#class_security_1_1_dapper_1_1_dynamic_parameters_a1643deb4123f9a2fefc618a2a069b8e3_icgraph" alt=""/></div>
+<map name="class_security_1_1_dapper_1_1_dynamic_parameters_a1643deb4123f9a2fefc618a2a069b8e3_icgraph" id="class_security_1_1_dapper_1_1_dynamic_parameters_a1643deb4123f9a2fefc618a2a069b8e3_icgraph">
+<area shape="rect"  title="Append a whole object full of params to the dynamic EG: AddDynamicParams(new {A = 1,..." alt="" coords="295,5,536,47"/>
+<area shape="rect"  href="class_security_1_1_dapper_1_1_dynamic_parameters.html#a65d55b6a7344f468704af974e7f071cd" title="construct a dynamic parameter bag" alt="" coords="5,5,247,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a39b026f986e0533f997f60ddd3ace809"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39b026f986e0533f997f60ddd3ace809">&#9670;&nbsp;</a></span>AddParameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Security.Dapper.DynamicParameters.AddParameters </td>
+          <td>(</td>
+          <td class="paramtype">IDbCommand&#160;</td>
+          <td class="paramname"><em>command</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_security_1_1_dapper_1_1_sql_mapper_1_1_identity.html">SqlMapper.Identity</a>&#160;</td>
+          <td class="paramname"><em>identity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add all the parameters needed to the command just before it executes </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">command</td><td>The raw command prior to execution</td></tr>
+    <tr><td class="paramname">identity</td><td>Information about the query</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_dapper_1_1_sql_mapper_1_1_i_dynamic_parameters.html#aaae703061495827cd35fb760519ef81a">Security.Dapper.SqlMapper.IDynamicParameters</a>.</p>
+
+</div>
+</div>
+<a id="a20059df5e65552e2d1b2d3a8391364b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20059df5e65552e2d1b2d3a8391364b2">&#9670;&nbsp;</a></span>Get&lt; T &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">T Security.Dapper.DynamicParameters.Get&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the value of a parameter </p>
+<dl class="tparams"><dt>Параметры шаблона</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>The value, note DBNull.Value is not returned, instead the value is returned as null</dd></dl>
+
+</div>
+</div>
+<a id="a1c835e254a8f01172c7230fe87de2962"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c835e254a8f01172c7230fe87de2962">&#9670;&nbsp;</a></span>Output&lt; T &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_security_1_1_dapper_1_1_dynamic_parameters.html">DynamicParameters</a> Security.Dapper.DynamicParameters.Output&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Expression&lt; Func&lt; T, object &gt;&gt;&#160;</td>
+          <td class="paramname"><em>expression</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DbType?&#160;</td>
+          <td class="paramname"><em>dbType</em> = <code>null</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int?&#160;</td>
+          <td class="paramname"><em>size</em> = <code>null</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Allows you to automatically populate a target property/field from output parameters. It actually creates an InputOutput parameter, so you can still pass data in. </p>
+<dl class="tparams"><dt>Параметры шаблона</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target</td><td>The object whose property/field you wish to populate.</td></tr>
+    <tr><td class="paramname">expression</td><td>A MemberExpression targeting a property/field of the target (or descendant thereof.)</td></tr>
+    <tr><td class="paramname">dbType</td><td></td></tr>
+    <tr><td class="paramname">size</td><td>The size to set on the parameter. Defaults to 0, or <a class="el" href="class_security_1_1_dapper_1_1_db_string.html#a4ff56aed084749677f243bef122c969b" title="A value to set the default value of strings going through Dapper. Default is 4000,...">DbString.DefaultLength</a> in case of strings.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>The <a class="el" href="class_security_1_1_dapper_1_1_dynamic_parameters.html" title="A bag of parameters that can be passed to the Dapper Query and Execute methods">DynamicParameters</a> instance</dd></dl>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_security_1_1_dapper_1_1_dynamic_parameters_a1c835e254a8f01172c7230fe87de2962_cgraph.png" border="0" usemap="#class_security_1_1_dapper_1_1_dynamic_parameters_a1c835e254a8f01172c7230fe87de2962_cgraph" alt=""/></div>
+<map name="class_security_1_1_dapper_1_1_dynamic_parameters_a1c835e254a8f01172c7230fe87de2962_cgraph" id="class_security_1_1_dapper_1_1_dynamic_parameters_a1c835e254a8f01172c7230fe87de2962_cgraph">
+<area shape="rect"  title="Allows you to automatically populate a target property/field from output parameters...." alt="" coords="5,5,247,47"/>
+<area shape="rect"  href="class_security_1_1_dapper_1_1_dynamic_parameters.html#a520d9dfbe357cf614cb30f9b38abe4c1" title="Add a parameter to this dynamic parameter list." alt="" coords="295,13,559,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a0c5e60a2c91c230b22e92cd410507a73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c5e60a2c91c230b22e92cd410507a73">&#9670;&nbsp;</a></span>ParameterNames</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt;string&gt; Security.Dapper.DynamicParameters.ParameterNames =&gt; parameters.Select(p =&gt; p.Key)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>All the names of the param in the bag, use Get to yank them out </p>
+
+</div>
+</div>
+<h2 class="groupheader">Полный список свойств</h2>
+<a id="a8c0e286a2a71bc11d386621af52f21a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c0e286a2a71bc11d386621af52f21a3">&#9670;&nbsp;</a></span>RemoveUnused</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Security.Dapper.DynamicParameters.RemoveUnused</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>If true, the command-text is inspected and only values that are clearly used are included on the connection </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>C:/Users/Domer/source/repos/Security.V2.1/backend/Security/Dapper/DynamicParameters.CachedOutputSetters.cs</li>
+<li>C:/Users/Domer/source/repos/Security.V2.1/backend/Security/Dapper/DynamicParameters.cs</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>

@@ -10,6 +10,7 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
 import { UserGroupsComponent } from './user-groups/user-groups.component';
 import { UserRolesComponent } from './user-roles/user-roles.component';
 import { CommonModule } from '@angular/common';
+import { CommonComponentsModule } from '../common-components/common-components.module';
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { CommonModule } from '@angular/common';
     FormsModule,
     UsersRoutingModule,
     NgbModule,
-    DialogsModule
+    DialogsModule,
+    CommonComponentsModule
   ],
   declarations: [
     UsersComponent,

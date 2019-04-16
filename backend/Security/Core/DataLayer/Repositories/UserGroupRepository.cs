@@ -7,10 +7,16 @@ using Security.Model;
 
 namespace Security.Core.DataLayer.Repositories
 {
+    /// <summary>
+    /// Управление пользователями и группами
+    /// </summary>
     public class UserGroupRepository : IUserGroupRepository
     {
         private readonly ICommonDb _commonDb;
 
+        /// <summary>
+        /// Управление пользователями и группами
+        /// </summary>
         public UserGroupRepository(ICommonDb commonDb)
         {
             _commonDb = commonDb;

@@ -10,6 +10,7 @@ import { RolesComponent } from './roles.component';
 import { RoleDetailComponent } from './role-detail/role-detail.component';
 import { RolePoliciesComponent } from './role-policies/role-policies.component';
 import { RoleMembersComponent } from './role-members/role-members.component';
+import { CommonComponentsModule } from '../common-components/common-components.module';
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { RoleMembersComponent } from './role-members/role-members.component';
     FormsModule,
     GroupsRoutingModule,
     NgbModule,
-    DialogsModule
+    DialogsModule,
+    CommonComponentsModule
   ],
   declarations: [
     RolesComponent,

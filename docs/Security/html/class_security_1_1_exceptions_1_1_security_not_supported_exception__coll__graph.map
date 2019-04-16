@@ -1,0 +1,4 @@
+<map id="Security.Exceptions.SecurityNotSupportedException" name="Security.Exceptions.SecurityNotSupportedException">
+<area shape="rect" id="node1" title="Возникает при проверке сборки на наличие поддержки модели безопасности" alt="" coords="5,80,196,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="61,5,141,32"/>
+</map>

@@ -12,7 +12,7 @@ import { SidePanelService } from './services/side-panel.service';
     MainRoutingModule,
   ],
   declarations: [
-    MainComponent
+    MainComponent,
   ],
   providers: [
     SidePanelService

@@ -6,17 +6,28 @@ using Security.Model;
 
 namespace Security.Core
 {
+    /// <summary>
+    /// Создание и настройка политик безопасности
+    /// </summary>
     public class Config : IConfig
     {
         private readonly IApplicationInternalRepository _applicationRepository;
         private readonly ISecObjectRepository _secObjectRepository;
 
+        /// <summary>
+        /// Создание и настройка политик безопасности
+        /// </summary>
         public Config(IApplicationInternalRepository applicationRepository, ISecObjectRepository secObjectRepository)
         {
             _applicationRepository = applicationRepository;
             _secObjectRepository = secObjectRepository;
         }
 
+        /// <summary>
+        /// Регистрация приложения
+        /// </summary>
+        /// <param name="appName"></param>
+        /// <param name="description"></param>
         public void RegisterApplication(string appName, string description)
         {
             var app = _applicationRepository.GetByName(appName);
@@ -28,6 +39,11 @@ namespace Security.Core
             _applicationRepository.Create(app);
         }
 
+        /// <summary>
+        /// Регистрация приложения
+        /// </summary>
+        /// <param name="appName"></param>
+        /// <param name="description"></param>
         public async Task RegisterApplicationAsync(string appName, string description)
         {
             var app = await _applicationRepository.GetByNameAsync(appName);
@@ -39,6 +55,11 @@ namespace Security.Core
             await _applicationRepository.CreateAsync(app);
         }
 
+        /// <summary>
+        /// Регистрация политик безопасности
+        /// </summary>
+        /// <param name="appName"></param>
+        /// <param name="securityObjects"></param>
         public void RegisterSecurityObjects(string appName, params ISecurityObject[] securityObjects)
         {
             foreach (var securityObject in securityObjects)
@@ -56,16 +77,30 @@ namespace Security.Core
             }
         }
 
+        /// <summary>
+        /// Регистрация политик безопасности
+        /// </summary>
+        /// <param name="appName"></param>
+        /// <param name="securityObjects"></param>
         public void RegisterSecurityObjects(string appName, params string[] securityObjects)
         {
             RegisterSecurityObjects(appName, securityObjects.Select(_ => new SecurityObject() { ObjectName = _ }).ToArray());
         }
 
+        /// <summary>
+        /// Регистрация политик безопасности
+        /// </summary>
+        /// <param name="appName"></param>
+        /// <param name="securityObjects"></param>
         public async Task RegisterSecurityObjectsAsync(string appName, params ISecurityObject[] securityObjects)
         {
             foreach (var securityObject in securityObjects)
             {
-                var secObject = new SecObject()
+                var secObject = await _secObjectRepository.GetByNameAsync(securityObject.ObjectName);
+                if (secObject != null)
+                    continue;
+
+                secObject = new SecObject()
                 {
                     ObjectName = securityObject.ObjectName
                 };
@@ -74,16 +109,29 @@ namespace Security.Core
             }
         }
 
+        /// <summary>
+        /// Регистрация политик безопасности
+        /// </summary>
+        /// <param name="appName"></param>
+        /// <param name="securityObjects"></param>
         public Task RegisterSecurityObjectsAsync(string appName, params string[] securityObjects)
         {
             return RegisterSecurityObjectsAsync(appName, securityObjects.Select(_ => new SecurityObject() { ObjectName = _ }).ToArray());
         }
 
+        /// <summary>
+        /// Удаление приложения
+        /// </summary>
+        /// <param name="appName"></param>
         public void RemoveApplication(string appName)
         {
             _applicationRepository.Remove(appName);
         }
 
+        /// <summary>
+        /// Удаление приложения
+        /// </summary>
+        /// <param name="appName"></param>
         public Task RemoveApplicationAsync(string appName)
         {
             return _applicationRepository.RemoveAsync(appName);

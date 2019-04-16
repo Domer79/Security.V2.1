@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using Security.Contracts;
 using Security.Contracts.Repository;
-using Security.Model;
 
 namespace SecurityHttp
 {
@@ -30,6 +29,8 @@ namespace SecurityHttp
         public IGrantRepository GrantRepository { get; set; }
 
         public ISecuritySettings SecuritySettings { get; set; }
+
+        public ITokenService TokenService { get; set; }
 
         public IConfig Config { get; set; }
     }

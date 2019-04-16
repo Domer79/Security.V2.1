@@ -198,6 +198,7 @@
     <Compile Include="Controllers\PolicyController.cs" />
     <Compile Include="Controllers\RolesController.cs" />
     <Compile Include="Controllers\SettingsController.cs" />
+    <Compile Include="Controllers\TokenController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\UserGroupsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -246,6 +247,7 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <Content Include="Readme.md" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -255,17 +257,9 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\Security.Model\Security.Model.csproj">
-      <Project>{69F6D882-5A1E-49A9-B10C-A81AD937D188}</Project>
-      <Name>Security.Model</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Security\Security.csproj">
       <Project>{556713e5-2adb-4b4b-8d40-74df9393d33d}</Project>
       <Name>Security</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Tools\Tools.csproj">
-      <Project>{2F1F6E24-1FA5-412B-8949-0A7888B9BE71}</Project>
-      <Name>Tools</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

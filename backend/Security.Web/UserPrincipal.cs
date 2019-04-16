@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Linq;
 using System.Security.Principal;
+using System.Web.Mvc;
+using Security.Contracts;
 
 namespace Security.Web
 {
@@ -10,13 +12,11 @@ namespace Security.Web
     /// </summary>
     public class UserPrincipal : IPrincipal
     {
-        private readonly string _login;
-        private readonly string _applicationName;
+        private readonly string _token;
 
-        public UserPrincipal(string login, string applicationName)
+        public UserPrincipal(string token)
         {
-            _login = login;
-            _applicationName = applicationName;
+            _token = token;
         }
 
         /// <summary>
@@ -26,17 +26,16 @@ namespace Security.Web
         /// <returns>True, если пользователь имеет данную роль, иначе False</returns>
         public bool IsInRole(string role)
         {
-            using (var security = new Core.Security(_applicationName))
-            {
-                var roles = security.MemberRoleRepository.GetRoles(_login);
-                return roles.Any(_ => _.Name == role);
-            }
+            var security = DependencyResolver.Current.GetService<ISecurity>();
+            var user = security.GetUserByToken(_token);
+            var roles = security.MemberRoleRepository.GetRoles(user.Login);
+            return roles.Any(_ => _.Name == role);
         }
 
         /// <summary>
         /// Удостоверение пользователя <see cref="UserIdentity"/>
         /// </summary>
-        public IIdentity Identity => new UserIdentity(_login, _applicationName);
+        public IIdentity Identity => new UserIdentity(_token);
 
         public override string ToString()
         {

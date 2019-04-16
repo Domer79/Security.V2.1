@@ -41,5 +41,14 @@ namespace Security.Extensions
             return Encoding.Unicode.GetBytes(value);
         }
 
+        public static async Task<T[]> ToArrayAsync<T>(this Task<IEnumerable<T>> source)
+        {
+            return (await source).ToArray();
+        }
+
+        public static async Task<List<T>> ToListAsync<T>(this Task<IEnumerable<T>> source)
+        {
+            return (await source).ToList();
+        }
     }
 }

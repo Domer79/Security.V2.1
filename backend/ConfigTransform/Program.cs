@@ -8,6 +8,9 @@ using Microsoft.Web.XmlTransform;
 
 namespace ConfigTransform
 {
+    /// <summary>
+    /// Transformation of configuration files .config
+    /// </summary>
     class Program
     {
         static void Main(string[] args)
@@ -33,6 +36,12 @@ namespace ConfigTransform
             }
         }
 
+        /// <summary>
+        /// Transformation of configuration files .config
+        /// </summary>
+        /// <param name="configFileName"></param>
+        /// <param name="transformFileName"></param>
+        /// <param name="appName"></param>
         public static void TransformConfig(string configFileName, string transformFileName, string appName)
         {
             var document = new XmlTransformableDocument();

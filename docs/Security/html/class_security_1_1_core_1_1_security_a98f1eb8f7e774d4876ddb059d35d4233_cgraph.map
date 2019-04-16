@@ -1,0 +1,4 @@
+<map id="Security.Core.Security.CheckAccessByToken" name="Security.Core.Security.CheckAccessByToken">
+<area shape="rect" id="node1" title="Проверка доступа пользователя по токену" alt="" coords="5,13,200,54"/>
+<area shape="rect" id="node2" href="$interface_security_1_1_contracts_1_1_repository_1_1_i_user_internal_repository.html#ad24d8f35dd36126ad56621d62417715a" title="Проверка доступа по токену" alt="" coords="248,5,480,61"/>
+</map>

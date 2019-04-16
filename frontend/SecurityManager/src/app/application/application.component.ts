@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, ParamMap } from '@angular/router';
 import { ApplicationService } from "../services/application.service";
 import { ApplicationContextService } from "../services/application-context.service";
+import { AuthService } from "../services/auth.service";
 
 @Component({
   selector: 'app-application',
@@ -15,7 +16,7 @@ export class ApplicationComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private router: Router,
     private appService: ApplicationService,
-    private appContext: ApplicationContextService
+    private authService: AuthService
   ) { }
 
   ngOnInit() {
@@ -30,4 +31,9 @@ export class ApplicationComponent implements OnInit {
     });
   }
 
+  exit(): void{
+    this.authService.exit().then(res => {
+      this.router.navigate(["to/login/page"]);
+    });
+  }
 }

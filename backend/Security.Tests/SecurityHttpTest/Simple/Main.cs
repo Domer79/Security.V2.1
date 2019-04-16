@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Threading;
 using NUnit.Framework;
 using Security.Contracts;
 using Security.Contracts.Repository;
 using Security.Model;
+using Security.Tests.Infrastructure;
+using Security.Tests.Scenarios;
 using SecurityHttp;
 using SecurityHttp.Interfaces;
 using Assert = NUnit.Framework.Assert;
@@ -55,25 +59,37 @@ namespace Security.Tests.SecurityHttpTest.Simple
         [Test]
         public void PasswordValidateTest()
         {
-            Assert.That(() => _security.SetPassword("user1", "123456"), Is.True);
-            Assert.That(() => _security.UserValidate("user1", "123456"));
+            var user = _security.UserRepository.Create(new User()
+            {
+                Login = "testadmin",
+                Email = "testadmin@mail.ru",
+                FirstName = "testadmin",
+                LastName = "testadmin",
+                DateCreated = DateTime.UtcNow,
+                Status = true
+            });
+            Assert.That(() => _security.SetPassword("testadmin", "testadmin"), Is.True);
+            Assert.That(() => _security.UserValidate("testadmin", "testadmin"), Is.True);
 
-            Assert.That(() => _security.UserValidate("user1@mail.ru", "123456"));
+            Assert.That(() => _security.UserValidate("testadmin@mail.ru", "testadmin"), Is.True);
         }
 
         [Test]
         public void User_MemberFields_ValidationTest()
         {
-            var user = _security.UserRepository.GetByName("user1");
-
-            Assert.That(user, Has.Property("Login").EqualTo("user1"));
-            Assert.That(user, Has.Property("Name").EqualTo("user1"));
-            Assert.That(user, Has.Property("Email").EqualTo("user1@mail.ru"));
-            Assert.That(user, Has.Property("FirstName").EqualTo("User1First"));
-            Assert.That(user, Has.Property("LastName").EqualTo("User1Last"));
-            Assert.That(user, Has.Property("MiddleName").EqualTo("User1Middle"));
-            Assert.That(user, Has.Property("Status").EqualTo(true));
-            Assert.That(user, Has.Property("DateCreated").EqualTo(DateTime.Now).Within(TimeSpan.FromMinutes(1)));
+            using (var scenario = new FillDatabaseScenario())
+            {
+                scenario.Run(_security);
+                var user = _security.UserRepository.GetByName(FillDatabaseScenarioResult.User1);
+                
+                Assert.That(user, Has.Property("Login").EqualTo("user100"));
+                Assert.That(user, Has.Property("Name").EqualTo("user100"));
+                Assert.That(user, Has.Property("Email").EqualTo("user100@mail.ru"));
+                Assert.That(user, Has.Property("FirstName").EqualTo("user100"));
+                Assert.That(user, Has.Property("LastName").EqualTo("user100"));
+                Assert.That(user, Has.Property("Status").EqualTo(true));
+                Assert.That(user, Has.Property("DateCreated").EqualTo(DateTime.UtcNow).Within(TimeSpan.FromMinutes(1)));
+            }
         }
 
         [Test]
@@ -110,7 +126,7 @@ namespace Security.Tests.SecurityHttpTest.Simple
             Assert.That(role, Has.Property("Description").EqualTo("Role1 Description"));
         }
 
-        [TestCase("user1 group1", "role1")]
+        [TestCase("user1 user2 group1", "role1")]
         [TestCase("user1 user3", "role2")]
         public void Check_Existence_Members_in_Role(string member, string role)
         {
@@ -248,57 +264,38 @@ namespace Security.Tests.SecurityHttpTest.Simple
         /// testCase = 2 - удаление по Guid
         /// testCase = 3 - удаление по IdMember
         /// </summary>
-        /// <param name="testCase"></param>
-        /// <param name="groupName"></param>
-        /// <param name="expectedNameUsers"></param>
-        [TestCase(1, "group1", "user0,user1,user2,user7", 13)]
-        [TestCase(2, "group1", "user0,user1,user2,user7", 10)]
-        [TestCase(3, "group1", "user0,user1,user2,user7", 30)]
-        [TestCase(1, "group4", "user2,user4,user6,user7,user12", 5)]
-        [TestCase(2, "group4", "user2,user4,user6,user7,user12", 8)]
-        [TestCase(3, "group4", "user2,user4,user6,user7,user12", 9)]
-        [TestCase(1, "group0", "user0,user1", 12)]
-        [TestCase(2, "group0", "user0,user1", 21)]
-        [TestCase(3, "group0", "user0,user1", 18)]
-        public void CheckRemoveUsersInGroup(int testCase, string groupName, string expectedNameUsers, int userCount)
+        [TestCase(1)]
+        [TestCase(2)]
+        [TestCase(3)]
+        public void CheckRemoveUsersInGroup(int testCase)
         {
-            var member = _security.GroupRepository.GetByName(groupName);
-            var userList = new List<User>();
-
-            for (int i = 20; i < (20 + userCount); i++)
+            using (var scenario = new FillDatabaseScenario())
             {
-                userList.Add(_security.UserRepository.Create(new User()
+                var result = scenario.Run(_security);
+                var group = result.Groups.Single(_ => _.Name == FillDatabaseScenarioResult.Group1);
+
+                IEnumerable<User> groupUsers = null;
+                if (testCase == 1)
                 {
-                    Login = $"user{i}",
-                    Email = $"user{i}@mail.ru",
-                    FirstName = $"User{i}First",
-                    LastName = $"User{i}Last",
-                    MiddleName = $"User{i}Middle",
-                    Status = true,
-                    DateCreated = DateTime.Now
-                }));
+                    _security.UserGroupRepository.RemoveUsersFromGroup(result.GroupUsers[group].Select(_ => _.Name).ToArray(), group.Name);
+                    groupUsers = _security.UserGroupRepository.GetUsers(group.Name);
+                }
+
+                if (testCase == 2)
+                {
+                    _security.UserGroupRepository.RemoveUsersFromGroup(result.GroupUsers[group].Select(_ => _.Id).ToArray(), group.Id);
+                    groupUsers = _security.UserGroupRepository.GetUsers(group.Id);
+                }
+
+                if (testCase == 3)
+                {
+                    _security.UserGroupRepository.RemoveUsersFromGroup(result.GroupUsers[group].Select(_ => _.IdMember).ToArray(), group.IdMember);
+                    groupUsers = _security.UserGroupRepository.GetUsers(group.IdMember);
+                }
+
+                Assert.IsNotNull(groupUsers);
+                CollectionAssert.IsEmpty(groupUsers);
             }
-
-            _security.UserGroupRepository.AddUsersToGroup(userList.Select(_ => _.Name).ToArray(), member.Name);
-
-            if (testCase == 1)
-                _security.UserGroupRepository.RemoveUsersFromGroup(userList.Select(_ => _.Name).ToArray(), groupName);
-            if (testCase == 2)
-                _security.UserGroupRepository.RemoveUsersFromGroup(userList.Select(_ => _.Id).ToArray(), member.Id);
-            if (testCase == 3)
-                _security.UserGroupRepository.RemoveUsersFromGroup(userList.Select(_ => _.IdMember).ToArray(), member.IdMember);
-
-            foreach (var user in userList)
-            {
-                _security.UserRepository.Remove(user.IdMember);
-            }
-
-            var expectedUsers = _security.UserRepository.Get().Where(_ => expectedNameUsers.Split(',').Contains(_.Name)).OrderBy(_ => _.IdMember);
-
-            var membersByName = _security.UserGroupRepository.GetUsers(member.Name).OrderBy(_ => _.IdMember);
-
-            CollectionAssert.IsNotEmpty(membersByName);
-            CollectionAssert.AreEqual(expectedUsers, membersByName, new UserComparer());
         }
 
         /// <summary>
@@ -306,52 +303,38 @@ namespace Security.Tests.SecurityHttpTest.Simple
         /// testCase = 2 - удаление по Guid
         /// testCase = 3 - удаление по IdMember
         /// </summary>
-        /// <param name="testCase"></param>
-        /// <param name="groupName"></param>
-        /// <param name="expectedNameUsers"></param>
-        [TestCase(1, "user1", "group0,group1,group10,group11,group12,group13", 13)]
-        [TestCase(2, "user1", "group0,group1,group10,group11,group12,group13", 10)]
-        [TestCase(3, "user1", "group0,group1,group10,group11,group12,group13", 30)]
-        [TestCase(1, "user2", "group1,group4,group12,group15,group18", 5)]
-        [TestCase(2, "user2", "group1,group4,group12,group15,group18", 8)]
-        [TestCase(3, "user2", "group1,group4,group12,group15,group18", 9)]
-        [TestCase(1, "user7", "group1,group2,group4,group8,group18", 12)]
-        [TestCase(2, "user7", "group1,group2,group4,group8,group18", 21)]
-        [TestCase(3, "user7", "group1,group2,group4,group8,group18", 18)]
-        public void CheckRemoveGroupsInUser(int testCase, string userName, string expectedNameGroups, int groupCount)
+        [TestCase(1)]
+        [TestCase(2)]
+        [TestCase(3)]
+        public void CheckRemoveGroupsInUser(int testCase)
         {
-            var member = _security.UserRepository.GetByName(userName);
-            var groupList = new List<Group>();
-
-            for (int i = 20; i < (20 + groupCount); i++)
+            using(var scenario = new FillDatabaseScenario())
             {
-                groupList.Add(_security.GroupRepository.Create(new Group()
+                var result = scenario.Run(_security);
+                var user = result.Users.Single(_ => _.Login == FillDatabaseScenarioResult.User1);
+
+                IEnumerable<Group> userGroups = null;
+                if (testCase == 1)
                 {
-                    Name = $"group{i}",
-                    Description = $"Group{i} Description",
-                }));
+                    _security.UserGroupRepository.RemoveGroupsFromUser(result.UserGroups[user].Select(_ => _.Name).ToArray(), user.Login);
+                    userGroups = _security.UserGroupRepository.GetGroups(user.Login);
+                }
+
+                if (testCase == 2)
+                {
+                    _security.UserGroupRepository.RemoveGroupsFromUser(result.UserGroups[user].Select(_ => _.Id).ToArray(), user.Id);
+                    userGroups = _security.UserGroupRepository.GetGroups(user.Id);
+                }
+
+                if (testCase == 3)
+                {
+                    _security.UserGroupRepository.RemoveGroupsFromUser(result.UserGroups[user].Select(_ => _.IdMember).ToArray(), user.IdMember);
+                    userGroups = _security.UserGroupRepository.GetGroups(user.IdMember);
+                }
+
+                Assert.IsNotNull(userGroups);
+                CollectionAssert.IsEmpty(userGroups);
             }
-
-            _security.UserGroupRepository.AddGroupsToUser(groupList.Select(_ => _.Name).ToArray(), member.Name);
-
-            if (testCase == 1)
-                _security.UserGroupRepository.RemoveGroupsFromUser(groupList.Select(_ => _.Name).ToArray(), userName);
-            if (testCase == 2)
-                _security.UserGroupRepository.RemoveGroupsFromUser(groupList.Select(_ => _.Id).ToArray(), member.Id);
-            if (testCase == 3)
-                _security.UserGroupRepository.RemoveGroupsFromUser(groupList.Select(_ => _.IdMember).ToArray(), member.IdMember);
-
-            foreach (var @group in groupList)
-            {
-                _security.GroupRepository.Remove(@group.IdMember);
-            }
-
-            var expectedGroups = _security.GroupRepository.Get().Where(_ => expectedNameGroups.Split(',').Contains(_.Name)).OrderBy(_ => _.IdMember);
-
-            var membersByName = _security.UserGroupRepository.GetGroups(member.Name).OrderBy(_ => _.IdMember);
-
-            CollectionAssert.IsNotEmpty(membersByName);
-            CollectionAssert.AreEqual(expectedGroups, membersByName, new GroupComparer());
         }
 
         #endregion
@@ -398,7 +381,7 @@ namespace Security.Tests.SecurityHttpTest.Simple
             var users = _security.UserRepository.Get();
 
             CollectionAssert.IsNotEmpty(users);
-            Assert.That(users.Count(), Is.EqualTo(20));
+            Assert.That(users.Count(), Is.EqualTo(21));
         }
 
         [TestCase(3)]
@@ -504,7 +487,6 @@ namespace Security.Tests.SecurityHttpTest.Simple
             Assert.That(groups.Count(), Is.EqualTo(20));
         }
 
-        [TestCase(21)]
         [TestCase(22)]
         [TestCase(23)]
         [TestCase(24)]
@@ -568,35 +550,33 @@ namespace Security.Tests.SecurityHttpTest.Simple
             Assert.That(policies.Count(), Is.EqualTo(20));
         }
 
+        [TestCase(FillDatabaseScenarioResult.Policy1)]
+        [TestCase(FillDatabaseScenarioResult.Policy2)]
+        public void SecObjectUpdate_And_Check_UpdatedPropertiesTest(string policy)
+        {
+            using (var scenario = new FillDatabaseScenario())
+            {
+                var result = scenario.Run(_security);
+                var secObject = _security.SecObjectRepository.GetByName(policy);
+
+                secObject.ObjectName = $"new_Policy{secObject.IdSecObject}";
+
+                _security.SecObjectRepository.Update(secObject);
+
+                secObject = _security.SecObjectRepository.Get(secObject.IdSecObject);
+
+                Assert.IsNotNull(secObject);
+                Assert.That(secObject, Has.Property("ObjectName").EqualTo($"new_Policy{secObject.IdSecObject}"));
+            }
+        }
+
         [TestCase(1)]
         [TestCase(2)]
         [TestCase(3)]
         [TestCase(4)]
-        [TestCase(5)]
-        [TestCase(6)]
-        public void SecObjectUpdate_And_Check_UpdatedPropertiesTest(int idSecObject)
-        {
-            var secObject = _security.SecObjectRepository.Get(idSecObject);
-
-            secObject.ObjectName= $"new_Policy{idSecObject}";
-
-            _security.SecObjectRepository.Update(secObject);
-
-            secObject = _security.SecObjectRepository.Get(idSecObject);
-
-            Assert.IsNotNull(secObject);
-
-            Assert.That(secObject, Has.Property("ObjectName").EqualTo($"new_Policy{idSecObject}"));
-        }
-
-        [TestCase(21)]
-        [TestCase(22)]
-        [TestCase(23)]
-        [TestCase(24)]
         public void SecObject_GetById_AnotherApplication(int idSecObject)
         {
             var secObject = _security.SecObjectRepository.Get(idSecObject);
-
             Assert.That(secObject, Is.Null);
         }
 
@@ -616,6 +596,19 @@ namespace Security.Tests.SecurityHttpTest.Simple
             Assert.That(() => _security.SecObjectRepository.Remove(policy.IdSecObject), Throws.Nothing);
 
             _security.RoleRepository.Remove(role.IdRole);
+        }
+
+        [Test]
+        public void RegisterExistingPolicy()
+        {
+            using (var scenario = new FillDatabaseScenario())
+            {
+                scenario.Run(_security);
+                Assert.DoesNotThrow(() =>
+                {
+                    _security.Config.RegisterSecurityObjects(FillDatabaseScenarioResult.AppName, new[] { FillDatabaseScenarioResult.Policy1 });
+                });
+            }
         }
 
         #endregion
@@ -786,7 +779,7 @@ namespace Security.Tests.SecurityHttpTest.Simple
         public void MemberRoleAddMembersToRoleByName()
         {
             var memberStrings = new []{"user10", "user11", "user12", "group10","group11","group12"};
-            var exceptMemberStrings = new[] { "group0", "group1", "group13", "group14", "group15", "group16", "group17", "group18", "group19", "group2", "group3", "group4", "group5", "group6", "group7", "group8", "group9", "user0", "user1", "user13", "user14", "user15", "user16", "user17", "user18", "user19", "user2", "user3", "user4", "user5", "user6", "user7", "user8", "user9" };
+            var exceptMemberStrings = new[] { "admin", "group0", "group1", "group13", "group14", "group15", "group16", "group17", "group18", "group19", "group2", "group3", "group4", "group5", "group6", "group7", "group8", "group9", "user0", "user1", "user13", "user14", "user15", "user16", "user17", "user18", "user19", "user2", "user3", "user4", "user5", "user6", "user7", "user8", "user9" };
 
             _security.MemberRoleRepository.AddMembersToRole(memberStrings, "role10");
 
@@ -794,7 +787,7 @@ namespace Security.Tests.SecurityHttpTest.Simple
             var exceptMembers = _security.MemberRoleRepository.GetExceptMembers("role10").OrderBy(_ => _.Name).Select(_ => _.Name);
 
             Assert.That(members.Count(), Is.EqualTo(6));
-            Assert.That(exceptMembers.Count(), Is.EqualTo(34));
+            Assert.That(exceptMembers.Count(), Is.EqualTo(35));
             CollectionAssert.AreEqual(memberStrings.OrderBy(_ => _), members);
             CollectionAssert.AreEqual(exceptMemberStrings.OrderBy(_ => _), exceptMembers);
 
@@ -805,7 +798,7 @@ namespace Security.Tests.SecurityHttpTest.Simple
         public void MemberRoleAddMembersToRoleById()
         {
             var idMembers = new[] {11, 12, 13, 31, 32, 33};
-            var exceptIdMembers = new[] { 21, 22, 34, 35, 36, 37, 38, 39, 40, 23, 24, 25, 26, 27, 28, 29, 30, 1, 2, 14, 15, 16, 17, 18, 19, 20, 3, 4, 5, 6, 7, 8, 9, 10 };
+            var exceptIdMembers = new[] { 21, 22, 34, 35, 36, 37, 38, 39, 40, 41, 23, 24, 25, 26, 27, 28, 29, 30, 1, 2, 14, 15, 16, 17, 18, 19, 20, 3, 4, 5, 6, 7, 8, 9, 10 };
 
             _security.MemberRoleRepository.AddMembersToRole(idMembers, 10);
 
@@ -813,7 +806,7 @@ namespace Security.Tests.SecurityHttpTest.Simple
             var exceptMembers = _security.MemberRoleRepository.GetExceptMembers(10).OrderBy(_ => _.IdMember).Select(_ => _.IdMember);
 
             Assert.That(members.Count(), Is.EqualTo(6));
-            Assert.That(exceptMembers.Count(), Is.EqualTo(34));
+            Assert.That(exceptMembers.Count(), Is.EqualTo(35));
             CollectionAssert.AreEqual(idMembers.OrderBy(_ => _), members);
             CollectionAssert.AreEqual(exceptIdMembers.OrderBy(_ => _), exceptMembers);
 
@@ -926,59 +919,138 @@ namespace Security.Tests.SecurityHttpTest.Simple
 
         #endregion
 
+        #region Token
+
+        [Test]
+        public void CheckAccessByToken_Expected_True_Test()
+        {
+            using (var scenario = new CreateUserAndGrantAccessScenario())
+            {
+                var result = scenario.Run(_security);
+
+                var token = _security.CreateToken(result.Login, "test");
+                var allow = _security.CheckAccessByToken(token, result.UserPolicies[0]);
+
+                Assert.IsTrue(allow);
+            }
+        }
+
+        [Test]
+        public void CheckAccessByToken_Expected_False_Test()
+        {
+            using (var scenario = new CreateUserAndGrantAccessScenario())
+            {
+                var result = scenario.Run(_security);
+
+                var token = _security.CreateToken(result.Login, "test");
+                _security.StopExpire(token);
+                Thread.Sleep(10);
+                var allow = _security.CheckAccessByToken(token, result.UserPolicies[0]);
+
+                Assert.IsFalse(allow);
+            }
+        }
+
+        [Test]
+        public void CheckAccessBySeveralToken_Expected_True_And_Token2IsFalse_Test()
+        {
+            using (var scenario = new CreateUserAndGrantAccessScenario())
+            {
+                var result = scenario.Run(_security);
+
+                var token1 = result.UserTokens[0];
+                var token2 = result.UserTokens[1];
+                var token3 = result.UserTokens[2];
+                var token4 = result.UserTokens[3];
+
+                _security.StopExpire(token2);
+
+                var allow1 = _security.CheckAccessByToken(token1, result.UserPolicies[0]);
+                var allow2 = _security.CheckAccessByToken(token2, result.UserPolicies[0]);
+                var allow3 = _security.CheckAccessByToken(token3, result.UserPolicies[0]);
+                var allow4 = _security.CheckAccessByToken(token4, result.UserPolicies[0]);
+
+                Assert.IsTrue(allow1);
+                Assert.IsFalse(allow2);
+                Assert.IsTrue(allow3);
+                Assert.IsTrue(allow4);
+            }
+        }
+
+        [Test]
+        public void CheckAccessBySeveralToken_Expected_AllFalse_Test()
+        {
+            using (var scenario = new CreateUserAndGrantAccessScenario())
+            {
+                var result = scenario.Run(_security);
+
+                var token1 = result.UserTokens[0];
+                var token2 = result.UserTokens[1];
+                var token3 = result.UserTokens[2];
+                var token4 = result.UserTokens[3];
+
+                _security.StopExpireForUser(token2);
+
+                var allow1 = _security.CheckAccessByToken(token1, result.UserPolicies[0]);
+                var allow2 = _security.CheckAccessByToken(token2, result.UserPolicies[0]);
+                var allow3 = _security.CheckAccessByToken(token3, result.UserPolicies[0]);
+                var allow4 = _security.CheckAccessByToken(token4, result.UserPolicies[0]);
+
+                Assert.IsFalse(allow1);
+                Assert.IsFalse(allow2);
+                Assert.IsFalse(allow3);
+                Assert.IsFalse(allow4);
+            }
+        }
+
+        [Test]
+        public void CheckTokenExpire_ExpectedFalse()
+        {
+            using (var scenario = new CreateUserAndGrantAccessScenario())
+            {
+                var result = scenario.Run(_security);
+                var token = result.UserTokens[0];
+
+                _security.StopExpire(token);
+                var expired = _security.CheckTokenExpire(token);
+
+                Assert.IsFalse(expired);
+            }
+        }
+
+        [Test]
+        public void CheckTokenExpire_ExpectedTrue()
+        {
+            using (var scenario = new CreateUserAndGrantAccessScenario())
+            {
+                var result = scenario.Run(_security);
+                var token = result.UserTokens[0];
+
+                var expired = _security.CheckTokenExpire(token);
+
+                Assert.IsTrue(expired);
+            }
+        }
+
+        [Test]
+        public void GetUserByToken_Test()
+        {
+            using (var scenario = new FillDatabaseScenario())
+            {
+                scenario.Run(_security);
+                var token = _security.CreateToken(FillDatabaseScenarioResult.User1, FillDatabaseScenarioResult.DefaultPassword);
+                var user = _security.GetUserByToken(token);
+
+                Assert.IsNotNull(user);
+                Assert.AreEqual(FillDatabaseScenarioResult.User1, user.Login);
+            }
+        }
+
+        #endregion
+
         class SecurityObject : ISecurityObject
         {
             public string ObjectName { get; set; }
-        }
-    }
-
-    public class GroupComparer : Comparer<Group>
-    {
-        public override int Compare(Group x, Group y)
-        {
-            if (x.Id.CompareTo(y.Id) != 0)
-                return x.Id.CompareTo(y.Id);
-            if (x.IdMember.CompareTo(y.IdMember) != 0)
-                return x.IdMember.CompareTo(y.IdMember);
-            if (x.Name.CompareTo(y.Name) != 0)
-                return x.Name.CompareTo(y.Name);
-            if (x.Description.CompareTo(y.Description) != 0)
-                return x.Description.CompareTo(y.Description);
-
-            return 0;
-        }
-    }
-
-    public class UserComparer : Comparer<User>
-    {
-        public override int Compare(User x, User y)
-        {
-            if (x.Status.CompareTo(y.Status) != 0)
-                return x.Status.CompareTo(y.Status);
-            if (x.Id.CompareTo(y.Id) != 0)
-                return x.Id.CompareTo(y.Id);
-            if (x.IdMember.CompareTo(y.IdMember) != 0)
-                return x.IdMember.CompareTo(y.IdMember);
-            if (x.Login.CompareTo(y.Login) != 0)
-                return x.Login.CompareTo(y.Login);
-            if (x.Name.CompareTo(y.Name) != 0)
-                return x.Name.CompareTo(y.Name);
-            if (x.DateCreated.CompareTo(y.DateCreated) != 0)
-                return x.DateCreated.CompareTo(y.DateCreated);
-            if (x.Email.CompareTo(y.Email) != 0)
-                return x.Email.CompareTo(y.Email);
-            if (x.FirstName.CompareTo(y.FirstName) != 0)
-                return x.FirstName.CompareTo(y.FirstName);
-            if (x.LastName.CompareTo(y.LastName) != 0)
-                return x.LastName.CompareTo(y.LastName);
-            if (x.MiddleName.CompareTo(y.MiddleName) != 0)
-                return x.MiddleName.CompareTo(y.MiddleName);
-            if (Nullable.Compare(x.LastActivityDate, y.LastActivityDate) != 0)
-                return Nullable.Compare(x.LastActivityDate, y.LastActivityDate);
-            if (x.PasswordSalt.CompareTo(y.PasswordSalt) != 0)
-                return x.PasswordSalt.CompareTo(y.PasswordSalt);
-
-            return 0;
         }
     }
 }

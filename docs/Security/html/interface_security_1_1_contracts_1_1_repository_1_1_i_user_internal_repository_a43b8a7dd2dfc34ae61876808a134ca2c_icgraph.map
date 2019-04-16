@@ -1,0 +1,4 @@
+<map id="Security.Contracts.Repository.IUserInternalRepository.CheckAccess" name="Security.Contracts.Repository.IUserInternalRepository.CheckAccess">
+<area shape="rect" id="node1" title="Проверка доступа по логину" alt="" coords="248,5,489,47"/>
+<area shape="rect" id="node2" href="$class_security_1_1_core_1_1_security.html#ae5937d0273a4f0016900f0117c8fa889" title="Проверка доступа пользователя" alt="" coords="5,5,200,47"/>
+</map>

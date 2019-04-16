@@ -1,0 +1,1928 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Applications Security: Класс Security.Core.DataLayer.Repositories.UserGroupRepository</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Applications Security
+   &#160;<span id="projectnumber">2.1</span>
+   </div>
+   <div id="projectbrief">Apps Security</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_security.html">Security</a></li><li class="navelem"><a class="el" href="namespace_security_1_1_core.html">Core</a></li><li class="navelem"><a class="el" href="namespace_security_1_1_core_1_1_data_layer.html">DataLayer</a></li><li class="navelem"><a class="el" href="namespace_security_1_1_core_1_1_data_layer_1_1_repositories.html">Repositories</a></li><li class="navelem"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html">UserGroupRepository</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс Security.Core.DataLayer.Repositories.UserGroupRepository</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Управление пользователями и группами  
+ <a href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#details">Подробнее...</a></p>
+<div class="dynheader">
+Граф наследования:Security.Core.DataLayer.Repositories.UserGroupRepository:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository__inherit__graph.png" border="0" usemap="#_security_8_core_8_data_layer_8_repositories_8_user_group_repository_inherit__map" alt="Inheritance graph"/></div>
+<map name="_security_8_core_8_data_layer_8_repositories_8_user_group_repository_inherit__map" id="_security_8_core_8_data_layer_8_repositories_8_user_group_repository_inherit__map">
+<area shape="rect"  title="Ð£Ð¿ÑÐ°Ð²Ð»ÐµÐ½Ð¸Ðµ Ð¿Ð¾Ð»ÑÐ·Ð¾Ð²Ð°ÑÐµÐ»ÑÐ¼Ð¸ Ð¸ Ð³ÑÑÐ¿Ð¿Ð°Ð¼Ð¸" alt="" coords="5,80,228,121"/>
+<area shape="rect"  href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html" title="Ð£Ð¿ÑÐ°Ð²Ð»ÐµÐ½Ð¸Ðµ Ð¿Ð¾Ð»ÑÐ·Ð¾Ð²Ð°ÑÐµÐ»ÑÐ¼Ð¸ Ð¸ Ð³ÑÑÐ¿Ð¿Ð°Ð¼Ð¸" alt="" coords="42,5,191,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса Security.Core.DataLayer.Repositories.UserGroupRepository:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository__coll__graph.png" border="0" usemap="#_security_8_core_8_data_layer_8_repositories_8_user_group_repository_coll__map" alt="Collaboration graph"/></div>
+<map name="_security_8_core_8_data_layer_8_repositories_8_user_group_repository_coll__map" id="_security_8_core_8_data_layer_8_repositories_8_user_group_repository_coll__map">
+<area shape="rect"  title="Ð£Ð¿ÑÐ°Ð²Ð»ÐµÐ½Ð¸Ðµ Ð¿Ð¾Ð»ÑÐ·Ð¾Ð²Ð°ÑÐµÐ»ÑÐ¼Ð¸ Ð¸ Ð³ÑÑÐ¿Ð¿Ð°Ð¼Ð¸" alt="" coords="5,80,228,121"/>
+<area shape="rect"  href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html" title="Ð£Ð¿ÑÐ°Ð²Ð»ÐµÐ½Ð¸Ðµ Ð¿Ð¾Ð»ÑÐ·Ð¾Ð²Ð°ÑÐµÐ»ÑÐ¼Ð¸ Ð¸ Ð³ÑÑÐ¿Ð¿Ð°Ð¼Ð¸" alt="" coords="42,5,191,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a87659ccf6a5b6102639d34d28a5711db"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#a87659ccf6a5b6102639d34d28a5711db">UserGroupRepository</a> (<a class="el" href="interface_security_1_1_common_contracts_1_1_i_common_db.html">ICommonDb</a> commonDb)</td></tr>
+<tr class="memdesc:a87659ccf6a5b6102639d34d28a5711db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Управление пользователями и группами  <a href="#a87659ccf6a5b6102639d34d28a5711db">Подробнее...</a><br /></td></tr>
+<tr class="separator:a87659ccf6a5b6102639d34d28a5711db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bd51347d594aabd95d816cf741a05e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#a6bd51347d594aabd95d816cf741a05e9">AddGroupsToUser</a> (int[] idGroups, int idUser)</td></tr>
+<tr class="memdesc:a6bd51347d594aabd95d816cf741a05e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет пользователя в несколько групп сразу  <a href="#a6bd51347d594aabd95d816cf741a05e9">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6bd51347d594aabd95d816cf741a05e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1807d4d7697b61df6b5be6327120105b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#a1807d4d7697b61df6b5be6327120105b">AddGroupsToUser</a> (Guid[] groupsId, Guid userId)</td></tr>
+<tr class="memdesc:a1807d4d7697b61df6b5be6327120105b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет пользователя в несколько групп сразу  <a href="#a1807d4d7697b61df6b5be6327120105b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1807d4d7697b61df6b5be6327120105b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9265cd8fa74a6a590b5c15f106f2cfc1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#a9265cd8fa74a6a590b5c15f106f2cfc1">AddGroupsToUser</a> (string[] groups, string user)</td></tr>
+<tr class="memdesc:a9265cd8fa74a6a590b5c15f106f2cfc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет пользователя в несколько групп сразу  <a href="#a9265cd8fa74a6a590b5c15f106f2cfc1">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9265cd8fa74a6a590b5c15f106f2cfc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fbfa4502a9df0ea86a601f56300f810"><td class="memItemLeft" align="right" valign="top">Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#a9fbfa4502a9df0ea86a601f56300f810">AddGroupsToUserAsync</a> (int[] idGroups, int idUser)</td></tr>
+<tr class="memdesc:a9fbfa4502a9df0ea86a601f56300f810"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет пользователя в несколько групп сразу  <a href="#a9fbfa4502a9df0ea86a601f56300f810">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9fbfa4502a9df0ea86a601f56300f810"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a553ab2dc7e0357ee1e901c36fc156392"><td class="memItemLeft" align="right" valign="top">Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#a553ab2dc7e0357ee1e901c36fc156392">AddGroupsToUserAsync</a> (Guid[] groupsId, Guid userId)</td></tr>
+<tr class="memdesc:a553ab2dc7e0357ee1e901c36fc156392"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет пользователя в несколько групп сразу  <a href="#a553ab2dc7e0357ee1e901c36fc156392">Подробнее...</a><br /></td></tr>
+<tr class="separator:a553ab2dc7e0357ee1e901c36fc156392"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69b3dddd56403d456594c174f9f08393"><td class="memItemLeft" align="right" valign="top">Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#a69b3dddd56403d456594c174f9f08393">AddGroupsToUserAsync</a> (string[] groups, string user)</td></tr>
+<tr class="memdesc:a69b3dddd56403d456594c174f9f08393"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет пользователя в несколько групп сразу  <a href="#a69b3dddd56403d456594c174f9f08393">Подробнее...</a><br /></td></tr>
+<tr class="separator:a69b3dddd56403d456594c174f9f08393"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47682bfa3f56d47334f07c41fb3f15a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#a47682bfa3f56d47334f07c41fb3f15a2">AddUsersToGroup</a> (int[] idUsers, int idGroup)</td></tr>
+<tr class="memdesc:a47682bfa3f56d47334f07c41fb3f15a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет пользователей в группу  <a href="#a47682bfa3f56d47334f07c41fb3f15a2">Подробнее...</a><br /></td></tr>
+<tr class="separator:a47682bfa3f56d47334f07c41fb3f15a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace41c85211531169bdbc882f747bce59"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#ace41c85211531169bdbc882f747bce59">AddUsersToGroup</a> (Guid[] usersId, Guid groupId)</td></tr>
+<tr class="memdesc:ace41c85211531169bdbc882f747bce59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет пользователей в группу  <a href="#ace41c85211531169bdbc882f747bce59">Подробнее...</a><br /></td></tr>
+<tr class="separator:ace41c85211531169bdbc882f747bce59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6f8f81b928b75b7ec05057e8002369e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#ac6f8f81b928b75b7ec05057e8002369e">AddUsersToGroup</a> (string[] users, string group)</td></tr>
+<tr class="memdesc:ac6f8f81b928b75b7ec05057e8002369e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет пользователей в группу  <a href="#ac6f8f81b928b75b7ec05057e8002369e">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac6f8f81b928b75b7ec05057e8002369e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a064d9edbab7c980470c1c262ebaf1e32"><td class="memItemLeft" align="right" valign="top">Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#a064d9edbab7c980470c1c262ebaf1e32">AddUsersToGroupAsync</a> (int[] idUsers, int idGroup)</td></tr>
+<tr class="memdesc:a064d9edbab7c980470c1c262ebaf1e32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет пользователей в группу  <a href="#a064d9edbab7c980470c1c262ebaf1e32">Подробнее...</a><br /></td></tr>
+<tr class="separator:a064d9edbab7c980470c1c262ebaf1e32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60a457a5a6a19b4b48051c90abab82aa"><td class="memItemLeft" align="right" valign="top">Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#a60a457a5a6a19b4b48051c90abab82aa">AddUsersToGroupAsync</a> (Guid[] usersId, Guid groupId)</td></tr>
+<tr class="memdesc:a60a457a5a6a19b4b48051c90abab82aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет пользователей в группу  <a href="#a60a457a5a6a19b4b48051c90abab82aa">Подробнее...</a><br /></td></tr>
+<tr class="separator:a60a457a5a6a19b4b48051c90abab82aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae2145161980fad8feb897c0d84be672"><td class="memItemLeft" align="right" valign="top">Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#aae2145161980fad8feb897c0d84be672">AddUsersToGroupAsync</a> (string[] users, string group)</td></tr>
+<tr class="memdesc:aae2145161980fad8feb897c0d84be672"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет пользователей в группу  <a href="#aae2145161980fad8feb897c0d84be672">Подробнее...</a><br /></td></tr>
+<tr class="separator:aae2145161980fad8feb897c0d84be672"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d4666e4e34b433168f519afe745d11d"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; <a class="el" href="class_security_1_1_model_1_1_group.html">Group</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#a8d4666e4e34b433168f519afe745d11d">GetGroups</a> (Guid id)</td></tr>
+<tr class="memdesc:a8d4666e4e34b433168f519afe745d11d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает группы пользователя  <a href="#a8d4666e4e34b433168f519afe745d11d">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8d4666e4e34b433168f519afe745d11d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a21dba4d43163ff6e899fe8eb351024"><td class="memItemLeft" align="right" valign="top">Task&lt; IEnumerable&lt; <a class="el" href="class_security_1_1_model_1_1_group.html">Group</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#a5a21dba4d43163ff6e899fe8eb351024">GetGroupsAsync</a> (Guid id)</td></tr>
+<tr class="memdesc:a5a21dba4d43163ff6e899fe8eb351024"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает группы пользователя  <a href="#a5a21dba4d43163ff6e899fe8eb351024">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5a21dba4d43163ff6e899fe8eb351024"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d0850675730e11d53ff702c4bdf7206"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; <a class="el" href="class_security_1_1_model_1_1_group.html">Group</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#a1d0850675730e11d53ff702c4bdf7206">GetGroups</a> (int idUser)</td></tr>
+<tr class="memdesc:a1d0850675730e11d53ff702c4bdf7206"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает группы пользователя  <a href="#a1d0850675730e11d53ff702c4bdf7206">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1d0850675730e11d53ff702c4bdf7206"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9c20c86fb1b6ba6159e4108b566eaf2"><td class="memItemLeft" align="right" valign="top">Task&lt; IEnumerable&lt; <a class="el" href="class_security_1_1_model_1_1_group.html">Group</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#ac9c20c86fb1b6ba6159e4108b566eaf2">GetGroupsAsync</a> (int idUser)</td></tr>
+<tr class="memdesc:ac9c20c86fb1b6ba6159e4108b566eaf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает группы пользователя  <a href="#ac9c20c86fb1b6ba6159e4108b566eaf2">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac9c20c86fb1b6ba6159e4108b566eaf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6eb3c26caacd1f1d0660a95e7fd0719b"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; <a class="el" href="class_security_1_1_model_1_1_group.html">Group</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#a6eb3c26caacd1f1d0660a95e7fd0719b">GetGroups</a> (string name)</td></tr>
+<tr class="memdesc:a6eb3c26caacd1f1d0660a95e7fd0719b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает группы пользователя  <a href="#a6eb3c26caacd1f1d0660a95e7fd0719b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6eb3c26caacd1f1d0660a95e7fd0719b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d7cd41c94eee31e8741ef148818b5df"><td class="memItemLeft" align="right" valign="top">Task&lt; IEnumerable&lt; <a class="el" href="class_security_1_1_model_1_1_group.html">Group</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#a2d7cd41c94eee31e8741ef148818b5df">GetGroupsAsync</a> (string name)</td></tr>
+<tr class="memdesc:a2d7cd41c94eee31e8741ef148818b5df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает группы пользователя  <a href="#a2d7cd41c94eee31e8741ef148818b5df">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2d7cd41c94eee31e8741ef148818b5df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5a098a597521cadafeea6ecee74d77d"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; <a class="el" href="class_security_1_1_model_1_1_user.html">User</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#ab5a098a597521cadafeea6ecee74d77d">GetUsers</a> (string name)</td></tr>
+<tr class="memdesc:ab5a098a597521cadafeea6ecee74d77d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает пользователей группы  <a href="#ab5a098a597521cadafeea6ecee74d77d">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab5a098a597521cadafeea6ecee74d77d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a447b8e0f3bde142aa06a3ab08df54d58"><td class="memItemLeft" align="right" valign="top">Task&lt; IEnumerable&lt; <a class="el" href="class_security_1_1_model_1_1_user.html">User</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#a447b8e0f3bde142aa06a3ab08df54d58">GetUsersAsync</a> (string name)</td></tr>
+<tr class="memdesc:a447b8e0f3bde142aa06a3ab08df54d58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает пользователей группы  <a href="#a447b8e0f3bde142aa06a3ab08df54d58">Подробнее...</a><br /></td></tr>
+<tr class="separator:a447b8e0f3bde142aa06a3ab08df54d58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcd53b738e78f03234600b0651585bf3"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; <a class="el" href="class_security_1_1_model_1_1_user.html">User</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#adcd53b738e78f03234600b0651585bf3">GetUsers</a> (Guid id)</td></tr>
+<tr class="memdesc:adcd53b738e78f03234600b0651585bf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает пользователей группы  <a href="#adcd53b738e78f03234600b0651585bf3">Подробнее...</a><br /></td></tr>
+<tr class="separator:adcd53b738e78f03234600b0651585bf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a992334796d61a129be208efaf11d2724"><td class="memItemLeft" align="right" valign="top">Task&lt; IEnumerable&lt; <a class="el" href="class_security_1_1_model_1_1_user.html">User</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#a992334796d61a129be208efaf11d2724">GetUsersAsync</a> (Guid id)</td></tr>
+<tr class="memdesc:a992334796d61a129be208efaf11d2724"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает пользователей группы  <a href="#a992334796d61a129be208efaf11d2724">Подробнее...</a><br /></td></tr>
+<tr class="separator:a992334796d61a129be208efaf11d2724"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ded759ec38f3d464c0b937a81361d37"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; <a class="el" href="class_security_1_1_model_1_1_user.html">User</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#a3ded759ec38f3d464c0b937a81361d37">GetUsers</a> (int idGroup)</td></tr>
+<tr class="memdesc:a3ded759ec38f3d464c0b937a81361d37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает пользователей группы  <a href="#a3ded759ec38f3d464c0b937a81361d37">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3ded759ec38f3d464c0b937a81361d37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1587ee7a99673301e3ec3c0c2ed94c54"><td class="memItemLeft" align="right" valign="top">Task&lt; IEnumerable&lt; <a class="el" href="class_security_1_1_model_1_1_user.html">User</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#a1587ee7a99673301e3ec3c0c2ed94c54">GetUsersAsync</a> (int idGroup)</td></tr>
+<tr class="memdesc:a1587ee7a99673301e3ec3c0c2ed94c54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает пользователей группы  <a href="#a1587ee7a99673301e3ec3c0c2ed94c54">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1587ee7a99673301e3ec3c0c2ed94c54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e2d6971e0f6ab97c2a0e28f00241bed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#a8e2d6971e0f6ab97c2a0e28f00241bed">RemoveUsersFromGroup</a> (int[] idUsers, int idGroup)</td></tr>
+<tr class="memdesc:a8e2d6971e0f6ab97c2a0e28f00241bed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Производит удаление пользователей из группы  <a href="#a8e2d6971e0f6ab97c2a0e28f00241bed">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8e2d6971e0f6ab97c2a0e28f00241bed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4535bf58fa5f005cb5fda97d009f378b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#a4535bf58fa5f005cb5fda97d009f378b">RemoveUsersFromGroup</a> (Guid[] usersId, Guid groupId)</td></tr>
+<tr class="memdesc:a4535bf58fa5f005cb5fda97d009f378b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Производит удаление пользователей из группы  <a href="#a4535bf58fa5f005cb5fda97d009f378b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4535bf58fa5f005cb5fda97d009f378b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0abc3aac88f55e40c5a290310de2c4e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#af0abc3aac88f55e40c5a290310de2c4e">RemoveUsersFromGroup</a> (string[] users, string group)</td></tr>
+<tr class="memdesc:af0abc3aac88f55e40c5a290310de2c4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Производит удаление пользователей из группы  <a href="#af0abc3aac88f55e40c5a290310de2c4e">Подробнее...</a><br /></td></tr>
+<tr class="separator:af0abc3aac88f55e40c5a290310de2c4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2acfee1086e42281c374990c3fed3a36"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#a2acfee1086e42281c374990c3fed3a36">RemoveGroupsFromUser</a> (int[] idGroups, int idUser)</td></tr>
+<tr class="memdesc:a2acfee1086e42281c374990c3fed3a36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Производит удаление пользователей из нескольких групп сразу  <a href="#a2acfee1086e42281c374990c3fed3a36">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2acfee1086e42281c374990c3fed3a36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f5e28b69982ae4c9f646ca8d170406c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#a9f5e28b69982ae4c9f646ca8d170406c">RemoveGroupsFromUser</a> (Guid[] groupsId, Guid userId)</td></tr>
+<tr class="memdesc:a9f5e28b69982ae4c9f646ca8d170406c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Производит удаление пользователей из нескольких групп сразу  <a href="#a9f5e28b69982ae4c9f646ca8d170406c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9f5e28b69982ae4c9f646ca8d170406c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a122e77b9b222aa26a95eab8fbf8b73f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#a122e77b9b222aa26a95eab8fbf8b73f5">RemoveGroupsFromUser</a> (string[] groups, string user)</td></tr>
+<tr class="memdesc:a122e77b9b222aa26a95eab8fbf8b73f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Производит удаление пользователей из нескольких групп сразу  <a href="#a122e77b9b222aa26a95eab8fbf8b73f5">Подробнее...</a><br /></td></tr>
+<tr class="separator:a122e77b9b222aa26a95eab8fbf8b73f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50a9380e919c42bf3db2f0c26c0f8a80"><td class="memItemLeft" align="right" valign="top">Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#a50a9380e919c42bf3db2f0c26c0f8a80">RemoveUsersFromGroupAsync</a> (int[] idUsers, int idGroup)</td></tr>
+<tr class="memdesc:a50a9380e919c42bf3db2f0c26c0f8a80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Производит удаление пользователей из группы  <a href="#a50a9380e919c42bf3db2f0c26c0f8a80">Подробнее...</a><br /></td></tr>
+<tr class="separator:a50a9380e919c42bf3db2f0c26c0f8a80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a622c18fdb81b19ccb63df972e516cc61"><td class="memItemLeft" align="right" valign="top">Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#a622c18fdb81b19ccb63df972e516cc61">RemoveUsersFromGroupAsync</a> (Guid[] usersId, Guid groupId)</td></tr>
+<tr class="memdesc:a622c18fdb81b19ccb63df972e516cc61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Производит удаление пользователей из группы  <a href="#a622c18fdb81b19ccb63df972e516cc61">Подробнее...</a><br /></td></tr>
+<tr class="separator:a622c18fdb81b19ccb63df972e516cc61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb9ac07d14bf42b0334243df88ecb0a8"><td class="memItemLeft" align="right" valign="top">Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#abb9ac07d14bf42b0334243df88ecb0a8">RemoveUsersFromGroupAsync</a> (string[] users, string group)</td></tr>
+<tr class="memdesc:abb9ac07d14bf42b0334243df88ecb0a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Производит удаление пользователей из группы  <a href="#abb9ac07d14bf42b0334243df88ecb0a8">Подробнее...</a><br /></td></tr>
+<tr class="separator:abb9ac07d14bf42b0334243df88ecb0a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a596a889be5527bd64309886ca1600151"><td class="memItemLeft" align="right" valign="top">Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#a596a889be5527bd64309886ca1600151">RemoveGroupsFromUserAsync</a> (int[] idGroups, int idUser)</td></tr>
+<tr class="memdesc:a596a889be5527bd64309886ca1600151"><td class="mdescLeft">&#160;</td><td class="mdescRight">Производит удаление пользователей из нескольких групп сразу  <a href="#a596a889be5527bd64309886ca1600151">Подробнее...</a><br /></td></tr>
+<tr class="separator:a596a889be5527bd64309886ca1600151"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c47d2ea586bb3bdf0794bcc818f23a1"><td class="memItemLeft" align="right" valign="top">Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#a6c47d2ea586bb3bdf0794bcc818f23a1">RemoveGroupsFromUserAsync</a> (Guid[] groupsId, Guid userId)</td></tr>
+<tr class="memdesc:a6c47d2ea586bb3bdf0794bcc818f23a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Производит удаление пользователей из нескольких групп сразу  <a href="#a6c47d2ea586bb3bdf0794bcc818f23a1">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6c47d2ea586bb3bdf0794bcc818f23a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad63f7c36f479aca1dd7718992a4cd98a"><td class="memItemLeft" align="right" valign="top">Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#ad63f7c36f479aca1dd7718992a4cd98a">RemoveGroupsFromUserAsync</a> (string[] groups, string user)</td></tr>
+<tr class="memdesc:ad63f7c36f479aca1dd7718992a4cd98a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Производит удаление пользователей из нескольких групп сразу  <a href="#ad63f7c36f479aca1dd7718992a4cd98a">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad63f7c36f479aca1dd7718992a4cd98a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7acb8a569440cdbb61e059eb38b9a741"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; <a class="el" href="class_security_1_1_model_1_1_user.html">User</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#a7acb8a569440cdbb61e059eb38b9a741">GetNonIncludedUsers</a> (string group)</td></tr>
+<tr class="memdesc:a7acb8a569440cdbb61e059eb38b9a741"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает, не включенных в группу, пользователей  <a href="#a7acb8a569440cdbb61e059eb38b9a741">Подробнее...</a><br /></td></tr>
+<tr class="separator:a7acb8a569440cdbb61e059eb38b9a741"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9d106671b32912c1a282d37c4c32151"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; <a class="el" href="class_security_1_1_model_1_1_user.html">User</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#aa9d106671b32912c1a282d37c4c32151">GetNonIncludedUsers</a> (Guid groupId)</td></tr>
+<tr class="memdesc:aa9d106671b32912c1a282d37c4c32151"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает, не включенных в группу, пользователей  <a href="#aa9d106671b32912c1a282d37c4c32151">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa9d106671b32912c1a282d37c4c32151"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3843b4372a2beb9952f4e5f1b2751b11"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; <a class="el" href="class_security_1_1_model_1_1_user.html">User</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#a3843b4372a2beb9952f4e5f1b2751b11">GetNonIncludedUsers</a> (int idGroup)</td></tr>
+<tr class="memdesc:a3843b4372a2beb9952f4e5f1b2751b11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает, не включенных в группу, пользователей  <a href="#a3843b4372a2beb9952f4e5f1b2751b11">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3843b4372a2beb9952f4e5f1b2751b11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d12bfe3a9957d908de7d20b7e95a395"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; <a class="el" href="class_security_1_1_model_1_1_group.html">Group</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#a8d12bfe3a9957d908de7d20b7e95a395">GetNonIncludedGroups</a> (string user)</td></tr>
+<tr class="memdesc:a8d12bfe3a9957d908de7d20b7e95a395"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает, отсутствующие у пользователя, группы  <a href="#a8d12bfe3a9957d908de7d20b7e95a395">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8d12bfe3a9957d908de7d20b7e95a395"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f1da9dceac2b627a49d0c7284a8ef61"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; <a class="el" href="class_security_1_1_model_1_1_group.html">Group</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#a6f1da9dceac2b627a49d0c7284a8ef61">GetNonIncludedGroups</a> (Guid userId)</td></tr>
+<tr class="memdesc:a6f1da9dceac2b627a49d0c7284a8ef61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает, отсутствующие у пользователя, группы  <a href="#a6f1da9dceac2b627a49d0c7284a8ef61">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6f1da9dceac2b627a49d0c7284a8ef61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7765a69d2f7907f61b7c7973f03f80b"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; <a class="el" href="class_security_1_1_model_1_1_group.html">Group</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#af7765a69d2f7907f61b7c7973f03f80b">GetNonIncludedGroups</a> (int idUser)</td></tr>
+<tr class="memdesc:af7765a69d2f7907f61b7c7973f03f80b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает, отсутствующие у пользователя, группы  <a href="#af7765a69d2f7907f61b7c7973f03f80b">Подробнее...</a><br /></td></tr>
+<tr class="separator:af7765a69d2f7907f61b7c7973f03f80b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21cf07ae1eb95dabdaa8e5e849980e64"><td class="memItemLeft" align="right" valign="top">Task&lt; IEnumerable&lt; <a class="el" href="class_security_1_1_model_1_1_user.html">User</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#a21cf07ae1eb95dabdaa8e5e849980e64">GetNonIncludedUsersAsync</a> (string group)</td></tr>
+<tr class="memdesc:a21cf07ae1eb95dabdaa8e5e849980e64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает, не включенных в группу, пользователей  <a href="#a21cf07ae1eb95dabdaa8e5e849980e64">Подробнее...</a><br /></td></tr>
+<tr class="separator:a21cf07ae1eb95dabdaa8e5e849980e64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59e8bcee850d34cbd659729581005460"><td class="memItemLeft" align="right" valign="top">Task&lt; IEnumerable&lt; <a class="el" href="class_security_1_1_model_1_1_user.html">User</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#a59e8bcee850d34cbd659729581005460">GetNonIncludedUsersAsync</a> (Guid groupId)</td></tr>
+<tr class="memdesc:a59e8bcee850d34cbd659729581005460"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает, не включенных в группу, пользователей  <a href="#a59e8bcee850d34cbd659729581005460">Подробнее...</a><br /></td></tr>
+<tr class="separator:a59e8bcee850d34cbd659729581005460"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adff44e5a71d7e8474161ab0234782090"><td class="memItemLeft" align="right" valign="top">Task&lt; IEnumerable&lt; <a class="el" href="class_security_1_1_model_1_1_user.html">User</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#adff44e5a71d7e8474161ab0234782090">GetNonIncludedUsersAsync</a> (int idGroup)</td></tr>
+<tr class="memdesc:adff44e5a71d7e8474161ab0234782090"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает, не включенных в группу, пользователей  <a href="#adff44e5a71d7e8474161ab0234782090">Подробнее...</a><br /></td></tr>
+<tr class="separator:adff44e5a71d7e8474161ab0234782090"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dc8b4ff1dbba7624d071efc39b07721"><td class="memItemLeft" align="right" valign="top">Task&lt; IEnumerable&lt; <a class="el" href="class_security_1_1_model_1_1_group.html">Group</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#a5dc8b4ff1dbba7624d071efc39b07721">GetNonIncludedGroupsAsync</a> (string user)</td></tr>
+<tr class="memdesc:a5dc8b4ff1dbba7624d071efc39b07721"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает, отсутствующие у пользователя, группы  <a href="#a5dc8b4ff1dbba7624d071efc39b07721">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5dc8b4ff1dbba7624d071efc39b07721"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a165dbcc866094a68d9f2749383a2851a"><td class="memItemLeft" align="right" valign="top">Task&lt; IEnumerable&lt; <a class="el" href="class_security_1_1_model_1_1_group.html">Group</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#a165dbcc866094a68d9f2749383a2851a">GetNonIncludedGroupsAsync</a> (Guid userId)</td></tr>
+<tr class="memdesc:a165dbcc866094a68d9f2749383a2851a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает, отсутствующие у пользователя, группы  <a href="#a165dbcc866094a68d9f2749383a2851a">Подробнее...</a><br /></td></tr>
+<tr class="separator:a165dbcc866094a68d9f2749383a2851a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97a47ea3351185db60c4428d4ed969f0"><td class="memItemLeft" align="right" valign="top">Task&lt; IEnumerable&lt; <a class="el" href="class_security_1_1_model_1_1_group.html">Group</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_user_group_repository.html#a97a47ea3351185db60c4428d4ed969f0">GetNonIncludedGroupsAsync</a> (int idUser)</td></tr>
+<tr class="memdesc:a97a47ea3351185db60c4428d4ed969f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает, отсутствующие у пользователя, группы  <a href="#a97a47ea3351185db60c4428d4ed969f0">Подробнее...</a><br /></td></tr>
+<tr class="separator:a97a47ea3351185db60c4428d4ed969f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Управление пользователями и группами </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a87659ccf6a5b6102639d34d28a5711db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87659ccf6a5b6102639d34d28a5711db">&#9670;&nbsp;</a></span>UserGroupRepository()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Security.Core.DataLayer.Repositories.UserGroupRepository.UserGroupRepository </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_security_1_1_common_contracts_1_1_i_common_db.html">ICommonDb</a>&#160;</td>
+          <td class="paramname"><em>commonDb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Управление пользователями и группами </p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a6bd51347d594aabd95d816cf741a05e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bd51347d594aabd95d816cf741a05e9">&#9670;&nbsp;</a></span>AddGroupsToUser() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Security.Core.DataLayer.Repositories.UserGroupRepository.AddGroupsToUser </td>
+          <td>(</td>
+          <td class="paramtype">int []&#160;</td>
+          <td class="paramname"><em>idGroups</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idUser</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавляет пользователя в несколько групп сразу </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idGroups</td><td></td></tr>
+    <tr><td class="paramname">idUser</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html#aad0902bb774d898d0d7cb17ac174de47">Security.Contracts.Repository.IUserGroupRepository</a>.</p>
+
+</div>
+</div>
+<a id="a1807d4d7697b61df6b5be6327120105b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1807d4d7697b61df6b5be6327120105b">&#9670;&nbsp;</a></span>AddGroupsToUser() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Security.Core.DataLayer.Repositories.UserGroupRepository.AddGroupsToUser </td>
+          <td>(</td>
+          <td class="paramtype">Guid []&#160;</td>
+          <td class="paramname"><em>groupsId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Guid&#160;</td>
+          <td class="paramname"><em>userId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавляет пользователя в несколько групп сразу </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">groupsId</td><td></td></tr>
+    <tr><td class="paramname">userId</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html#a768e4049c482f2b36a3b654556e628b5">Security.Contracts.Repository.IUserGroupRepository</a>.</p>
+
+</div>
+</div>
+<a id="a9265cd8fa74a6a590b5c15f106f2cfc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9265cd8fa74a6a590b5c15f106f2cfc1">&#9670;&nbsp;</a></span>AddGroupsToUser() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Security.Core.DataLayer.Repositories.UserGroupRepository.AddGroupsToUser </td>
+          <td>(</td>
+          <td class="paramtype">string []&#160;</td>
+          <td class="paramname"><em>groups</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>user</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавляет пользователя в несколько групп сразу </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">groups</td><td></td></tr>
+    <tr><td class="paramname">user</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html#a7a4c2edfa926934f55886a76a2d91b5f">Security.Contracts.Repository.IUserGroupRepository</a>.</p>
+
+</div>
+</div>
+<a id="a9fbfa4502a9df0ea86a601f56300f810"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fbfa4502a9df0ea86a601f56300f810">&#9670;&nbsp;</a></span>AddGroupsToUserAsync() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task Security.Core.DataLayer.Repositories.UserGroupRepository.AddGroupsToUserAsync </td>
+          <td>(</td>
+          <td class="paramtype">int []&#160;</td>
+          <td class="paramname"><em>idGroups</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idUser</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавляет пользователя в несколько групп сразу </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idGroups</td><td></td></tr>
+    <tr><td class="paramname">idUser</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html#a85585fac286a4274d2cbe0af2db0146e">Security.Contracts.Repository.IUserGroupRepository</a>.</p>
+
+</div>
+</div>
+<a id="a553ab2dc7e0357ee1e901c36fc156392"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a553ab2dc7e0357ee1e901c36fc156392">&#9670;&nbsp;</a></span>AddGroupsToUserAsync() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task Security.Core.DataLayer.Repositories.UserGroupRepository.AddGroupsToUserAsync </td>
+          <td>(</td>
+          <td class="paramtype">Guid []&#160;</td>
+          <td class="paramname"><em>groupsId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Guid&#160;</td>
+          <td class="paramname"><em>userId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавляет пользователя в несколько групп сразу </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">groupsId</td><td></td></tr>
+    <tr><td class="paramname">userId</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html#a1c9ab567def216ca82bba9c19bb8a6e1">Security.Contracts.Repository.IUserGroupRepository</a>.</p>
+
+</div>
+</div>
+<a id="a69b3dddd56403d456594c174f9f08393"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69b3dddd56403d456594c174f9f08393">&#9670;&nbsp;</a></span>AddGroupsToUserAsync() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task Security.Core.DataLayer.Repositories.UserGroupRepository.AddGroupsToUserAsync </td>
+          <td>(</td>
+          <td class="paramtype">string []&#160;</td>
+          <td class="paramname"><em>groups</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>user</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавляет пользователя в несколько групп сразу </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">groups</td><td></td></tr>
+    <tr><td class="paramname">user</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html#ad773ebae7ade06ddc7aacbd43c8ed240">Security.Contracts.Repository.IUserGroupRepository</a>.</p>
+
+</div>
+</div>
+<a id="a47682bfa3f56d47334f07c41fb3f15a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47682bfa3f56d47334f07c41fb3f15a2">&#9670;&nbsp;</a></span>AddUsersToGroup() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Security.Core.DataLayer.Repositories.UserGroupRepository.AddUsersToGroup </td>
+          <td>(</td>
+          <td class="paramtype">int []&#160;</td>
+          <td class="paramname"><em>idUsers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idGroup</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавляет пользователей в группу </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idUsers</td><td></td></tr>
+    <tr><td class="paramname">idGroup</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html#a52f8b9bf88a5c195576278e78feae038">Security.Contracts.Repository.IUserGroupRepository</a>.</p>
+
+</div>
+</div>
+<a id="ace41c85211531169bdbc882f747bce59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace41c85211531169bdbc882f747bce59">&#9670;&nbsp;</a></span>AddUsersToGroup() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Security.Core.DataLayer.Repositories.UserGroupRepository.AddUsersToGroup </td>
+          <td>(</td>
+          <td class="paramtype">Guid []&#160;</td>
+          <td class="paramname"><em>usersId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Guid&#160;</td>
+          <td class="paramname"><em>groupId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавляет пользователей в группу </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">usersId</td><td></td></tr>
+    <tr><td class="paramname">groupId</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html#a8fa951bef8f3899dec49533a6719bec3">Security.Contracts.Repository.IUserGroupRepository</a>.</p>
+
+</div>
+</div>
+<a id="ac6f8f81b928b75b7ec05057e8002369e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6f8f81b928b75b7ec05057e8002369e">&#9670;&nbsp;</a></span>AddUsersToGroup() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Security.Core.DataLayer.Repositories.UserGroupRepository.AddUsersToGroup </td>
+          <td>(</td>
+          <td class="paramtype">string []&#160;</td>
+          <td class="paramname"><em>users</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>group</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавляет пользователей в группу </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">users</td><td></td></tr>
+    <tr><td class="paramname">group</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html#aff6ef0e48ef8b87d6acd37f2c8d32706">Security.Contracts.Repository.IUserGroupRepository</a>.</p>
+
+</div>
+</div>
+<a id="a064d9edbab7c980470c1c262ebaf1e32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a064d9edbab7c980470c1c262ebaf1e32">&#9670;&nbsp;</a></span>AddUsersToGroupAsync() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task Security.Core.DataLayer.Repositories.UserGroupRepository.AddUsersToGroupAsync </td>
+          <td>(</td>
+          <td class="paramtype">int []&#160;</td>
+          <td class="paramname"><em>idUsers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idGroup</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавляет пользователей в группу </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idUsers</td><td></td></tr>
+    <tr><td class="paramname">idGroup</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html#a3617798e1fc95baa4fb64beed72bdfee">Security.Contracts.Repository.IUserGroupRepository</a>.</p>
+
+</div>
+</div>
+<a id="a60a457a5a6a19b4b48051c90abab82aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60a457a5a6a19b4b48051c90abab82aa">&#9670;&nbsp;</a></span>AddUsersToGroupAsync() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task Security.Core.DataLayer.Repositories.UserGroupRepository.AddUsersToGroupAsync </td>
+          <td>(</td>
+          <td class="paramtype">Guid []&#160;</td>
+          <td class="paramname"><em>usersId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Guid&#160;</td>
+          <td class="paramname"><em>groupId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавляет пользователей в группу </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">usersId</td><td></td></tr>
+    <tr><td class="paramname">groupId</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html#a43d84b8f97c50b4df2b76a2d8b960fd3">Security.Contracts.Repository.IUserGroupRepository</a>.</p>
+
+</div>
+</div>
+<a id="aae2145161980fad8feb897c0d84be672"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae2145161980fad8feb897c0d84be672">&#9670;&nbsp;</a></span>AddUsersToGroupAsync() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task Security.Core.DataLayer.Repositories.UserGroupRepository.AddUsersToGroupAsync </td>
+          <td>(</td>
+          <td class="paramtype">string []&#160;</td>
+          <td class="paramname"><em>users</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>group</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавляет пользователей в группу </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">users</td><td></td></tr>
+    <tr><td class="paramname">group</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html#a393ffd467a1ee5ee9c2eb39f92a71336">Security.Contracts.Repository.IUserGroupRepository</a>.</p>
+
+</div>
+</div>
+<a id="a8d4666e4e34b433168f519afe745d11d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d4666e4e34b433168f519afe745d11d">&#9670;&nbsp;</a></span>GetGroups() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt;<a class="el" href="class_security_1_1_model_1_1_group.html">Group</a>&gt; Security.Core.DataLayer.Repositories.UserGroupRepository.GetGroups </td>
+          <td>(</td>
+          <td class="paramtype">Guid&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает группы пользователя </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html#a443df25141d61b6f4524f790b13fe9e9">Security.Contracts.Repository.IUserGroupRepository</a>.</p>
+
+</div>
+</div>
+<a id="a1d0850675730e11d53ff702c4bdf7206"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d0850675730e11d53ff702c4bdf7206">&#9670;&nbsp;</a></span>GetGroups() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt;<a class="el" href="class_security_1_1_model_1_1_group.html">Group</a>&gt; Security.Core.DataLayer.Repositories.UserGroupRepository.GetGroups </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idUser</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает группы пользователя </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idUser</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html#a1bc8435e403f2f08986077e65a04628f">Security.Contracts.Repository.IUserGroupRepository</a>.</p>
+
+</div>
+</div>
+<a id="a6eb3c26caacd1f1d0660a95e7fd0719b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6eb3c26caacd1f1d0660a95e7fd0719b">&#9670;&nbsp;</a></span>GetGroups() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt;<a class="el" href="class_security_1_1_model_1_1_group.html">Group</a>&gt; Security.Core.DataLayer.Repositories.UserGroupRepository.GetGroups </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает группы пользователя </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html#a4c7256fca1cd1a6254e7a496526dc197">Security.Contracts.Repository.IUserGroupRepository</a>.</p>
+
+</div>
+</div>
+<a id="a5a21dba4d43163ff6e899fe8eb351024"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a21dba4d43163ff6e899fe8eb351024">&#9670;&nbsp;</a></span>GetGroupsAsync() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;IEnumerable&lt;<a class="el" href="class_security_1_1_model_1_1_group.html">Group</a>&gt; &gt; Security.Core.DataLayer.Repositories.UserGroupRepository.GetGroupsAsync </td>
+          <td>(</td>
+          <td class="paramtype">Guid&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает группы пользователя </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html#a54cbb08527bbec4a56b6ec079cffef80">Security.Contracts.Repository.IUserGroupRepository</a>.</p>
+
+</div>
+</div>
+<a id="ac9c20c86fb1b6ba6159e4108b566eaf2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9c20c86fb1b6ba6159e4108b566eaf2">&#9670;&nbsp;</a></span>GetGroupsAsync() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;IEnumerable&lt;<a class="el" href="class_security_1_1_model_1_1_group.html">Group</a>&gt; &gt; Security.Core.DataLayer.Repositories.UserGroupRepository.GetGroupsAsync </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idUser</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает группы пользователя </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idUser</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html#ae626ff130c637b3b92cb2f132adc1e48">Security.Contracts.Repository.IUserGroupRepository</a>.</p>
+
+</div>
+</div>
+<a id="a2d7cd41c94eee31e8741ef148818b5df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d7cd41c94eee31e8741ef148818b5df">&#9670;&nbsp;</a></span>GetGroupsAsync() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;IEnumerable&lt;<a class="el" href="class_security_1_1_model_1_1_group.html">Group</a>&gt; &gt; Security.Core.DataLayer.Repositories.UserGroupRepository.GetGroupsAsync </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает группы пользователя </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html#af027d75976dd5e5a3a5c6dc86c4bc15e">Security.Contracts.Repository.IUserGroupRepository</a>.</p>
+
+</div>
+</div>
+<a id="a8d12bfe3a9957d908de7d20b7e95a395"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d12bfe3a9957d908de7d20b7e95a395">&#9670;&nbsp;</a></span>GetNonIncludedGroups() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt;<a class="el" href="class_security_1_1_model_1_1_group.html">Group</a>&gt; Security.Core.DataLayer.Repositories.UserGroupRepository.GetNonIncludedGroups </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>user</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает, отсутствующие у пользователя, группы </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">user</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html#ac676708ad126a551dcf69c87a9baa655">Security.Contracts.Repository.IUserGroupRepository</a>.</p>
+
+</div>
+</div>
+<a id="a6f1da9dceac2b627a49d0c7284a8ef61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f1da9dceac2b627a49d0c7284a8ef61">&#9670;&nbsp;</a></span>GetNonIncludedGroups() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt;<a class="el" href="class_security_1_1_model_1_1_group.html">Group</a>&gt; Security.Core.DataLayer.Repositories.UserGroupRepository.GetNonIncludedGroups </td>
+          <td>(</td>
+          <td class="paramtype">Guid&#160;</td>
+          <td class="paramname"><em>userId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает, отсутствующие у пользователя, группы </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userId</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html#a24e013cdc4338f77b9872b0c202db35c">Security.Contracts.Repository.IUserGroupRepository</a>.</p>
+
+</div>
+</div>
+<a id="af7765a69d2f7907f61b7c7973f03f80b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7765a69d2f7907f61b7c7973f03f80b">&#9670;&nbsp;</a></span>GetNonIncludedGroups() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt;<a class="el" href="class_security_1_1_model_1_1_group.html">Group</a>&gt; Security.Core.DataLayer.Repositories.UserGroupRepository.GetNonIncludedGroups </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idUser</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает, отсутствующие у пользователя, группы </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idUser</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html#ac1b1072d93f616c1400d21c3f3c70741">Security.Contracts.Repository.IUserGroupRepository</a>.</p>
+
+</div>
+</div>
+<a id="a5dc8b4ff1dbba7624d071efc39b07721"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5dc8b4ff1dbba7624d071efc39b07721">&#9670;&nbsp;</a></span>GetNonIncludedGroupsAsync() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;IEnumerable&lt;<a class="el" href="class_security_1_1_model_1_1_group.html">Group</a>&gt; &gt; Security.Core.DataLayer.Repositories.UserGroupRepository.GetNonIncludedGroupsAsync </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>user</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает, отсутствующие у пользователя, группы </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">user</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html#af05298751b961ddccec00fdd81543c3f">Security.Contracts.Repository.IUserGroupRepository</a>.</p>
+
+</div>
+</div>
+<a id="a165dbcc866094a68d9f2749383a2851a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a165dbcc866094a68d9f2749383a2851a">&#9670;&nbsp;</a></span>GetNonIncludedGroupsAsync() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;IEnumerable&lt;<a class="el" href="class_security_1_1_model_1_1_group.html">Group</a>&gt; &gt; Security.Core.DataLayer.Repositories.UserGroupRepository.GetNonIncludedGroupsAsync </td>
+          <td>(</td>
+          <td class="paramtype">Guid&#160;</td>
+          <td class="paramname"><em>userId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает, отсутствующие у пользователя, группы </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userId</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html#a33074b7a208518316ed1b256d3bdcc28">Security.Contracts.Repository.IUserGroupRepository</a>.</p>
+
+</div>
+</div>
+<a id="a97a47ea3351185db60c4428d4ed969f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97a47ea3351185db60c4428d4ed969f0">&#9670;&nbsp;</a></span>GetNonIncludedGroupsAsync() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;IEnumerable&lt;<a class="el" href="class_security_1_1_model_1_1_group.html">Group</a>&gt; &gt; Security.Core.DataLayer.Repositories.UserGroupRepository.GetNonIncludedGroupsAsync </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idUser</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает, отсутствующие у пользователя, группы </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idUser</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html#afd5d392b36e5dc361b484d7aac48f002">Security.Contracts.Repository.IUserGroupRepository</a>.</p>
+
+</div>
+</div>
+<a id="a7acb8a569440cdbb61e059eb38b9a741"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7acb8a569440cdbb61e059eb38b9a741">&#9670;&nbsp;</a></span>GetNonIncludedUsers() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt;<a class="el" href="class_security_1_1_model_1_1_user.html">User</a>&gt; Security.Core.DataLayer.Repositories.UserGroupRepository.GetNonIncludedUsers </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>group</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает, не включенных в группу, пользователей </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">group</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html#ad375daf33431b3e219f68b0169c3ed73">Security.Contracts.Repository.IUserGroupRepository</a>.</p>
+
+</div>
+</div>
+<a id="aa9d106671b32912c1a282d37c4c32151"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9d106671b32912c1a282d37c4c32151">&#9670;&nbsp;</a></span>GetNonIncludedUsers() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt;<a class="el" href="class_security_1_1_model_1_1_user.html">User</a>&gt; Security.Core.DataLayer.Repositories.UserGroupRepository.GetNonIncludedUsers </td>
+          <td>(</td>
+          <td class="paramtype">Guid&#160;</td>
+          <td class="paramname"><em>groupId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает, не включенных в группу, пользователей </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">groupId</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html#a22faa70b5571d8a8c637cff4f1365104">Security.Contracts.Repository.IUserGroupRepository</a>.</p>
+
+</div>
+</div>
+<a id="a3843b4372a2beb9952f4e5f1b2751b11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3843b4372a2beb9952f4e5f1b2751b11">&#9670;&nbsp;</a></span>GetNonIncludedUsers() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt;<a class="el" href="class_security_1_1_model_1_1_user.html">User</a>&gt; Security.Core.DataLayer.Repositories.UserGroupRepository.GetNonIncludedUsers </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idGroup</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает, не включенных в группу, пользователей </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idGroup</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html#a8ba8f71ba5c5d5b55cc89aaba6fd7f1a">Security.Contracts.Repository.IUserGroupRepository</a>.</p>
+
+</div>
+</div>
+<a id="a21cf07ae1eb95dabdaa8e5e849980e64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21cf07ae1eb95dabdaa8e5e849980e64">&#9670;&nbsp;</a></span>GetNonIncludedUsersAsync() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;IEnumerable&lt;<a class="el" href="class_security_1_1_model_1_1_user.html">User</a>&gt; &gt; Security.Core.DataLayer.Repositories.UserGroupRepository.GetNonIncludedUsersAsync </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>group</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает, не включенных в группу, пользователей </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">group</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html#a7d98ba976c9050383bf0b3fb5a83e9e3">Security.Contracts.Repository.IUserGroupRepository</a>.</p>
+
+</div>
+</div>
+<a id="a59e8bcee850d34cbd659729581005460"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59e8bcee850d34cbd659729581005460">&#9670;&nbsp;</a></span>GetNonIncludedUsersAsync() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;IEnumerable&lt;<a class="el" href="class_security_1_1_model_1_1_user.html">User</a>&gt; &gt; Security.Core.DataLayer.Repositories.UserGroupRepository.GetNonIncludedUsersAsync </td>
+          <td>(</td>
+          <td class="paramtype">Guid&#160;</td>
+          <td class="paramname"><em>groupId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает, не включенных в группу, пользователей </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">groupId</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html#a17bca5ed25ccef0199c149ce24f73da3">Security.Contracts.Repository.IUserGroupRepository</a>.</p>
+
+</div>
+</div>
+<a id="adff44e5a71d7e8474161ab0234782090"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adff44e5a71d7e8474161ab0234782090">&#9670;&nbsp;</a></span>GetNonIncludedUsersAsync() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;IEnumerable&lt;<a class="el" href="class_security_1_1_model_1_1_user.html">User</a>&gt; &gt; Security.Core.DataLayer.Repositories.UserGroupRepository.GetNonIncludedUsersAsync </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idGroup</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает, не включенных в группу, пользователей </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idGroup</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html#a91e4d21d126da4d63e01f08fa999893c">Security.Contracts.Repository.IUserGroupRepository</a>.</p>
+
+</div>
+</div>
+<a id="ab5a098a597521cadafeea6ecee74d77d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5a098a597521cadafeea6ecee74d77d">&#9670;&nbsp;</a></span>GetUsers() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt;<a class="el" href="class_security_1_1_model_1_1_user.html">User</a>&gt; Security.Core.DataLayer.Repositories.UserGroupRepository.GetUsers </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает пользователей группы </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html#a1b2361c089ccd89814f82cccdaf8de20">Security.Contracts.Repository.IUserGroupRepository</a>.</p>
+
+</div>
+</div>
+<a id="adcd53b738e78f03234600b0651585bf3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcd53b738e78f03234600b0651585bf3">&#9670;&nbsp;</a></span>GetUsers() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt;<a class="el" href="class_security_1_1_model_1_1_user.html">User</a>&gt; Security.Core.DataLayer.Repositories.UserGroupRepository.GetUsers </td>
+          <td>(</td>
+          <td class="paramtype">Guid&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает пользователей группы </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html#a9fa338c8e2c3dd16d162875340be7990">Security.Contracts.Repository.IUserGroupRepository</a>.</p>
+
+</div>
+</div>
+<a id="a3ded759ec38f3d464c0b937a81361d37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ded759ec38f3d464c0b937a81361d37">&#9670;&nbsp;</a></span>GetUsers() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt;<a class="el" href="class_security_1_1_model_1_1_user.html">User</a>&gt; Security.Core.DataLayer.Repositories.UserGroupRepository.GetUsers </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idGroup</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает пользователей группы </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idGroup</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html#a2abf7a3a2a91873a8eb771b0b7c3ecd9">Security.Contracts.Repository.IUserGroupRepository</a>.</p>
+
+</div>
+</div>
+<a id="a447b8e0f3bde142aa06a3ab08df54d58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a447b8e0f3bde142aa06a3ab08df54d58">&#9670;&nbsp;</a></span>GetUsersAsync() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;IEnumerable&lt;<a class="el" href="class_security_1_1_model_1_1_user.html">User</a>&gt; &gt; Security.Core.DataLayer.Repositories.UserGroupRepository.GetUsersAsync </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает пользователей группы </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html#a6cfd8a8ac1519196cfc18677f4383b16">Security.Contracts.Repository.IUserGroupRepository</a>.</p>
+
+</div>
+</div>
+<a id="a992334796d61a129be208efaf11d2724"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a992334796d61a129be208efaf11d2724">&#9670;&nbsp;</a></span>GetUsersAsync() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;IEnumerable&lt;<a class="el" href="class_security_1_1_model_1_1_user.html">User</a>&gt; &gt; Security.Core.DataLayer.Repositories.UserGroupRepository.GetUsersAsync </td>
+          <td>(</td>
+          <td class="paramtype">Guid&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает пользователей группы </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html#afcaef7a2654cab8716753016ab450e10">Security.Contracts.Repository.IUserGroupRepository</a>.</p>
+
+</div>
+</div>
+<a id="a1587ee7a99673301e3ec3c0c2ed94c54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1587ee7a99673301e3ec3c0c2ed94c54">&#9670;&nbsp;</a></span>GetUsersAsync() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;IEnumerable&lt;<a class="el" href="class_security_1_1_model_1_1_user.html">User</a>&gt; &gt; Security.Core.DataLayer.Repositories.UserGroupRepository.GetUsersAsync </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idGroup</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает пользователей группы </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idGroup</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html#ad3aeb4c2eba87b5a0f39523698efb60c">Security.Contracts.Repository.IUserGroupRepository</a>.</p>
+
+</div>
+</div>
+<a id="a2acfee1086e42281c374990c3fed3a36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2acfee1086e42281c374990c3fed3a36">&#9670;&nbsp;</a></span>RemoveGroupsFromUser() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Security.Core.DataLayer.Repositories.UserGroupRepository.RemoveGroupsFromUser </td>
+          <td>(</td>
+          <td class="paramtype">int []&#160;</td>
+          <td class="paramname"><em>idGroups</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idUser</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Производит удаление пользователей из нескольких групп сразу </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idGroups</td><td></td></tr>
+    <tr><td class="paramname">idUser</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html#a370cb91fab13418288c7cb6356663366">Security.Contracts.Repository.IUserGroupRepository</a>.</p>
+
+</div>
+</div>
+<a id="a9f5e28b69982ae4c9f646ca8d170406c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f5e28b69982ae4c9f646ca8d170406c">&#9670;&nbsp;</a></span>RemoveGroupsFromUser() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Security.Core.DataLayer.Repositories.UserGroupRepository.RemoveGroupsFromUser </td>
+          <td>(</td>
+          <td class="paramtype">Guid []&#160;</td>
+          <td class="paramname"><em>groupsId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Guid&#160;</td>
+          <td class="paramname"><em>userId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Производит удаление пользователей из нескольких групп сразу </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">groupsId</td><td></td></tr>
+    <tr><td class="paramname">userId</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html#a6be8c27294255dc2a255a69a0f62f2df">Security.Contracts.Repository.IUserGroupRepository</a>.</p>
+
+</div>
+</div>
+<a id="a122e77b9b222aa26a95eab8fbf8b73f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a122e77b9b222aa26a95eab8fbf8b73f5">&#9670;&nbsp;</a></span>RemoveGroupsFromUser() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Security.Core.DataLayer.Repositories.UserGroupRepository.RemoveGroupsFromUser </td>
+          <td>(</td>
+          <td class="paramtype">string []&#160;</td>
+          <td class="paramname"><em>groups</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>user</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Производит удаление пользователей из нескольких групп сразу </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">groups</td><td></td></tr>
+    <tr><td class="paramname">user</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html#aa2c748ce943227cd943a5339df17e194">Security.Contracts.Repository.IUserGroupRepository</a>.</p>
+
+</div>
+</div>
+<a id="a596a889be5527bd64309886ca1600151"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a596a889be5527bd64309886ca1600151">&#9670;&nbsp;</a></span>RemoveGroupsFromUserAsync() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task Security.Core.DataLayer.Repositories.UserGroupRepository.RemoveGroupsFromUserAsync </td>
+          <td>(</td>
+          <td class="paramtype">int []&#160;</td>
+          <td class="paramname"><em>idGroups</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idUser</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Производит удаление пользователей из нескольких групп сразу </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idGroups</td><td></td></tr>
+    <tr><td class="paramname">idUser</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html#a94dc9cc9eb594578eefa7b4bdc739ace">Security.Contracts.Repository.IUserGroupRepository</a>.</p>
+
+</div>
+</div>
+<a id="a6c47d2ea586bb3bdf0794bcc818f23a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c47d2ea586bb3bdf0794bcc818f23a1">&#9670;&nbsp;</a></span>RemoveGroupsFromUserAsync() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task Security.Core.DataLayer.Repositories.UserGroupRepository.RemoveGroupsFromUserAsync </td>
+          <td>(</td>
+          <td class="paramtype">Guid []&#160;</td>
+          <td class="paramname"><em>groupsId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Guid&#160;</td>
+          <td class="paramname"><em>userId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Производит удаление пользователей из нескольких групп сразу </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">groupsId</td><td></td></tr>
+    <tr><td class="paramname">userId</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html#abab569942816dd01f625c3b99a07b285">Security.Contracts.Repository.IUserGroupRepository</a>.</p>
+
+</div>
+</div>
+<a id="ad63f7c36f479aca1dd7718992a4cd98a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad63f7c36f479aca1dd7718992a4cd98a">&#9670;&nbsp;</a></span>RemoveGroupsFromUserAsync() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task Security.Core.DataLayer.Repositories.UserGroupRepository.RemoveGroupsFromUserAsync </td>
+          <td>(</td>
+          <td class="paramtype">string []&#160;</td>
+          <td class="paramname"><em>groups</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>user</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Производит удаление пользователей из нескольких групп сразу </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">groups</td><td></td></tr>
+    <tr><td class="paramname">user</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html#afe23650347fec44c3f89b85117bdfb07">Security.Contracts.Repository.IUserGroupRepository</a>.</p>
+
+</div>
+</div>
+<a id="a8e2d6971e0f6ab97c2a0e28f00241bed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e2d6971e0f6ab97c2a0e28f00241bed">&#9670;&nbsp;</a></span>RemoveUsersFromGroup() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Security.Core.DataLayer.Repositories.UserGroupRepository.RemoveUsersFromGroup </td>
+          <td>(</td>
+          <td class="paramtype">int []&#160;</td>
+          <td class="paramname"><em>idUsers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idGroup</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Производит удаление пользователей из группы </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idUsers</td><td></td></tr>
+    <tr><td class="paramname">idGroup</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html#ae06ca9a49ad816103843fff4b8affef5">Security.Contracts.Repository.IUserGroupRepository</a>.</p>
+
+</div>
+</div>
+<a id="a4535bf58fa5f005cb5fda97d009f378b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4535bf58fa5f005cb5fda97d009f378b">&#9670;&nbsp;</a></span>RemoveUsersFromGroup() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Security.Core.DataLayer.Repositories.UserGroupRepository.RemoveUsersFromGroup </td>
+          <td>(</td>
+          <td class="paramtype">Guid []&#160;</td>
+          <td class="paramname"><em>usersId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Guid&#160;</td>
+          <td class="paramname"><em>groupId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Производит удаление пользователей из группы </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">usersId</td><td></td></tr>
+    <tr><td class="paramname">groupId</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html#a95aab03873eb9f4a1bfc29e02c981004">Security.Contracts.Repository.IUserGroupRepository</a>.</p>
+
+</div>
+</div>
+<a id="af0abc3aac88f55e40c5a290310de2c4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0abc3aac88f55e40c5a290310de2c4e">&#9670;&nbsp;</a></span>RemoveUsersFromGroup() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Security.Core.DataLayer.Repositories.UserGroupRepository.RemoveUsersFromGroup </td>
+          <td>(</td>
+          <td class="paramtype">string []&#160;</td>
+          <td class="paramname"><em>users</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>group</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Производит удаление пользователей из группы </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">users</td><td></td></tr>
+    <tr><td class="paramname">group</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html#a70405209968bbccf8d4bd7e8b310072d">Security.Contracts.Repository.IUserGroupRepository</a>.</p>
+
+</div>
+</div>
+<a id="a50a9380e919c42bf3db2f0c26c0f8a80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50a9380e919c42bf3db2f0c26c0f8a80">&#9670;&nbsp;</a></span>RemoveUsersFromGroupAsync() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task Security.Core.DataLayer.Repositories.UserGroupRepository.RemoveUsersFromGroupAsync </td>
+          <td>(</td>
+          <td class="paramtype">int []&#160;</td>
+          <td class="paramname"><em>idUsers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idGroup</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Производит удаление пользователей из группы </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idUsers</td><td></td></tr>
+    <tr><td class="paramname">idGroup</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html#a7bbfdae729759eb890ea1c50f70bb9c6">Security.Contracts.Repository.IUserGroupRepository</a>.</p>
+
+</div>
+</div>
+<a id="a622c18fdb81b19ccb63df972e516cc61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a622c18fdb81b19ccb63df972e516cc61">&#9670;&nbsp;</a></span>RemoveUsersFromGroupAsync() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task Security.Core.DataLayer.Repositories.UserGroupRepository.RemoveUsersFromGroupAsync </td>
+          <td>(</td>
+          <td class="paramtype">Guid []&#160;</td>
+          <td class="paramname"><em>usersId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Guid&#160;</td>
+          <td class="paramname"><em>groupId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Производит удаление пользователей из группы </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">usersId</td><td></td></tr>
+    <tr><td class="paramname">groupId</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html#ad8a5e13a5ba5b1feb387a619af2679cf">Security.Contracts.Repository.IUserGroupRepository</a>.</p>
+
+</div>
+</div>
+<a id="abb9ac07d14bf42b0334243df88ecb0a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb9ac07d14bf42b0334243df88ecb0a8">&#9670;&nbsp;</a></span>RemoveUsersFromGroupAsync() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task Security.Core.DataLayer.Repositories.UserGroupRepository.RemoveUsersFromGroupAsync </td>
+          <td>(</td>
+          <td class="paramtype">string []&#160;</td>
+          <td class="paramname"><em>users</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>group</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Производит удаление пользователей из группы </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">users</td><td></td></tr>
+    <tr><td class="paramname">group</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html#af602425e7765825040234871353c9e0d">Security.Contracts.Repository.IUserGroupRepository</a>.</p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>C:/Users/Domer/source/repos/Security.V2.1/backend/Security/Core/DataLayer/Repositories/UserGroupRepository.cs</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>

@@ -10,7 +10,6 @@ using System.Windows.Input;
 using System.Windows.Threading;
 using AutoMapper;
 using Security.Contracts;
-using Security.Model;
 using WpfApp_TestSecurity.Annotations;
 using WpfApp_TestSecurity.Infrastructure;
 using WpfApp_TestSecurity.ViewModels;

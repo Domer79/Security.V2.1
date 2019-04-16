@@ -1,0 +1,4 @@
+<map id="Security.Core.Security.GetUserByTokenAsync" name="Security.Core.Security.GetUserByTokenAsync">
+<area shape="rect" id="node1" title="Возвращает пользователя по токену" alt="" coords="5,5,184,47"/>
+<area shape="rect" id="node2" href="$interface_security_1_1_contracts_1_1_repository_1_1_i_token_service.html#a9cf2f5fd888ec54bf101d3fdc6ecb246" title="Проверка срока действия токена" alt="" coords="232,5,432,47"/>
+</map>

@@ -1,0 +1,493 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Applications Security: Интерфейс Security.Contracts.ISecuritySettings</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Applications Security
+   &#160;<span id="projectnumber">2.1</span>
+   </div>
+   <div id="projectbrief">Apps Security</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_security.html">Security</a></li><li class="navelem"><a class="el" href="namespace_security_1_1_contracts.html">Contracts</a></li><li class="navelem"><a class="el" href="interface_security_1_1_contracts_1_1_i_security_settings.html">ISecuritySettings</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="interface_security_1_1_contracts_1_1_i_security_settings-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Интерфейс Security.Contracts.ISecuritySettings</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Управление параметрами для системы доступа  
+ <a href="interface_security_1_1_contracts_1_1_i_security_settings.html#details">Подробнее...</a></p>
+<div class="dynheader">
+Граф наследования:Security.Contracts.ISecuritySettings:</div>
+<div class="dyncontent">
+<div class="center"><img src="interface_security_1_1_contracts_1_1_i_security_settings__inherit__graph.png" border="0" usemap="#_security_8_contracts_8_i_security_settings_inherit__map" alt="Inheritance graph"/></div>
+<map name="_security_8_contracts_8_i_security_settings_inherit__map" id="_security_8_contracts_8_i_security_settings_inherit__map">
+<area shape="rect"  title="Ð£Ð¿ÑÐ°Ð²Ð»ÐµÐ½Ð¸Ðµ Ð¿Ð°ÑÐ°Ð¼ÐµÑÑÐ°Ð¼Ð¸ Ð´Ð»Ñ ÑÐ¸ÑÑÐµÐ¼Ñ Ð´Ð¾ÑÑÑÐ¿Ð°" alt="" coords="13,5,199,47"/>
+<area shape="rect"  href="class_security_1_1_core_1_1_security_settings.html" title="Ð£Ð¿ÑÐ°Ð²Ð»ÐµÐ½Ð¸Ðµ Ð¿Ð°ÑÐ°Ð¼ÐµÑÑÐ°Ð¼Ð¸ Ð´Ð»Ñ ÑÐ¸ÑÑÐµÐ¼Ñ Ð´Ð¾ÑÑÑÐ¿Ð°" alt="" coords="5,95,207,121"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a99b298e53e05825d5fec1af9d0425ac1"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_security_1_1_contracts_1_1_i_security_settings.html#a99b298e53e05825d5fec1af9d0425ac1">GetValue&lt; T &gt;</a> (string key)</td></tr>
+<tr class="memdesc:a99b298e53e05825d5fec1af9d0425ac1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает значение переданного ключа key  <a href="#a99b298e53e05825d5fec1af9d0425ac1">Подробнее...</a><br /></td></tr>
+<tr class="separator:a99b298e53e05825d5fec1af9d0425ac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d14e60fb6318b57e358b74c7bf65dc9"><td class="memItemLeft" align="right" valign="top">object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_security_1_1_contracts_1_1_i_security_settings.html#a3d14e60fb6318b57e358b74c7bf65dc9">GetValue</a> (string key, Type type)</td></tr>
+<tr class="memdesc:a3d14e60fb6318b57e358b74c7bf65dc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает значение переданного ключа key  <a href="#a3d14e60fb6318b57e358b74c7bf65dc9">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3d14e60fb6318b57e358b74c7bf65dc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b3dde4943aac45edb9e30ddbd3aac90"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_security_1_1_contracts_1_1_i_security_settings.html#a5b3dde4943aac45edb9e30ddbd3aac90">SetValue</a> (string key, object value, TimeSpan? lifetime=null)</td></tr>
+<tr class="memdesc:a5b3dde4943aac45edb9e30ddbd3aac90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает значения для ключа key  <a href="#a5b3dde4943aac45edb9e30ddbd3aac90">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5b3dde4943aac45edb9e30ddbd3aac90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73e11f88ea21817284fc2765e151f078"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_security_1_1_contracts_1_1_i_security_settings.html#a73e11f88ea21817284fc2765e151f078">IsDeprecated</a> (string key)</td></tr>
+<tr class="memdesc:a73e11f88ea21817284fc2765e151f078"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет устарело ли значение в кеше  <a href="#a73e11f88ea21817284fc2765e151f078">Подробнее...</a><br /></td></tr>
+<tr class="separator:a73e11f88ea21817284fc2765e151f078"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27d76a17ec8fc8c51aa374e91968d538"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_security_1_1_contracts_1_1_i_security_settings.html#a27d76a17ec8fc8c51aa374e91968d538">RemoveValue</a> (string key)</td></tr>
+<tr class="memdesc:a27d76a17ec8fc8c51aa374e91968d538"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаляет значение из кеша  <a href="#a27d76a17ec8fc8c51aa374e91968d538">Подробнее...</a><br /></td></tr>
+<tr class="separator:a27d76a17ec8fc8c51aa374e91968d538"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a673f3f4a1ef9e8604ad9bbc5fe47dda2"><td class="memItemLeft" align="right" valign="top">Task&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_security_1_1_contracts_1_1_i_security_settings.html#a673f3f4a1ef9e8604ad9bbc5fe47dda2">GetValueAsync&lt; T &gt;</a> (string key)</td></tr>
+<tr class="memdesc:a673f3f4a1ef9e8604ad9bbc5fe47dda2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает значение переданного ключа key  <a href="#a673f3f4a1ef9e8604ad9bbc5fe47dda2">Подробнее...</a><br /></td></tr>
+<tr class="separator:a673f3f4a1ef9e8604ad9bbc5fe47dda2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd7c6ac8c545bc793829b0d410c36fd3"><td class="memItemLeft" align="right" valign="top">Task&lt; object &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_security_1_1_contracts_1_1_i_security_settings.html#acd7c6ac8c545bc793829b0d410c36fd3">GetValueAsync</a> (string key, Type type)</td></tr>
+<tr class="memdesc:acd7c6ac8c545bc793829b0d410c36fd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает значение переданного ключа key  <a href="#acd7c6ac8c545bc793829b0d410c36fd3">Подробнее...</a><br /></td></tr>
+<tr class="separator:acd7c6ac8c545bc793829b0d410c36fd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b1d5f810806112639e4967bbbfbb678"><td class="memItemLeft" align="right" valign="top">Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_security_1_1_contracts_1_1_i_security_settings.html#a9b1d5f810806112639e4967bbbfbb678">SetValueAsync</a> (string key, object value, TimeSpan? lifetime=null)</td></tr>
+<tr class="memdesc:a9b1d5f810806112639e4967bbbfbb678"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает значения для ключа key  <a href="#a9b1d5f810806112639e4967bbbfbb678">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9b1d5f810806112639e4967bbbfbb678"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54821ab65644f4f182c0462bfbbdb659"><td class="memItemLeft" align="right" valign="top">Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_security_1_1_contracts_1_1_i_security_settings.html#a54821ab65644f4f182c0462bfbbdb659">IsDeprecatedAsync</a> (string key)</td></tr>
+<tr class="memdesc:a54821ab65644f4f182c0462bfbbdb659"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет устарело ли значение в кеше  <a href="#a54821ab65644f4f182c0462bfbbdb659">Подробнее...</a><br /></td></tr>
+<tr class="separator:a54821ab65644f4f182c0462bfbbdb659"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af85ca1f6723fdfc36562e29eeb055e20"><td class="memItemLeft" align="right" valign="top">Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_security_1_1_contracts_1_1_i_security_settings.html#af85ca1f6723fdfc36562e29eeb055e20">RemoveValueAsync</a> (string key)</td></tr>
+<tr class="memdesc:af85ca1f6723fdfc36562e29eeb055e20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаляет значение из кеша  <a href="#af85ca1f6723fdfc36562e29eeb055e20">Подробнее...</a><br /></td></tr>
+<tr class="separator:af85ca1f6723fdfc36562e29eeb055e20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Управление параметрами для системы доступа </p>
+</div><h2 class="groupheader">Методы</h2>
+<a id="a3d14e60fb6318b57e358b74c7bf65dc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d14e60fb6318b57e358b74c7bf65dc9">&#9670;&nbsp;</a></span>GetValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">object Security.Contracts.ISecuritySettings.GetValue </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает значение переданного ключа key </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>Ключ</td></tr>
+    <tr><td class="paramname">type</td><td>Тип значения</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Значение типа Object</dd></dl>
+
+<p>Замещается в <a class="el" href="class_security_1_1_core_1_1_security_settings.html#ac0f9810366f88ebece90bbdb050fa2ed">Security.Core.SecuritySettings</a>.</p>
+
+</div>
+</div>
+<a id="a99b298e53e05825d5fec1af9d0425ac1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99b298e53e05825d5fec1af9d0425ac1">&#9670;&nbsp;</a></span>GetValue&lt; T &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="interface_security_1_1_contracts_1_1_i_security_settings.html#a3d14e60fb6318b57e358b74c7bf65dc9">Security.Contracts.ISecuritySettings.GetValue</a>&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает значение переданного ключа key </p>
+<dl class="tparams"><dt>Параметры шаблона</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Тип значения</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>Ключ</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Значение типа T</dd></dl>
+
+<p>Замещается в <a class="el" href="class_security_1_1_core_1_1_security_settings.html#ada9c3ce757ffacfac88c027f4cfae25d">Security.Core.SecuritySettings</a>.</p>
+
+</div>
+</div>
+<a id="acd7c6ac8c545bc793829b0d410c36fd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd7c6ac8c545bc793829b0d410c36fd3">&#9670;&nbsp;</a></span>GetValueAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;object&gt; Security.Contracts.ISecuritySettings.GetValueAsync </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает значение переданного ключа key </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>Ключ</td></tr>
+    <tr><td class="paramname">type</td><td>Тип значения</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Значение типа Task&lt;TResult&gt;</dd></dl>
+
+<p>Замещается в <a class="el" href="class_security_1_1_core_1_1_security_settings.html#a0f8ceb75b1ee6f533a439bf3a82323c1">Security.Core.SecuritySettings</a>.</p>
+
+</div>
+</div>
+<a id="a673f3f4a1ef9e8604ad9bbc5fe47dda2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a673f3f4a1ef9e8604ad9bbc5fe47dda2">&#9670;&nbsp;</a></span>GetValueAsync&lt; T &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;T&gt; <a class="el" href="interface_security_1_1_contracts_1_1_i_security_settings.html#acd7c6ac8c545bc793829b0d410c36fd3">Security.Contracts.ISecuritySettings.GetValueAsync</a>&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает значение переданного ключа key </p>
+<dl class="tparams"><dt>Параметры шаблона</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Тип значения</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>Ключ</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Значение типа T</dd></dl>
+
+<p>Замещается в <a class="el" href="class_security_1_1_core_1_1_security_settings.html#acb423baba313e5d87b48bd8a335acab8">Security.Core.SecuritySettings</a>.</p>
+
+</div>
+</div>
+<a id="a73e11f88ea21817284fc2765e151f078"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73e11f88ea21817284fc2765e151f078">&#9670;&nbsp;</a></span>IsDeprecated()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Security.Contracts.ISecuritySettings.IsDeprecated </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Проверяет устарело ли значение в кеше </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещается в <a class="el" href="class_security_1_1_core_1_1_security_settings.html#a83786aaba829378fd6c7021cf858ce1b">Security.Core.SecuritySettings</a>.</p>
+
+</div>
+</div>
+<a id="a54821ab65644f4f182c0462bfbbdb659"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54821ab65644f4f182c0462bfbbdb659">&#9670;&nbsp;</a></span>IsDeprecatedAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;bool&gt; Security.Contracts.ISecuritySettings.IsDeprecatedAsync </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Проверяет устарело ли значение в кеше </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещается в <a class="el" href="class_security_1_1_core_1_1_security_settings.html#a8292853f654e8fec4971661ab383f1c9">Security.Core.SecuritySettings</a>.</p>
+
+</div>
+</div>
+<a id="a27d76a17ec8fc8c51aa374e91968d538"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27d76a17ec8fc8c51aa374e91968d538">&#9670;&nbsp;</a></span>RemoveValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Security.Contracts.ISecuritySettings.RemoveValue </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Удаляет значение из кеша </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Замещается в <a class="el" href="class_security_1_1_core_1_1_security_settings.html#a037f83e4c3ead3c216a7671e36440065">Security.Core.SecuritySettings</a>.</p>
+
+</div>
+</div>
+<a id="af85ca1f6723fdfc36562e29eeb055e20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af85ca1f6723fdfc36562e29eeb055e20">&#9670;&nbsp;</a></span>RemoveValueAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task Security.Contracts.ISecuritySettings.RemoveValueAsync </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Удаляет значение из кеша </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Замещается в <a class="el" href="class_security_1_1_core_1_1_security_settings.html#a461473ef76756bdd8fc0d644d2c68903">Security.Core.SecuritySettings</a>.</p>
+
+</div>
+</div>
+<a id="a5b3dde4943aac45edb9e30ddbd3aac90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b3dde4943aac45edb9e30ddbd3aac90">&#9670;&nbsp;</a></span>SetValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Security.Contracts.ISecuritySettings.SetValue </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TimeSpan?&#160;</td>
+          <td class="paramname"><em>lifetime</em> = <code>null</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Устанавливает значения для ключа key </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>Ключ</td></tr>
+    <tr><td class="paramname">value</td><td>Значение</td></tr>
+    <tr><td class="paramname">lifetime</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Замещается в <a class="el" href="class_security_1_1_core_1_1_security_settings.html#a01d525b8c28952c0fb7febaa36eaeff5">Security.Core.SecuritySettings</a>.</p>
+
+</div>
+</div>
+<a id="a9b1d5f810806112639e4967bbbfbb678"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b1d5f810806112639e4967bbbfbb678">&#9670;&nbsp;</a></span>SetValueAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task Security.Contracts.ISecuritySettings.SetValueAsync </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TimeSpan?&#160;</td>
+          <td class="paramname"><em>lifetime</em> = <code>null</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Устанавливает значения для ключа key </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>Ключ</td></tr>
+    <tr><td class="paramname">value</td><td>Значение</td></tr>
+    <tr><td class="paramname">lifetime</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Замещается в <a class="el" href="class_security_1_1_core_1_1_security_settings.html#a3b2c4e37e4de629945e45e3b6cf1a4f9">Security.Core.SecuritySettings</a>.</p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов интерфейса находятся в файле:<ul>
+<li>C:/Users/Domer/source/repos/Security.V2.1/backend/Security/Contracts/ISecuritySettings.cs</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>

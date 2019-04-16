@@ -10,27 +10,27 @@ using System.Web.Http.Controllers;
 using System.Web.Http.Filters;
 using Autofac.Integration.WebApi;
 using NLog;
-using Tools.Extensions;
+//using Tools.Extensions;
 
 namespace Security.WebApi.Infrastructure.Filters
 {
-    public class ExceptionActionFilter : IAutofacExceptionFilter
-    {
-        private readonly ILogger _logger;
-
-        public ExceptionActionFilter()
-        {
-            _logger = LogManager.GetLogger("Security.WebApi");
-        }
-
-        public Task OnExceptionAsync(HttpActionExecutedContext actionExecutedContext, CancellationToken cancellationToken)
-        {
-            _logger.Error(actionExecutedContext.Exception);
-            actionExecutedContext.Response =
-//                actionExecutedContext.Request.CreateResponse(HttpStatusCode.InternalServerError, actionExecutedContext.Exception);
-                actionExecutedContext.Request.CreateResponse(HttpStatusCode.InternalServerError, actionExecutedContext.Exception.GetErrorMessage());
-
-            return Task.FromResult(0);
-        }
-    }
+//    public class ExceptionActionFilter : IAutofacExceptionFilter
+//    {
+//        private readonly ILogger _logger;
+//
+//        public ExceptionActionFilter()
+//        {
+//            _logger = LogManager.GetLogger("Security.WebApi");
+//        }
+//
+//        public Task OnExceptionAsync(HttpActionExecutedContext actionExecutedContext, CancellationToken cancellationToken)
+//        {
+//            _logger.Error(actionExecutedContext.Exception);
+//            actionExecutedContext.Response =
+////                actionExecutedContext.Request.CreateResponse(HttpStatusCode.InternalServerError, actionExecutedContext.Exception);
+//                actionExecutedContext.Request.CreateResponse(HttpStatusCode.InternalServerError, actionExecutedContext.Exception.GetErrorMessage());
+//
+//            return Task.FromResult(0);
+//        }
+//    }
 }

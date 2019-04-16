@@ -1,0 +1,7 @@
+<map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
+<area shape="rect" id="node1" href="$interface_security_1_1_contracts_1_1_repository_1_1_base_1_1_i_security_base_repository.html" title=" " alt="" coords="5,41,205,97"/>
+<area shape="rect" id="node2" href="$interface_security_1_1_contracts_1_1_repository_1_1_i_application_internal_repository.html" title="Управление приложениями" alt="" coords="253,15,453,57"/>
+<area shape="rect" id="node4" href="$interface_security_1_1_contracts_1_1_repository_1_1_i_application_repository.html" title="Ограниченное управление приложениями" alt="" coords="253,82,453,123"/>
+<area shape="rect" id="node3" href="$class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_application_internal_repository.html" title="Управление приложениями" alt="" coords="511,5,715,61"/>
+<area shape="rect" id="node5" href="$class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_application_repository.html" title="Ограниченное управление приложениями" alt="" coords="501,86,725,127"/>
+</map>

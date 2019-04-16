@@ -1,0 +1,1285 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Applications Security: Класс SecurityHttp.Repositories.MemberRoleRepository</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Applications Security
+   &#160;<span id="projectnumber">2.1</span>
+   </div>
+   <div id="projectbrief">Apps Security</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_security_http.html">SecurityHttp</a></li><li class="navelem"><a class="el" href="namespace_security_http_1_1_repositories.html">Repositories</a></li><li class="navelem"><a class="el" href="class_security_http_1_1_repositories_1_1_member_role_repository.html">MemberRoleRepository</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#properties">Свойства</a> &#124;
+<a href="class_security_http_1_1_repositories_1_1_member_role_repository-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс SecurityHttp.Repositories.MemberRoleRepository</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Управление участниками безопасности (пользователи и группы) и ролей  
+ <a href="class_security_http_1_1_repositories_1_1_member_role_repository.html#details">Подробнее...</a></p>
+<div class="dynheader">
+Граф наследования:SecurityHttp.Repositories.MemberRoleRepository:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_security_http_1_1_repositories_1_1_member_role_repository__inherit__graph.png" border="0" usemap="#_security_http_8_repositories_8_member_role_repository_inherit__map" alt="Inheritance graph"/></div>
+<map name="_security_http_8_repositories_8_member_role_repository_inherit__map" id="_security_http_8_repositories_8_member_role_repository_inherit__map">
+<area shape="rect"  title="Ð£Ð¿ÑÐ°Ð²Ð»ÐµÐ½Ð¸Ðµ ÑÑÐ°ÑÑÐ½Ð¸ÐºÐ°Ð¼Ð¸ Ð±ÐµÐ·Ð¾Ð¿Ð°ÑÐ½Ð¾ÑÑÐ¸ (Ð¿Ð¾Ð»ÑÐ·Ð¾Ð²Ð°ÑÐµÐ»Ð¸ Ð¸ Ð³ÑÑÐ¿Ð¿Ñ) Ð¸ ÑÐ¾Ð»ÐµÐ¹" alt="" coords="5,80,180,121"/>
+<area shape="rect"  title=" " alt="" coords="13,5,173,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса SecurityHttp.Repositories.MemberRoleRepository:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_security_http_1_1_repositories_1_1_member_role_repository__coll__graph.png" border="0" usemap="#_security_http_8_repositories_8_member_role_repository_coll__map" alt="Collaboration graph"/></div>
+<map name="_security_http_8_repositories_8_member_role_repository_coll__map" id="_security_http_8_repositories_8_member_role_repository_coll__map">
+<area shape="rect"  title="Ð£Ð¿ÑÐ°Ð²Ð»ÐµÐ½Ð¸Ðµ ÑÑÐ°ÑÑÐ½Ð¸ÐºÐ°Ð¼Ð¸ Ð±ÐµÐ·Ð¾Ð¿Ð°ÑÐ½Ð¾ÑÑÐ¸ (Ð¿Ð¾Ð»ÑÐ·Ð¾Ð²Ð°ÑÐµÐ»Ð¸ Ð¸ Ð³ÑÑÐ¿Ð¿Ñ) Ð¸ ÑÐ¾Ð»ÐµÐ¹" alt="" coords="5,80,180,121"/>
+<area shape="rect"  title=" " alt="" coords="13,5,173,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a8b026569120f613b3811165e8fd001cb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_repositories_1_1_member_role_repository.html#a8b026569120f613b3811165e8fd001cb">MemberRoleRepository</a> (<a class="el" href="interface_security_http_1_1_interfaces_1_1_i_common_web.html">ICommonWeb</a> commonWeb, IApplicationContext context)</td></tr>
+<tr class="memdesc:a8b026569120f613b3811165e8fd001cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Управление участниками безопасности (пользователи и группы) и ролей  <a href="#a8b026569120f613b3811165e8fd001cb">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8b026569120f613b3811165e8fd001cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9b352caad40df36432ec7995472fdda"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; Member &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_repositories_1_1_member_role_repository.html#ad9b352caad40df36432ec7995472fdda">GetExceptMembers</a> (string role)</td></tr>
+<tr class="memdesc:ad9b352caad40df36432ec7995472fdda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает отсутствующих у роли участников  <a href="#ad9b352caad40df36432ec7995472fdda">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad9b352caad40df36432ec7995472fdda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08cd78b2872985e87ea72248300e9f97"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_repositories_1_1_member_role_repository.html#a08cd78b2872985e87ea72248300e9f97">AddMembersToRole</a> (int[] idMembers, int idRole)</td></tr>
+<tr class="memdesc:a08cd78b2872985e87ea72248300e9f97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет роль нескольким участникам  <a href="#a08cd78b2872985e87ea72248300e9f97">Подробнее...</a><br /></td></tr>
+<tr class="separator:a08cd78b2872985e87ea72248300e9f97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cc0b55abb468f5631fe4cce5cc8e58e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_repositories_1_1_member_role_repository.html#a9cc0b55abb468f5631fe4cce5cc8e58e">AddMembersToRole</a> (string[] members, string role)</td></tr>
+<tr class="memdesc:a9cc0b55abb468f5631fe4cce5cc8e58e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет роль нескольким участникам  <a href="#a9cc0b55abb468f5631fe4cce5cc8e58e">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9cc0b55abb468f5631fe4cce5cc8e58e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38c79d23607e39eb2e6d7cb8c87134ad"><td class="memItemLeft" align="right" valign="top">Task&lt; IEnumerable&lt; Member &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_repositories_1_1_member_role_repository.html#a38c79d23607e39eb2e6d7cb8c87134ad">GetExceptMembersAsync</a> (string role)</td></tr>
+<tr class="memdesc:a38c79d23607e39eb2e6d7cb8c87134ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает отсутствующих у роли участников  <a href="#a38c79d23607e39eb2e6d7cb8c87134ad">Подробнее...</a><br /></td></tr>
+<tr class="separator:a38c79d23607e39eb2e6d7cb8c87134ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcbc81d8253900639c3ef3f2f9a22e6f"><td class="memItemLeft" align="right" valign="top">Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_repositories_1_1_member_role_repository.html#afcbc81d8253900639c3ef3f2f9a22e6f">AddMembersToRoleAsync</a> (int[] idMembers, int idRole)</td></tr>
+<tr class="memdesc:afcbc81d8253900639c3ef3f2f9a22e6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет роль нескольким участникам  <a href="#afcbc81d8253900639c3ef3f2f9a22e6f">Подробнее...</a><br /></td></tr>
+<tr class="separator:afcbc81d8253900639c3ef3f2f9a22e6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca862681051b761dde1183068fb27b06"><td class="memItemLeft" align="right" valign="top">Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_repositories_1_1_member_role_repository.html#aca862681051b761dde1183068fb27b06">AddMembersToRoleAsync</a> (string[] members, string role)</td></tr>
+<tr class="memdesc:aca862681051b761dde1183068fb27b06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет роль нескольким участникам  <a href="#aca862681051b761dde1183068fb27b06">Подробнее...</a><br /></td></tr>
+<tr class="separator:aca862681051b761dde1183068fb27b06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcec6b94871f15ff58bdd9d188e391de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_repositories_1_1_member_role_repository.html#abcec6b94871f15ff58bdd9d188e391de">AddRolesToMember</a> (int[] idRoles, int idMember)</td></tr>
+<tr class="memdesc:abcec6b94871f15ff58bdd9d188e391de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет несколько ролей участнику  <a href="#abcec6b94871f15ff58bdd9d188e391de">Подробнее...</a><br /></td></tr>
+<tr class="separator:abcec6b94871f15ff58bdd9d188e391de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72a453c9c9d5bc28dca2c33b49e25543"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_repositories_1_1_member_role_repository.html#a72a453c9c9d5bc28dca2c33b49e25543">AddRolesToMember</a> (string[] roles, string member)</td></tr>
+<tr class="memdesc:a72a453c9c9d5bc28dca2c33b49e25543"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет несколько ролей участнику  <a href="#a72a453c9c9d5bc28dca2c33b49e25543">Подробнее...</a><br /></td></tr>
+<tr class="separator:a72a453c9c9d5bc28dca2c33b49e25543"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54dcea7b35bc336cbf95951ae47e3aa1"><td class="memItemLeft" align="right" valign="top">Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_repositories_1_1_member_role_repository.html#a54dcea7b35bc336cbf95951ae47e3aa1">AddRolesToMemberAsync</a> (int[] idRoles, int idMember)</td></tr>
+<tr class="memdesc:a54dcea7b35bc336cbf95951ae47e3aa1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет несколько ролей участнику  <a href="#a54dcea7b35bc336cbf95951ae47e3aa1">Подробнее...</a><br /></td></tr>
+<tr class="separator:a54dcea7b35bc336cbf95951ae47e3aa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af70abd73114e92ebcd34aa5653a3756d"><td class="memItemLeft" align="right" valign="top">Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_repositories_1_1_member_role_repository.html#af70abd73114e92ebcd34aa5653a3756d">AddRolesToMemberAsync</a> (string[] roles, string member)</td></tr>
+<tr class="memdesc:af70abd73114e92ebcd34aa5653a3756d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет несколько ролей участнику  <a href="#af70abd73114e92ebcd34aa5653a3756d">Подробнее...</a><br /></td></tr>
+<tr class="separator:af70abd73114e92ebcd34aa5653a3756d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2dcad3868f33443444209eb701744ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_repositories_1_1_member_role_repository.html#ac2dcad3868f33443444209eb701744ea">DeleteMembersFromRole</a> (int[] idMembers, int idRole)</td></tr>
+<tr class="memdesc:ac2dcad3868f33443444209eb701744ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаляет роль у участников  <a href="#ac2dcad3868f33443444209eb701744ea">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac2dcad3868f33443444209eb701744ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af853147a2db1c7b7888fb193a9b3f63c"><td class="memItemLeft" align="right" valign="top">Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_repositories_1_1_member_role_repository.html#af853147a2db1c7b7888fb193a9b3f63c">DeleteMembersFromRoleAsync</a> (int[] idMembers, int idRole)</td></tr>
+<tr class="memdesc:af853147a2db1c7b7888fb193a9b3f63c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаляет роль у участников  <a href="#af853147a2db1c7b7888fb193a9b3f63c">Подробнее...</a><br /></td></tr>
+<tr class="separator:af853147a2db1c7b7888fb193a9b3f63c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab44c7357b0d479907424719f2bc4bd5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_repositories_1_1_member_role_repository.html#ab44c7357b0d479907424719f2bc4bd5e">DeleteRolesFromMember</a> (int[] idRoles, int idMember)</td></tr>
+<tr class="memdesc:ab44c7357b0d479907424719f2bc4bd5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаляет несколько ролей у участника  <a href="#ab44c7357b0d479907424719f2bc4bd5e">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab44c7357b0d479907424719f2bc4bd5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaed1f86344bd743f0a19052abfbb236"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_repositories_1_1_member_role_repository.html#aeaed1f86344bd743f0a19052abfbb236">DeleteMembersFromRole</a> (string[] members, string role)</td></tr>
+<tr class="memdesc:aeaed1f86344bd743f0a19052abfbb236"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаляет роль у участников  <a href="#aeaed1f86344bd743f0a19052abfbb236">Подробнее...</a><br /></td></tr>
+<tr class="separator:aeaed1f86344bd743f0a19052abfbb236"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e6b14fe9130d84f08e70012000ee2b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_repositories_1_1_member_role_repository.html#a0e6b14fe9130d84f08e70012000ee2b4">DeleteRolesFromMember</a> (string[] roles, string member)</td></tr>
+<tr class="memdesc:a0e6b14fe9130d84f08e70012000ee2b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаляет несколько ролей у участника  <a href="#a0e6b14fe9130d84f08e70012000ee2b4">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0e6b14fe9130d84f08e70012000ee2b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae611d244130e557de94f63b520b7df64"><td class="memItemLeft" align="right" valign="top">Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_repositories_1_1_member_role_repository.html#ae611d244130e557de94f63b520b7df64">DeleteRolesFromMemberAsync</a> (int[] idRoles, int idMember)</td></tr>
+<tr class="memdesc:ae611d244130e557de94f63b520b7df64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаляет несколько ролей у участника  <a href="#ae611d244130e557de94f63b520b7df64">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae611d244130e557de94f63b520b7df64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d3c540cf739b9f690b99c187f72d3c9"><td class="memItemLeft" align="right" valign="top">Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_repositories_1_1_member_role_repository.html#a1d3c540cf739b9f690b99c187f72d3c9">DeleteMembersFromRoleAsync</a> (string[] members, string role)</td></tr>
+<tr class="memdesc:a1d3c540cf739b9f690b99c187f72d3c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаляет роль у участников  <a href="#a1d3c540cf739b9f690b99c187f72d3c9">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1d3c540cf739b9f690b99c187f72d3c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c3ba2a30dee81385bb99ed160afed9b"><td class="memItemLeft" align="right" valign="top">Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_repositories_1_1_member_role_repository.html#a4c3ba2a30dee81385bb99ed160afed9b">DeleteRolesFromMemberAsync</a> (string[] roles, string member)</td></tr>
+<tr class="memdesc:a4c3ba2a30dee81385bb99ed160afed9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаляет несколько ролей у участника  <a href="#a4c3ba2a30dee81385bb99ed160afed9b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4c3ba2a30dee81385bb99ed160afed9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaeae86c279b1ed9747c9716569d82ecd"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; Role &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_repositories_1_1_member_role_repository.html#aaeae86c279b1ed9747c9716569d82ecd">GetExceptRoles</a> (int idMember)</td></tr>
+<tr class="memdesc:aaeae86c279b1ed9747c9716569d82ecd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает отсутствующие у участника роли  <a href="#aaeae86c279b1ed9747c9716569d82ecd">Подробнее...</a><br /></td></tr>
+<tr class="separator:aaeae86c279b1ed9747c9716569d82ecd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43b92fb8f2d5a2c91a71a996a62962f1"><td class="memItemLeft" align="right" valign="top">Task&lt; IEnumerable&lt; Role &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_repositories_1_1_member_role_repository.html#a43b92fb8f2d5a2c91a71a996a62962f1">GetExceptRolesAsync</a> (int idMember)</td></tr>
+<tr class="memdesc:a43b92fb8f2d5a2c91a71a996a62962f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает отсутствующие у участника роли  <a href="#a43b92fb8f2d5a2c91a71a996a62962f1">Подробнее...</a><br /></td></tr>
+<tr class="separator:a43b92fb8f2d5a2c91a71a996a62962f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaf9526674c6c002fa1972f1d3fba5a2"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; Role &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_repositories_1_1_member_role_repository.html#aeaf9526674c6c002fa1972f1d3fba5a2">GetExceptRoles</a> (string member)</td></tr>
+<tr class="memdesc:aeaf9526674c6c002fa1972f1d3fba5a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает отсутствующие у участника роли  <a href="#aeaf9526674c6c002fa1972f1d3fba5a2">Подробнее...</a><br /></td></tr>
+<tr class="separator:aeaf9526674c6c002fa1972f1d3fba5a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2e7ae6424bf666296e87d1b993e8cc8"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; Member &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_repositories_1_1_member_role_repository.html#ad2e7ae6424bf666296e87d1b993e8cc8">GetExceptMembers</a> (int idRole)</td></tr>
+<tr class="memdesc:ad2e7ae6424bf666296e87d1b993e8cc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает отсутствующих у роли участников  <a href="#ad2e7ae6424bf666296e87d1b993e8cc8">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad2e7ae6424bf666296e87d1b993e8cc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73d20088490e2536495147d3c5d228a0"><td class="memItemLeft" align="right" valign="top">Task&lt; IEnumerable&lt; Role &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_repositories_1_1_member_role_repository.html#a73d20088490e2536495147d3c5d228a0">GetExceptRolesAsync</a> (string member)</td></tr>
+<tr class="memdesc:a73d20088490e2536495147d3c5d228a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает отсутствующие у участника роли  <a href="#a73d20088490e2536495147d3c5d228a0">Подробнее...</a><br /></td></tr>
+<tr class="separator:a73d20088490e2536495147d3c5d228a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4572962e59fb8e7b1f4d4addc3f1e52"><td class="memItemLeft" align="right" valign="top">Task&lt; IEnumerable&lt; Member &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_repositories_1_1_member_role_repository.html#aa4572962e59fb8e7b1f4d4addc3f1e52">GetExceptMembersAsync</a> (int idRole)</td></tr>
+<tr class="memdesc:aa4572962e59fb8e7b1f4d4addc3f1e52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает отсутствующих у роли участников  <a href="#aa4572962e59fb8e7b1f4d4addc3f1e52">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa4572962e59fb8e7b1f4d4addc3f1e52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aede10752a0a7566123d9e89d5ed2e024"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; Member &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_repositories_1_1_member_role_repository.html#aede10752a0a7566123d9e89d5ed2e024">GetMembers</a> (int idRole)</td></tr>
+<tr class="memdesc:aede10752a0a7566123d9e89d5ed2e024"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает участников роли  <a href="#aede10752a0a7566123d9e89d5ed2e024">Подробнее...</a><br /></td></tr>
+<tr class="separator:aede10752a0a7566123d9e89d5ed2e024"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a616021acd5dea8b4a92996797009d41f"><td class="memItemLeft" align="right" valign="top">Task&lt; IEnumerable&lt; Member &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_repositories_1_1_member_role_repository.html#a616021acd5dea8b4a92996797009d41f">GetMembersAsync</a> (int idRole)</td></tr>
+<tr class="memdesc:a616021acd5dea8b4a92996797009d41f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает участников роли  <a href="#a616021acd5dea8b4a92996797009d41f">Подробнее...</a><br /></td></tr>
+<tr class="separator:a616021acd5dea8b4a92996797009d41f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73ad2472f85334a7dfa08760bc804135"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; Member &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_repositories_1_1_member_role_repository.html#a73ad2472f85334a7dfa08760bc804135">GetMembers</a> (string role)</td></tr>
+<tr class="memdesc:a73ad2472f85334a7dfa08760bc804135"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает участников роли  <a href="#a73ad2472f85334a7dfa08760bc804135">Подробнее...</a><br /></td></tr>
+<tr class="separator:a73ad2472f85334a7dfa08760bc804135"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac79ea94e41d505585f27d6e669cbebf5"><td class="memItemLeft" align="right" valign="top">Task&lt; IEnumerable&lt; Member &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_repositories_1_1_member_role_repository.html#ac79ea94e41d505585f27d6e669cbebf5">GetMembersAsync</a> (string role)</td></tr>
+<tr class="memdesc:ac79ea94e41d505585f27d6e669cbebf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает участников роли  <a href="#ac79ea94e41d505585f27d6e669cbebf5">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac79ea94e41d505585f27d6e669cbebf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41e47e29ca4d1ff9cf2b1475db290784"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; Role &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_repositories_1_1_member_role_repository.html#a41e47e29ca4d1ff9cf2b1475db290784">GetRoles</a> (int idMember)</td></tr>
+<tr class="memdesc:a41e47e29ca4d1ff9cf2b1475db290784"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает роли участника безопасности  <a href="#a41e47e29ca4d1ff9cf2b1475db290784">Подробнее...</a><br /></td></tr>
+<tr class="separator:a41e47e29ca4d1ff9cf2b1475db290784"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fb20815044fc16e863ab16f28954bbe"><td class="memItemLeft" align="right" valign="top">Task&lt; IEnumerable&lt; Role &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_repositories_1_1_member_role_repository.html#a3fb20815044fc16e863ab16f28954bbe">GetRolesAsync</a> (int idMember)</td></tr>
+<tr class="memdesc:a3fb20815044fc16e863ab16f28954bbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает роли участника безопасности  <a href="#a3fb20815044fc16e863ab16f28954bbe">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3fb20815044fc16e863ab16f28954bbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0909b0977a98ffd83bfd8723c20313a8"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; Role &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_repositories_1_1_member_role_repository.html#a0909b0977a98ffd83bfd8723c20313a8">GetRoles</a> (string member)</td></tr>
+<tr class="memdesc:a0909b0977a98ffd83bfd8723c20313a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает роли участника безопасности  <a href="#a0909b0977a98ffd83bfd8723c20313a8">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0909b0977a98ffd83bfd8723c20313a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec2689f487146f493694a772f375e2d0"><td class="memItemLeft" align="right" valign="top">Task&lt; IEnumerable&lt; Role &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_http_1_1_repositories_1_1_member_role_repository.html#aec2689f487146f493694a772f375e2d0">GetRolesAsync</a> (string member)</td></tr>
+<tr class="memdesc:aec2689f487146f493694a772f375e2d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает роли участника безопасности  <a href="#aec2689f487146f493694a772f375e2d0">Подробнее...</a><br /></td></tr>
+<tr class="separator:aec2689f487146f493694a772f375e2d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Свойства</h2></td></tr>
+<tr class="memitem:abf5a2b6d0d3381eb526c94259e3d7166"><td class="memItemLeft" align="right" valign="top"><a id="abf5a2b6d0d3381eb526c94259e3d7166"></a>
+string??&#160;</td><td class="memItemRight" valign="bottom"><b>Url</b><code> [get]</code></td></tr>
+<tr class="separator:abf5a2b6d0d3381eb526c94259e3d7166"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Управление участниками безопасности (пользователи и группы) и ролей </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a8b026569120f613b3811165e8fd001cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b026569120f613b3811165e8fd001cb">&#9670;&nbsp;</a></span>MemberRoleRepository()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SecurityHttp.Repositories.MemberRoleRepository.MemberRoleRepository </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_security_http_1_1_interfaces_1_1_i_common_web.html">ICommonWeb</a>&#160;</td>
+          <td class="paramname"><em>commonWeb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IApplicationContext&#160;</td>
+          <td class="paramname"><em>context</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Управление участниками безопасности (пользователи и группы) и ролей </p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a08cd78b2872985e87ea72248300e9f97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08cd78b2872985e87ea72248300e9f97">&#9670;&nbsp;</a></span>AddMembersToRole() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SecurityHttp.Repositories.MemberRoleRepository.AddMembersToRole </td>
+          <td>(</td>
+          <td class="paramtype">int []&#160;</td>
+          <td class="paramname"><em>idMembers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idRole</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавляет роль нескольким участникам </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idMembers</td><td></td></tr>
+    <tr><td class="paramname">idRole</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9cc0b55abb468f5631fe4cce5cc8e58e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cc0b55abb468f5631fe4cce5cc8e58e">&#9670;&nbsp;</a></span>AddMembersToRole() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SecurityHttp.Repositories.MemberRoleRepository.AddMembersToRole </td>
+          <td>(</td>
+          <td class="paramtype">string []&#160;</td>
+          <td class="paramname"><em>members</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>role</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавляет роль нескольким участникам </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">members</td><td></td></tr>
+    <tr><td class="paramname">role</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afcbc81d8253900639c3ef3f2f9a22e6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcbc81d8253900639c3ef3f2f9a22e6f">&#9670;&nbsp;</a></span>AddMembersToRoleAsync() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task SecurityHttp.Repositories.MemberRoleRepository.AddMembersToRoleAsync </td>
+          <td>(</td>
+          <td class="paramtype">int []&#160;</td>
+          <td class="paramname"><em>idMembers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idRole</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавляет роль нескольким участникам </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idMembers</td><td></td></tr>
+    <tr><td class="paramname">idRole</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="aca862681051b761dde1183068fb27b06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca862681051b761dde1183068fb27b06">&#9670;&nbsp;</a></span>AddMembersToRoleAsync() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task SecurityHttp.Repositories.MemberRoleRepository.AddMembersToRoleAsync </td>
+          <td>(</td>
+          <td class="paramtype">string []&#160;</td>
+          <td class="paramname"><em>members</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>role</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавляет роль нескольким участникам </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">members</td><td></td></tr>
+    <tr><td class="paramname">role</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="abcec6b94871f15ff58bdd9d188e391de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcec6b94871f15ff58bdd9d188e391de">&#9670;&nbsp;</a></span>AddRolesToMember() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SecurityHttp.Repositories.MemberRoleRepository.AddRolesToMember </td>
+          <td>(</td>
+          <td class="paramtype">int []&#160;</td>
+          <td class="paramname"><em>idRoles</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idMember</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавляет несколько ролей участнику </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idRoles</td><td></td></tr>
+    <tr><td class="paramname">idMember</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a72a453c9c9d5bc28dca2c33b49e25543"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72a453c9c9d5bc28dca2c33b49e25543">&#9670;&nbsp;</a></span>AddRolesToMember() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SecurityHttp.Repositories.MemberRoleRepository.AddRolesToMember </td>
+          <td>(</td>
+          <td class="paramtype">string []&#160;</td>
+          <td class="paramname"><em>roles</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>member</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавляет несколько ролей участнику </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">roles</td><td></td></tr>
+    <tr><td class="paramname">member</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a54dcea7b35bc336cbf95951ae47e3aa1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54dcea7b35bc336cbf95951ae47e3aa1">&#9670;&nbsp;</a></span>AddRolesToMemberAsync() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task SecurityHttp.Repositories.MemberRoleRepository.AddRolesToMemberAsync </td>
+          <td>(</td>
+          <td class="paramtype">int []&#160;</td>
+          <td class="paramname"><em>idRoles</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idMember</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавляет несколько ролей участнику </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idRoles</td><td></td></tr>
+    <tr><td class="paramname">idMember</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="af70abd73114e92ebcd34aa5653a3756d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af70abd73114e92ebcd34aa5653a3756d">&#9670;&nbsp;</a></span>AddRolesToMemberAsync() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task SecurityHttp.Repositories.MemberRoleRepository.AddRolesToMemberAsync </td>
+          <td>(</td>
+          <td class="paramtype">string []&#160;</td>
+          <td class="paramname"><em>roles</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>member</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавляет несколько ролей участнику </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">roles</td><td></td></tr>
+    <tr><td class="paramname">member</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="ac2dcad3868f33443444209eb701744ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2dcad3868f33443444209eb701744ea">&#9670;&nbsp;</a></span>DeleteMembersFromRole() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SecurityHttp.Repositories.MemberRoleRepository.DeleteMembersFromRole </td>
+          <td>(</td>
+          <td class="paramtype">int []&#160;</td>
+          <td class="paramname"><em>idMembers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idRole</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Удаляет роль у участников </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idMembers</td><td></td></tr>
+    <tr><td class="paramname">idRole</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aeaed1f86344bd743f0a19052abfbb236"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeaed1f86344bd743f0a19052abfbb236">&#9670;&nbsp;</a></span>DeleteMembersFromRole() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SecurityHttp.Repositories.MemberRoleRepository.DeleteMembersFromRole </td>
+          <td>(</td>
+          <td class="paramtype">string []&#160;</td>
+          <td class="paramname"><em>members</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>role</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Удаляет роль у участников </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">members</td><td></td></tr>
+    <tr><td class="paramname">role</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af853147a2db1c7b7888fb193a9b3f63c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af853147a2db1c7b7888fb193a9b3f63c">&#9670;&nbsp;</a></span>DeleteMembersFromRoleAsync() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task SecurityHttp.Repositories.MemberRoleRepository.DeleteMembersFromRoleAsync </td>
+          <td>(</td>
+          <td class="paramtype">int []&#160;</td>
+          <td class="paramname"><em>idMembers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idRole</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Удаляет роль у участников </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idMembers</td><td></td></tr>
+    <tr><td class="paramname">idRole</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a1d3c540cf739b9f690b99c187f72d3c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d3c540cf739b9f690b99c187f72d3c9">&#9670;&nbsp;</a></span>DeleteMembersFromRoleAsync() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task SecurityHttp.Repositories.MemberRoleRepository.DeleteMembersFromRoleAsync </td>
+          <td>(</td>
+          <td class="paramtype">string []&#160;</td>
+          <td class="paramname"><em>members</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>role</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Удаляет роль у участников </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">members</td><td></td></tr>
+    <tr><td class="paramname">role</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="ab44c7357b0d479907424719f2bc4bd5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab44c7357b0d479907424719f2bc4bd5e">&#9670;&nbsp;</a></span>DeleteRolesFromMember() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SecurityHttp.Repositories.MemberRoleRepository.DeleteRolesFromMember </td>
+          <td>(</td>
+          <td class="paramtype">int []&#160;</td>
+          <td class="paramname"><em>idRoles</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idMember</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Удаляет несколько ролей у участника </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idRoles</td><td></td></tr>
+    <tr><td class="paramname">idMember</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0e6b14fe9130d84f08e70012000ee2b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e6b14fe9130d84f08e70012000ee2b4">&#9670;&nbsp;</a></span>DeleteRolesFromMember() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SecurityHttp.Repositories.MemberRoleRepository.DeleteRolesFromMember </td>
+          <td>(</td>
+          <td class="paramtype">string []&#160;</td>
+          <td class="paramname"><em>roles</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>member</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Удаляет несколько ролей у участника </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">roles</td><td></td></tr>
+    <tr><td class="paramname">member</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae611d244130e557de94f63b520b7df64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae611d244130e557de94f63b520b7df64">&#9670;&nbsp;</a></span>DeleteRolesFromMemberAsync() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task SecurityHttp.Repositories.MemberRoleRepository.DeleteRolesFromMemberAsync </td>
+          <td>(</td>
+          <td class="paramtype">int []&#160;</td>
+          <td class="paramname"><em>idRoles</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idMember</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Удаляет несколько ролей у участника </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idRoles</td><td></td></tr>
+    <tr><td class="paramname">idMember</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a4c3ba2a30dee81385bb99ed160afed9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c3ba2a30dee81385bb99ed160afed9b">&#9670;&nbsp;</a></span>DeleteRolesFromMemberAsync() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task SecurityHttp.Repositories.MemberRoleRepository.DeleteRolesFromMemberAsync </td>
+          <td>(</td>
+          <td class="paramtype">string []&#160;</td>
+          <td class="paramname"><em>roles</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>member</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Удаляет несколько ролей у участника </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">roles</td><td></td></tr>
+    <tr><td class="paramname">member</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="ad9b352caad40df36432ec7995472fdda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9b352caad40df36432ec7995472fdda">&#9670;&nbsp;</a></span>GetExceptMembers() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt;Member&gt; SecurityHttp.Repositories.MemberRoleRepository.GetExceptMembers </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>role</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает отсутствующих у роли участников </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">role</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="ad2e7ae6424bf666296e87d1b993e8cc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2e7ae6424bf666296e87d1b993e8cc8">&#9670;&nbsp;</a></span>GetExceptMembers() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt;Member&gt; SecurityHttp.Repositories.MemberRoleRepository.GetExceptMembers </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idRole</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает отсутствующих у роли участников </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idRole</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a38c79d23607e39eb2e6d7cb8c87134ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38c79d23607e39eb2e6d7cb8c87134ad">&#9670;&nbsp;</a></span>GetExceptMembersAsync() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;IEnumerable&lt;Member&gt; &gt; SecurityHttp.Repositories.MemberRoleRepository.GetExceptMembersAsync </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>role</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает отсутствующих у роли участников </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">role</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="aa4572962e59fb8e7b1f4d4addc3f1e52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4572962e59fb8e7b1f4d4addc3f1e52">&#9670;&nbsp;</a></span>GetExceptMembersAsync() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;IEnumerable&lt;Member&gt; &gt; SecurityHttp.Repositories.MemberRoleRepository.GetExceptMembersAsync </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idRole</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает отсутствующих у роли участников </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idRole</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="aaeae86c279b1ed9747c9716569d82ecd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaeae86c279b1ed9747c9716569d82ecd">&#9670;&nbsp;</a></span>GetExceptRoles() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt;Role&gt; SecurityHttp.Repositories.MemberRoleRepository.GetExceptRoles </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idMember</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает отсутствующие у участника роли </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idMember</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="aeaf9526674c6c002fa1972f1d3fba5a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeaf9526674c6c002fa1972f1d3fba5a2">&#9670;&nbsp;</a></span>GetExceptRoles() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt;Role&gt; SecurityHttp.Repositories.MemberRoleRepository.GetExceptRoles </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>member</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает отсутствующие у участника роли </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">member</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a43b92fb8f2d5a2c91a71a996a62962f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43b92fb8f2d5a2c91a71a996a62962f1">&#9670;&nbsp;</a></span>GetExceptRolesAsync() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;IEnumerable&lt;Role&gt; &gt; SecurityHttp.Repositories.MemberRoleRepository.GetExceptRolesAsync </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idMember</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает отсутствующие у участника роли </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idMember</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a73d20088490e2536495147d3c5d228a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73d20088490e2536495147d3c5d228a0">&#9670;&nbsp;</a></span>GetExceptRolesAsync() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;IEnumerable&lt;Role&gt; &gt; SecurityHttp.Repositories.MemberRoleRepository.GetExceptRolesAsync </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>member</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает отсутствующие у участника роли </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">member</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="aede10752a0a7566123d9e89d5ed2e024"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aede10752a0a7566123d9e89d5ed2e024">&#9670;&nbsp;</a></span>GetMembers() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt;Member&gt; SecurityHttp.Repositories.MemberRoleRepository.GetMembers </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idRole</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает участников роли </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idRole</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a73ad2472f85334a7dfa08760bc804135"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73ad2472f85334a7dfa08760bc804135">&#9670;&nbsp;</a></span>GetMembers() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt;Member&gt; SecurityHttp.Repositories.MemberRoleRepository.GetMembers </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>role</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает участников роли </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">role</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a616021acd5dea8b4a92996797009d41f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a616021acd5dea8b4a92996797009d41f">&#9670;&nbsp;</a></span>GetMembersAsync() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;IEnumerable&lt;Member&gt; &gt; SecurityHttp.Repositories.MemberRoleRepository.GetMembersAsync </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idRole</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает участников роли </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idRole</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="ac79ea94e41d505585f27d6e669cbebf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac79ea94e41d505585f27d6e669cbebf5">&#9670;&nbsp;</a></span>GetMembersAsync() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;IEnumerable&lt;Member&gt; &gt; SecurityHttp.Repositories.MemberRoleRepository.GetMembersAsync </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>role</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает участников роли </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">role</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a41e47e29ca4d1ff9cf2b1475db290784"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41e47e29ca4d1ff9cf2b1475db290784">&#9670;&nbsp;</a></span>GetRoles() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt;Role&gt; SecurityHttp.Repositories.MemberRoleRepository.GetRoles </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idMember</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает роли участника безопасности </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idMember</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a0909b0977a98ffd83bfd8723c20313a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0909b0977a98ffd83bfd8723c20313a8">&#9670;&nbsp;</a></span>GetRoles() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt;Role&gt; SecurityHttp.Repositories.MemberRoleRepository.GetRoles </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>member</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает роли участника безопасности </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">member</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a3fb20815044fc16e863ab16f28954bbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fb20815044fc16e863ab16f28954bbe">&#9670;&nbsp;</a></span>GetRolesAsync() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;IEnumerable&lt;Role&gt; &gt; SecurityHttp.Repositories.MemberRoleRepository.GetRolesAsync </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idMember</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает роли участника безопасности </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idMember</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="aec2689f487146f493694a772f375e2d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec2689f487146f493694a772f375e2d0">&#9670;&nbsp;</a></span>GetRolesAsync() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;IEnumerable&lt;Role&gt; &gt; SecurityHttp.Repositories.MemberRoleRepository.GetRolesAsync </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>member</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает роли участника безопасности </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">member</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>C:/Users/Domer/source/repos/Security.V2.1/backend/SecurityHttp/Repositories/MemberRoleRepository.cs</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>

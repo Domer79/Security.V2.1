@@ -1,0 +1,4 @@
+<map id="Security.WebApi.Areas.HelpPage.HelpPageSampleGenerator.ResolveHttpRequestMessageType" name="Security.WebApi.Areas.HelpPage.HelpPageSampleGenerator.ResolveHttpRequestMessageType">
+<area shape="rect" id="node1" title="Resolves the actual type of System.Net.Http.ObjectContent&lt;T&gt; passed to the System...." alt="" coords="5,5,268,61"/>
+<area shape="rect" id="node2" href="$class_security_1_1_web_api_1_1_areas_1_1_help_page_1_1_help_page_sample_generator.html#ada2a49511003be3f5fab9a9a88da13e2" title="Resolves the type of the action parameter or return value when HttpRequestMessage or HttpResponseMess..." alt="" coords="316,13,607,54"/>
+</map>

@@ -10,16 +10,27 @@ using Security.Model;
 
 namespace Security.WebApi.Controllers
 {
+    /// <summary>
+    /// Управление политиками текущего приложения
+    /// </summary>
     [RoutePrefix("api/{app}/policy")]
     public class PolicyController : ApiController
     {
-        public ISecObjectRepository _repo { get; }
+        private readonly ISecObjectRepository _repo;
 
+        /// <summary>
+        /// Управление политиками текущего приложения
+        /// </summary>
+        /// <param name="repo"></param>
         public PolicyController(ISecObjectRepository repo)
         {
             _repo = repo;
         }
 
+        /// <summary>
+        /// Возвращает список все политик для текущего приложения
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IHttpActionResult> Get()
         {
@@ -27,6 +38,11 @@ namespace Security.WebApi.Controllers
             return Ok(secObjects);
         }
 
+        /// <summary>
+        /// Возвращает политику по ее идентификатору
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IHttpActionResult> Get(int id)
         {
@@ -34,6 +50,11 @@ namespace Security.WebApi.Controllers
             return Ok(secObject);
         }
 
+        /// <summary>
+        /// Создает новую политику
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <returns></returns>
         [HttpPost]
         public async Task<IHttpActionResult> Post([FromBody]SecObject entity)
         {
@@ -41,6 +62,11 @@ namespace Security.WebApi.Controllers
             return Ok(secObject);
         }
 
+        /// <summary>
+        /// Обновляет политику
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <returns></returns>
         [HttpPut]
         public async Task<IHttpActionResult> Put([FromBody]SecObject entity)
         {
@@ -48,6 +74,11 @@ namespace Security.WebApi.Controllers
             return Ok();
         }
 
+        /// <summary>
+        /// Удаление политики
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpDelete]
         public async Task<IHttpActionResult> Delete(int id)
         {
@@ -62,6 +93,11 @@ namespace Security.WebApi.Controllers
             return Ok(secObject);
         }
 
+        /// <summary>
+        /// Возвращает политику по ее имени
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IHttpActionResult> GetByName(string name)
         {

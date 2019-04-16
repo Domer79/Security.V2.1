@@ -24,8 +24,11 @@ namespace Security.WebApi.Infrastructure.DelegatingHandlers
                 }
 
             // log request body
-            string requestBody = await request.Content.ReadAsStringAsync();
-            Trace.WriteLine(requestBody);
+            if (request.Content != null)
+            {
+                string requestBody = await request.Content.ReadAsStringAsync();
+                Trace.WriteLine(requestBody);
+            }
 
             // let other handlers process the request
             var result = await base.SendAsync(request, cancellationToken);

@@ -22,6 +22,9 @@ import { GroupsService } from './services/groups.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { TestAccessComponent } from './test-access/test-access.component';
+import { LoginComponent } from './login/login.component';
+import { AccessDeniedComponent } from './access-denied/access-denied.component';
+import { UserInfoComponent } from './user-info/user-info.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,10 @@ import { TestAccessComponent } from './test-access/test-access.component';
     ApplicationInfoComponent,
     ApplicationRedirectComponent,
     HttpNotFoundComponent,
-    TestAccessComponent
+    TestAccessComponent,
+    LoginComponent,
+    AccessDeniedComponent,
+    UserInfoComponent
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,595 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Applications Security: Класс Security.Core.DataLayer.Repositories.GroupRepository</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Applications Security
+   &#160;<span id="projectnumber">2.1</span>
+   </div>
+   <div id="projectbrief">Apps Security</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_security.html">Security</a></li><li class="navelem"><a class="el" href="namespace_security_1_1_core.html">Core</a></li><li class="navelem"><a class="el" href="namespace_security_1_1_core_1_1_data_layer.html">DataLayer</a></li><li class="navelem"><a class="el" href="namespace_security_1_1_core_1_1_data_layer_1_1_repositories.html">Repositories</a></li><li class="navelem"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_group_repository.html">GroupRepository</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_group_repository-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс Security.Core.DataLayer.Repositories.GroupRepository</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Управление группами  
+ <a href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_group_repository.html#details">Подробнее...</a></p>
+<div class="dynheader">
+Граф наследования:Security.Core.DataLayer.Repositories.GroupRepository:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_group_repository__inherit__graph.png" border="0" usemap="#_security_8_core_8_data_layer_8_repositories_8_group_repository_inherit__map" alt="Inheritance graph"/></div>
+<map name="_security_8_core_8_data_layer_8_repositories_8_group_repository_inherit__map" id="_security_8_core_8_data_layer_8_repositories_8_group_repository_inherit__map">
+<area shape="rect"  title="Ð£Ð¿ÑÐ°Ð²Ð»ÐµÐ½Ð¸Ðµ Ð³ÑÑÐ¿Ð¿Ð°Ð¼Ð¸" alt="" coords="5,169,200,211"/>
+<area shape="rect"  href="interface_security_1_1_contracts_1_1_repository_1_1_i_group_repository.html" title="Ð£Ð¿ÑÐ°Ð²Ð»ÐµÐ½Ð¸Ðµ Ð³ÑÑÐ¿Ð¿Ð°Ð¼Ð¸" alt="" coords="41,95,164,121"/>
+<area shape="rect"  href="interface_security_1_1_contracts_1_1_repository_1_1_base_1_1_i_security_base_repository.html" title=" " alt="" coords="20,5,185,47"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса Security.Core.DataLayer.Repositories.GroupRepository:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_group_repository__coll__graph.png" border="0" usemap="#_security_8_core_8_data_layer_8_repositories_8_group_repository_coll__map" alt="Collaboration graph"/></div>
+<map name="_security_8_core_8_data_layer_8_repositories_8_group_repository_coll__map" id="_security_8_core_8_data_layer_8_repositories_8_group_repository_coll__map">
+<area shape="rect"  title="Ð£Ð¿ÑÐ°Ð²Ð»ÐµÐ½Ð¸Ðµ Ð³ÑÑÐ¿Ð¿Ð°Ð¼Ð¸" alt="" coords="5,169,200,211"/>
+<area shape="rect"  href="interface_security_1_1_contracts_1_1_repository_1_1_i_group_repository.html" title="Ð£Ð¿ÑÐ°Ð²Ð»ÐµÐ½Ð¸Ðµ Ð³ÑÑÐ¿Ð¿Ð°Ð¼Ð¸" alt="" coords="41,95,164,121"/>
+<area shape="rect"  href="interface_security_1_1_contracts_1_1_repository_1_1_base_1_1_i_security_base_repository.html" title=" " alt="" coords="20,5,185,47"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a4f91228043638f09a5afb2273f8d8b0e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_group_repository.html#a4f91228043638f09a5afb2273f8d8b0e">GroupRepository</a> (<a class="el" href="interface_security_1_1_common_contracts_1_1_i_common_db.html">ICommonDb</a> commonDb)</td></tr>
+<tr class="memdesc:a4f91228043638f09a5afb2273f8d8b0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Управление группами  <a href="#a4f91228043638f09a5afb2273f8d8b0e">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4f91228043638f09a5afb2273f8d8b0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7a199b13afc1d2eb9e64b84b7de66a5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_security_1_1_model_1_1_group.html">Group</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_group_repository.html#af7a199b13afc1d2eb9e64b84b7de66a5">Create</a> (<a class="el" href="class_security_1_1_model_1_1_group.html">Group</a> entity)</td></tr>
+<tr class="memdesc:af7a199b13afc1d2eb9e64b84b7de66a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создание объекта  <a href="#af7a199b13afc1d2eb9e64b84b7de66a5">Подробнее...</a><br /></td></tr>
+<tr class="separator:af7a199b13afc1d2eb9e64b84b7de66a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacdc038280ff595a577c6f704d83c95a"><td class="memItemLeft" align="right" valign="top">async Task&lt; <a class="el" href="class_security_1_1_model_1_1_group.html">Group</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_group_repository.html#aacdc038280ff595a577c6f704d83c95a">CreateAsync</a> (<a class="el" href="class_security_1_1_model_1_1_group.html">Group</a> entity)</td></tr>
+<tr class="memdesc:aacdc038280ff595a577c6f704d83c95a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создание объекта  <a href="#aacdc038280ff595a577c6f704d83c95a">Подробнее...</a><br /></td></tr>
+<tr class="separator:aacdc038280ff595a577c6f704d83c95a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29586583a059cd08b198a8b45e0e3fda"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_security_1_1_model_1_1_group.html">Group</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_group_repository.html#a29586583a059cd08b198a8b45e0e3fda">CreateEmpty</a> (string prefixForRequired)</td></tr>
+<tr class="memdesc:a29586583a059cd08b198a8b45e0e3fda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создание пустого объекта  <a href="#a29586583a059cd08b198a8b45e0e3fda">Подробнее...</a><br /></td></tr>
+<tr class="separator:a29586583a059cd08b198a8b45e0e3fda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76c830c58be97b29464ea4874cb722c5"><td class="memItemLeft" align="right" valign="top">async Task&lt; <a class="el" href="class_security_1_1_model_1_1_group.html">Group</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_group_repository.html#a76c830c58be97b29464ea4874cb722c5">CreateEmptyAsync</a> (string prefixForRequired)</td></tr>
+<tr class="memdesc:a76c830c58be97b29464ea4874cb722c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создание пустого объекта  <a href="#a76c830c58be97b29464ea4874cb722c5">Подробнее...</a><br /></td></tr>
+<tr class="separator:a76c830c58be97b29464ea4874cb722c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68b62e51cabd9cf374121ae505d50f4e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_security_1_1_model_1_1_group.html">Group</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_group_repository.html#a68b62e51cabd9cf374121ae505d50f4e">Get</a> (object id)</td></tr>
+<tr class="memdesc:a68b62e51cabd9cf374121ae505d50f4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает объект по ключу  <a href="#a68b62e51cabd9cf374121ae505d50f4e">Подробнее...</a><br /></td></tr>
+<tr class="separator:a68b62e51cabd9cf374121ae505d50f4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a582a86d68888b905f6463db57ba9a7f4"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; <a class="el" href="class_security_1_1_model_1_1_group.html">Group</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_group_repository.html#a582a86d68888b905f6463db57ba9a7f4">Get</a> ()</td></tr>
+<tr class="memdesc:a582a86d68888b905f6463db57ba9a7f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает все объекты  <a href="#a582a86d68888b905f6463db57ba9a7f4">Подробнее...</a><br /></td></tr>
+<tr class="separator:a582a86d68888b905f6463db57ba9a7f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc3b09faa0893d8a03260d3e42985570"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="class_security_1_1_model_1_1_group.html">Group</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_group_repository.html#abc3b09faa0893d8a03260d3e42985570">GetAsync</a> (object id)</td></tr>
+<tr class="memdesc:abc3b09faa0893d8a03260d3e42985570"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает объект по ключу  <a href="#abc3b09faa0893d8a03260d3e42985570">Подробнее...</a><br /></td></tr>
+<tr class="separator:abc3b09faa0893d8a03260d3e42985570"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af15a206ced4b8d6c159cc508ad1dece5"><td class="memItemLeft" align="right" valign="top">Task&lt; IEnumerable&lt; <a class="el" href="class_security_1_1_model_1_1_group.html">Group</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_group_repository.html#af15a206ced4b8d6c159cc508ad1dece5">GetAsync</a> ()</td></tr>
+<tr class="memdesc:af15a206ced4b8d6c159cc508ad1dece5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает все объекты  <a href="#af15a206ced4b8d6c159cc508ad1dece5">Подробнее...</a><br /></td></tr>
+<tr class="separator:af15a206ced4b8d6c159cc508ad1dece5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27418ffb146135a4d0b9e8edbae706fc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_security_1_1_model_1_1_group.html">Group</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_group_repository.html#a27418ffb146135a4d0b9e8edbae706fc">GetByName</a> (string name)</td></tr>
+<tr class="memdesc:a27418ffb146135a4d0b9e8edbae706fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение объекта по имени  <a href="#a27418ffb146135a4d0b9e8edbae706fc">Подробнее...</a><br /></td></tr>
+<tr class="separator:a27418ffb146135a4d0b9e8edbae706fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb0ad3543fa58c03b8d27e1feeef289a"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="class_security_1_1_model_1_1_group.html">Group</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_group_repository.html#acb0ad3543fa58c03b8d27e1feeef289a">GetByNameAsync</a> (string name)</td></tr>
+<tr class="memdesc:acb0ad3543fa58c03b8d27e1feeef289a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение объекта по имени  <a href="#acb0ad3543fa58c03b8d27e1feeef289a">Подробнее...</a><br /></td></tr>
+<tr class="separator:acb0ad3543fa58c03b8d27e1feeef289a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa25506b9c3de0121c7bc62d277cda266"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_group_repository.html#aa25506b9c3de0121c7bc62d277cda266">Remove</a> (object id)</td></tr>
+<tr class="memdesc:aa25506b9c3de0121c7bc62d277cda266"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаление объекта по ключу  <a href="#aa25506b9c3de0121c7bc62d277cda266">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa25506b9c3de0121c7bc62d277cda266"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7a894ebb8474319fab4081b7fac2a59"><td class="memItemLeft" align="right" valign="top">Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_group_repository.html#ae7a894ebb8474319fab4081b7fac2a59">RemoveAsync</a> (object id)</td></tr>
+<tr class="memdesc:ae7a894ebb8474319fab4081b7fac2a59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаление объекта по ключу  <a href="#ae7a894ebb8474319fab4081b7fac2a59">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae7a894ebb8474319fab4081b7fac2a59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5159fb8e1a4e6ba60b78bec1f5efb808"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_group_repository.html#a5159fb8e1a4e6ba60b78bec1f5efb808">Update</a> (<a class="el" href="class_security_1_1_model_1_1_group.html">Group</a> entity)</td></tr>
+<tr class="memdesc:a5159fb8e1a4e6ba60b78bec1f5efb808"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновление объекта  <a href="#a5159fb8e1a4e6ba60b78bec1f5efb808">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5159fb8e1a4e6ba60b78bec1f5efb808"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a055476905e87617b53a6a07d2581f14c"><td class="memItemLeft" align="right" valign="top">Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_group_repository.html#a055476905e87617b53a6a07d2581f14c">UpdateAsync</a> (<a class="el" href="class_security_1_1_model_1_1_group.html">Group</a> entity)</td></tr>
+<tr class="memdesc:a055476905e87617b53a6a07d2581f14c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновление объекта  <a href="#a055476905e87617b53a6a07d2581f14c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a055476905e87617b53a6a07d2581f14c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_interface_security_1_1_contracts_1_1_repository_1_1_base_1_1_i_security_base_repository"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_interface_security_1_1_contracts_1_1_repository_1_1_base_1_1_i_security_base_repository')"><img src="closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_base_1_1_i_security_base_repository.html">Security.Contracts.Repository.Base.ISecurityBaseRepository&lt; Group &gt;</a></td></tr>
+<tr class="memitem:abf85dc600048625d09b7cba0c4e72b6d inherit pub_methods_interface_security_1_1_contracts_1_1_repository_1_1_base_1_1_i_security_base_repository"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_base_1_1_i_security_base_repository.html#abf85dc600048625d09b7cba0c4e72b6d">CreateEmpty</a> (string prefixForRequired)</td></tr>
+<tr class="memdesc:abf85dc600048625d09b7cba0c4e72b6d inherit pub_methods_interface_security_1_1_contracts_1_1_repository_1_1_base_1_1_i_security_base_repository"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создание пустого объекта  <a href="interface_security_1_1_contracts_1_1_repository_1_1_base_1_1_i_security_base_repository.html#abf85dc600048625d09b7cba0c4e72b6d">Подробнее...</a><br /></td></tr>
+<tr class="separator:abf85dc600048625d09b7cba0c4e72b6d inherit pub_methods_interface_security_1_1_contracts_1_1_repository_1_1_base_1_1_i_security_base_repository"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6f397c9109d76a1e2dcb2508a899d5b inherit pub_methods_interface_security_1_1_contracts_1_1_repository_1_1_base_1_1_i_security_base_repository"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_base_1_1_i_security_base_repository.html#ae6f397c9109d76a1e2dcb2508a899d5b">GetByName</a> (string name)</td></tr>
+<tr class="memdesc:ae6f397c9109d76a1e2dcb2508a899d5b inherit pub_methods_interface_security_1_1_contracts_1_1_repository_1_1_base_1_1_i_security_base_repository"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение объекта по имени  <a href="interface_security_1_1_contracts_1_1_repository_1_1_base_1_1_i_security_base_repository.html#ae6f397c9109d76a1e2dcb2508a899d5b">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae6f397c9109d76a1e2dcb2508a899d5b inherit pub_methods_interface_security_1_1_contracts_1_1_repository_1_1_base_1_1_i_security_base_repository"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1048077ee488ce6ec48d49ddf5ee12af inherit pub_methods_interface_security_1_1_contracts_1_1_repository_1_1_base_1_1_i_security_base_repository"><td class="memItemLeft" align="right" valign="top">Task&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_base_1_1_i_security_base_repository.html#a1048077ee488ce6ec48d49ddf5ee12af">CreateEmptyAsync</a> (string prefixForRequired)</td></tr>
+<tr class="memdesc:a1048077ee488ce6ec48d49ddf5ee12af inherit pub_methods_interface_security_1_1_contracts_1_1_repository_1_1_base_1_1_i_security_base_repository"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создание пустого объекта  <a href="interface_security_1_1_contracts_1_1_repository_1_1_base_1_1_i_security_base_repository.html#a1048077ee488ce6ec48d49ddf5ee12af">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1048077ee488ce6ec48d49ddf5ee12af inherit pub_methods_interface_security_1_1_contracts_1_1_repository_1_1_base_1_1_i_security_base_repository"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d256e70882dc055c2adfd78b4eaf7b9 inherit pub_methods_interface_security_1_1_contracts_1_1_repository_1_1_base_1_1_i_security_base_repository"><td class="memItemLeft" align="right" valign="top">Task&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_base_1_1_i_security_base_repository.html#a5d256e70882dc055c2adfd78b4eaf7b9">GetByNameAsync</a> (string name)</td></tr>
+<tr class="memdesc:a5d256e70882dc055c2adfd78b4eaf7b9 inherit pub_methods_interface_security_1_1_contracts_1_1_repository_1_1_base_1_1_i_security_base_repository"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение объекта по имени  <a href="interface_security_1_1_contracts_1_1_repository_1_1_base_1_1_i_security_base_repository.html#a5d256e70882dc055c2adfd78b4eaf7b9">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5d256e70882dc055c2adfd78b4eaf7b9 inherit pub_methods_interface_security_1_1_contracts_1_1_repository_1_1_base_1_1_i_security_base_repository"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Управление группами </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a4f91228043638f09a5afb2273f8d8b0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f91228043638f09a5afb2273f8d8b0e">&#9670;&nbsp;</a></span>GroupRepository()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Security.Core.DataLayer.Repositories.GroupRepository.GroupRepository </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_security_1_1_common_contracts_1_1_i_common_db.html">ICommonDb</a>&#160;</td>
+          <td class="paramname"><em>commonDb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Управление группами </p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="af7a199b13afc1d2eb9e64b84b7de66a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7a199b13afc1d2eb9e64b84b7de66a5">&#9670;&nbsp;</a></span>Create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_security_1_1_model_1_1_group.html">Group</a> Security.Core.DataLayer.Repositories.GroupRepository.Create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_security_1_1_model_1_1_group.html">Group</a>&#160;</td>
+          <td class="paramname"><em>entity</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создание объекта </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entity</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="aacdc038280ff595a577c6f704d83c95a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacdc038280ff595a577c6f704d83c95a">&#9670;&nbsp;</a></span>CreateAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;<a class="el" href="class_security_1_1_model_1_1_group.html">Group</a>&gt; Security.Core.DataLayer.Repositories.GroupRepository.CreateAsync </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_security_1_1_model_1_1_group.html">Group</a>&#160;</td>
+          <td class="paramname"><em>entity</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создание объекта </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entity</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a29586583a059cd08b198a8b45e0e3fda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29586583a059cd08b198a8b45e0e3fda">&#9670;&nbsp;</a></span>CreateEmpty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_security_1_1_model_1_1_group.html">Group</a> Security.Core.DataLayer.Repositories.GroupRepository.CreateEmpty </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>prefixForRequired</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создание пустого объекта </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">prefixForRequired</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_group_repository_a29586583a059cd08b198a8b45e0e3fda_cgraph.png" border="0" usemap="#class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_group_repository_a29586583a059cd08b198a8b45e0e3fda_cgraph" alt=""/></div>
+<map name="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_group_repository_a29586583a059cd08b198a8b45e0e3fda_cgraph" id="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_group_repository_a29586583a059cd08b198a8b45e0e3fda_cgraph">
+<area shape="rect"  title="Ð¡Ð¾Ð·Ð´Ð°Ð½Ð¸Ðµ Ð¿ÑÑÑÐ¾Ð³Ð¾ Ð¾Ð±ÑÐµÐºÑÐ°" alt="" coords="5,5,204,61"/>
+<area shape="rect"  href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_group_repository.html#a582a86d68888b905f6463db57ba9a7f4" title="ÐÐ¾Ð·Ð²ÑÐ°ÑÐ°ÐµÑ Ð²ÑÐµ Ð¾Ð±ÑÐµÐºÑÑ" alt="" coords="252,13,472,54"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a76c830c58be97b29464ea4874cb722c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76c830c58be97b29464ea4874cb722c5">&#9670;&nbsp;</a></span>CreateEmptyAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;<a class="el" href="class_security_1_1_model_1_1_group.html">Group</a>&gt; Security.Core.DataLayer.Repositories.GroupRepository.CreateEmptyAsync </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>prefixForRequired</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создание пустого объекта </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">prefixForRequired</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_group_repository_a76c830c58be97b29464ea4874cb722c5_cgraph.png" border="0" usemap="#class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_group_repository_a76c830c58be97b29464ea4874cb722c5_cgraph" alt=""/></div>
+<map name="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_group_repository_a76c830c58be97b29464ea4874cb722c5_cgraph" id="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_group_repository_a76c830c58be97b29464ea4874cb722c5_cgraph">
+<area shape="rect"  title="Ð¡Ð¾Ð·Ð´Ð°Ð½Ð¸Ðµ Ð¿ÑÑÑÐ¾Ð³Ð¾ Ð¾Ð±ÑÐµÐºÑÐ°" alt="" coords="5,5,204,61"/>
+<area shape="rect"  href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_group_repository.html#af15a206ced4b8d6c159cc508ad1dece5" title="ÐÐ¾Ð·Ð²ÑÐ°ÑÐ°ÐµÑ Ð²ÑÐµ Ð¾Ð±ÑÐµÐºÑÑ" alt="" coords="252,5,451,61"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a68b62e51cabd9cf374121ae505d50f4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68b62e51cabd9cf374121ae505d50f4e">&#9670;&nbsp;</a></span>Get() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_security_1_1_model_1_1_group.html">Group</a> Security.Core.DataLayer.Repositories.GroupRepository.Get </td>
+          <td>(</td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает объект по ключу </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a582a86d68888b905f6463db57ba9a7f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a582a86d68888b905f6463db57ba9a7f4">&#9670;&nbsp;</a></span>Get() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt;<a class="el" href="class_security_1_1_model_1_1_group.html">Group</a>&gt; Security.Core.DataLayer.Repositories.GroupRepository.Get </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает все объекты </p>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_group_repository_a582a86d68888b905f6463db57ba9a7f4_icgraph.png" border="0" usemap="#class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_group_repository_a582a86d68888b905f6463db57ba9a7f4_icgraph" alt=""/></div>
+<map name="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_group_repository_a582a86d68888b905f6463db57ba9a7f4_icgraph" id="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_group_repository_a582a86d68888b905f6463db57ba9a7f4_icgraph">
+<area shape="rect"  title="ÐÐ¾Ð·Ð²ÑÐ°ÑÐ°ÐµÑ Ð²ÑÐµ Ð¾Ð±ÑÐµÐºÑÑ" alt="" coords="252,13,472,54"/>
+<area shape="rect"  href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_group_repository.html#a29586583a059cd08b198a8b45e0e3fda" title="Ð¡Ð¾Ð·Ð´Ð°Ð½Ð¸Ðµ Ð¿ÑÑÑÐ¾Ð³Ð¾ Ð¾Ð±ÑÐµÐºÑÐ°" alt="" coords="5,5,204,61"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abc3b09faa0893d8a03260d3e42985570"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc3b09faa0893d8a03260d3e42985570">&#9670;&nbsp;</a></span>GetAsync() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;<a class="el" href="class_security_1_1_model_1_1_group.html">Group</a>&gt; Security.Core.DataLayer.Repositories.GroupRepository.GetAsync </td>
+          <td>(</td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает объект по ключу </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="af15a206ced4b8d6c159cc508ad1dece5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af15a206ced4b8d6c159cc508ad1dece5">&#9670;&nbsp;</a></span>GetAsync() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;IEnumerable&lt;<a class="el" href="class_security_1_1_model_1_1_group.html">Group</a>&gt; &gt; Security.Core.DataLayer.Repositories.GroupRepository.GetAsync </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает все объекты </p>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_group_repository_af15a206ced4b8d6c159cc508ad1dece5_icgraph.png" border="0" usemap="#class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_group_repository_af15a206ced4b8d6c159cc508ad1dece5_icgraph" alt=""/></div>
+<map name="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_group_repository_af15a206ced4b8d6c159cc508ad1dece5_icgraph" id="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_group_repository_af15a206ced4b8d6c159cc508ad1dece5_icgraph">
+<area shape="rect"  title="ÐÐ¾Ð·Ð²ÑÐ°ÑÐ°ÐµÑ Ð²ÑÐµ Ð¾Ð±ÑÐµÐºÑÑ" alt="" coords="252,5,451,61"/>
+<area shape="rect"  href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_group_repository.html#a76c830c58be97b29464ea4874cb722c5" title="Ð¡Ð¾Ð·Ð´Ð°Ð½Ð¸Ðµ Ð¿ÑÑÑÐ¾Ð³Ð¾ Ð¾Ð±ÑÐµÐºÑÐ°" alt="" coords="5,5,204,61"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a27418ffb146135a4d0b9e8edbae706fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27418ffb146135a4d0b9e8edbae706fc">&#9670;&nbsp;</a></span>GetByName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_security_1_1_model_1_1_group.html">Group</a> Security.Core.DataLayer.Repositories.GroupRepository.GetByName </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Получение объекта по имени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="acb0ad3543fa58c03b8d27e1feeef289a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb0ad3543fa58c03b8d27e1feeef289a">&#9670;&nbsp;</a></span>GetByNameAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;<a class="el" href="class_security_1_1_model_1_1_group.html">Group</a>&gt; Security.Core.DataLayer.Repositories.GroupRepository.GetByNameAsync </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Получение объекта по имени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="aa25506b9c3de0121c7bc62d277cda266"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa25506b9c3de0121c7bc62d277cda266">&#9670;&nbsp;</a></span>Remove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Security.Core.DataLayer.Repositories.GroupRepository.Remove </td>
+          <td>(</td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Удаление объекта по ключу </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae7a894ebb8474319fab4081b7fac2a59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7a894ebb8474319fab4081b7fac2a59">&#9670;&nbsp;</a></span>RemoveAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task Security.Core.DataLayer.Repositories.GroupRepository.RemoveAsync </td>
+          <td>(</td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Удаление объекта по ключу </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a5159fb8e1a4e6ba60b78bec1f5efb808"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5159fb8e1a4e6ba60b78bec1f5efb808">&#9670;&nbsp;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Security.Core.DataLayer.Repositories.GroupRepository.Update </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_security_1_1_model_1_1_group.html">Group</a>&#160;</td>
+          <td class="paramname"><em>entity</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Обновление объекта </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entity</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a055476905e87617b53a6a07d2581f14c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a055476905e87617b53a6a07d2581f14c">&#9670;&nbsp;</a></span>UpdateAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task Security.Core.DataLayer.Repositories.GroupRepository.UpdateAsync </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_security_1_1_model_1_1_group.html">Group</a>&#160;</td>
+          <td class="paramname"><em>entity</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Обновление объекта </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entity</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>C:/Users/Domer/source/repos/Security.V2.1/backend/Security/Core/DataLayer/Repositories/GroupRepository.cs</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>

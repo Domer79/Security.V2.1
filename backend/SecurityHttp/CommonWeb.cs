@@ -5,9 +5,9 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using Newtonsoft.Json;
 using Security.CommonContracts;
-using Security.Model;
 using SecurityHttp.Helpers;
 using SecurityHttp.Interfaces;
 
@@ -483,7 +483,8 @@ namespace SecurityHttp
                 var properties = data.GetType().GetProperties();
                 foreach (var propertyInfo in properties)
                 {
-                    _params[propertyInfo.Name] = propertyInfo.GetValue(data);
+                    var value = propertyInfo.GetValue(data);
+                    _params[propertyInfo.Name] = HttpUtility.UrlEncode(value?.ToString());
                 }
             }
         }
@@ -493,6 +494,12 @@ namespace SecurityHttp
             var aggregateString = _params.Aggregate("", (c, n) => $"{c}&{n.Key}={n.Value}");
             var trim = aggregateString.Trim('&');
             return trim;
+        }
+
+        public IEnumerable<KeyValuePair<string, string>> ToKeyValuePairs()
+        {
+            var keyValuePairs = _params.ToDictionary(pair => pair.Key, pair => pair.ToString());
+            return keyValuePairs;
         }
     }
 }

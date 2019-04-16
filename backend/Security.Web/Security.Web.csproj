@@ -104,7 +104,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ExecSecurityObjects.cs" />
     <Compile Include="Exceptions\AuthorizeException.cs" />
     <Compile Include="Extensions\Identity.cs" />
     <Compile Include="Http\AuthorizeAttribute.cs" />
@@ -118,19 +117,12 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+    <None Include="readme.md" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Security.Model\Security.Model.csproj">
-      <Project>{69f6d882-5a1e-49a9-b10c-a81ad937d188}</Project>
-      <Name>Security.Model</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Security\Security.csproj">
       <Project>{556713e5-2adb-4b4b-8d40-74df9393d33d}</Project>
       <Name>Security</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Tools\Tools.csproj">
-      <Project>{2F1F6E24-1FA5-412B-8949-0A7888B9BE71}</Project>
-      <Name>Tools</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

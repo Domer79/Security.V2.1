@@ -1,0 +1,20 @@
+<map id="Security.Core.Security" name="Security.Core.Security">
+<area shape="rect" id="node1" title="Контекст безопасности" alt="" coords="608,325,761,352"/>
+<area shape="rect" id="node2" href="$interface_security_1_1_contracts_1_1_i_security.html" title="Контекст безопасности" alt="" coords="283,5,357,32"/>
+<area shape="rect" id="node3" title=" " alt="" coords="43,5,133,32"/>
+<area shape="rect" id="node4" href="$interface_security_1_1_contracts_1_1_repository_1_1_i_member_role_repository.html" title="Управление участниками безопасности (пользователи и группы) и ролей" alt="" coords="220,57,420,98"/>
+<area shape="rect" id="node5" href="$interface_security_1_1_contracts_1_1_repository_1_1_i_application_repository.html" title="Ограниченное управление приложениями" alt="" coords="220,122,420,163"/>
+<area shape="rect" id="node6" href="$interface_security_1_1_contracts_1_1_repository_1_1_base_1_1_i_security_base_repository.html" title=" " alt="" coords="5,122,171,163"/>
+<area shape="rect" id="node7" href="$interface_security_1_1_contracts_1_1_repository_1_1_i_user_repository.html" title="Управление пользователями" alt="" coords="220,187,420,229"/>
+<area shape="rect" id="node8" href="$interface_security_1_1_contracts_1_1_repository_1_1_base_1_1_i_security_base_repository.html" title=" " alt="" coords="5,187,171,229"/>
+<area shape="rect" id="node9" href="$interface_security_1_1_contracts_1_1_repository_1_1_i_role_repository.html" title="Управление ролями" alt="" coords="220,253,420,294"/>
+<area shape="rect" id="node10" href="$interface_security_1_1_contracts_1_1_repository_1_1_base_1_1_i_security_base_repository.html" title=" " alt="" coords="5,253,171,294"/>
+<area shape="rect" id="node11" href="$interface_security_1_1_contracts_1_1_repository_1_1_i_user_group_repository.html" title="Управление пользователями и группами" alt="" coords="220,318,420,359"/>
+<area shape="rect" id="node12" href="$interface_security_1_1_contracts_1_1_repository_1_1_i_group_repository.html" title="Управление группами" alt="" coords="220,383,420,425"/>
+<area shape="rect" id="node13" href="$interface_security_1_1_contracts_1_1_repository_1_1_base_1_1_i_security_base_repository.html" title=" " alt="" coords="5,383,171,425"/>
+<area shape="rect" id="node14" href="$interface_security_1_1_contracts_1_1_i_config.html" title="Создание и настройка политик безопасности" alt="" coords="233,449,407,476"/>
+<area shape="rect" id="node15" href="$interface_security_1_1_contracts_1_1_repository_1_1_i_sec_object_repository.html" title="Управление политиками безопасности" alt="" coords="220,501,420,542"/>
+<area shape="rect" id="node16" href="$interface_security_1_1_contracts_1_1_repository_1_1_base_1_1_i_security_base_repository.html" title=" " alt="" coords="5,501,171,542"/>
+<area shape="rect" id="node17" href="$interface_security_1_1_contracts_1_1_i_security_settings.html" title="Управление параметрами для системы доступа" alt="" coords="227,566,413,607"/>
+<area shape="rect" id="node18" href="$interface_security_1_1_contracts_1_1_repository_1_1_i_grant_repository.html" title="Управление разрешениями" alt="" coords="220,631,420,673"/>
+</map>

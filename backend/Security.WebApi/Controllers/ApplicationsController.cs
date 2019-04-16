@@ -21,7 +21,7 @@ namespace Security.WebApi.Controllers
         private readonly IApplicationContext _context;
 
         /// <summary>
-        /// 
+        /// API для работы с приложениями
         /// </summary>
         /// <param name="repository"></param>
         /// <param name="context"></param>
@@ -31,6 +31,11 @@ namespace Security.WebApi.Controllers
             _context = context;
         }
 
+        /// <summary>
+        /// Создание нового приложения с заданным префиксом
+        /// </summary>
+        /// <param name="prefix"></param>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IHttpActionResult> CreateEmpty(string prefix)
         {
@@ -38,6 +43,11 @@ namespace Security.WebApi.Controllers
             return Ok(application);
         }
 
+        /// <summary>
+        /// Удаление приложения по его идентификатору
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpDelete]
         public async Task<IHttpActionResult> Delete(int id)
         {
@@ -45,6 +55,11 @@ namespace Security.WebApi.Controllers
             return Ok();
         }
 
+        /// <summary>
+        /// Удаление приложения по имени
+        /// </summary>
+        /// <param name="appName"></param>
+        /// <returns></returns>
         [HttpDelete]
         public async Task<IHttpActionResult> Delete(string appName)
         {
@@ -63,6 +78,11 @@ namespace Security.WebApi.Controllers
             return Ok(applications);
         }
 
+        /// <summary>
+        /// Возвращает приложение по идентификатору
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IHttpActionResult> Get(int id)
         {
@@ -70,6 +90,11 @@ namespace Security.WebApi.Controllers
             return Ok(app);
         }
 
+        /// <summary>
+        /// Возвращает приложение по его имени
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IHttpActionResult> GetByName(string name)
         {
@@ -77,6 +102,11 @@ namespace Security.WebApi.Controllers
             return Ok(app);
         }
 
+        /// <summary>
+        /// Создание приложения
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <returns></returns>
         [HttpPost]
         public async Task<IHttpActionResult> Post([FromBody] Application entity)
         {
@@ -84,6 +114,11 @@ namespace Security.WebApi.Controllers
             return Ok(app);
         }
 
+        /// <summary>
+        /// Обновление приложения
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <returns></returns>
         [HttpPut]
         public async Task<IHttpActionResult> Put([FromBody] Application entity)
         {

@@ -1,0 +1,5 @@
+<map id="Security.Dapper.IWrappedDataReader" name="Security.Dapper.IWrappedDataReader">
+<area shape="rect" id="node1" title="Describes a reader that controls the lifetime of both a command and a reader, exposing the downstream..." alt="" coords="24,80,199,121"/>
+<area shape="rect" id="node3" href="$class_security_1_1_dapper_1_1_wrapped_reader.html" title=" " alt="" coords="5,169,217,196"/>
+<area shape="rect" id="node2" title=" " alt="" coords="65,5,158,32"/>
+</map>

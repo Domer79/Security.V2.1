@@ -18,11 +18,19 @@ namespace Security.WebApi.Controllers
     {
         private readonly IGroupRepository _repo;
 
+        /// <summary>
+        /// API для работы с группами
+        /// </summary>
         public GroupsController(IGroupRepository repo)
         {
             _repo = repo;
         }
 
+        /// <summary>
+        /// Создает пустую группу с заданным префиксом
+        /// </summary>
+        /// <param name="prefix"></param>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IHttpActionResult> CreateEmpty(string prefix)
         {
@@ -30,6 +38,11 @@ namespace Security.WebApi.Controllers
             return Ok(group);
         }
 
+        /// <summary>
+        /// Удаляет группу по идентификатору
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpDelete]
         public async Task<IHttpActionResult> Delete(int id)
         {
@@ -37,6 +50,10 @@ namespace Security.WebApi.Controllers
             return Ok();
         }
 
+        /// <summary>
+        /// Возвращает список всех групп
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IHttpActionResult> Get()
         {
@@ -44,6 +61,11 @@ namespace Security.WebApi.Controllers
             return Ok(groups);
         }
 
+        /// <summary>
+        /// Возвращает группу по идентификатору
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IHttpActionResult> Get(int id)
         {
@@ -51,6 +73,11 @@ namespace Security.WebApi.Controllers
             return Ok(group);
         }
 
+        /// <summary>
+        /// Возвращает группу по имени
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IHttpActionResult> GetByName(string name)
         {
@@ -58,6 +85,11 @@ namespace Security.WebApi.Controllers
             return Ok(group);
         }
 
+        /// <summary>
+        /// Создает новую группу с указанными свойствами
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <returns></returns>
         [HttpPost]
         public async Task<IHttpActionResult> Post([FromBody] Group entity)
         {
@@ -65,6 +97,11 @@ namespace Security.WebApi.Controllers
             return Ok(group);
         }
 
+        /// <summary>
+        /// Обновляет информацию о группе
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <returns></returns>
         [HttpPut]
         public async Task<IHttpActionResult> Put([FromBody] Group entity)
         {

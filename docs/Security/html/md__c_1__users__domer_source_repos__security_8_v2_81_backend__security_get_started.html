@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Applications Security: Начало работы</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Applications Security
+   &#160;<span id="projectnumber">2.1</span>
+   </div>
+   <div id="projectbrief">Apps Security</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">Начало работы </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2>Запуск контекста</h2>
+<div class="fragment"><div class="line">var security = new Core.Security(&quot;MyNewTestApp&quot;, &quot;MyNewTestApp Description&quot;);</div><div class="line">//или если вы работаете со сборкой SecurityHttp, то</div><div class="line">var security = new SecurityWebClient(&quot;MyNewTestApp&quot;, &quot;MyNewTestApp Description&quot;);</div></div><!-- fragment --><p>Здесь происходит создание экземпляра класса, реализующего интерфейс <code>ISecurity</code> и регистрация приложения "MyNewTestApp". Далее, необходимо зарегистрировать политики безопасности</p>
+<div class="fragment"><div class="line">Config.RegisterSecurityObjects(&quot;MyNewTestApp&quot;</div><div class="line">    , &quot;politic1&quot;</div><div class="line">    , &quot;politic2&quot;</div><div class="line">    , &quot;politic3&quot;</div><div class="line">    , &quot;politic4&quot;</div><div class="line">    , &quot;politic5&quot;);</div></div><!-- fragment --><p>Итоговый код будет примерно таким:</p>
+<div class="fragment"><div class="line">public class WithDbSecurity: Security.Core.Security</div><div class="line">{</div><div class="line">    public WithDbSecurity() : base(&quot;MvcWithDbApplication&quot;, &quot;Тестовое приложение MvcWithDbApplication&quot;)</div><div class="line">    {</div><div class="line">        Config.RegisterSecurityObjects(&quot;MvcWithDbApplication&quot;, &quot;contact&quot;);</div><div class="line">    }</div><div class="line">}</div></div><!-- fragment --><p>Рекомендуется, использовать дочерний класс, наследующий контекст безопасности и использовать его через DI-контейнер</p>
+<div class="fragment"><div class="line">//IoC Autofac</div><div class="line">//AspNet MVC project</div><div class="line"></div><div class="line">var builder = new ContainerBuilder();</div><div class="line"></div><div class="line">builder.RegisterControllers(typeof(MvcApplication).Assembly);</div><div class="line">builder.RegisterType&lt;WithDbSecurity&gt;().As&lt;ISecurity&gt;();</div><div class="line"></div><div class="line">DependencyResolver.SetResolver(new AutofacDependencyResolver(builder.Build()));</div></div><!-- fragment --><h2>Токены</h2>
+<p>Принцип работы осуществляется на основе передаче токенов. В первый раз, при входе пользователя, в систему передаются логин и пароль для входа. При успешном входе приложение получает токен пользователя, которое необходимо использовать в дальнейшем для проверок доступа. </p>
+</div></div><!-- PageDoc -->
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>

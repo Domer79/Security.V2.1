@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Linq;
 using System.Security.Principal;
+using System.Web.Mvc;
 using System.Web.Security;
-using Security.Model;
+using Security.Contracts;
 
 namespace Security.Web
 {
@@ -11,23 +12,9 @@ namespace Security.Web
     /// </summary>
     public class UserIdentity : IIdentity
     {
-        public UserIdentity(string login, string applicationName)
+        public UserIdentity(string token)
         {
-            User = GetUser(login, applicationName);
-        }
-
-        /// <summary>
-        /// Профиль пользователя
-        /// </summary>
-        public User User { get; }
-
-        private static User GetUser(string login, string applicationName)
-        {
-            using (var security = new Core.Security(applicationName))
-            {
-                var user = security.UserRepository.GetByName(login);
-                return user;
-            }
+            Name = token;
         }
 
         /// <summary>
@@ -36,7 +23,7 @@ namespace Security.Web
         /// <returns>
         /// Имя пользователя, от имени которого выполняется код.
         /// </returns>
-        public string Name => User == null ? "" : $"{User.LastName} {User.FirstName}";
+        public string Name { get; }
 
         /// <summary>
         /// Возвращает тип проверки подлинности.
@@ -52,7 +39,7 @@ namespace Security.Web
         /// <returns>
         /// true, если пользователь был аутентифицирован; в противном случае false.
         /// </returns>
-        public bool IsAuthenticated => User != null;
+        public bool IsAuthenticated => !string.IsNullOrEmpty(Name);
 
         /// <summary>
         /// Возвращает имя текущего пользователя

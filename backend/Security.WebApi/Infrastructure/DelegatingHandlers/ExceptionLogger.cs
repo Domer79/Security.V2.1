@@ -11,7 +11,7 @@ namespace Security.WebApi.Infrastructure.DelegatingHandlers
     {
         private ILogger _logger = LogManager.GetLogger("SecurityExceptionLogger");
 
-        public async Task LogAsync(ExceptionLoggerContext context, CancellationToken cancellationToken)
+        public Task LogAsync(ExceptionLoggerContext context, CancellationToken cancellationToken)
         {
             if (context.ExceptionContext.ControllerContext == null)
             {
@@ -20,7 +20,7 @@ namespace Security.WebApi.Infrastructure.DelegatingHandlers
                     context.Request
                 });
 
-                return;
+                return Task.CompletedTask;
             }
 
             var controllerContext = context.ExceptionContext.ControllerContext;
@@ -36,7 +36,7 @@ namespace Security.WebApi.Infrastructure.DelegatingHandlers
                 actionArguments,
             });
 
-            await Task.Delay(0);
+            return Task.CompletedTask;
         }
     }
 }

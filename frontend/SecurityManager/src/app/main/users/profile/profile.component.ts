@@ -40,4 +40,13 @@ export class ProfileComponent implements OnInit {
     });
   }
 
+  setPassword(password: string): void{
+    this.user$.subscribe(user => {
+      this.usersService.setPassword(user.Login, password).then((res: any) => {
+        if (res)
+          console.log("Password setted")
+      })
+    });
+  }
+
 }

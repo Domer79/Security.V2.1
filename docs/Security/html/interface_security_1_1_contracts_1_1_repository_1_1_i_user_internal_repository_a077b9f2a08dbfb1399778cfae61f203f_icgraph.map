@@ -1,0 +1,4 @@
+<map id="Security.Contracts.Repository.IUserInternalRepository.UserValidate" name="Security.Contracts.Repository.IUserInternalRepository.UserValidate">
+<area shape="rect" id="node1" title="Проверка аутентификации" alt="" coords="237,5,472,47"/>
+<area shape="rect" id="node2" href="$class_security_1_1_core_1_1_security.html#a918319850557405f800b22c528993115" title="Производит идентификацию пользователя" alt="" coords="5,5,189,47"/>
+</map>

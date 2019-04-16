@@ -1,0 +1,564 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Applications Security: Класс Security.Core.DataLayer.Repositories.TokenService</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Applications Security
+   &#160;<span id="projectnumber">2.1</span>
+   </div>
+   <div id="projectbrief">Apps Security</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_security.html">Security</a></li><li class="navelem"><a class="el" href="namespace_security_1_1_core.html">Core</a></li><li class="navelem"><a class="el" href="namespace_security_1_1_core_1_1_data_layer.html">DataLayer</a></li><li class="navelem"><a class="el" href="namespace_security_1_1_core_1_1_data_layer_1_1_repositories.html">Repositories</a></li><li class="navelem"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_token_service.html">TokenService</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_token_service-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс Security.Core.DataLayer.Repositories.TokenService</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Управление токенами  
+ <a href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_token_service.html#details">Подробнее...</a></p>
+<div class="dynheader">
+Граф наследования:Security.Core.DataLayer.Repositories.TokenService:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_token_service__inherit__graph.png" border="0" usemap="#_security_8_core_8_data_layer_8_repositories_8_token_service_inherit__map" alt="Inheritance graph"/></div>
+<map name="_security_8_core_8_data_layer_8_repositories_8_token_service_inherit__map" id="_security_8_core_8_data_layer_8_repositories_8_token_service_inherit__map">
+<area shape="rect"  title="Ð£Ð¿ÑÐ°Ð²Ð»ÐµÐ½Ð¸Ðµ ÑÐ¾ÐºÐµÐ½Ð°Ð¼Ð¸" alt="" coords="5,80,180,121"/>
+<area shape="rect"  href="interface_security_1_1_contracts_1_1_repository_1_1_i_token_service.html" title="Ð£Ð¿ÑÐ°Ð²Ð»ÐµÐ½Ð¸Ðµ ÑÐ¾ÐºÐµÐ½Ð°Ð¼Ð¸" alt="" coords="41,5,144,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса Security.Core.DataLayer.Repositories.TokenService:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_token_service__coll__graph.png" border="0" usemap="#_security_8_core_8_data_layer_8_repositories_8_token_service_coll__map" alt="Collaboration graph"/></div>
+<map name="_security_8_core_8_data_layer_8_repositories_8_token_service_coll__map" id="_security_8_core_8_data_layer_8_repositories_8_token_service_coll__map">
+<area shape="rect"  title="Ð£Ð¿ÑÐ°Ð²Ð»ÐµÐ½Ð¸Ðµ ÑÐ¾ÐºÐµÐ½Ð°Ð¼Ð¸" alt="" coords="5,80,180,121"/>
+<area shape="rect"  href="interface_security_1_1_contracts_1_1_repository_1_1_i_token_service.html" title="Ð£Ð¿ÑÐ°Ð²Ð»ÐµÐ½Ð¸Ðµ ÑÐ¾ÐºÐµÐ½Ð°Ð¼Ð¸" alt="" coords="41,5,144,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a3b5ae957cc818dab773504917ed320ee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_token_service.html#a3b5ae957cc818dab773504917ed320ee">TokenService</a> (<a class="el" href="interface_security_1_1_common_contracts_1_1_i_common_db.html">ICommonDb</a> commonDb)</td></tr>
+<tr class="memdesc:a3b5ae957cc818dab773504917ed320ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Управление токенами  <a href="#a3b5ae957cc818dab773504917ed320ee">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3b5ae957cc818dab773504917ed320ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af86798d9d4ecd2ff34a1f9f681ac6533"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_token_service.html#af86798d9d4ecd2ff34a1f9f681ac6533">Create</a> (int idUser)</td></tr>
+<tr class="memdesc:af86798d9d4ecd2ff34a1f9f681ac6533"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создание токена  <a href="#af86798d9d4ecd2ff34a1f9f681ac6533">Подробнее...</a><br /></td></tr>
+<tr class="separator:af86798d9d4ecd2ff34a1f9f681ac6533"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67d29e138aad01ae3fc22d66a2fbdbdf"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_token_service.html#a67d29e138aad01ae3fc22d66a2fbdbdf">Create</a> (string loginOrEmail)</td></tr>
+<tr class="memdesc:a67d29e138aad01ae3fc22d66a2fbdbdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создание токена  <a href="#a67d29e138aad01ae3fc22d66a2fbdbdf">Подробнее...</a><br /></td></tr>
+<tr class="separator:a67d29e138aad01ae3fc22d66a2fbdbdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f42c47a4d1cd5e60084572725157fa5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_token_service.html#a1f42c47a4d1cd5e60084572725157fa5">StopExpire</a> (string tokenId, string reason=null)</td></tr>
+<tr class="memdesc:a1f42c47a4d1cd5e60084572725157fa5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Прекращение действия отдельного токена  <a href="#a1f42c47a4d1cd5e60084572725157fa5">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1f42c47a4d1cd5e60084572725157fa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6ed3132c3f90207986ef423c36ba8fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_token_service.html#aa6ed3132c3f90207986ef423c36ba8fa">StopExpireForUser</a> (string tokenId, string reason=null)</td></tr>
+<tr class="memdesc:aa6ed3132c3f90207986ef423c36ba8fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Прекращение действия всех токенов связанных с пользователем  <a href="#aa6ed3132c3f90207986ef423c36ba8fa">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa6ed3132c3f90207986ef423c36ba8fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77f48d9fcec5f234ac0091085e808dc6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_token_service.html#a77f48d9fcec5f234ac0091085e808dc6">CheckExpire</a> (string token)</td></tr>
+<tr class="memdesc:a77f48d9fcec5f234ac0091085e808dc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверка срока действия токена  <a href="#a77f48d9fcec5f234ac0091085e808dc6">Подробнее...</a><br /></td></tr>
+<tr class="separator:a77f48d9fcec5f234ac0091085e808dc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0f74a3fa1979df2c1bd53fc005b3646"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_security_1_1_model_1_1_user.html">User</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_token_service.html#ab0f74a3fa1979df2c1bd53fc005b3646">GetUser</a> (string token)</td></tr>
+<tr class="memdesc:ab0f74a3fa1979df2c1bd53fc005b3646"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает пользователя по токену  <a href="#ab0f74a3fa1979df2c1bd53fc005b3646">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab0f74a3fa1979df2c1bd53fc005b3646"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63b42932f086a0b672cfea202a4735b2"><td class="memItemLeft" align="right" valign="top">async Task&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_token_service.html#a63b42932f086a0b672cfea202a4735b2">CreateAsync</a> (int idUser)</td></tr>
+<tr class="memdesc:a63b42932f086a0b672cfea202a4735b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создание токена  <a href="#a63b42932f086a0b672cfea202a4735b2">Подробнее...</a><br /></td></tr>
+<tr class="separator:a63b42932f086a0b672cfea202a4735b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64d853f8ca0e9facd92cc03358ca7f37"><td class="memItemLeft" align="right" valign="top">async Task&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_token_service.html#a64d853f8ca0e9facd92cc03358ca7f37">CreateAsync</a> (string loginOrEmail)</td></tr>
+<tr class="memdesc:a64d853f8ca0e9facd92cc03358ca7f37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создание токена  <a href="#a64d853f8ca0e9facd92cc03358ca7f37">Подробнее...</a><br /></td></tr>
+<tr class="separator:a64d853f8ca0e9facd92cc03358ca7f37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a201abff154c87abc51824f4b9ef09db6"><td class="memItemLeft" align="right" valign="top">Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_token_service.html#a201abff154c87abc51824f4b9ef09db6">StopExpireAsync</a> (string tokenId, string reason=null)</td></tr>
+<tr class="memdesc:a201abff154c87abc51824f4b9ef09db6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Прекращение действия отдельного токена  <a href="#a201abff154c87abc51824f4b9ef09db6">Подробнее...</a><br /></td></tr>
+<tr class="separator:a201abff154c87abc51824f4b9ef09db6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1605a31d014705a533840b580300ed9a"><td class="memItemLeft" align="right" valign="top">Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_token_service.html#a1605a31d014705a533840b580300ed9a">StopExpireForUserAsync</a> (string tokenId, string reason=null)</td></tr>
+<tr class="memdesc:a1605a31d014705a533840b580300ed9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Прекращение действия всех токенов связанных с пользователем  <a href="#a1605a31d014705a533840b580300ed9a">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1605a31d014705a533840b580300ed9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0256c1723ba35df22132b3f2a3d91fe8"><td class="memItemLeft" align="right" valign="top">Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_token_service.html#a0256c1723ba35df22132b3f2a3d91fe8">CheckExpireAsync</a> (string token)</td></tr>
+<tr class="memdesc:a0256c1723ba35df22132b3f2a3d91fe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверка срока действия токена  <a href="#a0256c1723ba35df22132b3f2a3d91fe8">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0256c1723ba35df22132b3f2a3d91fe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada1308e377f2438a3fd6fc8942bc7750"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="class_security_1_1_model_1_1_user.html">User</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_token_service.html#ada1308e377f2438a3fd6fc8942bc7750">GetUserAsync</a> (string token)</td></tr>
+<tr class="memdesc:ada1308e377f2438a3fd6fc8942bc7750"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверка срока действия токена  <a href="#ada1308e377f2438a3fd6fc8942bc7750">Подробнее...</a><br /></td></tr>
+<tr class="separator:ada1308e377f2438a3fd6fc8942bc7750"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Управление токенами </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a3b5ae957cc818dab773504917ed320ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b5ae957cc818dab773504917ed320ee">&#9670;&nbsp;</a></span>TokenService()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Security.Core.DataLayer.Repositories.TokenService.TokenService </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_security_1_1_common_contracts_1_1_i_common_db.html">ICommonDb</a>&#160;</td>
+          <td class="paramname"><em>commonDb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Управление токенами </p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a77f48d9fcec5f234ac0091085e808dc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77f48d9fcec5f234ac0091085e808dc6">&#9670;&nbsp;</a></span>CheckExpire()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Security.Core.DataLayer.Repositories.TokenService.CheckExpire </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>token</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Проверка срока действия токена </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">token</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_token_service.html#afa263fdcc5373067bd27deee7b425300">Security.Contracts.Repository.ITokenService</a>.</p>
+
+</div>
+</div>
+<a id="a0256c1723ba35df22132b3f2a3d91fe8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0256c1723ba35df22132b3f2a3d91fe8">&#9670;&nbsp;</a></span>CheckExpireAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;bool&gt; Security.Core.DataLayer.Repositories.TokenService.CheckExpireAsync </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>token</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Проверка срока действия токена </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">token</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_token_service.html#ace91ef920511955bd1982de975d2d536">Security.Contracts.Repository.ITokenService</a>.</p>
+
+</div>
+</div>
+<a id="af86798d9d4ecd2ff34a1f9f681ac6533"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af86798d9d4ecd2ff34a1f9f681ac6533">&#9670;&nbsp;</a></span>Create() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Security.Core.DataLayer.Repositories.TokenService.Create </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idUser</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создание токена </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idUser</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_token_service.html#a569bc14fbf3705f6a15959042fdeb6f4">Security.Contracts.Repository.ITokenService</a>.</p>
+
+</div>
+</div>
+<a id="a67d29e138aad01ae3fc22d66a2fbdbdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67d29e138aad01ae3fc22d66a2fbdbdf">&#9670;&nbsp;</a></span>Create() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Security.Core.DataLayer.Repositories.TokenService.Create </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>loginOrEmail</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создание токена </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">loginOrEmail</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_token_service.html#a357a7698b0383dc4c1d04a1ca1d3fa39">Security.Contracts.Repository.ITokenService</a>.</p>
+
+</div>
+</div>
+<a id="a63b42932f086a0b672cfea202a4735b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63b42932f086a0b672cfea202a4735b2">&#9670;&nbsp;</a></span>CreateAsync() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;string&gt; Security.Core.DataLayer.Repositories.TokenService.CreateAsync </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idUser</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создание токена </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idUser</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_token_service.html#a79914be6bf4b1c2c1b5b4a6feec0dc3b">Security.Contracts.Repository.ITokenService</a>.</p>
+
+</div>
+</div>
+<a id="a64d853f8ca0e9facd92cc03358ca7f37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64d853f8ca0e9facd92cc03358ca7f37">&#9670;&nbsp;</a></span>CreateAsync() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;string&gt; Security.Core.DataLayer.Repositories.TokenService.CreateAsync </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>loginOrEmail</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создание токена </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">loginOrEmail</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_token_service.html#ac6763a650f310d9b55804d47bc9e5fa0">Security.Contracts.Repository.ITokenService</a>.</p>
+
+</div>
+</div>
+<a id="ab0f74a3fa1979df2c1bd53fc005b3646"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0f74a3fa1979df2c1bd53fc005b3646">&#9670;&nbsp;</a></span>GetUser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_security_1_1_model_1_1_user.html">User</a> Security.Core.DataLayer.Repositories.TokenService.GetUser </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>token</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает пользователя по токену </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">token</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_token_service.html#aef038d680404a345b9080f83df251668">Security.Contracts.Repository.ITokenService</a>.</p>
+
+</div>
+</div>
+<a id="ada1308e377f2438a3fd6fc8942bc7750"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada1308e377f2438a3fd6fc8942bc7750">&#9670;&nbsp;</a></span>GetUserAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;<a class="el" href="class_security_1_1_model_1_1_user.html">User</a>&gt; Security.Core.DataLayer.Repositories.TokenService.GetUserAsync </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>token</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Проверка срока действия токена </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">token</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_token_service.html#a9cf2f5fd888ec54bf101d3fdc6ecb246">Security.Contracts.Repository.ITokenService</a>.</p>
+
+</div>
+</div>
+<a id="a1f42c47a4d1cd5e60084572725157fa5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f42c47a4d1cd5e60084572725157fa5">&#9670;&nbsp;</a></span>StopExpire()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Security.Core.DataLayer.Repositories.TokenService.StopExpire </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>tokenId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>reason</em> = <code>null</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Прекращение действия отдельного токена </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tokenId</td><td></td></tr>
+    <tr><td class="paramname">reason</td><td>Причина</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_token_service.html#ac1ffa7b32b23c2bd7b1dea697aeaadc7">Security.Contracts.Repository.ITokenService</a>.</p>
+
+</div>
+</div>
+<a id="a201abff154c87abc51824f4b9ef09db6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a201abff154c87abc51824f4b9ef09db6">&#9670;&nbsp;</a></span>StopExpireAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task Security.Core.DataLayer.Repositories.TokenService.StopExpireAsync </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>tokenId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>reason</em> = <code>null</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Прекращение действия отдельного токена </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tokenId</td><td></td></tr>
+    <tr><td class="paramname">reason</td><td>Причина</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_token_service.html#a2553280e211e04f9b6365be6e4b6c684">Security.Contracts.Repository.ITokenService</a>.</p>
+
+</div>
+</div>
+<a id="aa6ed3132c3f90207986ef423c36ba8fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6ed3132c3f90207986ef423c36ba8fa">&#9670;&nbsp;</a></span>StopExpireForUser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Security.Core.DataLayer.Repositories.TokenService.StopExpireForUser </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>tokenId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>reason</em> = <code>null</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Прекращение действия всех токенов связанных с пользователем </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tokenId</td><td></td></tr>
+    <tr><td class="paramname">reason</td><td>Причина</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_token_service.html#a18b8d824e47a0b0e7444020041217337">Security.Contracts.Repository.ITokenService</a>.</p>
+
+</div>
+</div>
+<a id="a1605a31d014705a533840b580300ed9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1605a31d014705a533840b580300ed9a">&#9670;&nbsp;</a></span>StopExpireForUserAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task Security.Core.DataLayer.Repositories.TokenService.StopExpireForUserAsync </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>tokenId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>reason</em> = <code>null</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Прекращение действия всех токенов связанных с пользователем </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tokenId</td><td></td></tr>
+    <tr><td class="paramname">reason</td><td>Причина</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Замещает <a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_token_service.html#af6844a90eb4d770c272e8a03952720cd">Security.Contracts.Repository.ITokenService</a>.</p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>C:/Users/Domer/source/repos/Security.V2.1/backend/Security/Core/DataLayer/Repositories/TokenService.cs</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>

@@ -9,10 +9,17 @@
       <button class="btn btn-outline-success" (click)="createEmptyRole()">Create</button>
     </div>
   </nav>
-  <div style="position: relative">
+  <div style="position: relative" *ngIf="!(accessed$ | async)">
+    <h1>
+      Access denied!
+    </h1>
+  </div>
+  <div style="position: relative" *ngIf="accessed$ | async">
     <ul class="list-group">
       <li class="list-group-item selectable" [class.select]="selectedRole ? selectedRole.IdRole == role.IdRole : false"
-        (click)="selectRole(role)" *ngFor="let role of roles | async;" id="role{{role.IdRole}}">{{role.Name}}</li>
+        (click)="selectRole(role)" *ngFor="let role of roles | async;" id="role{{role.IdRole}}">
+        <list-item [item]="role" (saveItem)="saveRole($event)" ></list-item>
+      </li>
     </ul>
     <div class="side-panel" [class.open]="isOpenPanel()">
       <button type="button" class="close" aria-label="Close" (click)="closePanel()">

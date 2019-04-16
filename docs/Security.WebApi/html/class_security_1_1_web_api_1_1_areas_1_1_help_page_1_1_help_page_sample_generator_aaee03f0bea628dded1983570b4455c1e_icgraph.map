@@ -1,0 +1,6 @@
+<map id="Security.WebApi.Areas.HelpPage.HelpPageSampleGenerator.GetSampleObject" name="Security.WebApi.Areas.HelpPage.HelpPageSampleGenerator.GetSampleObject">
+<area shape="rect" id="node1" title="Gets the sample object that will be serialized by the formatters. First, it will look at the SampleOb..." alt="" coords="579,45,817,101"/>
+<area shape="rect" id="node2" href="$class_security_1_1_web_api_1_1_areas_1_1_help_page_1_1_help_page_sample_generator.html#a76544df6a39eaaf3195d487d24c8527d" title="Gets the request or response body samples." alt="" coords="292,45,531,101"/>
+<area shape="rect" id="node3" href="$class_security_1_1_web_api_1_1_areas_1_1_help_page_1_1_help_page_sample_generator.html#a2da9932a512ffead6a56b7f751a7187d" title="Gets the request body samples for a given ApiDescription." alt="" coords="5,5,244,61"/>
+<area shape="rect" id="node4" href="$class_security_1_1_web_api_1_1_areas_1_1_help_page_1_1_help_page_sample_generator.html#af8c05b81ee0d48be10e0f4113bd153ea" title="Gets the response body samples for a given ApiDescription." alt="" coords="5,85,244,141"/>
+</map>

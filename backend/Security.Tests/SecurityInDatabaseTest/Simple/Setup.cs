@@ -62,7 +62,7 @@ namespace Security.Tests.SecurityInDatabaseTest.Simple
                 CreateUserGroups(security);
                 CreateRoles(security);
 
-                security.MemberRoleRepository.AddMembersToRole(new[] { "user1", "group1" }, "role1");
+                security.MemberRoleRepository.AddMembersToRole(new[] { "user1", "user2", "group1" }, "role1");
                 security.MemberRoleRepository.AddMembersToRole(new[] { "user1" }, "role2");
                 security.MemberRoleRepository.AddMembersToRole(new[] { "user3" }, "role2");
 

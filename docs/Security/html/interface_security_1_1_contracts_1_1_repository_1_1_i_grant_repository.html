@@ -1,0 +1,575 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Applications Security: Интерфейс Security.Contracts.Repository.IGrantRepository</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Applications Security
+   &#160;<span id="projectnumber">2.1</span>
+   </div>
+   <div id="projectbrief">Apps Security</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_security.html">Security</a></li><li class="navelem"><a class="el" href="namespace_security_1_1_contracts.html">Contracts</a></li><li class="navelem"><a class="el" href="namespace_security_1_1_contracts_1_1_repository.html">Repository</a></li><li class="navelem"><a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_grant_repository.html">IGrantRepository</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="interface_security_1_1_contracts_1_1_repository_1_1_i_grant_repository-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Интерфейс Security.Contracts.Repository.IGrantRepository</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Управление разрешениями  
+ <a href="interface_security_1_1_contracts_1_1_repository_1_1_i_grant_repository.html#details">Подробнее...</a></p>
+<div class="dynheader">
+Граф наследования:Security.Contracts.Repository.IGrantRepository:</div>
+<div class="dyncontent">
+<div class="center"><img src="interface_security_1_1_contracts_1_1_repository_1_1_i_grant_repository__inherit__graph.png" border="0" usemap="#_security_8_contracts_8_repository_8_i_grant_repository_inherit__map" alt="Inheritance graph"/></div>
+<map name="_security_8_contracts_8_repository_8_i_grant_repository_inherit__map" id="_security_8_contracts_8_repository_8_i_grant_repository_inherit__map">
+<area shape="rect"  title="Ð£Ð¿ÑÐ°Ð²Ð»ÐµÐ½Ð¸Ðµ ÑÐ°Ð·ÑÐµÑÐµÐ½Ð¸ÑÐ¼Ð¸" alt="" coords="5,5,205,47"/>
+<area shape="rect"  href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_grant_repository.html" title="Ð£Ð¿ÑÐ°Ð²Ð»ÐµÐ½Ð¸Ðµ ÑÐ°Ð·ÑÐµÑÐµÐ½Ð¸ÑÐ¼Ð¸" alt="" coords="9,95,201,136"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:aec9d6d876f23d5d67bf7130637050988"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_grant_repository.html#aec9d6d876f23d5d67bf7130637050988">SetGrant</a> (string role, string secObject)</td></tr>
+<tr class="memdesc:aec9d6d876f23d5d67bf7130637050988"><td class="mdescLeft">&#160;</td><td class="mdescRight">Установка разрешения для роли  <a href="#aec9d6d876f23d5d67bf7130637050988">Подробнее...</a><br /></td></tr>
+<tr class="separator:aec9d6d876f23d5d67bf7130637050988"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3eb3f164a4a4ea7be446783932a94af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_grant_repository.html#aa3eb3f164a4a4ea7be446783932a94af">SetGrants</a> (string role, string[] secObjects)</td></tr>
+<tr class="memdesc:aa3eb3f164a4a4ea7be446783932a94af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Установка нескольких разрешений для роли  <a href="#aa3eb3f164a4a4ea7be446783932a94af">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa3eb3f164a4a4ea7be446783932a94af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a087aa1b715011f94066e4607c2fde8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_grant_repository.html#a1a087aa1b715011f94066e4607c2fde8">RemoveGrant</a> (string role, string secObject)</td></tr>
+<tr class="memdesc:a1a087aa1b715011f94066e4607c2fde8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаление разрешения из роли  <a href="#a1a087aa1b715011f94066e4607c2fde8">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1a087aa1b715011f94066e4607c2fde8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28a826d5e2de4dcf7a87c599e6c502a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_grant_repository.html#a28a826d5e2de4dcf7a87c599e6c502a9">RemoveGrants</a> (string role, string[] secObjects)</td></tr>
+<tr class="memdesc:a28a826d5e2de4dcf7a87c599e6c502a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаление нескольких разрешений для роли  <a href="#a28a826d5e2de4dcf7a87c599e6c502a9">Подробнее...</a><br /></td></tr>
+<tr class="separator:a28a826d5e2de4dcf7a87c599e6c502a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a7f54ee38e1df44ed1244b7240a6dfd"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; <a class="el" href="class_security_1_1_model_1_1_sec_object.html">SecObject</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_grant_repository.html#a0a7f54ee38e1df44ed1244b7240a6dfd">GetRoleGrants</a> (string role)</td></tr>
+<tr class="memdesc:a0a7f54ee38e1df44ed1244b7240a6dfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение политик безопасности для роли  <a href="#a0a7f54ee38e1df44ed1244b7240a6dfd">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0a7f54ee38e1df44ed1244b7240a6dfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae78d367d4601cc5f506b19fb11f54462"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; <a class="el" href="class_security_1_1_model_1_1_sec_object.html">SecObject</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_grant_repository.html#ae78d367d4601cc5f506b19fb11f54462">GetExceptRoleGrant</a> (string role)</td></tr>
+<tr class="memdesc:ae78d367d4601cc5f506b19fb11f54462"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение отсутствующих у роли политик безопасности  <a href="#ae78d367d4601cc5f506b19fb11f54462">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae78d367d4601cc5f506b19fb11f54462"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51af7886312c4b5c1d5d4c09b2251e2b"><td class="memItemLeft" align="right" valign="top">Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_grant_repository.html#a51af7886312c4b5c1d5d4c09b2251e2b">SetGrantAsync</a> (string role, string secObject)</td></tr>
+<tr class="memdesc:a51af7886312c4b5c1d5d4c09b2251e2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Установка разрешения для роли  <a href="#a51af7886312c4b5c1d5d4c09b2251e2b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a51af7886312c4b5c1d5d4c09b2251e2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0287b9fa422cababc88a1c9c1b2bf9b9"><td class="memItemLeft" align="right" valign="top">Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_grant_repository.html#a0287b9fa422cababc88a1c9c1b2bf9b9">SetGrantsAsync</a> (string role, string[] secObjects)</td></tr>
+<tr class="memdesc:a0287b9fa422cababc88a1c9c1b2bf9b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Установка нескольких разрешений для роли  <a href="#a0287b9fa422cababc88a1c9c1b2bf9b9">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0287b9fa422cababc88a1c9c1b2bf9b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab745a2538ec2091c7d8bc4b7a9140dd9"><td class="memItemLeft" align="right" valign="top">Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_grant_repository.html#ab745a2538ec2091c7d8bc4b7a9140dd9">RemoveGrantAsync</a> (string role, string secObject)</td></tr>
+<tr class="memdesc:ab745a2538ec2091c7d8bc4b7a9140dd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаление разрешения из роли  <a href="#ab745a2538ec2091c7d8bc4b7a9140dd9">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab745a2538ec2091c7d8bc4b7a9140dd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5c51c659f1102d0df1e4a31355f20ee"><td class="memItemLeft" align="right" valign="top">Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_grant_repository.html#ab5c51c659f1102d0df1e4a31355f20ee">RemoveGrantsAsync</a> (string role, string[] secObjects)</td></tr>
+<tr class="memdesc:ab5c51c659f1102d0df1e4a31355f20ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаление нескольких разрешений для роли  <a href="#ab5c51c659f1102d0df1e4a31355f20ee">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab5c51c659f1102d0df1e4a31355f20ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0869c9ad491a4a2a77735d0881103f39"><td class="memItemLeft" align="right" valign="top">Task&lt; IEnumerable&lt; <a class="el" href="class_security_1_1_model_1_1_sec_object.html">SecObject</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_grant_repository.html#a0869c9ad491a4a2a77735d0881103f39">GetRoleGrantsAsync</a> (string role)</td></tr>
+<tr class="memdesc:a0869c9ad491a4a2a77735d0881103f39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение политик безопасности для роли  <a href="#a0869c9ad491a4a2a77735d0881103f39">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0869c9ad491a4a2a77735d0881103f39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a291898066495be03dc300e8e890f2a0e"><td class="memItemLeft" align="right" valign="top">Task&lt; IEnumerable&lt; <a class="el" href="class_security_1_1_model_1_1_sec_object.html">SecObject</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_security_1_1_contracts_1_1_repository_1_1_i_grant_repository.html#a291898066495be03dc300e8e890f2a0e">GetExceptRoleGrantAsync</a> (string role)</td></tr>
+<tr class="memdesc:a291898066495be03dc300e8e890f2a0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение отсутствующих у роли политик безопасности  <a href="#a291898066495be03dc300e8e890f2a0e">Подробнее...</a><br /></td></tr>
+<tr class="separator:a291898066495be03dc300e8e890f2a0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Управление разрешениями </p>
+</div><h2 class="groupheader">Методы</h2>
+<a id="ae78d367d4601cc5f506b19fb11f54462"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae78d367d4601cc5f506b19fb11f54462">&#9670;&nbsp;</a></span>GetExceptRoleGrant()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt;<a class="el" href="class_security_1_1_model_1_1_sec_object.html">SecObject</a>&gt; Security.Contracts.Repository.IGrantRepository.GetExceptRoleGrant </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>role</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Получение отсутствующих у роли политик безопасности </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">role</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещается в <a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_grant_repository.html#a0f2ec7bc9e643dbd3c5f7658156d16ff">Security.Core.DataLayer.Repositories.GrantRepository</a>.</p>
+
+</div>
+</div>
+<a id="a291898066495be03dc300e8e890f2a0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a291898066495be03dc300e8e890f2a0e">&#9670;&nbsp;</a></span>GetExceptRoleGrantAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;IEnumerable&lt;<a class="el" href="class_security_1_1_model_1_1_sec_object.html">SecObject</a>&gt; &gt; Security.Contracts.Repository.IGrantRepository.GetExceptRoleGrantAsync </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>role</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Получение отсутствующих у роли политик безопасности </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">role</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещается в <a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_grant_repository.html#a7a2076ad7f365fb779a5c35af5eae890">Security.Core.DataLayer.Repositories.GrantRepository</a>.</p>
+
+</div>
+</div>
+<a id="a0a7f54ee38e1df44ed1244b7240a6dfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a7f54ee38e1df44ed1244b7240a6dfd">&#9670;&nbsp;</a></span>GetRoleGrants()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt;<a class="el" href="class_security_1_1_model_1_1_sec_object.html">SecObject</a>&gt; Security.Contracts.Repository.IGrantRepository.GetRoleGrants </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>role</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Получение политик безопасности для роли </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">role</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещается в <a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_grant_repository.html#ac997ae9fd608f8ae7dc025d50b6c75c3">Security.Core.DataLayer.Repositories.GrantRepository</a>.</p>
+
+</div>
+</div>
+<a id="a0869c9ad491a4a2a77735d0881103f39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0869c9ad491a4a2a77735d0881103f39">&#9670;&nbsp;</a></span>GetRoleGrantsAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;IEnumerable&lt;<a class="el" href="class_security_1_1_model_1_1_sec_object.html">SecObject</a>&gt; &gt; Security.Contracts.Repository.IGrantRepository.GetRoleGrantsAsync </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>role</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Получение политик безопасности для роли </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">role</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещается в <a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_grant_repository.html#a983d2ff166ed251bf4166e8c5413a7c2">Security.Core.DataLayer.Repositories.GrantRepository</a>.</p>
+
+</div>
+</div>
+<a id="a1a087aa1b715011f94066e4607c2fde8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a087aa1b715011f94066e4607c2fde8">&#9670;&nbsp;</a></span>RemoveGrant()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Security.Contracts.Repository.IGrantRepository.RemoveGrant </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>role</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>secObject</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Удаление разрешения из роли </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">role</td><td></td></tr>
+    <tr><td class="paramname">secObject</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Замещается в <a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_grant_repository.html#a2d063dd60987c6e767ff959c6726518c">Security.Core.DataLayer.Repositories.GrantRepository</a>.</p>
+
+</div>
+</div>
+<a id="ab745a2538ec2091c7d8bc4b7a9140dd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab745a2538ec2091c7d8bc4b7a9140dd9">&#9670;&nbsp;</a></span>RemoveGrantAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task Security.Contracts.Repository.IGrantRepository.RemoveGrantAsync </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>role</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>secObject</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Удаление разрешения из роли </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">role</td><td></td></tr>
+    <tr><td class="paramname">secObject</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещается в <a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_grant_repository.html#a768c4c177332395f6a214953a85e472d">Security.Core.DataLayer.Repositories.GrantRepository</a>.</p>
+
+</div>
+</div>
+<a id="a28a826d5e2de4dcf7a87c599e6c502a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28a826d5e2de4dcf7a87c599e6c502a9">&#9670;&nbsp;</a></span>RemoveGrants()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Security.Contracts.Repository.IGrantRepository.RemoveGrants </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>role</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string []&#160;</td>
+          <td class="paramname"><em>secObjects</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Удаление нескольких разрешений для роли </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">role</td><td>Роль</td></tr>
+    <tr><td class="paramname">secObjects</td><td>Политики безопасности</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Замещается в <a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_grant_repository.html#afcefa50dc3d6340297c46159396f27f2">Security.Core.DataLayer.Repositories.GrantRepository</a>.</p>
+
+</div>
+</div>
+<a id="ab5c51c659f1102d0df1e4a31355f20ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5c51c659f1102d0df1e4a31355f20ee">&#9670;&nbsp;</a></span>RemoveGrantsAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task Security.Contracts.Repository.IGrantRepository.RemoveGrantsAsync </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>role</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string []&#160;</td>
+          <td class="paramname"><em>secObjects</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Удаление нескольких разрешений для роли </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">role</td><td></td></tr>
+    <tr><td class="paramname">secObjects</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещается в <a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_grant_repository.html#af0a3daafc03b916651d9df17996e988e">Security.Core.DataLayer.Repositories.GrantRepository</a>.</p>
+
+</div>
+</div>
+<a id="aec9d6d876f23d5d67bf7130637050988"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec9d6d876f23d5d67bf7130637050988">&#9670;&nbsp;</a></span>SetGrant()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Security.Contracts.Repository.IGrantRepository.SetGrant </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>role</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>secObject</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Установка разрешения для роли </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">role</td><td>Роль</td></tr>
+    <tr><td class="paramname">secObject</td><td>Политика безопасности</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Замещается в <a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_grant_repository.html#a034eb6b7001c1f9fee236d1ec5617c99">Security.Core.DataLayer.Repositories.GrantRepository</a>.</p>
+
+</div>
+</div>
+<a id="a51af7886312c4b5c1d5d4c09b2251e2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51af7886312c4b5c1d5d4c09b2251e2b">&#9670;&nbsp;</a></span>SetGrantAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task Security.Contracts.Repository.IGrantRepository.SetGrantAsync </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>role</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>secObject</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Установка разрешения для роли </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">role</td><td></td></tr>
+    <tr><td class="paramname">secObject</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещается в <a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_grant_repository.html#a90faed0779d261fca6a3dd83ed44f1a0">Security.Core.DataLayer.Repositories.GrantRepository</a>.</p>
+
+</div>
+</div>
+<a id="aa3eb3f164a4a4ea7be446783932a94af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3eb3f164a4a4ea7be446783932a94af">&#9670;&nbsp;</a></span>SetGrants()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Security.Contracts.Repository.IGrantRepository.SetGrants </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>role</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string []&#160;</td>
+          <td class="paramname"><em>secObjects</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Установка нескольких разрешений для роли </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">role</td><td>Роль</td></tr>
+    <tr><td class="paramname">secObjects</td><td>Политики безопасности</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Замещается в <a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_grant_repository.html#a6239e1efcd9eeb24b19aecf175d9b12e">Security.Core.DataLayer.Repositories.GrantRepository</a>.</p>
+
+</div>
+</div>
+<a id="a0287b9fa422cababc88a1c9c1b2bf9b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0287b9fa422cababc88a1c9c1b2bf9b9">&#9670;&nbsp;</a></span>SetGrantsAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task Security.Contracts.Repository.IGrantRepository.SetGrantsAsync </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>role</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string []&#160;</td>
+          <td class="paramname"><em>secObjects</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Установка нескольких разрешений для роли </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">role</td><td></td></tr>
+    <tr><td class="paramname">secObjects</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+<p>Замещается в <a class="el" href="class_security_1_1_core_1_1_data_layer_1_1_repositories_1_1_grant_repository.html#a2c497f22e7d52250bfc77cc4f37fc8a0">Security.Core.DataLayer.Repositories.GrantRepository</a>.</p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов интерфейса находятся в файле:<ul>
+<li>C:/Users/Domer/source/repos/Security.V2.1/backend/Security/Contracts/Repository/IGrantRepository.cs</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>

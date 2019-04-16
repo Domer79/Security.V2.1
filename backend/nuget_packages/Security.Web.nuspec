@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+    <metadata>
+		<id>Net.Authorize.Security.Web</id>
+		<version>2.1.1</version>
+		<title>Net.Authorize Security.Web 2.1</title>
+		<authors>Damir Garipov</authors>
+		<owners>Damir Garipov</owners>
+        <licenseUrl>https://github.com/Domer79/Security.V2.1/blob/dev/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/Domer79/Security.V2.1/tree/dev/backend/Security.Web</projectUrl>
+        <iconUrl>http://github.com/domer79/noicon</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Extention for ASP.NET MVC and ASP.NET WebApi applications</description>
+        <releaseNotes>First release</releaseNotes>
+        <copyright>Copyright 2019</copyright>
+        <tags>Security, Access, Athentication, Authorize, Users, Roles, Passwords</tags>
+
+        <dependencies>
+            <dependency id="Newtonsoft.Json" version="10.0.2" />
+            <dependency id="Net.Authorize.Security" version="2.1.0"/>
+        </dependencies>
+	</metadata>
+	<files>
+        <file src="lib/Security.Web.dll" target="lib/net46"/>
+	</files>
+</package>

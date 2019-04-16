@@ -1,0 +1,6 @@
+<map id="Security.Dapper.XmlTypeHandler&lt; T &gt;" name="Security.Dapper.XmlTypeHandler&lt; T &gt;">
+<area shape="rect" id="node1" title=" " alt="" coords="5,229,248,256"/>
+<area shape="rect" id="node2" href="$class_security_1_1_dapper_1_1_sql_mapper_1_1_string_type_handler.html" title="Base&#45;class for simple type&#45;handlers that are based around strings" alt="" coords="12,155,241,181"/>
+<area shape="rect" id="node3" href="$class_security_1_1_dapper_1_1_sql_mapper_1_1_type_handler.html" title="Base&#45;class for simple type&#45;handlers" alt="" coords="64,80,189,107"/>
+<area shape="rect" id="node4" href="$interface_security_1_1_dapper_1_1_sql_mapper_1_1_i_type_handler.html" title="Implement this interface to perform custom type&#45;based parameter handling and value parsing" alt="" coords="78,5,175,32"/>
+</map>

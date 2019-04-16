@@ -1,0 +1,4 @@
+<map id="Security.Dapper.SqlMapper.IParameterCallbacks" name="Security.Dapper.SqlMapper.IParameterCallbacks">
+<area shape="rect" id="node1" title="Extends IDynamicParameters with facilities for executing callbacks after commands have completed" alt="" coords="5,80,191,121"/>
+<area shape="rect" id="node2" href="$interface_security_1_1_dapper_1_1_sql_mapper_1_1_i_dynamic_parameters.html" title="Implement this interface to pass an arbitrary db specific set of parameters to Dapper" alt="" coords="27,5,169,32"/>
+</map>

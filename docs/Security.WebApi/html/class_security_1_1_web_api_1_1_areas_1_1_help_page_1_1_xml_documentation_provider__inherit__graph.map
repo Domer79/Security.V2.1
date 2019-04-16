@@ -1,0 +1,5 @@
+<map id="Security.WebApi.Areas.HelpPage.XmlDocumentationProvider" name="Security.WebApi.Areas.HelpPage.XmlDocumentationProvider">
+<area shape="rect" id="node1" title="A custom IDocumentationProvider that reads the API documentation from an XML documentation file." alt="" coords="79,80,290,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,164,32"/>
+<area shape="rect" id="node3" href="$interface_security_1_1_web_api_1_1_areas_1_1_help_page_1_1_model_descriptions_1_1_i_model_documentation_provider.html" title=" " alt="" coords="188,5,381,32"/>
+</map>

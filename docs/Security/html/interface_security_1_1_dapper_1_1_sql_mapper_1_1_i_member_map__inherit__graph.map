@@ -1,0 +1,4 @@
+<map id="Security.Dapper.SqlMapper.IMemberMap" name="Security.Dapper.SqlMapper.IMemberMap">
+<area shape="rect" id="node1" title="Implements this interface to provide custom member mapping" alt="" coords="28,5,213,47"/>
+<area shape="rect" id="node2" href="$class_security_1_1_dapper_1_1_simple_member_map.html" title="Represents simple member map for one of target parameter or property or field to source DataReader co..." alt="" coords="5,95,236,121"/>
+</map>

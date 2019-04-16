@@ -1,0 +1,13 @@
+<map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
+<area shape="rect" id="node1" title=" " alt="" coords="53,101,143,127"/>
+<area shape="rect" id="node2" href="$interface_security_1_1_contracts_1_1_i_security.html" title="Контекст безопасности" alt="" coords="239,71,425,98"/>
+<area shape="rect" id="node4" href="$interface_security_1_1_contracts_1_1_i_service_locator.html" title=" " alt="" coords="243,5,421,47"/>
+<area shape="rect" id="node6" href="$interface_security_1_1_core_1_1_ioc_1_1_interfaces_1_1_i_scope.html" title=" " alt="" coords="239,188,425,229"/>
+<area shape="rect" id="node10" href="$class_security_1_1_dapper_1_1_sql_mapper_1_1_grid_reader.html" title="The grid reader provides interfaces for reading multiple result sets from a Dapper query" alt="" coords="239,123,425,164"/>
+<area shape="rect" id="node3" href="$class_security_1_1_core_1_1_security.html" title="Контекст безопасности" alt="" coords="484,71,637,98"/>
+<area shape="rect" id="node5" href="$class_security_1_1_core_1_1_ioc_1_1_service_locator.html" title=" " alt="" coords="477,5,645,47"/>
+<area shape="rect" id="node7" href="$class_security_1_1_core_1_1_ioc_1_1_scopes_1_1_base_scope.html" title=" " alt="" coords="473,253,648,295"/>
+<area shape="rect" id="node8" href="$class_security_1_1_core_1_1_ioc_1_1_scopes_1_1_singleton_scope.html" title=" " alt="" coords="473,123,648,164"/>
+<area shape="rect" id="node9" href="$class_security_1_1_core_1_1_ioc_1_1_scopes_1_1_transient_scope.html" title=" " alt="" coords="473,188,648,229"/>
+<area shape="rect" id="node11" href="$interface_security_1_1_contracts_1_1_i_registry.html" title=" " alt="" coords="5,13,191,39"/>
+</map>

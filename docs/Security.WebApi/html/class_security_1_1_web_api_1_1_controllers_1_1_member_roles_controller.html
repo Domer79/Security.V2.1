@@ -1,0 +1,714 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Applications Security: Класс Security.WebApi.Controllers.MemberRolesController</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Applications Security
+   &#160;<span id="projectnumber">2.1</span>
+   </div>
+   <div id="projectbrief">Apps Security</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_security.html">Security</a></li><li class="navelem"><a class="el" href="namespace_security_1_1_web_api.html">WebApi</a></li><li class="navelem"><a class="el" href="namespace_security_1_1_web_api_1_1_controllers.html">Controllers</a></li><li class="navelem"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_member_roles_controller.html">MemberRolesController</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="class_security_1_1_web_api_1_1_controllers_1_1_member_roles_controller-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс Security.WebApi.Controllers.MemberRolesController</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Управление ролями участников безопасности  
+ <a href="class_security_1_1_web_api_1_1_controllers_1_1_member_roles_controller.html#details">Подробнее...</a></p>
+<div class="dynheader">
+Граф наследования:Security.WebApi.Controllers.MemberRolesController:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_security_1_1_web_api_1_1_controllers_1_1_member_roles_controller__inherit__graph.png" border="0" usemap="#_security_8_web_api_8_controllers_8_member_roles_controller_inherit__map" alt="Inheritance graph"/></div>
+<map name="_security_8_web_api_8_controllers_8_member_roles_controller_inherit__map" id="_security_8_web_api_8_controllers_8_member_roles_controller_inherit__map">
+<area shape="rect"  title="Ð£Ð¿ÑÐ°Ð²Ð»ÐµÐ½Ð¸Ðµ ÑÐ¾Ð»ÑÐ¼Ð¸ ÑÑÐ°ÑÑÐ½Ð¸ÐºÐ¾Ð² Ð±ÐµÐ·Ð¾Ð¿Ð°ÑÐ½Ð¾ÑÑÐ¸" alt="" coords="5,80,196,121"/>
+<area shape="rect"  title=" " alt="" coords="53,5,149,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса Security.WebApi.Controllers.MemberRolesController:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_security_1_1_web_api_1_1_controllers_1_1_member_roles_controller__coll__graph.png" border="0" usemap="#_security_8_web_api_8_controllers_8_member_roles_controller_coll__map" alt="Collaboration graph"/></div>
+<map name="_security_8_web_api_8_controllers_8_member_roles_controller_coll__map" id="_security_8_web_api_8_controllers_8_member_roles_controller_coll__map">
+<area shape="rect"  title="Ð£Ð¿ÑÐ°Ð²Ð»ÐµÐ½Ð¸Ðµ ÑÐ¾Ð»ÑÐ¼Ð¸ ÑÑÐ°ÑÑÐ½Ð¸ÐºÐ¾Ð² Ð±ÐµÐ·Ð¾Ð¿Ð°ÑÐ½Ð¾ÑÑÐ¸" alt="" coords="5,80,196,121"/>
+<area shape="rect"  title=" " alt="" coords="53,5,149,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a740346e544eac1318019d1d101eedd2d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_member_roles_controller.html#a740346e544eac1318019d1d101eedd2d">MemberRolesController</a> (IMemberRoleRepository repo)</td></tr>
+<tr class="memdesc:a740346e544eac1318019d1d101eedd2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Управление ролями  <a href="#a740346e544eac1318019d1d101eedd2d">Подробнее...</a><br /></td></tr>
+<tr class="separator:a740346e544eac1318019d1d101eedd2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af31a254da020439d1d687ddd9746164b"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_member_roles_controller.html#af31a254da020439d1d687ddd9746164b">GetRolesByMemberName</a> (string member)</td></tr>
+<tr class="memdesc:af31a254da020439d1d687ddd9746164b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает список ролей для участника по его имени  <a href="#af31a254da020439d1d687ddd9746164b">Подробнее...</a><br /></td></tr>
+<tr class="separator:af31a254da020439d1d687ddd9746164b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8f6bcd0e4640d171d90b332ff4bf502"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_member_roles_controller.html#ab8f6bcd0e4640d171d90b332ff4bf502">GetRolesByIdMember</a> (int idMember)</td></tr>
+<tr class="memdesc:ab8f6bcd0e4640d171d90b332ff4bf502"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает список ролей для участника по его идентификатору  <a href="#ab8f6bcd0e4640d171d90b332ff4bf502">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab8f6bcd0e4640d171d90b332ff4bf502"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b3ffea3d0ffd40777cedab08918300d"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_member_roles_controller.html#a7b3ffea3d0ffd40777cedab08918300d">GetMembersByRoleName</a> (string role)</td></tr>
+<tr class="memdesc:a7b3ffea3d0ffd40777cedab08918300d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает список участников роли по ее имени  <a href="#a7b3ffea3d0ffd40777cedab08918300d">Подробнее...</a><br /></td></tr>
+<tr class="separator:a7b3ffea3d0ffd40777cedab08918300d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a997ed50d24507dd465cec7e302a0a729"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_member_roles_controller.html#a997ed50d24507dd465cec7e302a0a729">GetMembersByIdRole</a> (int idRole)</td></tr>
+<tr class="memdesc:a997ed50d24507dd465cec7e302a0a729"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает список участников роли по ее идентификатору  <a href="#a997ed50d24507dd465cec7e302a0a729">Подробнее...</a><br /></td></tr>
+<tr class="separator:a997ed50d24507dd465cec7e302a0a729"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91cf69ffda35215eee279d94773f8837"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_member_roles_controller.html#a91cf69ffda35215eee279d94773f8837">GetExceptRolesByMemberName</a> (string member)</td></tr>
+<tr class="memdesc:a91cf69ffda35215eee279d94773f8837"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает список ролей не установленных для участника по его имени  <a href="#a91cf69ffda35215eee279d94773f8837">Подробнее...</a><br /></td></tr>
+<tr class="separator:a91cf69ffda35215eee279d94773f8837"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a159d3daac99396df9a5f0f1f044f69ab"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_member_roles_controller.html#a159d3daac99396df9a5f0f1f044f69ab">GetExceptRolesByIdMember</a> (int idMember)</td></tr>
+<tr class="memdesc:a159d3daac99396df9a5f0f1f044f69ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает список ролей не установленных для участника по его идентификатору  <a href="#a159d3daac99396df9a5f0f1f044f69ab">Подробнее...</a><br /></td></tr>
+<tr class="separator:a159d3daac99396df9a5f0f1f044f69ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0668e775389155bd826c2783192182a3"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_member_roles_controller.html#a0668e775389155bd826c2783192182a3">GetExceptMembersByRole</a> (string role)</td></tr>
+<tr class="memdesc:a0668e775389155bd826c2783192182a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает список участников не установленных для роли по ее имени  <a href="#a0668e775389155bd826c2783192182a3">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0668e775389155bd826c2783192182a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4f8f6e0891c9923af8d26055187dcca"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_member_roles_controller.html#ab4f8f6e0891c9923af8d26055187dcca">GetExceptMembersByRole</a> (int idRole)</td></tr>
+<tr class="memdesc:ab4f8f6e0891c9923af8d26055187dcca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает список участников не установленных для роли по ее идентификатору  <a href="#ab4f8f6e0891c9923af8d26055187dcca">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab4f8f6e0891c9923af8d26055187dcca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff95a61d04e2c9b16ee91032a0e57744"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_member_roles_controller.html#aff95a61d04e2c9b16ee91032a0e57744">AddRolesToMember</a> (string member, [FromBody]string[] roles)</td></tr>
+<tr class="memdesc:aff95a61d04e2c9b16ee91032a0e57744"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет роли участнику  <a href="#aff95a61d04e2c9b16ee91032a0e57744">Подробнее...</a><br /></td></tr>
+<tr class="separator:aff95a61d04e2c9b16ee91032a0e57744"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a941ab1480400e5af193619d4f1642fa7"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_member_roles_controller.html#a941ab1480400e5af193619d4f1642fa7">AddRolesToMemberByIds</a> (int idMember, [FromBody] int[] idRoles)</td></tr>
+<tr class="memdesc:a941ab1480400e5af193619d4f1642fa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет роли участнику  <a href="#a941ab1480400e5af193619d4f1642fa7">Подробнее...</a><br /></td></tr>
+<tr class="separator:a941ab1480400e5af193619d4f1642fa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1c69a300e0cba0391d8c8acdfd6351b"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_member_roles_controller.html#ae1c69a300e0cba0391d8c8acdfd6351b">AddMembersToRole</a> (string role, [FromBody] string[] members)</td></tr>
+<tr class="memdesc:ae1c69a300e0cba0391d8c8acdfd6351b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет участников для роли  <a href="#ae1c69a300e0cba0391d8c8acdfd6351b">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae1c69a300e0cba0391d8c8acdfd6351b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ff7335fa2e8cac99605961c2c51dd65"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_member_roles_controller.html#a2ff7335fa2e8cac99605961c2c51dd65">AddMembersToRoleByIds</a> (int idRole, [FromBody] int[] idMembers)</td></tr>
+<tr class="memdesc:a2ff7335fa2e8cac99605961c2c51dd65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет участников для роли  <a href="#a2ff7335fa2e8cac99605961c2c51dd65">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2ff7335fa2e8cac99605961c2c51dd65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab68b20b403a449ddb64aa9e65439802b"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_member_roles_controller.html#ab68b20b403a449ddb64aa9e65439802b">DeleteRolesFromMember</a> (int idMember, [FromBody]int[] idRoles)</td></tr>
+<tr class="memdesc:ab68b20b403a449ddb64aa9e65439802b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаляет роли у участника  <a href="#ab68b20b403a449ddb64aa9e65439802b">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab68b20b403a449ddb64aa9e65439802b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef81eec6b27abd946c30b4d8e48eade9"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_member_roles_controller.html#aef81eec6b27abd946c30b4d8e48eade9">DeleteMembersFromRole</a> (int idRole, [FromBody]int[] idMembers)</td></tr>
+<tr class="memdesc:aef81eec6b27abd946c30b4d8e48eade9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаляет участников у роли  <a href="#aef81eec6b27abd946c30b4d8e48eade9">Подробнее...</a><br /></td></tr>
+<tr class="separator:aef81eec6b27abd946c30b4d8e48eade9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa78a7281afbbcc8dd338c6e01c8dfe27"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_member_roles_controller.html#aa78a7281afbbcc8dd338c6e01c8dfe27">DeleteRolesFromMember</a> (string member, [FromBody] string[] roles)</td></tr>
+<tr class="memdesc:aa78a7281afbbcc8dd338c6e01c8dfe27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаляет роли у участника  <a href="#aa78a7281afbbcc8dd338c6e01c8dfe27">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa78a7281afbbcc8dd338c6e01c8dfe27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89e1057130199d20d8c8ce0266f2e727"><td class="memItemLeft" align="right" valign="top">async Task&lt; IHttpActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_security_1_1_web_api_1_1_controllers_1_1_member_roles_controller.html#a89e1057130199d20d8c8ce0266f2e727">DeleteMembersFromRole</a> (string role, [FromBody] string[] members)</td></tr>
+<tr class="memdesc:a89e1057130199d20d8c8ce0266f2e727"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаляет участников у роли  <a href="#a89e1057130199d20d8c8ce0266f2e727">Подробнее...</a><br /></td></tr>
+<tr class="separator:a89e1057130199d20d8c8ce0266f2e727"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Управление ролями участников безопасности </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a740346e544eac1318019d1d101eedd2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a740346e544eac1318019d1d101eedd2d">&#9670;&nbsp;</a></span>MemberRolesController()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Security.WebApi.Controllers.MemberRolesController.MemberRolesController </td>
+          <td>(</td>
+          <td class="paramtype">IMemberRoleRepository&#160;</td>
+          <td class="paramname"><em>repo</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Управление ролями </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">repo</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="ae1c69a300e0cba0391d8c8acdfd6351b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1c69a300e0cba0391d8c8acdfd6351b">&#9670;&nbsp;</a></span>AddMembersToRole()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.MemberRolesController.AddMembersToRole </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>role</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[FromBody] string []&#160;</td>
+          <td class="paramname"><em>members</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавляет участников для роли </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">role</td><td></td></tr>
+    <tr><td class="paramname">members</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a2ff7335fa2e8cac99605961c2c51dd65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ff7335fa2e8cac99605961c2c51dd65">&#9670;&nbsp;</a></span>AddMembersToRoleByIds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.MemberRolesController.AddMembersToRoleByIds </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idRole</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[FromBody] int []&#160;</td>
+          <td class="paramname"><em>idMembers</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавляет участников для роли </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idRole</td><td></td></tr>
+    <tr><td class="paramname">idMembers</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="aff95a61d04e2c9b16ee91032a0e57744"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff95a61d04e2c9b16ee91032a0e57744">&#9670;&nbsp;</a></span>AddRolesToMember()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.MemberRolesController.AddRolesToMember </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>member</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[FromBody] string []&#160;</td>
+          <td class="paramname"><em>roles</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавляет роли участнику </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">member</td><td></td></tr>
+    <tr><td class="paramname">roles</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a941ab1480400e5af193619d4f1642fa7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a941ab1480400e5af193619d4f1642fa7">&#9670;&nbsp;</a></span>AddRolesToMemberByIds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.MemberRolesController.AddRolesToMemberByIds </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idMember</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[FromBody] int []&#160;</td>
+          <td class="paramname"><em>idRoles</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавляет роли участнику </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idMember</td><td></td></tr>
+    <tr><td class="paramname">idRoles</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="aef81eec6b27abd946c30b4d8e48eade9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef81eec6b27abd946c30b4d8e48eade9">&#9670;&nbsp;</a></span>DeleteMembersFromRole() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.MemberRolesController.DeleteMembersFromRole </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idRole</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[FromBody] int []&#160;</td>
+          <td class="paramname"><em>idMembers</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Удаляет участников у роли </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idRole</td><td></td></tr>
+    <tr><td class="paramname">idMembers</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a89e1057130199d20d8c8ce0266f2e727"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89e1057130199d20d8c8ce0266f2e727">&#9670;&nbsp;</a></span>DeleteMembersFromRole() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.MemberRolesController.DeleteMembersFromRole </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>role</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[FromBody] string []&#160;</td>
+          <td class="paramname"><em>members</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Удаляет участников у роли </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">role</td><td></td></tr>
+    <tr><td class="paramname">members</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="ab68b20b403a449ddb64aa9e65439802b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab68b20b403a449ddb64aa9e65439802b">&#9670;&nbsp;</a></span>DeleteRolesFromMember() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.MemberRolesController.DeleteRolesFromMember </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idMember</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[FromBody] int []&#160;</td>
+          <td class="paramname"><em>idRoles</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Удаляет роли у участника </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idMember</td><td></td></tr>
+    <tr><td class="paramname">idRoles</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="aa78a7281afbbcc8dd338c6e01c8dfe27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa78a7281afbbcc8dd338c6e01c8dfe27">&#9670;&nbsp;</a></span>DeleteRolesFromMember() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.MemberRolesController.DeleteRolesFromMember </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>member</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[FromBody] string []&#160;</td>
+          <td class="paramname"><em>roles</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Удаляет роли у участника </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">member</td><td></td></tr>
+    <tr><td class="paramname">roles</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a0668e775389155bd826c2783192182a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0668e775389155bd826c2783192182a3">&#9670;&nbsp;</a></span>GetExceptMembersByRole() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.MemberRolesController.GetExceptMembersByRole </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>role</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает список участников не установленных для роли по ее имени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">role</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="ab4f8f6e0891c9923af8d26055187dcca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4f8f6e0891c9923af8d26055187dcca">&#9670;&nbsp;</a></span>GetExceptMembersByRole() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.MemberRolesController.GetExceptMembersByRole </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idRole</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает список участников не установленных для роли по ее идентификатору </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idRole</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a159d3daac99396df9a5f0f1f044f69ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a159d3daac99396df9a5f0f1f044f69ab">&#9670;&nbsp;</a></span>GetExceptRolesByIdMember()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.MemberRolesController.GetExceptRolesByIdMember </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idMember</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает список ролей не установленных для участника по его идентификатору </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idMember</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a91cf69ffda35215eee279d94773f8837"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91cf69ffda35215eee279d94773f8837">&#9670;&nbsp;</a></span>GetExceptRolesByMemberName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.MemberRolesController.GetExceptRolesByMemberName </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>member</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает список ролей не установленных для участника по его имени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">member</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a997ed50d24507dd465cec7e302a0a729"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a997ed50d24507dd465cec7e302a0a729">&#9670;&nbsp;</a></span>GetMembersByIdRole()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.MemberRolesController.GetMembersByIdRole </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idRole</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает список участников роли по ее идентификатору </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idRole</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a7b3ffea3d0ffd40777cedab08918300d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b3ffea3d0ffd40777cedab08918300d">&#9670;&nbsp;</a></span>GetMembersByRoleName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.MemberRolesController.GetMembersByRoleName </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>role</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает список участников роли по ее имени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">role</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="ab8f6bcd0e4640d171d90b332ff4bf502"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8f6bcd0e4640d171d90b332ff4bf502">&#9670;&nbsp;</a></span>GetRolesByIdMember()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.MemberRolesController.GetRolesByIdMember </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idMember</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает список ролей для участника по его идентификатору </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idMember</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="af31a254da020439d1d687ddd9746164b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af31a254da020439d1d687ddd9746164b">&#9670;&nbsp;</a></span>GetRolesByMemberName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IHttpActionResult&gt; Security.WebApi.Controllers.MemberRolesController.GetRolesByMemberName </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>member</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает список ролей для участника по его имени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">member</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd></dd></dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>C:/Users/Domer/source/repos/Security.V2.1/backend/Security.WebApi/Controllers/MemberRolesController.cs</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>

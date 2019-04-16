@@ -1,9 +1,6 @@
 import { UserRepository } from "./repositories/user-repository";
+import { Observable } from "rxjs";
 
 export interface Security {
-    userValidate(): boolean;
-    checkAccess(): boolean;
-    setPassword(): boolean;
-
-    UsersService: UserRepository;
+    checkAccess(policy: string): Observable<boolean>;
 }
